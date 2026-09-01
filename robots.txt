@@ -1,0 +1,37 @@
+# robots.txt — Pan.door.a S.r.l. — https://pandooragroup.it
+User-agent: *
+Allow: /
+
+# Pagine di servizio non utili in SERP
+Disallow: /grazie.html
+Disallow: /pandoora_hub.html
+Disallow: /_backup_
+Disallow: /*.bak$
+
+# Crawler AI: consentiti (visibilità nelle risposte generative)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Scraper aggressivi senza valore
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+Sitemap: https://pandooragroup.it/sitemap.xml

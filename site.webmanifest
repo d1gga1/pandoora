@@ -1,0 +1,16 @@
+{
+  "name": "Pan.door.a S.r.l. — Pannelli tamburati e arredo su misura",
+  "short_name": "Pan.door.a",
+  "description": "Pannelli tamburati per stand fieristici, porte, parquet, componenti per mobili e verniciature su misura. Made in Italy dal 1987.",
+  "lang": "it-IT",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#040A14",
+  "theme_color": "#040A14",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

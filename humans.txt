@@ -1,0 +1,12 @@
+/* AZIENDA */
+  Nome: PAN.DOOR.A. S.r.l.
+  Sede: Via I Maggio 14, 31043 Fontanelle (TV), Italia
+  Telefono: +39 335 632 6505
+  Email: ordini@pandooragroup.it
+  P.IVA: 05369890263
+  Attività: pannelli tamburati, porte, pavimentazioni, componenti per mobili, verniciatura
+  Dal: 1987
+
+/* SITO */
+  Standard: HTML5, CSS3, JavaScript
+  Lingue: Italiano, English, Français, Deutsch

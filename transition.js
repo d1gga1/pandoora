@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  var LOGO    = 'pandoora_logo_nobg.png';
+  var LOGO    = 'pandoora_logo.webp';
   var DUR     = 1780;                 // ms totali prima del cambio pagina
   var KEY     = 'pdxArrive';
   var DEF_ACC = '#5B8DEF';
@@ -116,7 +116,7 @@ body.pdx-busy #cur,body.pdx-busy #curRing{opacity:0;transition:opacity .25s}
     document.head.appendChild(s);
   }
 
-  var root = null, dest = null, running = false;
+  var root = null, dest = null, running = false, watchdog = null;
 
   function build() {
     if (root) return root;
@@ -181,6 +181,9 @@ body.pdx-busy #cur,body.pdx-busy #curRing{opacity:0;transition:opacity .25s}
 
     try { sessionStorage.setItem(KEY, acc); } catch (e) {}
     setTimeout(function () { location.href = href; }, DUR);
+    /* rete di sicurezza: se la navigazione non parte (link rotto, download,
+       navigazione annullata) non lasciamo la pagina coperta dal velo bianco */
+    watchdog = setTimeout(reset, DUR + 2500);
   }
 
   function arrive() {
@@ -221,8 +224,35 @@ body.pdx-busy #cur,body.pdx-busy #curRing{opacity:0;transition:opacity .25s}
     });
   }
 
+  /* ── RESET: evita lo "schermo bianco" al ritorno indietro ──────────────
+     Quando si lascia la pagina il velo bianco + il flash restano al loro
+     stato finale. Se il browser ripristina la pagina dalla bfcache (tasto
+     Indietro / Avanti) il DOM torna esattamente com'era: overlay bianco a
+     tutto schermo e running=true, quindi la pagina sembra bloccata.
+     Qui azzeriamo tutto ad ogni pageshow / popstate. */
+  function reset() {
+    running = false;
+    if (watchdog) { clearTimeout(watchdog); watchdog = null; }
+    document.body.classList.remove('pdx-busy');
+    if (root) {
+      root.classList.remove('on');
+      root.style.display = '';
+    }
+    var olds = document.querySelectorAll('.pdx-arrive');
+    Array.prototype.forEach.call(olds, function (n) { n.remove(); });
+  }
+
+  window.addEventListener('pageshow', function (e) {
+    reset();
+    if (e.persisted) arrive();   // bfcache: lo script non riparte, rifacciamo l'entrata
+  });
+  window.addEventListener('popstate', reset);
+  window.addEventListener('pagehide', function (e) {
+    if (e.persisted) reset();    // ripulisci PRIMA che la pagina finisca in bfcache
+  });
+
   function boot() { arrive(); wire(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
-  window.PDX = { play: play };
+  window.PDX = { play: play, reset: reset };
 })();
