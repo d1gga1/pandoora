@@ -1,31 +1,25 @@
-# robots.txt — Pan.door.a S.r.l. — https://pandooragroup.it
+# robots.txt — PAN.DOOR.A S.r.l. — https://pandooragroup.it
+# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-09-01
+
 User-agent: *
 Allow: /
 
-# Pagine di servizio non utili in SERP
+# Pagine di servizio: utili all'utente, inutili in SERP
 Disallow: /grazie/
+Disallow: /en/grazie/
+Disallow: /fr/grazie/
+Disallow: /de/grazie/
 Disallow: /pandoora_hub.html
-Disallow: /_backup_
-Disallow: /*.bak$
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /wp-includes/
-Disallow: /*.php$
-Disallow: /_vecchie-pagine-html/
-Disallow: /_seo-tools/
-Disallow: /_setup-google/
-Disallow: /_redirect-setup/
-Disallow: /_nuove-immagini/
-Disallow: /_CARICA_SU_GITHUB/
-Disallow: /_DA-CARICARE-SU-GITHUB/
-Disallow: /_backup_seo_
 Disallow: /404.html
 
-# Crawler AI: consentiti (visibilità nelle risposte generative)
+# Crawler AI: consentiti (visibilità in ChatGPT, Perplexity, Gemini, Claude)
 User-agent: GPTBot
 Allow: /
 
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: PerplexityBot
@@ -34,14 +28,26 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
-# Scraper aggressivi senza valore
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Scraper commerciali senza ritorno per noi
 User-agent: SemrushBot
 Disallow: /
 
 User-agent: AhrefsBot
+Disallow: /
+
+User-agent: DotBot
 Disallow: /
 
 User-agent: MJ12bot
