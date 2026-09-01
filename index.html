@@ -69,7 +69,7 @@
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#040A14;--blue:#1B3E7A;--acc:#5B8DEF}
@@ -1004,5 +1004,34 @@ document.addEventListener('mousemove', e => {
   <script src="/lang.js" defer></script>
 <script src="/transition.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
+<script>
+/* ══ RETE DI SICUREZZA HOME ══════════════════════════════════════════════
+   Se GSAP non si carica (CDN bloccato, rete lenta, adblock) l'animazione
+   d'ingresso non parte mai e la .hub resta a opacity:0 → dopo il logo si
+   vede solo bianco. Qui mostriamo comunque le sezioni. */
+(function(){
+  function pdShowHub(){
+    document.body.classList.remove('introing');
+    var i=document.getElementById('intro');
+    if(i){ i.style.opacity='0'; i.style.pointerEvents='none'; i.style.display='none'; }
+    var h=document.getElementById('hub');
+    if(h){ h.style.opacity='1'; }
+    ['s1','s2','s3','s4','s5'].forEach(function(id){
+      var e=document.getElementById(id); if(e) e.style.clipPath='none';
+    });
+    var l=document.getElementById('hubLogo'); if(l){ l.style.opacity='1'; l.style.transform='none'; }
+  }
+  function pdCheck(){
+    if(typeof window.gsap==='undefined'){ pdShowHub(); return; }
+    setTimeout(function(){
+      var h=document.getElementById('hub');
+      if(h && parseFloat(getComputedStyle(h).opacity) < .05) pdShowHub();
+    }, 7000);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', pdCheck);
+  } else { pdCheck(); }
+})();
+</script>
 </body>
 </html>
