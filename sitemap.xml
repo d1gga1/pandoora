@@ -46,6 +46,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/CARICA-SU-GITHUB/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/CARICA-SU-GITHUB/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/CARICA-SU-GITHUB/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/ante-laccate-su-misura/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/ante-laccate-su-misura/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/ante-laccate-su-misura/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/azienda/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>yearly</changefreq>
@@ -178,12 +194,84 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/contatti/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/falegnameria-conegliano/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-conegliano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-conegliano/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-oderzo/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-oderzo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-oderzo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-padova/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-padova/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-padova/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-pordenone/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-pordenone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-pordenone/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-portogruaro/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-portogruaro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-portogruaro/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/falegnameria-treviso/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-treviso/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-treviso/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-udine/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-udine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-udine/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-venezia/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-venezia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-venezia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-vicenza/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-vicenza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-vicenza/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-vittorio-veneto/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-vittorio-veneto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/falegnameria-vittorio-veneto/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/faq/</loc>
@@ -298,12 +386,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/mensole-su-misura/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/mensole-su-misura/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/mensole-su-misura/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/montaggio-porte-interne/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/montaggio-porte-interne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/montaggio-porte-interne/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-ignifughi-fiere/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-ignifughi-fiere/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-ignifughi-fiere/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-bologna-fiera/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-bologna-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-bologna-fiera/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-milano-fiera/</loc>
@@ -314,12 +426,44 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-milano-fiera/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-padova-fiera/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-padova-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-padova-fiera/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-prezzi/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-prezzi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-prezzi/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-rimini-fiera/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-rimini-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-rimini-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-verona/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-verona/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-verona/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-vicenza-fiera/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-vicenza-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-vicenza-fiera/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/</loc>
@@ -366,6 +510,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/parquet-prezzi-al-mq/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/parquet-prezzi-al-mq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/parquet-prezzi-al-mq/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/parquet-spina-di-pesce/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/parquet-spina-di-pesce/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/parquet-spina-di-pesce/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pavimentazioni/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -410,6 +570,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pavimentazioni/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/porte-interne-prezzi/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-prezzi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte-interne-prezzi/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/porte-laccate-ral/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-laccate-ral/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte-laccate-ral/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/porte-scorrevoli-interno-muro/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-scorrevoli-interno-muro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte-scorrevoli-interno-muro/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/porte/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -452,6 +636,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/porte/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/porte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/posa-parquet/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/posa-parquet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/posa-parquet/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/preventivo/</loc>
@@ -594,6 +786,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/sostituzione-porte-interne/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/sostituzione-porte-interne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/sostituzione-porte-interne/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/verniciatura/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -636,41 +836,5 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/verniciatura/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/montaggio-porte-interne/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/falegnameria-conegliano/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/falegnameria-oderzo/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/falegnameria-pordenone/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/falegnameria-venezia/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/falegnameria-padova/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
