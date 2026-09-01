@@ -3,10 +3,23 @@ User-agent: *
 Allow: /
 
 # Pagine di servizio non utili in SERP
-Disallow: /grazie.html
+Disallow: /grazie/
 Disallow: /pandoora_hub.html
 Disallow: /_backup_
 Disallow: /*.bak$
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /*.php$
+Disallow: /_vecchie-pagine-html/
+Disallow: /_seo-tools/
+Disallow: /_setup-google/
+Disallow: /_redirect-setup/
+Disallow: /_nuove-immagini/
+Disallow: /_CARICA_SU_GITHUB/
+Disallow: /_DA-CARICARE-SU-GITHUB/
+Disallow: /_backup_seo_
+Disallow: /404.html
 
 # Crawler AI: consentiti (visibilità nelle risposte generative)
 User-agent: GPTBot

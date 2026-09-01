@@ -64,3 +64,111 @@
   .sb-sec{margin-bottom:42px}
 }
 @media(prefers-reduced-motion:reduce){.sb-card,.sb-chip,.sb-cta{transition:none}}
+
+/* ═══════════════════════════════════════════════════════════
+   ESTENSIONE SEO 2026 — tabelle tecniche, FAQ, spec, breadcrumb
+   Tutto scoped .sb / .pd- : nessuna interferenza con l'esistente.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Tabelle tecniche (scrollabili su mobile) ── */
+.sb-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:22px 0 8px;border-radius:13px}
+.sb-table{width:100%;min-width:560px;border-collapse:collapse;font-size:14.2px;line-height:1.5}
+.sb-table caption{text-align:left;font-size:12.5px;font-weight:700;letter-spacing:.3px;padding:0 0 11px;opacity:.75}
+.sb-table th,.sb-table td{padding:11px 14px;text-align:left;border-bottom:1px solid;vertical-align:top}
+.sb-table thead th{font-size:11.5px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;white-space:nowrap}
+.sb-table tbody tr:last-child td{border-bottom:none}
+.sb-table td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.sb-tnote{font-size:13px;opacity:.72;margin:9px 0 0}
+
+.sb-light .sb-table{background:#fff}
+.sb-light .sb-table th,.sb-light .sb-table td{border-color:#e6eaee}
+.sb-light .sb-table thead th{background:#eef1f5;color:#1b2531}
+.sb-light .sb-table tbody tr:nth-child(even) td{background:#fafbfc}
+.sb-light .sb-table strong{color:#1b2531}
+
+.sb-dark .sb-table{background:rgba(255,255,255,.022)}
+.sb-dark .sb-table th,.sb-dark .sb-table td{border-color:rgba(255,255,255,.075)}
+.sb-dark .sb-table thead th{background:rgba(255,255,255,.055);color:#fff}
+.sb-dark .sb-table tbody tr:nth-child(even) td{background:rgba(255,255,255,.017)}
+
+/* ── Lista specifiche chiave/valore ── */
+.sb-specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:0 30px;margin:20px 0 6px;padding:0;list-style:none}
+.sb-specs li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid;font-size:14.6px}
+.sb-specs .k{opacity:.72}
+.sb-specs .v{font-weight:700;text-align:right}
+.sb-light .sb-specs li{border-color:#e6eaee}
+.sb-light .sb-specs .v{color:#1b2531}
+.sb-dark .sb-specs li{border-color:rgba(255,255,255,.075)}
+.sb-dark .sb-specs .v{color:#fff}
+
+/* ── FAQ accordion ── */
+.sb-faq{margin:22px 0 0}
+.sb-faq details{border-bottom:1px solid;padding:0}
+.sb-faq details:first-of-type{border-top:1px solid}
+.sb-faq summary{cursor:pointer!important;list-style:none;padding:17px 34px 17px 0;position:relative;font-size:16px;font-weight:700;line-height:1.45;transition:color .25s}
+.sb-faq summary::-webkit-details-marker{display:none}
+.sb-faq summary::after{content:"";position:absolute;right:8px;top:24px;width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);opacity:.45;transition:transform .3s,opacity .3s}
+.sb-faq details[open] summary::after{transform:rotate(-135deg);opacity:.9}
+.sb-faq .sb-a{padding:0 0 19px;font-size:15.3px;line-height:1.75;max-width:78ch}
+.sb-faq .sb-a p{font-size:15.3px;margin:0 0 11px}
+.sb-faq .sb-a p:last-child{margin:0}
+.sb-faq .sb-a ul{margin:0 0 11px}
+.sb-light .sb-faq details{border-color:#e2e6ea}
+.sb-light .sb-faq summary{color:#1b2531}
+.sb-light .sb-faq summary:hover{color:#c0392b}
+.sb-dark .sb-faq details{border-color:rgba(255,255,255,.085)}
+.sb-dark .sb-faq summary{color:#fff}
+.sb-dark .sb-faq summary:hover{color:#8fb4ff}
+
+/* ── Callout / box evidenza ── */
+.sb-note{display:flex;gap:15px;padding:19px 22px;border-radius:13px;border-left:3px solid;margin:22px 0;font-size:15px;line-height:1.7}
+.sb-note p{margin:0;font-size:15px}
+.sb-note strong{display:block;margin-bottom:5px}
+.sb-light .sb-note{background:#fff5f3;border-color:#c0392b;color:#5a4340}
+.sb-light .sb-note strong{color:#1b2531}
+.sb-dark .sb-note{background:rgba(91,141,239,.075);border-color:var(--sb-acc);color:rgba(255,255,255,.72)}
+.sb-dark .sb-note strong{color:#fff}
+
+/* ── Prezzo "a partire da" ── */
+.sb-price{display:inline-flex;align-items:baseline;gap:9px;margin:6px 0 2px;font-family:'Fraunces',Georgia,serif}
+.sb-price .amt{font-size:31px;font-weight:600;letter-spacing:-1px}
+.sb-price .lbl{font-size:13px;font-weight:600;opacity:.7;font-family:'Manrope',system-ui,Arial,sans-serif}
+.sb-light .sb-price .amt{color:#c0392b}
+.sb-dark .sb-price .amt{color:#8fb4ff}
+
+/* ── Breadcrumb visibili ── */
+.pd-crumb{font-family:'Manrope',system-ui,-apple-system,Arial,sans-serif;font-size:12.6px;padding:15px 44px;letter-spacing:.2px}
+.pd-crumb ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0;padding:0;max-width:1160px;margin:0 auto}
+.pd-crumb li{display:flex;align-items:center;gap:8px}
+.pd-crumb li+li::before{content:"›";opacity:.4;font-size:14px}
+.pd-crumb a{text-decoration:none;transition:color .25s}
+.pd-crumb [aria-current="page"]{font-weight:700}
+.pd-crumb-light{background:#f4f6f9;border-bottom:1px solid #e2e6ea;color:#6a727c}
+.pd-crumb-light a{color:#4a525c}
+.pd-crumb-light a:hover{color:#c0392b}
+.pd-crumb-light [aria-current="page"]{color:#1b2531}
+.pd-crumb-dark{background:#070d18;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.45)}
+.pd-crumb-dark a{color:rgba(255,255,255,.62)}
+.pd-crumb-dark a:hover{color:#fff}
+.pd-crumb-dark [aria-current="page"]{color:#fff}
+.pd-crumb,.pd-crumb *{cursor:auto!important}
+.pd-crumb a{cursor:pointer!important}
+
+/* ── Indice dei contenuti (pagine lunghe) ── */
+.sb-toc{border-radius:13px;padding:21px 24px;margin:0 0 42px;border:1px solid}
+.sb-toc h2{font-size:13px!important;font-family:'Manrope',system-ui,Arial,sans-serif!important;font-weight:800!important;letter-spacing:1.6px;text-transform:uppercase;margin:0 0 13px!important;opacity:.7}
+.sb-toc ol{margin:0;padding-left:19px;font-size:14.6px;line-height:1.95;columns:2;column-gap:34px}
+.sb-toc a{text-decoration:none}
+.sb-light .sb-toc{background:#fff;border-color:#e2e6ea}
+.sb-dark .sb-toc{background:rgba(255,255,255,.028);border-color:rgba(255,255,255,.08)}
+@media(max-width:700px){.sb-toc ol{columns:1}}
+
+/* ── Responsive ── */
+@media(max-width:860px){
+  .sb{padding:58px 22px}
+  .pd-crumb{padding:13px 22px}
+  .sb-specs{grid-template-columns:1fr;gap:0}
+  .sb-table{font-size:13.4px}
+  .sb-table th,.sb-table td{padding:9px 11px}
+  .sb-price .amt{font-size:26px}
+}
