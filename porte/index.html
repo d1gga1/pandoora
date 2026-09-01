@@ -122,18 +122,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .fct{font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--faint)}
 
 /* SLIDER */
+:root{--dch:clamp(600px,74vh,740px);--dcw:calc(var(--dch) / 2)}
 .slider-section{padding:40px 20px 84px;max-width:1640px;margin:0 auto;position:relative;z-index:2}
 .slider-label{text-align:center;display:flex;align-items:center;justify-content:center;gap:11px;margin-bottom:4px;height:16px}
 .slider-label-text{font-size:9.5px;font-weight:700;letter-spacing:3.4px;text-transform:uppercase;color:var(--muted);transition:opacity .3s}
 .slider-label-dot{width:6px;height:6px;border-radius:50%;transition:background .3s}
 .slider-outer{position:relative;padding:22px 0 12px}
 .slider-glow{position:absolute;top:50%;left:50%;width:min(880px,86vw);height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(140,170,255,.16) 0%,transparent 66%);pointer-events:none;z-index:0;transition:background .6s ease;filter:blur(3px)}
-.sviewport{position:relative;height:660px;max-height:84vh;min-height:520px;perspective:1800px;perspective-origin:50% 50%;z-index:1;touch-action:pan-y;-webkit-user-select:none;user-select:none;cursor:grab}
+.sviewport{position:relative;height:calc(var(--dch) + 60px);min-height:520px;perspective:1800px;perspective-origin:50% 50%;z-index:1;isolation:isolate;touch-action:pan-y;-webkit-user-select:none;user-select:none;cursor:grab}
 .sviewport.grabbing{cursor:grabbing}
 .strack{position:absolute;inset:0;transform-style:preserve-3d}
-.snav{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:var(--ink);z-index:20;cursor:pointer;box-shadow:0 10px 26px -12px rgba(20,32,54,.4);transition:border-color .3s,background .3s,transform .3s,box-shadow .3s}
-.snav:hover{border-color:var(--ink);background:#fff;box-shadow:0 16px 34px -12px rgba(20,32,54,.5)}
-.snav:active{transform:translateY(-50%) scale(.9)}
+.snav{position:absolute;top:50%;transform:translate3d(0,-50%,0);width:50px;height:50px;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:var(--ink);z-index:300;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 10px 26px -12px rgba(20,32,54,.4);transition:border-color .3s,background .3s,transform .3s,box-shadow .3s}
+@media(hover:hover){.snav:hover{border-color:var(--ink);background:#fff;box-shadow:0 16px 34px -12px rgba(20,32,54,.5)}}
+.snav:active{transform:translate3d(0,-50%,0) scale(.9)}
 .snav svg{width:17px;height:17px}
 .sprev{left:6px}.snext{right:6px}
 @media(min-width:900px){.sprev{left:-4px}.snext{right:-4px}}
@@ -146,7 +147,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .shint{text-align:center;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--faint);margin-top:6px}
 
 /* CARD */
-.dcard{position:absolute;top:50%;left:50%;width:300px;height:600px;margin:-300px 0 0 -150px;cursor:pointer;will-change:transform,opacity;backface-visibility:hidden;display:flex;flex-direction:column;background:transparent;border:none;box-shadow:none}
+.dcard{position:absolute;top:50%;left:50%;width:var(--dcw);height:var(--dch);margin:calc(var(--dch) * -0.5) 0 0 calc(var(--dcw) * -0.5);cursor:pointer;will-change:transform,opacity;backface-visibility:hidden;display:flex;flex-direction:column;background:transparent;border:none;box-shadow:none}
 .dcard.active{box-shadow:none}
 /* stage — porta scontornata, senza sfondo */
 .dstage{flex:1 1 auto;display:block;position:relative;overflow:visible;background:transparent}
@@ -488,7 +489,7 @@ function layout(animate=true){
     if(diff<-n/2) diff+=n;
     const ad=Math.abs(diff);
     const isMobile=window.innerWidth<=768;
-    const spacing=isMobile?168:256;
+    const spacing=isMobile?168:Math.round((cardEls[0]?cardEls[0].offsetWidth:300)*0.855);
     const x=diff*spacing;
     const scale=Math.max(1-ad*0.17,0.44);
     const rotY=Math.max(-1,Math.min(1,diff))*-30;
@@ -514,11 +515,15 @@ function goTo(i,user=true){const n=items.length;active=((i%n)+n)%n;layout(true);
 function next(user=true){goTo(active+1,user)}
 function prev(user=true){goTo(active-1,user)}
 function startAutoplay(){stopAutoplay();autoplayTimer=setInterval(()=>next(false),AUTOPLAY_MS);}
-function stopAutoplay(){if(autoplayTimer)clearInterval(autoplayTimer)}
-function restartAutoplay(){startAutoplay()}
+function stopAutoplay(){if(autoplayTimer){clearInterval(autoplayTimer);clearTimeout(autoplayTimer);autoplayTimer=null;}}
+function restartAutoplay(){stopAutoplay();autoplayTimer=setTimeout(startAutoplay,9000);}
 
-document.getElementById('sprev').addEventListener('click',()=>prev());
-document.getElementById('snext').addEventListener('click',()=>next());
+function bindNav(el,fn){var used=false;
+  el.addEventListener('pointerdown',function(e){e.preventDefault();e.stopPropagation();used=true;fn();},{passive:false});
+  el.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();if(used){used=false;return;}fn();});
+}
+bindNav(document.getElementById('sprev'),function(){prev()});
+bindNav(document.getElementById('snext'),function(){next()});
 sviewport.addEventListener('mouseenter',stopAutoplay);
 sviewport.addEventListener('mouseleave',startAutoplay);
 document.addEventListener('keydown',e=>{
@@ -538,6 +543,7 @@ window.addEventListener('mouseup',e=>dragEnd(e.clientX));
 sviewport.addEventListener('touchstart',e=>dragStart(e.touches[0].clientX),{passive:true});
 sviewport.addEventListener('touchmove',e=>dragMove(e.touches[0].clientX),{passive:true});
 sviewport.addEventListener('touchend',e=>dragEnd(e.changedTouches[0].clientX));
+sviewport.addEventListener('touchcancel',()=>{dragging=false;sviewport.classList.remove('grabbing');restartAutoplay();});
 window.addEventListener('resize',()=>layout(false));
 
 buildSlides();startAutoplay();
