@@ -68,7 +68,7 @@
 
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -316,7 +316,7 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 
 <script>
 /* ── Immagini migliorate (Higgsfield) con fallback locale ── */
-const ENH_BASE='assets/porte/';
+const ENH_BASE='/assets/porte/';
 /* PNG trasparenti (sfondo rimosso) */
 const ENH={
  '2-bugne':'hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e.webp',
@@ -346,7 +346,7 @@ const ENH={
  'trama':'hf_20260708_071441_a1258606-576d-4c13-acca-af9760101fad.webp',
  'zig-zag':'hf_20260708_071545_441afd94-635f-4c70-a24f-5ad54c6b2ae1.webp'
 };
-const LOCAL=id=>`door-photos/${id}.jpg`;
+const LOCAL=id=>`/door-photos/${id}.jpg`;
 const imgFull=id=>ENH[id]?ENH_BASE+ENH[id]:LOCAL(id);
 const imgMin =id=>ENH[id]?ENH_BASE+ENH[id].replace('.webp','_min.webp'):LOCAL(id);
 const FB=id=>`onerror=\"this.onerror=null;this.src='${LOCAL(id)}'\"`;
