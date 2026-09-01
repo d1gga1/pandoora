@@ -11,13 +11,13 @@
   var MAIL = 'ordini@pandooragroup.it';
 
   var LINKS = [
-    {h:'index.html',              t:'Home',              s:'Pan.door.a'},
-    {h:'pannelli-tamburati-1.html', t:'Pannelli Tamburati', s:'Allestimenti fieristici'},
-    {h:'pannelli-tamburati-2.html', t:'Schede Tecniche',   s:'Specifiche e materiali'},
-    {h:'porte.html',              t:'Porte',             s:'26 modelli'},
-    {h:'pavimentazioni.html',     t:'Pavimentazioni',    s:'Parquet in rovere'},
-    {h:'componenti.html',         t:'Componenti',        s:'Pedane e accessori'},
-    {h:'verniciatura.html',       t:'Verniciatura',      s:'Laccatura e lucidatura'}
+    {h:'/',              t:'Home',              s:'Pan.door.a'},
+    {h:'/pannelli-tamburati/', t:'Pannelli Tamburati', s:'Allestimenti fieristici'},
+    {h:'/listino-pannelli-tamburati/', t:'Schede Tecniche',   s:'Specifiche e materiali'},
+    {h:'/porte/',              t:'Porte',             s:'26 modelli'},
+    {h:'/pavimentazioni/',     t:'Pavimentazioni',    s:'Parquet in rovere'},
+    {h:'/componenti-per-mobili/',         t:'Componenti',        s:'Pedane e accessori'},
+    {h:'/verniciatura/',       t:'Verniciatura',      s:'Laccatura e lucidatura'}
   ];
 
   var CSS = ''
@@ -91,7 +91,7 @@
   function build(){
     var st = el('style'); st.textContent = CSS; document.head.appendChild(st);
 
-    var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    var here = (location.pathname.split('/').pop() || '/').toLowerCase();
 
     var scrim = el('div','pdm-scrim');
     var panel = el('aside','pdm-panel');
@@ -103,7 +103,7 @@
     var logoSrc = logo ? logo.getAttribute('src') : 'pandoora_logo.webp';
 
     var head = el('div','pdm-head');
-    var lg = el('a'); lg.href='index.html'; lg.innerHTML='<img src="'+logoSrc+'" alt="Pan.door.a">';
+    var lg = el('a'); lg.href='/'; lg.innerHTML='<img src="'+logoSrc+'" alt="Pan.door.a">';
     var cl = el('button','pdm-close','<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>');
     cl.type='button'; cl.setAttribute('aria-label','Chiudi menu');
     head.appendChild(lg); head.appendChild(cl); panel.appendChild(head);
@@ -121,7 +121,7 @@
 
     var foot = el('div','pdm-foot');
     foot.innerHTML =
-      '<a class="pdm-cta red" href="preventivo.html">Richiedi un preventivo</a>'
+      '<a class="pdm-cta red" href="/preventivo/">Richiedi un preventivo</a>'
     + '<a class="pdm-cta green" href="'+WA+'" target="_blank" rel="noopener">'
     + '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.96.23-3.24-.68-2.73-1.08-4.45-3.87-4.58-4.05-.13-.18-1.09-1.45-1.09-2.76s.69-1.96.93-2.23c.24-.27.53-.34.7-.34l.5.01c.16.01.38-.06.59.45.24.57.8 1.98.87 2.12.07.14.12.31.02.49-.09.18-.14.29-.28.45l-.42.49c-.14.14-.28.29-.12.57.16.27.72 1.18 1.54 1.92 1.06.94 1.95 1.23 2.23 1.37.27.14.43.12.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.82.86.27.14.45.2.51.32.07.11.07.63-.17 1.31z"/></svg>'
     + 'WhatsApp</a>'
