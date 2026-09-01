@@ -637,4 +637,40 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
   </url>
+  <url>
+    <loc>https://pandooragroup.it/montaggio-porte-interne/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-conegliano/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-oderzo/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-pordenone/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-venezia/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/falegnameria-padova/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
