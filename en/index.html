@@ -917,9 +917,10 @@ tl.to({}, {duration:3.35})
    scheda non è in primo piano (o il browser ne throttla il rendering, come
    capita tornando indietro con il tasto Indietro) il ticker non avanza,
    #intro resta a opacity:1 e si vede il logo seguito da schermo bianco
-   fisso. Qui: 1) l'intro si salta se è già stata vista in questa sessione
-   o se si arriva da Indietro/Avanti; 2) un timer di sicurezza a orologio
-   (non rAF) chiude comunque l'intro se dopo 6s è ancora lì. */
+   fisso. Qui: 1) l'intro si salta SOLO tornando indietro con Indietro/Avanti,
+   così all'apertura del sito (anche ricaricando) si vede sempre;
+   2) un timer di sicurezza a orologio (non rAF) chiude comunque l'intro
+   se dopo 9s è ancora lì. */
 function pdEndIntro(){
   try{ tl.progress(1); }catch(e){}
   document.body.classList.remove('introing');
@@ -931,13 +932,16 @@ function pdIntroStuck(){ if(document.body.classList.contains('introing')) pdEndI
 
 (function(){
   var nav=(performance.getEntriesByType('navigation')[0]||{}).type;
-  var seen=false; try{ seen=sessionStorage.getItem('pdIntroSeen')==='1'; }catch(e){}
-  if(seen || nav==='back_forward' || nav==='reload'){ pdEndIntro(); }
-  try{ sessionStorage.setItem('pdIntroSeen','1'); }catch(e){}
-  setTimeout(pdIntroStuck, 6000);
-  window.addEventListener('pageshow', function(){ setTimeout(pdIntroStuck, 5000); });
+  /* Solo il ritorno con Indietro/Avanti salta l'intro: aprire o ricaricare
+     il sito la fa sempre partire. */
+  if(nav==='back_forward'){ pdEndIntro(); }
+  setTimeout(pdIntroStuck, 9000);
+  window.addEventListener('pageshow', function(e){
+    if(e.persisted){ pdEndIntro(); return; }
+    setTimeout(pdIntroStuck, 9000);
+  });
   document.addEventListener('visibilitychange', function(){
-    if(!document.hidden) setTimeout(pdIntroStuck, 4500);
+    if(!document.hidden) setTimeout(pdIntroStuck, 9000);
   });
 })();
 /* ═══════════════════════════════════════════════════════════════════════ */
