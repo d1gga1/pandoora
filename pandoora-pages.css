@@ -228,3 +228,8 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 .pg-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:100px;background:rgba(46,107,230,.1);color:var(--blue);white-space:nowrap}
 .pg-badge.ok{background:rgba(139,195,74,.16);color:var(--green-dark)}
 .pg-note{font-size:13.5px;color:var(--muted);line-height:1.6;margin:14px 0 0}
+
+
+/* data di ultimo aggiornamento — segnale di freschezza visibile */
+.pd-updated{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px) 34px;font-size:13px;letter-spacing:.02em;color:rgba(255,255,255,.42)}
+.pd-updated time{color:rgba(255,255,255,.62)}

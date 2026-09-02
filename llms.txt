@@ -4,6 +4,9 @@
 > Produce pannelli tamburati su misura per stand fieristici, porte interne, parquet,
 > componenti per mobili e servizi di verniciatura e laccatura conto terzi.
 
+## Versione integrale
+- [Testo completo di tutte le pagine chiave](https://pandooragroup.it/llms-full.txt)
+
 ## Dati aziendali
 - Ragione sociale: PAN.DOOR.A S.r.l.
 - Fondazione: 1987
@@ -39,6 +42,13 @@
 - [Azienda](https://pandooragroup.it/azienda/)
 - [Contatti](https://pandooragroup.it/contatti/)
 - [Richiesta preventivo](https://pandooragroup.it/preventivo/)
+
+## Indici per argomento
+- [Pannelli tamburati per fiere — tutti i quartieri](https://pandooragroup.it/pannelli-tamburati-fiere/)
+- [Dove lavoriamo — Veneto e Friuli](https://pandooragroup.it/falegnameria-veneto-friuli/)
+
+## Documenti scaricabili
+- [Catalogo porte su misura 2026 (PDF, 38 pagine)](https://pandooragroup.it/catalogo-porte-pandoora-2026.pdf)
 
 ## Guide ai prezzi
 - [Pannelli tamburati: prezzi e cosa li determina](https://pandooragroup.it/pannelli-tamburati-prezzi/)

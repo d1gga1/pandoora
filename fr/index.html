@@ -77,7 +77,11 @@ html{scroll-behavior:smooth}
 body.introing{overflow:hidden!important;height:100%}
 
 /* ── Custom cursor ── */
-*{cursor:none!important}
+@media (hover:hover) and (pointer:fine){*{cursor:none!important}}
+@media (hover:none),(pointer:coarse){#cur,#curRing{display:none!important}}
+@media (prefers-reduced-motion:reduce){*{cursor:auto!important}#cur,#curRing{display:none!important}}
+:focus-visible{outline:2px solid #5B8DEF;outline-offset:3px;cursor:auto!important}
+
 #cur{position:fixed;width:7px;height:7px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s,opacity .2s}
 #cur.big{width:44px;height:44px;background:transparent;border:1.5px solid rgba(255,255,255,.5)}
 #curRing{position:fixed;width:38px;height:38px;border:1px solid rgba(255,255,255,.18);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
@@ -443,8 +447,8 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/home-seo.css">
-<link rel="stylesheet" href="/mobile.css">
-<link rel="stylesheet" href="/desktop.css">
+<link rel="stylesheet" href="/pd-base.css">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
 
