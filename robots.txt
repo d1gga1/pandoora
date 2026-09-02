@@ -54,3 +54,7 @@ User-agent: MJ12bot
 Disallow: /
 
 Sitemap: https://pandooragroup.it/sitemap.xml
+
+# Riepilogo testuale per sistemi AI
+# https://pandooragroup.it/llms.txt
+# https://pandooragroup.it/llms-full.txt
