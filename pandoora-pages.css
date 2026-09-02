@@ -147,8 +147,11 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 .pg-sec p{font-size:16px;line-height:1.78;color:var(--ink-soft);max-width:74ch;margin:0 0 16px}
 .pg-sec p a{color:var(--blue,#2e6be6);text-decoration:none;border-bottom:1px solid rgba(46,107,230,.3);transition:border-color .25s,color .25s}
 .pg-sec p a:hover{color:var(--red);border-color:var(--red)}
-.pg-sec ul{margin:0 0 18px;padding-left:22px;color:var(--ink-soft);font-size:16px;line-height:1.8;max-width:74ch}
-.pg-sec ul li{margin-bottom:7px}
+.pg-sec ul,.pg-sec ol{margin:0 0 18px;padding-left:22px;color:var(--ink-soft);font-size:16px;line-height:1.8;max-width:74ch}
+.pg-sec ul li,.pg-sec ol li{margin-bottom:7px}
+.pg-sec ol li::marker{color:var(--blue,#2e6be6);font-weight:700}
+.pg-sec li a{color:var(--blue,#2e6be6);text-decoration:none;border-bottom:1px solid rgba(46,107,230,.3)}
+.pg-sec li a:hover{color:var(--red);border-color:var(--red)}
 .pg-sec strong{color:var(--ink);font-weight:700}
 
 /* griglia di card */
@@ -233,3 +236,30 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 /* data di ultimo aggiornamento — segnale di freschezza visibile */
 .pd-updated{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px) 34px;font-size:13px;letter-spacing:.02em;color:rgba(255,255,255,.42)}
 .pd-updated time{color:rgba(255,255,255,.62)}
+
+
+/* ── moduli form B2B (rivenditori, contract, catalogo) ── */
+.qcard{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-lg);padding:40px 38px}
+.qcard h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 6px}
+.qcard .qsub{font-size:14px;color:var(--muted);margin:0 0 28px}
+.qrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.qfield{margin-bottom:18px;position:relative}
+.qfield label{display:block;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.qfield label b{color:var(--red);font-weight:700}
+.qfield input,.qfield select,.qfield textarea{width:100%;font-family:'Manrope',system-ui,Arial,sans-serif;font-size:14.5px;color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:13px 15px;transition:border-color .25s,background .25s,box-shadow .25s;outline:none}
+.qfield textarea{min-height:132px;resize:vertical;line-height:1.6}
+.qfield select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a929b' stroke-width='2.4'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:42px;cursor:pointer}
+.qfield input:focus,.qfield select:focus,.qfield textarea:focus{background:#fff;border-color:var(--blue-soft);box-shadow:0 0 0 4px rgba(46,107,230,.12)}
+.qfield input:invalid:not(:placeholder-shown),.qfield textarea:invalid:not(:placeholder-shown){border-color:rgba(192,57,43,.5)}
+.qfield.err input,.qfield.err select,.qfield.err textarea{border-color:var(--red);box-shadow:0 0 0 4px rgba(192,57,43,.1)}
+.qcheck{display:flex;align-items:flex-start;gap:11px;margin:6px 0 24px;font-size:12.5px;line-height:1.6;color:var(--ink-soft)}
+.qcheck input{width:17px;height:17px;margin-top:2px;accent-color:var(--red);flex-shrink:0;cursor:pointer}
+.qcheck a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.qsubmit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 26px;border:none;border-radius:100px;background:var(--red);color:#fff;font-family:'Manrope',system-ui,Arial,sans-serif;font-size:15px;font-weight:700;letter-spacing:.3px;cursor:pointer;transition:transform .25s var(--ease),box-shadow .3s,background .3s}
+.qsubmit:hover{transform:translateY(-2px);background:var(--red-dark);box-shadow:0 16px 34px rgba(192,57,43,.34)}
+.qsubmit:disabled{opacity:.6;cursor:wait;transform:none}
+.qsubmit svg{transition:transform .3s var(--ease)}
+.qsubmit:hover svg{transform:translateX(4px)}
+.qnote{font-size:12px;color:var(--muted);text-align:center;margin:14px 0 0}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+@media(max-width:640px){.qcard{padding:30px 22px;border-radius:18px}.qrow{grid-template-columns:1fr;gap:0}}
