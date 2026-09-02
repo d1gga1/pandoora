@@ -60,6 +60,15 @@
   /* ---------- dictionary (base) ---------- */
   /* ---------- slug tradotti disponibili ---------- */
   const PAGES = new Set(['azienda', 'componenti-per-mobili', 'contatti', 'faq', 'grazie', 'listino-pannelli-tamburati', 'pannelli-tamburati', 'pavimentazioni', 'porte', 'preventivo', 'progetti', 'progetto', 'verniciatura']);
+  /* slug tradotti: chiave = slug italiano canonico */
+  const SLUG = {
+    'pannelli-tamburati': { en:'honeycomb-panels', fr:'panneaux-alveolaires', de:'wabenplatten' }
+  };
+  /* indice inverso: "<lingua>/<slug tradotto>" -> slug italiano */
+  const CANON = {};
+  Object.keys(SLUG).forEach(function(it){
+    Object.keys(SLUG[it]).forEach(function(l){ CANON[l + '/' + SLUG[it][l]] = it; });
+  });
   const LANGS = ['it','en','fr','de'];
 
   /* ---------- lingua e slug correnti dedotti dall'URL ---------- */
@@ -69,12 +78,15 @@
     const m = p.match(/^(en|fr|de)(\/|$)(.*)$/);
     if (m) { lang = m[1]; p = m[3] || ''; }
     p = p.replace(/\/+$/, '');
+    if (lang !== 'it' && CANON[lang + '/' + p]) p = CANON[lang + '/' + p];
     return { lang: lang, page: p };
   }
   function urlFor(lang, page){
     const target = PAGES.has(page) ? page : '';
     const pre = (lang === 'it') ? '/' : '/' + lang + '/';
-    return pre + (target ? target + '/' : '');
+    if (!target) return pre;
+    const loc = (lang !== 'it' && SLUG[target] && SLUG[target][lang]) ? SLUG[target][lang] : target;
+    return pre + loc + '/';
   }
 
   const cur = parsePath();

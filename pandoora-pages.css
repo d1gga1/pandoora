@@ -215,3 +215,16 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
   .pg-cta{padding:42px 22px;border-radius:18px}
   .pg-map iframe{height:300px}
 }
+
+/* ── tabelle informative (calendario fiere, comparative) ── */
+.pg-tablewrap{margin:30px 0;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pg-table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px}
+.pg-table th{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--bg-soft)}
+.pg-table td{padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55;color:var(--ink-soft)}
+.pg-table tr:last-child td{border-bottom:none}
+.pg-table td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+.pg-table td.pg-when{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink)}
+.pg-table tr:hover td{background:var(--bg-soft)}
+.pg-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:100px;background:rgba(46,107,230,.1);color:var(--blue);white-space:nowrap}
+.pg-badge.ok{background:rgba(139,195,74,.16);color:var(--green-dark)}
+.pg-note{font-size:13.5px;color:var(--muted);line-height:1.6;margin:14px 0 0}
