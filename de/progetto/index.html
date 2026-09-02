@@ -120,7 +120,7 @@ img{max-width:100%;display:block}
 .pm{display:flex;flex-direction:column;gap:2px}
 .pm .k{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .pm .v{font-size:16px;font-weight:600;color:#fff}
-.phero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.5);font-size:10px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:7px}
+.phero-scroll{position:absolute;bottom:20px;right:28px;left:auto;transform:none;z-index:3;color:rgba(255,255,255,.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:7px}
 .sdot{width:20px;height:33px;border:1.5px solid rgba(255,255,255,.3);border-radius:11px;position:relative}
 .sdot::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:6px;border-radius:2px;background:#fff;transform:translateX(-50%);animation:sc 1.6s ease-in-out infinite}
 @keyframes sc{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,11px)}}
@@ -264,9 +264,39 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 @media(max-width:600px){.pf{padding:56px 22px 0}.pf-top{grid-template-columns:1fr;gap:34px}.pf-menu{grid-template-columns:1fr 1fr}.pf-wa{right:18px;bottom:72px}.pf-top-btn{right:25px;bottom:142px}}
 @media(prefers-reduced-motion:reduce){.pf-col{opacity:1;transform:none}.pf-wa-pulse,.pf-fed-dot{animation:none}}
 
+
+/* FIX: nascondi lo scroll-hint su mobile, dove si sovrappone ai dati */
+@media(max-width:820px){.phero-scroll{display:none}}
+/*pdScrollHideMobile*/
 </style>
 <link rel="stylesheet" href="/pd-base.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
+<style id="pd-readability">
+/* === Leggibilità mobile — aggiunto in audit 2026-09-02 ===
+   1) nessuna micro-etichetta sotto i 12px sui piccoli schermi
+   2) link di footer e briciole di pane con area toccabile adeguata */
+@media(max-width:820px){
+  .pg-eyebrow,.sb-eyebrow,.hs-eyebrow,.qeyebrow,.eyebrow,.sec-sub,.sec-num,.sec-cta,
+  .chip,.pill,.pj-cat,.prj-cat,.pcard-tag,.ctag,.card-badge,.card-num,.card-cta,
+  .phero-cat,.hero-eye,.hero-num,.hero-breadcrumb,.section-label,.logo-sub,.intro-sub,
+  .stat-l,.fcount,.ftab,.fct,.sindex,.dsz,.drev,.shint,.mbadge,.mkey,.mspecs-title,
+  .ess-lat,.sdiv-txt,.gi-lbl,.gsec-lnk,.slider-label-text,.hs-scroll,.pdx-n,
+  .nav-back,.nav-ct,.foot-link,.foot-copy,.pg-badge,.card-desc,.spec,.hero-sub{
+    font-size:12px !important
+  }
+  /* barra prodotti orizzontale: allinea il tasto Indietro e rendi leggibile l'etichetta */
+  .sidebar > a:first-child{margin-bottom:0 !important;align-self:center}
+  .side-cat{opacity:.75 !important}
+  /* il menu a panino è fisso in alto a destra: lascia spazio ai tasti "Indietro" */
+  .back-link,.nav-back,#back,.pdp-back,.lst-back{margin-right:56px}
+  .topbar,.pg-topbar,.lst-top{padding-right:66px}
+  /* area di tocco: minimo consigliato ~44px di altezza di riga utile */
+  .pf-menu a,.pd-crumb a,.pd-crumb ol li a,.foot-link,.pf-col a,.pdm-link,
+  .pf-legal a,nav[aria-label*="avigaz"] a,nav[aria-label*="readcrumb"] a,ol[itemscope] a{
+    display:inline-block;padding-top:6px;padding-bottom:6px;line-height:1.7
+  }
+}
+</style>
 </head>
 <body>
 
@@ -276,7 +306,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 </header>
 
 <section class="phero">
-  <div class="phero-bg"><img id="heroImg" src="" alt="" loading="lazy" decoding="async"></div>
+  <div class="phero-bg"><img id="heroImg" alt="" loading="lazy" decoding="async"></div>
   <div class="phero-inner">
     <div class="phero-cat" id="heroCat"></div>
     <h1 id="heroTitle"></h1>
@@ -406,7 +436,7 @@ const gal=document.getElementById('gallery');
 P.images.forEach((im,i)=>{
   const f=document.createElement('figure');
   f.dataset.i=i;
-  f.innerHTML='<img src="/'+img(im[0],1000)+'" alt="'+P.title.join(' ')+' '+(i+1)+'" loading="lazy" decoding="async"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>';
+  f.innerHTML='<img src="'+img(im[0],1000)+'" alt="'+P.title.join(' ')+' '+(i+1)+'" loading="lazy" decoding="async"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>';
   f.addEventListener('click',()=>openLb(i));
   gal.appendChild(f);
 });
@@ -420,7 +450,7 @@ ORDER.filter(s=>s!==slug).forEach(s=>{
   const pr=PROJECTS[s];
   const a=document.createElement('a');
   a.className='ocard';a.href='/de/progetto/?p='+s;
-  a.innerHTML='<img src="/'+img(pr.images[0][0],800)+'" alt="'+pr.title.join(' ')+'" loading="lazy" decoding="async"><div class="ocard-info"><div><span>'+pr.cat.split('·')[0].trim()+'</span><h4>'+pr.title.join(' ')+'</h4></div><span class="ocard-go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
+  a.innerHTML='<img src="'+img(pr.images[0][0],800)+'" alt="'+pr.title.join(' ')+'" loading="lazy" decoding="async"><div class="ocard-info"><div><span>'+pr.cat.split('·')[0].trim()+'</span><h4>'+pr.title.join(' ')+'</h4></div><span class="ocard-go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
   og.appendChild(a);
 });
 

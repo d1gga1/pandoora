@@ -70,6 +70,32 @@
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
+<style id="pd-readability">
+/* === Leggibilità mobile — aggiunto in audit 2026-09-02 ===
+   1) nessuna micro-etichetta sotto i 12px sui piccoli schermi
+   2) link di footer e briciole di pane con area toccabile adeguata */
+@media(max-width:820px){
+  .pg-eyebrow,.sb-eyebrow,.hs-eyebrow,.qeyebrow,.eyebrow,.sec-sub,.sec-num,.sec-cta,
+  .chip,.pill,.pj-cat,.prj-cat,.pcard-tag,.ctag,.card-badge,.card-num,.card-cta,
+  .phero-cat,.hero-eye,.hero-num,.hero-breadcrumb,.section-label,.logo-sub,.intro-sub,
+  .stat-l,.fcount,.ftab,.fct,.sindex,.dsz,.drev,.shint,.mbadge,.mkey,.mspecs-title,
+  .ess-lat,.sdiv-txt,.gi-lbl,.gsec-lnk,.slider-label-text,.hs-scroll,.pdx-n,
+  .nav-back,.nav-ct,.foot-link,.foot-copy,.pg-badge,.card-desc,.spec,.hero-sub{
+    font-size:12px !important
+  }
+  /* barra prodotti orizzontale: allinea il tasto Indietro e rendi leggibile l'etichetta */
+  .sidebar > a:first-child{margin-bottom:0 !important;align-self:center}
+  .side-cat{opacity:.75 !important}
+  /* il menu a panino è fisso in alto a destra: lascia spazio ai tasti "Indietro" */
+  .back-link,.nav-back,#back,.pdp-back,.lst-back{margin-right:56px}
+  .topbar,.pg-topbar,.lst-top{padding-right:66px}
+  /* area di tocco: minimo consigliato ~44px di altezza di riga utile */
+  .pf-menu a,.pd-crumb a,.pd-crumb ol li a,.foot-link,.pf-col a,.pdm-link,
+  .pf-legal a,nav[aria-label*="avigaz"] a,nav[aria-label*="readcrumb"] a,ol[itemscope] a{
+    display:inline-block;padding-top:6px;padding-bottom:6px;line-height:1.7
+  }
+}
+</style>
 </head>
 <body>
 
@@ -107,9 +133,7 @@
 
   <section class="pg-sec" id="recapiti">
     <h2>Direct contact details</h2>
-    <p>Per una richiesta commerciale o tecnica puoi scriverci, chiamarci o passare da noi.
-    Se hai già disegni o misure, il canale più rapido resta il
-    <a href="/en/preventivo/">quotation request form</a>: arriva direttamente all'ufficio ordini.</p>
+    <p>For a commercial or technical enquiry you can write to us, call us or drop by. If you already have drawings or measurements, the quickest route is the <a href="/en/preventivo/">quotation request form</a>: it goes straight to our order office.</p>
 
     <div class="pg-contact">
       <a class="pg-cbox" href="tel:+393356326505">

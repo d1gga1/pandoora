@@ -68,7 +68,6 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -103,13 +102,13 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
   background:linear-gradient(180deg,rgba(4,10,20,.92) 0%,transparent 100%);
   transform:translateY(-100%)
 }
-.nav-back{display:flex;align-items:center;gap:14px;color:var(--dim);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;transition:color .3s}
+.nav-back{display:flex;align-items:center;gap:14px;color:var(--dim);font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;transition:color .3s}
 .nav-back:hover{color:#fff}
 .nav-arrow{width:26px;height:1px;background:currentColor;position:relative}
 .nav-arrow::before{content:'';position:absolute;left:0;top:-3px;width:7px;height:7px;border-bottom:1.5px solid currentColor;border-left:1.5px solid currentColor;transform:rotate(45deg)}
 .nav-logo{font-size:13px;font-weight:900;letter-spacing:5px;color:rgba(255,255,255,.65)}
 .nav-logo b{color:var(--acc)}
-.nav-cta{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .3s}
+.nav-cta{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .3s}
 .nav-cta:hover{color:#fff}
 
 /* ── hero ── */
@@ -140,7 +139,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .hero-corner svg{width:56px;height:56px;color:var(--acc)}
 
 .hero-breadcrumb{
-  font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
   color:var(--muted);margin-bottom:22px;display:flex;align-items:center;gap:10px;opacity:0
 }
 .hero-breadcrumb em{color:rgba(91,141,239,.6);font-style:normal}
@@ -156,13 +155,13 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .hero-stats{display:flex;gap:48px;opacity:0;transform:translateY(16px)}
 .stat{border-left:1px solid var(--border);padding-left:22px}
 .stat-n{font-size:clamp(24px,3vw,40px);font-weight:900;color:#fff;line-height:1}
-.stat-n sup{color:var(--acc);font-size:.55em;vertical-align:super}
-.stat-l{font-size:9px;font-weight:700;letter-spacing:2.5px;color:var(--dim);text-transform:uppercase;margin-top:5px}
+.stat-n sup{color:var(--acc);font-size:11px;vertical-align:super}
+.stat-l{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--dim);text-transform:uppercase;margin-top:5px}
 
 /* ── divider ── */
 .sdiv{display:flex;align-items:center;gap:20px;padding:0 48px;margin:48px 0 32px;opacity:0}
 .sdiv-line{flex:1;height:1px;background:var(--border)}
-.sdiv-txt{font-size:8px;font-weight:700;letter-spacing:3.5px;color:var(--muted);text-transform:uppercase;white-space:nowrap}
+.sdiv-txt{font-size:11px;font-weight:700;letter-spacing:3.5px;color:var(--muted);text-transform:uppercase;white-space:nowrap}
 
 /* ── filter bar ── */
 .fbar{
@@ -174,12 +173,12 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .pill{
   padding:7px 20px;border-radius:24px;
   border:1px solid var(--border);background:transparent;
-  font-size:10px;font-weight:700;letter-spacing:.8px;
+  font-size:11px;font-weight:700;letter-spacing:.8px;
   color:var(--dim);cursor:pointer!important;transition:all .25s;white-space:nowrap
 }
 .pill:hover{border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.65)}
 .pill.on{background:#fff;border-color:#fff;color:var(--ink)}
-.fcount{font-size:9.5px;font-weight:700;letter-spacing:1.5px;color:var(--muted);white-space:nowrap}
+.fcount{font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--muted);white-space:nowrap}
 .fcount strong{color:var(--text)}
 
 /* ── product grid ── */
@@ -210,10 +209,10 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .pcard:hover{background:rgba(91,141,239,.055);border-color:rgba(91,141,239,.32)}
 .pcard:hover::before,.pcard:hover::after{opacity:1}
 
-.card-num{position:absolute;top:22px;left:30px;font-size:9px;font-weight:700;letter-spacing:3px;color:var(--muted)}
+.card-num{position:absolute;top:22px;left:30px;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--muted)}
 .card-badge{
   position:absolute;top:22px;right:26px;
-  font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
   color:rgba(91,141,239,.45);opacity:0;transition:opacity .3s
 }
 .pcard:hover .card-badge{opacity:1}
@@ -243,7 +242,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .card-desc{font-size:11px;line-height:1.65;color:var(--dim);margin-top:10px}
 .card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
 .ctag{
-  font-size:8.5px;font-weight:700;letter-spacing:.5px;
+  font-size:11px;font-weight:700;letter-spacing:.5px;
   padding:3px 10px;border-radius:12px;
   background:rgba(91,141,239,.1);border:1px solid rgba(91,141,239,.2);
   color:rgba(91,141,239,.85)
@@ -251,7 +250,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 
 .card-cta{
   display:flex;align-items:center;gap:9px;margin-top:14px;
-  font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
   color:rgba(91,141,239,.7);
   transform:translateX(-8px);transition:transform .3s .05s,color .2s
 }
@@ -263,9 +262,9 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 /* ── gallery ── */
 .gsec{padding:0 36px 100px;opacity:0;transform:translateY(20px)}
 .gsec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
-.gsec-ttl{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--dim)}
+.gsec-ttl{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--dim)}
 .gsec-lnk{
-  font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
   color:var(--acc);display:flex;align-items:center;gap:9px;text-decoration:none;transition:color .3s
 }
 .gsec-lnk:hover{color:#fff}
@@ -280,7 +279,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .gitem-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
 .gi-icon{opacity:.12;transition:opacity .35s}
 .gitem:hover .gi-icon{opacity:.3}
-.gi-lbl{font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);opacity:0;transform:translateY(5px);transition:opacity .35s,transform .35s}
+.gi-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);opacity:0;transform:translateY(5px);transition:opacity .35s,transform .35s}
 .gitem:hover .gi-lbl{opacity:1;transform:translateY(0)}
 
 /* ── footer ── */
@@ -291,9 +290,9 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .foot-brand{font-size:11px;font-weight:900;letter-spacing:5px;color:rgba(255,255,255,.3)}
 .foot-brand b{color:var(--acc)}
 .foot-links{display:flex;gap:28px}
-.foot-link{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
+.foot-link{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s}
 .foot-link:hover{color:rgba(255,255,255,.6)}
-.foot-copy{font-size:9px;color:var(--muted);letter-spacing:.5px}
+.foot-copy{font-size:11px;color:var(--muted);letter-spacing:.5px}
 
 /* dim non-matching */
 .pcard.dimmed{opacity:.08!important;transform:scale(.97) translateY(0)!important;pointer-events:none;transition:opacity .3s,transform .3s,background .45s,border-color .45s}
@@ -324,6 +323,32 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 <link rel="stylesheet" href="/footer.css">
 <link rel="stylesheet" href="/pd-base.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet"></noscript>
+<style id="pd-readability">
+/* === Leggibilità mobile — aggiunto in audit 2026-09-02 ===
+   1) nessuna micro-etichetta sotto i 12px sui piccoli schermi
+   2) link di footer e briciole di pane con area toccabile adeguata */
+@media(max-width:820px){
+  .pg-eyebrow,.sb-eyebrow,.hs-eyebrow,.qeyebrow,.eyebrow,.sec-sub,.sec-num,.sec-cta,
+  .chip,.pill,.pj-cat,.prj-cat,.pcard-tag,.ctag,.card-badge,.card-num,.card-cta,
+  .phero-cat,.hero-eye,.hero-num,.hero-breadcrumb,.section-label,.logo-sub,.intro-sub,
+  .stat-l,.fcount,.ftab,.fct,.sindex,.dsz,.drev,.shint,.mbadge,.mkey,.mspecs-title,
+  .ess-lat,.sdiv-txt,.gi-lbl,.gsec-lnk,.slider-label-text,.hs-scroll,.pdx-n,
+  .nav-back,.nav-ct,.foot-link,.foot-copy,.pg-badge,.card-desc,.spec,.hero-sub{
+    font-size:12px !important
+  }
+  /* barra prodotti orizzontale: allinea il tasto Indietro e rendi leggibile l'etichetta */
+  .sidebar > a:first-child{margin-bottom:0 !important;align-self:center}
+  .side-cat{opacity:.75 !important}
+  /* il menu a panino è fisso in alto a destra: lascia spazio ai tasti "Indietro" */
+  .back-link,.nav-back,#back,.pdp-back,.lst-back{margin-right:56px}
+  .topbar,.pg-topbar,.lst-top{padding-right:66px}
+  /* area di tocco: minimo consigliato ~44px di altezza di riga utile */
+  .pf-menu a,.pd-crumb a,.pd-crumb ol li a,.foot-link,.pf-col a,.pdm-link,
+  .pf-legal a,nav[aria-label*="avigaz"] a,nav[aria-label*="readcrumb"] a,ol[itemscope] a{
+    display:inline-block;padding-top:6px;padding-bottom:6px;line-height:1.7
+  }
+}
+</style>
 </head>
 <body>
 
@@ -354,7 +379,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
   <div class="hero-breadcrumb" id="hbc">Hub <em>›</em> Möbelkomponenten</div>
   <h1 class="hero-title">
     <span class="hero-tl">Komponenten</span>
-    <span class="hero-tl">Komponenten</span>
+    <span class="hero-tl">für Möbel</span>
   </h1>
   <p class="hero-desc" id="hdesc">
     Ein komplettes Sortiment an Holzelementen für Möbel nach Maß. Von der lackierten Tür bis zur Arbeitsplatte, vom Bettrahmen bis zur Vertäfelung — alles, um das perfekte Möbelstück zu bauen.
@@ -550,6 +575,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
@@ -720,10 +746,7 @@ document.addEventListener('mousemove', e => {
   <section class="sb-sec">
     <h2>So funktioniert die Lohnfertigung</h2>
     <p>Der Ablauf ist einfach: Sie schicken uns die Zeichnung oder die Maße, wir prüfen die Machbarkeit und antworten mit einem Angebot — in der Regel innerhalb von 24 Arbeitsstunden. Wir akzeptieren DWG, PDF und auch bemaßte Handskizzen.</p>
-    <p>Se lo desideri, la lavorazione si ferma al grezzo e alla finitura pensi tu; in alternativa
-    consegniamo il pezzo già laccato, grazie al reparto interno di
-    <a href="/de/verniciatura/">Lackieren und Beschichten</a>, che lavora anche su manufatti
-    forniti da te.</p>
+    <p>Auf Wunsch endet die Bearbeitung beim Rohteil und Sie übernehmen die Oberfläche selbst; alternativ liefern wir das Teil bereits lackiert, dank unserer internen Abteilung für <a href="/de/verniciatura/">Lackieren und Beschichten</a>, die auch von Ihnen gelieferte Werkstücke bearbeitet.</p>
     <div class="sb-chips"><a class="sb-chip" href="/de/verniciatura/">Lohnlackierung</a><a class="sb-chip" href="/de/porte/">Türen</a><a class="sb-chip" href="/de/pavimentazioni/">Bodenbeläge</a><a class="sb-chip" href="/de/azienda/">Über uns</a><a class="sb-chip" href="/de/preventivo/">Angebot anfordern</a></div>
     <p style="margin-top:22px"><a class="sb-cta" href="/de/preventivo/">Schicken Sie uns Ihre Zeichnung →</a></p>
   </section>
@@ -848,6 +871,26 @@ document.addEventListener('mousemove', e => {
 window.addEventListener('load',function(){
   var h=document.getElementById('heroBg'); if(h) h.classList.add('loaded');
 });
+</script>
+<script>
+/* === RETE DI SICUREZZA (audit 2026-09-02) ===
+   Se GSAP o ScrollTrigger non si caricano (CDN bloccato, adblocker, rete lenta),
+   gli elementi animati resterebbero invisibili. Qui, dopo il caricamento della
+   pagina, se le librerie mancano si rende tutto visibile. */
+(function(){
+  function reveal(){
+    if (window.gsap && window.ScrollTrigger) return;
+    var s = document.createElement('style');
+    s.textContent = '.hero-tl,.htl,.htl>span,.hero-title,.hero-num,.hero-sub,.hero-chips,'
+      + '.hero-desc,.hero-breadcrumb,.hero-stats,.section-intro,.card,.sec-num,.sec-sub,'
+      + '.reveal,.fade-up,[data-anim]{opacity:1!important;transform:none!important;visibility:visible!important}'
+      + '.hero-title,.htl{overflow:visible!important}';
+    document.head.appendChild(s);
+  }
+  if (document.readyState === 'complete') setTimeout(reveal, 1200);
+  else addEventListener('load', function(){ setTimeout(reveal, 1200); });
+  setTimeout(reveal, 4000);
+})();
 </script>
 </body>
 </html>
