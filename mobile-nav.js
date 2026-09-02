@@ -100,7 +100,7 @@
     panel.setAttribute('aria-label','Menu di navigazione');
 
     var logo = document.querySelector('.brand img, .nav-logo img, #logoTop img');
-    var logoSrc = logo ? logo.getAttribute('src') : 'pandoora_logo.webp';
+    var logoSrc = logo ? logo.getAttribute('src') : '/pandoora_logo.webp';
 
     var head = el('div','pdm-head');
     var lg = el('a'); lg.href='/'; lg.innerHTML='<img src="'+logoSrc+'" alt="Pan.door.a">';
