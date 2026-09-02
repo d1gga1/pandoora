@@ -100,6 +100,32 @@
 }
 </style>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
+<style id="pd-readability">
+/* === Leggibilità mobile — aggiunto in audit 2026-09-02 ===
+   1) nessuna micro-etichetta sotto i 12px sui piccoli schermi
+   2) link di footer e briciole di pane con area toccabile adeguata */
+@media(max-width:820px){
+  .pg-eyebrow,.sb-eyebrow,.hs-eyebrow,.qeyebrow,.eyebrow,.sec-sub,.sec-num,.sec-cta,
+  .chip,.pill,.pj-cat,.prj-cat,.pcard-tag,.ctag,.card-badge,.card-num,.card-cta,
+  .phero-cat,.hero-eye,.hero-num,.hero-breadcrumb,.section-label,.logo-sub,.intro-sub,
+  .stat-l,.fcount,.ftab,.fct,.sindex,.dsz,.drev,.shint,.mbadge,.mkey,.mspecs-title,
+  .ess-lat,.sdiv-txt,.gi-lbl,.gsec-lnk,.slider-label-text,.hs-scroll,.pdx-n,
+  .nav-back,.nav-ct,.foot-link,.foot-copy,.pg-badge,.card-desc,.spec,.hero-sub{
+    font-size:12px !important
+  }
+  /* barra prodotti orizzontale: allinea il tasto Indietro e rendi leggibile l'etichetta */
+  .sidebar > a:first-child{margin-bottom:0 !important;align-self:center}
+  .side-cat{opacity:.75 !important}
+  /* il menu a panino è fisso in alto a destra: lascia spazio ai tasti "Indietro" */
+  .back-link,.nav-back,#back,.pdp-back,.lst-back{margin-right:56px}
+  .topbar,.pg-topbar,.lst-top{padding-right:66px}
+  /* area di tocco: minimo consigliato ~44px di altezza di riga utile */
+  .pf-menu a,.pd-crumb a,.pd-crumb ol li a,.foot-link,.pf-col a,.pdm-link,
+  .pf-legal a,nav[aria-label*="avigaz"] a,nav[aria-label*="readcrumb"] a,ol[itemscope] a{
+    display:inline-block;padding-top:6px;padding-bottom:6px;line-height:1.7
+  }
+}
+</style>
 </head>
 <body>
 
@@ -196,9 +222,7 @@
   <section class="pg-sec">
     <h2>Comment naît un aménagement</h2>
     <p>Derrière chacun de ces projets, la même filière : <a href="/fr/panneaux-alveolaires/">panneaux alvéolaires</a> pour les cloisons, <a href="/fr/listino-pannelli-tamburati/">praticables de mise à niveau et pièces d'assemblage</a> pour la structure, <a href="/fr/porte/">portes alvéolaires</a> pour les accès et <a href="/fr/verniciatura/">laquage intégré</a> pour aligner l'ensemble sur l'identité de la marque.</p>
-    <p>Lavorare con un unico interlocutore dal taglio all'imballo è ciò che permette di rispettare
-    date di montaggio che non si possono spostare. Se hai una fiera in calendario,
-    <a href="/fr/contatti/">parliamone</a>.</p>
+    <p>Travailler avec un interlocuteur unique, de la découpe à l’emballage, est ce qui permet de respecter des dates de montage qui ne peuvent pas être déplacées. Si vous avez un salon au calendrier, <a href="/fr/contatti/">parlons-en</a>.</p>
     <div class="pg-related">
       <a class="pg-chip" href="/fr/panneaux-alveolaires/">Panneaux alvéolaires</a>
       <a class="pg-chip" href="/fr/listino-pannelli-tamburati/">Fiches techniques</a>
