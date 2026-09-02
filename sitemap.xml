@@ -106,14 +106,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/calendario-fiere-allestimenti/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/caricare_su_github/</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/caricare_su_github/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/caricare_su_github/"/>
-  </url>
-  <url>
     <loc>https://pandooragroup.it/catalogo-porte/</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
