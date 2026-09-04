@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  var LOGO    = '/pandoora_logo.webp';
+  var LOGO    = 'pandoora_logo.webp';
   var DUR     = 1780;                 // ms totali prima del cambio pagina
   var KEY     = 'pdxArrive';
   var DEF_ACC = '#5B8DEF';

@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pandooragroup.it/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/ante-laccate-su-misura/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/ante-laccate-su-misura/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/azienda/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/azienda/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
@@ -77,7 +77,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/azienda/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
@@ -88,7 +88,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/azienda/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
@@ -98,24 +98,84 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/calcolatore-pannelli-stand/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/calcolatore-pannelli-stand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/calcolatore-pannelli-stand/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/calendario-fiere-allestimenti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/calendario-fiere-allestimenti/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/calendario-fiere-allestimenti/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/caricare_su_github/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/caricare_su_github/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/caricare_su_github/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/catalogo-porte/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-porte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/catalogo-porte/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/certificazioni/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/certificazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/certificates/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/certificazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/certificats/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/certificazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/zertifikate/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/certificazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/componenti-per-mobili/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
@@ -126,7 +186,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/componenti-per-mobili/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
@@ -137,7 +197,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/componenti-per-mobili/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
@@ -148,7 +208,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/componenti-per-mobili/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
@@ -159,7 +219,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/contatti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
@@ -170,7 +230,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/contatti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
@@ -181,7 +241,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/contatti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
@@ -192,7 +252,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/contatti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
@@ -203,7 +263,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/contract-porte-progettisti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contract-porte-progettisti/"/>
@@ -211,7 +271,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-conegliano/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-conegliano/"/>
@@ -219,7 +279,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-oderzo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-oderzo/"/>
@@ -227,7 +287,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-padova/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-padova/"/>
@@ -235,7 +295,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-pordenone/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-pordenone/"/>
@@ -243,7 +303,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-portogruaro/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-portogruaro/"/>
@@ -251,7 +311,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-treviso/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-treviso/"/>
@@ -259,7 +319,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-udine/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-udine/"/>
@@ -267,7 +327,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-veneto-friuli/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-veneto-friuli/"/>
@@ -275,7 +335,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-venezia/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-venezia/"/>
@@ -283,7 +343,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-vicenza/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-vicenza/"/>
@@ -291,7 +351,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/falegnameria-vittorio-veneto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/falegnameria-vittorio-veneto/"/>
@@ -299,7 +359,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/faq/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/faq/"/>
@@ -310,7 +370,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/faq/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/faq/"/>
@@ -321,7 +381,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/faq/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/faq/"/>
@@ -332,7 +392,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/faq/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/faq/"/>
@@ -343,7 +403,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/glossario/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/glossario/"/>
@@ -351,7 +411,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/guida-scelta-pannello-tamburato/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/guida-scelta-pannello-tamburato/"/>
@@ -359,7 +419,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/guide/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/guide/"/>
@@ -367,7 +427,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/listino-pannelli-tamburati/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
@@ -378,7 +438,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/listino-pannelli-tamburati/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
@@ -389,7 +449,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/listino-pannelli-tamburati/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
@@ -400,7 +460,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/listino-pannelli-tamburati/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
@@ -411,7 +471,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/mensole-su-misura/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/mensole-su-misura/"/>
@@ -419,7 +479,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/montaggio-porte-interne/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/montaggio-porte-interne/"/>
@@ -427,15 +487,23 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-ignifughi-fiere/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-ignifughi-fiere/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-ignifughi-fiere/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-bari-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-bari-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-bari-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-bologna-fiera/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-bologna-fiera/"/>
@@ -443,39 +511,95 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-cersaie/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-cersaie/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-cersaie/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-colonia-koelnmesse/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-colonia-koelnmesse/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-colonia-koelnmesse/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-fiere/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-fiere/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-fiere/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-firenze-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-firenze-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-firenze-fiera/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-francoforte-messe/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-francoforte-messe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-francoforte-messe/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-genova-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-genova-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-genova-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-milano-fiera/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-milano-fiera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-milano-fiera/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-napoli-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-napoli-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-napoli-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-padova-fiera/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-padova-fiera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-padova-fiera/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-parigi-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-parigi-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-parigi-fiera/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-parma-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-parma-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-parma-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-prezzi/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-prezzi/"/>
@@ -483,23 +607,39 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-rimini-fiera/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-rimini-fiera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-rimini-fiera/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-roma-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-roma-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-roma-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-salone-del-mobile/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-salone-del-mobile/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-salone-del-mobile/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati-torino-fiera/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-torino-fiera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-torino-fiera/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-verona/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-verona/"/>
@@ -507,7 +647,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-vicenza-fiera/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-vicenza-fiera/"/>
@@ -515,7 +655,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-vinitaly/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-vinitaly/"/>
@@ -523,7 +663,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -534,7 +674,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -545,7 +685,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -556,7 +696,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/wabenplatten/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -567,7 +707,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/parquet-prezzi-al-mq/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/parquet-prezzi-al-mq/"/>
@@ -575,7 +715,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/parquet-spina-di-pesce/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/parquet-spina-di-pesce/"/>
@@ -583,7 +723,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pavimentazioni/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
@@ -594,7 +734,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/pavimentazioni/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
@@ -605,7 +745,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/pavimentazioni/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
@@ -616,7 +756,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/pavimentazioni/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
@@ -627,7 +767,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-filo-muro/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-filo-muro/"/>
@@ -635,7 +775,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-abano-terme/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-abano-terme/"/>
@@ -643,7 +783,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-adria/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-adria/"/>
@@ -651,7 +791,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-azzano-decimo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-azzano-decimo/"/>
@@ -659,7 +799,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-bassano-del-grappa/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-bassano-del-grappa/"/>
@@ -667,7 +807,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-belluno/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-belluno/"/>
@@ -675,7 +815,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-castelfranco-veneto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-castelfranco-veneto/"/>
@@ -683,7 +823,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-cervignano-del-friuli/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-cervignano-del-friuli/"/>
@@ -691,7 +831,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-cittadella/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-cittadella/"/>
@@ -699,7 +839,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-codroipo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-codroipo/"/>
@@ -707,7 +847,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-conegliano/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-conegliano/"/>
@@ -715,7 +855,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-cortina-dampezzo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-cortina-dampezzo/"/>
@@ -723,7 +863,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-feltre/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-feltre/"/>
@@ -731,7 +871,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-friuli-venezia-giulia/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-friuli-venezia-giulia/"/>
@@ -739,7 +879,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-gorizia/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-gorizia/"/>
@@ -747,7 +887,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-grado/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-grado/"/>
@@ -755,7 +895,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-jesolo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-jesolo/"/>
@@ -763,7 +903,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-lago-di-garda/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-lago-di-garda/"/>
@@ -771,7 +911,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-laminate/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-laminate/"/>
@@ -779,7 +919,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-latisana/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-latisana/"/>
@@ -787,7 +927,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-lignano-sabbiadoro/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-lignano-sabbiadoro/"/>
@@ -795,7 +935,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-mestre/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-mestre/"/>
@@ -803,7 +943,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-mirano/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-mirano/"/>
@@ -811,7 +951,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-mogliano-veneto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-mogliano-veneto/"/>
@@ -819,7 +959,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-monfalcone/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-monfalcone/"/>
@@ -827,7 +967,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-monselice/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-monselice/"/>
@@ -835,7 +975,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-montebelluna/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-montebelluna/"/>
@@ -843,7 +983,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-motta-di-livenza/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-motta-di-livenza/"/>
@@ -851,7 +991,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-oderzo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-oderzo/"/>
@@ -859,7 +999,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-padova/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-padova/"/>
@@ -867,7 +1007,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-pordenone/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-pordenone/"/>
@@ -875,7 +1015,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-portogruaro/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-portogruaro/"/>
@@ -883,7 +1023,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-prezzi/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-prezzi/"/>
@@ -891,7 +1031,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-rovigo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-rovigo/"/>
@@ -899,7 +1039,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-sacile/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-sacile/"/>
@@ -907,7 +1047,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-san-bonifacio/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-san-bonifacio/"/>
@@ -915,7 +1055,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-san-daniele-del-friuli/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-san-daniele-del-friuli/"/>
@@ -923,7 +1063,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-san-dona-di-piave/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-san-dona-di-piave/"/>
@@ -931,7 +1071,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-schio/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-schio/"/>
@@ -939,7 +1079,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-spilimbergo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-spilimbergo/"/>
@@ -947,7 +1087,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-thiene/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-thiene/"/>
@@ -955,7 +1095,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-treviso/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-treviso/"/>
@@ -963,7 +1103,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-trieste/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-trieste/"/>
@@ -971,7 +1111,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-udine/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-udine/"/>
@@ -979,7 +1119,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-valdobbiadene/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-valdobbiadene/"/>
@@ -987,7 +1127,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-veneto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-veneto/"/>
@@ -995,7 +1135,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-venezia/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-venezia/"/>
@@ -1003,7 +1143,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-verona/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-verona/"/>
@@ -1011,7 +1151,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-vicenza/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-vicenza/"/>
@@ -1019,7 +1159,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-interne-vittorio-veneto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-interne-vittorio-veneto/"/>
@@ -1027,7 +1167,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-laccate-ral/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-laccate-ral/"/>
@@ -1035,7 +1175,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-scorrevoli-interno-muro/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-scorrevoli-interno-muro/"/>
@@ -1043,7 +1183,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte-tamburate/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-tamburate/"/>
@@ -1051,7 +1191,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/porte/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
@@ -1062,7 +1202,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/porte/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
@@ -1073,7 +1213,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/porte/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
@@ -1084,7 +1224,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/porte/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
@@ -1095,7 +1235,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/posa-parquet/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/posa-parquet/"/>
@@ -1103,7 +1243,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/preventivo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
@@ -1114,7 +1254,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/preventivo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
@@ -1125,7 +1265,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/preventivo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
@@ -1136,7 +1276,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/preventivo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
@@ -1147,7 +1287,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/privacy/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/privacy/"/>
@@ -1155,7 +1295,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/progetti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
@@ -1166,7 +1306,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/progetti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
@@ -1177,7 +1317,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/progetti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
@@ -1188,7 +1328,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/progetti/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
@@ -1199,7 +1339,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/progetto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
@@ -1210,7 +1350,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/progetto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
@@ -1221,7 +1361,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/progetto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
@@ -1232,7 +1372,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/progetto/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
@@ -1242,8 +1382,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/referenze-allestimenti/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/referenze-allestimenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/referenze-allestimenti/"/>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/rivenditori-porte/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/rivenditori-porte/"/>
@@ -1251,7 +1399,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/sostituzione-porte-interne/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/sostituzione-porte-interne/"/>
@@ -1259,7 +1407,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/spedizione-porte-italia-estero/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/spedizione-porte-italia-estero/"/>
@@ -1267,7 +1415,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/verniciatura/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
@@ -1278,7 +1426,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/en/verniciatura/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
@@ -1289,7 +1437,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/verniciatura/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
@@ -1300,7 +1448,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/de/verniciatura/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
@@ -1308,5 +1456,761 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/verniciatura/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/pannello-stand/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/standard-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/standardplatte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/ignifugo/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/fire-rated/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/laccato-ral/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/ral-lackiert/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/electric/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/electrical-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/elektro-platte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/mostra-arte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/rinforzato/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/griglia/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/rasterplatte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/curvo/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/curved-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/gebogene-platte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/specchio/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/mirror-panel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/spiegelplatte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/muretti/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/murets/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/mauerelemente/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/porte-per-stand/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/stand-doors/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/messetueren/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/podeste/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/quadrotte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/floor-tiles/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/bodenplatten/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/colonne-folding/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels/folding-columns/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten/faltsaeulen/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten-koelnmesse/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten-messe-frankfurt/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten-messe-duesseldorf/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten-messe-muenchen/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-excel-london/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-nec-birmingham/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-amsterdam-rai/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-fira-barcelona/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-messe-basel/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-paris-nord-villepinte/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-paris-porte-de-versailles/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-eurexpo-lyon/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-palexpo-geneve/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-paris-le-bourget/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 </urlset>
