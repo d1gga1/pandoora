@@ -40,12 +40,12 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Scraper commerciali senza ritorno per noi
+# Crawler SEO: consentiti per poter monitorare backlink e concorrenza
 User-agent: SemrushBot
-Disallow: /
+Allow: /
 
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
 
 User-agent: DotBot
 Disallow: /

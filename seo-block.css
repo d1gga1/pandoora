@@ -9,7 +9,7 @@
 }
 .sb *{box-sizing:border-box}
 .sb-in{max-width:1160px;margin:0 auto}
-.sb-eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:11px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;margin-bottom:16px}
+.sb-eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:10.5px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;margin-bottom:16px}
 .sb-eyebrow::before{content:"";width:24px;height:2px;background:currentColor;border-radius:2px}
 .sb h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(23px,2.7vw,34px);line-height:1.2;letter-spacing:-.6px;margin:0 0 16px}
 .sb h3{font-size:17px;font-weight:800;letter-spacing:-.1px;margin:0 0 8px}
