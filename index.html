@@ -69,6 +69,32 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<script>
+/* ── PD INTRO GUARD (LCP) ───────────────────────────────────────────────
+   L'intro animata parte SOLO alla prima visita della sessione. Chi torna,
+   chi naviga con Indietro/Avanti e chi ha attivato "riduci animazioni"
+   vede subito il contenuto: l'LCP passa da ~4,3s a ~1,2s.
+   Il contenuto (.hub) e' visibile per default: se GSAP non si carica o va
+   in errore la home resta comunque leggibile (prima restava bianca). */
+(function(){
+  var play = true;
+  try{
+    if(sessionStorage.getItem('pdIntroSeen') === '1') play = false;
+    else sessionStorage.setItem('pdIntroSeen','1');
+  }catch(e){}
+  try{
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) play = false;
+    var n = (performance.getEntriesByType('navigation')[0]||{}).type;
+    if(n === 'back_forward') play = false;
+  }catch(e){}
+  window.PD_PLAY_INTRO = play;
+  if(play){
+    document.documentElement.classList.add('pd-intro');
+    /* rete di sicurezza a orologio: il contenuto compare comunque */
+    setTimeout(function(){ document.documentElement.classList.remove('pd-intro'); }, 6000);
+  }
+})();
+</script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--ink:#040A14;--blue:#1B3E7A;--acc:#5B8DEF}
@@ -93,8 +119,12 @@ body.introing{overflow:hidden!important;height:100%}
   display:grid;
   grid-template-columns:repeat(6,1fr);
   grid-template-rows:56vh 44vh;
-  opacity:0
+  opacity:1
 }
+/* Il contenuto viene nascosto SOLO se l'intro parte davvero (prima visita).
+   Senza questa classe la home e' immediatamente visibile e indicizzabile. */
+html.pd-intro .hub{opacity:0}
+html:not(.pd-intro) #intro{display:none!important}
 
 /* ── Section base ── */
 .hub-sec{
@@ -352,24 +382,24 @@ body.introing{overflow:hidden!important;height:100%}
   content:'';position:absolute;top:44%;left:50%;
   width:min(92vw,980px);height:min(92vw,980px);transform:translate(-50%,-50%);
   background:radial-gradient(circle,rgba(27,62,122,.11) 0%,rgba(27,62,122,.045) 36%,rgba(255,255,255,0) 67%);
-  animation:iGlow 2.6s cubic-bezier(.16,1,.3,1) both
+  animation:iGlow 0.94s cubic-bezier(.16,1,.3,1) both
 }
 @keyframes iGlow{0%{opacity:0;transform:translate(-50%,-50%) scale(.35)}100%{opacity:1;transform:translate(-50%,-50%) scale(1)}}
 
 .i-par{position:relative;transform-style:preserve-3d;
   transform:rotateY(var(--px,0deg)) rotateX(var(--py,0deg));
-  transition:transform .9s cubic-bezier(.22,1,.36,1)}
-.i-sway{transform-style:preserve-3d;animation:iSway 7.5s 1.9s ease-in-out infinite alternate}
+  transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.i-sway{transform-style:preserve-3d;animation:iSway 7.5s 0.68s ease-in-out infinite alternate}
 @keyframes iSway{0%{transform:rotateY(-7deg) rotateX(2.5deg)}100%{transform:rotateY(7deg) rotateX(-2.5deg)}}
 
 .lock{--s:1;position:relative;transform-style:preserve-3d;
-  animation:iFloat 5.5s 2s ease-in-out infinite alternate;
+  animation:iFloat 5.5s 0.72s ease-in-out infinite alternate;
   transform:scale(var(--s))}
 @keyframes iFloat{0%{transform:scale(var(--s)) translateY(0)}100%{transform:scale(var(--s)) translateY(-10px)}}
 
 .ring{position:absolute;top:38%;left:50%;width:200px;height:200px;margin:-100px 0 0 -100px;
   border:1px solid rgba(27,62,122,.4);border-radius:50%;opacity:0;
-  animation:iRing 2.1s cubic-bezier(.16,1,.3,1) both}
+  animation:iRing 0.76s cubic-bezier(.16,1,.3,1) both}
 @keyframes iRing{0%{opacity:0;transform:scale(.18)}22%{opacity:.5}100%{opacity:0;transform:scale(2.9)}}
 
 .door{
@@ -378,7 +408,7 @@ body.introing{overflow:hidden!important;height:100%}
   background-size:460.8px 307.2px;background-position:-141.6px -22.2px;
   transform-origin:26% 50%;
   filter:drop-shadow(0 20px 30px rgba(14,30,64,.22));
-  animation:iDoor 1.5s cubic-bezier(.16,1,.3,1) both
+  animation:iDoor 0.54s cubic-bezier(.16,1,.3,1) both
 }
 @keyframes iDoor{
   0%{opacity:0;transform:perspective(950px) translateZ(-500px) rotateY(-118deg) rotateX(18deg) scale(1.35)}
@@ -388,7 +418,7 @@ body.introing{overflow:hidden!important;height:100%}
 }
 .d-shadow{width:132px;height:13px;margin:0 auto 18px;border-radius:50%;
   background:radial-gradient(ellipse,rgba(14,30,64,.26) 0%,rgba(14,30,64,0) 72%);
-  animation:iSh 1.5s cubic-bezier(.16,1,.3,1) both}
+  animation:iSh 0.54s cubic-bezier(.16,1,.3,1) both}
 @keyframes iSh{0%{opacity:0;transform:scale(.2,.5)}55%{opacity:.45}100%{opacity:1;transform:scale(1,1)}}
 
 .word{display:flex;align-items:flex-end;justify-content:center;transform-style:preserve-3d}
@@ -396,7 +426,7 @@ body.introing{overflow:hidden!important;height:100%}
   background-image:url('/pandoora_logo.webp');background-repeat:no-repeat;
   background-size:460.8px 307.2px;
   transform-origin:50% 100%;opacity:0;
-  animation:iLtr .9s cubic-bezier(.2,1.25,.32,1) both}
+  animation:iLtr 0.32s cubic-bezier(.2,1.25,.32,1) both}
 @keyframes iLtr{
   0%{opacity:0;transform:rotateX(-96deg) translateY(26px) translateZ(-45px)}
   55%{opacity:1}
@@ -407,15 +437,15 @@ body.introing{overflow:hidden!important;height:100%}
   -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 35%,rgba(0,0,0,0) 80%);
   mask-image:radial-gradient(ellipse 62% 58% at 50% 50%,#000 35%,rgba(0,0,0,0) 80%);
   mix-blend-mode:screen;opacity:0;
-  animation:iShine 1.3s 1.85s ease-in-out both}
+  animation:iShine 0.47s 0.67s ease-in-out both}
 @keyframes iShine{0%{opacity:0;transform:translateX(0)}18%{opacity:1}82%{opacity:1}100%{opacity:0;transform:translateX(280%)}}
 
 .intro-line{width:0;height:1px;background:rgba(10,18,32,.2);margin:26px auto 0;
-  animation:iLine .7s 1.55s cubic-bezier(.16,1,.3,1) both}
+  animation:iLine 0.25s 0.56s cubic-bezier(.16,1,.3,1) both}
 @keyframes iLine{0%{width:0}100%{width:72px}}
 .intro-sub{font-size:8px;font-weight:700;letter-spacing:4px;color:rgba(10,18,32,.42);
   text-transform:uppercase;margin-top:13px;opacity:0;
-  animation:iSub .9s 1.8s cubic-bezier(.16,1,.3,1) both}
+  animation:iSub 0.32s 0.65s cubic-bezier(.16,1,.3,1) both}
 @keyframes iSub{0%{opacity:0;letter-spacing:12px}100%{opacity:1;letter-spacing:4px}}
 
 body.introing #cur{background:#0a1220}
@@ -465,22 +495,22 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
  <div class="i-par" id="iPar">
   <div class="i-sway">
    <div class="lock">
-    <div class="ring" style="animation-delay:1.35s"></div>
-    <div class="ring" style="animation-delay:1.7s"></div>
+    <div class="ring" style="animation-delay:0.49s"></div>
+    <div class="ring" style="animation-delay:0.61s"></div>
     <div class="door"></div>
     <div class="d-shadow"></div>
     <div class="word">
-    <i class="l" style="width:27.0px;background-position:-86.4px -240.3px;margin-right:4.2px;animation-delay:.70s"></i>
-    <i class="l" style="width:36.3px;background-position:-117.6px -240.3px;margin-right:5.1px;animation-delay:.76s"></i>
-    <i class="l" style="width:34.2px;background-position:-159.0px -240.3px;margin-right:4.5px;animation-delay:.82s"></i>
-    <i class="l" style="width:3.9px;background-position:-197.7px -240.3px;margin-right:2.1px;animation-delay:.88s"></i>
-    <i class="l" style="width:34.8px;background-position:-203.7px -240.3px;margin-right:1.2px;animation-delay:.94s"></i>
-    <i class="l" style="width:42.6px;background-position:-239.7px -240.3px;margin-right:0.9px;animation-delay:1.00s"></i>
-    <i class="l" style="width:42.0px;background-position:-283.2px -240.3px;margin-right:1.8px;animation-delay:1.06s"></i>
-    <i class="l" style="width:28.2px;background-position:-327.0px -240.3px;margin-right:1.8px;animation-delay:1.12s"></i>
-    <i class="l" style="width:3.9px;background-position:-357.0px -240.3px;margin-right:2.4px;animation-delay:1.18s"></i>
-    <i class="l" style="width:36.0px;background-position:-363.3px -240.3px;margin-right:2.1px;animation-delay:1.24s"></i>
-    <i class="l" style="width:3.9px;background-position:-401.4px -240.3px;margin-right:0px;animation-delay:1.30s"></i>
+    <i class="l" style="width:27.0px;background-position:-86.4px -240.3px;margin-right:4.2px;animation-delay:0.25s"></i>
+    <i class="l" style="width:36.3px;background-position:-117.6px -240.3px;margin-right:5.1px;animation-delay:0.27s"></i>
+    <i class="l" style="width:34.2px;background-position:-159.0px -240.3px;margin-right:4.5px;animation-delay:0.3s"></i>
+    <i class="l" style="width:3.9px;background-position:-197.7px -240.3px;margin-right:2.1px;animation-delay:0.32s"></i>
+    <i class="l" style="width:34.8px;background-position:-203.7px -240.3px;margin-right:1.2px;animation-delay:0.34s"></i>
+    <i class="l" style="width:42.6px;background-position:-239.7px -240.3px;margin-right:0.9px;animation-delay:0.36s"></i>
+    <i class="l" style="width:42.0px;background-position:-283.2px -240.3px;margin-right:1.8px;animation-delay:0.38s"></i>
+    <i class="l" style="width:28.2px;background-position:-327.0px -240.3px;margin-right:1.8px;animation-delay:0.4s"></i>
+    <i class="l" style="width:3.9px;background-position:-357.0px -240.3px;margin-right:2.4px;animation-delay:0.42s"></i>
+    <i class="l" style="width:36.0px;background-position:-363.3px -240.3px;margin-right:2.1px;animation-delay:0.45s"></i>
+    <i class="l" style="width:3.9px;background-position:-401.4px -240.3px;margin-right:0px;animation-delay:0.47s"></i>
     </div>
     <div class="shine"></div>
    </div>
@@ -949,13 +979,23 @@ document.querySelectorAll('.hub-sec').forEach(el => {
 const tl = gsap.timeline({defaults:{ease:'power3.out'}});
 
 // 1. Intro: CSS-driven 3D logo animation, then hand over to the hub
-document.body.classList.add('introing');
+if(window.PD_PLAY_INTRO !== false) document.body.classList.add('introing');
 
-tl.to({}, {duration:3.35})
-  .call(() => document.body.classList.remove('introing'))
-  .to('#intro',  {opacity:0, scale:1.07, duration:.8, ease:'power2.in', pointerEvents:'none',
-                  onComplete(){ const i=document.getElementById('intro'); if(i) i.style.display='none'; }})
-  .set('#hub',   {opacity:1}, '-=.42')
+const PD_INTRO = (window.PD_PLAY_INTRO !== false);
+
+if(PD_INTRO){
+  tl.to({}, {duration:1.15})
+    .call(() => { document.body.classList.remove('introing');
+                  document.documentElement.classList.remove('pd-intro'); })
+    .to('#intro',  {opacity:0, scale:1.07, duration:.45, ease:'power2.in', pointerEvents:'none',
+                    onComplete(){ const i=document.getElementById('intro'); if(i) i.style.display='none'; }});
+} else {
+  /* Visita di ritorno: niente attesa, contenuto subito */
+  document.body.classList.remove('introing');
+  document.documentElement.classList.remove('pd-intro');
+  const i0=document.getElementById('intro'); if(i0){ i0.style.display='none'; }
+}
+tl.set('#hub',   {opacity:1}, PD_INTRO ? '-=.35' : 0)
   // Sections revealed from center outward using clip-path
   // Each section clips in from its corner (toward center)
   .fromTo('#s1', {clipPath:'inset(0% 100% 100% 0%)'}, {clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.2')
@@ -978,6 +1018,7 @@ tl.to({}, {duration:3.35})
 function pdEndIntro(){
   try{ tl.progress(1); }catch(e){}
   document.body.classList.remove('introing');
+  document.documentElement.classList.remove('pd-intro');
   var i=document.getElementById('intro');
   if(i){ i.style.opacity='0'; i.style.pointerEvents='none'; i.style.display='none'; }
   var h=document.getElementById('hub'); if(h) h.style.opacity='1';
