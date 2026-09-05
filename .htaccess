@@ -1,0 +1,130 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  PAN.DOOR.A — configurazione Apache
+#  URL pulite senza .html · rimozione WordPress · redirect 301
+#  Generato il 2026-09-01. Sostituisce integralmente il .htaccess precedente
+#  (fai comunque una copia di backup di quello vecchio prima di sovrascriverlo).
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── Serve index.html, mai index.php (WordPress non deve piu rispondere) ──
+DirectoryIndex index.html index.htm
+
+# ── Pagina 404 personalizzata ──
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# ── 0. Blocca le cartelle di lavoro (_backup, _seo-tools, ...) ──
+RewriteRule ^_ - [F,L]
+
+# ── 1. HTTPS obbligatorio ──
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://pandooragroup.it/$1 [R=301,L]
+
+# ── 2. Niente www: la versione canonica e https://pandooragroup.it ──
+RewriteCond %{HTTP_HOST} ^www\.pandooragroup\.it$ [NC]
+RewriteRule ^(.*)$ https://pandooragroup.it/$1 [R=301,L]
+
+# ── 3. Blocca ogni residuo di WordPress ──
+#     (se hai gia cancellato i file WP queste righe restano innocue)
+RewriteRule ^wp-admin(/.*)?$        https://pandooragroup.it/ [R=301,L]
+RewriteRule ^wp-login\.php$         https://pandooragroup.it/ [R=301,L]
+RewriteRule ^wp-content/(.*)$       https://pandooragroup.it/ [R=301,L]
+RewriteRule ^wp-includes/(.*)$      https://pandooragroup.it/ [R=301,L]
+RewriteRule ^wp-json(/.*)?$         https://pandooragroup.it/ [R=301,L]
+RewriteRule ^xmlrpc\.php$           https://pandooragroup.it/ [R=301,L]
+RewriteCond %{QUERY_STRING} ^(page_id|p|cat|author)=
+RewriteRule ^$ https://pandooragroup.it/? [R=301,L]
+
+# ── 4. Vecchie URL WordPress → nuove pagine ──
+RewriteRule ^armadi/?$                    https://pandooragroup.it/componenti-per-mobili/ [R=301,L]
+RewriteRule ^carica-progetto/?$           https://pandooragroup.it/preventivo/ [R=301,L]
+RewriteRule ^chi-siamo/?$                 https://pandooragroup.it/azienda/ [R=301,L]
+RewriteRule ^contattaci/?$                https://pandooragroup.it/contatti/ [R=301,L]
+RewriteRule ^faqs/?$                      https://pandooragroup.it/faq/ [R=301,L]
+RewriteRule ^pannelli-stand/?$            https://pandooragroup.it/listino-pannelli-tamburati/ [R=301,L]
+RewriteRule ^pannelli-tamburati-fiere/?$  https://pandooragroup.it/pannelli-tamburati/ [R=301,L]
+RewriteRule ^services/?$                  https://pandooragroup.it/ [R=301,L]
+
+# ── 5. Vecchie URL con .html → URL pulite (italiano) ──
+RewriteRule ^azienda\.html$                   https://pandooragroup.it/azienda/ [R=301,L]
+RewriteRule ^componenti\.html$                https://pandooragroup.it/componenti-per-mobili/ [R=301,L]
+RewriteRule ^contatti\.html$                  https://pandooragroup.it/contatti/ [R=301,L]
+RewriteRule ^falegnameria-treviso\.html$      https://pandooragroup.it/falegnameria-treviso/ [R=301,L]
+RewriteRule ^faq\.html$                       https://pandooragroup.it/faq/ [R=301,L]
+RewriteRule ^glossario\.html$                 https://pandooragroup.it/glossario/ [R=301,L]
+RewriteRule ^grazie\.html$                    https://pandooragroup.it/grazie/ [R=301,L]
+RewriteRule ^guida-scelta-pannello-tamburato\.html$ https://pandooragroup.it/guida-scelta-pannello-tamburato/ [R=301,L]
+RewriteRule ^guide\.html$                     https://pandooragroup.it/guide/ [R=301,L]
+RewriteRule ^index\.html$                     https://pandooragroup.it/ [R=301,L]
+RewriteRule ^pannelli-ignifughi-fiere-guida\.html$ https://pandooragroup.it/pannelli-ignifughi-fiere/ [R=301,L]
+RewriteRule ^pannelli-tamburati-1\.html$      https://pandooragroup.it/pannelli-tamburati/ [R=301,L]
+RewriteRule ^pannelli-tamburati-2\.html$      https://pandooragroup.it/listino-pannelli-tamburati/ [R=301,L]
+RewriteRule ^pannelli-tamburati-milano-fiera\.html$ https://pandooragroup.it/pannelli-tamburati-milano-fiera/ [R=301,L]
+RewriteRule ^pannelli-tamburati-verona\.html$ https://pandooragroup.it/pannelli-tamburati-verona/ [R=301,L]
+RewriteRule ^pavimentazioni\.html$            https://pandooragroup.it/pavimentazioni/ [R=301,L]
+RewriteRule ^porte\.html$                     https://pandooragroup.it/porte/ [R=301,L]
+RewriteRule ^preventivo\.html$                https://pandooragroup.it/preventivo/ [R=301,L]
+RewriteRule ^privacy\.html$                   https://pandooragroup.it/privacy/ [R=301,L]
+RewriteRule ^progetti\.html$                  https://pandooragroup.it/progetti/ [R=301,L]
+RewriteRule ^progetto\.html$                  https://pandooragroup.it/progetto/ [R=301,L]
+RewriteRule ^verniciatura\.html$              https://pandooragroup.it/verniciatura/ [R=301,L]
+
+# ── 6. Vecchie URL con .html → URL pulite (en / fr / de) ──
+RewriteRule ^(en|fr|de)/index\.html$ https://pandooragroup.it/$1/ [R=301,L]
+RewriteRule ^(en|fr|de)/azienda\.html$                 https://pandooragroup.it/$1/azienda/ [R=301,L]
+RewriteRule ^(en|fr|de)/componenti\.html$              https://pandooragroup.it/$1/componenti-per-mobili/ [R=301,L]
+RewriteRule ^(en|fr|de)/contatti\.html$                https://pandooragroup.it/$1/contatti/ [R=301,L]
+RewriteRule ^(en|fr|de)/faq\.html$                     https://pandooragroup.it/$1/faq/ [R=301,L]
+RewriteRule ^(en|fr|de)/grazie\.html$                  https://pandooragroup.it/$1/grazie/ [R=301,L]
+RewriteRule ^(en|fr|de)/pannelli-tamburati-1\.html$    https://pandooragroup.it/$1/pannelli-tamburati/ [R=301,L]
+RewriteRule ^(en|fr|de)/pannelli-tamburati-2\.html$    https://pandooragroup.it/$1/listino-pannelli-tamburati/ [R=301,L]
+RewriteRule ^(en|fr|de)/pavimentazioni\.html$          https://pandooragroup.it/$1/pavimentazioni/ [R=301,L]
+RewriteRule ^(en|fr|de)/porte\.html$                   https://pandooragroup.it/$1/porte/ [R=301,L]
+RewriteRule ^(en|fr|de)/preventivo\.html$              https://pandooragroup.it/$1/preventivo/ [R=301,L]
+RewriteRule ^(en|fr|de)/progetti\.html$                https://pandooragroup.it/$1/progetti/ [R=301,L]
+RewriteRule ^(en|fr|de)/progetto\.html$                https://pandooragroup.it/$1/progetto/ [R=301,L]
+RewriteRule ^(en|fr|de)/verniciatura\.html$            https://pandooragroup.it/$1/verniciatura/ [R=301,L]
+
+# ── 7. Aggiunge lo slash finale alle directory (evita duplicati) ──
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ https://pandooragroup.it/$1/ [R=301,L]
+</IfModule>
+
+# ── 8. Nessun file .php deve essere indicizzato ──
+<IfModule mod_headers.c>
+  <FilesMatch "\.php$">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+</IfModule>
+
+# ── 9. Cache degli asset statici (Core Web Vitals) ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp                 "access plus 1 year"
+  ExpiresByType image/png                  "access plus 1 year"
+  ExpiresByType image/jpeg                 "access plus 1 year"
+  ExpiresByType image/svg+xml              "access plus 1 year"
+  ExpiresByType image/x-icon               "access plus 1 year"
+  ExpiresByType text/css                   "access plus 1 month"
+  ExpiresByType application/javascript     "access plus 1 month"
+  ExpiresByType font/woff2                 "access plus 1 year"
+  ExpiresByType application/pdf            "access plus 1 month"
+  ExpiresByType text/html                  "access plus 1 hour"
+</IfModule>
+
+# ── 10. Compressione ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml \
+    application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# ── 11. Sicurezza di base ──
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+

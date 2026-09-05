@@ -1,0 +1,139 @@
+═══════════════════════════════════════════════════════════════════
+  CARICARE IL SITO SU GITHUB — senza usare il terminale
+═══════════════════════════════════════════════════════════════════
+
+In questa cartella c'è ESATTAMENTE quello che va online: 236 file, 18 MB.
+Niente da scegliere, niente da escludere. Tutto quello che è qui dentro sale,
+tutto quello che non è qui resta sul tuo Mac.
+
+⚠️ NON caricare la cartella "CARICA-SU-GITHUB" stessa.
+   Devi caricare il CONTENUTO, cioè i file e le cartelle che vedi qui dentro.
+   Se carichi la cartella, il sito finisce in pandooragroup.it/CARICA-SU-GITHUB/
+   e non funziona.
+
+
+───────────────────────────────────────────────────────────────────
+ METODO 1 — GitHub Desktop  (consigliato, nessun limite di file)
+───────────────────────────────────────────────────────────────────
+
+1. Scarica GitHub Desktop da  https://desktop.github.com  e installalo.
+2. Accedi con il tuo account GitHub.
+3. File → New repository
+      Name:        pandoora-sito
+      Local path:  scegli una cartella qualsiasi (es. Documenti)
+      NON spuntare "Initialize with README"
+      → Create repository
+4. Clicca "Show in Finder": si apre la cartella vuota del repository.
+5. Apri questa cartella (CARICA-SU-GITHUB), seleziona TUTTO con Cmd+A
+   e trascina dentro la cartella del repository.
+   → Prima però attiva i file nascosti: premi  Cmd + Shift + .  (punto)
+     così vedi anche .htaccess e .nojekyll e li trascini insieme.
+6. Torna su GitHub Desktop: vedrai i 236 file elencati a sinistra.
+   In basso scrivi nel campo Summary:  Sito Pan.door.a
+   → Commit to main
+7. In alto clicca  Publish repository
+      Togli la spunta da "Keep this code private"  ← IMPORTANTE
+      → Publish repository
+
+Fatto. Il codice è su GitHub.
+
+
+───────────────────────────────────────────────────────────────────
+ METODO 2 — Trascinare sul sito github.com  (in 3 lotti)
+───────────────────────────────────────────────────────────────────
+
+Il sito di GitHub accetta max 100 file per volta, quindi servono 3 passaggi.
+
+Prima crea il repository:
+   github.com → New repository → nome "pandoora-sito" → Public
+   → Create repository (non aggiungere README)
+
+Poi, dalla pagina del repository, clicca "uploading an existing file"
+(oppure Add file → Upload files) e trascina, una tornata alla volta:
+
+   LOTTO 1  →  la cartella  assets            (90 file)
+               Commit changes
+
+   LOTTO 2  →  le cartelle  door-photos  parquet-photos  en  fr  de
+                                                          (83 file)
+               Commit changes
+
+   LOTTO 3  →  TUTTO IL RESTO: i 34 file sciolti della radice
+               + le 29 cartelle-pagina        (63 file)
+               Commit changes
+
+Attiva prima i file nascosti con  Cmd + Shift + .  per vedere .nojekyll
+e .htaccess.
+
+Se .nojekyll non si lascia trascinare, creala direttamente su GitHub:
+   Add file → Create new file → scrivi   .nojekyll   → Commit changes
+   (resta vuota, va bene così)
+
+
+───────────────────────────────────────────────────────────────────
+ POI — attivare il sito
+───────────────────────────────────────────────────────────────────
+
+Nel repository su github.com:
+
+  Settings → Pages
+     Source: Deploy from a branch
+     Branch: main    Folder: / (root)
+     → Save
+
+  Aspetta 1-2 minuti. Il sito è online su
+  https://TUO-UTENTE.github.io/pandoora-sito/
+
+  Settings → Pages → Custom domain
+     scrivi  pandooragroup.it  → Save
+
+Poi dal pannello dove hai comprato il dominio, nei DNS:
+
+  Tipo    Nome    Valore
+  ────────────────────────────────────
+  A       @       185.199.108.153
+  A       @       185.199.109.153
+  A       @       185.199.110.153
+  A       @       185.199.111.153
+  CNAME   www     TUO-UTENTE.github.io
+
+  ⚠️ Cancella i vecchi record A che puntano all'hosting attuale.
+  ⚠️ NON toccare i record MX: sono quelli dell'email ordini@pandooragroup.it.
+
+Quando su GitHub compare la spunta verde accanto al dominio (da pochi minuti
+a qualche ora), torna in Settings → Pages e attiva  Enforce HTTPS.
+
+
+───────────────────────────────────────────────────────────────────
+ VERIFICA FINALE
+───────────────────────────────────────────────────────────────────
+
+Apri questi indirizzi, devono funzionare tutti:
+
+  https://pandooragroup.it/
+  https://pandooragroup.it/porte/
+  https://pandooragroup.it/pannelli-tamburati/
+  https://pandooragroup.it/listino-pannelli-tamburati/
+  https://pandooragroup.it/en/porte/
+  https://pandooragroup.it/chi-siamo/          → deve portare a /azienda/
+  https://pandooragroup.it/pagina-che-non-esiste/  → deve mostrare il 404
+
+E manda un preventivo di prova dal form: deve arrivare a
+ordini@pandooragroup.it e portarti alla pagina /grazie/.
+
+
+───────────────────────────────────────────────────────────────────
+ COSA NON È IN QUESTA CARTELLA (e va bene così)
+───────────────────────────────────────────────────────────────────
+
+Restano solo sul tuo Mac, circa 290 MB:
+
+  Catalogo_porte_pandoora_2026.pdf     48 MB   catalogo interno
+  FINALL_v7.1.pdf                             listino interno
+  assets/porte/_png_originali/        138 MB   originali HD delle porte
+  parquet-photos/_originali_hd/       103 MB   originali HD del parquet
+  i PNG pesanti già sostituiti dai WebP
+  le cartelle _backup_*, _seo-tools, _setup-google, _vecchie-pagine-html,
+  _nuove-immagini, _redirect-setup
+
+Il sito online non ne ha bisogno: usa le versioni WebP, molto più leggere.

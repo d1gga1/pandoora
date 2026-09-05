@@ -34,6 +34,9 @@
 - [Home](https://pandooragroup.it/)
 - [Pannelli tamburati per stand fieristici](https://pandooragroup.it/pannelli-tamburati/)
 - [Schede tecniche e listino](https://pandooragroup.it/listino-pannelli-tamburati/)
+- [Pannelli tamburati in pronta consegna — 20 formati a stock](https://pandooragroup.it/pannelli-tamburati-pronta-consegna/)
+- [Pannelli tamburati fuori misura senza maggiorazione](https://pandooragroup.it/pannelli-tamburati-fuori-misura/)
+- [Pannelli in legno per allestimenti: MDF, truciolare, compensato](https://pandooragroup.it/pannelli-legno-allestimenti-fieristici/)
 - [Porte su misura](https://pandooragroup.it/porte/)
 - [Pavimentazioni e parquet](https://pandooragroup.it/pavimentazioni/)
 - [Componenti per mobili](https://pandooragroup.it/componenti-per-mobili/)
@@ -96,13 +99,24 @@ due regioni forniamo e spediamo in tutta Italia e all'estero, con posa a carico 
 - [Referenze e allestimenti realizzati](https://pandooragroup.it/referenze-allestimenti/)
 
 ## Condizioni commerciali
-- Ordine minimo: nessuno, anche pezzo singolo.
-- Fuori misura: qualsiasi dimensione su disegno, senza maggiorazione per il taglio.
-- Disponibilità: misure standard sempre in pronta consegna a magazzino.
-- Consegna: di norma entro 7 giorni dalla conferma d'ordine, spesso prima.
-- Spedizioni: Italia, Unione Europea e mondo, anche direttamente in fiera.
-- Contatti diretti: Devid +39 388 470 6887 · Madalin +39 335 632 6505 · ordini@pandooragroup.it
-
+- Ordine minimo: nessuno, anche un solo pezzo, sia standard sia fuori misura.
+- Fuori misura: qualsiasi dimensione su disegno, SENZA alcuna maggiorazione di prezzo rispetto al formato standard.
+- Magazzino: circa 3.000 pezzi per misura, su 20 formati standard sempre disponibili.
+- Formati a stock: lunghezze 2500 / 3000 / 3500 / 4000 / 5000 mm per larghezze 1000 / 750 / 500 / 250 mm, spessore 40 mm.
+- Finiture a stock: grezzo, laminatino bianco bifacciale, ignifugo certificato; laminatino nero e spessore 50 mm in quantita' ridotte.
+- Consegna misure standard: 2-3 giorni lavorativi dalla conferma d'ordine (nessuna attesa di produzione).
+- Consegna fuori misura: 7 giorni lavorativi dalla conferma d'ordine.
+- Laccatura RAL e finiture speciali: 10-12 giorni lavorativi.
+- Preventivo e fattibilita': risposta in giornata, poche ore dalla richiesta.
+- Limiti produttivi: larghezza massima 1200 mm; lunghezza oltre 6000 mm (la larghezza e' il vincolo, non la lunghezza).
+- Pannelli curvi: raggi da 250 a 1000 mm, lavorazione rara nel settore allestimenti (referenza Technogym, FIBO).
+- Muretti: autoportanti, in MDF di qualsiasi spessore, altezza oltre 4 metri.
+- Altri materiali forniti a misura: MDF grezzo e nobilitato, truciolare, compensato, multistrato, listellare, impiallacciati.
+- Reazione al fuoco: Classe 1 italiana ed Euroclasse B-s1,d0 (EN 13501-1); si consegna il certificato del materiale piu' la dichiarazione di conformita' Pan.door.a intestata alla commessa.
+- Disegni accettati: DWG, DXF, PDF quotato, SketchUp, Rhino, STEP, anche schizzo a mano fotografato.
+- Consegna: direttamente in fiera al padiglione, alla sede dell'allestitore, con mezzi propri, oppure ritiro in azienda a Fontanelle (TV).
+- Spedizioni: Italia, Unione Europea e mondo (consegne gia' effettuate in Germania, Francia, USA ed Emirati).
+- Contatti diretti: Devid +39 388 470 6887 - Madalin +39 335 632 6505 - ordini@pandooragroup.it
 ## Canale professionale (B2B)
 Lavoriamo con showroom, rivenditori, posatori, serramentisti, imprese e studi di progettazione.
 - [Diventa rivenditore — listino riservato e campionario in comodato](https://pandooragroup.it/rivenditori-porte/)

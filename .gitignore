@@ -1,0 +1,74 @@
+# file di lavoro e originali pesanti — non vanno online
+parquet-photos/_originali_hd/
+*.bak
+*.bak_*
+.DS_Store
+assets-falliti.txt
+
+assets/porte/_png_originali/
+
+# PDF pesanti non usati dal sito (restano solo in locale)
+Catalogo_porte_pandoora_2026.pdf
+FINALL_v7.1.pdf
+
+# script e liste di servizio
+scarica-assets.sh
+scarica-pdf.sh
+assets-list.txt
+assets-list-pdf.txt
+LEGGIMI.txt
+_CARICA_SU_GITHUB/
+
+# backup automatici delle modifiche
+_backup_*/
+
+# strumenti SEO (script di generazione, non servono online)
+_seo-tools/
+_backup_seo_*/
+
+# immagini sostituite dalle versioni WebP o non più usate dal sito
+porte_bg.png
+parquet_bg.png
+verniciatura_bg.png
+componenti_bg.png
+tamburati.png
+pandoora_logo_nobg.png
+pandoora_logo_alpha.png
+pandoora_icon_nobg.png
+porte.jpeg
+pannelli-hero.jpg
+new_definitive_logo copy.png
+
+# pacchetti di consegna, non vanno nel repository
+_CARICA-SU-GITHUB/
+_VECCHIO-non-usare-piu/
+
+# cartelle di lavoro aggiunte durante la migrazione URL
+_setup-google/
+_vecchie-pagine-html/
+_nuove-immagini/
+_redirect-setup/
+_backup_preURL_*/
+.htaccess.bak
+
+# cartella di consegna, non va nel repository
+CARICA-SU-GITHUB/
+
+# copia di lavoro del sito, non va online
+caricare_su_github/
+
+# sorgenti Instagram: originali JPEG, non vanno online (le WebP stanno in foto-produzione/)
+_instagram/
+pandoora-instagram-*.zip
+
+# cartella di scarto da cestinare a mano
+_CESTINO-DA-ELIMINARE/
+
+# cartella di lavoro generata durante le sessioni, non va online
+Claude outputs/
+
+# cartella di consegna manuale, non va nel repository
+_SITO-DA-CARICARE-*/
+
+# script di pubblicazione, non va online
+PUBBLICA.command
