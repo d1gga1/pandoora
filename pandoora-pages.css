@@ -263,3 +263,20 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 .qnote{font-size:12px;color:var(--muted);text-align:center;margin:14px 0 0}
 .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
 @media(max-width:640px){.qcard{padding:30px 22px;border-radius:18px}.qrow{grid-template-columns:1fr;gap:0}}
+
+/* ── FOTO DI PRODUZIONE ─────────────────────────────────────────────
+   Fotografie reali di stabilimento e cantiere. Introdotte 05/09/2026. */
+.pg-foto{margin:0 0 56px}
+.pg-foto img{width:100%;height:auto;display:block;border-radius:14px;
+  background:rgba(0,0,0,.04);object-fit:cover}
+.pg-foto figcaption{margin-top:12px;font-size:14px;line-height:1.6;
+  color:var(--ink-soft);max-width:74ch}
+.pg-foto--lead img{max-height:520px}
+.pg-foto-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:0 0 20px}
+.pg-foto-grid figure{margin:0}
+.pg-foto-grid img{width:100%;height:280px;object-fit:cover;display:block;border-radius:12px}
+.pg-foto-grid figcaption{margin-top:10px;font-size:13.5px;line-height:1.55;color:var(--ink-soft)}
+@media(max-width:640px){
+  .pg-foto--lead img{max-height:360px}
+  .pg-foto-grid img{height:230px}
+}
