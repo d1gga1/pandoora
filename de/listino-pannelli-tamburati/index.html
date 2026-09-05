@@ -216,13 +216,31 @@ body{
 }
 .asset-link:hover{transform:translateY(-3px);box-shadow:var(--shadow);background:#fff;border-color:#e0c9c5}
 
-.gallery{display:flex;flex-wrap:wrap;gap:18px;margin-top:8px}
+/* foto prodotto: riquadri quadrati uniformi, il pezzo riempie il campo */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;margin-top:10px;max-width:830px}
+.gallery figure{margin:0}
 .prod-img{
-  max-width:100%;width:360px;border-radius:14px;border:1px solid var(--line);
-  background:var(--bg-soft);box-shadow:var(--shadow);
-  transition:transform .5s var(--ease),box-shadow .5s;
+  width:100%;aspect-ratio:1/1;object-fit:contain;display:block;
+  padding:16px;background:#fff;border-radius:14px;border:1px solid var(--line);
+  box-shadow:var(--shadow);transition:transform .4s var(--ease),box-shadow .4s;
 }
-.prod-img:hover{transform:translateY(-6px) scale(1.01);box-shadow:var(--shadow-lg)}
+.prod-img:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.prod-cap{margin:9px 2px 0;font-size:13px;line-height:1.45;color:var(--muted)}
+.prod-cap b{display:block;color:var(--ink);font-weight:700;font-size:13.5px}
+@media(max-width:520px){.gallery{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}}
+
+/* fogli di listino: sono documenti, vanno larghi e ingrandibili */
+.docshot{display:block;margin-top:10px;max-width:900px;text-decoration:none}
+.docshot img{
+  width:100%;height:auto;display:block;background:#fff;
+  border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow);
+  transition:box-shadow .4s,border-color .3s;
+}
+.docshot:hover img{box-shadow:var(--shadow-lg);border-color:#e0c9c5}
+.docshot-hint{
+  display:inline-flex;align-items:center;gap:7px;margin-top:9px;
+  font-size:13px;font-weight:700;color:var(--red);
+}
 .content video{max-width:100%;width:560px;border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}
 
 /* form */
@@ -638,10 +656,8 @@ const sections = {
     "Preisliste":`
       <h3>Preisliste</h3>
       <p>Produktfotos und aktuelle Preisliste der Wabenplatten für Messestände.</p>
-      <div class="gallery">
-        <img class="prod-img" src="${IMG}1.png" alt="Wabenplatte für Messestand" loading="lazy" decoding="async" width="1414" height="2000">
-        <img class="prod-img" src="${IMG}2.png" alt="Wabenplatte für Messestand" loading="lazy" decoding="async" width="1414" height="2000">
-      </div>`
+      <a class="docshot" href="/assets/prodotti/listino-pannelli-1.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pannelli-1.webp" alt="Preisliste Wabenplatten für Messestände" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Preisliste in voller Größe öffnen</span></a>
+      <a class="docshot" href="/assets/prodotti/listino-pannelli-2.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pannelli-2.webp" alt="Preisliste verstärkte Platten, Rasterplatten und 6-Meter-Platten" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Preisliste in voller Größe öffnen</span></a>`
   }
 },
 
@@ -679,7 +695,7 @@ const sections = {
       <a class="asset-link" target="_blank" href="${IMG}porta.pdf">📐 Porta.pdf</a>`,
     "Preisliste":`
       <h3>Preisliste</h3>
-      <div class="gallery"><img class="prod-img" src="${IMG}Pan.door_.a-S.r.l.png" alt="Messetür" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+      <a class="docshot" href="/assets/prodotti/listino-porte.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-porte.webp" alt="Listino porte per allestimenti" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Preisliste in voller Größe öffnen</span></a>`
   }
 },
 
@@ -710,7 +726,7 @@ const sections = {
     "Preisliste":`
       <h3>Preisliste</h3>
       <a class="asset-link" target="_blank" href="${IMG}pedana.pdf">📐 Pedana.pdf</a>
-      <div class="gallery"><img class="prod-img" src="${IMG}listino-pedane.png" alt="Preisliste Podeste" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+      <a class="docshot" href="/assets/prodotti/listino-pedane.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pedane.webp" alt="Listino pedane livellanti" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Preisliste in voller Größe öffnen</span></a>`
   }
 },
 
@@ -722,7 +738,7 @@ const sections = {
       <p>Ein Bauteil aus hochdichtem MDF, das die korrekte vertikale Ausrichtung der Platten sicherstellt. Es sorgt bei der Montage für Stabilität und Präzision und verhindert Versätze oder Unsauberkeiten an der Stoßstelle.</p>
       <p>Robust und zuverlässig — die ideale Lösung für ein gleichmäßiges, professionelles Endergebnis.</p>
       <div class="note"><span class="pin">📄</span><span>Das vollständige Datenblatt mit Montageanleitung ist auf Anfrage erhältlich.</span></div>
-      <div class="gallery"><img class="prod-img" src="${IMG}anima_allineamento_giusto.png" alt="Vertikaler Ausrichtkern" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+      <div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/anima-allineamento.webp" alt="Anima di allineamento verticale in MDF" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Anima di allineamento verticale in MDF</b>Maße: 2200 × 28 × 4 mm</figcaption></figure></div>`
   }
 },
 
@@ -736,7 +752,7 @@ const sections = {
       <p>Aus <b>hochwertigen Materialien</b> gefertigt, verschleißfest und gegen <b>Oxidation und Kratzer</b> behandelt, bietet er <b>Zuverlässigkeit und lange Lebensdauer</b> auch bei intensiver Nutzung.</p>
       <p>Dank <b>präziser Bearbeitung</b> und optimaler Passung zu unseren Wabenplatten ermöglicht er eine schnelle, sichere und spielfreie Montage.</p>
       <p><b>Wir liefern in ganz Italien und weltweit</b>, auch direkt auf das Messegelände.</p>`,
-    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_I.jpg" alt="„I“-Verbinder" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-i.webp" alt="Elemento di giunzione a I in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a I in acciaio</b>Maße: 400 × 15 × 15 mm</figcaption></figure></div>`,
     "Technische Zeichnung":`<h3>Technische Zeichnung</h3><p>Technische Zeichnung auf Anfrage zusammen mit dem Montageblatt erhältlich.</p>`
   }
 },
@@ -751,7 +767,7 @@ const sections = {
       <p>Aus <b>hochwertigen Materialien</b> gefertigt, verschleißfest und gegen <b>Oxidation und Kratzer</b> behandelt, garantiert er <b>Haltbarkeit und Zuverlässigkeit</b> auch bei häufiger Montage und Demontage.</p>
       <p>Die <b>sorgfältige Bearbeitung</b> erlaubt ein leichtes, spielfreies Einsetzen für eine saubere, sichere Montage.</p>
       <p><b>Wir liefern in ganz Italien und weltweit</b>, auch direkt auf das Messegelände.</p>`,
-    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_L.jpg" alt="„L“-Verbinder" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-l.webp" alt="Elemento di giunzione a L in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a L in acciaio</b>Maße: 185 × 185 × 2 mm</figcaption></figure></div>`,
     "Technische Zeichnung":`<h3>Technische Zeichnung</h3><a class="asset-link" target="_blank" href="${IMG11}Dis.00L_i.pdf">📐 Dis.00L_i.pdf</a>`,
     "Montage":`<h3>Montage</h3><p>Montageanleitung auf Anfrage zusammen mit dem Produktdatenblatt erhältlich.</p>`
   }
@@ -767,7 +783,7 @@ const sections = {
       <p>Aus <b>hochwertigen Materialien</b> gefertigt, verschleißfest und gegen <b>Oxidation und Kratzer</b> behandelt, bietet er <b>Zuverlässigkeit und lange Lebensdauer</b> nach zahlreichen Auf- und Abbauten.</p>
       <p>Die <b>sorgfältige Bearbeitung</b> sichert eine <b>schnelle, stabile und spielfreie Montage</b>.</p>
       <p><b>Wir liefern in ganz Italien und weltweit</b>, auch direkt auf das Messegelände.</p>`,
-    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_T.jpg" alt="„T“-Verbinder" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-t.webp" alt="Elemento di giunzione a T in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a T in acciaio</b>Maße: 355 × 185 × 2 mm</figcaption></figure></div>`,
     "Technische Zeichnung":`
       <h3>Technische Zeichnung</h3>
       <a class="asset-link" target="_blank" href="${IMG11}Dis.00T_i.pdf">📐 Dis.00T_i.pdf</a>`,
@@ -785,7 +801,7 @@ const sections = {
       <p>Aus <b>hochwertigen Materialien</b> gefertigt, verschleißfest und gegen <b>Oxidation und Kratzer</b> behandelt, sichert er <b>Zuverlässigkeit und lange Lebensdauer</b> nach vielen Auf- und Abbauzyklen.</p>
       <p>Die <b>sorgfältige Bearbeitung</b> ermöglicht eine <b>schnelle, sichere und spielfreie Montage</b>.</p>
       <p><b>Wir liefern in ganz Italien und weltweit</b>, auch direkt auf das Messegelände.</p>`,
-    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_X.jpg" alt="„X“-Verbinder" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Produktfoto":`<h3>Produktfoto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-x.webp" alt="Elemento di giunzione a X in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a X in acciaio</b>Maße: 355 × 355 × 2 mm</figcaption></figure></div>`,
     "Technische Zeichnung":`<h3>Technische Zeichnung</h3><a class="asset-link" target="_blank" href="${IMG11}Dis.00X_i_corretto.pdf">📐 Dis.00X_i_corretto.pdf</a>`,
     "Montage":`<h3>Montage</h3><p>Die Montageanleitung ist im Datenblatt zur Zeichnung enthalten.</p>`,
     "Montagevideo":`
@@ -812,7 +828,7 @@ const sections = {
       </ul>
       <p>Abschlusskanten können auch nach Maß und Kundenvorgabe gefertigt werden.</p>
       <p>Wir liefern weltweit, auch direkt auf das Messegelände.</p>`,
-    "Preisliste":`<h3>Preisliste</h3><div class="gallery"><img class="prod-img" src="${IMG}BORDO_FINITURA_TESTE.png" alt="Abschlusskanten" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+    "Preisliste":`<h3>Preisliste</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/bordo-finitura.webp" alt="Bordo di finitura per le teste dei pannelli" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Bordo di finitura per le teste dei pannelli</b></figcaption></figure></div>`
   }
 },
 
@@ -831,7 +847,7 @@ const sections = {
       </ul>
       <p>In mehreren Varianten erhältlich und auf Wunsch auch nach Maß gefertigt.</p>
       <p>Wir liefern weltweit, auch direkt auf das Messegelände.</p>`,
-    "Preisliste":`<h3>Preisliste</h3><div class="gallery"><img class="prod-img" src="${IMG}copritesta_giusto.png" alt="Stirnkantenabdeckung" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+    "Preisliste":`<h3>Preisliste</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/copritesta.webp" alt="Copritesta di finitura in legno" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Copritesta di finitura in legno</b>Maße: 2500 × 40 × 3 mm · 3000 × 40 × 3 mm</figcaption></figure></div>`
   }
 }
 

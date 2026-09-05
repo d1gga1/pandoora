@@ -216,13 +216,31 @@ body{
 }
 .asset-link:hover{transform:translateY(-3px);box-shadow:var(--shadow);background:#fff;border-color:#e0c9c5}
 
-.gallery{display:flex;flex-wrap:wrap;gap:18px;margin-top:8px}
+/* foto prodotto: riquadri quadrati uniformi, il pezzo riempie il campo */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;margin-top:10px;max-width:830px}
+.gallery figure{margin:0}
 .prod-img{
-  max-width:100%;width:360px;border-radius:14px;border:1px solid var(--line);
-  background:var(--bg-soft);box-shadow:var(--shadow);
-  transition:transform .5s var(--ease),box-shadow .5s;
+  width:100%;aspect-ratio:1/1;object-fit:contain;display:block;
+  padding:16px;background:#fff;border-radius:14px;border:1px solid var(--line);
+  box-shadow:var(--shadow);transition:transform .4s var(--ease),box-shadow .4s;
 }
-.prod-img:hover{transform:translateY(-6px) scale(1.01);box-shadow:var(--shadow-lg)}
+.prod-img:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.prod-cap{margin:9px 2px 0;font-size:13px;line-height:1.45;color:var(--muted)}
+.prod-cap b{display:block;color:var(--ink);font-weight:700;font-size:13.5px}
+@media(max-width:520px){.gallery{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}}
+
+/* fogli di listino: sono documenti, vanno larghi e ingrandibili */
+.docshot{display:block;margin-top:10px;max-width:900px;text-decoration:none}
+.docshot img{
+  width:100%;height:auto;display:block;background:#fff;
+  border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow);
+  transition:box-shadow .4s,border-color .3s;
+}
+.docshot:hover img{box-shadow:var(--shadow-lg);border-color:#e0c9c5}
+.docshot-hint{
+  display:inline-flex;align-items:center;gap:7px;margin-top:9px;
+  font-size:13px;font-weight:700;color:var(--red);
+}
 .content video{max-width:100%;width:560px;border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow);margin-top:8px}
 
 /* form */
@@ -947,10 +965,8 @@ const sections = {
     "Listino":`
       <h3>Listino</h3>
       <p>Foto prodotto e listino aggiornato dei pannelli tamburati per stand fieristici.</p>
-      <div class="gallery">
-        <img class="prod-img" src="${IMG}1.png" alt="Pannello tamburato stand" loading="lazy" decoding="async" width="1414" height="2000">
-        <img class="prod-img" src="${IMG}2.png" alt="Pannello tamburato stand" loading="lazy" decoding="async" width="1414" height="2000">
-      </div>`
+      <a class="docshot" href="/assets/prodotti/listino-pannelli-1.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pannelli-1.webp" alt="Listino pannelli tamburati per stand" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Apri il listino a dimensione intera</span></a>
+      <a class="docshot" href="/assets/prodotti/listino-pannelli-2.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pannelli-2.webp" alt="Listino pannelli rinforzo, griglia e 6 metri" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Apri il listino a dimensione intera</span></a>`
   }
 },
 
@@ -988,7 +1004,7 @@ const sections = {
       <a class="asset-link" target="_blank" href="${IMG}porta.pdf">📐 Porta.pdf</a>`,
     "Listino":`
       <h3>Listino</h3>
-      <div class="gallery"><img class="prod-img" src="${IMG}Pan.door_.a-S.r.l.png" alt="Porta stand" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+      <a class="docshot" href="/assets/prodotti/listino-porte.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-porte.webp" alt="Listino porte per allestimenti" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Apri il listino a dimensione intera</span></a>`
   }
 },
 
@@ -1019,7 +1035,7 @@ const sections = {
     "Listino":`
       <h3>Listino</h3>
       <a class="asset-link" target="_blank" href="${IMG}pedana.pdf">📐 Pedana.pdf</a>
-      <div class="gallery"><img class="prod-img" src="${IMG}listino-pedane.png" alt="Listino pedane" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+      <a class="docshot" href="/assets/prodotti/listino-pedane.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pedane.webp" alt="Listino pedane livellanti" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Apri il listino a dimensione intera</span></a>`
   }
 },
 
@@ -1031,7 +1047,7 @@ const sections = {
       <p>Elemento realizzato in MDF ad alta densità, progettato per garantire il corretto allineamento verticale dei pannelli. La sua funzione è assicurare stabilità e precisione durante il montaggio, evitando dislivelli o imperfezioni nell'unione delle superfici.</p>
       <p>Resistente e affidabile, rappresenta la soluzione ideale per ottenere un risultato finale uniforme e professionale.</p>
       <div class="note"><span class="pin">📄</span><span>Su richiesta è disponibile la scheda tecnica completa con le istruzioni di montaggio.</span></div>
-      <div class="gallery"><img class="prod-img" src="${IMG}anima_allineamento_giusto.png" alt="Anima di allineamento verticale" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+      <div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/anima-allineamento.webp" alt="Anima di allineamento verticale in MDF" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Anima di allineamento verticale in MDF</b>Misure: 2200 × 28 × 4 mm</figcaption></figure></div>`
   }
 },
 
@@ -1045,7 +1061,7 @@ const sections = {
       <p>Realizzato con <b>materiali di alta qualità</b>, resistenti all'usura e trattati contro <b>ossidazione e graffi</b>, garantisce <b>affidabilità e lunga durata</b> anche in condizioni di utilizzo intensivo.</p>
       <p>Grazie alla <b>lavorazione precisa</b> e all'ottimo accoppiamento con i nostri pannelli tamburati, consente un montaggio rapido, sicuro e privo di giochi.</p>
       <p><b>Consegniamo in Italia e in tutto il mondo</b>, anche direttamente all'interno delle fiere.</p>`,
-    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_I.jpg" alt="Elemento di giunzione I" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-i.webp" alt="Elemento di giunzione a I in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a I in acciaio</b>Misure: 400 × 15 × 15 mm</figcaption></figure></div>`,
     "Disegno Tecnico":`<h3>Disegno tecnico</h3><p>Disegno tecnico disponibile su richiesta insieme alla scheda di montaggio.</p>`
   }
 },
@@ -1060,7 +1076,7 @@ const sections = {
       <p>Prodotto con <b>materiali di alta qualità</b>, resistenti all'usura e trattati contro <b>ossidazione e graffi</b>, garantisce <b>durata e affidabilità</b> anche con montaggi e smontaggi frequenti.</p>
       <p>La <b>lavorazione accurata</b> consente un inserimento agevole e senza giochi, per un'installazione pulita e sicura.</p>
       <p><b>Consegniamo in Italia e in tutto il mondo</b>, anche direttamente all'interno delle fiere.</p>`,
-    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_L.jpg" alt="Elemento di giunzione L" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-l.webp" alt="Elemento di giunzione a L in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a L in acciaio</b>Misure: 185 × 185 × 2 mm</figcaption></figure></div>`,
     "Disegno Tecnico":`<h3>Disegno tecnico</h3><a class="asset-link" target="_blank" href="${IMG11}Dis.00L_i.pdf">📐 Dis.00L_i.pdf</a>`,
     "Montaggio":`<h3>Montaggio</h3><p>Istruzioni di montaggio disponibili su richiesta insieme alla scheda tecnica del prodotto.</p>`
   }
@@ -1076,7 +1092,7 @@ const sections = {
       <p>Realizzato con <b>materiali di alta qualità</b>, resistenti all'usura e trattati contro <b>ossidazione e graffi</b>, offre <b>affidabilità e lunga durata</b> dopo numerosi montaggi e smontaggi.</p>
       <p>La <b>lavorazione accurata</b> assicura un <b>assemblaggio rapido, stabile e senza giochi</b>.</p>
       <p><b>Consegniamo in Italia e in tutto il mondo</b>, anche direttamente all'interno delle fiere.</p>`,
-    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_T.jpg" alt="Elemento di giunzione T" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-t.webp" alt="Elemento di giunzione a T in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a T in acciaio</b>Misure: 355 × 185 × 2 mm</figcaption></figure></div>`,
     "Disegno Tecnico":`
       <h3>Disegno tecnico</h3>
       <a class="asset-link" target="_blank" href="${IMG11}Dis.00T_i.pdf">📐 Dis.00T_i.pdf</a>`,
@@ -1094,7 +1110,7 @@ const sections = {
       <p>Realizzato con <b>materiali di alta qualità</b>, resistenti all'usura e trattati contro <b>ossidazione e graffi</b>, assicura <b>affidabilità e lunga durata</b> dopo numerosi cicli di montaggio e smontaggio.</p>
       <p>La <b>lavorazione accurata</b> permette un <b>montaggio rapido, sicuro e senza giochi</b>.</p>
       <p><b>Consegniamo in Italia e in tutto il mondo</b>, anche direttamente all'interno delle fiere.</p>`,
-    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><img class="prod-img" src="${IMG}Giunzione_X.jpg" alt="Elemento di giunzione X" loading="lazy" decoding="async" width="1414" height="2000"></div>`,
+    "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-x.webp" alt="Elemento di giunzione a X in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a X in acciaio</b>Misure: 355 × 355 × 2 mm</figcaption></figure></div>`,
     "Disegno Tecnico":`<h3>Disegno tecnico</h3><a class="asset-link" target="_blank" href="${IMG11}Dis.00X_i_corretto.pdf">📐 Dis.00X_i_corretto.pdf</a>`,
     "Montaggio":`<h3>Montaggio</h3><p>Istruzioni di montaggio disponibili nella scheda tecnica allegata al disegno.</p>`,
     "Video Montaggio":`
@@ -1121,7 +1137,7 @@ const sections = {
       </ul>
       <p>I bordi di finitura possono essere realizzati anche su misura, secondo le specifiche del cliente.</p>
       <p>Consegniamo in tutto il mondo, anche direttamente all'interno delle fiere.</p>`,
-    "Listino":`<h3>Listino</h3><div class="gallery"><img class="prod-img" src="${IMG}BORDO_FINITURA_TESTE.png" alt="Bordi di finitura" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+    "Listino":`<h3>Listino</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/bordo-finitura.webp" alt="Bordo di finitura per le teste dei pannelli" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Bordo di finitura per le teste dei pannelli</b></figcaption></figure></div>`
   }
 },
 
@@ -1140,7 +1156,7 @@ const sections = {
       </ul>
       <p>Disponibili in diverse varianti e realizzabili anche su misura in base alle esigenze del cliente.</p>
       <p>Consegniamo in tutto il mondo, anche direttamente all'interno delle fiere.</p>`,
-    "Listino":`<h3>Listino</h3><div class="gallery"><img class="prod-img" src="${IMG}copritesta_giusto.png" alt="Copritesta finitura" loading="lazy" decoding="async" width="1414" height="2000"></div>`
+    "Listino":`<h3>Listino</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/copritesta.webp" alt="Copritesta di finitura in legno" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Copritesta di finitura in legno</b>Misure: 2500 × 40 × 3 mm · 3000 × 40 × 3 mm</figcaption></figure></div>`
   }
 }
 
