@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pandooragroup.it/</loc>
     <lastmod>2026-09-04</lastmod>
@@ -55,7 +56,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/azienda/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
@@ -63,6 +64,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/azienda/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/azienda/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/magazzino-pandoora-bancali-pronta-consegna.webp</image:loc>
+      <image:title>Magazzino Pan.door.a con i bancali di materiale in pronta consegna</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/imballaggio-pannelli-film-reggiatura.webp</image:loc>
+      <image:title>Bancale di pannelli protetto con film estensibile, angolari di rinforzo e reggiatura</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/casse-export-pannelli-stati-uniti.webp</image:loc>
+      <image:title>Casse di imballo per export verso gli Stati Uniti pronte alla spedizione</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/azienda/</loc>
@@ -411,11 +424,27 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/guida-scelta-pannello-tamburato/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/guida-scelta-pannello-tamburato/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/guida-scelta-pannello-tamburato/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/bordo-pannelli-tamburati-grezzi-spessori.webp</image:loc>
+      <image:title>Bordo di pannelli tamburati grezzi in diversi spessori</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laminati-bianchi-fuori-misura.webp</image:loc>
+      <image:title>Pannelli tamburati laminati bianchi fuori misura ad alta planarità</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-grandi-volumi-produzione.webp</image:loc>
+      <image:title>Pannelli tamburati di grande lunghezza pronti in produzione</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-bancale-reggiato-consegna.webp</image:loc>
+      <image:title>Bancale di pannelli tamburati laminati bianchi reggiato per la consegna</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/guide/</loc>
@@ -427,7 +456,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/listino-pannelli-tamburati/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
@@ -435,6 +464,22 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/listino-pannelli-tamburati/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/listino-pannelli-tamburati/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/stock-pannelli-tamburati-magazzino-operativo.webp</image:loc>
+      <image:title>Stock di pannelli tamburati nel magazzino sempre operativo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-magazzino-misure-standard.webp</image:loc>
+      <image:title>Pannelli tamburati nelle misure standard, disponibili a magazzino</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laminato-bianco-bancale.webp</image:loc>
+      <image:title>Bancale di pannelli tamburati con rivestimento in laminato bianco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laminato-bianco-copertine-mdf.webp</image:loc>
+      <image:title>Pannelli tamburati laminati bianchi con copertine in MDF</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/listino-pannelli-tamburati/</loc>
@@ -527,11 +572,23 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-fiere/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati-fiere/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati-fiere/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-fuori-misura-grandi-formati.webp</image:loc>
+      <image:title>Pannelli tamburati fuori misura nei grandi formati</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/elementi-numerati-identificati-cantiere.webp</image:loc>
+      <image:title>Elementi numerati e identificati in produzione per facilitare il montaggio in cantiere</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/taglio-preciso-pannello-tamburato-bordo.webp</image:loc>
+      <image:title>Bordo di un pannello tamburato: taglio preciso e struttura interna a vista</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati-firenze-fiera/</loc>
@@ -663,7 +720,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -671,6 +728,22 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-standard-fuori-misura-allestitori.webp</image:loc>
+      <image:title>Pannelli tamburati standard e fuori misura prodotti per allestitori</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-80-mm-sei-metri.webp</image:loc>
+      <image:title>Pannelli tamburati da 80 mm di spessore e 6 metri di lunghezza su bancale</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-pronti-spedizione-bancale.webp</image:loc>
+      <image:title>Pannelli tamburati impilati e pronti alla spedizione</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/bordo-pannello-tamburato-dettaglio.webp</image:loc>
+      <image:title>Dettaglio del bordo di un bancale di pannelli tamburati</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/</loc>
@@ -1295,7 +1368,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/progetti/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
@@ -1303,6 +1376,22 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetti/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetti/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetti/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretto-tamburato-installato-stand.webp</image:loc>
+      <image:title>Muretto tamburato in fase di montaggio all’interno di uno stand fieristico</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/stand-fieristico-componenti-strutturali-produzione.webp</image:loc>
+      <image:title>Stand fieristico allestito con componenti strutturali prodotti su misura da Pan.door.a</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/stand-pareti-legno-plafoniera-sospesa.webp</image:loc>
+      <image:title>Stand fieristico con pareti in legno e plafoniera sospesa realizzata su misura</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/stand-showroom-componenti-su-misura.webp</image:loc>
+      <image:title>Allestimento in stile showroom realizzato con pannelli e componenti su misura</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/progetti/</loc>
@@ -1383,11 +1472,19 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/referenze-allestimenti/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/referenze-allestimenti/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/referenze-allestimenti/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/stand-retail-arcate-curve-su-misura.webp</image:loc>
+      <image:title>Stand retail con arcate curve stratificate realizzate su misura</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/parete-scenografica-intagliata-retroilluminata.webp</image:loc>
+      <image:title>Parete scenografica intagliata e retroilluminata realizzata con componenti su misura</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/rivenditori-porte/</loc>
@@ -1459,7 +1556,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/pannello-stand/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
@@ -1467,6 +1564,30 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-numerati-montaggio.webp</image:loc>
+      <image:title>Pannelli tamburati numerati e identificati per il montaggio diretto in cantiere</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/elementi-tamburati-su-misura-stand.webp</image:loc>
+      <image:title>Elemento in pannello tamburato con ripiano integrato, fornito già completo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-telaio-abete-leggerezza.webp</image:loc>
+      <image:title>Pila di pannelli tamburati con telaio perimetrale in abete e anima alveolare a vista</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-planarita-produzione-interna.webp</image:loc>
+      <image:title>Pannelli tamburati impilati in reparto, con spessore e planarità costanti su tutto il lotto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laminati-bianchi-stand.webp</image:loc>
+      <image:title>Pannelli tamburati laminati bianchi pronti per l&#x27;utilizzo negli allestimenti fieristici</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-base-allestimenti-professionali.webp</image:loc>
+      <image:title>Bancale di pannelli tamburati con dettaglio del bordo e della struttura interna</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/standard-panel/</loc>
@@ -1503,7 +1624,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/ignifugo/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
@@ -1511,6 +1632,10 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-produzione-continua-fontanelle.webp</image:loc>
+      <image:title>Pannelli tamburati in produzione continua nello stabilimento di Fontanelle</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/fire-rated/</loc>
@@ -1547,7 +1672,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/laccato-ral/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
@@ -1555,6 +1680,10 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laccati-bianco-lucido.webp</image:loc>
+      <image:title>Pila di pannelli tamburati laccati bianco lucido pronti per la spedizione in stabilimento</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/</loc>
@@ -1591,7 +1720,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/electric/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
@@ -1599,6 +1728,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-forature-passaggio-cavi.webp</image:loc>
+      <image:title>Pannelli tamburati con forature tecniche per il passaggio dei cavi e degli impianti</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-predisposti-passaggio-cavi.webp</image:loc>
+      <image:title>Pannelli tamburati predisposti per il passaggio cavi e le lavorazioni tecniche</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pavimento-tunnelflex-passaggio-cavi-stand.webp</image:loc>
+      <image:title>Pavimento TunnelFlex per stand e congressi, con passaggio di cavi e tubazioni sotto la superficie</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/electrical-panel/</loc>
@@ -1634,8 +1775,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
   </url>
   <url>
+    <loc>https://pandooragroup.it/pannelli-tamburati/acustico-microforato/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/acustico-microforato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/acustico-microforato/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-acustico-microforato-mdf.webp</image:loc>
+      <image:title>Pannello acustico microforato in MDF con foratura CNC ad alta precisione</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-fonoassorbente-microforato-stand.webp</image:loc>
+      <image:title>Pannello fonoassorbente microforato per stand fieristici, uffici e sale riunioni</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/mostra-arte/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
@@ -1643,6 +1800,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-mostra-anima-mdf-sezione.webp</image:loc>
+      <image:title>Sezione del Pannello Mostra: anima interna in MDF che permette di fissare chiodi e ganci</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/sagome-cnc-pannello-mostra-allestimento.webp</image:loc>
+      <image:title>Sagome tagliate a CNC su pannello per allestimenti espositivi e museali</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/</loc>
@@ -1679,7 +1844,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/rinforzato/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
@@ -1687,6 +1852,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-rinforzato-80-mm.webp</image:loc>
+      <image:title>Pannelli tamburati laminati bianchi da 80 mm di spessore con dettaglio della struttura interna</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-hdf-idrorepellente.webp</image:loc>
+      <image:title>Pannelli tamburati laminati bianchi con copertine in HDF idrorepellente</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/</loc>
@@ -1731,6 +1904,10 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-fresata-personalizzata.webp</image:loc>
+      <image:title>Pannelli tamburati con fresate personalizzate eseguite su richiesta del cliente</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/</loc>
@@ -1767,7 +1944,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/curvo/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
@@ -1775,6 +1952,38 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-curvo-mdf.webp</image:loc>
+      <image:title>Pannello tamburato curvo in MDF su misura, sagomato sul raggio richiesto dal progetto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/portali-curvi-scomponibili-stand.webp</image:loc>
+      <image:title>Portali curvi scomponibili in moduli, prodotti su misura per facilitare trasporto e montaggio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/elementi-curvi-scenografici-allestimenti.webp</image:loc>
+      <image:title>Elemento curvo scenografico in tamburato prodotto su misura per un allestimento</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-curvo-raggio-su-misura.webp</image:loc>
+      <image:title>Pannello tamburato curvo in MDF realizzato sul raggio richiesto dal progetto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/elementi-curvi-tamburati-modulari-stand.webp</image:loc>
+      <image:title>Serie di elementi curvi tamburati prodotti su misura per un allestimento</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-sagomati-cerchi-semicerchi-su-misura.webp</image:loc>
+      <image:title>Elementi tamburati sagomati a cerchio e semicerchio, tagliati sul raggio di progetto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-curvi-lavorazione-su-disegno-tecnico.webp</image:loc>
+      <image:title>Pannelli curvi in lavorazione a partire dal disegno tecnico del cliente</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/struttura-curva-mdf-angoli-raccordati.webp</image:loc>
+      <image:title>Struttura in MDF con angoli raccordati realizzata su misura per un allestimento</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/curved-panel/</loc>
@@ -1811,7 +2020,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/specchio/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
@@ -1819,6 +2028,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-specchio-policarbonato.webp</image:loc>
+      <image:title>Pannello tamburato con finitura specchio in policarbonato riflettente</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/colonna-mdf-effetto-specchio-stand.webp</image:loc>
+      <image:title>Colonna in MDF rivestita con pellicola effetto specchio per stand e showroom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/installazione-pannelli-specchio-mestre-venezia.webp</image:loc>
+      <image:title>Installazione a Mestre realizzata con componenti strutturali e pannelli speciali Pan.door.a</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/mirror-panel/</loc>
@@ -1855,7 +2076,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/muretti/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
@@ -1863,6 +2084,34 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-tamburati-su-misura.webp</image:loc>
+      <image:title>Muretto tamburato su misura realizzato secondo le specifiche tecniche del cliente</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-tamburati-salone-del-mobile.webp</image:loc>
+      <image:title>Muretti strutturali tamburati su misura prodotti per uno stand del Salone del Mobile</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-mdf-su-misura-espositivi.webp</image:loc>
+      <image:title>Muretti in MDF su misura per allestimenti espositivi, in qualsiasi dimensione e spessore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-mdf-qualsiasi-spessore.webp</image:loc>
+      <image:title>Elementi in MDF su misura impilati, prodotti in qualsiasi altezza e spessore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-modulari-stand-struttura-interna.webp</image:loc>
+      <image:title>Elemento modulare tamburato con struttura interna a costine per stand fieristici</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-autoportanti-stand-fieristici.webp</image:loc>
+      <image:title>Muretti autoportanti tamburati impilati, pronti per il montaggio in fiera</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/muretti-rinforzati-su-misura-stand.webp</image:loc>
+      <image:title>Muretti rinforzati su misura con struttura interna irrigidita</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/</loc>
@@ -1899,7 +2148,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/porte-per-stand/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
@@ -1907,6 +2156,34 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porte-tamburate-stand-pronte-spedizione.webp</image:loc>
+      <image:title>Porte tamburate per stand fieristici impilate su bancale con la ferramenta di corredo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porta-antipanico-tamburata-due-ante-laminato-bianco.webp</image:loc>
+      <image:title>Porta antipanico tamburata a due ante in finitura laminata bianca con maniglione</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porta-antipanico-stand-doppia-anta-grezza.webp</image:loc>
+      <image:title>Porta antipanico per stand in pannello tamburato, configurabile a singola o doppia anta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porta-antipanico-stand-maniglione-integrata.webp</image:loc>
+      <image:title>Porta antipanico integrata nella parete dello stand, con maniglione antipanico</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porte-tamburate-laminato-bianco-stand.webp</image:loc>
+      <image:title>Porte tamburate in laminato bianco per ingressi, backstage e aree tecniche dello stand</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porta-tamburata-grezza-stand-fieristico.webp</image:loc>
+      <image:title>Porta tamburata grezza per stand fieristici, pronta per finitura o laminatura</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/porte-tamburate-bancale-pronta-consegna.webp</image:loc>
+      <image:title>Bancale di porte tamburate reggiato e pronto alla consegna in fiera</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/stand-doors/</loc>
@@ -1943,7 +2220,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
@@ -1951,6 +2228,26 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pedane-truciolare-stand-fieristici.webp</image:loc>
+      <image:title>Pedane in truciolare forate per pavimentazioni di stand fieristici</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pedane-stand-pronta-consegna-formati-standard.webp</image:loc>
+      <image:title>Pedane per stand fieristici in pronta consegna nei formati 998x998, 998x498 e 498x498 mm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pedana-tamburata-forata-montaggio-rapido.webp</image:loc>
+      <image:title>Pedana tamburata con forature di montaggio, impilata su bancale</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pedane-stand-struttura-rinforzata-portata.webp</image:loc>
+      <image:title>Pedane per allestimenti con struttura interna rinforzata ad alta portata</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/pedana-stand-rampa-accessibile-disabili.webp</image:loc>
+      <image:title>Pedana per stand con rampa di accesso integrata nel perimetro per persone con disabilità</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/</loc>
@@ -1987,7 +2284,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
@@ -1995,6 +2292,10 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/sezione-incastri-elementi-tamburati.webp</image:loc>
+      <image:title>Sezione di elementi tamburati sagomati con incastri per il montaggio a secco</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/</loc>
@@ -2031,7 +2332,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/quadrotte/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
@@ -2039,6 +2340,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/quadrotte-pavimentazione-stand-superficie-planare.webp</image:loc>
+      <image:title>Quadrotte per pavimentazioni di stand fieristici con superficie perfettamente planare</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/quadrotte-mdf-forature-standardizzate.webp</image:loc>
+      <image:title>Quadrotte in MDF lavorato con forature standardizzate per una posa rapida</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/floor-tiles/</loc>
@@ -2075,7 +2384,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/pannelli-tamburati/colonne-folding/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
@@ -2083,6 +2392,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/colonne-folding-stand-fieristici.webp</image:loc>
+      <image:title>Sezione di colonna folding tamburata su misura per stand fieristici</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pandooragroup.it/foto-produzione/plafoniera-folding-su-misura-stand.webp</image:loc>
+      <image:title>Plafoniera folding realizzata su misura per un allestimento di grandi dimensioni</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels/folding-columns/</loc>
