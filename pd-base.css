@@ -455,3 +455,12 @@ html[data-pd="grazie"] .thx-b{font-size:calc(14px*var(--pds))}
 .pdrel-card b{display:block;font-size:calc(15.5px*var(--pds,1));font-weight:800;letter-spacing:-.1px;margin-bottom:6px}
 .pdrel-card span{display:block;font-size:calc(13.6px*var(--pds,1));line-height:1.6;opacity:.72}
 @media(max-width:900px){.pdrel{padding:0 24px 56px}.pdrel-in{padding-top:36px}}
+
+/* ---- galleria "Dalla nostra produzione" per le pagine con template sb- ---- */
+.pdfoto-sec{max-width:1160px;margin:0 auto;padding:8px 20px 48px}
+.pdfoto-sec h2{font-size:clamp(22px,2.4vw,30px);margin:0 0 18px}
+.pdfoto-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.pdfoto-grid figure{margin:0}
+.pdfoto-grid img{width:100%;height:280px;object-fit:cover;display:block;border-radius:12px;background:rgba(0,0,0,.04)}
+.pdfoto-grid figcaption{margin-top:10px;font-size:13.5px;line-height:1.55;color:var(--ink-soft,#4a525c)}
+@media(max-width:640px){.pdfoto-grid img{height:230px}}
