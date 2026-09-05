@@ -1,0 +1,466 @@
+/* pd-base.css — mobile.css + desktop.css uniti (ordine originale preservato) */
+/* Pan.door.a — ottimizzazioni mobile condivise
+   Caricato per ultimo: sovrascrive gli stili inline delle singole pagine. */
+
+/* ── 1 · niente scroll orizzontale, mai ── */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media(max-width:1080px){
+  /* clip invece di hidden: hidden trasforma il body in contenitore di scroll
+     e disattiva tutti gli elementi position:sticky (barre che restano in alto) */
+  html,body{max-width:100%}
+  @supports(overflow:clip){html,body{overflow-x:clip!important}}
+  @supports not (overflow:clip){html,body{overflow-x:hidden}}
+  img,video,canvas,svg,iframe{max-width:100%}
+  table{display:block;max-width:100%;overflow-x:auto}
+  pre{overflow-x:auto}
+}
+
+/* ── 2 · dispositivi touch: via il cursore custom, via gli hover ── */
+@media(hover:none),(pointer:coarse){
+  *{cursor:auto!important}
+  #cur,#curRing{display:none!important}
+  html{scroll-behavior:smooth}
+  a,button,summary,[role="button"]{-webkit-tap-highlight-color:rgba(255,255,255,.08);touch-action:manipulation}
+}
+
+/* ── 3 · altezza viewport corretta su iOS (barra indirizzi dinamica) ── */
+@supports(height:100dvh){
+  @media(max-width:1080px){
+    .hero,section.hero,#intro{min-height:100dvh}
+  }
+}
+
+/* ── 4 · aree toccabili ≥ 44px e testo leggibile ── */
+@media(max-width:768px){
+  a[href^="tel:"],a[href^="mailto:"],.btn,.nav-cta,.chip,button,
+  .prj-arrow,.prj-dot,.pdlang-btn,.pdlang-opt{min-height:44px}
+  .prj-dot{min-height:0;padding:10px 4px;background-clip:content-box}
+  .btn,.nav-cta{display:inline-flex;align-items:center;justify-content:center}
+  /* iOS zooma sui campi con font < 16px */
+  input,select,textarea{font-size:16px!important;max-width:100%}
+  input,textarea,select,button{border-radius:12px}
+  label{display:block}
+}
+
+/* ── 5 · tipografia e spaziature più strette sui telefoni ── */
+@media(max-width:600px){
+  h1{overflow-wrap:break-word;hyphens:auto}
+  h1,h2,h3{letter-spacing:-.4px}
+  .hero{padding-left:20px;padding-right:20px}
+  .content,.sec,.section,footer,.foot{padding-left:20px;padding-right:20px}
+  /* griglie multi-colonna → colonna singola */
+  .grid,.cards,.hero-inner{grid-template-columns:1fr!important}
+  .hero-inner{gap:32px!important}
+}
+
+/* ── 6 · caroselli orizzontali: scorrimento fluido col dito ── */
+@media(max-width:1080px){
+  [class*="track"],[class*="carousel"],[class*="slider"],[class*="rail"]{
+    -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none}
+  [class*="track"]::-webkit-scrollbar,[class*="carousel"]::-webkit-scrollbar{display:none}
+}
+
+/* ── 7 · selettore lingua: non deve coprire i pulsanti in basso ── */
+@media(max-width:768px){
+  .pdlang{right:14px!important;bottom:calc(14px + env(safe-area-inset-bottom))!important}
+  .pdlang-btn{padding:11px 14px}
+  .pdlang-menu{min-width:180px;max-height:60vh;overflow-y:auto}
+}
+
+/* ── 7b · pulsante WhatsApp flottante: allineato e senza sovrapposizioni ── */
+@media(max-width:768px){
+  .pf-wa{right:14px!important;bottom:calc(80px + env(safe-area-inset-bottom))!important;
+    width:54px!important;height:54px!important}
+  .pf-top-btn{right:19px!important;bottom:calc(146px + env(safe-area-inset-bottom))!important}
+  body.pdm-open .pf-wa,body.pdm-open .pf-top-btn{opacity:0;visibility:hidden}
+}
+
+/* ── 8 · header: spazio per il bottone menu, niente sovrapposizioni ── */
+@media(max-width:1080px){
+  .topbar{padding-left:18px!important;padding-right:18px!important;gap:12px}
+  .topbar .tagline{display:none}
+  .brand img{height:32px!important}
+  .burger{display:flex!important;min-width:44px;min-height:44px;align-items:center;
+    justify-content:center;border-radius:50%;touch-action:manipulation}
+  /* pagine senza topbar: lascia libero l'angolo in alto a destra */
+  #logoTop{right:auto!important;left:50%!important;transform:translateX(-50%)}
+  nav#nav .nav-ct,nav.nav .nav-ct{display:none}
+}
+
+/* ── 9 · safe area (notch / home indicator) ── */
+@media(max-width:1080px){
+  .topbar,nav#nav,nav.nav{padding-top:max(12px,env(safe-area-inset-top))}
+}
+
+/* ── 10 · animazioni ridotte se richiesto dal sistema ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* ── 11 · Schede Tecniche: la colonna prodotti diventa una barra scorrevole ──
+   Su mobile l'elenco impilato occupava mezzo schermo prima dei contenuti. */
+@media(max-width:900px){
+  .sidebar{position:sticky!important;top:64px;z-index:40;
+    display:flex;align-items:center;gap:10px;
+    overflow-x:auto;overflow-y:hidden;white-space:nowrap;
+    margin:0 -22px;padding:8px 22px!important;
+    background:#fff;-webkit-backdrop-filter:saturate(140%) blur(14px);
+    backdrop-filter:saturate(140%) blur(14px);
+    border-bottom:1px solid var(--line,rgba(0,0,0,.09));
+    box-shadow:0 6px 18px rgba(20,26,34,.06);
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .sidebar::-webkit-scrollbar{display:none}
+  .side-cat{margin:0!important;padding:0!important;flex:0 0 auto;font-size:10px;
+    line-height:1;letter-spacing:1.6px;opacity:.5;border:0!important}
+  .side-nav{display:flex;gap:8px;flex:0 0 auto;padding:0!important;margin:0!important}
+  .side-nav li{flex:0 0 auto}
+  .side-nav a{display:flex;align-items:center;min-height:40px;padding:0 14px!important;
+    border-radius:100px;border:1px solid var(--line,rgba(0,0,0,.12));
+    font-size:13px;white-space:nowrap;transform:none!important}
+  .side-nav a.active{background:var(--red,#c0392b);color:#fff!important;
+    border-color:var(--red,#c0392b);font-weight:700}
+  .side-indicator{display:none!important}
+}
+
+/* ── 12 · Porte / Pavimentazioni: griglie prodotto a due colonne sui telefoni ── */
+@media(max-width:600px){
+  .prj-card{flex-basis:86%!important}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .hero-chips,.sec-subs{gap:8px}
+}
+
+/* ── 13 · footer: menu su una colonna quando lo spazio è poco ── */
+@media(max-width:420px){
+  .pf-menu{grid-template-columns:1fr!important}
+  .pf{padding-left:18px!important;padding-right:18px!important}
+}
+
+/* ---- desktop.css ---- */
+/* ══════════════════════════════════════════════════════════════════════
+   PAN.DOOR.A — SCALA DESKTOP  (generato, ma modificabile a mano)
+   Su monitor grandi il sito restava "piccolo": i contenitori erano fissi a
+   1200/1320px e i titoli avevano un tetto (clamp) che si fermava presto.
+   Qui ogni misura viene moltiplicata per due variabili che crescono a
+   scaglioni:  --pds = scala dei testi,  --pdw = scala dei contenitori.
+   Per ritoccare la resa basta cambiare i numeri qui sotto, nient'altro.
+   Sotto i 1500px non cambia NULLA: mobile e tablet restano identici.
+   ══════════════════════════════════════════════════════════════════════ */
+:root{--pds:1;--pdw:1}
+@media(min-width:1500px){:root{--pds:1.08;--pdw:1.08}}
+@media(min-width:1800px){:root{--pds:1.15;--pdw:1.16}}
+@media(min-width:2200px){:root{--pds:1.22;--pdw:1.24}}
+@media(min-width:2800px){:root{--pds:1.30;--pdw:1.34}}
+
+
+/* ── index.html ── */
+html[data-pd="index"] .sec-num{font-size:calc(9px*var(--pds))}
+html[data-pd="index"] .sec-title{font-size:clamp(20px,2.6vw,calc(38px*var(--pds)))}
+html[data-pd="index"] .sec-sub{font-size:calc(10px*var(--pds))}
+html[data-pd="index"] .sec-cta{font-size:calc(9.5px*var(--pds))}
+html[data-pd="index"] #s5 .sec-title{font-size:clamp(16px,2vw,calc(28px*var(--pds)))}
+html[data-pd="index"] .logo-name{font-size:calc(17px*var(--pds))}
+html[data-pd="index"] .logo-sub{font-size:calc(6px*var(--pds))}
+html[data-pd="index"] .intro-sub{font-size:calc(8px*var(--pds))}
+
+/* ── pannelli-tamburati-1.html ── */
+html[data-pd="pannelli-tamburati-1"] .brand{font-size:calc(22px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .topnav a{font-size:calc(12.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .nav-cta{font-size:calc(12.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hero-inner{max-width:calc(1320px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .hero-eyebrow{font-size:calc(11px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hero h1{font-size:clamp(42px,5.6vw,calc(78px*var(--pds)))}
+html[data-pd="pannelli-tamburati-1"] .hero .sub{font-size:calc(18px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hero p{font-size:calc(15.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .btn{font-size:calc(15px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hero-chips .chip{font-size:calc(11.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hv-badge b{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hv-badge span{font-size:calc(11px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hv-badge-num{font-size:calc(26px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hv-badge-num small{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .hero-scroll{font-size:calc(10px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .fiere-in{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .fiere-in .lbl{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .fiere-in a{font-size:calc(19px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .section{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .eyebrow{font-size:calc(11px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .sec-title{font-size:clamp(30px,4vw,calc(50px*var(--pds)))}
+html[data-pd="pannelli-tamburati-1"] .sec-sub{font-size:calc(16.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .intro{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .intro p{font-size:calc(15.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .compo-head{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .compo-instr{font-size:calc(13px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .compo-wrap{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .pin-dot{font-size:calc(15px*var(--pds));width:calc(34px*var(--pds));height:calc(34px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pin-label{font-size:calc(12.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .ccard-num{font-size:calc(16px*var(--pds));width:calc(40px*var(--pds));height:calc(40px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .ccard-body h4{font-size:calc(15.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .ccard-body p{font-size:calc(12.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .render-real{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .render-real .cap{font-size:calc(12.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pcard-tag{font-size:calc(10.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pcard-body h3{font-size:calc(20px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pcard-body p{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pcard-body li{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pcard-cta{font-size:calc(13px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .mat .n{font-size:calc(22px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .mat h4{font-size:calc(15px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .mat p{font-size:calc(12.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .cta{max-width:calc(1120px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .cta h2{font-size:clamp(28px,3.6vw,calc(42px*var(--pds)))}
+html[data-pd="pannelli-tamburati-1"] .cta p{font-size:calc(16px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-top{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .pf-wordmark{font-size:calc(22px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-tagline{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-fed{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-h{font-size:calc(18px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-list a{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-ic{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-menu a{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-quote{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-lang{font-size:calc(13px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .pf-legal{font-size:calc(11.5px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .pf-copy{font-size:calc(12px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .prj-head{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .prj-cat{font-size:calc(10.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .prj-info h3{font-size:calc(21px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .prj-num{font-size:calc(15px*var(--pds))}
+html[data-pd="pannelli-tamburati-1"] .prj-ctrls{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-1"] .prj-hint{font-size:calc(11px*var(--pds))}
+
+/* ── pannelli-tamburati-2.html ── */
+html[data-pd="pannelli-tamburati-2"] .brand{font-size:calc(22px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .topbar .tagline{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .page{max-width:calc(1360px*var(--pdw))}
+html[data-pd="pannelli-tamburati-2"] .side-cat{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .side-nav a{font-size:calc(14.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .eyebrow{font-size:calc(11px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .tab-btn{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .content h1{font-size:clamp(28px,3.4vw,calc(42px*var(--pds)))}
+html[data-pd="pannelli-tamburati-2"] .content h3{font-size:calc(24px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .content p{font-size:calc(15.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .content li{font-size:calc(15.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .note{font-size:calc(14.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .note .pin{font-size:calc(18px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .size-chip{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .size-chip small{font-size:calc(11px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .asset-link{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .contact h2{font-size:calc(26px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .contact .sub{font-size:calc(14.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .field label{font-size:calc(13px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .field input,html[data-pd="pannelli-tamburati-2"] .field textarea{font-size:calc(15px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .send-btn{font-size:calc(15px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .form-ok{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .footer{font-size:calc(13px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-top{max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-2"] .pf-wordmark{font-size:calc(22px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-tagline{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-fed{font-size:calc(12px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-h{font-size:calc(18px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-list a{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-ic{font-size:calc(14px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-menu a{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-quote{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-lang{font-size:calc(13px*var(--pds))}
+html[data-pd="pannelli-tamburati-2"] .pf-legal{font-size:calc(11.5px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="pannelli-tamburati-2"] .pf-copy{font-size:calc(12px*var(--pds));max-width:calc(1200px*var(--pdw))}
+
+/* ── componenti.html ── */
+html[data-pd="componenti"] .nav-back{font-size:calc(10px*var(--pds))}
+html[data-pd="componenti"] .nav-logo{font-size:calc(13px*var(--pds))}
+html[data-pd="componenti"] .nav-cta{font-size:calc(10px*var(--pds))}
+html[data-pd="componenti"] .hero-breadcrumb{font-size:calc(9px*var(--pds))}
+html[data-pd="componenti"] .hero-title{font-size:clamp(42px,6vw,calc(88px*var(--pds)))}
+html[data-pd="componenti"] .hero-desc{font-size:calc(13.5px*var(--pds))}
+html[data-pd="componenti"] .stat-n{font-size:clamp(24px,3vw,calc(40px*var(--pds)))}
+html[data-pd="componenti"] .stat-l{font-size:calc(9px*var(--pds))}
+html[data-pd="componenti"] .sdiv-txt{font-size:calc(8px*var(--pds))}
+html[data-pd="componenti"] .pill{font-size:calc(10px*var(--pds))}
+html[data-pd="componenti"] .fcount{font-size:calc(9.5px*var(--pds))}
+html[data-pd="componenti"] .card-num{font-size:calc(9px*var(--pds))}
+html[data-pd="componenti"] .card-badge{font-size:calc(8px*var(--pds))}
+html[data-pd="componenti"] .card-name{font-size:clamp(13px,1.3vw,calc(16px*var(--pds)))}
+html[data-pd="componenti"] .card-desc{font-size:calc(11px*var(--pds))}
+html[data-pd="componenti"] .ctag{font-size:calc(8.5px*var(--pds))}
+html[data-pd="componenti"] .card-cta{font-size:calc(9px*var(--pds))}
+html[data-pd="componenti"] .gsec-ttl{font-size:calc(10px*var(--pds))}
+html[data-pd="componenti"] .gsec-lnk{font-size:calc(9px*var(--pds))}
+html[data-pd="componenti"] .gi-lbl{font-size:calc(8px*var(--pds))}
+html[data-pd="componenti"] .foot-brand{font-size:calc(11px*var(--pds))}
+html[data-pd="componenti"] .foot-link{font-size:calc(9px*var(--pds))}
+html[data-pd="componenti"] .foot-copy{font-size:calc(9px*var(--pds))}
+
+/* ── porte.html ── */
+html[data-pd="porte"] .nav-back{font-size:calc(9.5px*var(--pds))}
+html[data-pd="porte"] .nav-ct{font-size:calc(9px*var(--pds))}
+html[data-pd="porte"] .hero-eye{font-size:calc(9px*var(--pds))}
+html[data-pd="porte"] .hero-title{font-size:clamp(64px,10.5vw,calc(150px*var(--pds)))}
+html[data-pd="porte"] .hero-sub{font-size:calc(11px*var(--pds))}
+html[data-pd="porte"] .hero-scroll span{font-size:calc(7.5px*var(--pds))}
+html[data-pd="porte"] .ftab{font-size:calc(9px*var(--pds))}
+html[data-pd="porte"] .fct{font-size:calc(9px*var(--pds))}
+html[data-pd="porte"] .slider-section{max-width:calc(1640px*var(--pdw))}
+html[data-pd="porte"] .slider-label-text{font-size:calc(9.5px*var(--pds))}
+html[data-pd="porte"] .sindex{font-size:calc(9px*var(--pds))}
+html[data-pd="porte"] .shint{font-size:calc(8px*var(--pds))}
+html[data-pd="porte"] .dname{font-size:clamp(15px,2vw,calc(19px*var(--pds)))}
+html[data-pd="porte"] .drev{font-size:calc(9px*var(--pds))}
+html[data-pd="porte"] .dsz{font-size:calc(7.5px*var(--pds))}
+html[data-pd="porte"] .mbadge{font-size:calc(8px*var(--pds))}
+html[data-pd="porte"] .mtitle{font-size:clamp(26px,4vw,calc(34px*var(--pds)))}
+html[data-pd="porte"] .mdesc{font-size:calc(12.5px*var(--pds))}
+html[data-pd="porte"] .mspecs-title{font-size:calc(8px*var(--pds))}
+html[data-pd="porte"] .mkey{font-size:calc(8.5px*var(--pds))}
+html[data-pd="porte"] .mval{font-size:calc(11.5px*var(--pds))}
+html[data-pd="porte"] .mcls{font-size:calc(15px*var(--pds));width:calc(34px*var(--pds));height:calc(34px*var(--pds))}
+
+/* ── progetto.html ── */
+html[data-pd="progetto"] .brand{font-size:calc(22px*var(--pds))}
+html[data-pd="progetto"] .back-link{font-size:calc(13px*var(--pds))}
+html[data-pd="progetto"] .phero-inner{max-width:calc(1200px*var(--pdw))}
+html[data-pd="progetto"] .phero-cat{font-size:calc(11px*var(--pds))}
+html[data-pd="progetto"] .phero h1{font-size:clamp(40px,6vw,calc(82px*var(--pds)))}
+html[data-pd="progetto"] .pm .k{font-size:calc(11px*var(--pds))}
+html[data-pd="progetto"] .pm .v{font-size:calc(16px*var(--pds))}
+html[data-pd="progetto"] .phero-scroll{font-size:calc(10px*var(--pds))}
+html[data-pd="progetto"] .pintro{max-width:calc(1200px*var(--pdw))}
+html[data-pd="progetto"] .pintro .lead-k{font-size:calc(11px*var(--pds))}
+html[data-pd="progetto"] .pintro h2{font-size:clamp(24px,2.6vw,calc(34px*var(--pds)))}
+html[data-pd="progetto"] .pintro .body p{font-size:calc(16px*var(--pds))}
+html[data-pd="progetto"] .pstat .n{font-size:calc(26px*var(--pds))}
+html[data-pd="progetto"] .pstat .l{font-size:calc(12px*var(--pds))}
+html[data-pd="progetto"] .pgal-wrap{max-width:calc(1280px*var(--pdw))}
+html[data-pd="progetto"] .lb-count{font-size:calc(13px*var(--pds))}
+html[data-pd="progetto"] .other-in{max-width:calc(1200px*var(--pdw))}
+html[data-pd="progetto"] .other h3{font-size:clamp(24px,3vw,calc(38px*var(--pds)))}
+html[data-pd="progetto"] .other .sub{font-size:calc(15px*var(--pds))}
+html[data-pd="progetto"] .ocard-info h4{font-size:calc(18px*var(--pds))}
+html[data-pd="progetto"] .ocard-info span{font-size:calc(11px*var(--pds))}
+html[data-pd="progetto"] .pf-top{max-width:calc(1200px*var(--pdw))}
+html[data-pd="progetto"] .pf-wordmark{font-size:calc(22px*var(--pds))}
+html[data-pd="progetto"] .pf-tagline{font-size:calc(13.5px*var(--pds))}
+html[data-pd="progetto"] .pf-fed{font-size:calc(12px*var(--pds))}
+html[data-pd="progetto"] .pf-h{font-size:calc(18px*var(--pds))}
+html[data-pd="progetto"] .pf-list a{font-size:calc(14px*var(--pds))}
+html[data-pd="progetto"] .pf-ic{font-size:calc(14px*var(--pds))}
+html[data-pd="progetto"] .pf-menu a{font-size:calc(13.5px*var(--pds))}
+html[data-pd="progetto"] .pf-quote{font-size:calc(13.5px*var(--pds))}
+html[data-pd="progetto"] .pf-lang{font-size:calc(13px*var(--pds))}
+html[data-pd="progetto"] .pf-legal{font-size:calc(11.5px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="progetto"] .pf-copy{font-size:calc(12px*var(--pds));max-width:calc(1200px*var(--pdw))}
+
+/* ── pavimentazioni.html ── */
+html[data-pd="pavimentazioni"] #back{font-size:calc(9.5px*var(--pds))}
+html[data-pd="pavimentazioni"] #logoTop span{font-size:calc(11px*var(--pds))}
+html[data-pd="pavimentazioni"] .hero-num{font-size:calc(9px*var(--pds))}
+html[data-pd="pavimentazioni"] .hero-title{font-size:clamp(27px,7.2vw,calc(104px*var(--pds)))}
+html[data-pd="pavimentazioni"] .hero-sub{font-size:calc(13px*var(--pds))}
+html[data-pd="pavimentazioni"] .chip{font-size:calc(10px*var(--pds))}
+html[data-pd="pavimentazioni"] .section-label{font-size:calc(9px*var(--pds))}
+html[data-pd="pavimentazioni"] .section-intro{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pavimentazioni"] .card-icon{font-size:calc(19px*var(--pds))}
+html[data-pd="pavimentazioni"] .card-title{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pavimentazioni"] .card-body{font-size:calc(12px*var(--pds))}
+html[data-pd="pavimentazioni"] .ess-name{font-size:calc(14px*var(--pds))}
+html[data-pd="pavimentazioni"] .ess-lat{font-size:calc(9.5px*var(--pds))}
+html[data-pd="pavimentazioni"] .ess-desc{font-size:calc(12px*var(--pds))}
+html[data-pd="pavimentazioni"] .closing h2{font-size:clamp(24px,3vw,calc(36px*var(--pds)))}
+html[data-pd="pavimentazioni"] .closing p{font-size:calc(13.5px*var(--pds))}
+html[data-pd="pavimentazioni"] .spec{font-size:calc(10px*var(--pds))}
+
+/* ── verniciatura.html ── */
+html[data-pd="verniciatura"] #back{font-size:calc(9.5px*var(--pds))}
+html[data-pd="verniciatura"] #logoTop span{font-size:calc(11px*var(--pds))}
+html[data-pd="verniciatura"] .hero-num{font-size:calc(9px*var(--pds))}
+html[data-pd="verniciatura"] .hero-title{font-size:clamp(36px,5.5vw,calc(80px*var(--pds)))}
+html[data-pd="verniciatura"] .hero-sub{font-size:calc(13px*var(--pds))}
+html[data-pd="verniciatura"] .chip{font-size:calc(10px*var(--pds))}
+html[data-pd="verniciatura"] .section-label{font-size:calc(9px*var(--pds))}
+html[data-pd="verniciatura"] .card-icon{font-size:calc(22px*var(--pds))}
+html[data-pd="verniciatura"] .card-title{font-size:calc(13px*var(--pds))}
+html[data-pd="verniciatura"] .card-body{font-size:calc(12px*var(--pds))}
+
+/* ── preventivo.html ── */
+html[data-pd="preventivo"] .brand{font-size:calc(22px*var(--pds))}
+html[data-pd="preventivo"] .topnav a{font-size:calc(12.5px*var(--pds))}
+html[data-pd="preventivo"] .nav-cta{font-size:calc(12.5px*var(--pds))}
+html[data-pd="preventivo"] .pf-top{max-width:calc(1200px*var(--pdw))}
+html[data-pd="preventivo"] .pf-wordmark{font-size:calc(22px*var(--pds))}
+html[data-pd="preventivo"] .pf-tagline{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .pf-fed{font-size:calc(12px*var(--pds))}
+html[data-pd="preventivo"] .pf-h{font-size:calc(18px*var(--pds))}
+html[data-pd="preventivo"] .pf-list a{font-size:calc(14px*var(--pds))}
+html[data-pd="preventivo"] .pf-ic{font-size:calc(14px*var(--pds))}
+html[data-pd="preventivo"] .pf-menu a{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .pf-quote{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .pf-lang{font-size:calc(13px*var(--pds))}
+html[data-pd="preventivo"] .pf-legal{font-size:calc(11.5px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="preventivo"] .pf-copy{font-size:calc(12px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="preventivo"] .qeyebrow{font-size:calc(11px*var(--pds))}
+html[data-pd="preventivo"] .qhero h1{font-size:clamp(34px,5vw,calc(54px*var(--pds)))}
+html[data-pd="preventivo"] .qhero p{font-size:calc(16.5px*var(--pds))}
+html[data-pd="preventivo"] .qwrap{max-width:calc(1080px*var(--pdw))}
+html[data-pd="preventivo"] .qcard h2{font-size:calc(24px*var(--pds))}
+html[data-pd="preventivo"] .qcard .qsub{font-size:calc(14px*var(--pds))}
+html[data-pd="preventivo"] .qfield label{font-size:calc(12px*var(--pds))}
+html[data-pd="preventivo"] .qfield input,html[data-pd="preventivo"] .qfield select,html[data-pd="preventivo"] .qfield textarea{font-size:calc(14.5px*var(--pds))}
+html[data-pd="preventivo"] .qhint{font-size:calc(12px*var(--pds))}
+html[data-pd="preventivo"] .qfile-tx{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .qfile-tx span{font-size:calc(12px*var(--pds))}
+html[data-pd="preventivo"] .qcheck{font-size:calc(12.5px*var(--pds))}
+html[data-pd="preventivo"] .qsubmit{font-size:calc(15px*var(--pds))}
+html[data-pd="preventivo"] .qnote{font-size:calc(12px*var(--pds))}
+html[data-pd="preventivo"] .qbox h3{font-size:calc(19px*var(--pds))}
+html[data-pd="preventivo"] .qlist li{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .qlist .qic{font-size:calc(15px*var(--pds))}
+html[data-pd="preventivo"] .qwa{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .qsteps h3{font-size:calc(18px*var(--pds))}
+html[data-pd="preventivo"] .qstep{font-size:calc(13.5px*var(--pds))}
+html[data-pd="preventivo"] .qstep b{font-size:calc(12px*var(--pds));width:calc(24px*var(--pds));height:calc(24px*var(--pds))}
+html[data-pd="preventivo"] .qmsg{font-size:calc(13.5px*var(--pds))}
+
+/* ── grazie.html ── */
+html[data-pd="grazie"] .brand{font-size:calc(22px*var(--pds))}
+html[data-pd="grazie"] .topnav a{font-size:calc(12.5px*var(--pds))}
+html[data-pd="grazie"] .nav-cta{font-size:calc(12.5px*var(--pds))}
+html[data-pd="grazie"] .pf-top{max-width:calc(1200px*var(--pdw))}
+html[data-pd="grazie"] .pf-wordmark{font-size:calc(22px*var(--pds))}
+html[data-pd="grazie"] .pf-tagline{font-size:calc(13.5px*var(--pds))}
+html[data-pd="grazie"] .pf-fed{font-size:calc(12px*var(--pds))}
+html[data-pd="grazie"] .pf-h{font-size:calc(18px*var(--pds))}
+html[data-pd="grazie"] .pf-list a{font-size:calc(14px*var(--pds))}
+html[data-pd="grazie"] .pf-ic{font-size:calc(14px*var(--pds))}
+html[data-pd="grazie"] .pf-menu a{font-size:calc(13.5px*var(--pds))}
+html[data-pd="grazie"] .pf-quote{font-size:calc(13.5px*var(--pds))}
+html[data-pd="grazie"] .pf-lang{font-size:calc(13px*var(--pds))}
+html[data-pd="grazie"] .pf-legal{font-size:calc(11.5px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="grazie"] .pf-copy{font-size:calc(12px*var(--pds));max-width:calc(1200px*var(--pdw))}
+html[data-pd="grazie"] .thx h1{font-size:clamp(30px,4.4vw,calc(46px*var(--pds)))}
+html[data-pd="grazie"] .thx p{font-size:calc(16px*var(--pds))}
+html[data-pd="grazie"] .thx-b{font-size:calc(14px*var(--pds))}
+
+/* ══════════════════════════════════════════════════════════════════════
+   PD-RELATED — blocco "approfondimenti" / link interni correlati.
+   Scoped .pdrel, colori ereditati dal contesto: funziona sia sulle pagine
+   con seo-block.css (fondi scuri) sia su quelle con pandoora-pages.css.
+   ══════════════════════════════════════════════════════════════════════ */
+.pdrel{position:relative;z-index:30;padding:0 44px 74px;font-family:'Manrope',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}
+.pdrel-in{max-width:calc(1160px*var(--pdw,1));margin:0 auto;border-top:1px solid rgba(128,128,128,.28);padding-top:46px}
+.pdrel h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(21px,2.4vw,calc(29px*var(--pds,1)));line-height:1.2;letter-spacing:-.5px;margin:0 0 10px}
+.pdrel>.pdrel-in>p{font-size:calc(15.5px*var(--pds,1));line-height:1.7;max-width:74ch;margin:0 0 24px;opacity:.75}
+.pdrel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px}
+.pdrel-card{display:block;padding:21px 22px;border-radius:14px;border:1px solid rgba(128,128,128,.26);text-decoration:none;color:inherit;transition:transform .28s cubic-bezier(.22,.61,.36,1),border-color .28s}
+.pdrel-card:hover{transform:translateY(-3px);border-color:rgba(128,128,128,.55)}
+.pdrel-card b{display:block;font-size:calc(15.5px*var(--pds,1));font-weight:800;letter-spacing:-.1px;margin-bottom:6px}
+.pdrel-card span{display:block;font-size:calc(13.6px*var(--pds,1));line-height:1.6;opacity:.72}
+@media(max-width:900px){.pdrel{padding:0 24px 56px}.pdrel-in{padding-top:36px}}
+
+/* ---- galleria "Dalla nostra produzione" per le pagine con template sb- ---- */
+.pdfoto-sec{max-width:1160px;margin:0 auto;padding:8px 20px 48px}
+.pdfoto-sec h2{font-size:clamp(22px,2.4vw,30px);margin:0 0 18px}
+.pdfoto-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.pdfoto-grid figure{margin:0}
+.pdfoto-grid img{width:100%;height:280px;object-fit:cover;display:block;border-radius:12px;background:rgba(0,0,0,.04)}
+.pdfoto-grid figcaption{margin-top:10px;font-size:13.5px;line-height:1.55;color:var(--ink-soft,#4a525c)}
+@media(max-width:640px){.pdfoto-grid img{height:230px}}
