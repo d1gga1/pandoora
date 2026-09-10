@@ -35,10 +35,11 @@
     it:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>`,
     en:`<svg viewBox="0 0 60 30" preserveAspectRatio="none"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30" stroke="#C8102E" stroke-width="3"/><path d="M60,0 L0,30" stroke="#C8102E" stroke-width="3"/><rect x="25" width="10" height="30" fill="#fff"/><rect y="10" width="60" height="10" fill="#fff"/><rect x="27" width="6" height="30" fill="#C8102E"/><rect y="12" width="60" height="6" fill="#C8102E"/></svg>`,
     fr:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055a4"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg>`,
+    es:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg>`,
     de:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ffce00"/><rect width="3" height="1" fill="#000"/><rect y="1" width="3" height="1" fill="#dd0000"/></svg>`
   };
-  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch'};
-  const CD={it:'IT',en:'EN',fr:'FR',de:'DE'};
+  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español'};
+  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES'};
   const GLOBE=`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>`;
   const CK=`<svg class="pdlang-ck" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7"/></svg>`;
   const wrap=document.createElement('div'); wrap.className='pdlang';
@@ -50,7 +51,7 @@
       `<svg class="pdlang-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>`+
     `</button>`+
     `<ul class="pdlang-menu" role="listbox">`+
-      ['it','en','fr','de'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
+      ['it','en','fr','de','es'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
     `</ul>`;
   document.body.appendChild(wrap);
   const btn=wrap.querySelector('.pdlang-btn'), menu=wrap.querySelector('.pdlang-menu');
@@ -59,10 +60,183 @@
 
   /* ---------- dictionary (base) ---------- */
   /* ---------- slug tradotti disponibili ---------- */
-  const PAGES = new Set(['azienda', 'componenti-per-mobili', 'contatti', 'faq', 'grazie', 'listino-pannelli-tamburati', 'pannelli-tamburati', 'pavimentazioni', 'porte', 'preventivo', 'progetti', 'progetto', 'verniciatura']);
+  const PAGES = new Set(["azienda", "certificazioni", "componenti-per-mobili", "contatti", "faq", "grazie", "listino-pannelli-tamburati", "pannelli-tamburati", "pavimentazioni", "porte", "preventivo", "progetti", "progetto", "verniciatura"]);
   /* slug tradotti: chiave = slug italiano canonico */
   const SLUG = {
-    'pannelli-tamburati': { en:'honeycomb-panels', fr:'panneaux-alveolaires', de:'wabenplatten' }
+    "porte": {
+      "en": "doors",
+      "fr": "portes",
+      "de": "tueren",
+      "es": "puertas"
+    },
+    "pavimentazioni": {
+      "en": "parquet-flooring",
+      "fr": "parquet",
+      "de": "parkett",
+      "es": "parquet"
+    },
+    "verniciatura": {
+      "en": "wood-lacquering",
+      "fr": "laquage-bois",
+      "de": "lackierung",
+      "es": "lacado-madera"
+    },
+    "componenti-per-mobili": {
+      "en": "furniture-components",
+      "fr": "composants-meubles",
+      "de": "moebelkomponenten",
+      "es": "componentes-para-muebles"
+    },
+    "listino-pannelli-tamburati": {
+      "en": "honeycomb-panel-price-list",
+      "fr": "tarif-panneaux-alveolaires",
+      "de": "wabenplatten-preisliste",
+      "es": "tarifa-paneles-alveolares"
+    },
+    "preventivo": {
+      "en": "request-a-quote",
+      "fr": "devis",
+      "de": "angebot-anfordern",
+      "es": "presupuesto"
+    },
+    "progetti": {
+      "en": "projects",
+      "fr": "realisations",
+      "de": "projekte",
+      "es": "proyectos"
+    },
+    "progetto": {
+      "en": "project",
+      "fr": "projet",
+      "de": "projekt",
+      "es": "proyecto"
+    },
+    "azienda": {
+      "en": "about-us",
+      "fr": "a-propos",
+      "de": "ueber-uns",
+      "es": "quienes-somos"
+    },
+    "contatti": {
+      "en": "contact",
+      "fr": "contact",
+      "de": "kontakt",
+      "es": "contacto"
+    },
+    "faq": {
+      "en": "faq",
+      "fr": "faq",
+      "de": "faq",
+      "es": "preguntas-frecuentes"
+    },
+    "grazie": {
+      "en": "thank-you",
+      "fr": "merci",
+      "de": "danke",
+      "es": "gracias"
+    },
+    "certificazioni": {
+      "en": "certificates",
+      "fr": "certificats",
+      "de": "zertifikate",
+      "es": "certificados"
+    },
+    "pannelli-tamburati": {
+      "en": "honeycomb-panels",
+      "fr": "panneaux-alveolaires",
+      "de": "wabenplatten",
+      "es": "paneles-alveolares"
+    },
+    "pannelli-tamburati/pannello-stand": {
+      "en": "honeycomb-panels/standard-panel",
+      "fr": "panneaux-alveolaires/panneau-standard",
+      "de": "wabenplatten/standardplatte",
+      "es": "paneles-alveolares/panel-estandar"
+    },
+    "pannelli-tamburati/ignifugo": {
+      "en": "honeycomb-panels/fire-rated",
+      "fr": "panneaux-alveolaires/ignifuge",
+      "de": "wabenplatten/schwer-entflammbar",
+      "es": "paneles-alveolares/panel-ignifugo"
+    },
+    "pannelli-tamburati/laccato-ral": {
+      "en": "honeycomb-panels/ral-lacquered",
+      "fr": "panneaux-alveolaires/laque-ral",
+      "de": "wabenplatten/ral-lackiert",
+      "es": "paneles-alveolares/panel-lacado-ral"
+    },
+    "pannelli-tamburati/electric": {
+      "en": "honeycomb-panels/electrical-panel",
+      "fr": "panneaux-alveolaires/panneau-electrique",
+      "de": "wabenplatten/elektro-platte",
+      "es": "paneles-alveolares/panel-electrico"
+    },
+    "pannelli-tamburati/mostra-arte": {
+      "en": "honeycomb-panels/exhibition-panel",
+      "fr": "panneaux-alveolaires/panneau-exposition",
+      "de": "wabenplatten/ausstellungsplatte",
+      "es": "paneles-alveolares/panel-expositivo"
+    },
+    "pannelli-tamburati/rinforzato": {
+      "en": "honeycomb-panels/reinforced-panel",
+      "fr": "panneaux-alveolaires/panneau-renforce",
+      "de": "wabenplatten/verstaerkte-platte",
+      "es": "paneles-alveolares/panel-reforzado"
+    },
+    "pannelli-tamburati/griglia": {
+      "en": "honeycomb-panels/slatwall-panel",
+      "fr": "panneaux-alveolaires/panneau-rainure",
+      "de": "wabenplatten/rasterplatte",
+      "es": "paneles-alveolares/panel-ranurado"
+    },
+    "pannelli-tamburati/curvo": {
+      "en": "honeycomb-panels/curved-panel",
+      "fr": "panneaux-alveolaires/panneau-courbe",
+      "de": "wabenplatten/gebogene-platte",
+      "es": "paneles-alveolares/panel-curvo"
+    },
+    "pannelli-tamburati/specchio": {
+      "en": "honeycomb-panels/mirror-panel",
+      "fr": "panneaux-alveolaires/panneau-miroir",
+      "de": "wabenplatten/spiegelplatte",
+      "es": "paneles-alveolares/panel-espejo"
+    },
+    "pannelli-tamburati/muretti": {
+      "en": "honeycomb-panels/low-wall-modules",
+      "fr": "panneaux-alveolaires/murets",
+      "de": "wabenplatten/mauerelemente",
+      "es": "paneles-alveolares/muretes"
+    },
+    "pannelli-tamburati/porte-per-stand": {
+      "en": "honeycomb-panels/stand-doors",
+      "fr": "panneaux-alveolaires/portes-stand",
+      "de": "wabenplatten/messetueren",
+      "es": "paneles-alveolares/puertas-para-stands"
+    },
+    "pannelli-tamburati/pedane-livellanti": {
+      "en": "honeycomb-panels/levelling-platforms",
+      "fr": "panneaux-alveolaires/podiums-nivelants",
+      "de": "wabenplatten/podeste",
+      "es": "paneles-alveolares/tarimas-nivelantes"
+    },
+    "pannelli-tamburati/accessori-giunzione": {
+      "en": "honeycomb-panels/connectors-accessories",
+      "fr": "panneaux-alveolaires/raccords-accessoires",
+      "de": "wabenplatten/verbinder-zubehoer",
+      "es": "paneles-alveolares/conectores-accesorios"
+    },
+    "pannelli-tamburati/quadrotte": {
+      "en": "honeycomb-panels/floor-tiles",
+      "fr": "panneaux-alveolaires/dalles-de-sol",
+      "de": "wabenplatten/bodenplatten",
+      "es": "paneles-alveolares/losetas-de-suelo"
+    },
+    "pannelli-tamburati/colonne-folding": {
+      "en": "honeycomb-panels/folding-columns",
+      "fr": "panneaux-alveolaires/colonnes-pliantes",
+      "de": "wabenplatten/faltsaeulen",
+      "es": "paneles-alveolares/columnas-plegables"
+    }
   };
   /* indice inverso: "<lingua>/<slug tradotto>" -> slug italiano */
   const CANON = {};
@@ -75,13 +249,21 @@
   function parsePath(){
     let p = location.pathname.replace(/^\/+/, '').replace(/index\.html$/, '');
     let lang = 'it';
-    const m = p.match(/^(en|fr|de)(\/|$)(.*)$/);
+    const m = p.match(/^(en|fr|de|es)(\/|$)(.*)$/);
     if (m) { lang = m[1]; p = m[3] || ''; }
     p = p.replace(/\/+$/, '');
     if (lang !== 'it' && CANON[lang + '/' + p]) p = CANON[lang + '/' + p];
     return { lang: lang, page: p };
   }
+  function fromHreflang(lang){
+    const a = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
+    const h = a && a.getAttribute('href');
+    if (!h) return null;
+    try { return new URL(h, location.origin).pathname; } catch(e){ return h; }
+  }
   function urlFor(lang, page){
+    const hl = fromHreflang(lang);
+    if (hl) return hl;
     const target = PAGES.has(page) ? page : '';
     const pre = (lang === 'it') ? '/' : '/' + lang + '/';
     if (!target) return pre;

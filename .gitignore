@@ -72,3 +72,6 @@ _SITO-DA-CARICARE-*/
 
 # script di pubblicazione, non va online
 PUBBLICA.command
+
+# script IndexNow, non va online
+INDEXNOW.command

@@ -11,6 +11,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/"/>
   </url>
   <url>
@@ -22,6 +23,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/"/>
   </url>
   <url>
@@ -33,6 +35,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/"/>
   </url>
   <url>
@@ -44,6 +47,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/"/>
   </url>
   <url>
@@ -60,9 +64,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/azienda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/quienes-somos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/magazzino-pandoora-bancali-pronta-consegna.webp</image:loc>
@@ -82,36 +87,39 @@
     </image:image>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/azienda/</loc>
+    <loc>https://pandooragroup.it/en/about-us/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/azienda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/quienes-somos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/azienda/</loc>
+    <loc>https://pandooragroup.it/fr/a-propos/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/azienda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/quienes-somos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/azienda/</loc>
+    <loc>https://pandooragroup.it/de/ueber-uns/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/azienda/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/azienda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/quienes-somos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
   </url>
   <url>
@@ -147,6 +155,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/certificados/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
   </url>
   <url>
@@ -158,6 +167,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/certificados/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
   </url>
   <url>
@@ -169,6 +179,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/certificados/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
   </url>
   <url>
@@ -180,6 +191,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/certificados/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
   </url>
   <url>
@@ -188,42 +200,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/componenti-per-mobili/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/furniture-components/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/composants-meubles/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/moebelkomponenten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/componentes-para-muebles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/componenti-per-mobili/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/componenti-per-mobili/</loc>
+    <loc>https://pandooragroup.it/en/furniture-components/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/componenti-per-mobili/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/furniture-components/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/composants-meubles/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/moebelkomponenten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/componentes-para-muebles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/componenti-per-mobili/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/componenti-per-mobili/</loc>
+    <loc>https://pandooragroup.it/fr/composants-meubles/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/componenti-per-mobili/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/furniture-components/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/composants-meubles/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/moebelkomponenten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/componentes-para-muebles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/componenti-per-mobili/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/componenti-per-mobili/</loc>
+    <loc>https://pandooragroup.it/de/moebelkomponenten/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/componenti-per-mobili/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/componenti-per-mobili/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/furniture-components/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/composants-meubles/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/moebelkomponenten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/componentes-para-muebles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/componenti-per-mobili/"/>
   </url>
   <url>
@@ -232,42 +248,46 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/contatti/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/contatti/</loc>
+    <loc>https://pandooragroup.it/en/contact/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/contatti/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/contatti/</loc>
+    <loc>https://pandooragroup.it/fr/contact/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/contatti/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/contatti/</loc>
+    <loc>https://pandooragroup.it/de/kontakt/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contatti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/contatti/"/>
   </url>
   <url>
@@ -375,6 +395,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/faq/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/preguntas-frecuentes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/faq/"/>
   </url>
   <url>
@@ -386,6 +407,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/faq/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/preguntas-frecuentes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/faq/"/>
   </url>
   <url>
@@ -397,6 +419,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/faq/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/preguntas-frecuentes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/faq/"/>
   </url>
   <url>
@@ -408,6 +431,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/faq/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/faq/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/preguntas-frecuentes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/faq/"/>
   </url>
   <url>
@@ -460,9 +484,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/listino-pannelli-tamburati/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-price-list/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/tarif-panneaux-alveolaires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-preisliste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/tarifa-paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/stock-pannelli-tamburati-magazzino-operativo.webp</image:loc>
@@ -486,36 +511,39 @@
     </image:image>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/listino-pannelli-tamburati/</loc>
+    <loc>https://pandooragroup.it/en/honeycomb-panel-price-list/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/listino-pannelli-tamburati/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-price-list/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/tarif-panneaux-alveolaires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-preisliste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/tarifa-paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/listino-pannelli-tamburati/</loc>
+    <loc>https://pandooragroup.it/fr/tarif-panneaux-alveolaires/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/listino-pannelli-tamburati/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-price-list/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/tarif-panneaux-alveolaires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-preisliste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/tarifa-paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/listino-pannelli-tamburati/</loc>
+    <loc>https://pandooragroup.it/de/wabenplatten-preisliste/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/listino-pannelli-tamburati/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/listino-pannelli-tamburati/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-price-list/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/tarif-panneaux-alveolaires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-preisliste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/tarifa-paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
   </url>
   <url>
@@ -739,6 +767,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-standard-fuori-misura-allestitori.webp</image:loc>
@@ -774,6 +803,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
   </url>
   <url>
@@ -785,6 +815,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
   </url>
   <url>
@@ -796,6 +827,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
   </url>
   <url>
@@ -820,42 +852,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/pavimentazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/parquet-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/parquet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/parkett/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/parquet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pavimentazioni/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/pavimentazioni/</loc>
+    <loc>https://pandooragroup.it/en/parquet-flooring/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/pavimentazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/parquet-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/parquet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/parkett/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/parquet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pavimentazioni/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/pavimentazioni/</loc>
+    <loc>https://pandooragroup.it/fr/parquet/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/pavimentazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/parquet-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/parquet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/parkett/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/parquet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pavimentazioni/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/pavimentazioni/</loc>
+    <loc>https://pandooragroup.it/de/parkett/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/pavimentazioni/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/pavimentazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/parquet-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/parquet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/parkett/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/parquet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pavimentazioni/"/>
   </url>
   <url>
@@ -1288,42 +1324,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/porte/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/porte/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/porte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/portes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/tueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/puertas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/porte/</loc>
+    <loc>https://pandooragroup.it/en/doors/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/porte/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/porte/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/porte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/portes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/tueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/puertas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/porte/</loc>
+    <loc>https://pandooragroup.it/fr/portes/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/porte/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/porte/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/porte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/portes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/tueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/puertas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/porte/</loc>
+    <loc>https://pandooragroup.it/de/tueren/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/porte/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/porte/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/porte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/portes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/tueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/puertas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte/"/>
   </url>
   <url>
@@ -1340,42 +1380,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/preventivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/request-a-quote/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/devis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/angebot-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/presupuesto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/preventivo/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/preventivo/</loc>
+    <loc>https://pandooragroup.it/en/request-a-quote/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/preventivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/request-a-quote/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/devis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/angebot-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/presupuesto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/preventivo/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/preventivo/</loc>
+    <loc>https://pandooragroup.it/fr/devis/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/preventivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/request-a-quote/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/devis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/angebot-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/presupuesto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/preventivo/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/preventivo/</loc>
+    <loc>https://pandooragroup.it/de/angebot-anfordern/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/preventivo/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/preventivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/request-a-quote/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/devis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/angebot-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/presupuesto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/preventivo/"/>
   </url>
   <url>
@@ -1392,9 +1436,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyectos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetti/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/muretto-tamburato-installato-stand.webp</image:loc>
@@ -1414,36 +1459,39 @@
     </image:image>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/progetti/</loc>
+    <loc>https://pandooragroup.it/en/projects/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyectos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetti/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/progetti/</loc>
+    <loc>https://pandooragroup.it/fr/realisations/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyectos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetti/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/progetti/</loc>
+    <loc>https://pandooragroup.it/de/projekte/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetti/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyectos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetti/"/>
   </url>
   <url>
@@ -1452,42 +1500,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/projet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyecto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/progetto/</loc>
+    <loc>https://pandooragroup.it/en/project/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/projet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyecto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/progetto/</loc>
+    <loc>https://pandooragroup.it/fr/projet/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/projet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyecto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/progetto/</loc>
+    <loc>https://pandooragroup.it/de/projekt/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/progetto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/progetto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/projet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyecto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
   </url>
   <url>
@@ -1536,42 +1588,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/wood-lacquering/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/laquage-bois/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/lackierung/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/lacado-madera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/verniciatura/</loc>
+    <loc>https://pandooragroup.it/en/wood-lacquering/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/wood-lacquering/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/laquage-bois/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/lackierung/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/lacado-madera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/fr/verniciatura/</loc>
+    <loc>https://pandooragroup.it/fr/laquage-bois/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/wood-lacquering/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/laquage-bois/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/lackierung/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/lacado-madera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/de/verniciatura/</loc>
+    <loc>https://pandooragroup.it/de/lackierung/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/verniciatura/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/verniciatura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/wood-lacquering/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/laquage-bois/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/lackierung/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/lacado-madera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
   </url>
   <url>
@@ -1583,6 +1639,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-estandar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-numerati-montaggio.webp</image:loc>
@@ -1622,6 +1679,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-estandar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
   </url>
   <url>
@@ -1633,6 +1691,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-estandar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
   </url>
   <url>
@@ -1644,6 +1703,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-estandar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
   </url>
   <url>
@@ -1655,6 +1715,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ignifugo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-produzione-continua-fontanelle.webp</image:loc>
@@ -1670,6 +1731,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ignifugo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
   </url>
   <url>
@@ -1681,6 +1743,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ignifugo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
   </url>
   <url>
@@ -1692,6 +1755,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ignifugo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
   </url>
   <url>
@@ -1703,6 +1767,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-lacado-ral/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laccati-bianco-lucido.webp</image:loc>
@@ -1718,6 +1783,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-lacado-ral/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
   </url>
   <url>
@@ -1729,6 +1795,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-lacado-ral/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
   </url>
   <url>
@@ -1740,6 +1807,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-lacado-ral/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
   </url>
   <url>
@@ -1751,6 +1819,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-electrico/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-forature-passaggio-cavi.webp</image:loc>
@@ -1774,6 +1843,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-electrico/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
   </url>
   <url>
@@ -1785,6 +1855,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-electrico/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
   </url>
   <url>
@@ -1796,6 +1867,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-electrico/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
   </url>
   <url>
@@ -1823,6 +1895,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-expositivo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannello-mostra-anima-mdf-sezione.webp</image:loc>
@@ -1842,6 +1915,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-expositivo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
   </url>
   <url>
@@ -1853,6 +1927,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-expositivo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
   </url>
   <url>
@@ -1864,6 +1939,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-expositivo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
   </url>
   <url>
@@ -1875,6 +1951,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-reforzado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-rinforzato-80-mm.webp</image:loc>
@@ -1894,6 +1971,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-reforzado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
   </url>
   <url>
@@ -1905,6 +1983,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-reforzado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
   </url>
   <url>
@@ -1916,6 +1995,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-reforzado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
   </url>
   <url>
@@ -1927,6 +2007,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ranurado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-fresata-personalizzata.webp</image:loc>
@@ -1942,6 +2023,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ranurado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
   </url>
   <url>
@@ -1953,6 +2035,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ranurado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
   </url>
   <url>
@@ -1964,6 +2047,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ranurado/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
   </url>
   <url>
@@ -1975,6 +2059,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-curvo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannello-tamburato-curvo-mdf.webp</image:loc>
@@ -2018,6 +2103,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-curvo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
   </url>
   <url>
@@ -2029,6 +2115,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-curvo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
   </url>
   <url>
@@ -2040,6 +2127,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-curvo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
   </url>
   <url>
@@ -2051,6 +2139,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-espejo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-specchio-policarbonato.webp</image:loc>
@@ -2074,6 +2163,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-espejo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
   </url>
   <url>
@@ -2085,6 +2175,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-espejo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
   </url>
   <url>
@@ -2096,6 +2187,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-espejo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
   </url>
   <url>
@@ -2107,6 +2199,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/muretes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/muretti-tamburati-su-misura.webp</image:loc>
@@ -2146,6 +2239,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/muretes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
   </url>
   <url>
@@ -2157,6 +2251,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/muretes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
   </url>
   <url>
@@ -2168,6 +2263,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/muretes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
   </url>
   <url>
@@ -2179,6 +2275,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/puertas-para-stands/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/porte-tamburate-stand-pronte-spedizione.webp</image:loc>
@@ -2218,6 +2315,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/puertas-para-stands/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
   </url>
   <url>
@@ -2229,6 +2327,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/puertas-para-stands/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
   </url>
   <url>
@@ -2240,6 +2339,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/puertas-para-stands/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
   </url>
   <url>
@@ -2251,6 +2351,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/tarimas-nivelantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/pedane-truciolare-stand-fieristici.webp</image:loc>
@@ -2282,6 +2383,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/tarimas-nivelantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
   </url>
   <url>
@@ -2293,6 +2395,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/tarimas-nivelantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
   </url>
   <url>
@@ -2304,6 +2407,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/tarimas-nivelantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
   </url>
   <url>
@@ -2315,6 +2419,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/conectores-accesorios/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/sezione-incastri-elementi-tamburati.webp</image:loc>
@@ -2330,6 +2435,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/conectores-accesorios/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
   </url>
   <url>
@@ -2341,6 +2447,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/conectores-accesorios/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
   </url>
   <url>
@@ -2352,6 +2459,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/conectores-accesorios/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
   </url>
   <url>
@@ -2363,6 +2471,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/losetas-de-suelo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/quadrotte-pavimentazione-stand-superficie-planare.webp</image:loc>
@@ -2382,6 +2491,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/losetas-de-suelo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
   </url>
   <url>
@@ -2393,6 +2503,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/losetas-de-suelo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
   </url>
   <url>
@@ -2404,6 +2515,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/losetas-de-suelo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
   </url>
   <url>
@@ -2415,6 +2527,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/columnas-plegables/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
     <image:image>
       <image:loc>https://pandooragroup.it/foto-produzione/colonne-folding-stand-fieristici.webp</image:loc>
@@ -2434,6 +2547,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/columnas-plegables/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
   </url>
   <url>
@@ -2445,6 +2559,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/columnas-plegables/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
   </url>
   <url>
@@ -2456,6 +2571,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/columnas-plegables/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
   </url>
   <url>
@@ -2577,5 +2693,414 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-legno-allestimenti-fieristici/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-legno-allestimenti-fieristici/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/puertas/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/portes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/tueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/puertas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/parquet/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pavimentazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/parquet-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/parquet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/parkett/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/parquet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pavimentazioni/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/lacado-madera/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/wood-lacquering/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/laquage-bois/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/lackierung/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/lacado-madera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/componentes-para-muebles/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/componenti-per-mobili/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/furniture-components/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/composants-meubles/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/moebelkomponenten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/componentes-para-muebles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/componenti-per-mobili/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/tarifa-paneles-alveolares/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-price-list/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/tarif-panneaux-alveolaires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-preisliste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/tarifa-paneles-alveolares/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/presupuesto/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/preventivo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/request-a-quote/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/devis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/angebot-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/presupuesto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/preventivo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/proyectos/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyectos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/proyecto/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/progetto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/projet/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/projekt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/proyecto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/progetto/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/quienes-somos/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/azienda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/azienda/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/contacto/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/contatti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/preguntas-frecuentes/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/faq/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/faq/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/gracias/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/grazie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/thank-you/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/merci/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/danke/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/gracias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/grazie/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/certificados/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/certificazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/certificates/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/certificats/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/zertifikate/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/certificados/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/certificazioni/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-estandar/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/standard-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-standard/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/standardplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-estandar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pannello-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-ignifugo/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/fire-rated/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/schwer-entflammbar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ignifugo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-lacado-ral/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/ral-lacquered/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/laque-ral/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ral-lackiert/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-lacado-ral/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/laccato-ral/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-electrico/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/electrical-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-electrique/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/elektro-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-electrico/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/electric/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-expositivo/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/exhibition-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-exposition/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/ausstellungsplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-expositivo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/mostra-arte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-reforzado/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/reinforced-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-renforce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verstaerkte-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-reforzado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/rinforzato/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-ranurado/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/slatwall-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-rainure/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/rasterplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-ranurado/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/griglia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-curvo/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/curved-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-courbe/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/gebogene-platte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-curvo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/curvo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/panel-espejo/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/mirror-panel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/panneau-miroir/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/spiegelplatte/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/panel-espejo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/specchio/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/muretes/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/low-wall-modules/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/murets/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/mauerelemente/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/muretes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/muretti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/puertas-para-stands/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/stand-doors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/portes-stand/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/messetueren/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/puertas-para-stands/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/porte-per-stand/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/tarimas-nivelantes/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/levelling-platforms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/podiums-nivelants/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/podeste/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/tarimas-nivelantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/pedane-livellanti/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/conectores-accesorios/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/connectors-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/raccords-accessoires/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/verbinder-zubehoer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/conectores-accesorios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/accessori-giunzione/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/losetas-de-suelo/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/floor-tiles/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/dalles-de-sol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/bodenplatten/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/losetas-de-suelo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/quadrotte/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares/columnas-plegables/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels/folding-columns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires/colonnes-pliantes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten/faltsaeulen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares/columnas-plegables/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/pannelli-tamburati/colonne-folding/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-fira-barcelona-gran-via/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-fira-barcelona-gran-via/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-fira-barcelona-montjuic/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-fira-barcelona-montjuic/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-ifema-madrid/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-ifema-madrid/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-feria-valencia/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-feria-valencia/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-bec-bilbao/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-bec-bilbao/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-feria-zaragoza/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-feria-zaragoza/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/paneles-alveolares-fibes-sevilla/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/paneles-alveolares-fibes-sevilla/"/>
   </url>
 </urlset>

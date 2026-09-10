@@ -114,7 +114,7 @@ Apri questi indirizzi, devono funzionare tutti:
   https://pandooragroup.it/porte/
   https://pandooragroup.it/pannelli-tamburati/
   https://pandooragroup.it/listino-pannelli-tamburati/
-  https://pandooragroup.it/en/porte/
+  https://pandooragroup.it/en/doors/
   https://pandooragroup.it/chi-siamo/          → deve portare a /azienda/
   https://pandooragroup.it/pagina-che-non-esiste/  → deve mostrare il 404
 
