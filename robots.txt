@@ -1,5 +1,5 @@
 # robots.txt — PAN.DOOR.A S.r.l. — https://pandooragroup.it
-# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-09-10
+# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-09-11
 
 User-agent: *
 Allow: /
@@ -10,6 +10,11 @@ Disallow: /en/thank-you/
 Disallow: /fr/merci/
 Disallow: /de/danke/
 Disallow: /es/gracias/
+Disallow: /nl/bedankt/
+Disallow: /pl/dziekujemy/
+Disallow: /cs/dekujeme/
+Disallow: /sk/dakujeme/
+Disallow: /sl/hvala/
 Disallow: /pandoora_hub.html
 Disallow: /404.html
 
