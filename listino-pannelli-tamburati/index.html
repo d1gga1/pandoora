@@ -438,6 +438,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 
   <!-- ══ MAIN ══ -->
   <div class="main">
+    <h1 style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Pannelli Tamburati: Schede Tecniche e Listino</h1>
     <div class="eyebrow" id="eyebrow">Gamma prodotti</div>
     <div class="tabs" id="tabs"></div>
     <div class="content" id="content"></div>
@@ -911,6 +912,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
         <a href="/contatti/">Contatti</a>
         <a href="/falegnameria-treviso/">Falegnameria Treviso</a>
         <a href="/preventivo/">Preventivo</a>
+        <a href="/catalogo-pannelli-tamburati-2026/">Catalogo 2026</a>
       </nav>
       </div>
 
@@ -988,7 +990,7 @@ const sections = {
     "Disegno Tecnico":`
       <h3>Disegno tecnico</h3>
       <p>Disegno quotato del pannello tamburato per stand, utile in fase di progettazione e verifica delle misure prima dell'ordine.</p>
-      <a class="asset-link" target="_blank" href="${IMG11}Dis.101.pdf">📐 Dis.101 — Pannello tamburato laminato bianco (quotato)</a>`,
+      <a class="asset-link" target="_blank" rel="noopener" href="${IMG11}Dis.101.pdf">📐 Dis.101 — Pannello tamburato laminato bianco (quotato)</a>`,
     "Listino":`
       <h3>Listino</h3>
       <p>Foto prodotto e listino aggiornato dei pannelli tamburati per stand fieristici.</p>
@@ -1028,7 +1030,7 @@ const sections = {
     "Disegno Tecnico":`
       <h3>Disegno tecnico</h3>
       <p>Disegno quotato della porta per allestimenti.</p>
-      <a class="asset-link" target="_blank" href="${IMG}porta.pdf">📐 Porta.pdf</a>`,
+      <a class="asset-link" target="_blank" rel="noopener" href="${IMG}porta.pdf">📐 Porta.pdf</a>`,
     "Listino":`
       <h3>Listino</h3>
       <a class="docshot" href="/assets/prodotti/listino-porte.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-porte.webp" alt="Listino porte per allestimenti" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Apri il listino a dimensione intera</span></a>`
@@ -1061,7 +1063,7 @@ const sections = {
       <p>Effettuiamo consegne in Italia e in tutto il mondo, con recapito diretto anche all'interno delle fiere.</p>`,
     "Listino":`
       <h3>Listino</h3>
-      <a class="asset-link" target="_blank" href="${IMG}pedana.pdf">📐 Pedana.pdf</a>
+      <a class="asset-link" target="_blank" rel="noopener" href="${IMG}pedana.pdf">📐 Pedana.pdf</a>
       <a class="docshot" href="/assets/prodotti/listino-pedane.webp" target="_blank" rel="noopener"><img src="/assets/prodotti/listino-pedane.webp" alt="Listino pedane livellanti" loading="lazy" decoding="async"><span class="docshot-hint">🔎 Apri il listino a dimensione intera</span></a>`
   }
 },
@@ -1104,7 +1106,7 @@ const sections = {
       <p>La <b>lavorazione accurata</b> consente un inserimento agevole e senza giochi, per un'installazione pulita e sicura.</p>
       <p><b>Consegniamo in Italia e in tutto il mondo</b>, anche direttamente all'interno delle fiere.</p>`,
     "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-l.webp" alt="Elemento di giunzione a L in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a L in acciaio</b>Misure: 185 × 185 × 2 mm</figcaption></figure></div>`,
-    "Disegno Tecnico":`<h3>Disegno tecnico</h3><a class="asset-link" target="_blank" href="${IMG11}Dis.00L_i.pdf">📐 Dis.00L_i.pdf</a>`,
+    "Disegno Tecnico":`<h3>Disegno tecnico</h3><a class="asset-link" target="_blank" rel="noopener" href="${IMG11}Dis.00L_i.pdf">📐 Dis.00L_i.pdf</a>`,
     "Montaggio":`<h3>Montaggio</h3><p>Istruzioni di montaggio disponibili su richiesta insieme alla scheda tecnica del prodotto.</p>`
   }
 },
@@ -1122,7 +1124,7 @@ const sections = {
     "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-t.webp" alt="Elemento di giunzione a T in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a T in acciaio</b>Misure: 355 × 185 × 2 mm</figcaption></figure></div>`,
     "Disegno Tecnico":`
       <h3>Disegno tecnico</h3>
-      <a class="asset-link" target="_blank" href="${IMG11}Dis.00T_i.pdf">📐 Dis.00T_i.pdf</a>`,
+      <a class="asset-link" target="_blank" rel="noopener" href="${IMG11}Dis.00T_i.pdf">📐 Dis.00T_i.pdf</a>`,
     "Montaggio":`<h3>Montaggio</h3><p>Istruzioni di montaggio disponibili nella scheda tecnica allegata al disegno.</p>`
   }
 },
@@ -1138,7 +1140,7 @@ const sections = {
       <p>La <b>lavorazione accurata</b> permette un <b>montaggio rapido, sicuro e senza giochi</b>.</p>
       <p><b>Consegniamo in Italia e in tutto il mondo</b>, anche direttamente all'interno delle fiere.</p>`,
     "Foto Prodotto":`<h3>Foto prodotto</h3><div class="gallery"><figure><img class="prod-img" src="/assets/prodotti/giunzione-x.webp" alt="Elemento di giunzione a X in acciaio" loading="lazy" decoding="async" width="900" height="900"><figcaption class="prod-cap"><b>Elemento di giunzione a X in acciaio</b>Misure: 355 × 355 × 2 mm</figcaption></figure></div>`,
-    "Disegno Tecnico":`<h3>Disegno tecnico</h3><a class="asset-link" target="_blank" href="${IMG11}Dis.00X_i_corretto.pdf">📐 Dis.00X_i_corretto.pdf</a>`,
+    "Disegno Tecnico":`<h3>Disegno tecnico</h3><a class="asset-link" target="_blank" rel="noopener" href="${IMG11}Dis.00X_i_corretto.pdf">📐 Dis.00X_i_corretto.pdf</a>`,
     "Montaggio":`<h3>Montaggio</h3><p>Istruzioni di montaggio disponibili nella scheda tecnica allegata al disegno.</p>`,
     "Video Montaggio":`
       <h3>Video montaggio</h3>

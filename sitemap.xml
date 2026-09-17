@@ -3356,13 +3356,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels-fira-barcelona/"/>
   </url>
   <url>
-    <loc>https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/"/>
-  </url>
-  <url>
     <loc>https://pandooragroup.it/en/honeycomb-panels-messe-basel/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -3711,18 +3704,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/faq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/preguntas-frecuentes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/faq/"/>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/es/gracias/</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/grazie/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/thank-you/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/merci/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/danke/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/gracias/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/grazie/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/es/certificados/</loc>
@@ -6655,5 +6636,840 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/porte-insonorizzate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/porte-insonorizzate/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/dubai/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/interior-doors-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/interior-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/interior-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/interior-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/interior-doors-dubai/"/>
+    <image:image><image:loc>https://pandooragroup.it/assets/porte/seo/porta-interna-laccata-2-bugne.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/hotel-doors-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/hotel-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/hotel-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/hotel-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/hotel-doors-dubai/"/>
+    <image:image><image:loc>https://pandooragroup.it/assets/porte/seo/porta-interna-laminata-bianco.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/hotel-furniture-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/hotel-furniture-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/hotel-furniture-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/hotel-furniture-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/hotel-furniture-dubai/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/exhibition-stand-panels-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/exhibition-stand-panels-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/"/>
+    <image:image><image:loc>https://pandooragroup.it/foto-produzione/muretto-tamburato-installato-stand-760.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panels-expo-city-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels-expo-city-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panels-expo-city-dubai/"/>
+    <image:image><image:loc>https://pandooragroup.it/foto-produzione/pannelli-tamburati-laminati-bianchi-stand-760.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/ar/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/dubai/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/ar/interior-doors-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/interior-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/interior-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/interior-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/interior-doors-dubai/"/>
+    <image:image><image:loc>https://pandooragroup.it/assets/porte/seo/porta-interna-laccata-2-bugne.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/ar/hotel-doors-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/hotel-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/hotel-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/hotel-doors-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/hotel-doors-dubai/"/>
+    <image:image><image:loc>https://pandooragroup.it/assets/porte/seo/porta-interna-laminata-bianco.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/ar/hotel-furniture-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/hotel-furniture-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/hotel-furniture-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/hotel-furniture-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/hotel-furniture-dubai/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/ar/exhibition-stand-panels-dubai/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pandooragroup.it/ar/exhibition-stand-panels-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="ar-AE" href="https://pandooragroup.it/ar/exhibition-stand-panels-dubai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panels-dubai-world-trade-centre/"/>
+    <image:image><image:loc>https://pandooragroup.it/foto-produzione/muretto-tamburato-installato-stand-760.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/catalogo-pannelli-tamburati-2026/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-pannelli-tamburati-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-katalog-2026/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-9.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-elettrici-passaggio-cavi-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-13.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-14.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-15.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-mostra-anima-mdf-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-elettrici-passaggio-cavi-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-laminati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porta-antipanico-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porte-per-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-l.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-t.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-x.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fc.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fo.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fv.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-lin.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pannello-tamburato-standard.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pedana-stand-fieristico.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/sezione-pannello-tamburato-nido-ape.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-pannelli-tamburati-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-katalog-2026/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-9.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-elettrici-passaggio-cavi-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-13.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-14.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-15.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-mostra-anima-mdf-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-elettrici-passaggio-cavi-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-laminati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porta-antipanico-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porte-per-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-l.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-t.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-x.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fc.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fo.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fv.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-lin.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pannello-tamburato-standard.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pedana-stand-fieristico.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/sezione-pannello-tamburato-nido-ape.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/de/wabenplatten-katalog-2026/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-pannelli-tamburati-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-katalog-2026/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-9.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-elettrici-passaggio-cavi-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-13.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-14.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-15.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-mostra-anima-mdf-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-elettrici-passaggio-cavi-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-laminati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porta-antipanico-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porte-per-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-l.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-t.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-x.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fc.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fo.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fv.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-lin.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pannello-tamburato-standard.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pedana-stand-fieristico.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/sezione-pannello-tamburato-nido-ape.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-pannelli-tamburati-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-katalog-2026/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-9.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-elettrici-passaggio-cavi-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-13.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-14.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-15.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-mostra-anima-mdf-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-elettrici-passaggio-cavi-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-laminati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porta-antipanico-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porte-per-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-l.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-t.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-x.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fc.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fo.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fv.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-lin.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pannello-tamburato-standard.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pedana-stand-fieristico.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/sezione-pannello-tamburato-nido-ape.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-pannelli-tamburati-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-katalog-2026/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-9.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-elettrici-passaggio-cavi-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-13.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-14.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-15.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-mostra-anima-mdf-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-elettrici-passaggio-cavi-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-laminati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porta-antipanico-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porte-per-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-l.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-t.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-x.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fc.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fo.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fv.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-lin.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pannello-tamburato-standard.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pedana-stand-fieristico.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/sezione-pannello-tamburato-nido-ape.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/catalogo-pannelli-tamburati-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pandooragroup.it/de/wabenplatten-katalog-2026/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/catalogue-panneaux-alveolaires-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/catalogo-paneles-alveolares-2026/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pandooragroup.it/pl/katalog-plyt-komorkowych-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panel-catalogue-2026/"/>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/cielini-controsoffitto-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-curvi-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-9.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/banchi-reception-stand-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-mostra-anima-mdf-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-elettrici-passaggio-cavi-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/colonne-specchio-pieghevoli-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-tamburati-laminati-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/muretti-tamburati-stand-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pannelli-specchio-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porta-antipanico-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/fioriere-stand-fieristico-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/pedane-livellanti-stand-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/porte-per-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/quadrotte-pavimento-stand-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/foto/strutture-legno-stand-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-01.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-02.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-11.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-12.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-13.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-14.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-15.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-16.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-03.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-04.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-05.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-06.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-07.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-08.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-09.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/caso-studio/muretti-stand-fieristico-montaggio-10.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-mostra-anima-mdf-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-elettrici-passaggio-cavi-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pannelli-tamburati-laminati-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porta-antipanico-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/pedane-livellanti-stand-disegno-tecnico-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/disegni/porte-per-stand-disegno-tecnico-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-l.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-t.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-x.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fc.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fo.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-fv.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/giunzioni/giunzione-pannelli-tamburati-lin.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pannello-tamburato-standard.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/pedana-stand-fieristico.webp</image:loc></image:image>
+    <image:image><image:loc>https://pandooragroup.it/catalogo-2026/copertina/sezione-pannello-tamburato-nido-ape.webp</image:loc></image:image>
   </url>
 </urlset>

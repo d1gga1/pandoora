@@ -42,10 +42,11 @@
     cs:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#d7141a"/><rect width="3" height="1" fill="#fff"/><path d="M0 0L1.5 1L0 2z" fill="#11457e"/></svg>`,
     sk:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ee1c25"/><rect width="3" height="2" fill="#0b4ea2"/><rect width="3" height="1" fill="#fff"/></svg>`,
     sl:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ed1c24"/><rect width="3" height="2" fill="#005da4"/><rect width="3" height="1" fill="#fff"/></svg>`,
-    tr:`<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#e30a17"/><circle cx="10.5" cy="10" r="5" fill="#fff"/><circle cx="11.75" cy="10" r="4" fill="#e30a17"/><path d="M15.2 10l4.5-1.46-2.78 3.83V7.63l2.78 3.83z" fill="#fff"/></svg>`
+    tr:`<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#e30a17"/><circle cx="10.5" cy="10" r="5" fill="#fff"/><circle cx="11.75" cy="10" r="4" fill="#e30a17"/><path d="M15.2 10l4.5-1.46-2.78 3.83V7.63l2.78 3.83z" fill="#fff"/></svg>`,
+    ar:`<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#00732f"/><rect y="2" width="12" height="2" fill="#fff"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#ff0000"/></svg>`
   };
-  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',tr:'Türkçe'};
-  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',tr:'TR'};
+  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',tr:'Türkçe',ar:'العربية'};
+  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',tr:'TR',ar:'AR'};
   const GLOBE=`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>`;
   const CK=`<svg class="pdlang-ck" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7"/></svg>`;
   const wrap=document.createElement('div'); wrap.className='pdlang';
@@ -57,7 +58,7 @@
       `<svg class="pdlang-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>`+
     `</button>`+
     `<ul class="pdlang-menu" role="listbox">`+
-      ['it','en','fr','de','es','nl','pl','cs','sk','sl','tr'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
+      ['it','en','fr','de','es','nl','pl','cs','sk','sl','tr','ar'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
     `</ul>`;
   document.body.appendChild(wrap);
   const btn=wrap.querySelector('.pdlang-btn'), menu=wrap.querySelector('.pdlang-menu');
@@ -249,13 +250,13 @@
   Object.keys(SLUG).forEach(function(it){
     Object.keys(SLUG[it]).forEach(function(l){ CANON[l + '/' + SLUG[it][l]] = it; });
   });
-  const LANGS = ['it','en','fr','de','es','nl','pl','cs','sk','sl','tr'];
+  const LANGS = ['it','en','fr','de','es','nl','pl','cs','sk','sl','tr','ar'];
 
   /* ---------- lingua e slug correnti dedotti dall'URL ---------- */
   function parsePath(){
     let p = location.pathname.replace(/^\/+/, '').replace(/index\.html$/, '');
     let lang = 'it';
-    const m = p.match(/^(en|fr|de|es|nl|pl|cs|sk|sl|tr)(\/|$)(.*)$/);
+    const m = p.match(/^(en|fr|de|es|nl|pl|cs|sk|sl|tr|ar)(\/|$)(.*)$/);
     if (m) { lang = m[1]; p = m[3] || ''; }
     p = p.replace(/\/+$/, '');
     if (lang !== 'it' && CANON[lang + '/' + p]) p = CANON[lang + '/' + p];
