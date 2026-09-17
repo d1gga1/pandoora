@@ -55,16 +55,16 @@ due regioni forniamo e spediamo in tutta Italia e all'estero, con posa a carico 
 
 ### Veneto
 - **Provincia di Treviso**: [Treviso](https://pandooragroup.it/porte-interne-treviso/), [Conegliano](https://pandooragroup.it/porte-interne-conegliano/), [Oderzo](https://pandooragroup.it/porte-interne-oderzo/), [Vittorio Veneto](https://pandooragroup.it/porte-interne-vittorio-veneto/), [Motta di Livenza](https://pandooragroup.it/porte-interne-motta-di-livenza/), [Montebelluna](https://pandooragroup.it/porte-interne-montebelluna/), [Castelfranco Veneto](https://pandooragroup.it/porte-interne-castelfranco-veneto/), [Mogliano Veneto](https://pandooragroup.it/porte-interne-mogliano-veneto/), [Valdobbiadene](https://pandooragroup.it/porte-interne-valdobbiadene/)
-- **Città metropolitana di Venezia**: [Venezia](https://pandooragroup.it/porte-interne-venezia/), [Mestre](https://pandooragroup.it/porte-interne-mestre/), [San Donà di Piave](https://pandooragroup.it/porte-interne-san-dona-di-piave/), [Portogruaro](https://pandooragroup.it/porte-interne-portogruaro/), [Jesolo](https://pandooragroup.it/porte-interne-jesolo/), [Mirano](https://pandooragroup.it/porte-interne-mirano/)
-- **Provincia di Padova**: [Padova](https://pandooragroup.it/porte-interne-padova/), [Cittadella](https://pandooragroup.it/porte-interne-cittadella/), [Abano Terme](https://pandooragroup.it/porte-interne-abano-terme/), [Monselice](https://pandooragroup.it/porte-interne-monselice/)
+- **Città metropolitana di Venezia**: [Venezia](https://pandooragroup.it/porte-interne-venezia/), [Mestre](https://pandooragroup.it/porte-interne-mestre/), [San Donà di Piave](https://pandooragroup.it/porte-interne-san-dona-di-piave/), [Portogruaro](https://pandooragroup.it/porte-interne-portogruaro/), [Jesolo](https://pandooragroup.it/porte-interne-jesolo/), [Mirano](https://pandooragroup.it/porte-interne-mirano/), [Caorle](https://pandooragroup.it/porte-interne-caorle/), [Chioggia](https://pandooragroup.it/porte-interne-chioggia/)
+- **Provincia di Padova**: [Padova](https://pandooragroup.it/porte-interne-padova/), [Cittadella](https://pandooragroup.it/porte-interne-cittadella/), [Abano Terme](https://pandooragroup.it/porte-interne-abano-terme/), [Monselice](https://pandooragroup.it/porte-interne-monselice/), [Piove di Sacco](https://pandooragroup.it/porte-interne-piove-di-sacco/), [Camposampiero](https://pandooragroup.it/porte-interne-camposampiero/)
 - **Provincia di Vicenza**: [Vicenza](https://pandooragroup.it/porte-interne-vicenza/), [Bassano del Grappa](https://pandooragroup.it/porte-interne-bassano-del-grappa/), [Schio](https://pandooragroup.it/porte-interne-schio/), [Thiene](https://pandooragroup.it/porte-interne-thiene/)
-- **Provincia di Verona**: [Verona](https://pandooragroup.it/porte-interne-verona/), [San Bonifacio](https://pandooragroup.it/porte-interne-san-bonifacio/), [Lago di Garda](https://pandooragroup.it/porte-interne-lago-di-garda/)
+- **Provincia di Verona**: [Verona](https://pandooragroup.it/porte-interne-verona/), [San Bonifacio](https://pandooragroup.it/porte-interne-san-bonifacio/), [Lago di Garda](https://pandooragroup.it/porte-interne-lago-di-garda/), [Legnago](https://pandooragroup.it/porte-interne-legnago/), [Villafranca di Verona](https://pandooragroup.it/porte-interne-villafranca-di-verona/)
 - **Provincia di Belluno**: [Belluno](https://pandooragroup.it/porte-interne-belluno/), [Feltre](https://pandooragroup.it/porte-interne-feltre/), [Cortina d'Ampezzo](https://pandooragroup.it/porte-interne-cortina-dampezzo/)
 - **Provincia di Rovigo**: [Rovigo](https://pandooragroup.it/porte-interne-rovigo/), [Adria](https://pandooragroup.it/porte-interne-adria/)
 
 ### Friuli Venezia Giulia
-- **Provincia di Pordenone**: [Pordenone](https://pandooragroup.it/porte-interne-pordenone/), [Sacile](https://pandooragroup.it/porte-interne-sacile/), [Azzano Decimo](https://pandooragroup.it/porte-interne-azzano-decimo/), [Spilimbergo](https://pandooragroup.it/porte-interne-spilimbergo/)
-- **Provincia di Udine**: [Udine](https://pandooragroup.it/porte-interne-udine/), [Codroipo](https://pandooragroup.it/porte-interne-codroipo/), [Latisana](https://pandooragroup.it/porte-interne-latisana/), [Lignano Sabbiadoro](https://pandooragroup.it/porte-interne-lignano-sabbiadoro/), [San Daniele del Friuli](https://pandooragroup.it/porte-interne-san-daniele-del-friuli/), [Cervignano del Friuli](https://pandooragroup.it/porte-interne-cervignano-del-friuli/)
+- **Provincia di Pordenone**: [Pordenone](https://pandooragroup.it/porte-interne-pordenone/), [Sacile](https://pandooragroup.it/porte-interne-sacile/), [Azzano Decimo](https://pandooragroup.it/porte-interne-azzano-decimo/), [Spilimbergo](https://pandooragroup.it/porte-interne-spilimbergo/), [Maniago](https://pandooragroup.it/porte-interne-maniago/)
+- **Provincia di Udine**: [Udine](https://pandooragroup.it/porte-interne-udine/), [Codroipo](https://pandooragroup.it/porte-interne-codroipo/), [Latisana](https://pandooragroup.it/porte-interne-latisana/), [Lignano Sabbiadoro](https://pandooragroup.it/porte-interne-lignano-sabbiadoro/), [San Daniele del Friuli](https://pandooragroup.it/porte-interne-san-daniele-del-friuli/), [Cervignano del Friuli](https://pandooragroup.it/porte-interne-cervignano-del-friuli/), [Cividale del Friuli](https://pandooragroup.it/porte-interne-cividale-del-friuli/), [Gemona del Friuli](https://pandooragroup.it/porte-interne-gemona-del-friuli/), [Tolmezzo](https://pandooragroup.it/porte-interne-tolmezzo/)
 - **Provincia di Gorizia**: [Gorizia](https://pandooragroup.it/porte-interne-gorizia/), [Monfalcone](https://pandooragroup.it/porte-interne-monfalcone/), [Grado](https://pandooragroup.it/porte-interne-grado/)
 - **Provincia di Trieste**: [Trieste](https://pandooragroup.it/porte-interne-trieste/)
 
@@ -73,6 +73,15 @@ due regioni forniamo e spediamo in tutta Italia e all'estero, con posa a carico 
 - [Porte laccate in tinta RAL](https://pandooragroup.it/porte-laccate-ral/)
 - [Porte a filo muro](https://pandooragroup.it/porte-filo-muro/)
 - [Porte scorrevoli interno muro](https://pandooragroup.it/porte-scorrevoli-interno-muro/)
+- [Porte in legno per interni — telaio in legno, tamburate, finiture](https://pandooragroup.it/porte-in-legno-per-interni/)
+- [Porte pantografate laccate RAL — linea Pantografata Superior](https://pandooragroup.it/porte-pantografate/)
+- [Porte scorrevoli interne — Esterno muro, a scomparsa o filo muro: come scegliere in base alla parete.](https://pandooragroup.it/porte-scorrevoli-interne/)
+- [Porte con vetro — Ante con inserti e scorrevoli in vetro, trasparente o satinato.](https://pandooragroup.it/porte-interne-vetro/)
+- [Misure standard porte interne — Larghezze, altezza 210, differenza fra anta, luce e vano muro.](https://pandooragroup.it/misure-porte-interne/)
+- [Porte interne bianche — Bianco laminato o laccato: RAL 9010, 9016 o su campione.](https://pandooragroup.it/porte-interne-bianche/)
+- [Porte interne moderne — Filo muro, disegni geometrici e laccature nella tinta delle pareti.](https://pandooragroup.it/porte-interne-moderne/)
+- [Porte a libro e a soffietto — Per i vani dove una battente non si apre.](https://pandooragroup.it/porte-a-libro-soffietto/)
+- [Porte insonorizzate — Anima piena, guarnizioni e fessura sotto l'anta chiusa.](https://pandooragroup.it/porte-insonorizzate/)
 - [Porte tamburate — come sono costruite](https://pandooragroup.it/porte-tamburate/)
 - [Catalogo porte 2026 e campionario finiture](https://pandooragroup.it/catalogo-porte/)
 
@@ -309,3 +318,22 @@ Nessun ordine minimo: dal singolo pannello al carico pallet completo.
 Consegna diretta ai quartieri fieristici italiani nella finestra di montaggio assegnata.
 Il termine tecnico "pannello tamburato" corrisponde a: honeycomb panel o hollow-core panel (EN),
 panneau alvéolaire (FR), Wabenplatte o Leichtbauplatte (DE).
+
+## Türkçe (Turkey)
+
+- [Honeycomb Panel ve Fuar Standı Malzemeleri Üreticisi](https://pandooragroup.it/tr/): 1987’den beri İtalyan üretici: fuar standları için petek dolgulu paneller, 6 metreye kadar tek parça, ölçü başına 3.000 adet stok. Türkiye’ye sevkiyat.
+- [Honeycomb Panel (Petek Panel): Fuar Standı Panelleri](https://pandooragroup.it/tr/petek-dolgulu-panel/): Fuar standları için petek dolgulu paneller: standart 23,80 €’dan, zor alevlenir B-s1,d0, güçlendirilmiş, kavisli, RAL lake. 6000 mm’ye kadar, minimum sipariş yok.
+- [Ahşap Fuar Standı Malzemeleri ve Stand Duvarları](https://pandooragroup.it/tr/fuar-standi-duvarlari/): Sökülüp yeniden kurulabilen fuar standı duvarları: petek dolgulu ahşap panel, 2500-6000 mm, 40 veya 50 mm. Kiralamak mı, satın almak mı? Karar rehberi ve fiyatlar.
+- [Petek Panel Fiyatları 2026: Fuar Standı Panelleri](https://pandooragroup.it/tr/petek-panel-fiyat-listesi/): Petek dolgulu panel ve fuar standı duvarı fiyat listesi 2026: standart panel 23,80 €, zor alevlenir 33,80 €, platform 19,80 €. Minimum sipariş yok, ölçü farkı yok.
+- [Yanmaz Panel ve Fuar Standı Yangın Sınıfı (EN 13501-1)](https://pandooragroup.it/tr/fuar-standi-yangin-sinifi/): Fuar standlarında yangına tepki sınıfı: EN 13501-1 nasıl çalışır, ham ahşap panel neden D-s2,d0’dır, zor alevlenir panel B-s1,d0 ne zaman gerekir.
+- [İstanbul Fuar Standı Panelleri: TÜYAP ve CNR Expo](https://pandooragroup.it/tr/fuar-standi-panelleri-istanbul/): TÜYAP ve İstanbul Expo Center (CNR Expo) fuarları için petek dolgulu stand panelleri: 6 m’ye kadar, zor alevlenir B-s1,d0, depoya veya fuar alanına teslim.
+- [İzmir, Antalya ve Ankara Fuar Standı Panelleri](https://pandooragroup.it/tr/fuar-standi-panelleri-izmir-antalya/): Fuar İzmir, ANFAŞ Antalya ve ATO Congresium Ankara için petek dolgulu stand panelleri: stoktan sevkiyat, 6 m’ye kadar, zor alevlenir B-s1,d0, minimum sipariş yok.
+- [İtalya’dan Türkiye’ye Panel Sevkiyatı: A.TR ve Gümrük](https://pandooragroup.it/tr/turkiye-ihracat-gumruk/): İtalya’dan Türkiye’ye petek dolgulu panel ve stand malzemesi sevkiyatı: AB–Türkiye gümrük birliği, A.TR dolaşım belgesi, KDV, nakliye ve fuar alanına teslim.
+- [Hakkımızda: 1987’den Beri İtalyan Panel Üreticisi](https://pandooragroup.it/tr/hakkimizda/): Pan.door.a, 1987’den beri Treviso’da petek dolgulu panel, kapı, parke ve lake boya üreten İtalyan firması. Tüccar değil üretici: yanıt atölyeden gelir.
+- [İletişim: Pan.door.a, Fontanelle (Treviso, İtalya)](https://pandooragroup.it/tr/iletisim/): Pan.door.a ile iletişim: telefon, WhatsApp ve e-posta. Fontanelle (Treviso, İtalya), pazartesi–cuma 08.00–18.00 İtalya saati. Türkçe veya İngilizce yazabilirsiniz.
+- [Fuar Standı Paneli için Teklif Alın](https://pandooragroup.it/tr/teklif-al/): Petek dolgulu panel ve fuar standı malzemeleri için ücretsiz, bağlayıcı olmayan teklif. Ölçüleri gönderin, aynı gün yanıt; çizim ekleyebilirsiniz (PDF, DWG, DXF).
+
+## Guida: il tamburato
+
+- [Tamburato: cos'è e com'è fatto](https://pandooragroup.it/tamburato-cos-e/): che materiale è il tamburato, cosa vuol dire, differenze con MDF e multistrato, porte e mensole tamburate.
+- [Pannelli a nido d'ape in legno](https://pandooragroup.it/pannelli-nido-d-ape/): Pannelli a nido d'ape in legno: telaio in abete, anima alveolare, copertine MDF o laminato, fino a 6 m. Differenze con nido d'ape in alluminio, cartone e plastica.

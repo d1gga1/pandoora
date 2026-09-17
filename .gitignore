@@ -75,3 +75,6 @@ PUBBLICA.command
 
 # script IndexNow, non va online
 INDEXNOW.command
+
+# file da cancellare a mano
+_to_delete/

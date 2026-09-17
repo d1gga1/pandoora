@@ -15,6 +15,7 @@ Disallow: /pl/dziekujemy/
 Disallow: /cs/dekujeme/
 Disallow: /sk/dakujeme/
 Disallow: /sl/hvala/
+Disallow: /tr/tesekkurler/
 Disallow: /pandoora_hub.html
 Disallow: /404.html
 

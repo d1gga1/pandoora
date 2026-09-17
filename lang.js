@@ -14,7 +14,7 @@
   .pdlang-fl svg{display:block;width:100%;height:100%}
   @keyframes pdlangpop{0%{transform:scale(1)}40%{transform:scale(1.13)}100%{transform:scale(1)}}
   .pdlang-btn.pop{animation:pdlangpop .45s}
-  .pdlang-menu{position:absolute;right:0;bottom:calc(100% + 12px);min-width:200px;list-style:none;margin:0;padding:7px;background:#0e1626;border:1px solid rgba(255,255,255,.1);border-radius:15px;box-shadow:0 22px 55px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(10px) scale(.95);transform-origin:bottom right;transition:opacity .28s,transform .3s,visibility .3s}
+  .pdlang-menu{position:absolute;right:0;bottom:calc(100% + 12px);min-width:200px;max-height:70vh;overflow-y:auto;list-style:none;margin:0;padding:7px;background:#0e1626;border:1px solid rgba(255,255,255,.1);border-radius:15px;box-shadow:0 22px 55px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(10px) scale(.95);transform-origin:bottom right;transition:opacity .28s,transform .3s,visibility .3s}
   .pdlang.open .pdlang-menu{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
   .pdlang-menu::after{content:"";position:absolute;bottom:-6px;right:24px;width:12px;height:12px;background:#0e1626;border-right:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);transform:rotate(45deg)}
   .pdlang-opt{display:flex;align-items:center;gap:11px;padding:9px 11px;border-radius:10px;font-size:13px;font-weight:600;color:rgba(255,255,255,.82);cursor:pointer;opacity:0;transform:translateX(10px);transition:background .2s,color .2s}
@@ -36,10 +36,16 @@
     en:`<svg viewBox="0 0 60 30" preserveAspectRatio="none"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30" stroke="#C8102E" stroke-width="3"/><path d="M60,0 L0,30" stroke="#C8102E" stroke-width="3"/><rect x="25" width="10" height="30" fill="#fff"/><rect y="10" width="60" height="10" fill="#fff"/><rect x="27" width="6" height="30" fill="#C8102E"/><rect y="12" width="60" height="6" fill="#C8102E"/></svg>`,
     fr:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055a4"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg>`,
     es:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg>`,
-    de:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ffce00"/><rect width="3" height="1" fill="#000"/><rect y="1" width="3" height="1" fill="#dd0000"/></svg>`
+    de:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ffce00"/><rect width="3" height="1" fill="#000"/><rect y="1" width="3" height="1" fill="#dd0000"/></svg>`,
+    nl:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#21468b"/><rect width="3" height="2" fill="#fff"/><rect width="3" height="1" fill="#ae1c28"/></svg>`,
+    pl:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#dc143c"/><rect width="3" height="1" fill="#fff"/></svg>`,
+    cs:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#d7141a"/><rect width="3" height="1" fill="#fff"/><path d="M0 0L1.5 1L0 2z" fill="#11457e"/></svg>`,
+    sk:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ee1c25"/><rect width="3" height="2" fill="#0b4ea2"/><rect width="3" height="1" fill="#fff"/></svg>`,
+    sl:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ed1c24"/><rect width="3" height="2" fill="#005da4"/><rect width="3" height="1" fill="#fff"/></svg>`,
+    tr:`<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#e30a17"/><circle cx="10.5" cy="10" r="5" fill="#fff"/><circle cx="11.75" cy="10" r="4" fill="#e30a17"/><path d="M15.2 10l4.5-1.46-2.78 3.83V7.63l2.78 3.83z" fill="#fff"/></svg>`
   };
-  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español'};
-  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES'};
+  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',tr:'Türkçe'};
+  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',tr:'TR'};
   const GLOBE=`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>`;
   const CK=`<svg class="pdlang-ck" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7"/></svg>`;
   const wrap=document.createElement('div'); wrap.className='pdlang';
@@ -51,7 +57,7 @@
       `<svg class="pdlang-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>`+
     `</button>`+
     `<ul class="pdlang-menu" role="listbox">`+
-      ['it','en','fr','de','es'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
+      ['it','en','fr','de','es','nl','pl','cs','sk','sl','tr'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
     `</ul>`;
   document.body.appendChild(wrap);
   const btn=wrap.querySelector('.pdlang-btn'), menu=wrap.querySelector('.pdlang-menu');
@@ -243,13 +249,13 @@
   Object.keys(SLUG).forEach(function(it){
     Object.keys(SLUG[it]).forEach(function(l){ CANON[l + '/' + SLUG[it][l]] = it; });
   });
-  const LANGS = ['it','en','fr','de'];
+  const LANGS = ['it','en','fr','de','es','nl','pl','cs','sk','sl','tr'];
 
   /* ---------- lingua e slug correnti dedotti dall'URL ---------- */
   function parsePath(){
     let p = location.pathname.replace(/^\/+/, '').replace(/index\.html$/, '');
     let lang = 'it';
-    const m = p.match(/^(en|fr|de|es)(\/|$)(.*)$/);
+    const m = p.match(/^(en|fr|de|es|nl|pl|cs|sk|sl|tr)(\/|$)(.*)$/);
     if (m) { lang = m[1]; p = m[3] || ''; }
     p = p.replace(/\/+$/, '');
     if (lang !== 'it' && CANON[lang + '/' + p]) p = CANON[lang + '/' + p];
@@ -264,7 +270,8 @@
   function urlFor(lang, page){
     const hl = fromHreflang(lang);
     if (hl) return hl;
-    const target = PAGES.has(page) ? page : '';
+    const FULL = ['it','en','fr','de','es'];
+    const target = (PAGES.has(page) && FULL.indexOf(lang) !== -1) ? page : '';
     const pre = (lang === 'it') ? '/' : '/' + lang + '/';
     if (!target) return pre;
     const loc = (lang !== 'it' && SLUG[target] && SLUG[target][lang]) ? SLUG[target][lang] : target;
@@ -272,7 +279,7 @@
   }
 
   const cur = parsePath();
-  document.documentElement.lang = cur.lang;
+  if (!document.documentElement.getAttribute('lang')) document.documentElement.lang = cur.lang;
 
   /* ---------- stato iniziale dello switcher ---------- */
   curFlag.innerHTML = FL[cur.lang] || FL.it;
