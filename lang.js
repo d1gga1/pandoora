@@ -35,6 +35,7 @@
     it:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>`,
     en:`<svg viewBox="0 0 60 30" preserveAspectRatio="none"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30" stroke="#C8102E" stroke-width="3"/><path d="M60,0 L0,30" stroke="#C8102E" stroke-width="3"/><rect x="25" width="10" height="30" fill="#fff"/><rect y="10" width="60" height="10" fill="#fff"/><rect x="27" width="6" height="30" fill="#C8102E"/><rect y="12" width="60" height="6" fill="#C8102E"/></svg>`,
     fr:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055a4"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg>`,
+    pt:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#ff0000"/><rect width="1.2" height="2" fill="#006600"/><circle cx="1.2" cy="1" r="0.38" fill="#ffff00" stroke="#ffffff" stroke-width="0.05"/><circle cx="1.2" cy="1" r="0.2" fill="#ffffff" stroke="#003399" stroke-width="0.06"/></svg>`,
     es:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg>`,
     de:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ffce00"/><rect width="3" height="1" fill="#000"/><rect y="1" width="3" height="1" fill="#dd0000"/></svg>`,
     nl:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#21468b"/><rect width="3" height="2" fill="#fff"/><rect width="3" height="1" fill="#ae1c28"/></svg>`,
@@ -43,14 +44,15 @@
     sk:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ee1c25"/><rect width="3" height="2" fill="#0b4ea2"/><rect width="3" height="1" fill="#fff"/></svg>`,
     sl:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="3" fill="#ed1c24"/><rect width="3" height="2" fill="#005da4"/><rect width="3" height="1" fill="#fff"/></svg>`,
     tr:`<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#e30a17"/><circle cx="10.5" cy="10" r="5" fill="#fff"/><circle cx="11.75" cy="10" r="4" fill="#e30a17"/><path d="M15.2 10l4.5-1.46-2.78 3.83V7.63l2.78 3.83z" fill="#fff"/></svg>`,
+    sr:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="3" height="1.334" fill="#0c4076"/><rect width="3" height="0.667" fill="#c6363c"/></svg>`,
     hr:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#171796"/><rect width="3" height="1.34" fill="#fff"/><rect width="3" height="0.67" fill="#ff0000"/><g><rect x="1.28" y="0.5" width="0.44" height="0.52" fill="#fff" stroke="#ff0000" stroke-width="0.06"/><rect x="1.28" y="0.5" width="0.22" height="0.26" fill="#ff0000"/><rect x="1.5" y="0.76" width="0.22" height="0.26" fill="#ff0000"/></g></svg>`,
     sq:`<svg viewBox="0 0 28 20" preserveAspectRatio="none"><rect width="28" height="20" fill="#e41e20"/><path d="M14 5.2l-3-1.6 1.1 2.4-3.4-.6 2.2 2-2.6 1.3 2.7.7-1.3 1.8 2.3-.4-.3 2.4 2.3-1.6 2.3 1.6-.3-2.4 2.3.4-1.3-1.8 2.7-.7L18.1 7.4l2.2-2-3.4.6L18 3.6z" fill="#000"/><rect x="13.3" y="12.6" width="1.4" height="3.4" fill="#000"/></svg>`,
     el:`<svg viewBox="0 0 27 18" preserveAspectRatio="none"><rect width="27" height="18" fill="#0d5eaf"/><rect y="2" width="27" height="2" fill="#fff"/><rect y="6" width="27" height="2" fill="#fff"/><rect y="10" width="27" height="2" fill="#fff"/><rect y="14" width="27" height="2" fill="#fff"/><rect width="10" height="10" fill="#0d5eaf"/><rect x="4" width="2" height="10" fill="#fff"/><rect y="4" width="10" height="2" fill="#fff"/></svg>`,
     zh:`<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#de2910"/><polygon points="5,2 6.2,5.6 10,5.6 6.9,7.8 8.1,11.4 5,9.2 1.9,11.4 3.1,7.8 0,5.6 3.8,5.6" fill="#ffde00"/></svg>`,
     ar:`<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#00732f"/><rect y="2" width="12" height="2" fill="#fff"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#ff0000"/></svg>`
   };
-  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',hr:'Hrvatski',sq:'Shqip',el:'Ελληνικά',tr:'Türkçe',ar:'العربية',zh:'中文'};
-  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',hr:'HR',sq:'SQ',el:'EL',tr:'TR',ar:'AR',zh:'ZH'};
+  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',pt:'Português',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',hr:'Hrvatski',sr:'Srpski',sq:'Shqip',el:'Ελληνικά',tr:'Türkçe',ar:'العربية',zh:'中文'};
+  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',pt:'PT',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',hr:'HR',sr:'SR',sq:'SQ',el:'EL',tr:'TR',ar:'AR',zh:'ZH'};
   const GLOBE=`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>`;
   const CK=`<svg class="pdlang-ck" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7"/></svg>`;
   const wrap=document.createElement('div'); wrap.className='pdlang';
@@ -62,7 +64,7 @@
       `<svg class="pdlang-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>`+
     `</button>`+
     `<ul class="pdlang-menu" role="listbox">`+
-      ['it','en','fr','de','es','nl','pl','cs','sk','sl','hr','sq','el','tr','ar','zh'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
+      ['it','en','fr','de','es','pt','nl','pl','cs','sk','sl','hr','sr','sq','el','tr','ar','zh'].map(l=>`<li class="pdlang-opt" role="option" data-lang="${l}"><span class="pdlang-fl">${FL[l]}</span><span class="pdlang-nm">${NM[l]}</span>${CK}</li>`).join('')+
     `</ul>`;
   document.body.appendChild(wrap);
   const btn=wrap.querySelector('.pdlang-btn'), menu=wrap.querySelector('.pdlang-menu');
@@ -254,10 +256,12 @@
   Object.keys(SLUG).forEach(function(it){
     Object.keys(SLUG[it]).forEach(function(l){ CANON[l + '/' + SLUG[it][l]] = it; });
   });
-  const LANGS = ['it','en','fr','de','es','nl','pl','cs','sk','sl','hr','sq','el','tr','ar','zh'];
+  const LANGS = ['it','en','fr','de','es','pt','nl','pl','cs','sk','sl','hr','sr','sq','el','tr','ar','zh'];
   /* slug tradotti per hr / sq / el (pagine realmente esistenti) */
   const EXTRA = {
     hr: {'porte':'unutarnja-vrata','contatti':'kontakt','preventivo':'ponuda','azienda':'o-nama'},
+    pt: {'porte':'','contatti':'contacto','preventivo':'orcamento','azienda':''},
+    sr: {'porte':'','contatti':'kontakt','preventivo':'ponuda','azienda':'o-nama'},
     sq: {'porte':'dyer-te-brendshme','contatti':'kontakt','preventivo':'oferta','azienda':'rreth-nesh'},
     zh: {'pannelli-tamburati':'fengwoban','pannelli-tamburati-milano-fiera':'milan-zhanhui-zhantai'},
     el: {'porte':'esoterikes-portes','contatti':'epikoinonia','preventivo':'prosfora','azienda':'i-etaireia'}
@@ -267,7 +271,7 @@
   function parsePath(){
     let p = location.pathname.replace(/^\/+/, '').replace(/index\.html$/, '');
     let lang = 'it';
-    const m = p.match(/^(en|fr|de|es|nl|pl|cs|sk|sl|hr|sq|el|tr|ar|zh)(\/|$)(.*)$/);
+    const m = p.match(/^(en|fr|de|es|pt|nl|pl|cs|sk|sl|hr|sr|sq|el|tr|ar|zh)(\/|$)(.*)$/);
     if (m) { lang = m[1]; p = m[3] || ''; }
     p = p.replace(/\/+$/, '');
     if (lang !== 'it' && CANON[lang + '/' + p]) p = CANON[lang + '/' + p];
