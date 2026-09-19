@@ -203,8 +203,14 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 .pg-btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:100px;font-size:14.5px;font-weight:700;text-decoration:none;transition:transform .25s var(--ease),box-shadow .3s,background .3s}
 .pg-btn-p{background:var(--red);color:#fff}
 .pg-btn-p:hover{transform:translateY(-3px);background:var(--red-dark);box-shadow:0 14px 30px rgba(192,57,43,.4)}
-.pg-btn-s{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.2)}
-.pg-btn-s:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)}
+.pg-btn-s{background:transparent;color:var(--ink);border:1px solid rgba(26,32,40,.28)}
+.pg-btn-s:hover{transform:translateY(-3px);background:rgba(26,32,40,.06);border-color:rgba(26,32,40,.55)}
+.pg-hero .pg-btn-s,.pf .pg-btn-s,.sb-dark .pg-btn-s,.pg-hero-inner .pg-btn-s{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22)}
+.pg-hero .pg-btn-s:hover,.sb-dark .pg-btn-s:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
+/* badge prezzo di partenza */
+.pd-price-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.95}
+.pd-price-note a:hover{opacity:1}
+
 
 /* linking interno */
 .pg-related{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
