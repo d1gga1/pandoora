@@ -420,5 +420,6 @@
 </script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
+<script>/* ripristina il pulsante se si torna indietro dopo l'invio */(function(){var s=[];document.querySelectorAll('form button').forEach(function(b){s.push([b,b.innerHTML]);});addEventListener('pageshow',function(e){if(e.persisted)s.forEach(function(x){x[0].disabled=false;x[0].innerHTML=x[1];});});})();</script>
 </body>
 </html>
