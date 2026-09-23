@@ -262,7 +262,7 @@
     hr: {'porte':'unutarnja-vrata','contatti':'kontakt','preventivo':'ponuda','azienda':'o-nama'},
     pt: {'porte':'','contatti':'contacto','preventivo':'orcamento','azienda':''},
     sr: {'porte':'','contatti':'kontakt','preventivo':'ponuda','azienda':'o-nama'},
-    sq: {'porte':'dyer-te-brendshme','contatti':'kontakt','preventivo':'oferta','azienda':'rreth-nesh'},
+    sq: {'porte':'dyer-te-brendshme','contatti':'kontakt','preventivo':'oferta','azienda':'rreth-nesh','porte-filo-muro':'dyer-filo-muro','porte-laccate-ral':'dyer-te-llakuara-ral','porte-pantografate':'dyer-me-motive-cnc','porte-a-libro-soffietto':'dyer-palosese','porte-insonorizzate':'dyer-me-izolim-akustik','misure-porte-interne':'permasat-e-dyerve','porte-interne-prezzi':'dyer-te-brendshme-cmime','porte-scorrevoli-interne':'dyer-rreshqitese'},
     zh: {'pannelli-tamburati':'fengwoban','pannelli-tamburati-milano-fiera':'milan-zhanhui-zhantai'},
     el: {'porte':'esoterikes-portes','contatti':'epikoinonia','preventivo':'prosfora','azienda':'i-etaireia'}
   };
