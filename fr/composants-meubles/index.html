@@ -549,7 +549,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
     <a class="foot-link" href="/fr/contact/">Contact</a>
     <a class="foot-link" href="/fr/">Accueil</a>
   </div>
-  <div class="foot-copy">© 2024 Pan.door.a — Tous droits réservés</div>
+  <div class="foot-copy">© 2026 Pan.door.a — Tous droits réservés</div>
 </footer>
 
 <script src="/assets/js/gsap.min.js"></script>
@@ -557,53 +557,53 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 gsap.registerPlugin(ScrollTrigger);
 
 const P = [
-  {n:'01',c:'ante-frontali',b:'Ante',nm:'Ante Laccate',d:'Finiture opache, lucide e satinate su qualsiasi misura',t:['Opaco','Lucido','RAL'],
+  {n:'01',c:'ante-frontali',b:'Portes',nm:'Portes laquées',d:'Finitions mates, brillantes et satinées, à toutes dimensions',t:['Mat','Brillant','RAL'],
    i:`<rect x="10" y="6" width="28" height="36" rx="1.5"/><line x1="10" y1="15" x2="38" y2="15"/><circle cx="33" cy="27" r="2" fill="currentColor" stroke="none"/>`},
-  {n:'02',c:'ante-frontali',b:'Frontali',nm:'Frontali Cassetti',d:'Push-to-open, maniglie integrate o profilo filomuro',t:['Push-open','Filomuro','Su misura'],
+  {n:'02',c:'ante-frontali',b:'Façades',nm:'Façades de tiroirs',d:'Push-to-open, poignées intégrées ou profil sans poignée',t:['Push-open','Sans poignée','Sur mesure'],
    i:`<rect x="6" y="7" width="36" height="10" rx="1.5"/><rect x="6" y="20" width="36" height="10" rx="1.5"/><rect x="6" y="33" width="36" height="8" rx="1.5"/><line x1="19" y1="12" x2="29" y2="12"/><line x1="19" y1="25" x2="29" y2="25"/><line x1="19" y1="37" x2="29" y2="37"/>`},
-  {n:'03',c:'ante-frontali',b:'CNC',nm:'Ante Pantografate',d:'Fresature CNC personalizzate su ogni tipo di essenza',t:['CNC','Rilievo','Classico'],
+  {n:'03',c:'ante-frontali',b:'CNC',nm:'Portes fraisées',d:'Fraisages CNC personnalisés sur toutes les essences',t:['CNC','Relief','Classique'],
    i:`<rect x="8" y="6" width="32" height="36" rx="1.5"/><rect x="13" y="11" width="22" height="15" rx="1"/><rect x="13" y="30" width="22" height="8" rx="1"/>`},
-  {n:'04',c:'pannelli',b:'Pannello',nm:'Pannelli',d:'Tamburati, MDF idrofugo e multistrato marino certificato',t:['MDF','Tamburato','Idrofugo'],
+  {n:'04',c:'pannelli',b:'Panneau',nm:'Panneaux',d:'Alvéolaires, MDF hydrofuge et contreplaqué marine certifié',t:['MDF','Alvéolaire','Hydrofuge'],
    i:`<rect x="6" y="8" width="36" height="8" rx="1.5"/><rect x="6" y="20" width="36" height="8" rx="1.5"/><rect x="6" y="32" width="36" height="8" rx="1.5"/>`},
-  {n:'05',c:'pannelli',b:'Piano',nm:'Piani Lavoro',d:'Fino a 65 mm di spessore, su qualsiasi forma e misura',t:['65mm','Laminato','Pietra'],
+  {n:'05',c:'pannelli',b:'Plan',nm:'Plans de travail',d:'Jusqu’à 65 mm d’épaisseur, toutes formes et dimensions',t:['65 mm','Stratifié','Pierre'],
    i:`<rect x="4" y="17" width="40" height="9" rx="1.5"/><path d="M4 26 L4 31 L44 31 L44 26"/><line x1="14" y1="17" x2="14" y2="26"/><line x1="34" y1="17" x2="34" y2="26"/>`},
-  {n:'06',c:'pannelli',b:'Fianco',nm:'Fianchi',d:'Laterali per colonne e armadi, finiti su entrambe le facce',t:['Bifronte','Colonne','Armadi'],
+  {n:'06',c:'pannelli',b:'Côté',nm:'Côtés',d:'Joues pour colonnes et armoires, finies sur les deux faces',t:['Double face','Colonnes','Armoires'],
    i:`<rect x="16" y="4" width="16" height="40" rx="1.5"/><line x1="16" y1="11" x2="32" y2="11"/><line x1="16" y1="37" x2="32" y2="37"/><line x1="20" y1="4" x2="20" y2="44"/>`},
-  {n:'07',c:'pannelli',b:'Mensola',nm:'Mensole',d:'Bordo vivo o arrotondato, spessori da 18 a 40 mm',t:['18–40mm','Bordo vivo','FSC'],
+  {n:'07',c:'pannelli',b:'Tablette',nm:'Tablettes',d:'Chant vif ou arrondi, épaisseurs de 18 à 40 mm',t:['18–40 mm','Chant vif','FSC'],
    i:`<rect x="4" y="20" width="40" height="7" rx="1.5"/><path d="M10 27 L8 38"/><path d="M38 27 L40 38"/><line x1="4" y1="38" x2="44" y2="38"/>`},
-  {n:'08',c:'pannelli',b:'Fondo',nm:'Fondi & Retros',d:'Pannelli retro laccati, nobilitati o legno naturale',t:['Laccato','Nobilitato','Naturale'],
+  {n:'08',c:'pannelli',b:'Fond',nm:'Fonds',d:'Fonds laqués, mélaminés ou en bois naturel',t:['Laqué','Mélaminé','Naturel'],
    i:`<rect x="6" y="6" width="36" height="36" rx="1.5"/><path d="M6 6 L42 42" stroke-dasharray="4 3"/><path d="M42 6 L6 42" stroke-dasharray="4 3"/>`},
-  {n:'09',c:'pannelli',b:'Schienale',nm:'Schienali',d:'MDF laccato per boiserie, librerie e armadi a tutta altezza',t:['MDF','Librerie','Boiserie'],
+  {n:'09',c:'pannelli',b:'Panneau',nm:'Panneaux de fond',d:'MDF laqué pour boiseries, bibliothèques et armoires toute hauteur',t:['MDF','Bibliothèques','Boiseries'],
    i:`<rect x="8" y="6" width="32" height="36" rx="1.5"/><line x1="16" y1="6" x2="16" y2="42"/><line x1="24" y1="6" x2="24" y2="42"/><line x1="32" y1="6" x2="32" y2="42"/>`},
-  {n:'10',c:'strutture',b:'Struttura',nm:'Piedini & Gambe',d:'Torniti, conici, squadrati in legno massello certificato',t:['Torniti','Massello','FSC'],
+  {n:'10',c:'strutture',b:'Structure',nm:'Pieds',d:'Tournés, coniques ou carrés, en bois massif certifié',t:['Tournés','Massif','FSC'],
    i:`<rect x="19" y="6" width="10" height="30" rx="2.5"/><path d="M19 34 Q16 40 12 44"/><path d="M29 34 Q32 40 36 44"/><line x1="15" y1="6" x2="33" y2="6"/>`},
-  {n:'11',c:'strutture',b:'Zoccolo',nm:'Zoccoli',d:'Base per isole cucina e mobili a terra, varie altezze',t:['80–200mm','Alluminio','MDF'],
+  {n:'11',c:'strutture',b:'Socle',nm:'Socles',d:'Bases pour îlots de cuisine et meubles au sol, plusieurs hauteurs',t:['80–200 mm','Aluminium','MDF'],
    i:`<rect x="4" y="30" width="40" height="12" rx="1.5"/><rect x="8" y="24" width="32" height="8" rx="1"/><line x1="10" y1="24" x2="10" y2="42"/><line x1="38" y1="24" x2="38" y2="42"/>`},
-  {n:'12',c:'strutture',b:'Kit',nm:'Kit Scorrevoli',d:'Binari, guide e ruote per ante scorrevoli con soft-close',t:['Binari','Guide','Soft-close'],
+  {n:'12',c:'strutture',b:'Kit',nm:'Kits coulissants',d:'Rails, guides et roulettes pour portes coulissantes avec soft-close',t:['Rails','Guides','Soft-close'],
    i:`<line x1="4" y1="12" x2="44" y2="12"/><line x1="4" y1="36" x2="44" y2="36"/><rect x="10" y="12" width="28" height="24" rx="1.5"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/><circle cx="36" cy="12" r="3" fill="currentColor" stroke="none"/><line x1="20" y1="12" x2="20" y2="36"/>`},
-  {n:'13',c:'strutture',b:'Letto',nm:'Giroletto',d:'Telai perimetrali con rete a doghe su qualsiasi misura',t:['Doghe','Matrimoniale','Singolo'],
+  {n:'13',c:'strutture',b:'Lit',nm:'Cadres de lit',d:'Cadres périmétriques avec sommier à lattes, toutes dimensions',t:['Lattes','Double','Simple'],
    i:`<rect x="4" y="24" width="40" height="8" rx="1.5"/><rect x="4" y="10" width="9" height="22" rx="1.5"/><rect x="35" y="10" width="9" height="22" rx="1.5"/><line x1="18" y1="24" x2="18" y2="32"/><line x1="24" y1="24" x2="24" y2="32"/><line x1="30" y1="24" x2="30" y2="32"/>`},
-  {n:'14',c:'strutture',b:'Testiera',nm:'Testiere',d:'Matrimoniali e singole, imbottite o in legno massello',t:['Imbottita','Massello','Personalizzata'],
+  {n:'14',c:'strutture',b:'Tête de lit',nm:'Têtes de lit',d:'Doubles et simples, rembourrées ou en bois massif',t:['Rembourrée','Massif','Personnalisée'],
    i:`<path d="M6 42 L6 18 Q6 6 24 6 Q42 6 42 18 L42 42"/><line x1="6" y1="42" x2="42" y2="42"/><line x1="6" y1="32" x2="42" y2="32"/>`},
-  {n:'15',c:'accessori',b:'Profilo',nm:'Battiscopa',d:'In legno massello e MDF, altezze da 60 a 200 mm',t:['60–200mm','Massello','MDF'],
+  {n:'15',c:'accessori',b:'Profil',nm:'Plinthes',d:'En bois massif et MDF, hauteurs de 60 à 200 mm',t:['60–200 mm','Massif','MDF'],
    i:`<rect x="4" y="34" width="40" height="7" rx="1"/><path d="M4 34 L4 28 Q4 26 7 26 L44 26"/><line x1="8" y1="26" x2="8" y2="34"/>`},
-  {n:'16',c:'accessori',b:'Coprifilo',nm:'Coprifili',d:'Copertura giunti, spigoli e passaggi impianti a parete',t:['Giunto','Spigolo','Impianti'],
+  {n:'16',c:'accessori',b:'Couvre-joint',nm:'Couvre-joints',d:'Habillage des joints, angles et passages de gaines au mur',t:['Joint','Angle','Gaines'],
    i:`<path d="M8 42 L8 8 L40 8 L40 14 L14 14 L14 42 Z"/>`},
-  {n:'17',c:'accessori',b:'Stipite',nm:'Stipiti',d:'Telai porta per posa a colla o vite, laminati o laccati',t:['A colla','A vite','Laminato'],
+  {n:'17',c:'accessori',b:'Chambranle',nm:'Chambranles',d:'Huisseries à coller ou à visser, stratifiées ou laquées',t:['À coller','À visser','Stratifié'],
    i:`<path d="M8 44 L8 8 Q8 6 10 6 L38 6 Q40 6 40 8 L40 44"/><path d="M14 44 L14 12 L34 12 L34 44"/>`},
-  {n:'18',c:'decorativi',b:'Decoro',nm:'Capitelli',d:'Lesene, fregi e capitelli classici in MDF laccabile',t:['Classico','MDF','Laccabile'],
+  {n:'18',c:'decorativi',b:'Décor',nm:'Chapiteaux',d:'Pilastres, frises et chapiteaux classiques en MDF laquable',t:['Classique','MDF','Laquable'],
    i:`<rect x="4" y="38" width="40" height="5" rx="1"/><rect x="9" y="30" width="30" height="9" rx="1"/><path d="M14 30 L18 10 L30 10 L34 30"/><line x1="16" y1="10" x2="32" y2="10"/><line x1="10" y1="6" x2="38" y2="6"/>`},
-  {n:'19',c:'decorativi',b:'Boiserie',nm:'Boiserie',d:'Rivestimenti parete modulari con profili classici e contemporanei',t:['Modulare','Classico','Moderno'],
+  {n:'19',c:'decorativi',b:'Boiserie',nm:'Boiseries',d:'Habillages muraux modulaires aux profils classiques et contemporains',t:['Modulaire','Classique','Moderne'],
    i:`<rect x="4" y="4" width="18" height="40" rx="1"/><rect x="26" y="4" width="18" height="40" rx="1"/><rect x="7" y="8" width="12" height="14" rx="1"/><rect x="7" y="26" width="12" height="14" rx="1"/><rect x="29" y="8" width="12" height="14" rx="1"/><rect x="29" y="26" width="12" height="14" rx="1"/>`},
-  {n:'20',c:'decorativi',b:'Specchiera',nm:'Specchiere',d:'Cornici per specchi in massello e MDF laccato opaco o lucido',t:['Massello','MDF','Su misura'],
+  {n:'20',c:'decorativi',b:'Miroir',nm:'Cadres de miroir',d:'Cadres en bois massif et MDF laqué mat ou brillant',t:['Massif','MDF','Sur mesure'],
    i:`<ellipse cx="24" cy="22" rx="14" ry="17"/><ellipse cx="24" cy="22" rx="10" ry="13"/><rect x="18" y="38" width="12" height="4" rx="1"/>`},
-  {n:'21',c:'decorativi',b:'Cimasa',nm:'Cimase',d:'Cornicioni superiori per librerie, armadi e cucine',t:['Librerie','Armadi','Cucine'],
+  {n:'21',c:'decorativi',b:'Corniche',nm:'Corniches',d:'Corniches supérieures pour bibliothèques, armoires et cuisines',t:['Bibliothèques','Armoires','Cuisines'],
    i:`<path d="M4 38 L4 30 Q4 24 10 20 L10 16 Q10 8 18 8 L44 8"/><line x1="4" y1="38" x2="44" y2="38"/><line x1="44" y1="8" x2="44" y2="38"/>`},
-  {n:'22',c:'decorativi',b:'Colonna',nm:'Profili Colonna',d:'Semicolonne e colonne per arredamento classico e contract',t:['Classico','Contract','Semicolonna'],
+  {n:'22',c:'decorativi',b:'Colonne',nm:'Profils colonne',d:'Demi-colonnes et colonnes pour l’ameublement classique et contract',t:['Classique','Contract','Demi-colonne'],
    i:`<ellipse cx="24" cy="9" rx="10" ry="4"/><line x1="14" y1="9" x2="14" y2="37"/><line x1="34" y1="9" x2="34" y2="37"/><ellipse cx="24" cy="37" rx="10" ry="4"/>`},
-  {n:'23',c:'decorativi',b:'Table',nm:'Coffee Table',d:'Piani e strutture per tavolini da salotto su misura',t:['Rovere','Noce','Laccato'],
+  {n:'23',c:'decorativi',b:'Table',nm:'Tables basses',d:'Plateaux et structures pour tables basses sur mesure',t:['Chêne','Noyer','Laqué'],
    i:`<rect x="6" y="18" width="36" height="8" rx="1.5"/><path d="M11 26 L9 40"/><path d="M37 26 L39 40"/><path d="M17 26 L16 40"/><path d="M31 26 L32 40"/><line x1="9" y1="40" x2="39" y2="40"/>`},
-  {n:'24',c:'decorativi',b:'Pelmet',nm:'Light Pelmet',d:'Copri-tende per illuminazione LED indiretta integrata',t:['LED','Indiretto','Su misura'],
+  {n:'24',c:'decorativi',b:'Cantonnière',nm:'Cantonnières lumineuses',d:'Cache-rideaux avec éclairage LED indirect intégré',t:['LED','Indirect','Sur mesure'],
    i:`<rect x="4" y="8" width="40" height="14" rx="1.5"/><path d="M10 22 L8 34" opacity=".55"/><path d="M17 22 L16 32" opacity=".55"/><path d="M24 22 L24 30" opacity=".55"/><path d="M31 22 L32 32" opacity=".55"/><path d="M38 22 L40 34" opacity=".55"/>`}
 ];
 
@@ -623,7 +623,7 @@ P.forEach(p => {
     <div class="card-body">
       <div class="card-desc">${p.d}</div>
       <div class="card-tags">${p.t.map(x=>`<span class="ctag">${x}</span>`).join('')}</div>
-      <div class="card-cta">Scopri <div class="cbar"></div></div>
+      <div class="card-cta">Découvrir <div class="cbar"></div></div>
     </div>`;
   grid.appendChild(el);
 });
@@ -779,9 +779,9 @@ document.addEventListener('mousemove', e => {
     <div class="pf-col">
       <h2 class="pf-h">Suivez-nous</h2>
       <div class="pf-social">
-        <a href="https://wa.me/393884706887" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3z"></path><path d="M8.5 8.2c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.7 1.1 1.5 1.7 2.6 2.2.3.1.4 0 .6-.1l.6-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.4 0 .5-.2 1.4-.9 1.7-.7.3-1.6.4-3.4-.4-2.4-1-3.9-3.4-4-3.6-.1-.2-1-1.3-1-2.5 0-1.2.6-1.7.9-2z" fill="currentColor" stroke="none"></path></svg></a>
-        <a href="mailto:ordini@pandooragroup.it" aria-label="Scrivici una email"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.6 6.5L12 12.6l8.4-6.1"></path></svg></a>
-        <a href="tel:+393356326505" aria-label="Chiamaci"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 006 6l1.5-2 4 1.5v3c0 .9-.7 1.6-1.6 1.5C10.6 18.4 5.6 13.4 5 6.1c-.1-.9.6-1.6 1.5-1.6z"></path></svg></a>
+        <a href="https://wa.me/393884706887" target="_blank" rel="noopener" aria-label="Écrivez-nous sur WhatsApp"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3z"></path><path d="M8.5 8.2c.2-.5.4-.5.6-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.7 1.1 1.5 1.7 2.6 2.2.3.1.4 0 .6-.1l.6-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.4 0 .5-.2 1.4-.9 1.7-.7.3-1.6.4-3.4-.4-2.4-1-3.9-3.4-4-3.6-.1-.2-1-1.3-1-2.5 0-1.2.6-1.7.9-2z" fill="currentColor" stroke="none"></path></svg></a>
+        <a href="mailto:ordini@pandooragroup.it" aria-label="Envoyez-nous un e-mail"><svg viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.6 6.5L12 12.6l8.4-6.1"></path></svg></a>
+        <a href="tel:+393356326505" aria-label="Appelez-nous"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 006 6l1.5-2 4 1.5v3c0 .9-.7 1.6-1.6 1.5C10.6 18.4 5.6 13.4 5 6.1c-.1-.9.6-1.6 1.5-1.6z"></path></svg></a>
       </div>
       <a class="pf-quote" href="/fr/devis/">Demander un devis
         <svg viewbox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
@@ -806,7 +806,7 @@ document.addEventListener('mousemove', e => {
   <svg viewbox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2zm4.6-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8.9c-.2.2-.4.2-.6.1-.3-.1-.8-.3-1.3-.7-.7-.5-1.3-1.1-1.8-2-.2-.3-.1-.5.1-.7l.5-.7c.1-.2.1-.3 0-.5l-.8-2c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5 0-.7.4-.3.3-.9.9-.9 2.1 0 1.2.9 2.3 1 2.5.1.2 1.7 2.7 4.2 3.7 2 .8 2.4.7 2.9.6.7-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"></path></svg>
   <span class="pf-wa-pulse"></span>
 </a>
-<button class="pf-top-btn" id="pfTop" aria-label="Torna su">
+<button class="pf-top-btn" id="pfTop" aria-label="Retour en haut">
   <svg viewbox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
 </button>
 

@@ -343,7 +343,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
       <form id="qForm" action="https://formsubmit.co/ordini@pandooragroup.it" method="POST" enctype="multipart/form-data" novalidate>
 
         <!-- impostazioni FormSubmit -->
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis depuis le site Pan.door.a">
+        <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto desde la web Pan.door.a">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" id="qNext" value="">
@@ -560,13 +560,13 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
   /* nome del file selezionato + limite 5 MB */
   fileIn.addEventListener('change',function(){
     var f=fileIn.files[0];
-    if(!f){ fileTx.innerHTML='Scegli un file<span>PDF, JPG, PNG, DWG o ZIP — massimo 5 MB</span>'; return; }
+    if(!f){ fileTx.innerHTML='Elegir un archivo<span>PDF, JPG, PNG, DWG o ZIP — máximo 5 MB</span>'; return; }
     if(f.size>5*1024*1024){
       fileIn.value='';
-      fileTx.innerHTML='File troppo grande<span>Il limite è 5 MB — invialo via email o WhatsApp</span>';
+      fileTx.innerHTML='Archivo demasiado grande<span>El límite es de 5 MB — envíalo por email o WhatsApp</span>';
       return;
     }
-    fileTx.innerHTML=f.name+'<span>'+(f.size/1024/1024).toFixed(2)+' MB — clicca per cambiare</span>';
+    fileTx.innerHTML=f.name+'<span>'+(f.size/1024/1024).toFixed(2)+' MB — haz clic para cambiar</span>';
   });
 
   /* validazione */
@@ -585,8 +585,8 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
     if(bad){
       e.preventDefault();
       errTx.textContent = badFields
-        ? 'Controlla i campi evidenziati: alcuni dati obbligatori mancano o non sono validi.'
-        : 'Per inviare la richiesta devi accettare il trattamento dei dati personali.';
+        ? 'Revisa los campos marcados: faltan datos obligatorios o no son válidos.'
+        : 'Para enviar la solicitud debes aceptar el tratamiento de los datos personales.';
       err.classList.add('show');
       bad.focus();
       bad.scrollIntoView({behavior:'smooth',block:'center'});
@@ -594,7 +594,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
     }
     err.classList.remove('show');
     btn.disabled=true;
-    btn.innerHTML='Invio in corso…';
+    btn.innerHTML='Enviando…';
   });
 })();
 </script>
