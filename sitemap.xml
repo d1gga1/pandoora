@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
@@ -1386,7 +1386,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -2585,7 +2585,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires/ignifuge/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/ignifugo/"/>
@@ -3597,13 +3597,16 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
     <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-paris-le-bourget/</loc>
@@ -4299,7 +4302,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/fournisseur-standistes/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/fournisseur-standistes/"/>
@@ -4415,37 +4418,46 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
     <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
     <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/"/>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
     <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-namur-expo/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-namur-expo/"/>
@@ -4455,7 +4467,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/fr/panneaux-alveolaires-liege-expo/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-liege-expo/"/>
@@ -4600,12 +4612,16 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/"/>
     <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-antwerp-expo/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen-brabanthallen/</loc>
@@ -4618,12 +4634,16 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/"/>
     <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-flanders-expo-gent/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-flanders-expo-gand/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen-jaarbeurs-utrecht/</loc>
@@ -4636,12 +4656,16 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/"/>
     <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/"/>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-kortrijk-xpo/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen-mecc-maastricht/</loc>
@@ -4697,7 +4721,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/honingraatpanelen/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/pannelli-tamburati/"/>
@@ -4759,7 +4783,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/"/>
@@ -4884,7 +4908,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/nl/prijzen-honingraatpanelen/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/listino-pannelli-tamburati/"/>
@@ -9326,5 +9350,68 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pandooragroup.it/es/stand-modular-de-madera/"/>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://pandooragroup.it/es/stand-modular-de-madera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/es/stand-modular-de-madera/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-belgique/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-belgique/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-belgique/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/beurswanden-belgie/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/beurswanden-belgie/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/nl/beurswanden-belgie/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/beurswanden-belgie/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/beurswanden-belgie/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-belgique/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-belgique/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="nl-BE" href="https://pandooragroup.it/nl/honingraatpanelen-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-brussels-expo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-charleroi-expo/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-charleroi-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-charleroi-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-charleroi-expo/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-charleroi-expo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-tour-et-taxis/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-tour-et-taxis/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-tour-et-taxis/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-tour-et-taxis/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-tour-et-taxis/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/fr/panneaux-alveolaires-wex-marche-en-famenne/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pandooragroup.it/fr/panneaux-alveolaires-wex-marche-en-famenne/"/>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://pandooragroup.it/fr/panneaux-alveolaires-wex-marche-en-famenne/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://pandooragroup.it/fr/panneaux-alveolaires-wex-marche-en-famenne/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://pandooragroup.it/fr/panneaux-alveolaires-wex-marche-en-famenne/"/>
   </url>
 </urlset>
