@@ -16,6 +16,16 @@ Disallow: /cs/dekujeme/
 Disallow: /sk/dakujeme/
 Disallow: /sl/hvala/
 Disallow: /tr/tesekkurler/
+Disallow: /ro/multumim/
+Disallow: /hu/koszonjuk/
+Disallow: /bg/blagodarim/
+Disallow: /sv/tack/
+Disallow: /da/tak/
+Disallow: /no/takk/
+Disallow: /fi/kiitos/
+Disallow: /lt/aciu/
+Disallow: /lv/paldies/
+Disallow: /et/aitah/
 Disallow: /pandoora_hub.html
 Disallow: /404.html
 

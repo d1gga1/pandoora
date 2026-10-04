@@ -32,6 +32,17 @@
   `;
   const st=document.createElement('style'); st.textContent=CSS; document.head.appendChild(st);
   const FL={
+    ro:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="1" height="2" fill="#002B7F"/><rect x="1" width="1" height="2" fill="#FCD116"/><rect x="2" width="1" height="2" fill="#CE1126"/></svg>`,
+    hu:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="1" fill="#CD2A3E"/><rect y="1" width="3" height="1" fill="#FFFFFF"/><rect y="2" width="3" height="1" fill="#436F4D"/></svg>`,
+    bg:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="1" fill="#FFFFFF"/><rect y="1" width="3" height="1" fill="#00966E"/><rect y="2" width="3" height="1" fill="#D62612"/></svg>`,
+    sv:`<svg viewBox="0 0 22 16" preserveAspectRatio="none"><rect width="22" height="16" fill="#006AA7"/><rect x="6" width="4" height="16" fill="#FECC02"/><rect y="6" width="22" height="4" fill="#FECC02"/></svg>`,
+    da:`<svg viewBox="0 0 22 16" preserveAspectRatio="none"><rect width="22" height="16" fill="#C8102E"/><rect x="6" width="4" height="16" fill="#FFFFFF"/><rect y="6" width="22" height="4" fill="#FFFFFF"/></svg>`,
+    no:`<svg viewBox="0 0 22 16" preserveAspectRatio="none"><rect width="22" height="16" fill="#BA0C2F"/><rect x="6" width="4" height="16" fill="#FFFFFF"/><rect y="6" width="22" height="4" fill="#FFFFFF"/><rect x="7" width="2" height="16" fill="#00205B"/><rect y="7" width="22" height="2" fill="#00205B"/></svg>`,
+    fi:`<svg viewBox="0 0 22 16" preserveAspectRatio="none"><rect width="22" height="16" fill="#FFFFFF"/><rect x="6" width="4" height="16" fill="#002F6C"/><rect y="6" width="22" height="4" fill="#002F6C"/></svg>`,
+    lt:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="1" fill="#FDB913"/><rect y="1" width="3" height="1" fill="#006A44"/><rect y="2" width="3" height="1" fill="#C1272D"/></svg>`,
+    lv:`<svg viewBox="0 0 5 5" preserveAspectRatio="none"><rect width="5" height="5" fill="#9E3039"/><rect y="2" width="5" height="1" fill="#FFFFFF"/></svg>`,
+    et:`<svg viewBox="0 0 3 3" preserveAspectRatio="none"><rect width="3" height="1" fill="#0072CE"/><rect y="1" width="3" height="1" fill="#000000"/><rect y="2" width="3" height="1" fill="#FFFFFF"/></svg>`,
+
     it:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg>`,
     en:`<svg viewBox="0 0 60 30" preserveAspectRatio="none"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30" stroke="#C8102E" stroke-width="3"/><path d="M60,0 L0,30" stroke="#C8102E" stroke-width="3"/><rect x="25" width="10" height="30" fill="#fff"/><rect y="10" width="60" height="10" fill="#fff"/><rect x="27" width="6" height="30" fill="#C8102E"/><rect y="12" width="60" height="6" fill="#C8102E"/></svg>`,
     fr:`<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055a4"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg>`,
@@ -51,8 +62,8 @@
     zh:`<svg viewBox="0 0 30 20" preserveAspectRatio="none"><rect width="30" height="20" fill="#de2910"/><polygon points="5,2 6.2,5.6 10,5.6 6.9,7.8 8.1,11.4 5,9.2 1.9,11.4 3.1,7.8 0,5.6 3.8,5.6" fill="#ffde00"/></svg>`,
     ar:`<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#00732f"/><rect y="2" width="12" height="2" fill="#fff"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#ff0000"/></svg>`
   };
-  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',pt:'Português',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',hr:'Hrvatski',sr:'Srpski',sq:'Shqip',el:'Ελληνικά',tr:'Türkçe',ar:'العربية',zh:'中文'};
-  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',pt:'PT',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',hr:'HR',sr:'SR',sq:'SQ',el:'EL',tr:'TR',ar:'AR',zh:'ZH'};
+  const NM={it:'Italiano',en:'English',fr:'Français',de:'Deutsch',es:'Español',pt:'Português',nl:'Nederlands',pl:'Polski',cs:'Čeština',sk:'Slovenčina',sl:'Slovenščina',hr:'Hrvatski',sr:'Srpski',sq:'Shqip',el:'Ελληνικά',tr:'Türkçe',ar:'العربية',zh:'中文',ro:'Română',hu:'Magyar',bg:'Български',sv:'Svenska',da:'Dansk',no:'Norsk',fi:'Suomi',lt:'Lietuvių',lv:'Latviešu',et:'Eesti'};
+  const CD={it:'IT',en:'EN',fr:'FR',de:'DE',es:'ES',pt:'PT',nl:'NL',pl:'PL',cs:'CS',sk:'SK',sl:'SL',hr:'HR',sr:'SR',sq:'SQ',el:'EL',tr:'TR',ar:'AR',zh:'ZH',ro:'RO',hu:'HU',bg:'BG',sv:'SV',da:'DA',no:'NO',fi:'FI',lt:'LT',lv:'LV',et:'ET'};
   const GLOBE=`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>`;
   const CK=`<svg class="pdlang-ck" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7"/></svg>`;
   const wrap=document.createElement('div'); wrap.className='pdlang';
@@ -256,7 +267,7 @@
   Object.keys(SLUG).forEach(function(it){
     Object.keys(SLUG[it]).forEach(function(l){ CANON[l + '/' + SLUG[it][l]] = it; });
   });
-  const LANGS = ['it','en','fr','de','es','pt','nl','pl','cs','sk','sl','hr','sr','sq','el','tr','ar','zh'];
+  const LANGS = ['it','en','fr','de','es','pt','nl','pl','cs','sk','sl','hr','sr','sq','el','tr','ar','zh','ro','hu','bg','sv','da','no','fi','lt','lv','et'];
   /* slug tradotti per hr / sq / el (pagine realmente esistenti) */
   const EXTRA = {
     hr: {'porte':'unutarnja-vrata','contatti':'kontakt','preventivo':'ponuda','azienda':'o-nama'},
@@ -271,7 +282,7 @@
   function parsePath(){
     let p = location.pathname.replace(/^\/+/, '').replace(/index\.html$/, '');
     let lang = 'it';
-    const m = p.match(/^(en|fr|de|es|pt|nl|pl|cs|sk|sl|hr|sr|sq|el|tr|ar|zh)(\/|$)(.*)$/);
+    const m = p.match(/^(en|fr|de|es|pt|nl|pl|cs|sk|sl|hr|sr|sq|el|tr|ar|zh|ro|hu|bg|sv|da|no|fi|lt|lv|et)(\/|$)(.*)$/);
     if (m) { lang = m[1]; p = m[3] || ''; }
     p = p.replace(/\/+$/, '');
     if (lang !== 'it' && CANON[lang + '/' + p]) p = CANON[lang + '/' + p];
