@@ -286,3 +286,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
   .pg-foto--lead img{max-height:360px}
   .pg-foto-grid img{height:230px}
 }
+
+/* link nelle tabelle (07/10/2026) */
+.pg-table td a{color:var(--blue,#2e6be6);text-decoration:none;border-bottom:1px solid rgba(46,107,230,.3)}
+.pg-table td a:hover{color:var(--red);border-color:var(--red)}

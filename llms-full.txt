@@ -1615,7 +1615,7 @@ LE
 NOSTRE
 PORTE
 33 modelli · Su misura · Le produciamo e le montiamo noi
-Da 195 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
+Da 395 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
 Esplora
 01 · Preventivo Risposta entro 24 ore Preventivo scritto sulle misure indicative che ci mandate, con modelli, finiture, ferramenta e posa già dentro. Quello che leggete è quello che pagate.
 02 · Sopralluogo Veniamo a misurare Una volta confermato l'ordine, rilievo definitivo dei vani a casa vostra.
@@ -1893,7 +1893,7 @@ Richiedi preventivo
 Produzione porte · dal 1987
 ## Porte tamburate su misura
 Una porta tamburata è una porta cava, e non è un compromesso: è la stessa costruzione dei pannelli che produciamo per gli stand da quarant'anni. Quello che la rende buona o mediocre sta tutto dentro, dove non si vede (se volete partire dal materiale, ecco cos'è il legno tamburato ).
-Da 195 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
+Da 395 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
 ## Che cos'è una porta tamburata
 Una porta tamburata è una porta cava . Non è un difetto né un compromesso di prezzo: è una scelta costruttiva, ed è la stessa che sta dietro al pannello tamburato che
 produciamo per gli stand fieristici da quasi quarant'anni.
@@ -2128,7 +2128,7 @@ Richiedi preventivo
 Finiture
 ## Porte laccate in tinta RAL
 "Bianco" non è un colore ma una famiglia, e tra un RAL 9010 e un RAL 9016 la differenza si vede. Lacchiamo internamente in qualsiasi tinta della cartella, lucida o opaca, sulla singola anta.
-Da 195 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
+Da 395 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
 ## Cosa vuol dire laccata, e perché non tutti i bianchi sono uguali
 "Bianco" non è un colore: è una famiglia. Tra un RAL 9010 bianco puro , un
 RAL 9003 bianco segnale e un RAL 9016 bianco traffico la
@@ -2221,7 +2221,7 @@ Richiedi preventivo
 Aperture
 ## Porte scorrevoli interno muro
 È la soluzione che libera più spazio, ma si decide prima che la parete sia chiusa. Ecco quando si può ancora fare, quali sono le alternative reali e i dettagli che nessuno racconta prima della posa.
-Da 195 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
+Da 395 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
 ## La regola che decide tutto: la parete
 Lo scorrevole interno muro è la soluzione che libera più spazio in assoluto: l'anta sparisce
 dentro la parete e i circa 80 cm di raggio che una battente si mangia davanti a sé tornano
@@ -3852,7 +3852,7 @@ Richiedi preventivo
 Linea laminata
 ## Porte interne laminate su misura
 La linea che regge l'uso: superficie stratificata resistente a graffi e pulizia frequente, tempi di consegna più brevi della laccata, e lo stesso fuori misura di tutte le nostre porte.
-Da 195 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
+Da 395 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
 ## Cos'è davvero una porta laminata
 Una porta laminata non è una porta «di serie B». È una porta il cui rivestimento è un
 foglio stratificato — carte decorative impregnate di resine e pressate ad alta
@@ -3952,7 +3952,7 @@ Richiedi preventivo
 Filo muro
 ## Porte a filo muro su misura
 Anta complanare alla parete, telaio a scomparsa, nessun coprifilo. È l'intervento in cui prodotto e posa sono la stessa cosa: per questo lo facciamo dall'inizio alla fine.
-Da 195 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
+Da 395 € a porta · IVA esclusa — il prezzo finale dipende da finitura, misura, tipo di apertura e ferramenta. Come si forma il prezzo
 ## Cos'è una porta a filo muro
 Una porta a filo muro è un'anta complanare alla parete : niente coprifili,
 niente telaio a vista, nessuno stacco fra porta e muro. Chiusa, si legge come una superficie
@@ -4865,3 +4865,9 @@ Catalogo porte 2026 33 modelli su tre linee, in PDF, più il campionario fisico 
 Diventa rivenditore Listino riservato, campionario in comodato e continuità di modello negli anni.
 
 ---
+
+## Pagine estere aggiunte il 07/10/2026
+- Hotel doors: [EN](https://pandooragroup.it/en/hotel-doors/) · [ES](https://pandooragroup.it/es/puertas-para-hoteles/) · [SQ](https://pandooragroup.it/sq/dyer-per-hotele/) · [HR](https://pandooragroup.it/hr/vrata-za-hotele-i-apartmane/) · [SR](https://pandooragroup.it/sr/vrata-za-hotele/) · [EL](https://pandooragroup.it/el/portes-xenodocheion/)
+- Built-in wardrobes: [EN](https://pandooragroup.it/en/built-in-wardrobes/) · [ES](https://pandooragroup.it/es/armarios-a-medida/) · [SQ](https://pandooragroup.it/sq/dollape-me-porosi/) · [HR](https://pandooragroup.it/hr/ugradbeni-ormari-po-mjeri/) · [SR](https://pandooragroup.it/sr/plakari-po-meri/) · [EL](https://pandooragroup.it/el/ntoulapes-kata-paraggelia/)
+- Raised stand floor: [PL](https://pandooragroup.it/pl/podloga-na-stoisko/) · [NL](https://pandooragroup.it/nl/beursvloer/)
+- Woodworking subcontracting: [DE](https://pandooragroup.it/de/lohnfertigung-holz/) · [EN](https://pandooragroup.it/en/woodworking-subcontracting/)
