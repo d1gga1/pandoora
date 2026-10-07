@@ -409,7 +409,7 @@ const gal=document.getElementById('gallery');
 P.images.forEach((im,i)=>{
   const f=document.createElement('figure');
   f.dataset.i=i;
-  f.innerHTML='<img src="/'+img(im[0],1000)+'" alt="'+P.title.join(' ')+' '+(i+1)+'" loading="lazy" decoding="async"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>';
+  f.innerHTML='<img src="'+img(im[0],1000)+'" alt="'+P.title.join(' ')+' '+(i+1)+'" loading="lazy" decoding="async"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>';
   f.addEventListener('click',()=>openLb(i));
   gal.appendChild(f);
 });
@@ -423,7 +423,7 @@ ORDER.filter(s=>s!==slug).forEach(s=>{
   const pr=PROJECTS[s];
   const a=document.createElement('a');
   a.className='ocard';a.href='/fr/projet/?p='+s;
-  a.innerHTML='<img src="/'+img(pr.images[0][0],800)+'" alt="'+pr.title.join(' ')+'" loading="lazy" decoding="async"><div class="ocard-info"><div><span>'+pr.cat.split('·')[0].trim()+'</span><h4>'+pr.title.join(' ')+'</h4></div><span class="ocard-go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
+  a.innerHTML='<img src="'+img(pr.images[0][0],800)+'" alt="'+pr.title.join(' ')+'" loading="lazy" decoding="async"><div class="ocard-info"><div><span>'+pr.cat.split('·')[0].trim()+'</span><h4>'+pr.title.join(' ')+'</h4></div><span class="ocard-go"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
   og.appendChild(a);
 });
 
