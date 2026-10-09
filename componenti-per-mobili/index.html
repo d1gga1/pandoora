@@ -336,6 +336,13 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
 .gi-lbl{font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);opacity:0;transform:translateY(5px);transition:opacity .35s,transform .35s}
 .gitem:hover .gi-lbl{opacity:1;transform:translateY(0)}
 
+.gitem img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;transform:scale(1.01);transition:transform .8s cubic-bezier(.25,.46,.45,.94),opacity .45s}
+.gitem:hover img{transform:scale(1.06);opacity:1}
+.gitem:has(img)::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,13,18,.75) 100%);pointer-events:none}
+.gitem:has(img) .gitem-inner{z-index:1;justify-content:flex-end;padding-bottom:20px}
+.gitem:has(img) .gi-icon{display:none}
+.gitem:has(img) .gi-lbl{opacity:.85;transform:none;color:#fff}
+
 /* ── footer ── */
 .foot{
   border-top:1px solid var(--border);padding:28px 48px;
@@ -457,6 +464,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
   </div>
   <div class="gstrip">
     <div class="gitem">
+      <img src="/assets/componenti/g1.jpg" alt="Cucina su misura con ante laccate in MDF e colonne in rovere" loading="lazy" decoding="async" onerror="this.remove()">
       <div class="gitem-inner">
         <svg class="gi-icon" width="64" height="64" viewBox="0 0 60 60" fill="none" stroke="white" stroke-width="1">
           <rect x="8" y="8" width="44" height="44" rx="2"/><rect x="16" y="16" width="12" height="28" rx="1"/><rect x="32" y="16" width="20" height="12" rx="1"/><rect x="32" y="32" width="20" height="12" rx="1"/>
@@ -465,6 +473,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
       </div>
     </div>
     <div class="gitem">
+      <img src="/assets/componenti/g2.jpg" alt="Ante laccate in MDF verde salvia per armadio a tutta altezza" loading="lazy" decoding="async" onerror="this.remove()">
       <div class="gitem-inner">
         <svg class="gi-icon" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1">
           <rect x="8" y="6" width="32" height="36" rx="1.5"/><line x1="8" y1="14" x2="40" y2="14"/><circle cx="33" cy="26" r="2.5" fill="white"/>
@@ -473,6 +482,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
       </div>
     </div>
     <div class="gitem">
+      <img src="/assets/componenti/g3.jpg" alt="Boiserie in MDF laccato con cornici classiche in soggiorno" loading="lazy" decoding="async" onerror="this.remove()">
       <div class="gitem-inner">
         <svg class="gi-icon" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1">
           <rect x="4" y="4" width="18" height="40" rx="1"/><rect x="26" y="4" width="18" height="40" rx="1"/><rect x="7" y="8" width="12" height="14" rx="1"/><rect x="7" y="26" width="12" height="14" rx="1"/><rect x="29" y="8" width="12" height="14" rx="1"/><rect x="29" y="26" width="12" height="14" rx="1"/>
@@ -481,6 +491,7 @@ body{background:var(--ink);color:#fff;font-family:'Helvetica Neue',Helvetica,Ari
       </div>
     </div>
     <div class="gitem">
+      <img src="/assets/componenti/g4.jpg" alt="Testiera letto imbottita con cornice in noce massello" loading="lazy" decoding="async" onerror="this.remove()">
       <div class="gitem-inner">
         <svg class="gi-icon" width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="1">
           <path d="M6 42 L6 18 Q6 6 24 6 Q42 6 42 18 L42 42"/><line x1="6" y1="42" x2="42" y2="42"/><line x1="6" y1="32" x2="42" y2="32"/>
