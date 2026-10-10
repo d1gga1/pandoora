@@ -724,19 +724,64 @@
   }
   function initFit(){
     var box=$('#s-fit');if(!box)return;
-    var w=$('#fit-w'),h=$('#fit-h'),ow=$('#fit-wo'),oh=$('#fit-ho'),pr=$('#fit-p'),body=$('#fit-body'),dw=$('#fit-dw'),dh=$('#fit-dh'),tw=$('#fit-tw'),th=$('#fit-th');
-    var p=byId('madia-3-ante');
-    function upd(){
+    var w=$('#fit-w'),h=$('#fit-h'),ow=$('#fit-wo'),oh=$('#fit-ho'),pr=$('#fit-p'),pn=$('#fit-pn'),obj=$('#fit-obj'),stage=$('#fit-stage'),badge=$('#fit-badge');
+    var p=byId('madia-3-ante'),D=45,LEG=12,fin='Bianco opaco';
+    var FIN={'Bianco opaco':{front:'#f3f2ee',edge:'#ddd6c8',top:'#c9a273',side:'#e6e1d6',grain:'none'},
+      'Rovere naturale':{front:'#c49a68',edge:'#a98458',top:'#c9a273',side:'#b58c5c',grain:'repeating-linear-gradient(90deg,rgba(90,55,20,.10) 0 2px,transparent 2px 13px)'},
+      'Grigio seta':{front:'#bcb8b1',edge:'#a8a49d',top:'#c9a273',side:'#aeaaa3',grain:'none'},
+      'Laccato RAL':{front:'#8fae80',edge:'#7d9a6f',top:'#c9a273',side:'#83a275',grain:'none'}};
+    obj.innerHTML='<div class="f2-shadow"></div><span class="f2-leg"></span><span class="f2-leg"></span><span class="f2-leg"></span><span class="f2-leg"></span><div class="f2-f f2-side"></div><div class="f2-f f2-top"></div><div class="f2-f f2-front"></div><div class="f2-dim w"><span></span></div><div class="f2-dim h"><span></span></div>';
+    var hd=document.createElement('div');hd.className='f2-hdls';hd.innerHTML='<span class="f2-hdl" data-k="w" role="slider" tabindex="0" aria-label="Larghezza"></span><span class="f2-hdl v" data-k="h" role="slider" tabindex="0" aria-label="Altezza"></span>';stage.appendChild(hd);
+    var shadow=$('.f2-shadow',obj),legs=$$('.f2-leg',obj),side=$('.f2-side',obj),top=$('.f2-top',obj),front=$('.f2-front',obj),dw=$('.f2-dim.w',obj),dh=$('.f2-dim.h',obj);
+    var nDoors=0,S=2;
+    function scale(){var sw=stage.clientWidth,sh=stage.clientHeight;S=Math.min(sw*.62/260,sh*.5/(110+LEG));}
+    function px(v){return v*S}
+    function upd(anim){
       var W=+w.value,H=+h.value;ow.textContent=W+' cm';oh.textContent=H+' cm';
-      var sw=W/260*300,sh=H/120*170,x=(400-sw)/2+10,y=250-sh;
-      body.setAttribute('x',x);body.setAttribute('y',y);body.setAttribute('width',sw);body.setAttribute('height',sh);
-      dw.setAttribute('d','M'+x+' 275 H'+(x+sw)+' M'+x+' 268 v14 M'+(x+sw)+' 268 v14');tw.setAttribute('x',x+sw/2);tw.textContent=W+' cm';
-      dh.setAttribute('d','M'+(x-22)+' '+y+' V250 M'+(x-29)+' '+y+' h14 M'+(x-29)+' 250 h14');th.setAttribute('y',y+sh/2);th.setAttribute('x',x-30);th.textContent=H+' cm';
-      var doors=Math.max(1,Math.round(W/60));var g='';for(var i=1;i<doors;i++){var lx=x+sw*i/doors;g+='M'+lx+' '+(y+8)+' V'+(250-8)+' '}
-      $('#fit-div').setAttribute('d',g);
-      if(p){var q=furnQuote(p,{size:'custom',w:W,d:45,h:H,fin:'Rovere naturale'});tween(pr,q.unit)}
+      var Wp=px(W),Hp=px(H),Dp=px(D),Lp=px(LEG),yTop=-(Lp+Hp);
+      function st(el,o){for(var k in o)el.style[k]=o[k]}
+      st(front,{left:(-Wp/2)+'px',top:yTop+'px',width:Wp+'px',height:Hp+'px',transform:'translateZ('+(Dp/2)+'px)'});
+      st(top,{left:(-Wp/2)+'px',top:(yTop-Dp/2)+'px',width:Wp+'px',height:Dp+'px',transform:'rotateX(90deg)'});
+      st(side,{left:(Wp/2-Dp/2)+'px',top:yTop+'px',width:Dp+'px',height:Hp+'px',transform:'rotateY(90deg)'});
+      var lx=[-Wp/2+8,Wp/2-14],lz=[Dp/2-8,-Dp/2+8];
+      legs.forEach(function(l,i){st(l,{left:lx[i%2]+'px',top:(-Lp)+'px',height:Lp+'px',transform:'translateZ('+lz[i<2?0:1]+'px)'})});
+      st(shadow,{left:(-Wp/2-20)+'px',top:(-Dp/2-10)+'px',width:(Wp+40)+'px',height:(Dp+20)+'px'});
+      st(dw,{left:(-Wp/2)+'px',top:'22px',width:Wp+'px',transform:'translateZ('+(Dp/2+24)+'px)'});$('span',dw).textContent=W+' cm';
+      st(dh,{left:(-Wp/2-26)+'px',top:yTop+'px',height:Hp+'px',transform:'translateZ('+(Dp/2)+'px)'});$('span',dh).textContent=H+' cm';
+      var n=Math.max(2,Math.min(5,Math.round(W/58)));
+      if(n!==nDoors){nDoors=n;front.innerHTML='';for(var i=0;i<n;i++){var dd=document.createElement('div');dd.className='f2-door '+(i<n/2?'l':'r');front.appendChild(dd);if(anim!==false&&dd.animate&&!RM)dd.animate([{transform:'scaleX(0)',opacity:0},{transform:'none',opacity:1}],{duration:500,delay:i*60,easing:'cubic-bezier(.34,1.56,.64,1)'})}}
+      var F=FIN[fin];obj.style.setProperty('--c-front',F.front);obj.style.setProperty('--c-edge',F.edge);obj.style.setProperty('--c-top',F.top);obj.style.setProperty('--c-side',F.side);obj.style.setProperty('--grain',F.grain);
+      badge.textContent=W+' × '+D+' × '+H+' cm · '+n+' ante';
+      if(pn)pn.textContent='Madia Corte · '+n+' ante · '+(fin==='Laccato RAL'?'RAL 6021':fin)+' · IVA inclusa';
+      if(p){var q=furnQuote(p,{size:'custom',w:W,d:D,h:H,fin:fin,ral:'6021'});tween(pr,q.unit)}
+      placeHandles();
     }
-    w.oninput=h.oninput=upd;upd();
+    function placeHandles(){
+      // posizione dei pallini proiettata sullo schermo
+      var r=stage.getBoundingClientRect(),fr=front.getBoundingClientRect();
+      var hw=$('[data-k="w"]',hd),hh=$('[data-k="h"]',hd);
+      hw.style.left=(fr.right-r.left)+'px';hw.style.top=(fr.top-r.top+fr.height/2)+'px';
+      hh.style.left=(fr.left-r.left+fr.width/2)+'px';hh.style.top=(fr.top-r.top)+'px';
+    }
+    w.oninput=h.oninput=function(){box.classList.add('used');upd()};
+    $$('#fit-fin button').forEach(function(b){b.onclick=function(){fin=b.dataset.f;$$('#fit-fin button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});upd()}});
+    // trascinamento
+    $$('.f2-hdl',hd).forEach(function(el){
+      var k=el.dataset.k,inp=k==='w'?w:h,sx=0,sy=0,v0=0,on=false;
+      el.addEventListener('pointerdown',function(e){on=true;sx=e.clientX;sy=e.clientY;v0=+inp.value;el.setPointerCapture(e.pointerId);box.classList.add('used');e.preventDefault()});
+      el.addEventListener('pointermove',function(e){if(!on)return;var dcm=k==='w'?(e.clientX-sx)*2/S/0.87:-(e.clientY-sy)/S;inp.value=Math.round(clamp(v0+dcm,+inp.min,+inp.max));upd(true)});
+      el.addEventListener('pointerup',function(){on=false});el.addEventListener('pointercancel',function(){on=false});
+      el.addEventListener('keydown',function(e){var s=e.key==='ArrowRight'||e.key==='ArrowUp'?1:e.key==='ArrowLeft'||e.key==='ArrowDown'?-1:0;if(s){e.preventDefault();inp.value=clamp(+inp.value+s*5,+inp.min,+inp.max);upd()}});
+    });
+    // la vista ruota piano col mouse
+    if(FINE&&!RM)stage.addEventListener('pointermove',function(e){if(e.target.classList.contains('f2-hdl'))return;var r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5;obj.style.transform='rotateX(-10deg) rotateY('+(-30+x*22)+'deg)';clearTimeout(obj._t);obj._t=setTimeout(placeHandles,700)});
+    stage.addEventListener('pointerleave',function(){obj.style.transform='';setTimeout(placeHandles,700)});
+    scale();upd(false);setTimeout(placeHandles,700);
+    addEventListener('resize',function(){scale();upd(false)});
+    // ingresso: il mobile si monta
+    if(!RM&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();
+      var parts=[top,side,front].concat(legs);parts.forEach(function(el,i){el.animate&&el.animate([{opacity:0,translate:'0 -60px'},{opacity:1,translate:'0 0'}],{duration:700,delay:200+i*90,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'})});
+      var demo=[180,215,150,180],di=0;setTimeout(function step(){if(box.classList.contains('used')||di>=demo.length)return;w.value=demo[di++];upd();setTimeout(step,1100)},1300)},{threshold:.4});io.observe(stage)}
     var go=$('#fit-go');if(go)go.onclick=function(){openProduct('madia-3-ante')};
   }
   function initHome(){

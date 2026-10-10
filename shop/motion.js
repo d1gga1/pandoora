@@ -109,6 +109,45 @@
     g.from(el,{y:80,opacity:0,duration:1,ease:'power3.out',delay:i*.1,scrollTrigger:{trigger:el,start:'top 92%'}});
   });
 
+  /* ---------- TRE LINEE: scena fissata con porte che si aprono ---------- */
+  var lx=$('#s-lx');
+  if(lx){
+    var lxPin=$('.lx-pin',lx),doors=$$('.lx-door',lx),names=$$('.lx-n',lx),descs=$$('.lx-d',lx),bars=$$('.lx-prog li',lx),num=$('.lx-num',lx),chipsL=$$('.lx-chip',lx);
+    var PRICES=[395,495,595],COL=[['rgba(168,138,99,.6)','#e2c793','rgba(200,170,110,.3)'],['rgba(91,141,239,.55)','#b9cdf7','rgba(120,170,255,.3)'],['rgba(200,170,110,.6)','#f0d59a','rgba(240,200,120,.35)']];
+    var vert=matchMedia('(max-width:1000px)').matches;
+    names.forEach(function(n){var t=n.textContent;n.innerHTML=t.split('').map(function(c){return '<span class="ch">'+(c===' '?'&nbsp;':c)+'</span>'}).join('')});
+    g.set(doors.slice(1),{rotateY:-100,opacity:0});g.set(names.slice(1),{opacity:0});g.set(descs.slice(1),{opacity:0,y:20});
+    var pr={v:PRICES[0]},cur=-1;
+    function setLine(i){if(i===cur)return;cur=i;bars.forEach(function(b,k){b.classList.toggle('on',k===i)});
+      lx.style.setProperty('--a1',COL[i][0]);lx.style.setProperty('--pc',COL[i][1]);lx.style.setProperty('--a2',COL[i][2]);
+      var lk=$('[data-lx-link]',lx);if(lk)lk.href='/shop/porte-per-interni/#'+(['battenti','laccate-ral','laccate-ral'][i]);}
+    setLine(0);
+    var lt=g.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:lx,start:'top top',end:'+=220%',pin:lxPin,scrub:.7,anticipatePin:1,
+      onUpdate:function(s){var p=s.progress;setLine(p<.4?0:p<.75?1:2);
+        bars.forEach(function(b,k){var f=g.utils.clamp(0,1,(p-k/3)*3);g.set($('b',b),vert?{scaleX:f}:{scaleY:f})})}}});
+    // ingresso
+    var intro=g.timeline({scrollTrigger:{trigger:lx,start:'top 65%'}});
+    intro.from(doors[0],{rotateY:80,opacity:0,duration:1.4,ease:'power3.out'})
+      .from($$('.ch',names[0]),{yPercent:100,opacity:0,stagger:.025,duration:.8,ease:'power3.out'},.1)
+      .from(chipsL,{opacity:0,duration:.6,stagger:.08},.4);
+    lt.to({},{duration:.3},0);
+    function step(i,at){
+      lt.to(doors[i-1],{rotateY:-105,opacity:0,duration:.22,ease:'power2.in'},at)
+        .fromTo(doors[i],{rotateY:100,opacity:0},{rotateY:0,opacity:1,duration:.24,ease:'power2.out'},at+.08)
+        .fromTo($('.lx-glare',doors[i]),{backgroundPosition:'150% 0'},{backgroundPosition:'-60% 0',duration:.3},at+.18)
+        .to($$('.ch',names[i-1]),{yPercent:-100,opacity:0,stagger:.004,duration:.12},at)
+        .set(names[i-1],{opacity:0},at+.15).set(names[i],{opacity:1},at+.1)
+        .fromTo($$('.ch',names[i]),{yPercent:100,opacity:0},{yPercent:0,opacity:1,stagger:.005,duration:.14},at+.1)
+        .to(descs[i-1],{opacity:0,y:-20,duration:.1},at)
+        .fromTo(descs[i],{opacity:0,y:20},{opacity:1,y:0,duration:.12},at+.12)
+        .to(pr,{v:PRICES[i],duration:.2,ease:'power2.inOut',onUpdate:function(){num.textContent=Math.round(pr.v)}},at+.05)
+        .fromTo(num,{filter:'blur(0px)'},{filter:'blur(6px)',duration:.1,yoyo:true,repeat:1},at+.05)
+        .to(chipsL,{y:'-=14',stagger:.01,duration:.12,yoyo:true,repeat:1},at);
+    }
+    step(1,.36);step(2,.7);
+    lt.to({},{duration:.06});
+  }
+
   /* ---------- disegno su misura e icone: tratto che si disegna ---------- */
   $$('[data-m="draw"]').forEach(function(el){
     g.from(el,{clipPath:'inset(0 100% 0 0 round 16px)',duration:1.4,ease:'power3.inOut',scrollTrigger:{trigger:el,start:'top 85%'}});
@@ -126,7 +165,7 @@
       g.to(b,{opacity:1,y:0,rotateX:0,duration:1,ease:'power4.out',stagger:.07,overwrite:true});
       b.forEach(function(n,i){var im=$('.s-card-img',n);if(im)g.to(im,{clipPath:'inset(0% 0% 0% 0% round 16px)',duration:1.1,ease:'power4.out',delay:i*.07,clearProps:'clipPath'})});
     }});
-    ScrollTrigger.refresh();
+    ScrollTrigger.sort();ScrollTrigger.refresh();
   }
 
   /* ---------- rail "I più scelti": scorrimento orizzontale fissato ---------- */
@@ -134,8 +173,8 @@
     if(!r||!DESK)return;
     var sec=r.closest('section');sec.classList.add('pdm-pin');
     var dist=function(){return Math.max(0,r.scrollWidth-r.clientWidth+40)};
-    g.to(r,{x:function(){return -dist()},ease:'none',scrollTrigger:{trigger:sec,start:'top top+=40',end:function(){return '+='+dist()},pin:true,scrub:.6,invalidateOnRefresh:true,anticipatePin:1}});
-    ScrollTrigger.refresh();
+    g.to(r,{x:function(){return -dist()},ease:'none',scrollTrigger:{trigger:sec,start:'top top+=40',end:function(){return '+='+dist()},pin:true,scrub:.6,invalidateOnRefresh:true,anticipatePin:1,refreshPriority:1}});
+    ScrollTrigger.sort();ScrollTrigger.refresh();
   }
 
   /* ---------- HOME: si entra dalla porta ---------- */
@@ -206,7 +245,7 @@
         for(var i=0;i<P.length;i++){var pt=P[i];pt.y-=pt.s;pt.a+=.01;if(pt.y<0)pt.y=1;var px=ox+(pt.x+Math.sin(pt.a)*.02)*ow,py=oy+pt.y*oh;
           cx.globalAlpha=pt.o*(.5+.5*Math.sin(pt.a*1.7))*fade*Math.min(1,st.ajar/20);cx.fillStyle='#fff6e2';cx.beginPath();cx.arc(px,py,pt.r*dpr,0,6.283);cx.fill()}});}
     measure();
-    var tl=g.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:dj,start:function(){return 'top top+='+(hdrEl?hdrEl.offsetHeight:0)},end:'+=170%',pin:pin,scrub:.8,anticipatePin:1,invalidateOnRefresh:true,onRefresh:measure}});
+    var tl=g.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:dj,start:function(){return 'top top+='+(hdrEl?hdrEl.offsetHeight:0)},end:'+=170%',pin:pin,scrub:.8,anticipatePin:1,invalidateOnRefresh:true,refreshPriority:10,onRefresh:measure}});
     tl.fromTo(st,{p:0},{p:1,duration:1,onUpdate:render},0)
       .fromTo(copy,{y:0,opacity:1},{y:-90,opacity:0,duration:.18},0)
       .fromTo(hint,{opacity:1},{opacity:0,duration:.08},0)
@@ -231,13 +270,14 @@
   /* ---------- CATEGORIE: parola gigante e titolo ---------- */
   var bw=$('.s-bgword');
   if(bw){g.from(bw,{xPercent:20,opacity:0,duration:1.6,ease:'power4.out',delay:html.classList.contains('pd-wipe')?.4:.1});g.to(bw,{xPercent:-25,ease:'none',scrollTrigger:{trigger:d.body,start:'top top',end:'+=1200',scrub:true}})}
-  var sub=$$('.s-sub');if(sub.length)g.from(sub,{y:30,opacity:0,duration:.8,ease:'power3.out',stagger:.05,delay:.35});
-  var tools=$('.s-tools');if(tools)g.from(tools,{opacity:0,y:20,duration:.8,delay:.5});
+  var sub=$$('.s-sub');if(sub.length){sub.forEach(function(x){x.style.transition='none'});g.fromTo(sub,{y:30,opacity:0},{y:0,opacity:1,duration:.8,ease:'power3.out',stagger:.05,delay:.35,clearProps:'transform,opacity,transition'})}
+  var tools=$('.s-tools');if(tools)g.fromTo(tools,{opacity:0},{opacity:1,duration:.8,delay:.5,clearProps:'opacity'});
 
   /* ---------- testata che si nasconde scendendo, riappare salendo ---------- */
   var head=$('.s-head'),last=0;
   var djEnd=function(){var e=$('#s-dj');return e?e.getBoundingClientRect().bottom+window.scrollY+innerHeight*1.8:0};
   if(head&&lenis){lenis.on('scroll',function(l){var y=l.scroll;if(y>Math.max(400,djEnd())&&y>last+4&&!d.body.classList.contains('s-cart-open'))head.classList.add('s-hide');else if(y<last-4||y<400)head.classList.remove('s-hide');last=y})}
 
-  addEventListener('load',function(){ScrollTrigger.refresh()});
+  ScrollTrigger.sort();ScrollTrigger.refresh();
+  addEventListener('load',function(){ScrollTrigger.sort();ScrollTrigger.refresh()});
 })();
