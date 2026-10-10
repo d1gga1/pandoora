@@ -71,6 +71,10 @@ body:not(.embed) .full{display:none}
   .step span{font-size:13px}
   .hint{display:none}
 }
+[hidden]{display:none!important}
+.seg button.sim{background:var(--red);border-color:var(--red);color:#fff;font-size:14px;padding:12px 8px}
+.seg button.sim:hover{background:#a12b1e}
+.seg button.sim[aria-pressed="true"]{background:#a12b1e;border-color:#a12b1e}
 </style>
 </head>
 <body>
@@ -101,7 +105,7 @@ body:not(.embed) .full{display:none}
         <button data-m="esploso" aria-pressed="false">Esploso</button>
         <button data-m="xx" aria-pressed="false">Sezione X-X</button>
         <button data-m="yy" aria-pressed="false">Sezione Y-Y</button>
-        <button class="wide" data-m="montaggio" aria-pressed="false">Montaggio pannelli</button>
+        <button class="wide sim" data-m="montaggio" aria-pressed="false">▶ Simula montaggio pannelli</button>
       </div>
       <div class="slider" id="cutWrap" hidden>
         <label for="cut"><span id="cutLabel">Posizione taglio</span><output id="cutOut">1500 mm</output></label>

@@ -74,6 +74,13 @@ body:not(.embed) .full{display:none}
 .readout{position:absolute;right:10px;top:52px;font:700 12px var(--body);background:#fff;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;pointer-events:none;font-variant-numeric:tabular-nums}
 .ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
 @media (max-width:760px){.readout{top:auto;bottom:10px;left:10px;right:auto}}
+[hidden]{display:none!important}
+.seg.three{grid-template-columns:repeat(3,1fr)}
+.seg.three button{font-size:12.5px;padding:9px 4px;font-variant-numeric:tabular-nums}
+.seg button.sim{background:var(--red);border-color:var(--red);color:#fff;font-size:14px;padding:12px 8px}
+.seg button.sim:hover{background:#a12b1e}
+.seg button.sim[aria-pressed="true"]{background:#a12b1e;border-color:#a12b1e}
+.note{margin:8px 0 0;font-size:12px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -93,7 +100,7 @@ body:not(.embed) .full{display:none}
 
   <aside>
     <div>
-      <p class="ttl">Pedana tamburata 998 × 998 × 40</p>
+      <p class="ttl" id="ttl">Pedana tamburata 998 × 998 × 40</p>
       <div class="ref">Pan.door.a · modello 3D</div>
     </div>
 
@@ -104,7 +111,7 @@ body:not(.embed) .full{display:none}
         <button data-m="esploso" aria-pressed="false">Esploso</button>
         <button data-m="aa" aria-pressed="false">Sezione A-A</button>
         <button data-m="piedino" aria-pressed="false">Piedino</button>
-        <button class="wide" data-m="montaggio" aria-pressed="false">Montaggio pedana</button>
+        <button class="wide sim" data-m="montaggio" aria-pressed="false">▶ Simula montaggio pedane</button>
       </div>
       <div class="slider" id="cutWrap" hidden>
         <label for="cut"><span>Posizione taglio</span><output id="cutOut">499 mm</output></label>
@@ -122,6 +129,16 @@ body:not(.embed) .full{display:none}
         <button id="play" aria-label="Pausa">❚❚</button>
         <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Avanzamento del montaggio">
       </div>
+    </section>
+
+    <section>
+      <h2>Formato</h2>
+      <div class="seg three" id="sizes">
+        <button data-s="grande" aria-pressed="true">998 × 998</button>
+        <button data-s="media" aria-pressed="false">998 × 498</button>
+        <button data-s="piccola" aria-pressed="false">498 × 498</button>
+      </div>
+      <p class="note">Spessore 40 mm. Su misura su disegno, anche in pezzo singolo.</p>
     </section>
 
     <section>
@@ -144,9 +161,9 @@ body:not(.embed) .full{display:none}
     <section>
       <h2>Dati tecnici</h2>
       <dl>
-        <dt>Pedana</dt><dd>PL-003 · 998 × 998 × 40 mm</dd>
+        <dt>Pedana</dt><dd id="ddPed">PL-003 · 998 × 998 × 40 mm</dd>
         <dt>Pelli</dt><dd>MDF 4 mm</dd>
-        <dt>Telaio</dt><dd>Abete, perimetro e traverso 100 mm</dd>
+        <dt>Telaio</dt><dd id="ddTel">Abete, perimetro e traverso 100 mm</dd>
         <dt>Anima</dt><dd>Nido d'ape ad alto carico</dd>
         <dt>Incavi</dt><dd>Angoli e mezzerie, per regolare dall'alto</dd>
         <dt>Piedino</dt><dd>PR-001 · regolabile</dd>
@@ -157,6 +174,8 @@ body:not(.embed) .full{display:none}
   </aside>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
 (function(){
 const Q=new URLSearchParams(location.search);
@@ -246,47 +265,55 @@ function box(x0,x1,y0,y1,z0,z1,mat,grainAxis,uS,vS){
 }
 function scaleUV(g,su,sv){const uv=g.attributes.uv;for(let i=0;i<uv.count;i++)uv.setXY(i,uv.getX(i)*su,uv.getY(i)*sv);uv.needsUpdate=true}
 
-// ---------- Geometria pannello pedana ----------
-// contorno con incavi R12 agli angoli e a metà dei lati (accesso alla regolazione dall'alto)
-function outline(){
-  const s=new THREE.Shape(),A=PW/2,E=PW,R=NR;
-  s.moveTo(R,0);s.lineTo(A-R,0);s.absarc(A,0,R,Math.PI,0,true);s.lineTo(E-R,0);s.absarc(E,0,R,Math.PI,Math.PI/2,true);
-  s.lineTo(E,A-R);s.absarc(E,A,R,1.5*Math.PI,Math.PI/2,true);s.lineTo(E,E-R);s.absarc(E,E,R,1.5*Math.PI,Math.PI,true);
-  s.lineTo(A+R,E);s.absarc(A,E,R,0,-Math.PI,true);s.lineTo(R,E);s.absarc(0,E,R,0,-Math.PI/2,true);
-  s.lineTo(0,A+R);s.absarc(0,A,R,Math.PI/2,-Math.PI/2,true);s.lineTo(0,R);s.absarc(0,0,R,Math.PI/2,0,true);
+// ---------- Geometria pedana (parametrica: X larghezza, Z profondità) ----------
+const SIZES={grande:[998,998,'PL-003'],media:[998,498,'PL-002'],piccola:[498,498,'PL-001']};
+let SZ=SIZES[Q.get('formato')]?Q.get('formato'):'grande',PX=SIZES[SZ][0],PZ=SIZES[SZ][1];
+const BIG=v=>v>600;
+// contorno con incavi R12 agli angoli e a metà dei lati lunghi (accesso alla regolazione dall'alto)
+function outline(X,Z){
+  const s=new THREE.Shape(),R=NR,mx=X/2,mz=Z/2;
+  s.moveTo(R,0);
+  if(BIG(X)){s.lineTo(mx-R,0);s.absarc(mx,0,R,Math.PI,0,true)}
+  s.lineTo(X-R,0);s.absarc(X,0,R,Math.PI,Math.PI/2,true);
+  if(BIG(Z)){s.lineTo(X,mz-R);s.absarc(X,mz,R,1.5*Math.PI,Math.PI/2,true)}
+  s.lineTo(X,Z-R);s.absarc(X,Z,R,1.5*Math.PI,Math.PI,true);
+  if(BIG(X)){s.lineTo(mx+R,Z);s.absarc(mx,Z,R,0,-Math.PI,true)}
+  s.lineTo(R,Z);s.absarc(0,Z,R,0,-Math.PI/2,true);
+  if(BIG(Z)){s.lineTo(0,mz+R);s.absarc(0,mz,R,Math.PI/2,-Math.PI/2,true)}
+  s.lineTo(0,R);s.absarc(0,0,R,Math.PI/2,0,true);
   return s;
 }
 const circ=(x,y,r)=>{const p=new THREE.Path();p.absarc(x,y,r,0,Math.PI*2,true);return p};
 const rectP=(x0,y0,x1,y1)=>{const p=new THREE.Path();p.moveTo(x0,y0);p.lineTo(x0,y1);p.lineTo(x1,y1);p.lineTo(x1,y0);p.lineTo(x0,y0);return p};
-const PEDLOC=[-1,PW/2,PW+1];
-const PINS=(()=>{const r=[];PEDLOC.forEach(px=>PEDLOC.forEach(pz=>[-25,25].forEach(dx=>[-25,25].forEach(dz=>{const x=px+dx,z=pz+dz;if(x>0&&x<PW&&z>0&&z<PW)r.push([x,z])}))));return r})();
-const FIELDS=[[FR,FR,PW/2-50,PW-FR],[PW/2+50,FR,PW-FR,PW-FR]];
-function extr(shape,depth,y0,mats,su,sv){
+function locs(V){return BIG(V)?[-1,V/2,V+1]:[-1,V+1]}
+function pinsFor(X,Z){const r=[];locs(X).forEach(px=>locs(Z).forEach(pz=>[-25,25].forEach(dx=>[-25,25].forEach(dz=>{const x=px+dx,z=pz+dz;if(x>0&&x<X&&z>0&&z<Z)r.push([x,z])}))));return r}
+function fieldsFor(X,Z){return BIG(X)?[[FR,FR,X/2-50,Z-FR],[X/2+50,FR,X-FR,Z-FR]]:[[FR,FR,X-FR,Z-FR]]}
+function extr(shape,depth,y0,mats,su,sv,Z){
   const g=new THREE.ExtrudeGeometry(shape,{depth,bevelEnabled:false,curveSegments:16});
-  scaleUV(g,su,sv);g.rotateX(-Math.PI/2);g.translate(0,y0,PW);
+  scaleUV(g,su,sv);g.rotateX(-Math.PI/2);g.translate(0,y0,Z);
   const m=new THREE.Mesh(g,mats);m.castShadow=true;m.receiveShadow=true;return m;
 }
 const HEX_R=16, hexGeo=new THREE.CylinderGeometry(HEX_R,HEX_R,PT-2*PSK,6,1,true);
-const HEXPTS=(()=>{const dx=Math.sqrt(3)*HEX_R,dz=1.5*HEX_R,p=[];FIELDS.forEach(f=>{
+function hexFor(F){const dx=Math.sqrt(3)*HEX_R,dz=1.5*HEX_R,p=[];F.forEach(f=>{
   for(let j=0;;j++){const z=f[1]+HEX_R+j*dz;if(z>f[3]-HEX_R+0.1)break;
-    for(let i=0;;i++){const x=f[0]+dx/2+i*dx+(j%2?dx/2:0);if(x>f[2]-dx/2+0.1)break;p.push([x,z])}}});return p})();
+    for(let i=0;;i++){const x=f[0]+dx/2+i*dx+(j%2?dx/2:0);if(x>f[2]-dx/2+0.1)break;p.push([x,z])}}});return p}
 const holeGeo=new THREE.CircleGeometry(4,16);
 
-const tops=[];
+let tops=[];
 function topMats(){return[M.finishes[currentFinish],M.mdfEdge]}
-function buildPedana(){
-  const g=new THREE.Group();
-  const skinShape=()=>{const s=outline();PINS.forEach(p=>s.holes.push(circ(p[0],p[1],4)));s.holes.push(circ(PW/2,PW/2,10));return s};
-  const top=extr(skinShape(),PSK,PT-PSK,topMats(),1/1000,1/1000);
-  const bot=extr(skinShape(),PSK,0,[M.finishes.mdf,M.mdfEdge],1/1000,1/1000);
+function buildPedana(X,Z){
+  const g=new THREE.Group(),PINS=pinsFor(X,Z),FIELDS=fieldsFor(X,Z),center=BIG(X)&&BIG(Z);
+  const skinShape=()=>{const s=outline(X,Z);PINS.forEach(p=>s.holes.push(circ(p[0],p[1],4)));if(center)s.holes.push(circ(X/2,Z/2,10));return s};
+  const top=extr(skinShape(),PSK,PT-PSK,topMats(),1/1000,1/1000,Z);
+  const bot=extr(skinShape(),PSK,0,[M.finishes.mdf,M.mdfEdge],1/1000,1/1000,Z);
   tops.push(top);
-  const fs=outline();FIELDS.forEach(f=>fs.holes.push(rectP(f[0],f[1],f[2],f[3])));fs.holes.push(circ(PW/2,PW/2,10));
-  const frame=extr(fs,PT-2*PSK,PSK,[M.pine,M.pine],1/900,1/120);
+  const fs=outline(X,Z);FIELDS.forEach(f=>fs.holes.push(rectP(f[0],f[1],f[2],f[3])));if(center)fs.holes.push(circ(X/2,Z/2,10));
+  const frame=extr(fs,PT-2*PSK,PSK,[M.pine,M.pine],1/900,1/120,Z);
   g.add(top,bot,frame);
-  const core=new THREE.InstancedMesh(hexGeo,M.core,HEXPTS.length),m=new THREE.Matrix4();
-  HEXPTS.forEach((p,i)=>{m.makeTranslation(p[0],PT/2,p[1]);core.setMatrixAt(i,m)});core.receiveShadow=true;g.add(core);
-  // fondo dei fori nel telaio
-  PINS.forEach(p=>{for(const [y,sg] of [[PT-PSK+0.08,1],[PSK-0.08,-1]]){const d=new THREE.Mesh(holeGeo,M.hole);d.rotation.x=-sg*Math.PI/2;d.position.set(p[0],y,PW-p[1]);g.add(d)}});
+  const HP=hexFor(FIELDS);
+  const core=new THREE.InstancedMesh(hexGeo,M.core,HP.length),m=new THREE.Matrix4();
+  HP.forEach((p,i)=>{m.makeTranslation(p[0],PT/2,Z-p[1]);core.setMatrixAt(i,m)});core.receiveShadow=true;g.add(core);
+  PINS.forEach(p=>{for(const [y,sg] of [[PT-PSK+0.08,1],[PSK-0.08,-1]]){const d=new THREE.Mesh(holeGeo,M.hole);d.rotation.x=-sg*Math.PI/2;d.position.set(p[0],y,Z-p[1]);g.add(d)}});
   return {g,top,bot};
 }
 function applyFinish(){const f=M.finishes[currentFinish];tops.forEach(t=>t.material=[f,M.mdfEdge]);perim.forEach(p=>p.material=f)}
@@ -331,27 +358,41 @@ function setPedH(p,h){p.top.position.y=h;p.rod.scale.y=h+8}
 function makeKey(){const g=new THREE.Group();
   g.add(box(-3,3,0,110,-3,3,M.key),box(-3,48,104,110,-3,3,M.key));return g}
 
-// ---------- Scena: pannello singolo ----------
-const single=new THREE.Group();single.scale.setScalar(0.001);single.position.set(-PW/2*0.001,0,-PW/2*0.001);scene.add(single);
-const P1=buildPedana();single.add(P1.g);
+// ---------- Scena: pedana singola ----------
+const single=new THREE.Group();single.scale.setScalar(0.001);scene.add(single);
+let P1=null;
+function disposeTree(o){o.traverse(m=>{if(m.isMesh&&m.geometry!==hexGeo&&m.geometry!==holeGeo&&!Object.values(G).includes(m.geometry))m.geometry.dispose()})}
+function buildSingle(){
+  if(P1){disposeTree(P1.g);single.remove(P1.g)}
+  P1=buildPedana(PX,PZ);single.add(P1.g);single.position.set(-PX/2*0.001,0,-PZ/2*0.001);
+}
 
 // ---------- Scena: piedino ----------
 const pedScene=new THREE.Group();pedScene.scale.setScalar(0.001);pedScene.visible=false;scene.add(pedScene);
 const PD=makePed();pedScene.add(PD.g);setPedH(PD,70);
 
-// ---------- Scena: montaggio 2 x 2 ----------
+// ---------- Scena: montaggio 2 x 2 moduli ----------
 const asm=new THREE.Group();asm.scale.setScalar(0.001);asm.visible=false;scene.add(asm);
-const perim=[];
-const panels=[],peds=[];
-[[-PW-1,-PW-1],[1,-PW-1],[-PW-1,1],[1,1]].forEach((o,i)=>{const p=buildPedana();p.g.position.set(o[0],0,o[1]);asm.add(p.g);panels.push({g:p.g,ox:o[0],oz:o[1],i})});
-[-1000,-500,0,500,1000].forEach((x,i)=>[-1000,-500,0,500,1000].forEach((z,j)=>{const p=makePed();p.g.position.set(x,0,z);asm.add(p.g);const corner=(i%2===0&&j%2===0);peds.push({p,corner,d:corner?(i+j)*0.07:1.6+(i+j)*0.05})}));
-const key=makeKey();asm.add(key);
-// coprilati perimetrali (altezza variabile: scala in y)
-const perimG=[];
-[[1000,1010,-1010,1010,1,0],[-1010,-1000,-1010,1010,-1,0],[-1000,1000,1000,1010,0,1],[-1000,1000,-1010,-1000,0,-1]].forEach(b=>{
-  const m=box(b[0],b[1],0,1,b[2],b[3],M.finishes[currentFinish],Math.abs(b[4])?'z':'x',1000,1000);perim.push(m);
-  const w=new THREE.Group();w.add(m);asm.add(w);perimG.push({w,m,n:[b[4],b[5]]});
-});
+let perim=[],panels=[],peds=[],perimG=[],keyPed=null;
+const key=makeKey();
+function buildAsm(){
+  asm.children.slice().forEach(c=>{if(c!==key)disposeTree(c);asm.remove(c)});
+  tops=P1?[P1.top]:[];perim=[];panels=[];peds=[];perimG=[];
+  const X=PX,Z=PZ;
+  [[-X-1,-Z-1],[1,-Z-1],[-X-1,1],[1,1]].forEach((o,i)=>{const p=buildPedana(X,Z);p.g.position.set(o[0],0,o[1]);asm.add(p.g);panels.push({g:p.g,i})});
+  const gx=BIG(X)?[-X,-X/2,0,X/2,X]:[-X,0,X], gz=BIG(Z)?[-Z,-Z/2,0,Z/2,Z]:[-Z,0,Z];
+  gx.forEach((x,i)=>gz.forEach((z,j)=>{
+    const p=makePed();p.g.position.set(x,0,z);asm.add(p.g);
+    const corner=(Math.abs(x)%X<1)&&(Math.abs(z)%Z<1);
+    const o={p,corner,d:corner?(i+j)*0.07:1.6+(i+j)*0.05};peds.push(o);if(x===0&&z===0)keyPed=o;
+  }));
+  asm.add(key);
+  const ex=X+1,ez=Z+1;
+  [[ex,ex+10,-ez-10,ez+10,1,0],[-ex-10,-ex,-ez-10,ez+10,-1,0],[-ex,ex,ez,ez+10,0,1],[-ex,ex,-ez-10,-ez,0,-1]].forEach(b=>{
+    const m=box(b[0],b[1],0,1,b[2],b[3],M.finishes[currentFinish],Math.abs(b[4])?'z':'x',1000,1000);perim.push(m);
+    const w=new THREE.Group();w.add(m);asm.add(w);perimG.push({w,m,n:[b[4],b[5]]});
+  });
+}
 
 let H=70;
 const clamp=v=>Math.max(0,Math.min(1,v));
@@ -376,7 +417,7 @@ function setAsm(t){
   key.visible=k>0&&k<1;
   const kd=k<0.25?1-ease(k/0.25):k>0.75?ease((k-0.75)/0.25):0;
   key.position.set(0,H+28+kd*160,0);key.rotation.y=k>0.25&&k<0.75?(k-0.25)/0.5*Math.PI*4:0;
-  peds[12].p.spin.rotation.y=key.rotation.y;
+  if(keyPed)keyPed.p.spin.rotation.y=key.rotation.y;
   const e5=ease(clamp((t-TS.s5)/1.6));
   perimG.forEach(o=>{o.m.scale.y=H+PT;o.w.position.set(o.n[0]*(1-e5)*260,0,o.n[1]*(1-e5)*260);o.w.visible=t>TS.s5-0.05});
   const c=caps();let txt=c[0][1];c.forEach(x=>{if(t>=x[0])txt=x[1]});stepTxt.textContent=txt;
@@ -388,7 +429,7 @@ const clip=new THREE.Plane(new THREE.Vector3(-1,0,0),0);
 function setClipping(on){allMats.forEach(m=>{m.clippingPlanes=on?[clip]:null;m.needsUpdate=true})}
 const $=id=>document.getElementById(id);
 const cut=$('cut'),hgt=$('hgt'),scrub=$('scrub'),playBtn=$('play'),stepTxt=$('stepTxt'),readout=$('readout');
-function updateClip(){const v=+cut.value;$('cutOut').textContent=v+' mm';clip.constant=(v-PW/2)*0.001}
+function updateClip(){const v=Math.min(+cut.value,PX);$('cutOut').textContent=v+' mm';clip.constant=(v-PX/2)*0.001}
 cut.addEventListener('input',updateClip);
 function showH(){$('hOut').textContent=H+' mm';readout.textContent='Piedino '+H+' mm · piano finito '+(H+PT)+' mm'}
 hgt.addEventListener('input',()=>{H=+hgt.value;showH();setPedH(PD,H);if(mode==='montaggio'&&!playing)setAsm(animT)});
@@ -405,6 +446,9 @@ const CAMS={
   montaggio:{angolo:[[2.5,1.8,2.9],[0,0.06,0]],alto:[[0,3.6,0.01],[0,0,0]],incavo:[[0.2,0.36,0.26],[0,0.1,0]],raso:[[1.7,0.07,1.6],[0.25,0.06,0.25]]}
 };
 CAMS.esploso=CAMS.pannello;CAMS.aa=CAMS.pannello;
+function camFor(set,name){const c=CAMS[set][name];if(set==='piedino')return c;const k=Math.max(PX,PZ)/998,hx=PX/998,hz=PZ/998;
+  if(set==='pannello'&&name==='incavo')return[[0.6*hx,0.2,0.62*hz],[0.48*hx,0.03,0.48*hz]];
+  return[c[0].map((v,i)=>i===1?v*Math.max(0.6,k):v*Math.max(0.6,k)),c[1].map((v,i)=>i===1?v:v*k)]}
 function setMode(m){
   mode=m;
   document.querySelectorAll('#modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===m));
@@ -415,22 +459,34 @@ function setMode(m){
   $('cutWrap').hidden=m!=='aa';setClipping(m==='aa');updateClip();
   if(!isPed&&$('osc').checked){$('osc').checked=false;H=+hgt.value}
   showH();
-  if(m==='aa'){const x=(+cut.value-PW/2)*0.001;fly([x+0.75,0.35,0.9],[x,0.02,0.25])}
-  else if(m==='esploso')fly([1.3,1.0,1.6],[0,0.03,0]);
-  else if(isAsm){animT=0;setAsm(0);setPlaying(true);fly(...CAMS.montaggio.angolo)}
+  if(m==='aa'){const x=(+cut.value-PX/2)*0.001;fly([x+0.75,0.35,0.9],[x,0.02,0.25])}
+  else if(m==='esploso')fly(...camFor('pannello','angolo'));
+  else if(isAsm){animT=0;setAsm(0);setPlaying(true);fly(...camFor('montaggio','angolo'))}
   else if(isPed){setPlaying(false);setPedH(PD,H);fly(...CAMS.piedino.angolo)}
-  else{setPlaying(false);fly(...CAMS.pannello.angolo)}
+  else{setPlaying(false);fly(...camFor('pannello','angolo'))}
 }
 document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
 document.querySelectorAll('#finishes .chip').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('#finishes .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
   currentFinish=b.dataset.f;applyFinish();
 });
+function setSize(k){
+  SZ=k;PX=SIZES[k][0];PZ=SIZES[k][1];
+  document.querySelectorAll('#sizes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===k));
+  $('ttl').textContent='Pedana tamburata '+PX+' \u00d7 '+PZ+' \u00d7 40';
+  $('ddPed').textContent=SIZES[k][2]+' \u00b7 '+PX+' \u00d7 '+PZ+' \u00d7 40 mm';
+  $('ddTel').textContent=BIG(PX)?'Abete, perimetro e traverso 100 mm':'Abete, perimetro 100 mm';
+  cut.max=PX;if(+cut.value>PX)cut.value=Math.round(PX/2);
+  buildSingle();buildAsm();applyFinish();updateClip();
+  if(mode==='montaggio'){animT=0;setAsm(0);setPlaying(true);fly(...camFor('montaggio','angolo'))}
+  else if(mode!=='piedino')fly(...camFor('pannello','angolo'));
+}
+document.querySelectorAll('#sizes button').forEach(b=>b.onclick=()=>setSize(b.dataset.s));
 $('rotate').onchange=e=>{controls.autoRotate=e.target.checked};
 
 const tw={t:1};
 function fly(pos,tgt){tw.p0=camera.position.clone();tw.t0=controls.target.clone();tw.p1=new THREE.Vector3(...pos);tw.t1=new THREE.Vector3(...tgt);tw.t=0}
-document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>fly(...CAMS[mode][b.dataset.cam]));
+document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>fly(...camFor(({pannello:'pannello',esploso:'pannello',aa:'pannello',piedino:'piedino',montaggio:'montaggio'})[mode],b.dataset.cam)));
 
 function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
 new ResizeObserver(resize).observe(stage);resize();
@@ -446,14 +502,15 @@ function loop(){
   const dt=Math.min(clock.getDelta(),0.05);
   if(!visible||document.hidden)return;
   explode+=(explodeTarget-explode)*(reduce?1:0.08);
-  P1.top.position.y=explode*110;P1.bot.position.y=-explode*110;
+  if(P1){P1.top.position.y=explode*110;P1.bot.position.y=-explode*110}
   if(mode==='piedino'&&$('osc').checked){osc+=dt;H=Math.round(75-25*Math.cos(osc*1.2));setPedH(PD,H);PD.spin.rotation.y=osc*3;showH()}
   if(mode==='montaggio'&&playing){animT+=dt;if(animT>DUR+1.8)animT=0;const t=Math.min(animT,DUR);setAsm(t);scrub.value=Math.round(t/DUR*1000)}
   if(tw.t<1){tw.t=Math.min(1,tw.t+(reduce?1:0.035));const e=1-Math.pow(1-tw.t,3);
     camera.position.lerpVectors(tw.p0,tw.p1,e);controls.target.lerpVectors(tw.t0,tw.t1,e)}
   controls.update();renderer.render(scene,camera);
 }
-document.querySelectorAll('#finishes .chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===currentFinish));applyFinish();
+document.querySelectorAll('#finishes .chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===currentFinish));
+setSize(SZ);
 showH();setAsm(0);
 if(Q.get('altezza')){const a=Math.max(50,Math.min(100,+Q.get('altezza')||70));hgt.value=a;H=a;setPedH(PD,H);showH()}
 const sm={pedana:'pannello',esploso:'esploso',sezione:'aa',piedino:'piedino',montaggio:'montaggio'}[Q.get('vista')];
