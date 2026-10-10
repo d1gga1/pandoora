@@ -73,12 +73,32 @@
    "fuoriMisura": {
     "add": 0,
     "perc": 0,
-    "label": "Fuori misura",
-    "note": "Costruiamo ogni porta sul vano: oggi la misura non cambia il prezzo. Sovrapprezzi da definire.",
-    "wMin": 50,
-    "wMax": 120,
-    "hMin": 180,
-    "hMax": 270
+    "label": "Su misura del vano",
+    "note": "Costruiamo ogni porta sul vostro vano: oggi la misura non cambia il prezzo."
+   },
+   "tech": {
+    "_nota": "Regole dai disegni esecutivi (mm): telaio = vano -30 L / -40 H; anta = telaio -60 L / -40 H; battuta = anta +6 L / +13 H; ingombro coprifili = telaio +146 L / +73 H; luce passaggio = anta -14; telaio 107 + estensione = muro",
+    "frameW": -30,
+    "frameH": -40,
+    "leafW": -60,
+    "leafH": -40,
+    "rebW": 6,
+    "rebH": 13,
+    "archW": 146,
+    "archH": 73,
+    "archi": 83,
+    "lposs": -14,
+    "jamb": 107,
+    "jambT": 27,
+    "rebate": 17,
+    "vwMin": 500,
+    "vwMax": 1300,
+    "vhMin": 1500,
+    "vhMax": 2800,
+    "wallMin": 90,
+    "wallMax": 450,
+    "stdWall": 110,
+    "stipitiOver": 140
    },
    "ivaNote": "IVA esclusa · posa inclusa in VE e FVG"
   },
@@ -175,6 +195,51 @@
    "img": "/assets/porte/hf_20260708_071345_4a446409-de91-4471-b79b-4b3a500ffa8e_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071345_4a446409-de91-4471-b79b-4b3a500ffa8e.webp",
    "imgFb": "/door-photos/bianco.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laminato"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente reversibile / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Bianco"
    ],
@@ -208,6 +273,51 @@
    "img": "/assets/porte/hf_20260708_071347_4eef6cfe-bf57-4464-833f-73af7e14582c_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071347_4eef6cfe-bf57-4464-833f-73af7e14582c.webp",
    "imgFb": "/door-photos/bianco-matrix.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laminato con venatura frassino"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente reversibile / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Bianco frassino"
    ],
@@ -241,6 +351,51 @@
    "img": "/assets/porte/hf_20260708_065744_ad32adae-2774-4438-aaea-841d4916a503_min.webp",
    "imgLg": "/assets/porte/hf_20260708_065744_ad32adae-2774-4438-aaea-841d4916a503.webp",
    "imgFb": "/door-photos/grigio-baltimora.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laminato"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente reversibile / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Grigio Baltimora"
    ],
@@ -274,6 +429,51 @@
    "img": "/assets/porte/hf_20260708_065924_2e8c8033-fa14-4795-b982-a19d894ffe40_min.webp",
    "imgLg": "/assets/porte/hf_20260708_065924_2e8c8033-fa14-4795-b982-a19d894ffe40.webp",
    "imgFb": "/door-photos/palissandro-white.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laminato"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente reversibile / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Palissandro White"
    ],
@@ -309,6 +509,51 @@
    "img": "/assets/porte/hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e.webp",
    "imgFb": "/door-photos/2-bugne.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b2",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -346,6 +591,51 @@
    "img": "/assets/porte/hf_20260708_071350_45f75e86-82cd-40c3-91a8-625fdcec66d2_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071350_45f75e86-82cd-40c3-91a8-625fdcec66d2.webp",
    "imgFb": "/door-photos/3-bugne-freeze.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b3",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -383,6 +673,55 @@
    "img": "/assets/porte/hf_20260708_071352_7649602a-3f87-4fb6-ad08-67092d988408_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071352_7649602a-3f87-4fb6-ad08-67092d988408.webp",
    "imgFb": "/door-photos/essential-y.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "y",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -420,6 +759,55 @@
    "img": "/assets/porte/hf_20260708_071354_972025cc-6873-4dca-88bb-f0ae4be56232_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071354_972025cc-6873-4dca-88bb-f0ae4be56232.webp",
    "imgFb": "/door-photos/horizon.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "h4",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -457,6 +845,55 @@
    "img": "/assets/porte/hf_20260708_071355_945ed191-f800-4588-8aa5-02915d241bd3_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071355_945ed191-f800-4588-8aa5-02915d241bd3.webp",
    "imgFb": "/door-photos/panto-1.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b1",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -494,6 +931,55 @@
    "img": "/assets/porte/hf_20260708_071358_144648de-82bc-4ff1-b618-4bb2348dfd3f_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071358_144648de-82bc-4ff1-b618-4bb2348dfd3f.webp",
    "imgFb": "/door-photos/panto-2.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b2",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -531,6 +1017,55 @@
    "img": "/assets/porte/hf_20260708_071434_60f3f032-794f-4248-8a83-2776e5cefba6_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071434_60f3f032-794f-4248-8a83-2776e5cefba6.webp",
    "imgFb": "/door-photos/panto-3.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b3",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -568,6 +1103,55 @@
    "img": "/assets/porte/hf_20260708_071436_3fa7b8b1-9ca4-4e64-b4f2-fab06da23a3b_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071436_3fa7b8b1-9ca4-4e64-b4f2-fab06da23a3b.webp",
    "imgFb": "/door-photos/axis.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -605,6 +1189,55 @@
    "img": "/assets/porte/hf_20260708_071441_a1258606-576d-4c13-acca-af9760101fad_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071441_a1258606-576d-4c13-acca-af9760101fad.webp",
    "imgFb": "/door-photos/trama.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -642,6 +1275,55 @@
    "img": "/assets/porte/hf_20260708_071443_3b58cd82-b0a1-433a-99c3-754f9814f31a_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071443_3b58cd82-b0a1-433a-99c3-754f9814f31a.webp",
    "imgFb": "/door-photos/flow.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -679,6 +1361,55 @@
    "img": "/assets/porte/hf_20260708_071445_f993332b-7a13-4119-8bd6-44edad1017ff_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071445_f993332b-7a13-4119-8bd6-44edad1017ff.webp",
    "imgFb": "/door-photos/resonance.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -716,6 +1447,55 @@
    "img": "/assets/porte/hf_20260708_071447_0904a204-ce7b-4a1b-bc62-0c25f2e93d5b_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071447_0904a204-ce7b-4a1b-bc62-0c25f2e93d5b.webp",
    "imgFb": "/door-photos/signum.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -753,6 +1533,55 @@
    "img": "/assets/porte/hf_20260708_071536_0ffe8cb6-51be-4191-a522-ae80ad05a2c1_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071536_0ffe8cb6-51be-4191-a522-ae80ad05a2c1.webp",
    "imgFb": "/door-photos/gramma.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -790,6 +1619,55 @@
    "img": "/assets/porte/hf_20260708_071537_b3ccf75c-b285-4b60-971b-8055a9785b20_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071537_b3ccf75c-b285-4b60-971b-8055a9785b20.webp",
    "imgFb": "/door-photos/autumn.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -827,6 +1705,55 @@
    "img": "/assets/porte/hf_20260708_071539_b9d375cd-8c19-42fe-a136-e239c865c297_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071539_b9d375cd-8c19-42fe-a136-e239c865c297.webp",
    "imgFb": "/door-photos/skyline.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -864,6 +1791,55 @@
    "img": "/assets/porte/hf_20260708_071541_0add7ea9-e97e-4dc4-b5cb-5d8418606092_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071541_0add7ea9-e97e-4dc4-b5cb-5d8418606092.webp",
    "imgFb": "/door-photos/genesi.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -901,6 +1877,55 @@
    "img": "/assets/porte/hf_20260708_071542_ca2cb76b-a5a9-4961-8d6b-6ba81398b2e5_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071542_ca2cb76b-a5a9-4961-8d6b-6ba81398b2e5.webp",
    "imgFb": "/door-photos/alba.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -938,6 +1963,55 @@
    "img": "/assets/porte/hf_20260708_071544_e801c600-58da-4e39-99b6-ea1c1ef89ed7_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071544_e801c600-58da-4e39-99b6-ea1c1ef89ed7.webp",
    "imgFb": "/door-photos/arche.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -975,6 +2049,55 @@
    "img": "/assets/porte/hf_20260708_071545_441afd94-635f-4c70-a24f-5ad54c6b2ae1_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071545_441afd94-635f-4c70-a24f-5ad54c6b2ae1.webp",
    "imgFb": "/door-photos/zig-zag.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -1012,6 +2135,55 @@
    "img": "/assets/porte/hf_20260708_071547_f36f38b2-abc0-4fd9-8e2a-d5a92478dc35_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071547_f36f38b2-abc0-4fd9-8e2a-d5a92478dc35.webp",
    "imgFb": "/door-photos/tilt.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -1049,6 +2221,55 @@
    "img": "/assets/porte/hf_20260708_071619_a1d31969-4798-42ce-ba88-4e5c94b44fb8_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071619_a1d31969-4798-42ce-ba88-4e5c94b44fb8.webp",
    "imgFb": "/door-photos/morph.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -1086,6 +2307,55 @@
    "img": "/assets/porte/hf_20260708_071620_936d12d9-8126-4cf7-bebb-0f8e6dd07f39_min.webp",
    "imgLg": "/assets/porte/hf_20260708_071620_936d12d9-8126-4cf7-bebb-0f8e6dd07f39.webp",
    "imgFb": "/door-photos/aurea.jpg",
+   "opaque": false,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flat",
+   "onlyOpen": null,
    "finishes": [
     "Laccato RAL"
    ],
@@ -1103,6 +2373,602 @@
     "ral"
    ],
    "rank": 25
+  },
+  {
+   "id": "porta-doppia-2-bugne",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Doppia 2 Bugne",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Due bugne con doppia cornice, sapore classico",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/shop/img/porte/doppia-2-bugne_min.webp",
+   "imgLg": "/shop/img/porte/doppia-2-bugne.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b2",
+   "onlyOpen": null,
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 26
+  },
+  {
+   "id": "porta-doppia-3-bugne",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Doppia 3 Bugne",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Tre bugne con doppia cornice",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/shop/img/porte/doppia-3-bugne_min.webp",
+   "imgLg": "/shop/img/porte/doppia-3-bugne.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b3",
+   "onlyOpen": null,
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 27
+  },
+  {
+   "id": "porta-doppia-3-bugne-curva",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Doppia 3 Bugne Curva",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Tre bugne a cornice curva, stile tradizionale",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/shop/img/porte/doppia-3-bugne-curva_min.webp",
+   "imgLg": "/shop/img/porte/doppia-3-bugne-curva.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b3c",
+   "onlyOpen": null,
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 28
+  },
+  {
+   "id": "porta-doppia-4-bugne",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Doppia 4 Bugne",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Quattro bugne orizzontali a doppia cornice",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/shop/img/porte/doppia-4-bugne_min.webp",
+   "imgLg": "/shop/img/porte/doppia-4-bugne.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "b4",
+   "onlyOpen": null,
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 29
+  },
+  {
+   "id": "porta-diagona",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Diagona",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Due bugne divise da un taglio diagonale",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/shop/img/porte/diagona_min.webp",
+   "imgLg": "/shop/img/porte/diagona.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "diag",
+   "onlyOpen": null,
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "porta-ellis",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Ellis",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Grande ovale pantografato a tutta altezza",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/shop/img/porte/ellis_min.webp",
+   "imgLg": "/shop/img/porte/ellis.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Coprifilo",
+     "In legno multistrato 7/9"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente / Scorrevole"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "oval",
+   "onlyOpen": null,
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 31
+  },
+  {
+   "id": "porta-filo-muro",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Filo Muro",
+   "line": "laccata",
+   "lineLabel": "Linea Laccata",
+   "desc": "Anta complanare alla parete, telaio nascosto nel muro",
+   "long": "Anta laccata complanare alla parete, con telaio in legno listellare nascosto nella muratura: niente coprifili, resta solo la linea sottile dell'anta. Tinta RAL a scelta.",
+   "img": "/shop/img/porte/filo-muro_min.webp",
+   "imgLg": "/shop/img/porte/filo-muro.webp",
+   "imgFb": "",
+   "opaque": true,
+   "specs": [
+    [
+     "Pannello porta",
+     "Copertine in HDF IDRO da 8 mm"
+    ],
+    [
+     "Telaio",
+     "In legno listellare"
+    ],
+    [
+     "Rivestimento",
+     "Laccato RAL"
+    ],
+    [
+     "Cerniere",
+     "N° 3 cerniere a scomparsa"
+    ],
+    [
+     "Serratura",
+     "Magnetica con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Guarnizione",
+     "In PVC"
+    ],
+    [
+     "Apertura",
+     "Battente"
+    ],
+    [
+     "Larghezza standard",
+     "60 · 70 · 80 · 90 cm"
+    ],
+    [
+     "Altezza standard",
+     "210 cm"
+    ],
+    [
+     "Spessore anta",
+     "44 mm, anima alveolare"
+    ]
+   ],
+   "pattern": "flush",
+   "onlyOpen": "filo-muro",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Novità",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laccata",
+    "linea laccata",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 32
   },
   {
    "id": "scarpiera-ribalta-2",

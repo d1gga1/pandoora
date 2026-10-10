@@ -491,3 +491,41 @@ body.s-cart-open .s-cl{animation:sIn .6s var(--out) both;animation-delay:calc(va
 .s-cube-hint{position:absolute;right:20px;bottom:26px;max-width:46%;text-align:right;font-size:12.5px;font-weight:700;color:var(--mute)}
 .s-card[data-type="cube"] .s-card-img img{object-fit:contain;padding:8px}
 @media(max-width:1080px){.s-cube-stage{inset:16px 10px 60px}.s-cube-hint{display:none}}
+
+/* porte: foto / disegno quotato / scheda tecnica */
+.s-pm-media.door{flex-direction:column}
+.s-pm-photo{position:absolute;inset:0}
+.s-pm-photo img{width:100%;height:100%;object-fit:contain;padding:64px 0 0}
+.s-pm-media.opaque .s-pm-photo img{object-fit:cover;padding:0}
+.s-pm-photo .s-pm-tint{top:64px}
+.s-pm-draw{position:absolute;inset:62px 14px 64px;display:flex;align-items:center;justify-content:center}
+.s-pm-draw[hidden],.s-pm-photo[hidden]{display:none}
+.s-pm-draw svg{width:100%;height:100%;border-radius:12px;box-shadow:0 10px 30px -18px rgba(13,21,36,.4)}
+.s-pm-media.drawing{background:#eceae5}
+.s-pm-views{position:absolute;top:16px;left:16px;z-index:3;display:flex;background:rgba(255,255,255,.92);border-radius:100px;padding:4px;box-shadow:0 6px 18px -8px rgba(0,0,0,.25)}
+.s-pm-views button{border:0;background:none;padding:8px 14px;border-radius:100px;font:800 13px var(--body);cursor:pointer;color:var(--ink)}
+.s-pm-views button[aria-selected="true"]{background:var(--ink);color:#fff}
+.s-pm-sheetbtn{position:absolute;right:20px;bottom:20px;z-index:3;display:flex;align-items:center;gap:8px;border:0;background:var(--ink);color:#fff;font:800 13px var(--body);padding:10px 16px;border-radius:100px;cursor:pointer;box-shadow:0 10px 24px -10px rgba(0,0,0,.5);transition:transform .3s var(--spring)}
+.s-pm-sheetbtn:hover{transform:translateY(-2px)}
+.s-pm-sheetbtn svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
+.s-pm-media.door .s-pm-ral{bottom:70px}
+.s-dims.one{grid-template-columns:minmax(0,200px);margin-top:12px}
+.s-warn{background:#fdf3e7;border-left:3px solid var(--oak);padding:8px 12px;border-radius:6px;color:var(--ink2)!important;margin-top:10px!important}
+.s-warn button{border:0;background:none;padding:0;font:800 13px var(--body);color:var(--red);text-decoration:underline;cursor:pointer}
+.s-calc{margin:-4px 0 20px;padding:16px 18px;border-radius:14px;background:var(--ink);color:#fff}
+.s-calc>b{display:block;font-size:14px;margin-bottom:8px}
+.s-calc dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0 0 10px;font-size:13.5px}
+.s-calc dt{color:rgba(255,255,255,.65)}.s-calc dd{margin:0;font-weight:800;font-variant-numeric:tabular-nums}
+.s-calc .s-link{color:var(--oak);background-image:linear-gradient(var(--oak),var(--oak));border:0;cursor:pointer;font-family:var(--body);padding:0 0 3px}
+.s-sheet{position:fixed;inset:0;z-index:150;background:rgba(13,21,36,.7);backdrop-filter:blur(4px);display:none;flex-direction:column;opacity:0;transition:opacity .3s}
+.s-sheet.open{display:flex}.s-sheet.show{opacity:1}
+.s-sheet-bar{display:flex;align-items:center;gap:14px;padding:12px 18px;background:#fff;flex-wrap:wrap}
+.s-sheet-bar b{font-size:15px}.s-sheet-bar span{color:var(--mute);font-size:13px;margin-right:auto}
+.s-sheet-bar .s-btn{height:42px;padding:0 18px}
+.s-sheet-body{flex:1;overflow:auto;padding:18px;-webkit-overflow-scrolling:touch}
+.s-sheet-body svg{display:block;width:100%;min-width:900px;max-width:1500px;margin:0 auto;height:auto;border-radius:10px;background:#fff;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
+.s-sheet.show .s-sheet-body svg{animation:sPop .5s var(--out)}
+@media(max-width:1080px){.s-pm-draw{inset:60px 8px 64px}.s-pm-photo img{padding-top:56px}.s-pm-sheetbtn{right:12px;bottom:14px}}
+@media(max-width:700px){.s-sheet-bar span{display:none}.s-pm-media.door{height:56vh}}
+
+#o-cust[hidden],#o-wall-std[hidden],.s-warn[hidden]{display:none!important}
