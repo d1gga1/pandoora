@@ -1,0 +1,129 @@
+{
+ "icons": {
+  "door": "<svg viewBox=\"0 0 64 64\"><rect x=\"16\" y=\"6\" width=\"32\" height=\"52\" rx=\"1.5\"/><path d=\"M10 58h44\"/><circle cx=\"42\" cy=\"33\" r=\"1.8\"/><path d=\"M42 33h-4\"/></svg>",
+  "slide": "<svg viewBox=\"0 0 64 64\"><path d=\"M8 8h48\"/><rect x=\"12\" y=\"12\" width=\"22\" height=\"46\"/><rect x=\"30\" y=\"12\" width=\"22\" height=\"46\"/><path d=\"M30 35h-3M34 35h3\"/></svg>",
+  "flush": "<svg viewBox=\"0 0 64 64\"><rect x=\"6\" y=\"6\" width=\"52\" height=\"52\"/><rect x=\"20\" y=\"12\" width=\"24\" height=\"46\"/><circle cx=\"39\" cy=\"35\" r=\"1.6\"/></svg>",
+  "ral": "<svg viewBox=\"0 0 64 64\"><rect x=\"18\" y=\"6\" width=\"28\" height=\"52\" rx=\"1.5\"/><circle cx=\"40\" cy=\"33\" r=\"1.6\"/><path d=\"M6 20c4-6 8 6 12 0\"/><circle cx=\"10\" cy=\"44\" r=\"4\"/></svg>",
+  "shoe": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"8\" width=\"44\" height=\"48\" rx=\"2\"/><path d=\"M10 24h44M10 40h44\"/><path d=\"M28 16h8M28 32h8M28 48h8\"/><path d=\"M14 56v4M50 56v4\"/></svg>",
+  "shoe2": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"8\" width=\"44\" height=\"48\" rx=\"2\"/><path d=\"M32 8v48\"/><path d=\"M28 30v6M36 30v6\"/></svg>",
+  "bench": "<svg viewBox=\"0 0 64 64\"><rect x=\"8\" y=\"10\" width=\"48\" height=\"26\" rx=\"2\"/><path d=\"M8 36h48v8H8z\"/><path d=\"M28 20h8\"/><path d=\"M12 44v10M52 44v10\"/></svg>",
+  "cab": "<svg viewBox=\"0 0 64 64\"><rect x=\"8\" y=\"16\" width=\"48\" height=\"30\" rx=\"2\"/><path d=\"M32 16v30\"/><path d=\"M28 28v6M36 28v6\"/><path d=\"M14 46l-2 10M50 46l2 10\"/></svg>",
+  "night": "<svg viewBox=\"0 0 64 64\"><rect x=\"14\" y=\"16\" width=\"36\" height=\"32\" rx=\"2\"/><path d=\"M14 32h36\"/><path d=\"M28 24h8M28 40h8\"/><path d=\"M18 48v8M46 48v8\"/></svg>",
+  "tv": "<svg viewBox=\"0 0 64 64\"><rect x=\"16\" y=\"6\" width=\"32\" height=\"20\" rx=\"1.5\"/><path d=\"M32 26v4\"/><rect x=\"4\" y=\"30\" width=\"56\" height=\"18\" rx=\"2\"/><path d=\"M22 30v18M42 30v18\"/><path d=\"M8 48v6M56 48v6\"/></svg>",
+  "sideboard": "<svg viewBox=\"0 0 64 64\"><rect x=\"6\" y=\"18\" width=\"52\" height=\"28\" rx=\"2\"/><path d=\"M23 18v28M41 18v28\"/><path d=\"M14 30v6M32 30v6M50 30v6\"/><path d=\"M10 46v8M54 46v8\"/></svg>",
+  "hall": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"6\" width=\"44\" height=\"24\" rx=\"2\"/><rect x=\"10\" y=\"34\" width=\"44\" height=\"18\" rx=\"2\"/><path d=\"M28 43h8\"/><path d=\"M14 52v6M50 52v6\"/></svg>",
+  "bath": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"6\" width=\"44\" height=\"18\" rx=\"2\"/><path d=\"M8 32h48\"/><rect x=\"10\" y=\"32\" width=\"44\" height=\"22\" rx=\"2\"/><path d=\"M28 43h8\"/><path d=\"M32 26v6\"/></svg>",
+  "table": "<svg viewBox=\"0 0 64 64\"><path d=\"M4 22h56v6H4z\"/><path d=\"M10 28l-2 28M54 28l2 28M18 28v14M46 28v14\"/></svg>",
+  "top": "<svg viewBox=\"0 0 64 64\"><path d=\"M6 30l20-12h32L38 30z\"/><path d=\"M6 30v6l32 0 20-12v-6\"/><path d=\"M38 30v6\"/></svg>",
+  "ruler": "<svg viewBox=\"0 0 64 64\"><rect x=\"6\" y=\"22\" width=\"52\" height=\"20\" rx=\"2\" transform=\"rotate(-30 32 32)\"/><path d=\"M18 40l3 5M25 36l2 3M31 33l3 5M38 29l2 3M44 26l3 5\"/></svg>",
+  "box": "<svg viewBox=\"0 0 64 64\"><path d=\"M8 20l24-12 24 12v26L32 58 8 46z\"/><path d=\"M8 20l24 12 24-12M32 32v26\"/></svg>"
+ },
+ "categories": [
+  {
+   "id": "porte-per-interni",
+   "name": "Porte per interni",
+   "short": "Battenti, scorrevoli, filo muro",
+   "icon": "door",
+   "intro": "Porte prodotte nel nostro stabilimento di Fontanelle, in misura standard o al centimetro sul vostro vano: battenti, scorrevoli, filo muro e laccate in qualsiasi tinta RAL.",
+   "subs": [
+    [
+     "battenti",
+     "Porte battenti",
+     "door"
+    ],
+    [
+     "scorrevoli",
+     "Porte scorrevoli",
+     "slide"
+    ],
+    [
+     "filo-muro",
+     "Porte filo muro",
+     "flush"
+    ],
+    [
+     "laccate-ral",
+     "Laccate RAL",
+     "ral"
+    ]
+   ]
+  },
+  {
+   "id": "scarpiere",
+   "name": "Scarpiere",
+   "short": "Da ingresso, anche su misura",
+   "icon": "shoe",
+   "intro": "Scarpiere da ingresso in legno e MDF, a ribalta o con ante, nelle misure standard o costruite sullo spazio che avete, anche per nicchie e sottoscala.",
+   "subs": [
+    [
+     "a-ribalta",
+     "A ribalta",
+     "shoe"
+    ],
+    [
+     "con-ante",
+     "Con ante",
+     "shoe2"
+    ],
+    [
+     "con-seduta",
+     "Con seduta",
+     "bench"
+    ]
+   ]
+  },
+  {
+   "id": "mobiletti",
+   "name": "Mobiletti",
+   "short": "Comodini, mobili TV, madie e altro",
+   "icon": "cab",
+   "intro": "Mobiletti per tutta la casa: comodini, mobili TV, madie e credenze, mobili da ingresso e da bagno. Scegliete la misura standard o inserite le vostre.",
+   "subs": [
+    [
+     "comodini",
+     "Comodini",
+     "night"
+    ],
+    [
+     "mobili-tv",
+     "Mobili TV",
+     "tv"
+    ],
+    [
+     "madie-credenze",
+     "Madie e credenze",
+     "sideboard"
+    ],
+    [
+     "mobili-ingresso",
+     "Mobili ingresso",
+     "hall"
+    ],
+    [
+     "mobili-bagno",
+     "Mobili bagno",
+     "bath"
+    ]
+   ]
+  },
+  {
+   "id": "tavoli",
+   "name": "Tavoli e top",
+   "short": "Tavoli completi e piani su misura",
+   "icon": "table",
+   "intro": "Tavoli completi e top per tavoli tagliati sulla vostra misura: scegliete forma, dimensioni, spessore e finitura del piano.",
+   "subs": [
+    [
+     "tavoli-completi",
+     "Tavoli completi",
+     "table"
+    ],
+    [
+     "top-per-tavoli",
+     "Top per tavoli",
+     "top"
+    ]
+   ]
+  }
+ ]
+}

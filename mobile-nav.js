@@ -12,6 +12,7 @@
 
   var LINKS = [
     {h:'/',              t:'Home',              s:'Pan.door.a'},
+    {h:'/shop/',         t:'Pandoora Shop',     s:'Negozio online · su misura'},
     {h:'/pannelli-tamburati/', t:'Pannelli Tamburati', s:'Allestimenti fieristici'},
     {h:'/listino-pannelli-tamburati/', t:'Schede Tecniche',   s:'Specifiche e materiali'},
     {h:'/porte/',              t:'Porte',             s:'26 modelli'},
@@ -203,6 +204,9 @@
     if(revealed) try{ console.warn('[pandoora] GSAP non caricato: contenuti mostrati senza animazioni ('+revealed+' elementi)'); }catch(e){}
   }
   window.addEventListener('load', function(){ setTimeout(gsapFallback, 2500); });
+
+  /* pulsante Pandoora Shop in alto a destra */
+  if(!document.querySelector('script[src="/shop-badge.js"]')){var ss=document.createElement('script');ss.src='/shop-badge.js';ss.defer=true;document.head.appendChild(ss);}
 
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', build);
