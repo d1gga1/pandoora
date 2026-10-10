@@ -16,7 +16,9 @@
   "table": "<svg viewBox=\"0 0 64 64\"><path d=\"M4 22h56v6H4z\"/><path d=\"M10 28l-2 28M54 28l2 28M18 28v14M46 28v14\"/></svg>",
   "top": "<svg viewBox=\"0 0 64 64\"><path d=\"M6 30l20-12h32L38 30z\"/><path d=\"M6 30v6l32 0 20-12v-6\"/><path d=\"M38 30v6\"/></svg>",
   "ruler": "<svg viewBox=\"0 0 64 64\"><rect x=\"6\" y=\"22\" width=\"52\" height=\"20\" rx=\"2\" transform=\"rotate(-30 32 32)\"/><path d=\"M18 40l3 5M25 36l2 3M31 33l3 5M38 29l2 3M44 26l3 5\"/></svg>",
-  "box": "<svg viewBox=\"0 0 64 64\"><path d=\"M8 20l24-12 24 12v26L32 58 8 46z\"/><path d=\"M8 20l24 12 24-12M32 32v26\"/></svg>"
+  "box": "<svg viewBox=\"0 0 64 64\"><path d=\"M8 20l24-12 24 12v26L32 58 8 46z\"/><path d=\"M8 20l24 12 24-12M32 32v26\"/></svg>",
+  "cubes": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"8\" width=\"44\" height=\"48\" rx=\"1.5\"/><path d=\"M32 8v48M10 24h44M10 40h44\"/></svg>",
+  "shoeopen": "<svg viewBox=\"0 0 64 64\"><path d=\"M12 6v52M52 6v52\"/><path d=\"M12 18l40 6M12 32l40 6M12 46l40 6\"/></svg>"
  },
  "categories": [
   {
@@ -69,15 +71,20 @@
      "con-seduta",
      "Con seduta",
      "bench"
+    ],
+    [
+     "a-giorno",
+     "A giorno",
+     "shoeopen"
     ]
    ]
   },
   {
    "id": "mobiletti",
    "name": "Mobiletti",
-   "short": "Comodini, mobili TV, madie e altro",
+   "short": "Comodini, mobili TV, madie, librerie",
    "icon": "cab",
-   "intro": "Mobiletti per tutta la casa: comodini, mobili TV, madie e credenze, mobili da ingresso e da bagno. Scegliete la misura standard o inserite le vostre.",
+   "intro": "Mobiletti per tutta la casa: comodini, mobili TV, madie e credenze, librerie a vani, mobili da ingresso e da bagno. Scegliete la misura standard o inserite le vostre.",
    "subs": [
     [
      "comodini",
@@ -93,6 +100,11 @@
      "madie-credenze",
      "Madie e credenze",
      "sideboard"
+    ],
+    [
+     "librerie",
+     "Librerie a vani",
+     "cubes"
     ],
     [
      "mobili-ingresso",

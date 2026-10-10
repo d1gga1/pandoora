@@ -9,6 +9,7 @@ while read n f; do
   [ -z "$n" ] && continue
   TOT=$((TOT+1))
   case "$n" in hero|camera|pranzo) OUT="shop/img/$n.jpg"; SZ=1800;; *) OUT="$P/$n.jpg"; SZ=1100;; esac
+  if [ -f "$OUT" ]; then OK=$((OK+1)); continue; fi
   echo "→ $n"
   if curl -sSfL -o "$P/_png/$n.png" "$B/$f.png"; then
     sips -s format jpeg -s formatOptions 82 -Z $SZ "$P/_png/$n.png" --out "$OUT" >/dev/null && OK=$((OK+1))
@@ -47,6 +48,13 @@ tavolo-laccato-metallo hf_20261010_141129_c3763cad-f0ee-41ec-83e1-30d84909d86b
 top-rovere-massello hf_20261010_141129_fe03ef10-8b70-40cf-80df-c1e633a23606
 top-laminato-hpl hf_20261010_141130_5d9c9c79-af5f-4d8b-bb6f-3b4db2132811
 top-laccato-tondo hf_20261010_141156_83be4131-d768-4257-8627-75f563679bf6
+scarpiera-pensile-duo hf_20261010_144436_1af7bd93-1c91-4d6c-90c5-f655ead41918
+scarpiera-snella-2 hf_20261010_144436_da52b6d5-6733-40f2-be7b-c35472b0098d
+scarpiera-snella-3 hf_20261010_144501_17f66ca9-3e53-4ecf-93c1-4a52d38b25d5
+scarpiera-stella-4 hf_20261010_144436_04b64f84-f7e9-4524-9815-eec478b191f7
+scarpiera-vetro-scorrevole hf_20261010_144436_6cf0c575-037d-4ed9-9d6c-f17507ff672b
+panca-ante-scorrevoli hf_20261010_144501_46f3fb77-5ec0-440e-be19-48074f64084b
+scarpiera-aperta-ripiani hf_20261010_144501_6662bb49-b967-4ec0-be03-37a6cca609a9
 hero hf_20261010_141155_7a92dc9d-a782-4232-97ec-7f055a6814d9
 camera hf_20261010_141155_f4a6235e-f1d4-448f-bc42-fe443d8ef7d4
 pranzo hf_20261010_141156_53bfcaa4-12e3-44b2-b080-4e9015904e4e

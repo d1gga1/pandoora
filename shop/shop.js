@@ -28,7 +28,7 @@
     x:'<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     check:'<svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>'
   };
-  var SW={'Bianco opaco':'#f4f3ef','Bianco':'#f6f6f4','Bianco frassino':'#efede7','Rovere naturale':'#c9a273','Rovere oliato':'#b8895a','Noce canaletto':'#6b4a33','Grigio seta':'#b9b6b0','Grigio Baltimora':'#8d8780','Palissandro White':'#e3ddd2','Nero opaco':'#262626','Laccato RAL':'conic-gradient(#c0392b,#e0b24a,#5b8d5a,#3e6fa8,#8e5aa8,#c0392b)','Rovere naturale/Bianco':'linear-gradient(90deg,#c9a273 50%,#f4f3ef 50%)','Noce/Grigio':'linear-gradient(90deg,#6b4a33 50%,#b9b6b0 50%)','Pietra grigia/Rovere':'linear-gradient(90deg,#8f8f8a 50%,#c9a273 50%)','Pietra chiara/Noce':'linear-gradient(90deg,#d9d5cc 50%,#6b4a33 50%)'};
+  var SW={'Bianco opaco':'#f4f3ef','Bianco':'#f6f6f4','Bianco frassino':'#efede7','Rovere naturale':'#c9a273','Rovere oliato':'#b8895a','Noce canaletto':'#6b4a33','Grigio seta':'#b9b6b0','Grigio Baltimora':'#8d8780','Palissandro White':'#e3ddd2','Nero opaco':'#262626','Marrone-nero':'#3d322b','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc','Laccato RAL':'conic-gradient(#c0392b,#e0b24a,#5b8d5a,#3e6fa8,#8e5aa8,#c0392b)','Rovere naturale/Bianco':'linear-gradient(90deg,#c9a273 50%,#f4f3ef 50%)','Noce/Grigio':'linear-gradient(90deg,#6b4a33 50%,#b9b6b0 50%)','Pietra grigia/Rovere':'linear-gradient(90deg,#8f8f8a 50%,#c9a273 50%)','Pietra chiara/Noce':'linear-gradient(90deg,#d9d5cc 50%,#6b4a33 50%)'};
   var RALS=[['9010','#f1ece1','Bianco puro'],['9016','#f1f0ea','Bianco traffico'],['1013','#e3d9c6','Bianco perla'],['7044','#b8b4a8','Grigio seta'],['7016','#383e42','Antracite'],['6021','#89ac76','Verde pallido'],['5014','#606e8c','Blu colomba'],['3012','#c6846d','Rosso beige'],['9005','#0e0e10','Nero']];
   function swatch(f){return SW[f]||'#ddd'}
 
@@ -71,8 +71,52 @@
     var tot=lines.reduce(function(a,l){return a+l[1]},0);
     return{unit:tot,lines:lines,note:F.ivaNote};
   }
-  function quote(p,c){return p.type==='door'?doorQuote(p,c):furnQuote(p,c)}
+  /* ---------- libreria a vani (configuratore con disegno dal vivo) ---------- */
+  var CUBE_COL={'Bianco opaco':'#f3f2ee','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Marrone-nero':'#3d322b','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc'};
+  function cubeColor(c){if(c.fin==='Laccato RAL'){var R=RALS.find(function(r){return r[0]===c.ral});return R?R[1]:'#e8e2d6'}return CUBE_COL[c.fin]||'#eee'}
+  function shade(hex,k){var n=parseInt(hex.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;function f(v){return Math.max(0,Math.min(255,Math.round(k<0?v*(1+k):v+(255-v)*k)))}return '#'+((1<<24)+(f(r)<<16)+(f(g)<<8)+f(b)).toString(16).slice(1)}
+  function cubeDims(c){var W=c.cols*c.cube+8+(c.cols-1)*1.5,H=c.rows*c.cube+8+(c.rows-1)*1.5,bh=c.base==='zoccolo'?8:c.base==='gambe'?15:0;return{w:Math.round(W*10)/10,h:Math.round((H+bh)*10)/10,d:c.depth,frameH:H,bh:bh}}
+  function cubeQuote(p,c){
+    var K=PR.cube,lines=[],L=(c.cols+1)*c.rows+(c.rows+1)*c.cols;
+    var fp=(K.finishPerc[c.fin]||0);
+    var fr=r9((K.base+K.perPanel*L)*Math.pow(c.cube/33,1.2)*Math.pow(c.depth/39,.5)*(1+fp/100));
+    var D=cubeDims(c);
+    lines.push(['Struttura '+c.cols+'×'+c.rows+' vani da '+c.cube+' cm · '+c.fin+(c.fin==='Laccato RAL'?' '+(c.ral||''):''),fr]);
+    var cnt={};(c.cells||[]).forEach(function(x){if(x&&x!=='vuoto')cnt[x]=(cnt[x]||0)+1});
+    K.inserts.forEach(function(it){if(cnt[it.id]){var u=Math.round(it.add*Math.pow(c.cube/33,1.1)*(1+fp/200));lines.push([cnt[it.id]+' × '+it.label.toLowerCase(),u*cnt[it.id]])}});
+    var b=K.bases.find(function(x){return x.id===c.base});if(b&&b.id!=='nessuna')lines.push([b.label,b.perCol?b.perCol*c.cols:b.add]);
+    return{unit:lines.reduce(function(a,l){return a+l[1]},0),lines:lines,note:K.ivaNote,dims:D};
+  }
+  function cubeSVG(c,interactive){
+    var D=cubeDims(c),col=cubeColor(c),edge=shade(col,-.28),inner=shade(col,-.12),back=shade(col,-.1),ins=shade(col,.08);
+    var s=4,pad=46,W=D.w*s,H=D.h*s,vw=W+pad*2,vh=H+pad*2,x0=pad,y0=pad,t=4*s,ti=1.5*s,cu=c.cube*s;
+    var o='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+vw+' '+vh+'" preserveAspectRatio="xMidYMid meet">';
+    o+='<rect width="'+vw+'" height="'+vh+'" fill="#f4f3f0"/>';
+    o+='<ellipse cx="'+(x0+W/2)+'" cy="'+(y0+H+4)+'" rx="'+(W/2+10)+'" ry="9" fill="rgba(13,21,36,.12)"/>';
+    var fh=D.frameH*s;
+    if(D.bh){var bh=D.bh*s;if(c.base==='gambe'){[x0+t,x0+W-t-8].forEach(function(x){o+='<rect x="'+x+'" y="'+(y0+fh)+'" width="8" height="'+bh+'" fill="#2a2a2a"/>'})}else o+='<rect x="'+(x0+t*.6)+'" y="'+(y0+fh)+'" width="'+(W-t*1.2)+'" height="'+bh+'" fill="'+edge+'"/>'}
+    o+='<rect x="'+x0+'" y="'+y0+'" width="'+W+'" height="'+fh+'" rx="3" fill="'+col+'" stroke="'+edge+'" stroke-width="1.5"/>';
+    for(var r=0;r<c.rows;r++)for(var k=0;k<c.cols;k++){
+      var i=r*c.cols+k,x=x0+t+k*(cu+ti),y=y0+t+r*(cu+ti),it=(c.cells||[])[i]||'vuoto';
+      o+='<g'+(interactive?' class="cell" data-cell="'+i+'" tabindex="0" role="button" aria-label="Vano '+(r+1)+'-'+(k+1)+'"':'')+'>';
+      o+='<rect x="'+x+'" y="'+y+'" width="'+cu+'" height="'+cu+'" fill="'+back+'"/><rect x="'+x+'" y="'+y+'" width="'+cu+'" height="'+(cu*.12)+'" fill="rgba(0,0,0,.10)"/>';
+      if(it==='anta'){o+='<rect x="'+(x+1)+'" y="'+(y+1)+'" width="'+(cu-2)+'" height="'+(cu-2)+'" fill="'+ins+'" stroke="'+edge+'" stroke-width="1"/><circle cx="'+(x+cu-14)+'" cy="'+(y+cu/2)+'" r="3.5" fill="'+edge+'"/>'}
+      else if(it==='cassetti'){[0,1].forEach(function(j){var yy=y+1+j*(cu/2);o+='<rect x="'+(x+1)+'" y="'+yy+'" width="'+(cu-2)+'" height="'+(cu/2-2)+'" fill="'+ins+'" stroke="'+edge+'" stroke-width="1"/><rect x="'+(x+cu/2-14)+'" y="'+(yy+cu/4-3)+'" width="28" height="4" rx="2" fill="'+edge+'"/>'})}
+      else if(it==='ripiano'){o+='<rect x="'+x+'" y="'+(y+cu/2-3)+'" width="'+cu+'" height="6" fill="'+col+'" stroke="'+edge+'" stroke-width=".8"/>'}
+      else if(it==='cesto'){o+='<rect x="'+(x+6)+'" y="'+(y+10)+'" width="'+(cu-12)+'" height="'+(cu-12)+'" rx="5" fill="#cbbda5"/><path d="M'+(x+6)+' '+(y+22)+'h'+(cu-12)+'" stroke="#b3a386" stroke-width="2"/><rect x="'+(x+cu/2-12)+'" y="'+(y+14)+'" width="24" height="5" rx="2.5" fill="#9c8c70"/>'}
+      if(interactive)o+='<rect class="hit" x="'+x+'" y="'+y+'" width="'+cu+'" height="'+cu+'" fill="transparent"/>';
+      o+='</g>';
+    }
+    var red='#c0392b';
+    o+='<g stroke="'+red+'" stroke-width="1.5" fill="none"><path d="M'+x0+' '+(y0+H+22)+'H'+(x0+W)+'M'+x0+' '+(y0+H+16)+'v12M'+(x0+W)+' '+(y0+H+16)+'v12"/><path d="M'+(x0+W+22)+' '+y0+'V'+(y0+H)+'M'+(x0+W+16)+' '+y0+'h12M'+(x0+W+16)+' '+(y0+H)+'h12"/></g>';
+    o+='<g font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="15" fill="'+red+'"><text x="'+(x0+W/2)+'" y="'+(y0+H+40)+'" text-anchor="middle">'+D.w+' cm</text><text x="'+(x0+W+36)+'" y="'+(y0+H/2)+'" text-anchor="middle" transform="rotate(-90 '+(x0+W+36)+' '+(y0+H/2)+')">'+D.h+' cm</text></g>';
+    return o+'</svg>';
+  }
+  function svgURI(svg){return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)}
+  function cubeDefault(p){var c=JSON.parse(JSON.stringify(p.preset));c.ral=c.fin==='Laccato RAL'?'9010':'';c.base='nessuna';c.cells=[];for(var i=0;i<c.cols*c.rows;i++)c.cells.push('vuoto');return c}
+  function quote(p,c){return p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
   function defaultCfg(p,sub){
+    if(p.type==='cube')return cubeDefault(p);
     if(p.type==='door'){
       var open=sub==='scorrevoli'?'scorrevole-esterno':sub==='filo-muro'?'filo-muro':'battente';
       return{open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010'};
@@ -80,10 +124,15 @@
     var s=p.std[0];return{size:0,w:s.w,d:s.d,h:s.h,fin:p.finishes[0],ral:p.finishes[0]==='Laccato RAL'?'9010':''};
   }
   function fromPrice(p,sub){
+    if(p.type==='cube')return cubeQuote(p,cubeDefault(p)).unit;
     if(p.type==='door')return doorQuote(p,defaultCfg(p,sub)).unit;
     return Math.min.apply(null,p.std.map(function(s){return s.price}));
   }
   function cfgSummary(p,c){
+    if(p.type==='cube'){var D=cubeDims(c),cnt={};(c.cells||[]).forEach(function(x){if(x!=='vuoto')cnt[x]=(cnt[x]||0)+1});
+      var ins=PR.cube.inserts.filter(function(i){return cnt[i.id]}).map(function(i){return cnt[i.id]+' '+i.label.toLowerCase()});
+      var b=PR.cube.bases.find(function(x){return x.id===c.base});
+      return [c.cols+'×'+c.rows+' vani da '+c.cube+' cm',D.w+'×'+c.depth+'×'+D.h+' cm',c.fin==='Laccato RAL'?'RAL '+(c.ral||''):c.fin].concat(ins).concat(b&&b.id!=='nessuna'?[b.label]:[]).join(' · ')}
     if(p.type==='door'){
       var op=opening(c.open), ex=PR.door.extras.filter(function(x){return c.ex&&c.ex[x.id]&&extraOk(x,c)}).map(function(x){return x.label.split(' (')[0]});
       return [op.label, c.size==='custom'?c.w+'×'+c.h+' cm (fuori misura)':c.w+'×'+PR.door.height+' cm', p.line==='laminata'?p.finishes[0]:'RAL '+(c.ral||'da scegliere')].concat(ex).join(' · ');
@@ -107,10 +156,11 @@
     var fav=favs.indexOf(p.id)>=0, s=p.std&&p.std[0];
     var price=fromPrice(p,sub), many=p.type==='door'||(p.std&&p.std.length>1)||p.custom;
     var top=p.type==='door'?'<span class="s-card-line"><i></i>'+esc(p.lineLabel)+'</span>':'';
-    var dims=s?'<span class="s-dim">'+s.w+' × '+s.d+' × '+s.h+' cm'+(p.std.length>1?' · '+p.std.length+' misure':'')+'</span>':'<span class="s-dim">L 60–90 × H 210 cm · anche fuori misura</span>';
+    if(p.type==='cube'){var cc=cubeDefault(p),cd=cubeDims(cc);p._thumb=svgURI(cubeSVG(cc));s={w:cd.w,d:cc.depth,h:cd.h};p.std=null}
+    var dims=p.type==='cube'?'<span class="s-dim">'+s.w+' × '+s.d+' × '+s.h+' cm · '+p.preset.cols*p.preset.rows+' vani</span>':s?'<span class="s-dim">'+s.w+' × '+s.d+' × '+s.h+' cm'+(p.std.length>1?' · '+p.std.length+' misure':'')+'</span>':'<span class="s-dim">L 60–90 × H 210 cm · anche fuori misura</span>';
     var sw='<span class="s-swatches">'+(p.finishes||[]).slice(0,5).map(function(f){return '<i title="'+esc(f)+'" style="background:'+swatch(f)+'"></i>'}).join('')+'</span>';
     return '<article class="s-card" data-type="'+p.type+'" data-id="'+esc(p.id)+'">'
-      +'<div class="s-card-img" data-open="'+esc(p.id)+'" role="button" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+imgAttrs(p)+' alt="'+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
+      +'<div class="s-card-img" data-open="'+esc(p.id)+'" role="button" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+(p._thumb?'src="'+p._thumb+'"':imgAttrs(p))+' alt="'+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
       +(p.badge?'<span class="s-badge">'+esc(p.badge)+'</span>':'')+(p.custom||p.type==='door'?'<span class="s-badge g r2">Su misura</span>':'')
       +'<button class="s-card-q" type="button" data-open="'+esc(p.id)+'">'+IC.eye+'Configura</button></div>'
       +top+'<h3><a href="?p='+esc(p.id)+'" data-open="'+esc(p.id)+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc||'')+'</p>'+dims+sw
@@ -163,17 +213,17 @@
   function addToCart(p,c,qty,fromImg){
     var q=quote(p,c), key=p.id+'|'+JSON.stringify(c);
     var ex=cart.find(function(l){return l.key===key});
-    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:p.type==='door'?'escl':'incl',qty:qty});
+    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:p.type==='door'?'escl':'incl',qty:qty});
     store('pdShopCart2',cart);
     fly(fromImg,function(){counts('cart')});
     toast(p.name+' nel carrello');
   }
   function fly(img,done){
     var tgt=$('#s-cart-btn');
-    if(RM||!img||!tgt||!img.animate){done();return}
+    if(RM||!img||!tgt||!document.body.animate){done();return}
     var a=img.getBoundingClientRect(),b=tgt.getBoundingClientRect();
     var f=document.createElement('div');f.className='s-fly';f.style.cssText='left:'+a.left+'px;top:'+a.top+'px;width:'+a.width+'px;height:'+a.height+'px';
-    f.innerHTML='<img src="'+esc(img.currentSrc||img.src)+'" alt="">';document.body.appendChild(f);
+    f.innerHTML='<img src="'+esc(img.tagName==='svg'?svgURI(img.outerHTML):(img.currentSrc||img.src))+'" alt="">';document.body.appendChild(f);
     var dx=b.left+b.width/2-(a.left+a.width/2),dy=b.top+b.height/2-(a.top+a.height/2);
     f.animate([{transform:'translate(0,0) scale(1)',opacity:1,borderRadius:'14px'},{transform:'translate('+dx*.55+'px,'+(dy*.55-120)+'px) scale(.45) rotate(-8deg)',opacity:1,offset:.55},{transform:'translate('+dx+'px,'+dy+'px) scale(.06) rotate(-16deg)',opacity:.4,borderRadius:'50%'}],{duration:850,easing:'cubic-bezier(.5,0,.2,1)'}).onfinish=function(){f.remove();done()};
   }
@@ -236,6 +286,7 @@
     lastFocus=document.activeElement;
     var m=ensurePM(),c=defaultCfg(p,sub),qty=1;
     var media=$('.s-pm-media',m),sc=$('.s-pm-scroll',m),ft=$('.s-pm-foot',m);
+    if(p.type==='cube'){openCube(p,m,media,sc,ft);return}
     media.className='s-pm-media'+(p.type==='door'?' door':'');
     media.innerHTML='<img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.type==='door'&&p.line!=='laminata'?'<span class="s-pm-tint" style="-webkit-mask-image:url(\''+esc(p.imgLg)+'\');mask-image:url(\''+esc(p.imgLg)+'\')"></span>':'')+'<span class="s-pm-dims" id="s-pm-dims"></span><span class="s-pm-ral" id="s-pm-ral"></span>';
     var html='';
@@ -300,6 +351,67 @@
     requestAnimationFrame(function(){m.classList.add('show');var x=$('.s-pm-x',m);x&&x.focus({preventScroll:true})});
     if(!RM&&p.type==='door'){var im=$('img',media);im.animate&&im.animate([{transform:'perspective(1200px) rotateY(-55deg)',opacity:.2,transformOrigin:'0 50%'},{transform:'none',opacity:1,transformOrigin:'0 50%'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'})}
     var u=new URL(location.href);u.searchParams.set('p',id);history.replaceState(null,'',u);
+  }
+  function showPM(m,id){
+    m.classList.add('open');document.documentElement.style.overflow='hidden';
+    requestAnimationFrame(function(){m.classList.add('show');var x=$('.s-pm-x',m);x&&x.focus({preventScroll:true})});
+    var u=new URL(location.href);u.searchParams.set('p',id);history.replaceState(null,'',u);
+  }
+  function openCube(p,m,media,sc,ft){
+    var K=PR.cube,c=cubeDefault(p),qty=1,brush='anta';
+    media.className='s-pm-media cube';
+    media.innerHTML='<div class="s-cube-stage" id="s-cube"></div><span class="s-pm-dims" id="s-pm-dims"></span><span class="s-cube-hint">Toccate i vani per aggiungere ante, cassetti o cesti</span>';
+    var chipsN=function(id,arr,fmt){return '<div class="s-chips" id="'+id+'">'+arr.map(function(v){return '<button type="button" class="s-chip" data-v="'+v+'">'+fmt(v)+'</button>'}).join('')+'</div>'};
+    var nums=[];for(var i=1;i<=K.maxCols;i++)nums.push(i);var numsR=[];for(var j=1;j<=K.maxRows;j++)numsR.push(j);
+    var html='<span class="s-card-line"><i></i>Librerie a vani · pannello tamburato</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'. Struttura in pannello tamburato con anima alveolare, leggera e rigida: la stessa che produciamo per gli stand fieristici. Si usa in verticale o in orizzontale, contro parete o come divisorio.</p>';
+    html+='<fieldset class="s-opt"><legend>Colonne <small>vani in larghezza</small></legend>'+chipsN('o-cols',nums,function(v){return v})+'</fieldset>';
+    html+='<fieldset class="s-opt"><legend>Righe <small>vani in altezza</small></legend>'+chipsN('o-rows',numsR,function(v){return v})+'</fieldset>';
+    html+='<fieldset class="s-opt"><legend>Misura del vano <small>interno, quadrato</small></legend>'+chipsN('o-cube',K.cubes,function(v){return v+' cm'+(v===33?' <small>standard</small>':'')})+'</fieldset>';
+    html+='<fieldset class="s-opt"><legend>Profondità</legend>'+chipsN('o-depth',K.depths,function(v){return v+' cm'})+'</fieldset>';
+    html+='<fieldset class="s-opt"><legend>Finitura</legend><div class="s-chips" id="o-fin">'+p.finishes.map(function(f){var pc=K.finishPerc[f];return '<button type="button" class="s-chip" data-v="'+esc(f)+'"><i style="background:'+(CUBE_COL[f]||swatch(f))+'"></i>'+esc(f)+(pc?' <small>+'+pc+'%</small>':'')+'</button>'}).join('')+'</div></fieldset>';
+    html+=ralPicker(true);
+    html+='<fieldset class="s-opt"><legend>Inserti nei vani <small>scegliete e toccate il disegno</small></legend><div class="s-chips" id="o-brush">'+K.inserts.map(function(it){return '<button type="button" class="s-chip" data-v="'+it.id+'">'+esc(it.label)+(it.add?' <small>+'+eur.format(Math.round(it.add*Math.pow(c.cube/33,1.1)))+'</small>':'')+'</button>'}).join('')+'</div><div class="s-chips" style="margin-top:8px"><button type="button" class="s-chip" id="o-fill">Riempi tutti i vani</button><button type="button" class="s-chip" id="o-alt">A scacchiera</button><button type="button" class="s-chip" id="o-clear">Svuota</button></div></fieldset>';
+    html+='<fieldset class="s-opt"><legend>Base</legend><div class="s-chips" id="o-base">'+K.bases.map(function(b){return '<button type="button" class="s-chip" data-v="'+b.id+'">'+esc(b.label)+'</button>'}).join('')+'</div></fieldset>';
+    html+='<dl class="s-specs"><dt>Struttura</dt><dd>Pannello tamburato, fianchi 4 cm, divisori 1,5 cm</dd><dt>Portata</dt><dd>13 kg per vano, 25 kg sul piano</dd><dt>Fissaggio</dt><dd>Kit a muro incluso: va sempre fissata alla parete</dd><dt>Produzione</dt><dd>Fontanelle (TV), misure fuori standard su richiesta</dd></dl>';
+    html+='<ul class="s-break" id="s-break"></ul>';
+    sc.innerHTML=html;sc.scrollTop=0;
+    ft.innerHTML='<div class="s-qty"><button type="button" id="q-m" aria-label="Meno">−</button><output id="q-v">1</output><button type="button" id="q-p" aria-label="Più">+</button></div><div class="s-pm-total"><b id="s-pm-tot" data-v="0">—</b><small id="s-pm-iva"></small></div><button class="s-btn s-btn-p" type="button" id="s-pm-add">'+IC.bag+'Aggiungi al carrello</button>';
+    var stage=$('#s-cube',media),prevKey='';
+    function resize(){var n=c.cols*c.rows,old=c.cells||[],oc=c._oc||c.cols,nc=[];for(var r=0;r<c.rows;r++)for(var k=0;k<c.cols;k++){var oi=r*oc+k;nc.push(k<oc&&old[oi]?old[oi]:'vuoto')}c.cells=nc;c._oc=c.cols}
+    function sel(g,v){$$('#'+g+' .s-chip',sc).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.v)===String(v))})}
+    function draw(pop){
+      stage.innerHTML=cubeSVG(c,true);
+      $$('.cell',stage).forEach(function(g){
+        function hit(){var i=+g.dataset.cell;c.cells[i]=c.cells[i]===brush?'vuoto':brush;draw(i);upd(true)}
+        g.addEventListener('click',hit);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();hit()}});
+      });
+      if(pop!=null&&!RM){var g=$('.cell[data-cell="'+pop+'"]',stage);if(g&&g.animate)g.animate([{transform:'scale(.92)',opacity:.4},{transform:'none',opacity:1}],{duration:420,easing:'cubic-bezier(.34,1.56,.64,1)',transformOrigin:'center',transformBox:'fill-box'})}
+    }
+    function upd(skipDraw){
+      sel('o-cols',c.cols);sel('o-rows',c.rows);sel('o-cube',c.cube);sel('o-depth',c.depth);sel('o-fin',c.fin);sel('o-brush',brush);sel('o-base',c.base);
+      var rb=$('#o-ral',sc);if(rb)rb.hidden=c.fin!=='Laccato RAL';
+      $$('.s-ral-sw button',sc).forEach(function(b){b.classList.toggle('on',b.dataset.r===c.ral)});
+      var key=[c.cols,c.rows,c.cube,c.depth,c.fin,c.ral,c.base].join('|');
+      if(!skipDraw){draw();if(key!==prevKey&&prevKey&&!RM){var sv=$('svg',stage);sv&&sv.animate&&sv.animate([{opacity:.3,transform:'scale(.97)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.16,1,.3,1)'})}}
+      prevKey=key;
+      var q=cubeQuote(p,c);
+      $('#s-pm-dims').textContent=q.dims.w+' × '+c.depth+' × '+q.dims.h+' cm';
+      $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+eur.format(l[1])+'</b></li>'}).join('');
+      tween($('#s-pm-tot'),q.unit*qty);$('#s-pm-iva').textContent=(qty>1?qty+' pezzi · ':'')+q.note;
+    }
+    function bindN(g,k){$$('#'+g+' .s-chip',sc).forEach(function(b){b.onclick=function(){c[k]=isNaN(+b.dataset.v)?b.dataset.v:+b.dataset.v;if(k==='cols'||k==='rows')resize();upd()}})}
+    resize();bindN('o-cols','cols');bindN('o-rows','rows');bindN('o-cube','cube');bindN('o-depth','depth');bindN('o-base','base');
+    $$('#o-fin .s-chip',sc).forEach(function(b){b.onclick=function(){c.fin=b.dataset.v;if(c.fin==='Laccato RAL'&&!c.ral)c.ral='9010';upd()}});
+    $$('#o-brush .s-chip',sc).forEach(function(b){b.onclick=function(){brush=b.dataset.v;upd(true)}});
+    $('#o-fill',sc).onclick=function(){c.cells=c.cells.map(function(){return brush});upd()};
+    $('#o-alt',sc).onclick=function(){c.cells=c.cells.map(function(x,i){var r=Math.floor(i/c.cols),k=i%c.cols;return (r+k)%2?brush:'vuoto'});upd()};
+    $('#o-clear',sc).onclick=function(){c.cells=c.cells.map(function(){return 'vuoto'});upd()};
+    $$('.s-ral-sw button',sc).forEach(function(b){b.onclick=function(){c.ral=b.dataset.r;upd()}});
+    var ri=$('#o-ral-in',sc);if(ri)ri.oninput=function(){c.ral=ri.value.replace(/\D/g,'').slice(0,4);upd()};
+    $('#q-m',ft).onclick=function(){qty=Math.max(1,qty-1);$('#q-v',ft).textContent=qty;upd(true)};
+    $('#q-p',ft).onclick=function(){qty=Math.min(99,qty+1);$('#q-v',ft).textContent=qty;upd(true)};
+    $('#s-pm-add',ft).onclick=function(){var cc=JSON.parse(JSON.stringify(c));delete cc._oc;addToCart(p,cc,qty,$('svg',stage));setTimeout(closeProduct,250)};
+    upd();showPM(m,p.id);
   }
   function ralPicker(furn){
     return '<fieldset class="s-opt" id="o-ral"'+(furn?' hidden':'')+'><legend>Colore RAL <small>qualsiasi tinta della cartella</small></legend><div class="s-ral-sw">'+RALS.map(function(r){return '<button type="button" data-r="'+r[0]+'" style="background:'+r[1]+'" title="RAL '+r[0]+' · '+r[2]+'" aria-label="RAL '+r[0]+' '+r[2]+'"></button>'}).join('')+'</div><div class="s-ral"><input class="s-ral-in" id="o-ral-in" placeholder="RAL 9010" aria-label="Codice RAL"><span class="s-note">Scrivete il codice se non è tra questi</span></div></fieldset>';

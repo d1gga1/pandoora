@@ -82,6 +82,73 @@
    },
    "ivaNote": "IVA esclusa · posa inclusa in VE e FVG"
   },
+  "cube": {
+   "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura",
+   "base": 10,
+   "perPanel": 3.6,
+   "cubes": [
+    25,
+    33,
+    40,
+    45
+   ],
+   "depths": [
+    30,
+    39,
+    45
+   ],
+   "maxCols": 6,
+   "maxRows": 6,
+   "finishPerc": {
+    "Bianco lucido": 15,
+    "Laccato RAL": 35
+   },
+   "inserts": [
+    {
+     "id": "vuoto",
+     "label": "Vano aperto",
+     "add": 0
+    },
+    {
+     "id": "anta",
+     "label": "Anta",
+     "add": 25
+    },
+    {
+     "id": "cassetti",
+     "label": "2 cassetti",
+     "add": 39
+    },
+    {
+     "id": "ripiano",
+     "label": "Ripiano intermedio",
+     "add": 9
+    },
+    {
+     "id": "cesto",
+     "label": "Cesto in tessuto",
+     "add": 15
+    }
+   ],
+   "bases": [
+    {
+     "id": "nessuna",
+     "label": "Senza base",
+     "add": 0
+    },
+    {
+     "id": "zoccolo",
+     "label": "Zoccolo",
+     "perCol": 14
+    },
+    {
+     "id": "gambe",
+     "label": "Gambe in metallo",
+     "add": 29
+    }
+   ],
+   "ivaNote": "IVA inclusa · kit di fissaggio a muro incluso"
+  },
   "furniture": {
    "customPerc": 15,
    "ralPerc": 20,
@@ -2760,6 +2827,365 @@
    "rank": 42
   },
   {
+   "id": "scarpiera-pensile-duo",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Pensile Duo (2 pezzi)",
+   "desc": "Due elementi a parete da 18 cm di profondità: componibili in verticale o in fila",
+   "img": "/shop/img/prodotti/scarpiera-pensile-duo.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_1af7bd93-1c91-4d6c-90c5-f655ead41918_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-pensile-duo.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_1af7bd93-1c91-4d6c-90c5-f655ead41918.png",
+   "std": [
+    {
+     "w": 52,
+     "d": 18,
+     "h": 39,
+     "price": 49
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     31,
+     78
+    ],
+    "d": [
+     15,
+     25
+    ],
+    "h": [
+     23,
+     55
+    ]
+   },
+   "badge": "Salvaspazio",
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera pensile duo (2 pezzi)"
+   ],
+   "rank": 110
+  },
+  {
+   "id": "scarpiera-snella-2",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Snella 2 vani",
+   "desc": "Larga solo 49 cm, due ribalte con divisori regolabili, 8 paia",
+   "img": "/shop/img/prodotti/scarpiera-snella-2.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_da52b6d5-6733-40f2-be7b-c35472b0098d_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-snella-2.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_da52b6d5-6733-40f2-be7b-c35472b0098d.png",
+   "std": [
+    {
+     "w": 49,
+     "d": 28,
+     "h": 93,
+     "price": 59
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Marrone-nero"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     29,
+     74
+    ],
+    "d": [
+     17,
+     39
+    ],
+    "h": [
+     56,
+     130
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera snella 2 vani"
+   ],
+   "rank": 111
+  },
+  {
+   "id": "scarpiera-snella-3",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Snella 3 vani",
+   "desc": "Tre ribalte in 49 cm di larghezza, 12 paia, da fissare a parete",
+   "img": "/shop/img/prodotti/scarpiera-snella-3.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_17f66ca9-3e53-4ecf-93c1-4a52d38b25d5_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-snella-3.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_17f66ca9-3e53-4ecf-93c1-4a52d38b25d5.png",
+   "std": [
+    {
+     "w": 49,
+     "d": 28,
+     "h": 135,
+     "price": 79
+    }
+   ],
+   "finishes": [
+    "Marrone-nero",
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     29,
+     74
+    ],
+    "d": [
+     17,
+     39
+    ],
+    "h": [
+     81,
+     189
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera snella 3 vani"
+   ],
+   "rank": 112
+  },
+  {
+   "id": "scarpiera-stella-4",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Stella 4 ribalte",
+   "desc": "Bassa e profonda solo 17 cm: quattro ribalte, piano d'appoggio per chiavi e posta",
+   "img": "/shop/img/prodotti/scarpiera-stella-4.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_04b64f84-f7e9-4524-9815-eec478b191f7_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-stella-4.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_04b64f84-f7e9-4524-9815-eec478b191f7.png",
+   "std": [
+    {
+     "w": 96,
+     "d": 17,
+     "h": 90,
+     "price": 149
+    },
+    {
+     "w": 120,
+     "d": 17,
+     "h": 90,
+     "price": 179
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     58,
+     144
+    ],
+    "d": [
+     15,
+     24
+    ],
+    "h": [
+     54,
+     126
+    ]
+   },
+   "badge": "Novità",
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera stella 4 ribalte"
+   ],
+   "rank": 113
+  },
+  {
+   "id": "scarpiera-vetro-scorrevole",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-ante",
+   "subs": [
+    "con-ante"
+   ],
+   "name": "Scarpiera Brina ante scorrevoli",
+   "desc": "Ante scorrevoli in vetro satinato, gambe in metallo, ripiani regolabili",
+   "img": "/shop/img/prodotti/scarpiera-vetro-scorrevole.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_6cf0c575-037d-4ed9-9d6c-f17507ff672b_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-vetro-scorrevole.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_6cf0c575-037d-4ed9-9d6c-f17507ff672b.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 35,
+     "h": 102,
+     "price": 139
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     21,
+     49
+    ],
+    "h": [
+     61,
+     143
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "con-ante",
+    "scarpiera brina ante scorrevoli"
+   ],
+   "rank": 114
+  },
+  {
+   "id": "panca-ante-scorrevoli",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-seduta",
+   "subs": [
+    "con-seduta"
+   ],
+   "name": "Panca Brina ante scorrevoli",
+   "desc": "Seduta e scarpiera chiusa: due ante scorrevoli, nessun ingombro in apertura",
+   "img": "/shop/img/prodotti/panca-ante-scorrevoli.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_46f3fb77-5ec0-440e-be19-48074f64084b_min.webp",
+   "imgLg": "/shop/img/prodotti/panca-ante-scorrevoli.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_46f3fb77-5ec0-440e-be19-48074f64084b.png",
+   "std": [
+    {
+     "w": 100,
+     "d": 37,
+     "h": 52,
+     "price": 129
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     60,
+     150
+    ],
+    "d": [
+     22,
+     52
+    ],
+    "h": [
+     31,
+     73
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "con-seduta",
+    "panca brina ante scorrevoli"
+   ],
+   "rank": 115
+  },
+  {
+   "id": "scarpiera-aperta-ripiani",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-giorno",
+   "subs": [
+    "a-giorno"
+   ],
+   "name": "Scarpiera Vista a giorno",
+   "desc": "Ripiani inclinati regolabili con battuta frontale, 15 paia a vista",
+   "img": "/shop/img/prodotti/scarpiera-aperta-ripiani.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_6662bb49-b967-4ec0-be03-37a6cca609a9_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-aperta-ripiani.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_6662bb49-b967-4ec0-be03-37a6cca609a9.png",
+   "std": [
+    {
+     "w": 61,
+     "d": 30,
+     "h": 130,
+     "price": 99
+    },
+    {
+     "w": 91,
+     "d": 30,
+     "h": 130,
+     "price": 129
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     37,
+     92
+    ],
+    "d": [
+     18,
+     42
+    ],
+    "h": [
+     78,
+     182
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "a-giorno",
+    "scarpiera vista a giorno"
+   ],
+   "rank": 116
+  },
+  {
    "id": "top-effetto-pietra",
    "type": "furniture",
    "cat": "tavoli",
@@ -2811,6 +3237,246 @@
     "tavoli"
    ],
    "rank": 1
+  },
+  {
+   "id": "libreria-alveare-2x4",
+   "type": "cube",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Alveare 2×4",
+   "desc": "Otto vani da 33 cm: in verticale come libreria, in orizzontale come madia",
+   "preset": {
+    "cols": 2,
+    "rows": 4,
+    "cube": 33,
+    "depth": 39,
+    "fin": "Rovere sbiancato"
+   },
+   "finishes": [
+    "Bianco opaco",
+    "Rovere sbiancato",
+    "Effetto noce",
+    "Marrone-nero",
+    "Grigio legno",
+    "Bianco lucido",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "badge": "Più venduta",
+   "tags": [
+    "libreria",
+    "librerie",
+    "scaffale",
+    "cubi",
+    "vani",
+    "alveare",
+    "divisorio",
+    "mobiletti"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "libreria-alveare-1x4",
+   "type": "cube",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Alveare 1×4",
+   "desc": "Colonna stretta da 42 cm, perfetta di fianco a scrivanie e porte",
+   "preset": {
+    "cols": 1,
+    "rows": 4,
+    "cube": 33,
+    "depth": 39,
+    "fin": "Effetto noce"
+   },
+   "finishes": [
+    "Bianco opaco",
+    "Rovere sbiancato",
+    "Effetto noce",
+    "Marrone-nero",
+    "Grigio legno",
+    "Bianco lucido",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "badge": null,
+   "tags": [
+    "libreria",
+    "librerie",
+    "scaffale",
+    "cubi",
+    "vani",
+    "alveare",
+    "divisorio",
+    "mobiletti"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "libreria-alveare-4x4",
+   "type": "cube",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Alveare 4×4",
+   "desc": "Sedici vani: parete attrezzata o divisorio tra due ambienti",
+   "preset": {
+    "cols": 4,
+    "rows": 4,
+    "cube": 33,
+    "depth": 39,
+    "fin": "Bianco opaco"
+   },
+   "finishes": [
+    "Bianco opaco",
+    "Rovere sbiancato",
+    "Effetto noce",
+    "Marrone-nero",
+    "Grigio legno",
+    "Bianco lucido",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "badge": "Grande",
+   "tags": [
+    "libreria",
+    "librerie",
+    "scaffale",
+    "cubi",
+    "vani",
+    "alveare",
+    "divisorio",
+    "mobiletti"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "libreria-alveare-2x2",
+   "type": "cube",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Alveare 2×2",
+   "desc": "Modulo da 77 cm come comodino, mobile TV basso o cubo da ingresso",
+   "preset": {
+    "cols": 2,
+    "rows": 2,
+    "cube": 33,
+    "depth": 39,
+    "fin": "Bianco opaco"
+   },
+   "finishes": [
+    "Bianco opaco",
+    "Rovere sbiancato",
+    "Effetto noce",
+    "Marrone-nero",
+    "Grigio legno",
+    "Bianco lucido",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "badge": null,
+   "tags": [
+    "libreria",
+    "librerie",
+    "scaffale",
+    "cubi",
+    "vani",
+    "alveare",
+    "divisorio",
+    "mobiletti"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "libreria-alveare-5x5",
+   "type": "cube",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Alveare 5×5",
+   "desc": "Venticinque vani: una parete intera di contenitori",
+   "preset": {
+    "cols": 5,
+    "rows": 5,
+    "cube": 33,
+    "depth": 39,
+    "fin": "Marrone-nero"
+   },
+   "finishes": [
+    "Bianco opaco",
+    "Rovere sbiancato",
+    "Effetto noce",
+    "Marrone-nero",
+    "Grigio legno",
+    "Bianco lucido",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "badge": null,
+   "tags": [
+    "libreria",
+    "librerie",
+    "scaffale",
+    "cubi",
+    "vani",
+    "alveare",
+    "divisorio",
+    "mobiletti"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "libreria-alveare-4x2",
+   "type": "cube",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Mobile basso Alveare 4×2",
+   "desc": "Credenza bassa a vani, con ante e cassetti a scelta",
+   "preset": {
+    "cols": 4,
+    "rows": 2,
+    "cube": 33,
+    "depth": 39,
+    "fin": "Effetto noce"
+   },
+   "finishes": [
+    "Bianco opaco",
+    "Rovere sbiancato",
+    "Effetto noce",
+    "Marrone-nero",
+    "Grigio legno",
+    "Bianco lucido",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "badge": "Novità",
+   "tags": [
+    "libreria",
+    "librerie",
+    "scaffale",
+    "cubi",
+    "vani",
+    "alveare",
+    "divisorio",
+    "mobiletti"
+   ],
+   "rank": 30
   }
  ]
 }
