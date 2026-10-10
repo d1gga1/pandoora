@@ -1,4 +1,2816 @@
 {
  "_nota": "Elenco prodotti del negozio. Sarà sostituito dal database Supabase.",
- "products": []
+ "pricing": {
+  "_nota": "Regole prezzi. Porte: IVA esclusa, posa e trasporto inclusi in Veneto e FVG (fonte: /porte-interne-prezzi/). Arredi: IVA inclusa, trasporto escluso.",
+  "door": {
+   "lines": {
+    "laminata": 395,
+    "laccata": 495,
+    "pantografata": 595
+   },
+   "widths": [
+    60,
+    70,
+    80,
+    90
+   ],
+   "height": 210,
+   "openings": [
+    {
+     "id": "battente",
+     "label": "Battente",
+     "min": 0,
+     "note": "Reversibile destra o sinistra"
+    },
+    {
+     "id": "scorrevole-esterno",
+     "label": "Scorrevole esterno muro",
+     "min": 495,
+     "note": "Binario a vista sopra il vano"
+    },
+    {
+     "id": "scorrevole-interno",
+     "label": "Scorrevole interno muro",
+     "min": 495,
+     "note": "Scompare nel controtelaio"
+    },
+    {
+     "id": "filo-muro",
+     "label": "Filo muro",
+     "min": 695,
+     "onlyLacc": true,
+     "note": "Telaio invisibile, a filo parete"
+    }
+   ],
+   "extras": [
+    {
+     "id": "vetro",
+     "label": "Con vetro",
+     "add": 150
+    },
+    {
+     "id": "libro",
+     "label": "Apertura a libro",
+     "add": 200,
+     "onlyFor": [
+      "battente"
+     ]
+    },
+    {
+     "id": "magic",
+     "label": "Sistema Magic (scorrevole senza binario a vista)",
+     "add": 200,
+     "onlyFor": [
+      "scorrevole-esterno"
+     ]
+    },
+    {
+     "id": "stipiti",
+     "label": "Allargamento stipiti (muri spessi)",
+     "add": 110
+    }
+   ],
+   "fuoriMisura": {
+    "add": 0,
+    "perc": 0,
+    "label": "Fuori misura",
+    "note": "Costruiamo ogni porta sul vano: oggi la misura non cambia il prezzo. Sovrapprezzi da definire.",
+    "wMin": 50,
+    "wMax": 120,
+    "hMin": 180,
+    "hMax": 270
+   },
+   "ivaNote": "IVA esclusa · posa inclusa in VE e FVG"
+  },
+  "furniture": {
+   "customPerc": 15,
+   "ralPerc": 20,
+   "exp": 0.85,
+   "round": 9,
+   "ivaNote": "IVA inclusa · trasporto a parte"
+  }
+ },
+ "products": [
+  {
+   "id": "porta-bianco",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli"
+   ],
+   "name": "Porta Bianco",
+   "line": "laminata",
+   "lineLabel": "Linea Laminata",
+   "desc": "Laminato bianco liscio, il più pratico da pulire",
+   "long": "Rivestimento laminato ad alta resistenza, ideale per un uso quotidiano intenso. Superficie facile da pulire, stabile nel tempo.",
+   "img": "/assets/porte/hf_20260708_071345_4a446409-de91-4471-b79b-4b3a500ffa8e_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071345_4a446409-de91-4471-b79b-4b3a500ffa8e.webp",
+   "imgFb": "/door-photos/bianco.jpg",
+   "finishes": [
+    "Bianco"
+   ],
+   "badge": "Più scelta",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laminata",
+    "linea laminata",
+    "battente",
+    "scorrevole",
+    "laminato"
+   ],
+   "rank": -10
+  },
+  {
+   "id": "porta-bianco-matrix",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli"
+   ],
+   "name": "Porta Bianco Matrix",
+   "line": "laminata",
+   "lineLabel": "Linea Laminata",
+   "desc": "Laminato bianco con venatura frassino in rilievo",
+   "long": "Rivestimento laminato ad alta resistenza, ideale per un uso quotidiano intenso. Superficie facile da pulire, stabile nel tempo.",
+   "img": "/assets/porte/hf_20260708_071347_4eef6cfe-bf57-4464-833f-73af7e14582c_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071347_4eef6cfe-bf57-4464-833f-73af7e14582c.webp",
+   "imgFb": "/door-photos/bianco-matrix.jpg",
+   "finishes": [
+    "Bianco frassino"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laminata",
+    "linea laminata",
+    "battente",
+    "scorrevole",
+    "laminato"
+   ],
+   "rank": 1
+  },
+  {
+   "id": "porta-grigio-baltimora",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli"
+   ],
+   "name": "Porta Grigio Baltimora",
+   "line": "laminata",
+   "lineLabel": "Linea Laminata",
+   "desc": "Laminato grigio caldo effetto legno",
+   "long": "Rivestimento laminato ad alta resistenza, ideale per un uso quotidiano intenso. Superficie facile da pulire, stabile nel tempo.",
+   "img": "/assets/porte/hf_20260708_065744_ad32adae-2774-4438-aaea-841d4916a503_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_065744_ad32adae-2774-4438-aaea-841d4916a503.webp",
+   "imgFb": "/door-photos/grigio-baltimora.jpg",
+   "finishes": [
+    "Grigio Baltimora"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laminata",
+    "linea laminata",
+    "battente",
+    "scorrevole",
+    "laminato"
+   ],
+   "rank": 2
+  },
+  {
+   "id": "porta-palissandro-white",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli"
+   ],
+   "name": "Porta Palissandro White",
+   "line": "laminata",
+   "lineLabel": "Linea Laminata",
+   "desc": "Laminato chiaro con venatura palissandro",
+   "long": "Rivestimento laminato ad alta resistenza, ideale per un uso quotidiano intenso. Superficie facile da pulire, stabile nel tempo.",
+   "img": "/assets/porte/hf_20260708_065924_2e8c8033-fa14-4795-b982-a19d894ffe40_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_065924_2e8c8033-fa14-4795-b982-a19d894ffe40.webp",
+   "imgFb": "/door-photos/palissandro-white.jpg",
+   "finishes": [
+    "Palissandro White"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laminata",
+    "linea laminata",
+    "battente",
+    "scorrevole",
+    "laminato"
+   ],
+   "rank": 3
+  },
+  {
+   "id": "porta-2-bugne",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta 2 Bugne",
+   "line": "laccata",
+   "lineLabel": "Linea Laccata",
+   "desc": "Laccata con due bugne incise, stile classico",
+   "long": "Anta laccata dalla superficie liscia e uniforme. Le bugne incise danno profondità e carattere sartoriale al pannello. Tinta RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e.webp",
+   "imgFb": "/door-photos/2-bugne.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Più scelta",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laccata",
+    "linea laccata",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": -6
+  },
+  {
+   "id": "porta-3-bugne-freeze",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta 3 Bugne Freeze",
+   "line": "laccata",
+   "lineLabel": "Linea Laccata",
+   "desc": "Laccata a tre bugne con fresata sottile",
+   "long": "Anta laccata dalla superficie liscia e uniforme. Le bugne incise danno profondità e carattere sartoriale al pannello. Tinta RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071350_45f75e86-82cd-40c3-91a8-625fdcec66d2_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071350_45f75e86-82cd-40c3-91a8-625fdcec66d2.webp",
+   "imgFb": "/door-photos/3-bugne-freeze.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "laccata",
+    "linea laccata",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 5
+  },
+  {
+   "id": "porta-essential-y",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Essential Y",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Incisione a Y, segno minimo e moderno",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071352_7649602a-3f87-4fb6-ad08-67092d988408_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071352_7649602a-3f87-4fb6-ad08-67092d988408.webp",
+   "imgFb": "/door-photos/essential-y.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Più scelta",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": -4
+  },
+  {
+   "id": "porta-horizon",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Horizon",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Linee orizzontali parallele a tutta larghezza",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071354_972025cc-6873-4dca-88bb-f0ae4be56232_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071354_972025cc-6873-4dca-88bb-f0ae4be56232.webp",
+   "imgFb": "/door-photos/horizon.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Più scelta",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": -3
+  },
+  {
+   "id": "porta-panto-1",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Pantografata 1 Bugna",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Una bugna pantografata a tutta altezza",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071355_945ed191-f800-4588-8aa5-02915d241bd3_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071355_945ed191-f800-4588-8aa5-02915d241bd3.webp",
+   "imgFb": "/door-photos/panto-1.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 8
+  },
+  {
+   "id": "porta-panto-2",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Pantografata 2 Bugne",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Due bugne pantografate sovrapposte",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071358_144648de-82bc-4ff1-b618-4bb2348dfd3f_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071358_144648de-82bc-4ff1-b618-4bb2348dfd3f.webp",
+   "imgFb": "/door-photos/panto-2.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 9
+  },
+  {
+   "id": "porta-panto-3",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Pantografata 3 Bugne",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Tre bugne pantografate, sapore classico",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071434_60f3f032-794f-4248-8a83-2776e5cefba6_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071434_60f3f032-794f-4248-8a83-2776e5cefba6.webp",
+   "imgFb": "/door-photos/panto-3.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 10
+  },
+  {
+   "id": "porta-axis",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Axis",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Asse verticale inciso decentrato",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071436_3fa7b8b1-9ca4-4e64-b4f2-fab06da23a3b_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071436_3fa7b8b1-9ca4-4e64-b4f2-fab06da23a3b.webp",
+   "imgFb": "/door-photos/axis.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 11
+  },
+  {
+   "id": "porta-trama",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Trama",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Reticolo inciso a trama fitta",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071441_a1258606-576d-4c13-acca-af9760101fad_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071441_a1258606-576d-4c13-acca-af9760101fad.webp",
+   "imgFb": "/door-photos/trama.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 12
+  },
+  {
+   "id": "porta-flow",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Flow",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Linee curve che scorrono sul pannello",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071443_3b58cd82-b0a1-433a-99c3-754f9814f31a_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071443_3b58cd82-b0a1-433a-99c3-754f9814f31a.webp",
+   "imgFb": "/door-photos/flow.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 13
+  },
+  {
+   "id": "porta-resonance",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Resonance",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Onde concentriche incise",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071445_f993332b-7a13-4119-8bd6-44edad1017ff_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071445_f993332b-7a13-4119-8bd6-44edad1017ff.webp",
+   "imgFb": "/door-photos/resonance.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 14
+  },
+  {
+   "id": "porta-signum",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Signum",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Segno grafico verticale e orizzontale",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071447_0904a204-ce7b-4a1b-bc62-0c25f2e93d5b_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071447_0904a204-ce7b-4a1b-bc62-0c25f2e93d5b.webp",
+   "imgFb": "/door-photos/signum.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 15
+  },
+  {
+   "id": "porta-gramma",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Gramma",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Composizione geometrica a riquadri",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071536_0ffe8cb6-51be-4191-a522-ae80ad05a2c1_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071536_0ffe8cb6-51be-4191-a522-ae80ad05a2c1.webp",
+   "imgFb": "/door-photos/gramma.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 16
+  },
+  {
+   "id": "porta-autumn",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Autumn",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Incisioni diagonali leggere",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071537_b3ccf75c-b285-4b60-971b-8055a9785b20_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071537_b3ccf75c-b285-4b60-971b-8055a9785b20.webp",
+   "imgFb": "/door-photos/autumn.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 17
+  },
+  {
+   "id": "porta-skyline",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Skyline",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Profilo a gradoni ispirato allo skyline",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071539_b9d375cd-8c19-42fe-a136-e239c865c297_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071539_b9d375cd-8c19-42fe-a136-e239c865c297.webp",
+   "imgFb": "/door-photos/skyline.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 18
+  },
+  {
+   "id": "porta-genesi",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Genesi",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Cornice interna con angoli smussati",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071541_0add7ea9-e97e-4dc4-b5cb-5d8418606092_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071541_0add7ea9-e97e-4dc4-b5cb-5d8418606092.webp",
+   "imgFb": "/door-photos/genesi.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 19
+  },
+  {
+   "id": "porta-alba",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Alba",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Arco inciso nella parte alta del pannello",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071542_ca2cb76b-a5a9-4961-8d6b-6ba81398b2e5_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071542_ca2cb76b-a5a9-4961-8d6b-6ba81398b2e5.webp",
+   "imgFb": "/door-photos/alba.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": "Più scelta",
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 10
+  },
+  {
+   "id": "porta-arche",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Archè",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Arco a tutto sesto inciso",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071544_e801c600-58da-4e39-99b6-ea1c1ef89ed7_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071544_e801c600-58da-4e39-99b6-ea1c1ef89ed7.webp",
+   "imgFb": "/door-photos/arche.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 21
+  },
+  {
+   "id": "porta-zig-zag",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Zig-Zag",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Motivo spezzato a zig-zag",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071545_441afd94-635f-4c70-a24f-5ad54c6b2ae1_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071545_441afd94-635f-4c70-a24f-5ad54c6b2ae1.webp",
+   "imgFb": "/door-photos/zig-zag.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 22
+  },
+  {
+   "id": "porta-tilt",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Tilt",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Linee inclinate in movimento",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071547_f36f38b2-abc0-4fd9-8e2a-d5a92478dc35_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071547_f36f38b2-abc0-4fd9-8e2a-d5a92478dc35.webp",
+   "imgFb": "/door-photos/tilt.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 23
+  },
+  {
+   "id": "porta-morph",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Morph",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Forme morbide che si trasformano",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071619_a1d31969-4798-42ce-ba88-4e5c94b44fb8_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071619_a1d31969-4798-42ce-ba88-4e5c94b44fb8.webp",
+   "imgFb": "/door-photos/morph.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 24
+  },
+  {
+   "id": "porta-aurea",
+   "type": "door",
+   "cat": "porte-per-interni",
+   "sub": "battenti",
+   "subs": [
+    "battenti",
+    "scorrevoli",
+    "filo-muro",
+    "laccate-ral"
+   ],
+   "name": "Porta Aurea",
+   "line": "pantografata",
+   "lineLabel": "Pantografata Superior",
+   "desc": "Proporzioni a sezione aurea",
+   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
+   "img": "/assets/porte/hf_20260708_071620_936d12d9-8126-4cf7-bebb-0f8e6dd07f39_min.webp",
+   "imgLg": "/assets/porte/hf_20260708_071620_936d12d9-8126-4cf7-bebb-0f8e6dd07f39.webp",
+   "imgFb": "/door-photos/aurea.jpg",
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "badge": null,
+   "tags": [
+    "porta",
+    "porte",
+    "interne",
+    "pantografata",
+    "pantografata superior",
+    "battente",
+    "scorrevole",
+    "filo muro",
+    "laccata",
+    "ral"
+   ],
+   "rank": 25
+  },
+  {
+   "id": "scarpiera-ribalta-2",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Lido 2 ribalte",
+   "desc": "Due vani a ribalta, 12 paia, profondità ridotta per corridoi stretti",
+   "img": "/shop/img/prodotti/scarpiera-ribalta-2.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140808_ce07fc33-8549-414a-8b76-2965227ba278_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-ribalta-2.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140808_ce07fc33-8549-414a-8b76-2965227ba278.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 24,
+     "h": 104,
+     "price": 139
+    },
+    {
+     "w": 100,
+     "d": 24,
+     "h": 104,
+     "price": 169
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     15,
+     34
+    ],
+    "h": [
+     62,
+     146
+    ]
+   },
+   "badge": "Più venduta",
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera lido 2 ribalte"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "scarpiera-ribalta-3",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Lido 3 ribalte",
+   "desc": "Tre ribalte, 18 paia, piano superiore svuotatasche",
+   "img": "/shop/img/prodotti/scarpiera-ribalta-3.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_7d43b5a2-aded-4e1d-90f1-5f7f33e9f164_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-ribalta-3.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_7d43b5a2-aded-4e1d-90f1-5f7f33e9f164.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 24,
+     "h": 150,
+     "price": 189
+    },
+    {
+     "w": 100,
+     "d": 24,
+     "h": 150,
+     "price": 229
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     15,
+     34
+    ],
+    "h": [
+     90,
+     210
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera lido 3 ribalte"
+   ],
+   "rank": 11
+  },
+  {
+   "id": "scarpiera-slim-17",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "a-ribalta",
+   "subs": [
+    "a-ribalta"
+   ],
+   "name": "Scarpiera Filo 17",
+   "desc": "Solo 17 cm di profondità: entra anche dietro la porta d'ingresso",
+   "img": "/shop/img/prodotti/scarpiera-slim-17.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140851_ed32ec7b-5563-43b5-8523-7b48198ad861_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-slim-17.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140851_ed32ec7b-5563-43b5-8523-7b48198ad861.png",
+   "std": [
+    {
+     "w": 60,
+     "d": 17,
+     "h": 120,
+     "price": 159
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     36,
+     90
+    ],
+    "d": [
+     15,
+     24
+    ],
+    "h": [
+     72,
+     168
+    ]
+   },
+   "badge": "Salvaspazio",
+   "tags": [
+    "scarpiere",
+    "a-ribalta",
+    "scarpiera filo 17"
+   ],
+   "rank": 12
+  },
+  {
+   "id": "scarpiera-ante-2",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-ante",
+   "subs": [
+    "con-ante"
+   ],
+   "name": "Scarpiera Brenta 2 ante",
+   "desc": "Due ante, ripiani regolabili, fino a 20 paia",
+   "img": "/shop/img/prodotti/scarpiera-ante-2.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_13f618d5-c2d0-4cf7-843a-0cd22634a0fc_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-ante-2.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_13f618d5-c2d0-4cf7-843a-0cd22634a0fc.png",
+   "std": [
+    {
+     "w": 90,
+     "d": 36,
+     "h": 110,
+     "price": 249
+    },
+    {
+     "w": 120,
+     "d": 36,
+     "h": 110,
+     "price": 299
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     54,
+     135
+    ],
+    "d": [
+     22,
+     50
+    ],
+    "h": [
+     66,
+     154
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "con-ante",
+    "scarpiera brenta 2 ante"
+   ],
+   "rank": 13
+  },
+  {
+   "id": "scarpiera-alta-5",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-ante",
+   "subs": [
+    "con-ante"
+   ],
+   "name": "Scarpiera Torre 5 ripiani",
+   "desc": "Colonna a un'anta con cinque ripiani, 25 paia in 50 cm",
+   "img": "/shop/img/prodotti/scarpiera-alta-5.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_fade57d1-3a3b-4b0c-9db2-b96ce3d58ad2_min.webp",
+   "imgLg": "/shop/img/prodotti/scarpiera-alta-5.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_fade57d1-3a3b-4b0c-9db2-b96ce3d58ad2.png",
+   "std": [
+    {
+     "w": 50,
+     "d": 36,
+     "h": 180,
+     "price": 269
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     30,
+     75
+    ],
+    "d": [
+     22,
+     50
+    ],
+    "h": [
+     108,
+     252
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "con-ante",
+    "scarpiera torre 5 ripiani"
+   ],
+   "rank": 14
+  },
+  {
+   "id": "panca-seduta-cuscino",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-seduta",
+   "subs": [
+    "con-seduta"
+   ],
+   "name": "Panca Sile con cuscino",
+   "desc": "Seduta imbottita e due vani a giorno per le scarpe di tutti i giorni",
+   "img": "/shop/img/prodotti/panca-seduta-cuscino.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_435ada92-5348-4d96-a848-2f764825788b_min.webp",
+   "imgLg": "/shop/img/prodotti/panca-seduta-cuscino.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_435ada92-5348-4d96-a848-2f764825788b.png",
+   "std": [
+    {
+     "w": 100,
+     "d": 38,
+     "h": 48,
+     "price": 179
+    },
+    {
+     "w": 120,
+     "d": 38,
+     "h": 48,
+     "price": 199
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     60,
+     150
+    ],
+    "d": [
+     23,
+     53
+    ],
+    "h": [
+     29,
+     67
+    ]
+   },
+   "badge": "Novità",
+   "tags": [
+    "scarpiere",
+    "con-seduta",
+    "panca sile con cuscino"
+   ],
+   "rank": 15
+  },
+  {
+   "id": "panca-vani-giorno",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-seduta",
+   "subs": [
+    "con-seduta"
+   ],
+   "name": "Panca Piave a giorno",
+   "desc": "Panca in legno con doppio ripiano per scarpe, struttura robusta",
+   "img": "/shop/img/prodotti/panca-vani-giorno.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_6fe1f332-fd2d-4d5e-b782-4b56591ba311_min.webp",
+   "imgLg": "/shop/img/prodotti/panca-vani-giorno.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_6fe1f332-fd2d-4d5e-b782-4b56591ba311.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 32,
+     "h": 46,
+     "price": 129
+    },
+    {
+     "w": 110,
+     "d": 32,
+     "h": 46,
+     "price": 149
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     19,
+     45
+    ],
+    "h": [
+     28,
+     64
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "scarpiere",
+    "con-seduta",
+    "panca piave a giorno"
+   ],
+   "rank": 16
+  },
+  {
+   "id": "comodino-2-cassetti",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "comodini",
+   "subs": [
+    "comodini"
+   ],
+   "name": "Comodino Nodo 2 cassetti",
+   "desc": "Due cassetti con guide a chiusura ammortizzata",
+   "img": "/shop/img/prodotti/comodino-2-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_9d310f56-bdde-4c1e-8c96-f181e236d4cc_min.webp",
+   "imgLg": "/shop/img/prodotti/comodino-2-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_9d310f56-bdde-4c1e-8c96-f181e236d4cc.png",
+   "std": [
+    {
+     "w": 45,
+     "d": 38,
+     "h": 50,
+     "price": 99
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     27,
+     68
+    ],
+    "d": [
+     23,
+     53
+    ],
+    "h": [
+     30,
+     70
+    ]
+   },
+   "badge": "Più venduto",
+   "tags": [
+    "mobiletti",
+    "comodini",
+    "comodino nodo 2 cassetti"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "comodino-sospeso",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "comodini",
+   "subs": [
+    "comodini"
+   ],
+   "name": "Comodino Aria sospeso",
+   "desc": "Fissaggio a parete, cassetto e vano a giorno, pavimento libero",
+   "img": "/shop/img/prodotti/comodino-sospeso.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_03643b61-ecd0-4598-acdb-801fcbea6983_min.webp",
+   "imgLg": "/shop/img/prodotti/comodino-sospeso.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_03643b61-ecd0-4598-acdb-801fcbea6983.png",
+   "std": [
+    {
+     "w": 40,
+     "d": 30,
+     "h": 28,
+     "price": 79
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     24,
+     60
+    ],
+    "d": [
+     18,
+     42
+    ],
+    "h": [
+     20,
+     39
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "comodini",
+    "comodino aria sospeso"
+   ],
+   "rank": 18
+  },
+  {
+   "id": "comodino-vano-giorno",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "comodini",
+   "subs": [
+    "comodini"
+   ],
+   "name": "Comodino Pieve",
+   "desc": "Cassetto e vano a giorno, spigoli arrotondati",
+   "img": "/shop/img/prodotti/comodino-vano-giorno.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_051ee864-30ee-4334-88ee-c112fb13c78d_min.webp",
+   "imgLg": "/shop/img/prodotti/comodino-vano-giorno.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_051ee864-30ee-4334-88ee-c112fb13c78d.png",
+   "std": [
+    {
+     "w": 48,
+     "d": 40,
+     "h": 55,
+     "price": 119
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     29,
+     72
+    ],
+    "d": [
+     24,
+     56
+    ],
+    "h": [
+     33,
+     77
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "comodini",
+    "comodino pieve"
+   ],
+   "rank": 19
+  },
+  {
+   "id": "comodino-laccato",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "comodini",
+   "subs": [
+    "comodini"
+   ],
+   "name": "Comodino Riva laccato",
+   "desc": "Laccato in qualsiasi tinta RAL, tre cassetti",
+   "img": "/shop/img/prodotti/comodino-laccato.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140951_b66f16c6-6b8d-4f24-9036-ebac3a94e745_min.webp",
+   "imgLg": "/shop/img/prodotti/comodino-laccato.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140951_b66f16c6-6b8d-4f24-9036-ebac3a94e745.png",
+   "std": [
+    {
+     "w": 50,
+     "d": 40,
+     "h": 60,
+     "price": 169
+    }
+   ],
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     30,
+     75
+    ],
+    "d": [
+     24,
+     56
+    ],
+    "h": [
+     36,
+     84
+    ]
+   },
+   "badge": "Colore a scelta",
+   "tags": [
+    "mobiletti",
+    "comodini",
+    "comodino riva laccato"
+   ],
+   "rank": 20
+  },
+  {
+   "id": "mobile-tv-basso-180",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-tv",
+   "subs": [
+    "mobili-tv"
+   ],
+   "name": "Mobile TV Orizzonte",
+   "desc": "Due ante a ribalta e vano centrale per decoder e console",
+   "img": "/shop/img/prodotti/mobile-tv-basso-180.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_b464e9d9-efbb-400e-89ea-a6e4fd04ac93_min.webp",
+   "imgLg": "/shop/img/prodotti/mobile-tv-basso-180.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_b464e9d9-efbb-400e-89ea-a6e4fd04ac93.png",
+   "std": [
+    {
+     "w": 180,
+     "d": 42,
+     "h": 48,
+     "price": 279
+    },
+    {
+     "w": 220,
+     "d": 42,
+     "h": 48,
+     "price": 329
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     108,
+     270
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     29,
+     67
+    ]
+   },
+   "badge": "Più venduto",
+   "tags": [
+    "mobiletti",
+    "mobili-tv",
+    "mobile tv orizzonte"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "mobile-tv-sospeso",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-tv",
+   "subs": [
+    "mobili-tv"
+   ],
+   "name": "Mobile TV Lago sospeso",
+   "desc": "Sospeso con passacavi nascosto, apertura push",
+   "img": "/shop/img/prodotti/mobile-tv-sospeso.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_5734912d-5ec8-4cf8-8dc9-19e0549a3328_min.webp",
+   "imgLg": "/shop/img/prodotti/mobile-tv-sospeso.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_5734912d-5ec8-4cf8-8dc9-19e0549a3328.png",
+   "std": [
+    {
+     "w": 160,
+     "d": 35,
+     "h": 30,
+     "price": 219
+    },
+    {
+     "w": 200,
+     "d": 35,
+     "h": 30,
+     "price": 259
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     96,
+     240
+    ],
+    "d": [
+     21,
+     49
+    ],
+    "h": [
+     20,
+     42
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "mobili-tv",
+    "mobile tv lago sospeso"
+   ],
+   "rank": 22
+  },
+  {
+   "id": "parete-attrezzata",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-tv",
+   "subs": [
+    "mobili-tv"
+   ],
+   "name": "Parete Attrezzata Livenza",
+   "desc": "Base TV, pensile e due colonne a giorno: soggiorno completo",
+   "img": "/shop/img/prodotti/parete-attrezzata.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140952_23cecf2e-f7fe-44f9-aee5-357c03d43ad8_min.webp",
+   "imgLg": "/shop/img/prodotti/parete-attrezzata.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140952_23cecf2e-f7fe-44f9-aee5-357c03d43ad8.png",
+   "std": [
+    {
+     "w": 280,
+     "d": 42,
+     "h": 200,
+     "price": 790
+    }
+   ],
+   "finishes": [
+    "Rovere naturale/Bianco",
+    "Noce/Grigio"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     168,
+     420
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     120,
+     280
+    ]
+   },
+   "badge": "Composizione",
+   "tags": [
+    "mobiletti",
+    "mobili-tv",
+    "parete attrezzata livenza"
+   ],
+   "rank": 23
+  },
+  {
+   "id": "mobile-tv-cassetti",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-tv",
+   "subs": [
+    "mobili-tv"
+   ],
+   "name": "Mobile TV Brolo",
+   "desc": "Tre cassettoni capienti e piano in legno",
+   "img": "/shop/img/prodotti/mobile-tv-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140952_8daa4e79-24d6-47c6-bf47-15fae92547d3_min.webp",
+   "imgLg": "/shop/img/prodotti/mobile-tv-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140952_8daa4e79-24d6-47c6-bf47-15fae92547d3.png",
+   "std": [
+    {
+     "w": 200,
+     "d": 45,
+     "h": 50,
+     "price": 349
+    }
+   ],
+   "finishes": [
+    "Noce canaletto",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     120,
+     300
+    ],
+    "d": [
+     27,
+     63
+    ],
+    "h": [
+     30,
+     70
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "mobili-tv",
+    "mobile tv brolo"
+   ],
+   "rank": 24
+  },
+  {
+   "id": "madia-3-ante",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Madia Corte 3 ante",
+   "desc": "Tre ante con ripiani interni, piano in rovere",
+   "img": "/shop/img/prodotti/madia-3-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140952_a1b67a5c-9f78-41f9-8d06-6d113191a467_min.webp",
+   "imgLg": "/shop/img/prodotti/madia-3-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140952_a1b67a5c-9f78-41f9-8d06-6d113191a467.png",
+   "std": [
+    {
+     "w": 180,
+     "d": 45,
+     "h": 80,
+     "price": 429
+    },
+    {
+     "w": 210,
+     "d": 45,
+     "h": 80,
+     "price": 489
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     108,
+     270
+    ],
+    "d": [
+     27,
+     63
+    ],
+    "h": [
+     48,
+     112
+    ]
+   },
+   "badge": "Più venduta",
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "madia corte 3 ante"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "credenza-2-ante",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Credenza Borgo 2 ante",
+   "desc": "Formato medio, perfetta in sala da pranzo o ingresso",
+   "img": "/shop/img/prodotti/credenza-2-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_e44d9dd7-d2c4-4d15-9dbf-bedf1df3824e_min.webp",
+   "imgLg": "/shop/img/prodotti/credenza-2-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_e44d9dd7-d2c4-4d15-9dbf-bedf1df3824e.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 45,
+     "h": 80,
+     "price": 299
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Noce canaletto",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     27,
+     63
+    ],
+    "h": [
+     48,
+     112
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "credenza borgo 2 ante"
+   ],
+   "rank": 26
+  },
+  {
+   "id": "madia-cannettata",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Madia Canneto",
+   "desc": "Ante cannettate in MDF laccato, effetto tessile",
+   "img": "/shop/img/prodotti/madia-cannettata.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_b8ebaa88-4720-4c43-bfa1-8e932900fbfd_min.webp",
+   "imgLg": "/shop/img/prodotti/madia-cannettata.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_b8ebaa88-4720-4c43-bfa1-8e932900fbfd.png",
+   "std": [
+    {
+     "w": 160,
+     "d": 45,
+     "h": 75,
+     "price": 589
+    }
+   ],
+   "finishes": [
+    "Laccato RAL",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     96,
+     240
+    ],
+    "d": [
+     27,
+     63
+    ],
+    "h": [
+     45,
+     105
+    ]
+   },
+   "badge": "Design",
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "madia canneto"
+   ],
+   "rank": 27
+  },
+  {
+   "id": "credenza-vetrina",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Credenza Alta Vetrina",
+   "desc": "Vetrina in vetro temperato sopra, due ante sotto",
+   "img": "/shop/img/prodotti/credenza-vetrina.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141023_3476b89f-535e-4ef1-848b-2479cfa39bfb_min.webp",
+   "imgLg": "/shop/img/prodotti/credenza-vetrina.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141023_3476b89f-535e-4ef1-848b-2479cfa39bfb.png",
+   "std": [
+    {
+     "w": 100,
+     "d": 42,
+     "h": 180,
+     "price": 489
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     60,
+     150
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     108,
+     252
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "credenza alta vetrina"
+   ],
+   "rank": 28
+  },
+  {
+   "id": "consolle-ingresso",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-ingresso",
+   "subs": [
+    "mobili-ingresso"
+   ],
+   "name": "Consolle Varco",
+   "desc": "Consolle con cassetto, profondità 30 cm",
+   "img": "/shop/img/prodotti/consolle-ingresso.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_3c4595ab-202b-4df6-92bf-bbe58900a921_min.webp",
+   "imgLg": "/shop/img/prodotti/consolle-ingresso.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_3c4595ab-202b-4df6-92bf-bbe58900a921.png",
+   "std": [
+    {
+     "w": 100,
+     "d": 30,
+     "h": 80,
+     "price": 139
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Noce canaletto",
+    "Bianco opaco"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     60,
+     150
+    ],
+    "d": [
+     18,
+     42
+    ],
+    "h": [
+     48,
+     112
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "mobili-ingresso",
+    "consolle varco"
+   ],
+   "rank": 29
+  },
+  {
+   "id": "ingresso-specchio",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-ingresso",
+   "subs": [
+    "mobili-ingresso"
+   ],
+   "name": "Ingresso Soglia con specchio",
+   "desc": "Mobile con cassetti, specchio e appendiabiti coordinati",
+   "img": "/shop/img/prodotti/ingresso-specchio.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141045_bfe6ea4b-b560-46d5-a2cb-b12dfdd7d37a_min.webp",
+   "imgLg": "/shop/img/prodotti/ingresso-specchio.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141045_bfe6ea4b-b560-46d5-a2cb-b12dfdd7d37a.png",
+   "std": [
+    {
+     "w": 90,
+     "d": 35,
+     "h": 190,
+     "price": 249
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     54,
+     135
+    ],
+    "d": [
+     21,
+     49
+    ],
+    "h": [
+     114,
+     266
+    ]
+   },
+   "badge": "Set completo",
+   "tags": [
+    "mobiletti",
+    "mobili-ingresso",
+    "ingresso soglia con specchio"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "ingresso-2-ante",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-ingresso",
+   "subs": [
+    "mobili-ingresso"
+   ],
+   "name": "Mobile Ingresso Atrio",
+   "desc": "Due ante e cassetto svuotatasche",
+   "img": "/shop/img/prodotti/ingresso-2-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_2df6aa79-0262-42f7-a873-467b96d27bdb_min.webp",
+   "imgLg": "/shop/img/prodotti/ingresso-2-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_2df6aa79-0262-42f7-a873-467b96d27bdb.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 35,
+     "h": 85,
+     "price": 199
+    }
+   ],
+   "finishes": [
+    "Grigio seta",
+    "Rovere naturale",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     21,
+     49
+    ],
+    "h": [
+     51,
+     119
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "mobili-ingresso",
+    "mobile ingresso atrio"
+   ],
+   "rank": 31
+  },
+  {
+   "id": "bagno-sospeso-80",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-bagno",
+   "subs": [
+    "mobili-bagno"
+   ],
+   "name": "Mobile Bagno Onda 80",
+   "desc": "Sospeso con lavabo in ceramica e due cassetti",
+   "img": "/shop/img/prodotti/bagno-sospeso-80.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_231e334d-a752-4aa1-8e21-c4d3fc067e6d_min.webp",
+   "imgLg": "/shop/img/prodotti/bagno-sospeso-80.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_231e334d-a752-4aa1-8e21-c4d3fc067e6d.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 46,
+     "h": 50,
+     "price": 419
+    },
+    {
+     "w": 100,
+     "d": 46,
+     "h": 50,
+     "price": 479
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     28,
+     64
+    ],
+    "h": [
+     30,
+     70
+    ]
+   },
+   "badge": "Più venduto",
+   "tags": [
+    "mobiletti",
+    "mobili-bagno",
+    "mobile bagno onda 80"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "bagno-60-cassetti",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-bagno",
+   "subs": [
+    "mobili-bagno"
+   ],
+   "name": "Mobile Bagno Rio 60",
+   "desc": "Compatto, per bagni piccoli e di servizio",
+   "img": "/shop/img/prodotti/bagno-60-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141045_ab840096-0a58-4b54-9948-cd09aa4cc951_min.webp",
+   "imgLg": "/shop/img/prodotti/bagno-60-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141045_ab840096-0a58-4b54-9948-cd09aa4cc951.png",
+   "std": [
+    {
+     "w": 60,
+     "d": 40,
+     "h": 50,
+     "price": 319
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     36,
+     90
+    ],
+    "d": [
+     24,
+     56
+    ],
+    "h": [
+     30,
+     70
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "mobili-bagno",
+    "mobile bagno rio 60"
+   ],
+   "rank": 33
+  },
+  {
+   "id": "colonna-bagno",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-bagno",
+   "subs": [
+    "mobili-bagno"
+   ],
+   "name": "Colonna Bagno Fonte",
+   "desc": "Colonna sospesa con anta e ripiani interni",
+   "img": "/shop/img/prodotti/colonna-bagno.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_2d9f5279-41fd-4e59-8c86-ebb33d45a9c9_min.webp",
+   "imgLg": "/shop/img/prodotti/colonna-bagno.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_2d9f5279-41fd-4e59-8c86-ebb33d45a9c9.png",
+   "std": [
+    {
+     "w": 35,
+     "d": 30,
+     "h": 160,
+     "price": 179
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     21,
+     52
+    ],
+    "d": [
+     18,
+     42
+    ],
+    "h": [
+     96,
+     224
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "mobiletti",
+    "mobili-bagno",
+    "colonna bagno fonte"
+   ],
+   "rank": 34
+  },
+  {
+   "id": "mobile-lavatrice",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-bagno",
+   "subs": [
+    "mobili-bagno"
+   ],
+   "name": "Mobile Lavatrice Bucato",
+   "desc": "Copre la lavatrice, con lavatoio e pensile",
+   "img": "/shop/img/prodotti/mobile-lavatrice.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_613ffe14-f7a8-4956-af94-a8f24bea280f_min.webp",
+   "imgLg": "/shop/img/prodotti/mobile-lavatrice.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_613ffe14-f7a8-4956-af94-a8f24bea280f.png",
+   "std": [
+    {
+     "w": 70,
+     "d": 60,
+     "h": 195,
+     "price": 389
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     42,
+     105
+    ],
+    "d": [
+     36,
+     84
+    ],
+    "h": [
+     117,
+     273
+    ]
+   },
+   "badge": "Su misura",
+   "tags": [
+    "mobiletti",
+    "mobili-bagno",
+    "mobile lavatrice bucato"
+   ],
+   "rank": 35
+  },
+  {
+   "id": "tavolo-rovere-160",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "tavoli-completi",
+   "subs": [
+    "tavoli-completi"
+   ],
+   "name": "Tavolo Agorà rovere",
+   "desc": "Piano in rovere da 30 mm, gambe in legno massello",
+   "img": "/shop/img/prodotti/tavolo-rovere-160.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141108_8df23d4f-81c5-44c1-8332-aeedd6d24f25_min.webp",
+   "imgLg": "/shop/img/prodotti/tavolo-rovere-160.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141108_8df23d4f-81c5-44c1-8332-aeedd6d24f25.png",
+   "std": [
+    {
+     "w": 160,
+     "d": 90,
+     "h": 75,
+     "price": 429
+    },
+    {
+     "w": 200,
+     "d": 100,
+     "h": 75,
+     "price": 519
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     96,
+     240
+    ],
+    "d": [
+     54,
+     126
+    ],
+    "h": [
+     45,
+     105
+    ]
+   },
+   "badge": "Più venduto",
+   "tags": [
+    "tavoli",
+    "tavoli-completi",
+    "tavolo agorà rovere"
+   ],
+   "rank": 0
+  },
+  {
+   "id": "tavolo-allungabile",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "tavoli-completi",
+   "subs": [
+    "tavoli-completi"
+   ],
+   "name": "Tavolo Convivio allungabile",
+   "desc": "Da 140 a 190 cm con prolunga a scomparsa",
+   "img": "/shop/img/prodotti/tavolo-allungabile.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_8d66cd34-39d3-4803-94e1-c5a8a4ed2a3e_min.webp",
+   "imgLg": "/shop/img/prodotti/tavolo-allungabile.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_8d66cd34-39d3-4803-94e1-c5a8a4ed2a3e.png",
+   "std": [
+    {
+     "w": 140,
+     "d": 90,
+     "h": 76,
+     "price": 489
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     84,
+     210
+    ],
+    "d": [
+     54,
+     126
+    ],
+    "h": [
+     46,
+     106
+    ]
+   },
+   "badge": "Allungabile",
+   "tags": [
+    "tavoli",
+    "tavoli-completi",
+    "tavolo convivio allungabile"
+   ],
+   "rank": 37
+  },
+  {
+   "id": "tavolo-rotondo-120",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "tavoli-completi",
+   "subs": [
+    "tavoli-completi"
+   ],
+   "name": "Tavolo Tondo Cerchio",
+   "desc": "Ø 120 cm, basamento centrale, ideale per cucine",
+   "img": "/shop/img/prodotti/tavolo-rotondo-120.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141130_fc93f84b-8e35-4e57-b539-1c2c74adb160_min.webp",
+   "imgLg": "/shop/img/prodotti/tavolo-rotondo-120.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141130_fc93f84b-8e35-4e57-b539-1c2c74adb160.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 120,
+     "h": 75,
+     "price": 379
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     72,
+     168
+    ],
+    "h": [
+     45,
+     105
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "tavoli",
+    "tavoli-completi",
+    "tavolo tondo cerchio"
+   ],
+   "rank": 38
+  },
+  {
+   "id": "tavolo-laccato-metallo",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "tavoli-completi",
+   "subs": [
+    "tavoli-completi"
+   ],
+   "name": "Tavolo Ferro laccato",
+   "desc": "Piano laccato RAL, gambe in metallo verniciato nero",
+   "img": "/shop/img/prodotti/tavolo-laccato-metallo.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_c3763cad-f0ee-41ec-83e1-30d84909d86b_min.webp",
+   "imgLg": "/shop/img/prodotti/tavolo-laccato-metallo.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_c3763cad-f0ee-41ec-83e1-30d84909d86b.png",
+   "std": [
+    {
+     "w": 180,
+     "d": 90,
+     "h": 75,
+     "price": 559
+    }
+   ],
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     108,
+     270
+    ],
+    "d": [
+     54,
+     126
+    ],
+    "h": [
+     45,
+     105
+    ]
+   },
+   "badge": "Colore a scelta",
+   "tags": [
+    "tavoli",
+    "tavoli-completi",
+    "tavolo ferro laccato"
+   ],
+   "rank": 39
+  },
+  {
+   "id": "top-rovere-massello",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "top-per-tavoli",
+   "subs": [
+    "top-per-tavoli"
+   ],
+   "name": "Top Rovere lamellare 40",
+   "desc": "Piano in rovere lamellare 40 mm, oliato, tagliato su misura",
+   "img": "/shop/img/prodotti/top-rovere-massello.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_fe03ef10-8b70-40cf-80df-c1e633a23606_min.webp",
+   "imgLg": "/shop/img/prodotti/top-rovere-massello.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_fe03ef10-8b70-40cf-80df-c1e633a23606.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 80,
+     "h": 4,
+     "price": 229
+    },
+    {
+     "w": 160,
+     "d": 90,
+     "h": 4,
+     "price": 299
+    },
+    {
+     "w": 200,
+     "d": 100,
+     "h": 4,
+     "price": 379
+    }
+   ],
+   "finishes": [
+    "Rovere oliato",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     48,
+     112
+    ],
+    "h": [
+     2,
+     6
+    ]
+   },
+   "badge": "Al centimetro",
+   "tags": [
+    "tavoli",
+    "top-per-tavoli",
+    "top rovere lamellare 40"
+   ],
+   "rank": 40
+  },
+  {
+   "id": "top-laminato-hpl",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "top-per-tavoli",
+   "subs": [
+    "top-per-tavoli"
+   ],
+   "name": "Top HPL 30",
+   "desc": "Laminato HPL antigraffio, bordo ABS, per tavoli e scrivanie",
+   "img": "/shop/img/prodotti/top-laminato-hpl.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141130_5d9c9c79-af5f-4d8b-bb6f-3b4db2132811_min.webp",
+   "imgLg": "/shop/img/prodotti/top-laminato-hpl.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141130_5d9c9c79-af5f-4d8b-bb6f-3b4db2132811.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 80,
+     "h": 3,
+     "price": 129
+    },
+    {
+     "w": 160,
+     "d": 80,
+     "h": 3,
+     "price": 159
+    },
+    {
+     "w": 180,
+     "d": 90,
+     "h": 3,
+     "price": 189
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Grigio seta",
+    "Nero opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     48,
+     112
+    ],
+    "h": [
+     2,
+     6
+    ]
+   },
+   "badge": null,
+   "tags": [
+    "tavoli",
+    "top-per-tavoli",
+    "top hpl 30"
+   ],
+   "rank": 41
+  },
+  {
+   "id": "top-laccato-tondo",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "top-per-tavoli",
+   "subs": [
+    "top-per-tavoli"
+   ],
+   "name": "Top Tondo Laccato",
+   "desc": "Piano rotondo in MDF laccato RAL, bordo smussato",
+   "img": "/shop/img/prodotti/top-laccato-tondo.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141156_83be4131-d768-4257-8627-75f563679bf6_min.webp",
+   "imgLg": "/shop/img/prodotti/top-laccato-tondo.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141156_83be4131-d768-4257-8627-75f563679bf6.png",
+   "std": [
+    {
+     "w": 100,
+     "d": 100,
+     "h": 3,
+     "price": 189
+    },
+    {
+     "w": 120,
+     "d": 120,
+     "h": 3,
+     "price": 229
+    }
+   ],
+   "finishes": [
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     60,
+     150
+    ],
+    "d": [
+     60,
+     140
+    ],
+    "h": [
+     2,
+     6
+    ]
+   },
+   "badge": "Colore a scelta",
+   "tags": [
+    "tavoli",
+    "top-per-tavoli",
+    "top tondo laccato"
+   ],
+   "rank": 42
+  },
+  {
+   "id": "top-effetto-pietra",
+   "type": "furniture",
+   "cat": "tavoli",
+   "sub": "top-per-tavoli",
+   "subs": [
+    "top-per-tavoli"
+   ],
+   "name": "Top Pietra con bordo legno",
+   "desc": "Piano effetto pietra con bordo perimetrale in legno massello",
+   "img": "/assets/componenti/05.jpg",
+   "imgLg": "/assets/componenti/05.jpg",
+   "std": [
+    {
+     "w": 140,
+     "d": 80,
+     "h": 4,
+     "price": 289
+    },
+    {
+     "w": 180,
+     "d": 90,
+     "h": 4,
+     "price": 359
+    }
+   ],
+   "finishes": [
+    "Pietra grigia/Rovere",
+    "Pietra chiara/Noce"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     60,
+     280
+    ],
+    "d": [
+     50,
+     120
+    ],
+    "h": [
+     2,
+     6
+    ]
+   },
+   "badge": "Prodotto da noi",
+   "tags": [
+    "top",
+    "pietra",
+    "tavoli"
+   ],
+   "rank": 1
+  }
+ ]
 }
