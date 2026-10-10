@@ -21,9 +21,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/pandoora-pages.css">
-<link rel="stylesheet" href="/shop/shop.css?v=5">
+<link rel="stylesheet" href="/shop/shop.css?v=6">
+<script>(function(d){try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm){if(!sessionStorage.getItem('pdIntro')&&d.body===null&&location.pathname.replace(/\/$/,'')==='/shop')d.documentElement.classList.add('pd-intro');if(sessionStorage.getItem('pdWipe')){d.documentElement.classList.add('pd-wipe');sessionStorage.removeItem('pdWipe')}}}catch(e){}setTimeout(function(){d.documentElement.classList.remove('pd-intro','pd-wipe')},5000)})(document)</script>
 </head>
 <body class="shop" data-page="cat" data-cat="tavoli">
+<div class="s-intro" aria-hidden="true"><div class="si-leaf si-l"></div><div class="si-leaf si-r"></div><div class="si-c"><img src="/pandoora_logo.webp" alt="" width="150" height="40"><b class="si-n">0</b><span class="si-bar"><i></i></span><small>Porte e arredi su misura · dal 1987</small></div></div>
+<div class="s-wipe" aria-hidden="true"><span><img src="/pandoora_logo.webp" alt="" width="120" height="32"></span></div>
 <div class="s-ruler" aria-hidden="true"><i></i><b></b></div>
 <div class="s-promo" aria-label="Vantaggi"><div class="s-promo-track"><span><i></i>Misure standard o al centimetro</span><span><i></i>Prodotto in Italia, nel nostro stabilimento dal 1987</span><span><i></i>Porte con posa inclusa in Veneto e Friuli</span><span><i></i>Laccature in qualsiasi tinta RAL</span><span><i></i>Consegna in tutta Italia e in Europa</span><span aria-hidden="true"><i></i>Misure standard o al centimetro</span><span aria-hidden="true"><i></i>Prodotto in Italia, nel nostro stabilimento dal 1987</span><span aria-hidden="true"><i></i>Porte con posa inclusa in Veneto e Friuli</span><span aria-hidden="true"><i></i>Laccature in qualsiasi tinta RAL</span><span aria-hidden="true"><i></i>Consegna in tutta Italia e in Europa</span></div></div>
 <header class="s-head">
@@ -43,7 +46,7 @@
 </header>
 
 <main>
-<div class="s-wrap s-cat-hero">
+<div class="s-wrap s-cat-hero"><span class="s-bgword" aria-hidden="true">Tavoli e top</span>
   <nav class="s-crumb" aria-label="Percorso"><a href="/">Pan.door.a</a><span>›</span><a href="/shop/">Shop</a><span>›</span>Tavoli e top</nav>
   <div class="s-cat-head"><div><h1><span class="ln"><span>Tavoli</span></span><span class="ln"><span>e top</span></span></h1><p>Tavoli completi e top per tavoli tagliati sulla vostra misura: scegliete forma, dimensioni, spessore e finitura del piano.</p></div><div class="s-cat-note" data-rv><b>Piani al centimetro</b>Rovere lamellare, HPL, laccato o effetto pietra, tagliati sul vostro spazio.</div></div>
   <div class="s-subs" id="s-subs"><button class="s-sub" type="button" data-sub="" aria-pressed="true"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><path d="M4 22h56v6H4z"/><path d="M10 28l-2 28M54 28l2 28M18 28v14M46 28v14"/></svg></span>Tutti</button><button class="s-sub" type="button" data-sub="tavoli-completi" aria-pressed="false"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><path d="M4 22h56v6H4z"/><path d="M10 28l-2 28M54 28l2 28M18 28v14M46 28v14"/></svg></span>Tavoli completi</button><button class="s-sub" type="button" data-sub="top-per-tavoli" aria-pressed="false"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><path d="M6 30l20-12h32L38 30z"/><path d="M6 30v6l32 0 20-12v-6"/><path d="M38 30v6"/></svg></span>Top per tavoli</button></div>
@@ -61,7 +64,7 @@
 <div class="s-scrim" id="s-scrim"></div>
 <aside class="s-drawer" id="s-drawer" aria-label="Carrello" aria-hidden="true">
   <div class="s-drawer-h"><h2 id="s-drawer-t">Carrello</h2><button class="s-x" type="button" id="s-x" aria-label="Chiudi"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <div class="s-drawer-b" id="s-drawer-b"></div>
+  <div class="s-drawer-b" id="s-drawer-b" data-lenis-prevent></div>
   <div class="s-drawer-f" id="s-drawer-f"></div>
 </aside>
 <footer class="pf">
@@ -150,6 +153,10 @@
   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
 </button>
 
-<script src="/shop/shop.js?v=5" defer></script>
+<script src="/assets/js/gsap.min.js" defer></script>
+<script src="/assets/js/ScrollTrigger.min.js" defer></script>
+<script src="/shop/vendor/lenis.min.js" defer></script>
+<script src="/shop/motion.js?v=6" defer></script>
+<script src="/shop/shop.js?v=6" defer></script>
 </body>
 </html>

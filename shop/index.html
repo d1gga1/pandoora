@@ -21,10 +21,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/pandoora-pages.css">
-<link rel="stylesheet" href="/shop/shop.css?v=5">
+<link rel="stylesheet" href="/shop/shop.css?v=6">
+<script>(function(d){try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm){if(!sessionStorage.getItem('pdIntro')&&d.body===null&&location.pathname.replace(/\/$/,'')==='/shop')d.documentElement.classList.add('pd-intro');if(sessionStorage.getItem('pdWipe')){d.documentElement.classList.add('pd-wipe');sessionStorage.removeItem('pdWipe')}}}catch(e){}setTimeout(function(){d.documentElement.classList.remove('pd-intro','pd-wipe')},5000)})(document)</script>
 <link rel="preload" as="image" href="/shop/img/anta-horizon.webp">
+<link rel="preload" as="image" href="/shop/img/hero.jpg">
 </head>
 <body class="shop" data-page="home">
+<div class="s-intro" aria-hidden="true"><div class="si-leaf si-l"></div><div class="si-leaf si-r"></div><div class="si-c"><img src="/pandoora_logo.webp" alt="" width="150" height="40"><b class="si-n">0</b><span class="si-bar"><i></i></span><small>Porte e arredi su misura · dal 1987</small></div></div>
+<div class="s-wipe" aria-hidden="true"><span><img src="/pandoora_logo.webp" alt="" width="120" height="32"></span></div>
 <div class="s-ruler" aria-hidden="true"><i></i><b></b></div>
 <div class="s-promo" aria-label="Vantaggi"><div class="s-promo-track"><span><i></i>Misure standard o al centimetro</span><span><i></i>Prodotto in Italia, nel nostro stabilimento dal 1987</span><span><i></i>Porte con posa inclusa in Veneto e Friuli</span><span><i></i>Laccature in qualsiasi tinta RAL</span><span><i></i>Consegna in tutta Italia e in Europa</span><span aria-hidden="true"><i></i>Misure standard o al centimetro</span><span aria-hidden="true"><i></i>Prodotto in Italia, nel nostro stabilimento dal 1987</span><span aria-hidden="true"><i></i>Porte con posa inclusa in Veneto e Friuli</span><span aria-hidden="true"><i></i>Laccature in qualsiasi tinta RAL</span><span aria-hidden="true"><i></i>Consegna in tutta Italia e in Europa</span></div></div>
 <header class="s-head">
@@ -44,8 +48,17 @@
 </header>
 
 <main>
-<section class="s-hero"><div class="s-wrap s-hero-grid">
-  <div class="s-hero-copy">
+<section class="s-dj" id="s-dj" aria-label="Pandoora Shop">
+ <div class="dj-pin">
+  <div class="dj-room"><img src="/shop/img/hero.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_7a92dc9d-a782-4232-97ec-7f055a6814d9_min.webp" alt="" fetchpriority="high"></div>
+  <div class="dj-floor" aria-hidden="true"></div>
+  <a class="dj-hole" href="/shop/porte-per-interni/" aria-label="Porta Horizon: vai alle porte per interni">
+    <span class="dj-frame"></span>
+    <span class="dj-leaf s-stage-leaf"><i class="lf-back"></i><i class="lf-top"></i><i class="lf-edge"></i><img src="/shop/img/anta-horizon.webp" alt=""></span>
+    <span class="dj-dim" aria-hidden="true"><span>210 cm</span></span>
+  </a>
+  <div class="dj-light" aria-hidden="true"></div>
+  <div class="dj-copy"><div class="s-wrap">
     <span class="s-kick">Pandoora Shop · dal 1987</span>
     <h1><span class="ln"><span>Porte e arredi</span></span><span class="ln"><span>fatti da noi,</span></span><span class="ln"><span>al centimetro.</span></span></h1>
     <p>Scegliete il modello, la finitura e la misura, standard o la vostra. Lo costruiamo nel nostro stabilimento di Fontanelle e il prezzo lo vedete subito, mentre configurate.</p>
@@ -55,37 +68,42 @@
       <div><b data-count="47">47</b><span>arredi su misura</span></div>
       <div><b data-count="39" data-suf=" anni">39 anni</b><span>di produzione propria</span></div>
     </div>
-  </div>
-  <a class="s-stage" href="/shop/porte-per-interni/" aria-label="Vai alle porte per interni">
-    <div class="s-stage-room" style="background-image:url('/shop/img/hero.jpg'),url('https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_7a92dc9d-a782-4232-97ec-7f055a6814d9_min.webp')"></div>
-    <div class="s-stage-wall"></div>
-    <div class="s-stage-frame"><div class="s-stage-leaf"><i class="lf-back"></i><i class="lf-top"></i><i class="lf-edge"></i><img src="/shop/img/anta-horizon.webp" alt=""></div></div>
-    <div class="s-stage-dim" aria-hidden="true"><span>210 cm</span></div>
-    <span class="s-stage-tag"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>Porta Horizon<small>Pantografata · da 595 € posa inclusa</small></span></span>
-  </a>
-</div></section>
+  </div></div>
+  <div class="dj-hint" aria-hidden="true"><span class="dj-mouse"><i></i></span>Scorrete per entrare</div>
+  <div class="dj-end"><div class="s-wrap"><h2><span class="ln"><span>Entrate pure.</span></span><span class="ln"><span>Qui tutto si fa su misura.</span></span></h2><p>Porte, scarpiere, mobiletti, tavoli e librerie: scegliete, configurate, vedete il prezzo.</p></div></div>
+ </div>
+</section>
+
+<section class="s-marq" aria-hidden="true">
+  <div class="mq-row"><div class="mq-track"><span>Su misura</span><i></i><span>Al centimetro</span><i></i><span>Laccato RAL</span><i></i><span>Made in Fontanelle</span><i></i><span>Dal 1987</span><i></i><span>Su misura</span><i></i><span>Al centimetro</span><i></i><span>Laccato RAL</span><i></i><span>Made in Fontanelle</span><i></i><span>Dal 1987</span><i></i></div></div>
+  <div class="mq-row mq-out"><div class="mq-track"><span>Porte</span><i></i><span>Scarpiere</span><i></i><span>Mobiletti</span><i></i><span>Librerie</span><i></i><span>Tavoli</span><i></i><span>Top</span><i></i><span>Porte</span><i></i><span>Scarpiere</span><i></i><span>Mobiletti</span><i></i><span>Librerie</span><i></i><span>Tavoli</span><i></i><span>Top</span><i></i></div></div>
+</section>
 
 <section class="s-sec" id="categorie"><div class="s-wrap">
-  <div class="s-sec-h" data-rv><div><h2>Cosa costruiamo per voi</h2><p>Cinque famiglie di prodotto, tutte in misura standard o al centimetro.</p></div></div>
+  <div class="s-sec-h" data-rv><div><h2 data-split>Cosa costruiamo per voi</h2><p>Cinque famiglie di prodotto, tutte in misura standard o al centimetro.</p></div></div>
   <div class="s-tiles">
-    <a class="s-tile" href="/shop/porte-per-interni/" data-rv><img src="/shop/img/hero.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_7a92dc9d-a782-4232-97ec-7f055a6814d9_min.webp" alt="Porta per interni laccata in un ingresso" data-par="40" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Porte per interni</h3><p>26 modelli: laminate, laccate RAL e pantografate</p><span class="s-tile-price">da 395 € posa inclusa</span><div class="s-tile-subs"><span>Porte battenti</span><span>Porte scorrevoli</span><span>Porte filo muro</span><span>Laccate RAL</span></div></div></a>
-    <a class="s-tile" href="/shop/mobiletti/" data-rv style="--d:.08s"><img src="/shop/img/camera.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_f4a6235e-f1d4-448f-bc42-fe443d8ef7d4_min.webp" alt="Comodino in rovere in camera da letto" data-par="30" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Mobiletti</h3><p>Comodini, mobili TV, madie, librerie, bagno</p><div class="s-tile-subs"><span>Comodini</span><span>Mobili TV</span><span>Madie e credenze</span><span>Librerie a vani</span><span>Mobili ingresso</span><span>Mobili bagno</span></div></div></a>
-    <a class="s-tile" href="/shop/tavoli/" data-rv style="--d:.16s"><img src="/shop/img/pranzo.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141156_53bfcaa4-12e3-44b2-b080-4e9015904e4e_min.webp" alt="Tavolo da pranzo in rovere" data-par="30" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Tavoli e top</h3><p>Tavoli completi e piani tagliati su misura</p><div class="s-tile-subs"><span>Tavoli completi</span><span>Top per tavoli</span></div></div></a>
-    <a class="s-tile" href="/shop/scarpiere/" data-rv style="--d:.12s"><img src="/shop/img/prodotti/panca-seduta-cuscino.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_435ada92-5348-4d96-a848-2f764825788b_min.webp" alt="Panca scarpiera in rovere con cuscino" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Scarpiere</h3><p>A ribalta, con ante, con seduta</p><div class="s-tile-subs"><span>A ribalta</span><span>Con ante</span><span>Con seduta</span><span>A giorno</span></div></div></a>
-    <a class="s-tile light" href="/shop/porte-per-interni/#laccate-ral" data-rv style="--d:.2s"><img src="/assets/porte/hf_20260708_071542_ca2cb76b-a5a9-4961-8d6b-6ba81398b2e5_min.webp" alt="Porta pantografata Alba" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Laccate RAL</h3><p>Qualsiasi tinta, fatte nella nostra cabina</p></div></a>
+    <a class="s-tile" href="/shop/porte-per-interni/" data-m="clip"><img src="/shop/img/hero.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_7a92dc9d-a782-4232-97ec-7f055a6814d9_min.webp" alt="Porta per interni laccata in un ingresso" data-par="40" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Porte per interni</h3><p>26 modelli: laminate, laccate RAL e pantografate</p><span class="s-tile-price">da 395 € posa inclusa</span><div class="s-tile-subs"><span>Porte battenti</span><span>Porte scorrevoli</span><span>Porte filo muro</span><span>Laccate RAL</span></div></div></a>
+    <a class="s-tile" href="/shop/mobiletti/" data-m="clip"><img src="/shop/img/camera.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_f4a6235e-f1d4-448f-bc42-fe443d8ef7d4_min.webp" alt="Comodino in rovere in camera da letto" data-par="30" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Mobiletti</h3><p>Comodini, mobili TV, madie, librerie, bagno</p><div class="s-tile-subs"><span>Comodini</span><span>Mobili TV</span><span>Madie e credenze</span><span>Librerie a vani</span><span>Mobili ingresso</span><span>Mobili bagno</span></div></div></a>
+    <a class="s-tile" href="/shop/tavoli/" data-m="clip"><img src="/shop/img/pranzo.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141156_53bfcaa4-12e3-44b2-b080-4e9015904e4e_min.webp" alt="Tavolo da pranzo in rovere" data-par="30" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Tavoli e top</h3><p>Tavoli completi e piani tagliati su misura</p><div class="s-tile-subs"><span>Tavoli completi</span><span>Top per tavoli</span></div></div></a>
+    <a class="s-tile" href="/shop/scarpiere/" data-m="clip"><img src="/shop/img/prodotti/panca-seduta-cuscino.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_435ada92-5348-4d96-a848-2f764825788b_min.webp" alt="Panca scarpiera in rovere con cuscino" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Scarpiere</h3><p>A ribalta, con ante, con seduta</p><div class="s-tile-subs"><span>A ribalta</span><span>Con ante</span><span>Con seduta</span><span>A giorno</span></div></div></a>
+    <a class="s-tile light" href="/shop/porte-per-interni/#laccate-ral" data-m="clip"><img src="/assets/porte/hf_20260708_071542_ca2cb76b-a5a9-4961-8d6b-6ba81398b2e5_min.webp" alt="Porta pantografata Alba" loading="lazy"><span class="s-tile-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="s-tile-c"><h3>Laccate RAL</h3><p>Qualsiasi tinta, fatte nella nostra cabina</p></div></a>
   </div>
 </div></section>
 
-<section class="s-sec" style="padding-top:10px"><div class="s-wrap">
-  <div class="s-sec-h" data-rv><div><h2>I più scelti</h2><p>Trascinate per scorrere. Toccate un prodotto per configurarlo.</p></div><div class="s-rail-nav"><button type="button" data-rail="-1" aria-label="Precedenti"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" data-rail="1" aria-label="Successivi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
+<section class="s-sec s-mani"><div class="s-wrap">
+  <p class="mani" data-scrub>Non siamo un rivenditore. Il pannello, la laccatura e la posa sono nostri: ogni porta e ogni mobile nasce sul vostro spazio, nel nostro stabilimento di Fontanelle, dal 1987.</p>
+</div></section>
+
+<section class="s-sec s-best" style="padding-top:10px"><div class="s-wrap">
+  <div class="s-sec-h" data-rv><div><h2 data-split>I più scelti</h2><p>Trascinate per scorrere. Toccate un prodotto per configurarlo.</p></div><div class="s-rail-nav"><button type="button" data-rail="-1" aria-label="Precedenti"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" data-rail="1" aria-label="Successivi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
   <div class="s-rail" id="s-rail"></div>
   <div class="s-rail-bar"><i></i></div>
 </div></section>
 
 <section class="s-sec"><div class="s-wrap">
-  <div class="s-doors">
-    <div class="s-sec-h" data-rv><div><h2>Tre linee di porte, un listino chiaro</h2><p>Il prezzo cambia con il modello, non con la misura. Telaio e coprifilo in legno, pannello da 44 mm, tre cerniere a scomparsa e serratura magnetica sono sempre compresi.</p></div><a class="s-btn s-btn-w" href="/shop/porte-per-interni/">Tutte le porte <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    <div class="s-lines"><a class="s-line-c" href="/shop/porte-per-interni/" data-rv style="--d:0.0s"><img src="/assets/porte/hf_20260708_071345_4a446409-de91-4471-b79b-4b3a500ffa8e_min.webp" alt="Porta Bianco" loading="lazy"><div><h3>Linea Laminata</h3><p>Laminato resistente, il più rapido da produrre</p><b><small>da</small>395 €</b></div></a><a class="s-line-c" href="/shop/porte-per-interni/" data-rv style="--d:0.1s"><img src="/assets/porte/hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e_min.webp" alt="Porta 2 Bugne" loading="lazy"><div><h3>Linea Laccata</h3><p>Liscia o a bugne, in tinta RAL</p><b><small>da</small>495 €</b></div></a><a class="s-line-c" href="/shop/porte-per-interni/" data-rv style="--d:0.2s"><img src="/assets/porte/hf_20260708_071354_972025cc-6873-4dca-88bb-f0ae4be56232_min.webp" alt="Porta Horizon" loading="lazy"><div><h3>Pantografata Superior</h3><p>20 disegni incisi su HDF idro 8 mm</p><b><small>da</small>595 €</b></div></a></div>
+  <div class="s-doors" data-m="expand">
+    <div class="s-sec-h" data-rv><div><h2 data-split>Tre linee di porte, un listino chiaro</h2><p>Il prezzo cambia con il modello, non con la misura. Telaio e coprifilo in legno, pannello da 44 mm, tre cerniere a scomparsa e serratura magnetica sono sempre compresi.</p></div><a class="s-btn s-btn-w" href="/shop/porte-per-interni/">Tutte le porte <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="s-lines"><a class="s-line-c" href="/shop/porte-per-interni/" data-m="door"><img src="/assets/porte/hf_20260708_071345_4a446409-de91-4471-b79b-4b3a500ffa8e_min.webp" alt="Porta Bianco" loading="lazy"><div><h3>Linea Laminata</h3><p>Laminato resistente, il più rapido da produrre</p><b><small>da</small>395 €</b></div></a><a class="s-line-c" href="/shop/porte-per-interni/" data-m="door"><img src="/assets/porte/hf_20260708_071349_c5ce3150-1732-45ba-a4ca-769df60fa93e_min.webp" alt="Porta 2 Bugne" loading="lazy"><div><h3>Linea Laccata</h3><p>Liscia o a bugne, in tinta RAL</p><b><small>da</small>495 €</b></div></a><a class="s-line-c" href="/shop/porte-per-interni/" data-m="door"><img src="/assets/porte/hf_20260708_071354_972025cc-6873-4dca-88bb-f0ae4be56232_min.webp" alt="Porta Horizon" loading="lazy"><div><h3>Pantografata Superior</h3><p>20 disegni incisi su HDF idro 8 mm</p><b><small>da</small>595 €</b></div></a></div>
     <div class="s-doors-extra" data-rv><span>Scorrevole esterno muro <b>da 495 €</b></span><span>Scorrevole interno muro <b>da 495 €</b></span><span>Filo muro <b>da 695 €</b></span><span>Con vetro <b>+150 €</b></span><span>Apertura a libro <b>+200 €</b></span><span>Sistema Magic <b>+200 €</b></span><span>Allargamento stipiti <b>+110 €</b></span></div>
     <div class="s-doors-foot"><span>Prezzi a porta, IVA esclusa. Posa e trasporto inclusi in Veneto e Friuli Venezia Giulia.</span><a class="s-link" style="color:#fff;background-image:linear-gradient(#fff,#fff)" href="/porte-interne-prezzi/">Come si forma il prezzo</a></div>
   </div>
@@ -94,14 +112,14 @@
 <section class="s-sec" id="su-misura"><div class="s-wrap">
   <div class="s-fit" id="s-fit">
     <div data-rv>
-      <h2>Provate il su misura</h2>
+      <h2 data-split>Provate il su misura</h2>
       <p class="lead">Spostate i cursori: la madia si ridisegna e il prezzo si aggiorna. Ogni scheda prodotto funziona così, con i limiti di misura indicati.</p>
       <div class="s-range"><label for="fit-w">Larghezza <output id="fit-wo">180 cm</output></label><input type="range" id="fit-w" min="110" max="260" value="180"></div>
       <div class="s-range"><label for="fit-h">Altezza <output id="fit-ho">80 cm</output></label><input type="range" id="fit-h" min="50" max="110" value="80"></div>
       <div class="s-fit-price"><b id="fit-p">—</b><span>Madia Corte in rovere, su misura, IVA inclusa</span></div>
       <button class="s-btn s-btn-p" type="button" id="fit-go">Configura la madia <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <div class="s-draw" data-rv style="--d:.12s" aria-hidden="true">
+    <div class="s-draw" data-m="draw" aria-hidden="true">
       <svg viewBox="0 0 420 315" preserveAspectRatio="xMidYMid meet">
         <defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" class="grid" fill="none"/></pattern></defs>
         <rect width="420" height="315" fill="url(#g)"/>
@@ -116,7 +134,7 @@
 </div></section>
 
 <section class="s-sec" style="padding-top:0"><div class="s-wrap">
-  <div class="s-usp">
+  <div class="s-usp" data-m="usp">
     <div data-rv><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg><b>Produzione propria</b><span>Stabilimento a Fontanelle (TV), dal 1987. Nessuna fase data fuori.</span></div>
     <div data-rv style="--d:.06s"><svg viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="8" rx="1"/><path d="M6 8v3M10 8v4M14 8v3M18 8v4"/></svg><b>Misure al centimetro</b><span>Oltre ai formati standard, entro i limiti di ogni scheda.</span></div>
     <div data-rv style="--d:.12s"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16" cy="10" r="1.5"/><path d="M12 21a3 3 0 0 1 0-6"/></svg><b>Qualsiasi tinta RAL</b><span>Laccatura fatta nella nostra cabina di verniciatura.</span></div>
@@ -133,7 +151,7 @@
 <div class="s-scrim" id="s-scrim"></div>
 <aside class="s-drawer" id="s-drawer" aria-label="Carrello" aria-hidden="true">
   <div class="s-drawer-h"><h2 id="s-drawer-t">Carrello</h2><button class="s-x" type="button" id="s-x" aria-label="Chiudi"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <div class="s-drawer-b" id="s-drawer-b"></div>
+  <div class="s-drawer-b" id="s-drawer-b" data-lenis-prevent></div>
   <div class="s-drawer-f" id="s-drawer-f"></div>
 </aside>
 <footer class="pf">
@@ -222,6 +240,10 @@
   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
 </button>
 
-<script src="/shop/shop.js?v=5" defer></script>
+<script src="/assets/js/gsap.min.js" defer></script>
+<script src="/assets/js/ScrollTrigger.min.js" defer></script>
+<script src="/shop/vendor/lenis.min.js" defer></script>
+<script src="/shop/motion.js?v=6" defer></script>
+<script src="/shop/shop.js?v=6" defer></script>
 </body>
 </html>

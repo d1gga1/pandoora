@@ -380,17 +380,17 @@
         $$('[data-q]',b).forEach(function(x){x.onclick=function(){var l=cart[+x.dataset.q];l.qty=clamp(l.qty+(+x.dataset.d),1,99);store('pdShopCart2',cart);counts();openDrawer('cart')}});
       }
     }
-    document.body.classList.add('s-cart-open');
+    document.body.classList.add('s-cart-open');window.PDM&&window.PDM.stop();
     $('#s-drawer').setAttribute('aria-hidden','false');
   }
-  function closeDrawer(){document.body.classList.remove('s-cart-open');var d=$('#s-drawer');if(d)d.setAttribute('aria-hidden','true')}
+  function closeDrawer(){document.body.classList.remove('s-cart-open');window.PDM&&window.PDM.start();var d=$('#s-drawer');if(d)d.setAttribute('aria-hidden','true')}
 
   /* ---------- scheda prodotto / configuratore ---------- */
   var PM=null,lastFocus=null;
   function ensurePM(){
     if(PM)return PM;
     PM=document.createElement('div');PM.className='s-pm';PM.setAttribute('role','dialog');PM.setAttribute('aria-modal','true');PM.setAttribute('aria-labelledby','s-pm-t');
-    PM.innerHTML='<div class="s-pm-scrim" data-close></div><div class="s-pm-box"><button class="s-pm-x" type="button" data-close aria-label="Chiudi">'+IC.x+'</button><div class="s-pm-media"></div><div class="s-pm-body"><div class="s-pm-scroll"></div><div class="s-pm-foot"></div></div></div>';
+    PM.innerHTML='<div class="s-pm-scrim" data-close></div><div class="s-pm-box" data-lenis-prevent><button class="s-pm-x" type="button" data-close aria-label="Chiudi">'+IC.x+'</button><div class="s-pm-media"></div><div class="s-pm-body"><div class="s-pm-scroll"></div><div class="s-pm-foot"></div></div></div>';
     document.body.appendChild(PM);
     $$('[data-close]',PM).forEach(function(x){x.onclick=closeProduct});
     PM.addEventListener('keydown',function(e){if(e.key==='Tab'){var f=$$('button,input,select,a[href]',PM).filter(function(n){return !n.disabled&&n.offsetParent}),a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
@@ -544,7 +544,7 @@
   /* scheda tecnica a tutto schermo, stampabile */
   function openSheet(p,c){
     var o=document.getElementById('s-sheet');
-    if(!o){o=document.createElement('div');o.id='s-sheet';o.className='s-sheet';o.setAttribute('role','dialog');o.setAttribute('aria-modal','true');o.setAttribute('aria-label','Scheda tecnica');document.body.appendChild(o)}
+    if(!o){o=document.createElement('div');o.id='s-sheet';o.className='s-sheet';o.setAttribute('data-lenis-prevent','');o.setAttribute('role','dialog');o.setAttribute('aria-modal','true');o.setAttribute('aria-label','Scheda tecnica');document.body.appendChild(o)}
     o.innerHTML='<div class="s-sheet-bar"><b>Scheda tecnica · '+esc(p.name)+'</b><span>Misure in millimetri · pizzicate o ruotate il telefono per ingrandire</span><button type="button" class="s-btn s-btn-o" id="s-sheet-print">Stampa o salva PDF</button><button type="button" class="s-x" id="s-sheet-x" aria-label="Chiudi">'+IC.x+'</button></div><div class="s-sheet-body">'+doorSheetSVG(p,c)+'</div>';
     o.classList.add('open');
     requestAnimationFrame(function(){o.classList.add('show')});
@@ -555,6 +555,7 @@
     };
   }
   function showPM(m,id){
+    window.PDM&&window.PDM.stop();
     m.classList.add('open');document.documentElement.style.overflow='hidden';
     requestAnimationFrame(function(){m.classList.add('show');var x=$('.s-pm-x',m);x&&x.focus({preventScroll:true})});
     var u=new URL(location.href);u.searchParams.set('p',id);history.replaceState(null,'',u);
@@ -619,7 +620,7 @@
     return '<fieldset class="s-opt" id="o-ral"'+(furn?' hidden':'')+'><legend>Colore RAL <small>qualsiasi tinta della cartella</small></legend><div class="s-ral-sw">'+RALS.map(function(r){return '<button type="button" data-r="'+r[0]+'" style="background:'+r[1]+'" title="RAL '+r[0]+' · '+r[2]+'" aria-label="RAL '+r[0]+' '+r[2]+'"></button>'}).join('')+'</div><div class="s-ral"><input class="s-ral-in" id="o-ral-in" placeholder="RAL 9010" aria-label="Codice RAL"><span class="s-note">Scrivete il codice se non è tra questi</span></div></fieldset>';
   }
   function closeProduct(){
-    if(!PM)return;PM.classList.remove('show');document.documentElement.style.overflow='';
+    if(!PM)return;window.PDM&&window.PDM.start();PM.classList.remove('show');document.documentElement.style.overflow='';
     setTimeout(function(){PM.classList.remove('open')},RM?0:420);
     var u=new URL(location.href);u.searchParams.delete('p');history.replaceState(null,'',u);
     if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
@@ -629,7 +630,7 @@
   /* ---------- ricerca con suggerimenti ---------- */
   function initSearch(){
     var f=$('.s-search'),i=$('#s-q');if(!f||!i)return;
-    var box=document.createElement('div');box.className='s-suggest';box.setAttribute('role','listbox');f.appendChild(box);
+    var box=document.createElement('div');box.className='s-suggest';box.setAttribute('data-lenis-prevent','');box.setAttribute('role','listbox');f.appendChild(box);
     var cur=-1;
     function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
     function run(){
@@ -679,6 +680,7 @@
   var IO=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');IO.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08}):null;
   function reveal(root){$$('[data-rv]:not(.in)',root).forEach(function(el){if(IO&&!RM)IO.observe(el);else el.classList.add('in')})}
   function staggerIn(nodes){
+    if(window.PDM&&window.PDM.cards){window.PDM.cards(nodes);return}
     if(RM)return;nodes.forEach(function(n,i){if(!n.animate)return;n.animate([{opacity:0,transform:'translateY(40px) scale(.97)'},{opacity:1,transform:'none'}],{duration:800,delay:Math.min(i,12)*55,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'})});
   }
   function splitLines(h){
@@ -694,6 +696,7 @@
 
   /* ---------- home ---------- */
   function heroDoor(){
+    if(window.PDM)return;
     var leaf=$('.s-stage-leaf'),room=$('.s-stage-room'),wall=$('.s-stage-wall');if(!leaf)return;
     function th(){leaf.style.setProperty('--t',(leaf.offsetWidth*4.4/80).toFixed(1)+'px')}th();addEventListener('resize',th);
     if(RM){leaf.style.transform='rotateY(-62deg)';if(wall)wall.style.opacity=0;return}
@@ -708,6 +711,7 @@
     var r=$('#s-rail');if(!r)return;
     var bd=P.filter(function(p){return p.badge&&p.type==='door'}),bf=P.filter(function(p){return p.badge&&p.type!=='door'}),best=[];for(var i=0;best.length<14&&(i<bd.length||i<bf.length);i++){if(bf[i])best.push(bf[i]);if(bd[i]&&i<4)best.push(bd[i])}
     r.innerHTML=best.map(function(p){return card(p)}).join('');bindCards(r);
+    if(window.PDM){window.PDM.cards($$('.s-card',r));setTimeout(function(){window.PDM.rail(r)},60)}
     var bar=$('.s-rail-bar i');
     function upd(){if(!bar)return;var m=r.scrollWidth-r.clientWidth,k=m>0?r.scrollLeft/m:0,ratio=Math.min(1,r.clientWidth/r.scrollWidth);bar.style.width=(ratio*100)+'%';bar.style.setProperty('--x',(k*(1-ratio)/ratio*100)+'%')}
     r.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});upd();

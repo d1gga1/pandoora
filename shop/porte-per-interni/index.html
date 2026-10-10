@@ -21,9 +21,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/pandoora-pages.css">
-<link rel="stylesheet" href="/shop/shop.css?v=5">
+<link rel="stylesheet" href="/shop/shop.css?v=6">
+<script>(function(d){try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm){if(!sessionStorage.getItem('pdIntro')&&d.body===null&&location.pathname.replace(/\/$/,'')==='/shop')d.documentElement.classList.add('pd-intro');if(sessionStorage.getItem('pdWipe')){d.documentElement.classList.add('pd-wipe');sessionStorage.removeItem('pdWipe')}}}catch(e){}setTimeout(function(){d.documentElement.classList.remove('pd-intro','pd-wipe')},5000)})(document)</script>
 </head>
 <body class="shop" data-page="cat" data-cat="porte-per-interni">
+<div class="s-intro" aria-hidden="true"><div class="si-leaf si-l"></div><div class="si-leaf si-r"></div><div class="si-c"><img src="/pandoora_logo.webp" alt="" width="150" height="40"><b class="si-n">0</b><span class="si-bar"><i></i></span><small>Porte e arredi su misura · dal 1987</small></div></div>
+<div class="s-wipe" aria-hidden="true"><span><img src="/pandoora_logo.webp" alt="" width="120" height="32"></span></div>
 <div class="s-ruler" aria-hidden="true"><i></i><b></b></div>
 <div class="s-promo" aria-label="Vantaggi"><div class="s-promo-track"><span><i></i>Misure standard o al centimetro</span><span><i></i>Prodotto in Italia, nel nostro stabilimento dal 1987</span><span><i></i>Porte con posa inclusa in Veneto e Friuli</span><span><i></i>Laccature in qualsiasi tinta RAL</span><span><i></i>Consegna in tutta Italia e in Europa</span><span aria-hidden="true"><i></i>Misure standard o al centimetro</span><span aria-hidden="true"><i></i>Prodotto in Italia, nel nostro stabilimento dal 1987</span><span aria-hidden="true"><i></i>Porte con posa inclusa in Veneto e Friuli</span><span aria-hidden="true"><i></i>Laccature in qualsiasi tinta RAL</span><span aria-hidden="true"><i></i>Consegna in tutta Italia e in Europa</span></div></div>
 <header class="s-head">
@@ -43,7 +46,7 @@
 </header>
 
 <main>
-<div class="s-wrap s-cat-hero">
+<div class="s-wrap s-cat-hero"><span class="s-bgword" aria-hidden="true">Porte per interni</span>
   <nav class="s-crumb" aria-label="Percorso"><a href="/">Pan.door.a</a><span>›</span><a href="/shop/">Shop</a><span>›</span>Porte per interni</nav>
   <div class="s-cat-head"><div><h1><span class="ln"><span>Porte</span></span><span class="ln"><span>per interni</span></span></h1><p>Porte prodotte nel nostro stabilimento di Fontanelle, in misura standard o al centimetro sul vostro vano: battenti, scorrevoli, filo muro e laccate in qualsiasi tinta RAL.</p></div><div class="s-cat-note" data-rv><b>Posa inclusa</b>In Veneto e Friuli VG. Prezzi IVA esclusa, telaio e coprifilo compresi.</div></div>
   <div class="s-subs" id="s-subs"><button class="s-sub" type="button" data-sub="" aria-pressed="true"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><rect x="16" y="6" width="32" height="52" rx="1.5"/><path d="M10 58h44"/><circle cx="42" cy="33" r="1.8"/><path d="M42 33h-4"/></svg></span>Tutti</button><button class="s-sub" type="button" data-sub="battenti" aria-pressed="false"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><rect x="16" y="6" width="32" height="52" rx="1.5"/><path d="M10 58h44"/><circle cx="42" cy="33" r="1.8"/><path d="M42 33h-4"/></svg></span>Porte battenti</button><button class="s-sub" type="button" data-sub="scorrevoli" aria-pressed="false"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><path d="M8 8h48"/><rect x="12" y="12" width="22" height="46"/><rect x="30" y="12" width="22" height="46"/><path d="M30 35h-3M34 35h3"/></svg></span>Porte scorrevoli</button><button class="s-sub" type="button" data-sub="filo-muro" aria-pressed="false"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><rect x="6" y="6" width="52" height="52"/><rect x="20" y="12" width="24" height="46"/><circle cx="39" cy="35" r="1.6"/></svg></span>Porte filo muro</button><button class="s-sub" type="button" data-sub="laccate-ral" aria-pressed="false"><span class="s-sub-ic"><svg viewBox="0 0 64 64"><rect x="18" y="6" width="28" height="52" rx="1.5"/><circle cx="40" cy="33" r="1.6"/><path d="M6 20c4-6 8 6 12 0"/><circle cx="10" cy="44" r="4"/></svg></span>Laccate RAL</button></div>
@@ -61,7 +64,7 @@
 <div class="s-scrim" id="s-scrim"></div>
 <aside class="s-drawer" id="s-drawer" aria-label="Carrello" aria-hidden="true">
   <div class="s-drawer-h"><h2 id="s-drawer-t">Carrello</h2><button class="s-x" type="button" id="s-x" aria-label="Chiudi"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <div class="s-drawer-b" id="s-drawer-b"></div>
+  <div class="s-drawer-b" id="s-drawer-b" data-lenis-prevent></div>
   <div class="s-drawer-f" id="s-drawer-f"></div>
 </aside>
 <footer class="pf">
@@ -150,6 +153,10 @@
   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
 </button>
 
-<script src="/shop/shop.js?v=5" defer></script>
+<script src="/assets/js/gsap.min.js" defer></script>
+<script src="/assets/js/ScrollTrigger.min.js" defer></script>
+<script src="/shop/vendor/lenis.min.js" defer></script>
+<script src="/shop/motion.js?v=6" defer></script>
+<script src="/shop/shop.js?v=6" defer></script>
 </body>
 </html>
