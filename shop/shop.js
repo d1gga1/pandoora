@@ -31,6 +31,58 @@
   var SW={'Bianco opaco':'#f4f3ef','Bianco':'#f6f6f4','Bianco frassino':'#efede7','Rovere naturale':'#c9a273','Rovere oliato':'#b8895a','Noce canaletto':'#6b4a33','Grigio seta':'#b9b6b0','Grigio Baltimora':'#8d8780','Palissandro White':'#e3ddd2','Nero opaco':'#262626','Marrone-nero':'#3d322b','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc','Laccato RAL':'conic-gradient(#c0392b,#e0b24a,#5b8d5a,#3e6fa8,#8e5aa8,#c0392b)','Rovere naturale/Bianco':'linear-gradient(90deg,#c9a273 50%,#f4f3ef 50%)','Noce/Grigio':'linear-gradient(90deg,#6b4a33 50%,#b9b6b0 50%)','Pietra grigia/Rovere':'linear-gradient(90deg,#8f8f8a 50%,#c9a273 50%)','Pietra chiara/Noce':'linear-gradient(90deg,#d9d5cc 50%,#6b4a33 50%)'};
   var RALS=[['9010','#f1ece1','Bianco puro'],['9016','#f1f0ea','Bianco traffico'],['1013','#e3d9c6','Bianco perla'],['7044','#b8b4a8','Grigio seta'],['7016','#383e42','Antracite'],['6021','#89ac76','Verde pallido'],['5014','#606e8c','Blu colomba'],['3012','#c6846d','Rosso beige'],['9005','#0e0e10','Nero']];
   function swatch(f){return SW[f]||'#ddd'}
+  function tintDoor(tn,R,ral){
+    var on=R&&ral!=='9010'&&ral!=='9016';if(!on)tn.dataset.want='';
+    var im=tn.parentNode&&tn.parentNode.querySelector('img');
+    function show(v){tn.style.opacity=v?1:0;if(im){im.style.transition='opacity .45s';im.style.opacity=v?0:1}}
+    if(!on){show(false);return}
+    if(im){var cs=getComputedStyle(im);tn.style.padding=cs.padding;tn.style.objectPosition=cs.objectPosition}
+    DoorTint.paint(tn,tn.dataset.src,R[1]).then(function(){if(tn.dataset.want===R[1])show(true)}).catch(function(){show(false)});
+  }
+
+  /* ---------- tinta RAL realistica sulla foto (canvas) ----------
+     Mantiene luci, ombre e bugne della foto bianca, applica la tinta in luminanza CIE L*
+     e lascia intatti maniglia e serratura (maschera *_metal.png). */
+  var DoorTint=(function(){
+    var cache={};
+    function s2l(c){c/=255;return c<=0.04045?c/12.92:Math.pow((c+0.055)/1.055,2.4)}
+    function l2s(c){c=c<0?0:c>1?1:c;return Math.round((c<=0.0031308?c*12.92:1.055*Math.pow(c,1/2.4)-0.055)*255)}
+    function y2L(Y){return Y>0.008856?116*Math.cbrt(Y)-16:903.3*Y}
+    function L2y(L){var f=(L+16)/116;return L>8?f*f*f:L/903.3}
+    var LIN=new Float32Array(256);for(var i=0;i<256;i++)LIN[i]=s2l(i);
+    function loadImg(u){return new Promise(function(ok,ko){var im=new Image();im.decoding='async';im.onload=function(){ok(im)};im.onerror=ko;im.src=u})}
+    function prep(src){
+      if(cache[src])return cache[src];
+      var mu=src.replace(/\.webp(\?.*)?$/,'_metal.png$1');
+      return cache[src]=Promise.all([loadImg(src),loadImg(mu).catch(function(){return null})]).then(function(r){
+        var im=r[0],W=im.naturalWidth,H=im.naturalHeight,cv=document.createElement('canvas');cv.width=W;cv.height=H;
+        var cx=cv.getContext('2d',{willReadFrequently:true});cx.drawImage(im,0,0);
+        var px=cx.getImageData(0,0,W,H).data,n=W*H,Ls=new Float32Array(n),hist=new Uint32Array(1001),cnt=0,keep=null;
+        for(var i=0,j=0;i<n;i++,j+=4){var Y=0.2126*LIN[px[j]]+0.7152*LIN[px[j+1]]+0.0722*LIN[px[j+2]],L=y2L(Y);Ls[i]=L;if(px[j+3]>128){hist[Math.round(L*10)]++;cnt++}}
+        var acc=0,t=cnt*0.7,Lref=90;for(var h=0;h<=1000;h++){acc+=hist[h];if(acc>=t){Lref=h/10;break}}
+        var dq=new Uint16Array(n);for(i=0;i<n;i++){var d=Ls[i]-Lref;d=d<-100?-100:d>100?100:d;dq[i]=Math.round((d+100)*10)}
+        if(r[1]){var mc=document.createElement('canvas');mc.width=W;mc.height=H;var mx=mc.getContext('2d',{willReadFrequently:true});mx.drawImage(r[1],0,0,W,H);var md=mx.getImageData(0,0,W,H).data;keep=new Uint8Array(n);for(i=0;i<n;i++)keep[i]=md[i*4]}
+        return{W:W,H:H,px:px,dq:dq,keep:keep};
+      });
+    }
+    function paint(canvas,src,hex){
+      canvas.dataset.want=hex;
+      return prep(src).then(function(D){
+        if(canvas.dataset.want!==hex)return;
+        var tr=s2l(parseInt(hex.slice(1,3),16)),tg=s2l(parseInt(hex.slice(3,5),16)),tb=s2l(parseInt(hex.slice(5,7),16));
+        var tY=Math.max(0.2126*tr+0.7152*tg+0.0722*tb,1e-4),tL=y2L(tY),k=1+(1-tL/100)*0.5;
+        var LR=new Uint8Array(2001),LG=new Uint8Array(2001),LB=new Uint8Array(2001);
+        for(var q=0;q<=2000;q++){var Lo=tL+k*(q/10-100);Lo=Lo<0?0:Lo>100?100:Lo;var f=L2y(Lo)/tY;LR[q]=l2s(tr*f);LG[q]=l2s(tg*f);LB[q]=l2s(tb*f)}
+        if(canvas.width!==D.W){canvas.width=D.W;canvas.height=D.H}
+        var cx=canvas.getContext('2d'),out=cx.createImageData(D.W,D.H),o=out.data,px=D.px,dq=D.dq,kp=D.keep,n=D.W*D.H;
+        for(var i=0,j=0;i<n;i++,j+=4){var a=px[j+3];o[j+3]=a;if(!a)continue;var d=dq[i],r=LR[d],g=LG[d],b=LB[d];
+          if(kp&&kp[i]){var m=kp[i]/255;r+=(px[j]-r)*m;g+=(px[j+1]-g)*m;b+=(px[j+2]-b)*m}
+          o[j]=r;o[j+1]=g;o[j+2]=b}
+        cx.putImageData(out,0,0);
+      });
+    }
+    return{paint:paint};
+  })();
 
   /* ---------- immagini con ricaduta ---------- */
   function imgAttrs(p,lg){
@@ -279,13 +331,14 @@
       +'<div class="s-card-img" data-open="'+esc(p.id)+'" role="button" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+(p._thumb?'src="'+p._thumb+'"':imgAttrs(p))+' alt="'+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
       +(p.badge?'<span class="s-badge">'+esc(p.badge)+'</span>':'')+(p.custom||p.type==='door'?'<span class="s-badge g r2">Su misura</span>':'')
       +'<button class="s-card-q" type="button" data-open="'+esc(p.id)+'">'+IC.eye+'Configura</button></div>'
-      +top+'<h3><a href="?p='+esc(p.id)+'" data-open="'+esc(p.id)+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc||'')+'</p>'+dims+sw
+      +top+'<h3><a href="'+pURL(p)+'" data-open="'+esc(p.id)+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc||'')+'</p>'+dims+sw
       +'<div class="s-price">'+(many?'<small>da</small>':'')+eur.format(price)+(p.type==='door'?'<span>IVA escl. · posa inclusa</span>':'')+'</div>'
       +'<div class="s-card-foot"><button class="s-add" type="button" data-add="'+esc(p.id)+'" aria-label="Aggiungi '+esc(p.name)+' al carrello">'+IC.plus+'<span>Aggiungi</span></button>'
       +'<button class="s-fav" type="button" data-fav="'+esc(p.id)+'" aria-pressed="'+fav+'" aria-label="Salva nei preferiti">'+IC.heart+'</button></div>'
       +'</article>';
   }
   function byId(id){return P.find(function(x){return x.id===id})}
+  function pURL(p){return '/shop/'+p.cat+'/'+p.id+'/'}
   function bindCards(root,sub){
     $$('[data-open]',root).forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openProduct(b.dataset.open,sub,b.closest('.s-card'))})});
     $$('[data-add]',root).forEach(function(b){b.onclick=function(){
@@ -405,7 +458,7 @@
     if(p.type==='cube'){openCube(p,m,media,sc,ft);return}
     if(p.type==='door'){openDoor(p,m,media,sc,ft,sub);return}
     media.className='s-pm-media'+(p.type==='door'?' door':'');
-    media.innerHTML='<img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.type==='door'&&p.line!=='laminata'?'<span class="s-pm-tint" style="-webkit-mask-image:url(\''+esc(p.imgLg)+'\');mask-image:url(\''+esc(p.imgLg)+'\')"></span>':'')+'<span class="s-pm-dims" id="s-pm-dims"></span><span class="s-pm-ral" id="s-pm-ral"></span>';
+    media.innerHTML='<img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.type==='door'&&p.line!=='laminata'?'<canvas class="s-pm-tint" data-src="'+esc(p.imgLg)+'" aria-hidden="true"></canvas>':'')+'<span class="s-pm-dims" id="s-pm-dims"></span><span class="s-pm-ral" id="s-pm-ral"></span>';
     var html='';
     if(p.type==='door'){
       html+='<span class="s-card-line"><i></i>'+esc(p.lineLabel)+'</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'. '+esc(p.long)+'</p>';
@@ -446,7 +499,7 @@
       ['w','d','h'].forEach(function(k){var i=$('#o-'+k,sc);if(i&&document.activeElement!==i)i.value=c[k]});
       var rl=$('#s-pm-ral'),showRal=(p.type==='door'&&p.line!=='laminata')||c.fin==='Laccato RAL';
       if(rl){var R=RALS.find(function(r){return r[0]===c.ral});rl.style.display=showRal&&R?'block':'none';if(R)rl.style.background=R[1]}
-      var tn=$('.s-pm-tint',media);if(tn){var R2=RALS.find(function(r){return r[0]===c.ral});tn.style.background=R2?R2[1]:'transparent';tn.style.opacity=R2&&c.ral!=='9010'&&c.ral!=='9016'?1:0}
+      var tn=$('.s-pm-tint',media);if(tn){var R2=RALS.find(function(r){return r[0]===c.ral});tintDoor(tn,R2,c.ral)}
       $$('.s-ral-sw button',sc).forEach(function(b){b.classList.toggle('on',b.dataset.r===c.ral)});
       var ri=$('#o-ral-in',sc);if(ri&&document.activeElement!==ri)ri.value=c.ral?'RAL '+c.ral:'';
       var q=quote(p,c);
@@ -475,7 +528,7 @@
     if(p.onlyOpen)c.open=p.onlyOpen;
     media.className='s-pm-media door'+(p.opaque?' opaque':'');
     media.innerHTML='<div class="s-pm-views" role="tablist"><button type="button" role="tab" data-view="foto" aria-selected="true">Foto</button><button type="button" role="tab" data-view="disegno" aria-selected="false">Disegno quotato</button></div>'
-      +'<div class="s-pm-photo"><img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.line!=='laminata'&&!p.opaque?'<span class="s-pm-tint" style="-webkit-mask-image:url(\''+esc(p.imgLg)+'\');mask-image:url(\''+esc(p.imgLg)+'\')"></span>':'')+'</div>'
+      +'<div class="s-pm-photo"><img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.line!=='laminata'&&!p.opaque?'<canvas class="s-pm-tint" data-src="'+esc(p.imgLg)+'" aria-hidden="true"></canvas>':'')+'</div>'
       +'<div class="s-pm-draw" hidden></div><span class="s-pm-dims" id="s-pm-dims"></span><span class="s-pm-ral" id="s-pm-ral"></span>'
       +'<button type="button" class="s-pm-sheetbtn" id="s-sheet-open"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg>Scheda tecnica completa</button>';
     var html='<span class="s-card-line"><i></i>'+esc(p.lineLabel)+'</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'. '+esc(p.long)+'</p>';
@@ -520,7 +573,7 @@
       draw.innerHTML=doorElevSVG(p,c);
       $('#s-pm-dims').textContent=cu?'Vano '+c.vw+' × '+c.vh+' mm':(c.w+' × '+D.height+' cm');
       var rl=$('#s-pm-ral'),R=RALS.find(function(r){return r[0]===c.ral});if(rl){rl.style.display=p.line!=='laminata'&&R?'block':'none';if(R)rl.style.background=R[1]}
-      var tn=$('.s-pm-tint',media);if(tn){tn.style.background=R?R[1]:'transparent';tn.style.opacity=R&&c.ral!=='9010'&&c.ral!=='9016'?1:0}
+      var tn=$('.s-pm-tint',media);if(tn)tintDoor(tn,R,c.ral)
       $$('.s-ral-sw button',sc).forEach(function(b){b.classList.toggle('on',b.dataset.r===c.ral)});
       var ri=$('#o-ral-in',sc);if(ri&&document.activeElement!==ri)ri.value=c.ral?'RAL '+c.ral:'';
       var q=doorQuote(p,c);
@@ -835,6 +888,13 @@
     render(true);
   }
 
+  /* ---------- pagina prodotto statica (/shop/<categoria>/<id>/) ---------- */
+  function initProductPage(){
+    var root=$('.sp');if(!root)return;
+    bindCards(root,'');
+    staggerIn($$('.s-card',root));
+  }
+
   /* ---------- avvio ---------- */
   function init(){
     var pf=$('.pf');if(pf)pf.classList.add('in');
@@ -848,7 +908,8 @@
     Promise.all([fetch('/shop/data/catalog.json',{cache:'no-cache'}).then(function(r){return r.json()}),fetch('/shop/data/products.json',{cache:'no-cache'}).then(function(r){return r.json()})]).then(function(r){
       CAT=r[0];P=r[1].products||[];PR=r[1].pricing;
       initSearch();
-      if(document.body.dataset.page==='cat')initCat();else initHome();
+      var pg=document.body.dataset.page;
+      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else initHome();
       var pid=new URLSearchParams(location.search).get('p');if(pid)openProduct(pid);
     }).catch(function(err){console.error(err);var g=$('#s-grid');if(g)g.innerHTML=emptyHTML('')});
   }

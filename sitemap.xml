@@ -26198,4 +26198,596 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pandooragroup.it/zh/fengwoban/ditai-anzhuang/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/en/honeycomb-panels/platform-assembly/"/>
   </url>
+<!--seo:shop-->
+  <url>
+    <loc>https://pandooragroup.it/shop/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-bianco/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/bianco.webp</image:loc><image:title>Porta Bianco</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-bianco-matrix/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/bianco-matrix.webp</image:loc><image:title>Porta Bianco Matrix</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-grigio-baltimora/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/grigio-baltimora.webp</image:loc><image:title>Porta Grigio Baltimora</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-palissandro-white/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/palissandro-white.webp</image:loc><image:title>Porta Palissandro White</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-2-bugne/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/2-bugne.webp</image:loc><image:title>Porta 2 Bugne</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-3-bugne-freeze/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/3-bugne-freeze.webp</image:loc><image:title>Porta 3 Bugne Freeze</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-essential-y/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/essential-y.webp</image:loc><image:title>Porta Essential Y</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-horizon/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/horizon.webp</image:loc><image:title>Porta Horizon</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-panto-1/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/panto-1.webp</image:loc><image:title>Porta Pantografata 1 Bugna</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-panto-2/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/panto-2.webp</image:loc><image:title>Porta Pantografata 2 Bugne</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-panto-3/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/panto-3.webp</image:loc><image:title>Porta Pantografata 3 Bugne</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-axis/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/axis.webp</image:loc><image:title>Porta Axis</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-trama/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/trama.webp</image:loc><image:title>Porta Trama</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-flow/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/flow.webp</image:loc><image:title>Porta Flow</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-resonance/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/resonance.webp</image:loc><image:title>Porta Resonance</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-signum/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/signum.webp</image:loc><image:title>Porta Signum</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-gramma/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/gramma.webp</image:loc><image:title>Porta Gramma</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-autumn/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/autumn.webp</image:loc><image:title>Porta Autumn</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-skyline/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/skyline.webp</image:loc><image:title>Porta Skyline</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-genesi/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/genesi.webp</image:loc><image:title>Porta Genesi</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-alba/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/alba.webp</image:loc><image:title>Porta Alba</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-arche/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/arche.webp</image:loc><image:title>Porta Archè</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-zig-zag/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/zig-zag.webp</image:loc><image:title>Porta Zig-Zag</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-tilt/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/tilt.webp</image:loc><image:title>Porta Tilt</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-morph/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/morph.webp</image:loc><image:title>Porta Morph</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-aurea/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/aurea.webp</image:loc><image:title>Porta Aurea</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-2-bugne/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/doppia-2-bugne.webp</image:loc><image:title>Porta Doppia 2 Bugne</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-3-bugne/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/doppia-3-bugne.webp</image:loc><image:title>Porta Doppia 3 Bugne</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-3-bugne-curva/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/doppia-3-bugne-curva.webp</image:loc><image:title>Porta Doppia 3 Bugne Curva</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-4-bugne/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/doppia-4-bugne.webp</image:loc><image:title>Porta Doppia 4 Bugne</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-diagona/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/diagona.webp</image:loc><image:title>Porta Diagona</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-ellis/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/ellis.webp</image:loc><image:title>Porta Ellis</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-filo-muro/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/filo-muro.webp</image:loc><image:title>Porta Filo Muro</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-2/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-ribalta-2.jpg</image:loc><image:title>Scarpiera Lido 2 ribalte</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-3/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-ribalta-3.jpg</image:loc><image:title>Scarpiera Lido 3 ribalte</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-slim-17/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-slim-17.jpg</image:loc><image:title>Scarpiera Filo 17</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-ante-2/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-ante-2.jpg</image:loc><image:title>Scarpiera Brenta 2 ante</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-alta-5/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-alta-5.jpg</image:loc><image:title>Scarpiera Torre 5 ripiani</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/panca-seduta-cuscino/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/panca-seduta-cuscino.jpg</image:loc><image:title>Panca Sile con cuscino</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/panca-vani-giorno/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/panca-vani-giorno.jpg</image:loc><image:title>Panca Piave a giorno</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/comodino-2-cassetti/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/comodino-2-cassetti.jpg</image:loc><image:title>Comodino Nodo 2 cassetti</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/comodino-sospeso/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/comodino-sospeso.jpg</image:loc><image:title>Comodino Aria sospeso</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/comodino-vano-giorno/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/comodino-vano-giorno.jpg</image:loc><image:title>Comodino Pieve</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/comodino-laccato/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/comodino-laccato.jpg</image:loc><image:title>Comodino Riva laccato</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/mobile-tv-basso-180/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/mobile-tv-basso-180.jpg</image:loc><image:title>Mobile TV Orizzonte</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/mobile-tv-sospeso/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/mobile-tv-sospeso.jpg</image:loc><image:title>Mobile TV Lago sospeso</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/parete-attrezzata/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/parete-attrezzata.jpg</image:loc><image:title>Parete Attrezzata Livenza</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/mobile-tv-cassetti/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/mobile-tv-cassetti.jpg</image:loc><image:title>Mobile TV Brolo</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/madia-3-ante/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/madia-3-ante.jpg</image:loc><image:title>Madia Corte 3 ante</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/credenza-2-ante/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/credenza-2-ante.jpg</image:loc><image:title>Credenza Borgo 2 ante</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/madia-cannettata/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/madia-cannettata.jpg</image:loc><image:title>Madia Canneto</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/credenza-vetrina/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/credenza-vetrina.jpg</image:loc><image:title>Credenza Alta Vetrina</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/consolle-ingresso/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/consolle-ingresso.jpg</image:loc><image:title>Consolle Varco</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/ingresso-specchio/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/ingresso-specchio.jpg</image:loc><image:title>Ingresso Soglia con specchio</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/ingresso-2-ante/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/ingresso-2-ante.jpg</image:loc><image:title>Mobile Ingresso Atrio</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/bagno-sospeso-80/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/bagno-sospeso-80.jpg</image:loc><image:title>Mobile Bagno Onda 80</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/bagno-60-cassetti/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/bagno-60-cassetti.jpg</image:loc><image:title>Mobile Bagno Rio 60</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/colonna-bagno/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/colonna-bagno.jpg</image:loc><image:title>Colonna Bagno Fonte</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/mobile-lavatrice/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/mobile-lavatrice.jpg</image:loc><image:title>Mobile Lavatrice Bucato</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/tavolo-rovere-160/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/tavolo-rovere-160.jpg</image:loc><image:title>Tavolo Agorà rovere</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/tavolo-allungabile/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/tavolo-allungabile.jpg</image:loc><image:title>Tavolo Convivio allungabile</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/tavolo-rotondo-120/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/tavolo-rotondo-120.jpg</image:loc><image:title>Tavolo Tondo Cerchio</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/tavolo-laccato-metallo/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/tavolo-laccato-metallo.jpg</image:loc><image:title>Tavolo Ferro laccato</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/top-rovere-massello/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/top-rovere-massello.jpg</image:loc><image:title>Top Rovere lamellare 40</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/top-laminato-hpl/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/top-laminato-hpl.jpg</image:loc><image:title>Top HPL 30</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/top-laccato-tondo/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/top-laccato-tondo.jpg</image:loc><image:title>Top Tondo Laccato</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-pensile-duo/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-pensile-duo.jpg</image:loc><image:title>Scarpiera Pensile Duo (2 pezzi)</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-2/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-2.jpg</image:loc><image:title>Scarpiera Snella 2 vani</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-3/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-3.jpg</image:loc><image:title>Scarpiera Snella 3 vani</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-stella-4/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-stella-4.jpg</image:loc><image:title>Scarpiera Stella 4 ribalte</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-vetro-scorrevole/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-vetro-scorrevole.jpg</image:loc><image:title>Scarpiera Brina ante scorrevoli</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/panca-ante-scorrevoli/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/panca-ante-scorrevoli.jpg</image:loc><image:title>Panca Brina ante scorrevoli</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-aperta-ripiani/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-aperta-ripiani.jpg</image:loc><image:title>Scarpiera Vista a giorno</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/tavoli/top-effetto-pietra/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/assets/componenti/05.jpg</image:loc><image:title>Top Pietra con bordo legno</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x4/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-2x4.jpg</image:loc><image:title>Libreria Alveare 2×4</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-1x4/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-1x4.jpg</image:loc><image:title>Libreria Alveare 1×4</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x4/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-4x4.jpg</image:loc><image:title>Libreria Alveare 4×4</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x2/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-2x2.jpg</image:loc><image:title>Libreria Alveare 2×2</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-5x5/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-5x5.jpg</image:loc><image:title>Libreria Alveare 5×5</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x2/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-4x2.jpg</image:loc><image:title>Mobile basso Alveare 4×2</image:title></image:image>
+  </url>
+<!--/seo:shop-->
 </urlset>
