@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pannello tamburato 3D · Pan.door.a</title>
+<meta name="description" content="Modello 3D del pannello tamburato Pan.door.a 1000 × 3000 × 40 mm: struttura, sezioni e montaggio con giunzioni a I, L, T e X.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://pandooragroup.it/montaggio-pannelli-tamburati/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+/* Visualizzatore 3D Pan.door.a — area 3D + pannello comandi (impilati su telefono). Tema chiaro come il sito. */
+:root{
+  --bg:#f6f7f8; --panel:#ffffff; --stage:#e9ecef; --fg:#1a2028; --muted:#4a525c; --line:#e1e4e8;
+  --ink:#1a2028; --red:#c0392b; --blue:#2e6be6; --chip:#f1f3f5;
+  --display:'Fraunces',Georgia,serif; --body:'Manrope',system-ui,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px;height:100%;padding:12px}
+.stage{position:relative;min-width:0;min-height:0;border-radius:14px;overflow:hidden;background:var(--stage);border:1px solid var(--line)}
+.stage canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}
+.views{position:absolute;top:10px;left:10px;right:10px;display:flex;flex-wrap:wrap;gap:6px}
+.views button,.full{font:700 12px var(--body);padding:7px 11px;border-radius:100px;border:1px solid var(--line);background:rgba(255,255,255,.92);color:var(--fg);cursor:pointer;text-decoration:none}
+.views button:hover,.full:hover{border-color:var(--ink)}
+.full{position:absolute;right:10px;bottom:10px}
+.hint{position:absolute;left:12px;bottom:12px;font:600 11px var(--body);color:var(--muted);pointer-events:none;background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px}
+.step{position:absolute;left:12px;right:12px;bottom:48px;display:flex;justify-content:center;pointer-events:none}
+.step span{font:700 14.5px/1.35 var(--body);background:#fff;color:var(--fg);border:1px solid var(--line);border-left:4px solid var(--red);padding:9px 14px;border-radius:8px;max-width:600px;text-wrap:balance;box-shadow:0 8px 24px rgba(20,26,34,.08)}
+aside{min-width:0;overflow-y:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:18px}
+.ttl{font:600 21px/1.1 var(--display);margin:0;letter-spacing:-.2px}
+.ref{font:600 11px var(--body);color:var(--muted);margin-top:5px;letter-spacing:.06em;text-transform:uppercase}
+h2{font:800 11px var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:flex;align-items:center;gap:7px;font:600 13px var(--body);padding:6px 11px 6px 7px;border-radius:100px;border:1px solid var(--line);background:var(--chip);color:var(--fg);cursor:pointer}
+.chip .sw{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.2)}
+.chip[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.seg.four{grid-template-columns:repeat(4,1fr)}
+.seg button{font:700 13px var(--body);padding:9px 6px;border-radius:9px;border:1px solid var(--line);background:var(--chip);color:var(--fg);cursor:pointer}
+.seg button.wide{grid-column:1/-1}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.slider{margin-top:10px;display:grid;gap:4px}
+.slider label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.slider output{font-weight:700;color:var(--fg);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--red)}
+.asmctl{margin-top:12px;display:grid;gap:10px}
+.lbl{font-size:12px;color:var(--muted)}
+.player{display:flex;align-items:center;gap:10px}
+.player button{flex:none;width:40px;height:36px;border-radius:9px;border:none;background:var(--red);color:#fff;font:700 14px var(--body);cursor:pointer}
+.player input{flex:1;min-width:0}
+.toggles{display:grid;gap:8px}
+.toggles label{display:flex;align-items:center;gap:8px;cursor:pointer}
+input[type=checkbox]{accent-color:var(--red);width:16px;height:16px;flex:none}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+dt{color:var(--muted);font-size:12.5px}
+dd{margin:0;font-size:13px;font-variant-numeric:tabular-nums}
+body.embed .full{display:inline-block}
+body:not(.embed) .full{display:none}
+@media (max-width:760px){
+  html,body{height:auto}
+  .app{grid-template-columns:1fr;height:auto;padding:8px}
+  .stage{height:430px}
+  aside{overflow:visible}
+  .step{bottom:44px}
+  .step span{font-size:13px}
+  .hint{display:none}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="stage" id="stage">
+    <div class="views">
+      <button data-cam="angolo">Prospettiva</button>
+      <button data-cam="alto">Dall'alto</button>
+      <button data-cam="testa" id="camTesta">Testata</button>
+      <button data-cam="base" id="camBase" hidden>Giunto in basso</button>
+      <button data-cam="lato">Fresata laterale</button>
+    </div>
+    <div class="step" id="stepBox" hidden><span id="stepTxt"></span></div>
+    <div class="hint">Trascina per ruotare · rotella o pinch per lo zoom</div>
+    <a class="full" href="/assets/3d/pannello-tamburato-3d.html" target="_blank" rel="noopener">Apri a schermo intero ↗</a>
+  </div>
+
+  <aside>
+    <div>
+      <p class="ttl">Pannello tamburato 1000 × 3000 × 40</p>
+      <div class="ref">Pan.door.a · modello 3D</div>
+    </div>
+
+    <section>
+      <h2>Visualizzazione</h2>
+      <div class="seg" id="modes">
+        <button data-m="montato" aria-pressed="true">Pannello</button>
+        <button data-m="esploso" aria-pressed="false">Esploso</button>
+        <button data-m="xx" aria-pressed="false">Sezione X-X</button>
+        <button data-m="yy" aria-pressed="false">Sezione Y-Y</button>
+        <button class="wide" data-m="montaggio" aria-pressed="false">Montaggio pannelli</button>
+      </div>
+      <div class="slider" id="cutWrap" hidden>
+        <label for="cut"><span id="cutLabel">Posizione taglio</span><output id="cutOut">1500 mm</output></label>
+        <input type="range" id="cut" min="0" max="3000" step="5" value="1500">
+      </div>
+      <div class="asmctl" id="asmCtl" hidden>
+        <div class="lbl">Tipo di giunzione</div>
+        <div class="seg four" id="joints">
+          <button data-j="linea" aria-pressed="true">a I</button>
+          <button data-j="L" aria-pressed="false">a L</button>
+          <button data-j="T" aria-pressed="false">a T</button>
+          <button data-j="X" aria-pressed="false">a X</button>
+        </div>
+        <div class="player">
+          <button id="play" aria-label="Pausa">❚❚</button>
+          <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Avanzamento del montaggio">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Finitura</h2>
+      <div class="chips" id="finishes">
+        <button class="chip" data-f="mdf" aria-pressed="true"><span class="sw" style="background:#a9825c"></span>MDF grezzo</button>
+        <button class="chip" data-f="nero" aria-pressed="false"><span class="sw" style="background:#232425"></span>Nero</button>
+        <button class="chip" data-f="rovere" aria-pressed="false"><span class="sw" style="background:#cfae8a"></span>Rovere</button>
+        <button class="chip" data-f="bianco" aria-pressed="false"><span class="sw" style="background:#e7e5df"></span>Bianco</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Opzioni</h2>
+      <div class="toggles">
+        <label><input type="checkbox" id="evidenzia"> Evidenzia le fresate</label>
+        <label><input type="checkbox" id="profili"> Mostra giunzione e anima sul pannello</label>
+        <label><input type="checkbox" id="rotate"> Rotazione automatica</label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Dati tecnici</h2>
+      <dl>
+        <dt>Pannello</dt><dd>1000 × 3000 × 40 mm</dd>
+        <dt>Pelli</dt><dd>MDF 3 mm</dd>
+        <dt>Telaio</dt><dd>Abete, testate 37 mm</dd>
+        <dt>Anima</dt><dd>Nido d'ape</dd>
+        <dt>Fresata teste</dt><dd>15 × 16 mm</dd>
+        <dt>Fresata lati</dt><dd>4 × 17 mm</dd>
+        <dt>Giunzione I</dt><dd>EG-I01 · 15 × 15 × 400, 4 fori Ø 5</dd>
+        <dt>Piastre</dt><dd>L 185 × 185 · T 355 × 185 · X 355 × 355</dd>
+        <dt>Anima allin.</dt><dd>AA-001 · MDF 28 × 4</dd>
+        <dt>Copritesta</dt><dd>CF · 40 × 3, nella finitura</dd>
+      </dl>
+    </section>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+const Q=new URLSearchParams(location.search);
+if(window.parent!==window||Q.has('embed'))document.body.classList.add('embed');
+const W=1000,L=3000,T=40,SK=3,HEAD=37,SIDE=40;
+const gH=[12.5,27.5], gHd=16;   // fresata teste 15 x 16
+const gS=[18,22],    gSd=17;    // fresata lati lunghi 4 x 17
+const AW=14;                     // anima di allineamento 28 mm: 14 per lato
+const TL=399, HOLES=[34.5,138.5,260.5,364.5];
+const stage=document.getElementById('stage');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputEncoding=THREE.sRGBEncoding;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.05;
+renderer.shadowMap.enabled=true;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+renderer.localClippingEnabled=true;
+stage.prepend(renderer.domElement);
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0xe9ecef);
+const camera=new THREE.PerspectiveCamera(35,1,0.004,60);
+camera.position.set(2.2,1.6,2.8);
+const controls=new THREE.OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=0.08;
+controls.minDistance=0.03;controls.maxDistance=12;
+controls.autoRotateSpeed=0.8;
+
+scene.add(new THREE.HemisphereLight(0xffffff,0x8a8f96,0.75));
+const sun=new THREE.DirectionalLight(0xffffff,1.2);
+sun.position.set(3,6,2.5);sun.castShadow=true;
+sun.shadow.mapSize.set(2048,2048);
+Object.assign(sun.shadow.camera,{left:-3,right:3,top:3,bottom:-3,near:0.5,far:14});
+sun.shadow.bias=-0.0004;scene.add(sun);
+const fill=new THREE.DirectionalLight(0xdfe8ff,0.45);fill.position.set(-3,2,-2);scene.add(fill);
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(20,20),new THREE.ShadowMaterial({opacity:0.14}));
+ground.rotation.x=-Math.PI/2;ground.position.y=-0.2;ground.receiveShadow=true;scene.add(ground);
+
+// ---------- Texture procedurali ----------
+function rng(s){return()=>{s=(s*16807)%2147483647;return(s-1)/2147483646}}
+function noise(g,w,h,amt,R){const d=g.getImageData(0,0,w,h),a=d.data;for(let i=0;i<a.length;i+=4){const n=(R()-0.5)*amt;a[i]+=n;a[i+1]+=n;a[i+2]+=n}g.putImageData(d,0,0)}
+function tex(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');draw(g,w,h);
+  const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.encoding=THREE.sRGBEncoding;t.anisotropy=renderer.capabilities.getMaxAnisotropy();return t}
+function grain(o){return(g,w,h)=>{const R=rng(o.seed||11);g.fillStyle=o.base;g.fillRect(0,0,w,h);
+  for(let i=0;i<o.n;i++){const y0=R()*h,amp=R()*o.wave,k=1+Math.floor(R()*3),ph=R()*6.283;
+    g.strokeStyle=o.lines[Math.floor(R()*o.lines.length)];g.globalAlpha=o.alpha[0]+R()*(o.alpha[1]-o.alpha[0]);g.lineWidth=o.lw[0]+R()*(o.lw[1]-o.lw[0]);
+    for(const off of[-h,0,h]){g.beginPath();for(let x=0;x<=w;x+=8){const y=y0+off+Math.sin(x*k*6.283/w+ph)*amp;x?g.lineTo(x,y):g.moveTo(x,y)}g.stroke()}}
+  if(o.knots){for(let k=0;k<o.knots;k++){const cx=R()*w,cy=h*0.2+R()*h*0.6;for(let r=14;r>0;r-=2.5){g.globalAlpha=0.12+0.05*(14-r)/2.5;g.strokeStyle='#9c6a2c';g.lineWidth=1.6;g.beginPath();g.ellipse(cx,cy,r*1.8,r*0.7,0,0,6.283);g.stroke()}g.globalAlpha=0.7;g.fillStyle='#7a4e1e';g.beginPath();g.ellipse(cx,cy,5,2.4,0,0,6.283);g.fill()}}
+  g.globalAlpha=1;noise(g,w,h,o.noise||8,R)}}
+function flat(base,amt,seed){return(g,w,h)=>{g.fillStyle=base;g.fillRect(0,0,w,h);noise(g,w,h,amt,rng(seed||3))}}
+
+const T_PINE=tex(1024,256,grain({base:'#e8cd97',lines:['#cf9f5a','#d8ab69','#c38c44','#f0dcae'],n:46,lw:[1.2,6],alpha:[0.25,0.65],wave:9,knots:2,noise:10,seed:21}));
+const T_MDF=tex(1024,512,grain({base:'#ab845d',lines:['#9b7450','#b89068'],n:60,lw:[0.6,2],alpha:[0.08,0.2],wave:2,noise:30,seed:5}));
+const T_MDF_EDGE=tex(512,128,flat('#9d7650',26,9));
+const T_ROVERE=tex(2048,1024,grain({base:'#d0b08c',lines:['#a9835e','#b8916b','#e2c7a6','#c09b74'],n:520,lw:[0.5,2.4],alpha:[0.2,0.55],wave:4,noise:7,seed:33}));
+const T_NERO=tex(512,512,flat('#222324',6,4));
+const T_BIANCO=tex(512,512,flat('#e8e6e0',5,6));
+const T_THREAD=tex(64,256,(g,w,h)=>{g.fillStyle='#c4c8cc';g.fillRect(0,0,w,h);g.strokeStyle='#6d7277';g.lineWidth=5;
+  for(let y=-w;y<h+w;y+=16){g.beginPath();g.moveTo(0,y);g.lineTo(w,y+w*0.35);g.stroke()}});
+T_THREAD.repeat.set(1,3);
+
+const std=(map,rough,extra)=>new THREE.MeshStandardMaterial(Object.assign({map,roughness:rough,metalness:0,side:THREE.DoubleSide},extra||{}));
+const M={
+  pine:std(T_PINE,0.72),
+  groove:new THREE.MeshStandardMaterial({color:0x5e4020,roughness:0.95,side:THREE.DoubleSide}),
+  mdfEdge:std(T_MDF_EDGE,0.9),
+  strip:std(T_MDF_EDGE,0.85,{color:0xd8c2a8}),
+  finishes:{mdf:std(T_MDF,0.88),nero:std(T_NERO,0.5),rovere:std(T_ROVERE,0.6),bianco:std(T_BIANCO,0.55)},
+  core:new THREE.MeshStandardMaterial({color:0xc6a274,roughness:1,side:THREE.DoubleSide}),
+  metal:new THREE.MeshStandardMaterial({color:0xc9ced3,roughness:0.3,metalness:0.55,side:THREE.DoubleSide}),
+  plate:new THREE.MeshStandardMaterial({color:0xd5d9dc,roughness:0.42,metalness:0.45,side:THREE.DoubleSide}),
+  screw:new THREE.MeshStandardMaterial({map:T_THREAD,roughness:0.35,metalness:0.6}),
+  head:new THREE.MeshStandardMaterial({color:0xc4c8cc,roughness:0.3,metalness:0.65}),
+  hole:new THREE.MeshBasicMaterial({color:0x2a2c2e,side:THREE.DoubleSide})
+};
+const allMats=[M.pine,M.groove,M.mdfEdge,M.strip,M.core,M.metal,M.plate,M.screw,M.head,M.hole,...Object.values(M.finishes)];
+
+function planarUV(geo,grainAxis,uS,vS){
+  const p=geo.attributes.position,n=geo.attributes.normal,uv=geo.attributes.uv,ga='xyz'.indexOf(grainAxis);
+  for(let i=0;i<p.count;i++){
+    const v=[p.getX(i),p.getY(i),p.getZ(i)],nn=[Math.abs(n.getX(i)),Math.abs(n.getY(i)),Math.abs(n.getZ(i))];
+    const na=nn.indexOf(Math.max(...nn)),tg=[0,1,2].filter(a=>a!==na);
+    let ua,va; if(tg.includes(ga)){ua=ga;va=tg.find(a=>a!==ga)}else{ua=tg[0];va=tg[1]}
+    uv.setXY(i,v[ua]/uS,v[va]/vS);
+  } uv.needsUpdate=true;
+}
+function box(x0,x1,y0,y1,z0,z1,mat,grainAxis,uS,vS){
+  const g=new THREE.BoxGeometry(x1-x0,y1-y0,z1-z0).translate((x0+x1)/2,(y0+y1)/2,(z0+z1)/2);
+  planarUV(g,grainAxis||'x',uS||500,vS||100);
+  const m=new THREE.Mesh(g,mat);m.castShadow=true;m.receiveShadow=true;return m;
+}
+const F=(...idx)=>{const a=[M.pine,M.pine,M.pine,M.pine,M.pine,M.pine];idx.forEach(i=>a[i]=M.groove);return a};
+
+const HEX_R=18;
+const hexGeo=new THREE.CylinderGeometry(HEX_R,HEX_R,T-2*SK,6,1,true);
+const hexPts=(()=>{const dx=Math.sqrt(3)*HEX_R,dz=1.5*HEX_R,p=[];
+  for(let j=0;;j++){const z=HEAD+HEX_R+j*dz;if(z>L-HEAD-HEX_R+0.1)break;
+    for(let i=0;;i++){const x=SIDE+dx/2+i*dx+(j%2?dx/2:0);if(x>W-SIDE-dx/2+0.1)break;p.push([x,z])}}return p})();
+const holeGeo=new THREE.CircleGeometry(2.5,18);
+const screwHeadGeo=new THREE.CylinderGeometry(4.6,2,3,20).translate(0,-1.5,0);
+const screwShankGeo=new THREE.CylinderGeometry(2,2,38,14).translate(0,-22,0);
+const screwTipGeo=new THREE.ConeGeometry(2,6,14).rotateX(Math.PI).translate(0,-44,0);
+const recessGeo=new THREE.BoxGeometry(5,0.6,1.1).translate(0,0.05,0);
+const SHARED=new Set([hexGeo,holeGeo,screwHeadGeo,screwShankGeo,screwTipGeo,recessGeo]);
+
+let currentFinish=['mdf','nero','rovere','bianco'].includes(Q.get('finitura'))?Q.get('finitura'):'mdf';
+let skins=[],covers=[];
+function skinMats(top){const f=M.finishes[currentFinish];return[M.mdfEdge,M.mdfEdge,top?f:M.mdfEdge,top?M.mdfEdge:f,M.mdfEdge,M.mdfEdge]}
+function applyFinish(){skins.forEach(s=>s.mesh.material=skinMats(s.top));covers.forEach(c=>c.material=M.finishes[currentFinish])}
+// copritesta CF 40 x 3: si applica sul fianco a vista (locale: fianco sul piano x=0, pannello verso -x)
+function makeCover(){
+  const cv=box(0,3,0,L,-T/2,T/2,M.finishes[currentFinish],'y',3000,1000);
+  covers.push(cv);const g=new THREE.Group();g.add(cv);return g;
+}
+const NORMAL={'+x':[1,0,0],'-x':[-1,0,Math.PI],'+z':[0,1,-Math.PI/2],'-z':[0,-1,Math.PI/2]};
+
+function buildPanel(persist){
+  const g=new THREE.Group(),PU=900,PV=120;
+  const top=box(0,W,T-SK,T,0,L,skinMats(true),'z',3000,1000);
+  const bot=box(0,W,0,SK,0,L,skinMats(false),'z',3000,1000);
+  skins.push({mesh:top,top:true,persist},{mesh:bot,top:false,persist});
+  g.add(top,bot);
+  g.add(box(0,W,SK,gH[0],0,HEAD,F(2),'x',PU,PV),box(0,W,gH[1],T-SK,0,HEAD,F(3),'x',PU,PV),box(0,W,gH[0],gH[1],gHd,HEAD,F(5),'x',PU,PV));
+  g.add(box(0,W,SK,gH[0],L-HEAD,L,F(2),'x',PU,PV),box(0,W,gH[1],T-SK,L-HEAD,L,F(3),'x',PU,PV),box(0,W,gH[0],gH[1],L-HEAD,L-gHd,F(4),'x',PU,PV));
+  g.add(box(0,SIDE,SK,gS[0],HEAD,L-HEAD,F(2),'z',PU,PV),box(0,SIDE,gS[1],T-SK,HEAD,L-HEAD,F(3),'z',PU,PV),box(gSd,SIDE,gS[0],gS[1],HEAD,L-HEAD,F(1),'z',PU,PV));
+  g.add(box(W-SIDE,W,SK,gS[0],HEAD,L-HEAD,F(2),'z',PU,PV),box(W-SIDE,W,gS[1],T-SK,HEAD,L-HEAD,F(3),'z',PU,PV),box(W-SIDE,W-gSd,gS[0],gS[1],HEAD,L-HEAD,F(0),'z',PU,PV));
+  const core=new THREE.InstancedMesh(hexGeo,M.core,hexPts.length),m=new THREE.Matrix4();
+  hexPts.forEach((p,i)=>{m.makeTranslation(p[0],T/2,p[1]);core.setMatrixAt(i,m)});
+  core.receiveShadow=true;g.add(core);
+  return {g,top,bot};
+}
+function standPanel(){const p=buildPanel(false);p.g.rotation.x=-Math.PI/2;p.g.position.z=T/2;const h=new THREE.Group();h.add(p.g);return h}
+
+function makeTube(){
+  const g=new THREE.Group(),s=14.8,t=1.2,h=s/2;
+  g.add(box(0,TL,-h,-h+t,-h,h,M.metal),box(0,TL,h-t,h,-h,h,M.metal),box(0,TL,-h,h,-h,-h+t,M.metal),box(0,TL,-h,h,h-t,h,M.metal));
+  HOLES.forEach(x=>{for(const sg of[1,-1]){const d=new THREE.Mesh(holeGeo,M.hole);d.rotation.x=-sg*Math.PI/2;d.position.set(x,sg*(h+0.08),0);g.add(d)}});
+  return g;
+}
+function makePlate(rects,holes){
+  const g=new THREE.Group();
+  rects.forEach(r=>g.add(box(r[0],r[1],0,2,r[2],r[3],M.plate)));
+  holes.forEach(p=>{for(const sg of[1,-1]){const d=new THREE.Mesh(holeGeo,M.hole);d.rotation.x=-sg*Math.PI/2;d.position.set(p[0],sg>0?2.08:-0.08,p[1]);g.add(d)}});
+  return g;
+}
+function makeScrew(){
+  const spin=new THREE.Group();
+  const h=new THREE.Mesh(screwHeadGeo,M.head),s=new THREE.Mesh(screwShankGeo,M.screw),t=new THREE.Mesh(screwTipGeo,M.screw);
+  const r1=new THREE.Mesh(recessGeo,M.hole),r2=new THREE.Mesh(recessGeo,M.hole);r2.rotation.y=Math.PI/2;
+  [h,s,t].forEach(m=>m.castShadow=true);
+  spin.add(h,s,t,r1,r2);return spin;
+}
+function makeStripFlat(xc){return box(xc-AW,xc+AW,T/2-1.9,T/2+1.9,HEAD+2,L-HEAD-2,M.strip,'z',600,100)}
+function wrapOf(obj){const w=new THREE.Group();w.add(obj);return w}
+
+// ---------- Pannello singolo ----------
+const single=new THREE.Group();single.scale.setScalar(0.001);single.position.set(-W/2*0.001,0,-L/2*0.001);scene.add(single);
+const P1=buildPanel(true);single.add(P1.g);
+const sAcc=new THREE.Group();sAcc.visible=false;single.add(sAcc);
+const sTubeN=wrapOf((()=>{const t=makeTube();t.rotation.x=Math.PI/2;t.position.set(W-TL/2,T/2,gHd/2);return t})());
+const sTubeF=wrapOf((()=>{const t=makeTube();t.rotation.x=Math.PI/2;t.position.set(W-TL/2,T/2,L-gHd/2);return t})());
+const sStrip=wrapOf(makeStripFlat(W));
+sAcc.add(sTubeN,sTubeF,sStrip);
+
+// ---------- Montaggio ----------
+const asm=new THREE.Group();asm.scale.setScalar(0.001);asm.visible=false;scene.add(asm);
+const TOP_Y=L-gHd/2, BOT_Y=gHd/2;
+const wallHoles=HOLES.map(h=>-TL/2+h);
+const perpHoles=HOLES.map(h=>T/2+h);
+const JOINTS={
+  linea:{
+    name:'a I',
+    panels:[{pos:[-W,0],rot:0},{pos:[0,0],rot:0,slide:[900,0]}],
+    strip:[-AW,AW],
+    tubes:[{axis:'x',start:-TL/2,c:0}],
+    plate:null,
+    screws:wallHoles.map(x=>({x,z:0,plate:false})),
+    free:[['-x',-W,0],['+x',W,0]],
+    words:{s1:'Inserire l’anima di allineamento AA-001 nella fresata laterale',s2:'Accostare il secondo pannello: l’anima entra nella sua fresata'}
+  },
+  L:{
+    name:'a L',
+    panels:[{pos:[-W,0],rot:0},{pos:[-T/2,T/2],rot:-Math.PI/2,slide:[0,900]}],
+    strip:null,
+    tubes:[{axis:'x',start:-TL,c:0},{axis:'z',start:T/2,c:-T/2}],
+    plate:{name:'a L (EG-L01)',rects:[[-185+15,-T/2+15,-15,15],[-T/2-15,-T/2+15,15,185-15]]},
+    screws:[...HOLES.map(h=>({x:-TL+h,z:0,plate:-TL+h>-170})),...perpHoles.map(z=>({x:-T/2,z,plate:z<170}))],
+    free:[['+x',0,0],['-x',-W,0],['+z',-T/2,T/2+W]],
+    words:{s2:"Accostare il pannello d'angolo"}
+  },
+  T:{
+    name:'a T (EG-T01)',
+    panels:[{pos:[-W,0],rot:0},{pos:[0,0],rot:0,slide:[900,0]},{pos:[0,T/2],rot:-Math.PI/2,slide:[0,900]}],
+    strip:[-AW,AW],
+    tubes:[{axis:'x',start:-TL/2,c:0},{axis:'z',start:T/2,c:0}],
+    plate:{name:'a T (EG-T01)',rects:[[-177.5,177.5,-15,15],[-15,15,15,170]]},
+    screws:[...wallHoles.map(x=>({x,z:0,plate:Math.abs(x)<177})),...perpHoles.map(z=>({x:0,z,plate:z<170}))],
+    free:[['-x',-W,0],['+x',W,0],['+z',0,T/2+W]],
+    words:{s1:'Inserire l’anima di allineamento nella fresata laterale del primo pannello',s2:'Accostare il pannello in linea e quello perpendicolare'}
+  },
+  X:{
+    name:'a X (EG-X01)',
+    panels:[{pos:[-W,0],rot:0},{pos:[0,0],rot:0,slide:[900,0]},{pos:[0,T/2],rot:-Math.PI/2,slide:[0,900]},{pos:[0,-T/2],rot:Math.PI/2,slide:[0,-900]}],
+    strip:[-AW,AW],
+    tubes:[{axis:'x',start:-TL/2,c:0},{axis:'z',start:T/2,c:0},{axis:'-z',start:-T/2,c:0}],
+    plate:{name:'a X (EG-X01)',rects:[[-177.5,177.5,-15,15],[-15,15,15,177.5],[-15,15,-177.5,-15]]},
+    screws:[...wallHoles.map(x=>({x,z:0,plate:Math.abs(x)<177})),...perpHoles.map(z=>({x:0,z,plate:z<177})),...perpHoles.map(z=>({x:0,z:-z,plate:z<177}))],
+    free:[['-x',-W,0],['+x',W,0],['+z',0,T/2+W],['-z',0,-(T/2+W)]],
+    words:{s1:'Inserire l’anima di allineamento nella fresata laterale del primo pannello',s2:'Accostare il pannello in linea e i due perpendicolari'}
+  }
+};
+let J=null,jointType=({I:'linea',L:'L',T:'T',X:'X'})[(Q.get('giunto')||'').toUpperCase()]||'linea';
+function disposeTree(o){o.traverse(m=>{if(m.isMesh&&!SHARED.has(m.geometry))m.geometry.dispose()})}
+const FIN={mdf:'MDF grezzo',nero:'nero',rovere:'rovere',bianco:'bianco'};
+function buildJoint(type){
+  jointType=type;
+  document.querySelectorAll('#joints button').forEach(c=>c.setAttribute('aria-pressed',c.dataset.j===type));
+  asm.children.slice().forEach(c=>{disposeTree(c);asm.remove(c)});
+  skins=skins.filter(s=>s.persist);covers=[];
+  const def=JOINTS[type];J={def,panels:[],tubes:[],plates:[],screws:[],covers:[],strip:null};
+  def.panels.forEach(p=>{const h=standPanel();h.rotation.y=p.rot;h.position.set(p.pos[0],0,p.pos[1]);asm.add(h);J.panels.push({h,base:p.pos,slide:p.slide})});
+  if(def.strip){J.strip=wrapOf(box(def.strip[0],def.strip[1],HEAD+2,L-HEAD-2,-1.9,1.9,M.strip,'y',600,100));asm.add(J.strip)}
+  def.free.forEach(f=>{const n=NORMAL[f[0]],c=makeCover();c.rotation.y=n[2];c.position.set(f[1],0,f[2]);
+    const w=wrapOf(c);asm.add(w);J.covers.push({w,n})});
+  for(const [y,dir] of [[TOP_Y,1],[BOT_Y,-1]]){
+    def.tubes.forEach(t=>{const g=makeTube();
+      if(t.axis==='x'){g.position.set(t.start,y,t.c)}
+      else if(t.axis==='z'){g.rotation.y=-Math.PI/2;g.position.set(t.c,y,t.start)}
+      else{g.rotation.y=Math.PI/2;g.position.set(t.c,y,t.start)}
+      const w=wrapOf(g);asm.add(w);J.tubes.push({w,dir})});
+    if(def.plate){
+      const holes=def.screws.filter(s=>s.plate).map(s=>[s.x,s.z]);
+      const g=makePlate(def.plate.rects,holes);g.position.y=dir>0?L:-2;
+      const w=wrapOf(g);asm.add(w);J.plates.push({w,dir});
+    }
+    def.screws.forEach((s,i)=>{
+      const spin=makeScrew(),place=new THREE.Group();place.add(spin);
+      const yHead=dir>0?(s.plate?L+2:L-0.5):(s.plate?-2:0.5);
+      place.position.set(s.x,yHead,s.z);if(dir<0)place.rotation.x=Math.PI;
+      const w=wrapOf(place);asm.add(w);J.screws.push({w,spin,dir,delay:i*0.07});
+    });
+  }
+  const hp=!!def.plate;
+  J.t={s1:0.6,s2:2.8,s3:5.4,s4:7.6,s5:hp?9.0:7.6};
+  J.t.s6=J.t.s5+1.4+def.screws.length*0.07+0.4;
+  J.dur=J.t.s6+1.6+1.2;
+  const steps=[];
+  if(def.strip)steps.push([J.t.s1,def.words.s1]);
+  steps.push([J.t.s2,def.words.s2]);
+  steps.push([J.t.s3,'Inserire le giunzioni EG-I01 nelle fresate di testa, sopra e sotto']);
+  if(hp)steps.push([J.t.s4,'Posare le piastre '+def.plate.name+' sopra e sotto']);
+  steps.push([J.t.s5,'Avvitare le viti nei fori Ø 5, sopra e sotto']);
+  steps.push([J.t.s6,()=>'Applicare i copritesta sui lati a vista, nella finitura dei pannelli ('+FIN[currentFinish]+')']);
+  J.caps=[[0,def.strip?'Pannello posato: la fresata laterale 4 × 17 è libera':'Primo pannello posato']]
+    .concat(steps.map((s,i)=>[s[0],typeof s[1]==='function'?()=>(i+1)+' · '+s[1]():(i+1)+' · '+s[1]]))
+    .concat([[J.dur-0.8,'Giunzione '+({linea:'a I',L:'a L',T:'a T',X:'a X'})[type]+' completata']]);
+  applyFinish();
+}
+const clamp=v=>Math.max(0,Math.min(1,v));
+const ease=v=>v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2;
+function setAsm(t){
+  if(!J)return;const k=J.t;
+  const e1=ease(clamp((t-k.s1)/2)),e2=ease(clamp((t-k.s2)/2.4)),e3=ease(clamp((t-k.s3)/2)),e4=ease(clamp((t-k.s4)/1.2));
+  if(J.strip)J.strip.position.set((1-e1)*380,0,0);
+  const e6=ease(clamp((t-k.s6)/1.6));
+  J.covers.forEach(c=>c.w.position.set(c.n[0]*(1-e6)*260,0,c.n[1]*(1-e6)*260));
+  J.panels.forEach(p=>{if(p.slide)p.h.position.set(p.base[0]+(1-e2)*p.slide[0],0,p.base[1]+(1-e2)*p.slide[1])});
+  J.tubes.forEach(o=>o.w.position.y=o.dir*(1-e3)*320);
+  J.plates.forEach(o=>o.w.position.y=o.dir*(1-e4)*220);
+  J.screws.forEach(o=>{const e=ease(clamp((t-k.s5-o.delay)/1.4));o.w.position.y=o.dir*(1-e)*120;o.spin.rotation.y=(1-e)*Math.PI*12});
+  let txt=J.caps[0][1];J.caps.forEach(c=>{if(t>=c[0])txt=c[1]});stepTxt.textContent=typeof txt==='function'?txt():txt;
+}
+
+// ---------- UI ----------
+let explode=0,explodeTarget=0,mode='montato';
+const clip=new THREE.Plane(new THREE.Vector3(0,0,-1),0);
+function setClipping(on){allMats.forEach(m=>{m.clippingPlanes=on?[clip]:null;m.needsUpdate=true})}
+const $=id=>document.getElementById(id);
+const cut=$('cut'),cutOut=$('cutOut'),cutWrap=$('cutWrap'),cutLabel=$('cutLabel');
+const asmCtl=$('asmCtl'),playBtn=$('play'),scrub=$('scrub'),stepBox=$('stepBox'),stepTxt=$('stepTxt');
+function updateClip(){
+  const v=+cut.value;cutOut.textContent=v+' mm';
+  if(mode==='xx'){clip.normal.set(0,0,-1);clip.constant=(v-L/2)*0.001}
+  else if(mode==='yy'){clip.normal.set(-1,0,0);clip.constant=(v-W/2)*0.001}
+}
+cut.addEventListener('input',updateClip);
+
+let animT=0,playing=false;
+function setPlaying(p){playing=p;playBtn.textContent=p?'❚❚':'▶';playBtn.setAttribute('aria-label',p?'Pausa':'Riproduci')}
+playBtn.onclick=()=>{if(!playing&&animT>=J.dur)animT=0;setPlaying(!playing)};
+scrub.addEventListener('input',()=>{setPlaying(false);animT=scrub.value/1000*J.dur;setAsm(animT)});
+
+const camsSingle={
+  angolo:[[2.2,1.6,2.8],[0,0.02,0]],
+  alto:[[0,4.2,0.02],[0,0,0]],
+  testa:[[0.62,0.28,1.98],[0.32,0.01,1.5]],
+  lato:[[0.6,0.07,0.66],[0.5,0.02,0.55]]
+};
+const camsAsm={
+  angolo:[[3.6,3.0,4.2],[0,1.5,0]],
+  alto:[[0.28,3.8,0.34],[0,3.0,0.05]],
+  testa:[[0.62,3.32,0.78],[0,2.98,0.06]],
+  base:[[0.62,-0.34,0.8],[0,0.03,0.06]],
+  lato:[[0.5,1.68,0.62],[0,1.5,0]]
+};
+function startAssembly(){animT=0;setAsm(0);setPlaying(true);fly([1.45,3.75,1.95],[0,2.65,0.1])}
+function setMode(m){
+  mode=m;
+  document.querySelectorAll('#modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===m));
+  const isAsm=m==='montaggio';
+  single.visible=!isAsm;asm.visible=isAsm;asmCtl.hidden=!isAsm;stepBox.hidden=!isAsm;
+  $('camBase').hidden=!isAsm;$('camTesta').textContent=isAsm?'Giunto in alto':'Testata';
+  ground.position.y=isAsm?-0.003:-0.2;
+  explodeTarget=m==='esploso'?1:0;
+  const sec=m==='xx'||m==='yy';cutWrap.hidden=!sec;setClipping(sec);
+  if(m==='xx'){cut.max=L;cut.value=2600;cutLabel.textContent='Taglio lungo la lunghezza'}
+  if(m==='yy'){cut.max=W;cut.value=500;cutLabel.textContent='Taglio lungo la larghezza'}
+  updateClip();
+  if(m==='xx'){const z=(+cut.value-L/2)*0.001;fly([0.75,0.42,z+0.75],[0,0.02,z])}
+  else if(m==='yy'){const x=(+cut.value-W/2)*0.001;fly([x+0.8,0.4,1.95],[x,0.02,1.35])}
+  else if(m==='esploso')fly([2.0,1.5,2.5],[0,0.03,0]);
+  else if(isAsm){if(!J)buildJoint(jointType);startAssembly()}
+  else{setPlaying(false);fly(...camsSingle.angolo)}
+}
+document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
+document.querySelectorAll('#joints button').forEach(b=>b.onclick=()=>{buildJoint(b.dataset.j);startAssembly()});
+function markFinish(){document.querySelectorAll('#finishes .chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===currentFinish))}
+document.querySelectorAll('#finishes .chip').forEach(b=>b.onclick=()=>{
+  currentFinish=b.dataset.f;markFinish();applyFinish();
+  if(mode==='montaggio'&&!playing)setAsm(animT);
+});
+$('profili').onchange=e=>{sAcc.visible=e.target.checked};
+$('rotate').onchange=e=>{controls.autoRotate=e.target.checked};
+$('evidenzia').onchange=e=>{const on=e.target.checked;M.groove.color.set(on?0x2e6be6:0x5e4020);M.groove.emissive.set(on?0x10306e:0x000000)};
+
+const tw={t:1};
+function fly(pos,tgt){tw.p0=camera.position.clone();tw.t0=controls.target.clone();tw.p1=new THREE.Vector3(...pos);tw.t1=new THREE.Vector3(...tgt);tw.t=0}
+document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>fly(...(mode==='montaggio'?camsAsm:camsSingle)[b.dataset.cam]));
+
+function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
+new ResizeObserver(resize).observe(stage);resize();
+
+// altezza per l'iframe della pagina che lo ospita
+function postH(){try{parent.postMessage({pd3d:location.pathname,h:document.documentElement.scrollHeight},'*')}catch(e){}}
+new ResizeObserver(postH).observe(document.body);addEventListener('load',postH);
+
+// visibilità: non disegna quando è fuori schermo
+let visible=true;
+if('IntersectionObserver' in window)new IntersectionObserver(es=>{visible=es[0].isIntersecting},{threshold:0}).observe(stage);
+
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clock=new THREE.Clock();
+function loop(){
+  requestAnimationFrame(loop);
+  const dt=Math.min(clock.getDelta(),0.05);
+  if(!visible||document.hidden)return;
+  explode+=(explodeTarget-explode)*(reduce?1:0.08);
+  P1.top.position.y=explode*140;P1.bot.position.y=-explode*140;
+  sTubeN.position.z=-explode*120;sTubeF.position.z=explode*120;sStrip.position.x=explode*120;
+  if(mode==='montaggio'&&playing&&J){
+    animT+=dt;if(animT>J.dur+1.8)animT=0;
+    const t=Math.min(animT,J.dur);setAsm(t);scrub.value=Math.round(t/J.dur*1000);
+  }
+  if(tw.t<1){tw.t=Math.min(1,tw.t+(reduce?1:0.035));const e=1-Math.pow(1-tw.t,3);
+    camera.position.lerpVectors(tw.p0,tw.p1,e);controls.target.lerpVectors(tw.t0,tw.t1,e)}
+  controls.update();renderer.render(scene,camera);
+}
+markFinish();
+const startMode={pannello:'montato',esploso:'esploso',sezione:'xx',sezioneyy:'yy',montaggio:'montaggio'}[Q.get('vista')]||'montato';
+if(startMode!=='montato')setMode(startMode);
+if(Q.get('evidenzia')==='1'){$('evidenzia').checked=true;$('evidenzia').onchange({target:$('evidenzia')})}
+loop();
+})();
+</script>
+</body>
+</html>

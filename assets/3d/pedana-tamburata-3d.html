@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pedana tamburata 3D · Pan.door.a</title>
+<meta name="description" content="Modello 3D della pedana tamburata Pan.door.a 998 × 998 × 40 mm con piedini regolabili da 50 a 100 mm e animazione di montaggio.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://pandooragroup.it/montaggio-pedane-livellanti/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+/* Visualizzatore 3D Pan.door.a — area 3D + pannello comandi (impilati su telefono). Tema chiaro come il sito. */
+:root{
+  --bg:#f6f7f8; --panel:#ffffff; --stage:#e9ecef; --fg:#1a2028; --muted:#4a525c; --line:#e1e4e8;
+  --ink:#1a2028; --red:#c0392b; --blue:#2e6be6; --chip:#f1f3f5;
+  --display:'Fraunces',Georgia,serif; --body:'Manrope',system-ui,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px;height:100%;padding:12px}
+.stage{position:relative;min-width:0;min-height:0;border-radius:14px;overflow:hidden;background:var(--stage);border:1px solid var(--line)}
+.stage canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}
+.views{position:absolute;top:10px;left:10px;right:10px;display:flex;flex-wrap:wrap;gap:6px}
+.views button,.full{font:700 12px var(--body);padding:7px 11px;border-radius:100px;border:1px solid var(--line);background:rgba(255,255,255,.92);color:var(--fg);cursor:pointer;text-decoration:none}
+.views button:hover,.full:hover{border-color:var(--ink)}
+.full{position:absolute;right:10px;bottom:10px}
+.hint{position:absolute;left:12px;bottom:12px;font:600 11px var(--body);color:var(--muted);pointer-events:none;background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px}
+.step{position:absolute;left:12px;right:12px;bottom:48px;display:flex;justify-content:center;pointer-events:none}
+.step span{font:700 14.5px/1.35 var(--body);background:#fff;color:var(--fg);border:1px solid var(--line);border-left:4px solid var(--red);padding:9px 14px;border-radius:8px;max-width:600px;text-wrap:balance;box-shadow:0 8px 24px rgba(20,26,34,.08)}
+aside{min-width:0;overflow-y:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:18px}
+.ttl{font:600 21px/1.1 var(--display);margin:0;letter-spacing:-.2px}
+.ref{font:600 11px var(--body);color:var(--muted);margin-top:5px;letter-spacing:.06em;text-transform:uppercase}
+h2{font:800 11px var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:flex;align-items:center;gap:7px;font:600 13px var(--body);padding:6px 11px 6px 7px;border-radius:100px;border:1px solid var(--line);background:var(--chip);color:var(--fg);cursor:pointer}
+.chip .sw{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.2)}
+.chip[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.seg{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.seg.four{grid-template-columns:repeat(4,1fr)}
+.seg button{font:700 13px var(--body);padding:9px 6px;border-radius:9px;border:1px solid var(--line);background:var(--chip);color:var(--fg);cursor:pointer}
+.seg button.wide{grid-column:1/-1}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.slider{margin-top:10px;display:grid;gap:4px}
+.slider label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.slider output{font-weight:700;color:var(--fg);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--red)}
+.asmctl{margin-top:12px;display:grid;gap:10px}
+.lbl{font-size:12px;color:var(--muted)}
+.player{display:flex;align-items:center;gap:10px}
+.player button{flex:none;width:40px;height:36px;border-radius:9px;border:none;background:var(--red);color:#fff;font:700 14px var(--body);cursor:pointer}
+.player input{flex:1;min-width:0}
+.toggles{display:grid;gap:8px}
+.toggles label{display:flex;align-items:center;gap:8px;cursor:pointer}
+input[type=checkbox]{accent-color:var(--red);width:16px;height:16px;flex:none}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+dt{color:var(--muted);font-size:12.5px}
+dd{margin:0;font-size:13px;font-variant-numeric:tabular-nums}
+body.embed .full{display:inline-block}
+body:not(.embed) .full{display:none}
+@media (max-width:760px){
+  html,body{height:auto}
+  .app{grid-template-columns:1fr;height:auto;padding:8px}
+  .stage{height:430px}
+  aside{overflow:visible}
+  .step{bottom:44px}
+  .step span{font-size:13px}
+  .hint{display:none}
+}
+.readout{position:absolute;right:10px;top:52px;font:700 12px var(--body);background:#fff;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;pointer-events:none;font-variant-numeric:tabular-nums}
+.ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+@media (max-width:760px){.readout{top:auto;bottom:10px;left:10px;right:auto}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="stage" id="stage">
+    <div class="views">
+      <button data-cam="angolo">Prospettiva</button>
+      <button data-cam="alto">Dall'alto</button>
+      <button data-cam="incavo">Incavo d'angolo</button>
+      <button data-cam="raso">Rasoterra</button>
+    </div>
+    <div class="readout" id="readout" hidden></div>
+    <div class="step" id="stepBox" hidden><span id="stepTxt"></span></div>
+    <div class="hint">Trascina per ruotare · rotella o pinch per lo zoom</div>
+    <a class="full" href="/assets/3d/pedana-tamburata-3d.html" target="_blank" rel="noopener">Apri a schermo intero ↗</a>
+  </div>
+
+  <aside>
+    <div>
+      <p class="ttl">Pedana tamburata 998 × 998 × 40</p>
+      <div class="ref">Pan.door.a · modello 3D</div>
+    </div>
+
+    <section>
+      <h2>Visualizzazione</h2>
+      <div class="seg" id="modes">
+        <button data-m="pannello" aria-pressed="true">Pedana</button>
+        <button data-m="esploso" aria-pressed="false">Esploso</button>
+        <button data-m="aa" aria-pressed="false">Sezione A-A</button>
+        <button data-m="piedino" aria-pressed="false">Piedino</button>
+        <button class="wide" data-m="montaggio" aria-pressed="false">Montaggio pedana</button>
+      </div>
+      <div class="slider" id="cutWrap" hidden>
+        <label for="cut"><span>Posizione taglio</span><output id="cutOut">499 mm</output></label>
+        <input type="range" id="cut" min="0" max="998" step="1" value="499">
+      </div>
+      <div class="slider" id="hWrap" hidden>
+        <label for="hgt"><span>Altezza piedino</span><output id="hOut">70 mm</output></label>
+        <input type="range" id="hgt" min="50" max="100" step="1" value="70">
+        <div class="ticks"><span>min 50 mm</span><span>max 100 mm</span></div>
+      </div>
+      <div class="toggles" id="oscWrap" hidden style="margin-top:10px">
+        <label><input type="checkbox" id="osc"> Mostra la corsa da minimo a massimo</label>
+      </div>
+      <div class="player" id="player" hidden style="margin-top:12px">
+        <button id="play" aria-label="Pausa">❚❚</button>
+        <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Avanzamento del montaggio">
+      </div>
+    </section>
+
+    <section>
+      <h2>Finitura</h2>
+      <div class="chips" id="finishes">
+        <button class="chip" data-f="mdf" aria-pressed="true"><span class="sw" style="background:#a9825c"></span>MDF grezzo</button>
+        <button class="chip" data-f="nero" aria-pressed="false"><span class="sw" style="background:#232425"></span>Nero</button>
+        <button class="chip" data-f="rovere" aria-pressed="false"><span class="sw" style="background:#cfae8a"></span>Rovere</button>
+        <button class="chip" data-f="bianco" aria-pressed="false"><span class="sw" style="background:#e7e5df"></span>Bianco</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Opzioni</h2>
+      <div class="toggles">
+        <label><input type="checkbox" id="rotate"> Rotazione automatica</label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Dati tecnici</h2>
+      <dl>
+        <dt>Pedana</dt><dd>PL-003 · 998 × 998 × 40 mm</dd>
+        <dt>Pelli</dt><dd>MDF 4 mm</dd>
+        <dt>Telaio</dt><dd>Abete, perimetro e traverso 100 mm</dd>
+        <dt>Anima</dt><dd>Nido d'ape ad alto carico</dd>
+        <dt>Incavi</dt><dd>Angoli e mezzerie, per regolare dall'alto</dd>
+        <dt>Piedino</dt><dd>PR-001 · regolabile</dd>
+        <dt>Regolazione</dt><dd>50 – 100 mm</dd>
+        <dt>Piano finito</dt><dd>90 – 140 mm da terra</dd>
+      </dl>
+    </section>
+  </aside>
+</div>
+
+<script>
+(function(){
+const Q=new URLSearchParams(location.search);
+if(window.parent!==window||Q.has('embed'))document.body.classList.add('embed');
+const PW=998, PT=40, PSK=4, FR=100, NR=12, HMIN=50, HMAX=100;
+const stage=document.getElementById('stage');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputEncoding=THREE.sRGBEncoding;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.05;
+renderer.shadowMap.enabled=true;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+renderer.localClippingEnabled=true;
+stage.prepend(renderer.domElement);
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0xe9ecef);
+const camera=new THREE.PerspectiveCamera(35,1,0.003,40);
+camera.position.set(1.5,1.1,1.8);
+const controls=new THREE.OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=0.08;
+controls.minDistance=0.03;controls.maxDistance=10;
+controls.autoRotateSpeed=0.8;
+
+scene.add(new THREE.HemisphereLight(0xffffff,0x8a8f96,0.75));
+const sun=new THREE.DirectionalLight(0xffffff,1.2);
+sun.position.set(2.2,4,1.6);sun.castShadow=true;
+sun.shadow.mapSize.set(2048,2048);
+Object.assign(sun.shadow.camera,{left:-1.8,right:1.8,top:1.8,bottom:-1.8,near:0.5,far:10});
+sun.shadow.bias=-0.0003;scene.add(sun);
+const fill=new THREE.DirectionalLight(0xdfe8ff,0.5);fill.position.set(-3,1.5,-2);scene.add(fill);
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(16,16),new THREE.ShadowMaterial({opacity:0.2}));
+ground.rotation.x=-Math.PI/2;ground.position.y=-0.0005;ground.receiveShadow=true;scene.add(ground);
+
+// ---------- Texture ----------
+function rng(s){return()=>{s=(s*16807)%2147483647;return(s-1)/2147483646}}
+function noise(g,w,h,amt,R){const d=g.getImageData(0,0,w,h),a=d.data;for(let i=0;i<a.length;i+=4){const n=(R()-0.5)*amt;a[i]+=n;a[i+1]+=n;a[i+2]+=n}g.putImageData(d,0,0)}
+function tex(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');draw(g,w,h);
+  const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.encoding=THREE.sRGBEncoding;t.anisotropy=renderer.capabilities.getMaxAnisotropy();return t}
+function grain(o){return(g,w,h)=>{const R=rng(o.seed||11);g.fillStyle=o.base;g.fillRect(0,0,w,h);
+  for(let i=0;i<o.n;i++){const y0=R()*h,amp=R()*o.wave,k=1+Math.floor(R()*3),ph=R()*6.283;
+    g.strokeStyle=o.lines[Math.floor(R()*o.lines.length)];g.globalAlpha=o.alpha[0]+R()*(o.alpha[1]-o.alpha[0]);g.lineWidth=o.lw[0]+R()*(o.lw[1]-o.lw[0]);
+    for(const off of[-h,0,h]){g.beginPath();for(let x=0;x<=w;x+=8){const y=y0+off+Math.sin(x*k*6.283/w+ph)*amp;x?g.lineTo(x,y):g.moveTo(x,y)}g.stroke()}}
+  if(o.knots){for(let k=0;k<o.knots;k++){const cx=R()*w,cy=h*0.2+R()*h*0.6;for(let r=14;r>0;r-=2.5){g.globalAlpha=0.12+0.05*(14-r)/2.5;g.strokeStyle='#9c6a2c';g.lineWidth=1.6;g.beginPath();g.ellipse(cx,cy,r*1.8,r*0.7,0,0,6.283);g.stroke()}g.globalAlpha=0.7;g.fillStyle='#7a4e1e';g.beginPath();g.ellipse(cx,cy,5,2.4,0,0,6.283);g.fill()}}
+  g.globalAlpha=1;noise(g,w,h,o.noise||8,R)}}
+function flat(base,amt,seed){return(g,w,h)=>{g.fillStyle=base;g.fillRect(0,0,w,h);noise(g,w,h,amt,rng(seed||3))}}
+
+const T_PINE=tex(1024,256,grain({base:'#e8cd97',lines:['#cf9f5a','#d8ab69','#c38c44','#f0dcae'],n:46,lw:[1.2,6],alpha:[0.25,0.65],wave:9,knots:2,noise:10,seed:21}));
+const T_MDF=tex(1024,1024,grain({base:'#ab845d',lines:['#9b7450','#b89068'],n:90,lw:[0.6,2],alpha:[0.08,0.2],wave:2,noise:30,seed:5}));
+const T_MDF_EDGE=tex(512,128,flat('#9d7650',26,9));
+const T_ROVERE=tex(2048,2048,grain({base:'#d0b08c',lines:['#a9835e','#b8916b','#e2c7a6','#c09b74'],n:900,lw:[0.5,2.4],alpha:[0.2,0.55],wave:4,noise:7,seed:33}));
+const T_NERO=tex(512,512,flat('#222324',6,4));
+const T_BIANCO=tex(512,512,flat('#e8e6e0',5,6));
+const T_THREAD=tex(64,256,(g,w,h)=>{g.fillStyle='#c4c8cc';g.fillRect(0,0,w,h);g.strokeStyle='#6d7277';g.lineWidth=5;
+  for(let y=-w;y<h+w;y+=16){g.beginPath();g.moveTo(0,y);g.lineTo(w,y+w*0.35);g.stroke()}});
+T_THREAD.repeat.set(1,0.06);
+const T_CAST=tex(256,256,flat('#b9bdc1',22,12));
+
+const std=(map,rough,extra)=>new THREE.MeshStandardMaterial(Object.assign({map,roughness:rough,metalness:0,side:THREE.DoubleSide},extra||{}));
+const M={
+  pine:std(T_PINE,0.72),
+  mdfEdge:std(T_MDF_EDGE,0.9),
+  finishes:{mdf:std(T_MDF,0.88),nero:std(T_NERO,0.5),rovere:std(T_ROVERE,0.6),bianco:std(T_BIANCO,0.55)},
+  core:new THREE.MeshStandardMaterial({color:0xc6a274,roughness:1,side:THREE.DoubleSide}),
+  zinc:new THREE.MeshStandardMaterial({map:T_CAST,roughness:0.55,metalness:0.55}),
+  thread:new THREE.MeshStandardMaterial({map:T_THREAD,roughness:0.35,metalness:0.6}),
+  key:new THREE.MeshStandardMaterial({color:0x2b2e33,roughness:0.4,metalness:0.6}),
+  hole:new THREE.MeshBasicMaterial({color:0x2a2420,side:THREE.DoubleSide})
+};
+const allMats=[M.pine,M.mdfEdge,M.core,M.zinc,M.thread,M.key,M.hole,...Object.values(M.finishes)];
+let currentFinish=['mdf','nero','rovere','bianco'].includes(Q.get('finitura'))?Q.get('finitura'):'mdf';
+
+function planarUV(geo,grainAxis,uS,vS){
+  const p=geo.attributes.position,n=geo.attributes.normal,uv=geo.attributes.uv,ga='xyz'.indexOf(grainAxis);
+  for(let i=0;i<p.count;i++){
+    const v=[p.getX(i),p.getY(i),p.getZ(i)],nn=[Math.abs(n.getX(i)),Math.abs(n.getY(i)),Math.abs(n.getZ(i))];
+    const na=nn.indexOf(Math.max(...nn)),tg=[0,1,2].filter(a=>a!==na);
+    let ua,va; if(tg.includes(ga)){ua=ga;va=tg.find(a=>a!==ga)}else{ua=tg[0];va=tg[1]}
+    uv.setXY(i,v[ua]/uS,v[va]/vS);
+  } uv.needsUpdate=true;
+}
+function box(x0,x1,y0,y1,z0,z1,mat,grainAxis,uS,vS){
+  const g=new THREE.BoxGeometry(x1-x0,y1-y0,z1-z0).translate((x0+x1)/2,(y0+y1)/2,(z0+z1)/2);
+  planarUV(g,grainAxis||'x',uS||500,vS||100);
+  const m=new THREE.Mesh(g,mat);m.castShadow=true;m.receiveShadow=true;return m;
+}
+function scaleUV(g,su,sv){const uv=g.attributes.uv;for(let i=0;i<uv.count;i++)uv.setXY(i,uv.getX(i)*su,uv.getY(i)*sv);uv.needsUpdate=true}
+
+// ---------- Geometria pannello pedana ----------
+// contorno con incavi R12 agli angoli e a metà dei lati (accesso alla regolazione dall'alto)
+function outline(){
+  const s=new THREE.Shape(),A=PW/2,E=PW,R=NR;
+  s.moveTo(R,0);s.lineTo(A-R,0);s.absarc(A,0,R,Math.PI,0,true);s.lineTo(E-R,0);s.absarc(E,0,R,Math.PI,Math.PI/2,true);
+  s.lineTo(E,A-R);s.absarc(E,A,R,1.5*Math.PI,Math.PI/2,true);s.lineTo(E,E-R);s.absarc(E,E,R,1.5*Math.PI,Math.PI,true);
+  s.lineTo(A+R,E);s.absarc(A,E,R,0,-Math.PI,true);s.lineTo(R,E);s.absarc(0,E,R,0,-Math.PI/2,true);
+  s.lineTo(0,A+R);s.absarc(0,A,R,Math.PI/2,-Math.PI/2,true);s.lineTo(0,R);s.absarc(0,0,R,Math.PI/2,0,true);
+  return s;
+}
+const circ=(x,y,r)=>{const p=new THREE.Path();p.absarc(x,y,r,0,Math.PI*2,true);return p};
+const rectP=(x0,y0,x1,y1)=>{const p=new THREE.Path();p.moveTo(x0,y0);p.lineTo(x0,y1);p.lineTo(x1,y1);p.lineTo(x1,y0);p.lineTo(x0,y0);return p};
+const PEDLOC=[-1,PW/2,PW+1];
+const PINS=(()=>{const r=[];PEDLOC.forEach(px=>PEDLOC.forEach(pz=>[-25,25].forEach(dx=>[-25,25].forEach(dz=>{const x=px+dx,z=pz+dz;if(x>0&&x<PW&&z>0&&z<PW)r.push([x,z])}))));return r})();
+const FIELDS=[[FR,FR,PW/2-50,PW-FR],[PW/2+50,FR,PW-FR,PW-FR]];
+function extr(shape,depth,y0,mats,su,sv){
+  const g=new THREE.ExtrudeGeometry(shape,{depth,bevelEnabled:false,curveSegments:16});
+  scaleUV(g,su,sv);g.rotateX(-Math.PI/2);g.translate(0,y0,PW);
+  const m=new THREE.Mesh(g,mats);m.castShadow=true;m.receiveShadow=true;return m;
+}
+const HEX_R=16, hexGeo=new THREE.CylinderGeometry(HEX_R,HEX_R,PT-2*PSK,6,1,true);
+const HEXPTS=(()=>{const dx=Math.sqrt(3)*HEX_R,dz=1.5*HEX_R,p=[];FIELDS.forEach(f=>{
+  for(let j=0;;j++){const z=f[1]+HEX_R+j*dz;if(z>f[3]-HEX_R+0.1)break;
+    for(let i=0;;i++){const x=f[0]+dx/2+i*dx+(j%2?dx/2:0);if(x>f[2]-dx/2+0.1)break;p.push([x,z])}}});return p})();
+const holeGeo=new THREE.CircleGeometry(4,16);
+
+const tops=[];
+function topMats(){return[M.finishes[currentFinish],M.mdfEdge]}
+function buildPedana(){
+  const g=new THREE.Group();
+  const skinShape=()=>{const s=outline();PINS.forEach(p=>s.holes.push(circ(p[0],p[1],4)));s.holes.push(circ(PW/2,PW/2,10));return s};
+  const top=extr(skinShape(),PSK,PT-PSK,topMats(),1/1000,1/1000);
+  const bot=extr(skinShape(),PSK,0,[M.finishes.mdf,M.mdfEdge],1/1000,1/1000);
+  tops.push(top);
+  const fs=outline();FIELDS.forEach(f=>fs.holes.push(rectP(f[0],f[1],f[2],f[3])));fs.holes.push(circ(PW/2,PW/2,10));
+  const frame=extr(fs,PT-2*PSK,PSK,[M.pine,M.pine],1/900,1/120);
+  g.add(top,bot,frame);
+  const core=new THREE.InstancedMesh(hexGeo,M.core,HEXPTS.length),m=new THREE.Matrix4();
+  HEXPTS.forEach((p,i)=>{m.makeTranslation(p[0],PT/2,p[1]);core.setMatrixAt(i,m)});core.receiveShadow=true;g.add(core);
+  // fondo dei fori nel telaio
+  PINS.forEach(p=>{for(const [y,sg] of [[PT-PSK+0.08,1],[PSK-0.08,-1]]){const d=new THREE.Mesh(holeGeo,M.hole);d.rotation.x=-sg*Math.PI/2;d.position.set(p[0],y,PW-p[1]);g.add(d)}});
+  return {g,top,bot};
+}
+function applyFinish(){const f=M.finishes[currentFinish];tops.forEach(t=>t.material=[f,M.mdfEdge]);perim.forEach(p=>p.material=f)}
+
+// ---------- Piedino regolabile ----------
+function roundedPlate(w,t,r,mat){
+  const s=new THREE.Shape(),h=w/2;
+  s.moveTo(-h+r,-h);s.lineTo(h-r,-h);s.quadraticCurveTo(h,-h,h,-h+r);s.lineTo(h,h-r);s.quadraticCurveTo(h,h,h-r,h);
+  s.lineTo(-h+r,h);s.quadraticCurveTo(-h,h,-h,h-r);s.lineTo(-h,-h+r);s.quadraticCurveTo(-h,-h,-h+r,-h);
+  const g=new THREE.ExtrudeGeometry(s,{depth:t-1,bevelEnabled:true,bevelThickness:0.5,bevelSize:0.8,bevelSegments:2,curveSegments:6});
+  scaleUV(g,1/80,1/80);g.rotateX(-Math.PI/2);g.translate(0,0.5,0);
+  const m=new THREE.Mesh(g,mat);m.castShadow=true;m.receiveShadow=true;return m;
+}
+const G={
+  foot:new THREE.CylinderGeometry(2.5,3,3,10).translate(0,1.5,0),
+  hubB:new THREE.CylinderGeometry(9,15,18,28).translate(0,9,0),
+  hubT:new THREE.CylinderGeometry(14,9,12,28).translate(0,-6,0),
+  pin:new THREE.CylinderGeometry(2.4,4,12,14).translate(0,6,0),
+  rod:new THREE.CylinderGeometry(8,8,1,20).translate(0,0.5,0),
+  sock:new THREE.CircleGeometry(4.2,6),
+  bhole:new THREE.CircleGeometry(3.5,14)
+};
+function mesh(g,m){const x=new THREE.Mesh(g,m);x.castShadow=true;x.receiveShadow=true;return x}
+function makePed(){
+  const g=new THREE.Group(),top=new THREE.Group();
+  [[-30,-30],[30,-30],[-30,30],[30,30]].forEach(p=>{const f=mesh(G.foot,M.zinc);f.position.set(p[0],0,p[1]);g.add(f)});
+  const base=roundedPlate(80,4,9,M.zinc);base.position.y=3;g.add(base);
+  [[-28,-28],[28,-28],[-28,28],[28,28]].forEach(p=>{const d=new THREE.Mesh(G.bhole,M.hole);d.rotation.x=-Math.PI/2;d.position.set(p[0],7.1,p[1]);g.add(d)});
+  const hb=mesh(G.hubB,M.zinc);hb.position.y=7;g.add(hb);
+  const rod=mesh(G.rod,M.thread);rod.position.y=20;g.add(rod);
+  const plate=roundedPlate(70,5,8,M.zinc);plate.position.y=-5;top.add(plate);
+  top.add(mesh(G.hubT,M.zinc));
+  const spin=new THREE.Group();top.add(spin);
+  [[-25,-25],[25,-25],[-25,25],[25,25]].forEach(p=>{const pn=mesh(G.pin,M.zinc);pn.position.set(p[0],0,p[1]);top.add(pn)});
+  const s=new THREE.Mesh(G.sock,M.hole);s.rotation.x=-Math.PI/2;s.position.y=28.05;spin.add(s);
+  g.add(top);
+  return {g,top,rod,spin};
+}
+function setPedH(p,h){p.top.position.y=h;p.rod.scale.y=h+8}
+
+// chiave a brugola
+function makeKey(){const g=new THREE.Group();
+  g.add(box(-3,3,0,110,-3,3,M.key),box(-3,48,104,110,-3,3,M.key));return g}
+
+// ---------- Scena: pannello singolo ----------
+const single=new THREE.Group();single.scale.setScalar(0.001);single.position.set(-PW/2*0.001,0,-PW/2*0.001);scene.add(single);
+const P1=buildPedana();single.add(P1.g);
+
+// ---------- Scena: piedino ----------
+const pedScene=new THREE.Group();pedScene.scale.setScalar(0.001);pedScene.visible=false;scene.add(pedScene);
+const PD=makePed();pedScene.add(PD.g);setPedH(PD,70);
+
+// ---------- Scena: montaggio 2 x 2 ----------
+const asm=new THREE.Group();asm.scale.setScalar(0.001);asm.visible=false;scene.add(asm);
+const perim=[];
+const panels=[],peds=[];
+[[-PW-1,-PW-1],[1,-PW-1],[-PW-1,1],[1,1]].forEach((o,i)=>{const p=buildPedana();p.g.position.set(o[0],0,o[1]);asm.add(p.g);panels.push({g:p.g,ox:o[0],oz:o[1],i})});
+[-1000,-500,0,500,1000].forEach((x,i)=>[-1000,-500,0,500,1000].forEach((z,j)=>{const p=makePed();p.g.position.set(x,0,z);asm.add(p.g);const corner=(i%2===0&&j%2===0);peds.push({p,corner,d:corner?(i+j)*0.07:1.6+(i+j)*0.05})}));
+const key=makeKey();asm.add(key);
+// coprilati perimetrali (altezza variabile: scala in y)
+const perimG=[];
+[[1000,1010,-1010,1010,1,0],[-1010,-1000,-1010,1010,-1,0],[-1000,1000,1000,1010,0,1],[-1000,1000,-1010,-1000,0,-1]].forEach(b=>{
+  const m=box(b[0],b[1],0,1,b[2],b[3],M.finishes[currentFinish],Math.abs(b[4])?'z':'x',1000,1000);perim.push(m);
+  const w=new THREE.Group();w.add(m);asm.add(w);perimG.push({w,m,n:[b[4],b[5]]});
+});
+
+let H=70;
+const clamp=v=>Math.max(0,Math.min(1,v));
+const ease=v=>v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2;
+const TS={s1:0.6,s1b:2.2,s2:4.2,s3:6.0,s4:9.7,s5:12.4},DUR=15.2;
+function caps(){return[
+  [0,'Pavimento del padiglione: la griglia dei piedini segue i formati delle pedane'],
+  [TS.s1,'1 \u00b7 Posare i piedini PR-001 agli angoli, condivisi fra pedane vicine'],
+  [TS.s1b,'2 \u00b7 Per pi\u00f9 portata, aggiungerli a met\u00e0 dei lati e al centro'],
+  [TS.s2,'3 \u00b7 Portare i piedini all\u2019altezza di '+H+' mm'],
+  [TS.s3,'4 \u00b7 Posare le pedane: i perni dei piedini entrano nei fori'],
+  [TS.s4,'5 \u00b7 Mettere in bolla dall\u2019alto con la chiave, attraverso gli incavi'],
+  [TS.s5,'6 \u00b7 Chiudere il perimetro con i coprilati nella finitura della pedana'],
+  [DUR-0.9,'Pedana montata \u00b7 piano finito a '+(H+40)+' mm da terra']]}
+function setAsm(t){
+  const e1t=t-TS.s1,e2=ease(clamp((t-TS.s2)/1.6));
+  const hNow=HMIN+(H-HMIN)*e2;
+  peds.forEach(o=>{const e=ease(clamp((e1t-o.d)/1.0));o.p.g.position.y=(1-e)*260;setPedH(o.p,hNow);o.p.g.visible=t>TS.s1+o.d-0.05});
+  panels.forEach(p=>{const e=ease(clamp((t-TS.s3-p.i*0.75)/1.3));p.g.position.y=H+(1-e)*420;p.g.visible=t>TS.s3+p.i*0.75-0.05});
+  // chiave nel giunto centrale
+  const k=clamp((t-TS.s4)/2.4);
+  key.visible=k>0&&k<1;
+  const kd=k<0.25?1-ease(k/0.25):k>0.75?ease((k-0.75)/0.25):0;
+  key.position.set(0,H+28+kd*160,0);key.rotation.y=k>0.25&&k<0.75?(k-0.25)/0.5*Math.PI*4:0;
+  peds[12].p.spin.rotation.y=key.rotation.y;
+  const e5=ease(clamp((t-TS.s5)/1.6));
+  perimG.forEach(o=>{o.m.scale.y=H+PT;o.w.position.set(o.n[0]*(1-e5)*260,0,o.n[1]*(1-e5)*260);o.w.visible=t>TS.s5-0.05});
+  const c=caps();let txt=c[0][1];c.forEach(x=>{if(t>=x[0])txt=x[1]});stepTxt.textContent=txt;
+}
+
+// ---------- UI ----------
+let explode=0,explodeTarget=0,mode='pannello';
+const clip=new THREE.Plane(new THREE.Vector3(-1,0,0),0);
+function setClipping(on){allMats.forEach(m=>{m.clippingPlanes=on?[clip]:null;m.needsUpdate=true})}
+const $=id=>document.getElementById(id);
+const cut=$('cut'),hgt=$('hgt'),scrub=$('scrub'),playBtn=$('play'),stepTxt=$('stepTxt'),readout=$('readout');
+function updateClip(){const v=+cut.value;$('cutOut').textContent=v+' mm';clip.constant=(v-PW/2)*0.001}
+cut.addEventListener('input',updateClip);
+function showH(){$('hOut').textContent=H+' mm';readout.textContent='Piedino '+H+' mm · piano finito '+(H+PT)+' mm'}
+hgt.addEventListener('input',()=>{H=+hgt.value;showH();setPedH(PD,H);if(mode==='montaggio'&&!playing)setAsm(animT)});
+$('osc').onchange=e=>{if(!e.target.checked){H=+hgt.value;setPedH(PD,H);showH()}};
+
+let animT=0,playing=false;
+function setPlaying(p){playing=p;playBtn.textContent=p?'❚❚':'▶';playBtn.setAttribute('aria-label',p?'Pausa':'Riproduci')}
+playBtn.onclick=()=>{if(!playing&&animT>=DUR)animT=0;setPlaying(!playing)};
+scrub.addEventListener('input',()=>{setPlaying(false);animT=scrub.value/1000*DUR;setAsm(animT)});
+
+const CAMS={
+  pannello:{angolo:[[1.5,1.1,1.8],[0,0.02,0]],alto:[[0,2.3,0.01],[0,0,0]],incavo:[[0.6,0.2,0.62],[0.48,0.03,0.48]],raso:[[0.85,0.07,0.25],[0.5,0.02,0.05]]},
+  piedino:{angolo:[[0.22,0.15,0.27],[0,0.05,0]],alto:[[0.001,0.38,0.002],[0,0.05,0]],incavo:[[0.09,0.13,0.11],[0,0.08,0]],raso:[[0.28,0.04,0.05],[0,0.05,0]]},
+  montaggio:{angolo:[[2.5,1.8,2.9],[0,0.06,0]],alto:[[0,3.6,0.01],[0,0,0]],incavo:[[0.2,0.36,0.26],[0,0.1,0]],raso:[[1.7,0.07,1.6],[0.25,0.06,0.25]]}
+};
+CAMS.esploso=CAMS.pannello;CAMS.aa=CAMS.pannello;
+function setMode(m){
+  mode=m;
+  document.querySelectorAll('#modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===m));
+  const isAsm=m==='montaggio',isPed=m==='piedino';
+  single.visible=!isAsm&&!isPed;asm.visible=isAsm;pedScene.visible=isPed;
+  $('player').hidden=!isAsm;$('stepBox').hidden=!isAsm;$('hWrap').hidden=!(isAsm||isPed);$('oscWrap').hidden=!isPed;readout.hidden=!(isAsm||isPed);
+  explodeTarget=m==='esploso'?1:0;
+  $('cutWrap').hidden=m!=='aa';setClipping(m==='aa');updateClip();
+  if(!isPed&&$('osc').checked){$('osc').checked=false;H=+hgt.value}
+  showH();
+  if(m==='aa'){const x=(+cut.value-PW/2)*0.001;fly([x+0.75,0.35,0.9],[x,0.02,0.25])}
+  else if(m==='esploso')fly([1.3,1.0,1.6],[0,0.03,0]);
+  else if(isAsm){animT=0;setAsm(0);setPlaying(true);fly(...CAMS.montaggio.angolo)}
+  else if(isPed){setPlaying(false);setPedH(PD,H);fly(...CAMS.piedino.angolo)}
+  else{setPlaying(false);fly(...CAMS.pannello.angolo)}
+}
+document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
+document.querySelectorAll('#finishes .chip').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#finishes .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+  currentFinish=b.dataset.f;applyFinish();
+});
+$('rotate').onchange=e=>{controls.autoRotate=e.target.checked};
+
+const tw={t:1};
+function fly(pos,tgt){tw.p0=camera.position.clone();tw.t0=controls.target.clone();tw.p1=new THREE.Vector3(...pos);tw.t1=new THREE.Vector3(...tgt);tw.t=0}
+document.querySelectorAll('[data-cam]').forEach(b=>b.onclick=()=>fly(...CAMS[mode][b.dataset.cam]));
+
+function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
+new ResizeObserver(resize).observe(stage);resize();
+
+function postH(){try{parent.postMessage({pd3d:location.pathname,h:document.documentElement.scrollHeight},'*')}catch(e){}}
+new ResizeObserver(postH).observe(document.body);addEventListener('load',postH);
+let visible=true;
+if('IntersectionObserver' in window)new IntersectionObserver(es=>{visible=es[0].isIntersecting},{threshold:0}).observe(stage);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clock=new THREE.Clock();let osc=0;
+function loop(){
+  requestAnimationFrame(loop);
+  const dt=Math.min(clock.getDelta(),0.05);
+  if(!visible||document.hidden)return;
+  explode+=(explodeTarget-explode)*(reduce?1:0.08);
+  P1.top.position.y=explode*110;P1.bot.position.y=-explode*110;
+  if(mode==='piedino'&&$('osc').checked){osc+=dt;H=Math.round(75-25*Math.cos(osc*1.2));setPedH(PD,H);PD.spin.rotation.y=osc*3;showH()}
+  if(mode==='montaggio'&&playing){animT+=dt;if(animT>DUR+1.8)animT=0;const t=Math.min(animT,DUR);setAsm(t);scrub.value=Math.round(t/DUR*1000)}
+  if(tw.t<1){tw.t=Math.min(1,tw.t+(reduce?1:0.035));const e=1-Math.pow(1-tw.t,3);
+    camera.position.lerpVectors(tw.p0,tw.p1,e);controls.target.lerpVectors(tw.t0,tw.t1,e)}
+  controls.update();renderer.render(scene,camera);
+}
+document.querySelectorAll('#finishes .chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===currentFinish));applyFinish();
+showH();setAsm(0);
+if(Q.get('altezza')){const a=Math.max(50,Math.min(100,+Q.get('altezza')||70));hgt.value=a;H=a;setPedH(PD,H);showH()}
+const sm={pedana:'pannello',esploso:'esploso',sezione:'aa',piedino:'piedino',montaggio:'montaggio'}[Q.get('vista')];
+if(sm&&sm!=='pannello')setMode(sm);
+loop();
+})();
+</script>
+</body>
+</html>
