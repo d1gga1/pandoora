@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/pandoora-pages.css">
-<link rel="stylesheet" href="/shop/shop.css?v=6">
+<link rel="stylesheet" href="/shop/shop.css?v=7">
 <script>(function(d){try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm){if(!sessionStorage.getItem('pdIntro')&&d.body===null&&location.pathname.replace(/\/$/,'')==='/shop')d.documentElement.classList.add('pd-intro');if(sessionStorage.getItem('pdWipe')){d.documentElement.classList.add('pd-wipe');sessionStorage.removeItem('pdWipe')}}}catch(e){}setTimeout(function(){d.documentElement.classList.remove('pd-intro','pd-wipe')},5000)})(document)</script>
 <link rel="preload" as="image" href="/shop/img/anta-horizon.webp">
 <link rel="preload" as="image" href="/shop/img/hero.jpg">
@@ -52,15 +52,26 @@
  <div class="dj-pin">
   <div class="dj-room"><img src="/shop/img/hero.jpg" data-fb="https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141155_7a92dc9d-a782-4232-97ec-7f055a6814d9_min.webp" alt="" fetchpriority="high"></div>
   <div class="dj-floor" aria-hidden="true"></div>
+  <svg class="dj-wall" aria-hidden="true" preserveAspectRatio="none"><path fill-rule="evenodd" d=""/></svg>
+  <div class="dj-shadows" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="dj-spill" aria-hidden="true"></div>
+  <span class="dj-anchor" aria-hidden="true"></span>
   <a class="dj-hole" href="/shop/porte-per-interni/" aria-label="Porta Horizon: vai alle porte per interni">
+    <span class="dj-clip"><span class="dj-leaf s-stage-leaf"><i class="lf-back"></i><i class="lf-top"></i><i class="lf-edge"></i><img src="/shop/img/anta-horizon.webp" alt=""><i class="dj-tint"></i></span></span>
     <span class="dj-frame"></span>
-    <span class="dj-leaf s-stage-leaf"><i class="lf-back"></i><i class="lf-top"></i><i class="lf-edge"></i><img src="/shop/img/anta-horizon.webp" alt=""></span>
     <span class="dj-dim" aria-hidden="true"><span>210 cm</span></span>
+    <span class="dj-wdim" aria-hidden="true"><span>80 cm</span></span>
   </a>
+  <canvas class="dj-dust" aria-hidden="true"></canvas>
+  <div class="dj-spots" aria-hidden="true">
+    <span class="dj-spot sp-ral"><i class="dot"></i><span class="lb"><b class="ral-n">RAL 9010</b><small class="ral-t">Bianco puro</small></span></span>
+    <span class="dj-spot sp-44"><i class="dot"></i><span class="lb"><b>Anta da 44 mm</b><small>anima alveolare</small></span></span>
+    <span class="dj-spot sp-price"><i class="dot"></i><span class="lb"><b>Porta Horizon</b><small>da 595 € posa inclusa</small></span></span>
+  </div>
   <div class="dj-light" aria-hidden="true"></div>
   <div class="dj-copy"><div class="s-wrap">
     <span class="s-kick">Pandoora Shop · dal 1987</span>
-    <h1><span class="ln"><span>Porte e arredi</span></span><span class="ln"><span>fatti da noi,</span></span><span class="ln"><span>al centimetro.</span></span></h1>
+    <h1 aria-label="Porte e arredi fatti da noi, al centimetro."><span class="ln" aria-hidden="true"><span>Porte e arredi</span></span><span class="ln" aria-hidden="true"><span>fatti da noi,</span></span><span class="ln dj-rot" aria-hidden="true"><span class="rot-w">al centimetro.</span></span></h1>
     <p>Scegliete il modello, la finitura e la misura, standard o la vostra. Lo costruiamo nel nostro stabilimento di Fontanelle e il prezzo lo vedete subito, mentre configurate.</p>
     <div class="s-btns"><a class="s-btn s-btn-p" href="/shop/porte-per-interni/">Scegli la porta <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="s-btn s-btn-o" href="#categorie">Tutto il negozio</a></div>
     <div class="s-hero-facts">
@@ -91,7 +102,7 @@
 </div></section>
 
 <section class="s-sec s-mani"><div class="s-wrap">
-  <p class="mani" data-scrub>Non siamo un rivenditore. Il pannello, la laccatura e la posa sono nostri: ogni porta e ogni mobile nasce sul vostro spazio, nel nostro stabilimento di Fontanelle, dal 1987.</p>
+  <p class="mani" data-scrub>Scegliete il modello, inserite le vostre misure e vedete subito il prezzo. Al resto pensiamo noi: produzione, consegna e, per le porte, anche la posa.</p>
 </div></section>
 
 <section class="s-sec s-best" style="padding-top:10px"><div class="s-wrap">
@@ -243,7 +254,7 @@
 <script src="/assets/js/gsap.min.js" defer></script>
 <script src="/assets/js/ScrollTrigger.min.js" defer></script>
 <script src="/shop/vendor/lenis.min.js" defer></script>
-<script src="/shop/motion.js?v=6" defer></script>
-<script src="/shop/shop.js?v=6" defer></script>
+<script src="/shop/motion.js?v=7" defer></script>
+<script src="/shop/shop.js?v=7" defer></script>
 </body>
 </html>

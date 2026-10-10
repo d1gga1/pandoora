@@ -565,7 +565,7 @@ html.pd-wipe .s-wipe span{opacity:1}
 .dj-hole{position:absolute;z-index:1;bottom:var(--fl);left:calc(var(--hx) - var(--hh)*.215);width:calc(var(--hh)*.43);height:var(--hh);display:block;perspective:1500px;transform-origin:50% 50%;will-change:transform;
   box-shadow:0 0 0 300vmax var(--wall),inset 10px 0 0 #d9d3c8,inset -10px 0 0 #e4dfd6,inset 0 10px 0 #d0c9bc,inset 0 30px 40px -20px rgba(0,0,0,.35)}
 .dj-frame{position:absolute;left:-14px;right:-14px;top:-14px;bottom:0;border:14px solid #f8f6f2;border-bottom:0;pointer-events:none;box-shadow:0 0 0 1px rgba(0,0,0,.05),-20px 30px 50px -30px rgba(0,0,0,.35),inset 0 0 0 1px rgba(0,0,0,.05);z-index:2}
-.dj-leaf{transform:rotateY(18deg)}
+.dj-leaf{transform:rotateY(-18deg)}
 .dj-dim{position:absolute;top:0;bottom:0;right:-46px;display:flex;flex-direction:column;align-items:center;color:var(--ink2);font:800 11px var(--body);z-index:3}
 .dj-dim::before,.dj-dim::after{content:"";width:1px;flex:1;background:rgba(13,21,36,.35)}
 .dj-dim span{padding:6px 0;writing-mode:vertical-rl;transform:rotate(180deg)}
@@ -643,3 +643,50 @@ html.pd-wipe .s-wipe span{opacity:1}
 body:has(.s-head.s-hide) .s-tools{top:0}
 .dj-end .s-wrap{width:100%}
 .dj-end h2,.dj-end p{text-shadow:0 2px 30px rgba(0,0,0,.35)}
+
+/* v7: parete vettoriale con il vano ritagliato */
+.dj-anchor{position:absolute;bottom:var(--fl);left:calc(var(--hx) - var(--hh)*.215);width:calc(var(--hh)*.43);height:var(--hh);visibility:hidden;pointer-events:none}
+.dj-wall{position:absolute;inset:0;width:100%;height:100%;z-index:1;display:none;pointer-events:none}
+.dj-wall path{fill:var(--wall)}
+.pdm .dj-wall{display:block}
+.pdm .dj-hole{box-shadow:inset 10px 0 0 #d9d3c8,inset -10px 0 0 #e4dfd6,inset 0 10px 0 #d0c9bc,inset 0 30px 40px -20px rgba(0,0,0,.35);transform:none!important;will-change:auto}
+.dj-hole{z-index:2}
+.dj-clip{position:absolute;inset:0;overflow:hidden;perspective:var(--persp,1600px);perspective-origin:50% 45%}
+.dj-leaf{transform-origin:100% 50%}
+.dj-frame{z-index:3}
+.dj-floor{z-index:2}
+
+/* v7: vita nel primo schermo */
+.dj-shadows{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;mix-blend-mode:multiply;opacity:.55}
+.dj-shadows i{position:absolute;border-radius:50%;background:radial-gradient(closest-side,rgba(90,70,45,.22),transparent);filter:blur(18px)}
+.dj-shadows i:nth-child(1){width:38vw;height:22vw;left:-8vw;top:-6vw;animation:djLeaf 13s ease-in-out infinite}
+.dj-shadows i:nth-child(2){width:24vw;height:30vw;left:18vw;top:-14vw;animation:djLeaf 17s ease-in-out infinite reverse}
+.dj-shadows i:nth-child(3){width:20vw;height:14vw;left:2vw;top:12vw;animation:djLeaf 11s ease-in-out infinite 2s}
+.dj-shadows i:nth-child(4){width:30vw;height:18vw;right:-6vw;top:-8vw;animation:djLeaf 15s ease-in-out infinite 1s}
+.dj-shadows i:nth-child(5){width:16vw;height:16vw;right:12vw;top:10vw;animation:djLeaf 19s ease-in-out infinite 3s reverse}
+@keyframes djLeaf{0%,100%{transform:translate(0,0) rotate(0) scale(1)}33%{transform:translate(2.5vw,1.2vw) rotate(8deg) scale(1.08)}66%{transform:translate(-1.5vw,2vw) rotate(-6deg) scale(.95)}}
+.dj-spill{position:absolute;z-index:1;pointer-events:none;mix-blend-mode:soft-light;opacity:0;background:radial-gradient(60% 55% at 100% 100%,rgba(255,214,150,.95),rgba(255,214,150,0) 70%)}
+.dj-tint{position:absolute;inset:0;mix-blend-mode:multiply;background:#fff;-webkit-mask:url(/shop/img/anta-horizon.webp) center/100% 100%;mask:url(/shop/img/anta-horizon.webp) center/100% 100%;pointer-events:none;transition:background 1.2s var(--out)}
+.dj-wdim{position:absolute;left:0;right:0;bottom:-30px;display:flex;align-items:center;color:var(--ink2);font:800 11px var(--body);z-index:3}
+.dj-wdim::before,.dj-wdim::after{content:"";height:1px;flex:1;background:rgba(13,21,36,.35)}
+.dj-wdim span{padding:0 8px}
+.dj-dim::before,.dj-dim::after,.dj-wdim::before,.dj-wdim::after{transform-origin:center}
+.dj-dust{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.dj-spots{position:absolute;inset:0;z-index:4;pointer-events:none;display:none}
+.pdm .dj-spots{display:block}
+.dj-spot{position:absolute;left:0;top:0;display:flex;align-items:center;gap:10px;opacity:0;will-change:transform}
+.dj-spot .dot{position:relative;width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(255,255,255,.85);flex-shrink:0}
+.dj-spot .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--red);animation:djPing 2.2s var(--out) infinite}
+@keyframes djPing{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.6);opacity:0}}
+.dj-spot .lb{display:flex;flex-direction:column;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:8px 14px;border-radius:12px;box-shadow:0 14px 34px -14px rgba(13,21,36,.45);white-space:nowrap}
+.dj-spot b{font:800 13px var(--body)}.dj-spot small{font:600 11.5px var(--body);color:var(--mute)}
+.sp-ral .dot{background:var(--ralc,#f1ece1);box-shadow:0 0 0 4px rgba(255,255,255,.9),0 0 0 5px rgba(0,0,0,.12);transition:background 1.2s}
+.sp-ral .dot::after{border-color:rgba(13,21,36,.35)}
+.sp-left{flex-direction:row-reverse}
+.dj-rot{position:relative}
+.dj-rot .rot-w{display:inline-block;color:var(--ink)}
+.dj-rot .rot-w .ch{display:inline-block;will-change:transform}
+.dj-copy .s-btn-p::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:djShine 3.6s var(--ease) infinite 2.5s}
+@keyframes djShine{0%,60%{left:-60%}100%{left:130%}}
+@media(max-width:900px){.dj-spots .sp-44,.dj-spots .sp-price{display:none}.dj-wdim{display:none}.dj-shadows{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.dj-shadows i,.dj-spot .dot::after,.dj-copy .s-btn-p::after{animation:none}}
