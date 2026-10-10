@@ -347,6 +347,8 @@
       document.body.classList.add('s-scrolling');clearTimeout(st);st=setTimeout(function(){document.body.classList.remove('s-scrolling')},700);
     }
     addEventListener('scroll',onScroll,{passive:true});onScroll();
+    var hd=$('.s-head');function hh(){if(hd)document.documentElement.style.setProperty('--head-h',Math.round(hd.getBoundingClientRect().height)+'px')}
+    hh();addEventListener('resize',hh);if(window.ResizeObserver&&hd)new ResizeObserver(hh).observe(hd);
     reveal(document);
     if(FINE&&!RM){
       $$('.s-btn-p,.s-btn-w,[data-mag]').forEach(function(b){
