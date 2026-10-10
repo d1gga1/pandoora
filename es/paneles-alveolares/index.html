@@ -483,6 +483,7 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 </style>
 <link rel="stylesheet" href="/seo-block.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -703,6 +704,20 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
       </a>
     </div>
   </div>
+</section>
+
+<section class="pd3d-sec" id="model-3d">
+  <span class="pd3d-eyebrow">3D</span>
+  <h2>Modelo 3D y montaje</h2>
+  <p>Gira el panel y la tarima, ábrelos en despiece y mira paso a paso cómo se montan.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=es" data-title="Panel alveolar 1000 × 3000 × 40">Panel</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=es" data-title="Tarima">Tarima</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=es" title="Panel alveolar 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/es/paneles-alveolares/montaje-paneles/">Montaje de paneles →</a> &nbsp; <a href="/es/paneles-alveolares/montaje-tarimas/">Montaje de tarimas →</a></span></figcaption>
+  </figure>
 </section>
 
 <!-- ══════════ PRODOTTI VARI ══════════ -->
@@ -1271,7 +1286,8 @@ document.querySelectorAll('.diagram .d-zone, .diagram .pin, .compo-cards .ccard'
 })();
 
 </script>
-  <script src="/lang.js" defer></script>
+  <script src="/assets/3d/pd3d.js" defer></script>
+<script src="/lang.js" defer></script>
 <script src="/transition.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 

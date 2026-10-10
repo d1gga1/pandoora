@@ -81,83 +81,83 @@ body:not(.embed) .full{display:none}
 <div class="app" id="app">
   <div class="stage" id="stage">
     <div class="views">
-      <button data-cam="angolo">Prospettiva</button>
-      <button data-cam="alto">Dall'alto</button>
-      <button data-cam="testa" id="camTesta">Testata</button>
-      <button data-cam="base" id="camBase" hidden>Giunto in basso</button>
-      <button data-cam="lato">Fresata laterale</button>
+      <button data-cam="angolo" data-i="cam_persp">Prospettiva</button>
+      <button data-cam="alto" data-i="cam_top">Dall'alto</button>
+      <button data-cam="testa" id="camTesta" data-i="cam_head">Testata</button>
+      <button data-cam="base" id="camBase" hidden data-i="cam_jbot">Giunto in basso</button>
+      <button data-cam="lato" data-i="cam_side">Fresata laterale</button>
     </div>
     <div class="step" id="stepBox" hidden><span id="stepTxt"></span></div>
-    <div class="hint">Trascina per ruotare · rotella o pinch per lo zoom</div>
-    <a class="full" href="/assets/3d/pannello-tamburato-3d.html" target="_blank" rel="noopener">Apri a schermo intero ↗</a>
+    <div class="hint" data-i="hint">Trascina per ruotare · rotella o pinch per lo zoom</div>
+    <a class="full" href="/assets/3d/pannello-tamburato-3d.html" target="_blank" rel="noopener" data-i="full">Apri a schermo intero ↗</a>
   </div>
 
   <aside>
     <div>
-      <p class="ttl">Pannello tamburato 1000 × 3000 × 40</p>
-      <div class="ref">Pan.door.a · modello 3D</div>
+      <p class="ttl" data-i="ttl_panel">Pannello tamburato 1000 × 3000 × 40</p>
+      <div class="ref" data-i="ref">Pan.door.a · modello 3D</div>
     </div>
 
     <section>
-      <h2>Visualizzazione</h2>
+      <h2 data-i="h_view">Visualizzazione</h2>
       <div class="seg" id="modes">
-        <button data-m="montato" aria-pressed="true">Pannello</button>
-        <button data-m="esploso" aria-pressed="false">Esploso</button>
-        <button data-m="xx" aria-pressed="false">Sezione X-X</button>
-        <button data-m="yy" aria-pressed="false">Sezione Y-Y</button>
-        <button class="wide sim" data-m="montaggio" aria-pressed="false">▶ Simula montaggio pannelli</button>
+        <button data-m="montato" aria-pressed="true" data-i="m_panel">Pannello</button>
+        <button data-m="esploso" aria-pressed="false" data-i="m_expl">Esploso</button>
+        <button data-m="xx" aria-pressed="false" data-i="sec_xx">Sezione X-X</button>
+        <button data-m="yy" aria-pressed="false" data-i="sec_yy">Sezione Y-Y</button>
+        <button class="wide sim" data-m="montaggio" aria-pressed="false" data-i="sim_panels">▶ Simula montaggio pannelli</button>
       </div>
       <div class="slider" id="cutWrap" hidden>
-        <label for="cut"><span id="cutLabel">Posizione taglio</span><output id="cutOut">1500 mm</output></label>
+        <label for="cut"><span id="cutLabel" data-i="cut_pos">Posizione taglio</span><output id="cutOut">1500 mm</output></label>
         <input type="range" id="cut" min="0" max="3000" step="5" value="1500">
       </div>
       <div class="asmctl" id="asmCtl" hidden>
-        <div class="lbl">Tipo di giunzione</div>
+        <div class="lbl" data-i="joint_type">Tipo di giunzione</div>
         <div class="seg four" id="joints">
-          <button data-j="linea" aria-pressed="true">a I</button>
-          <button data-j="L" aria-pressed="false">a L</button>
-          <button data-j="T" aria-pressed="false">a T</button>
-          <button data-j="X" aria-pressed="false">a X</button>
+          <button data-j="linea" aria-pressed="true" data-i="j_I">a I</button>
+          <button data-j="L" aria-pressed="false" data-i="j_L">a L</button>
+          <button data-j="T" aria-pressed="false" data-i="j_T">a T</button>
+          <button data-j="X" aria-pressed="false" data-i="j_X">a X</button>
         </div>
         <div class="player">
-          <button id="play" aria-label="Pausa">❚❚</button>
-          <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Avanzamento del montaggio">
+          <button id="play" aria-label="Pausa" data-ia="pause">❚❚</button>
+          <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Avanzamento del montaggio" data-ia="progress">
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Finitura</h2>
+      <h2 data-i="h_finish">Finitura</h2>
       <div class="chips" id="finishes">
-        <button class="chip" data-f="mdf" aria-pressed="true"><span class="sw" style="background:#a9825c"></span>MDF grezzo</button>
-        <button class="chip" data-f="nero" aria-pressed="false"><span class="sw" style="background:#232425"></span>Nero</button>
-        <button class="chip" data-f="rovere" aria-pressed="false"><span class="sw" style="background:#cfae8a"></span>Rovere</button>
-        <button class="chip" data-f="bianco" aria-pressed="false"><span class="sw" style="background:#e7e5df"></span>Bianco</button>
+        <button class="chip" data-f="mdf" aria-pressed="true"><span class="sw" style="background:#a9825c"></span><span data-i="f_mdf">MDF grezzo</span></button>
+        <button class="chip" data-f="nero" aria-pressed="false"><span class="sw" style="background:#232425"></span><span data-i="f_black">Nero</span></button>
+        <button class="chip" data-f="rovere" aria-pressed="false"><span class="sw" style="background:#cfae8a"></span><span data-i="f_oak">Rovere</span></button>
+        <button class="chip" data-f="bianco" aria-pressed="false"><span class="sw" style="background:#e7e5df"></span><span data-i="f_white">Bianco</span></button>
       </div>
     </section>
 
     <section>
-      <h2>Opzioni</h2>
+      <h2 data-i="h_opt">Opzioni</h2>
       <div class="toggles">
-        <label><input type="checkbox" id="evidenzia"> Evidenzia le fresate</label>
-        <label><input type="checkbox" id="profili"> Mostra giunzione e anima sul pannello</label>
-        <label><input type="checkbox" id="rotate"> Rotazione automatica</label>
+        <label><input type="checkbox" id="evidenzia"> <span data-i="o_grooves">Evidenzia le fresate</span></label>
+        <label><input type="checkbox" id="profili"> <span data-i="o_acc">Mostra giunzione e anima sul pannello</span></label>
+        <label><input type="checkbox" id="rotate"> <span data-i="o_rotate">Rotazione automatica</span></label>
       </div>
     </section>
 
     <section>
-      <h2>Dati tecnici</h2>
+      <h2 data-i="h_data">Dati tecnici</h2>
       <dl>
-        <dt>Pannello</dt><dd>1000 × 3000 × 40 mm</dd>
-        <dt>Pelli</dt><dd>MDF 3 mm</dd>
-        <dt>Telaio</dt><dd>Abete, testate 37 mm</dd>
-        <dt>Anima</dt><dd>Nido d'ape</dd>
-        <dt>Fresata teste</dt><dd>15 × 16 mm</dd>
-        <dt>Fresata lati</dt><dd>4 × 17 mm</dd>
-        <dt>Giunzione I</dt><dd>EG-I01 · 15 × 15 × 400, 4 fori Ø 5</dd>
-        <dt>Piastre</dt><dd>L 185 × 185 · T 355 × 185 · X 355 × 355</dd>
-        <dt>Anima allin.</dt><dd>AA-001 · MDF 28 × 4</dd>
-        <dt>Copritesta</dt><dd>CF · 40 × 3, nella finitura</dd>
+        <dt data-i="d_panel">Pannello</dt><dd>1000 × 3000 × 40 mm</dd>
+        <dt data-i="d_skins">Pelli</dt><dd>MDF 3 mm</dd>
+        <dt data-i="d_frame">Telaio</dt><dd data-i="v_frame_p">Abete, testate 37 mm</dd>
+        <dt data-i="d_core">Anima</dt><dd data-i="v_core">Nido d'ape</dd>
+        <dt data-i="d_ghead">Fresata teste</dt><dd>15 × 16 mm</dd>
+        <dt data-i="d_gside">Fresata lati</dt><dd>4 × 17 mm</dd>
+        <dt data-i="d_ji">Giunzione I</dt><dd data-i="v_ji">EG-I01 · 15 × 15 × 400, 4 fori Ø 5</dd>
+        <dt data-i="d_plates">Piastre</dt><dd>L 185 × 185 · T 355 × 185 · X 355 × 355</dd>
+        <dt data-i="d_align">Anima allin.</dt><dd>AA-001 · MDF 28 × 4</dd>
+        <dt data-i="d_cap">Copritesta</dt><dd data-i="v_cap">CF · 40 × 3, nella finitura</dd>
       </dl>
     </section>
   </aside>
@@ -165,9 +165,18 @@ body:not(.embed) .full{display:none}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="/assets/3d/i18n.js"></script>
 <script>
 (function(){
 const Q=new URLSearchParams(location.search);
+const LG=(Q.get('lang')||'it').toLowerCase();
+const DICT=Object.assign({},(window.PD3D_I18N||{}).it||{},(window.PD3D_I18N||{})[LG]||{});
+const t=(k,o)=>{let s=DICT[k]!==undefined?DICT[k]:k;if(o)for(const a in o)s=s.split('{'+a+'}').join(o[a]);return s};
+document.documentElement.lang=LG;if(LG==='ar')document.documentElement.dir='rtl';
+document.querySelectorAll('[data-i]').forEach(e=>{e.textContent=t(e.dataset.i)});
+document.querySelectorAll('[data-ia]').forEach(e=>{e.setAttribute('aria-label',t(e.dataset.ia))});
+{const fl=document.querySelector('.full');if(fl&&LG!=='it')fl.href+=(fl.href.includes('?')?'&':'?')+'lang='+LG;}
+
 if(window.parent!==window||Q.has('embed'))document.body.classList.add('embed');
 const W=1000,L=3000,T=40,SK=3,HEAD=37,SIDE=40;
 const gH=[12.5,27.5], gHd=16;   // fresata teste 15 x 16
@@ -344,42 +353,42 @@ const JOINTS={
     plate:null,
     screws:wallHoles.map(x=>({x,z:0,plate:false})),
     free:[['-x',-W,0],['+x',W,0]],
-    words:{s1:'Inserire l’anima di allineamento AA-001 nella fresata laterale',s2:'Accostare il secondo pannello: l’anima entra nella sua fresata'}
+    words:{s1:t('c_s1_I'),s2:t('c_s2_I')}
   },
   L:{
     name:'a L',
     panels:[{pos:[-W,0],rot:0},{pos:[-T/2,T/2],rot:-Math.PI/2,slide:[0,900]}],
     strip:null,
     tubes:[{axis:'x',start:-TL,c:0},{axis:'z',start:T/2,c:-T/2}],
-    plate:{name:'a L (EG-L01)',rects:[[-185+15,-T/2+15,-15,15],[-T/2-15,-T/2+15,15,185-15]]},
+    plate:{name:t('j_L')+' (EG-L01)',rects:[[-185+15,-T/2+15,-15,15],[-T/2-15,-T/2+15,15,185-15]]},
     screws:[...HOLES.map(h=>({x:-TL+h,z:0,plate:-TL+h>-170})),...perpHoles.map(z=>({x:-T/2,z,plate:z<170}))],
     free:[['+x',0,0],['-x',-W,0],['+z',-T/2,T/2+W]],
-    words:{s2:"Accostare il pannello d'angolo"}
+    words:{s2:t('c_s2_L')}
   },
   T:{
     name:'a T (EG-T01)',
     panels:[{pos:[-W,0],rot:0},{pos:[0,0],rot:0,slide:[900,0]},{pos:[0,T/2],rot:-Math.PI/2,slide:[0,900]}],
     strip:[-AW,AW],
     tubes:[{axis:'x',start:-TL/2,c:0},{axis:'z',start:T/2,c:0}],
-    plate:{name:'a T (EG-T01)',rects:[[-177.5,177.5,-15,15],[-15,15,15,170]]},
+    plate:{name:t('j_T')+' (EG-T01)',rects:[[-177.5,177.5,-15,15],[-15,15,15,170]]},
     screws:[...wallHoles.map(x=>({x,z:0,plate:Math.abs(x)<177})),...perpHoles.map(z=>({x:0,z,plate:z<170}))],
     free:[['-x',-W,0],['+x',W,0],['+z',0,T/2+W]],
-    words:{s1:'Inserire l’anima di allineamento nella fresata laterale del primo pannello',s2:'Accostare il pannello in linea e quello perpendicolare'}
+    words:{s1:t('c_s1_TX'),s2:t('c_s2_T')}
   },
   X:{
     name:'a X (EG-X01)',
     panels:[{pos:[-W,0],rot:0},{pos:[0,0],rot:0,slide:[900,0]},{pos:[0,T/2],rot:-Math.PI/2,slide:[0,900]},{pos:[0,-T/2],rot:Math.PI/2,slide:[0,-900]}],
     strip:[-AW,AW],
     tubes:[{axis:'x',start:-TL/2,c:0},{axis:'z',start:T/2,c:0},{axis:'-z',start:-T/2,c:0}],
-    plate:{name:'a X (EG-X01)',rects:[[-177.5,177.5,-15,15],[-15,15,15,177.5],[-15,15,-177.5,-15]]},
+    plate:{name:t('j_X')+' (EG-X01)',rects:[[-177.5,177.5,-15,15],[-15,15,15,177.5],[-15,15,-177.5,-15]]},
     screws:[...wallHoles.map(x=>({x,z:0,plate:Math.abs(x)<177})),...perpHoles.map(z=>({x:0,z,plate:z<177})),...perpHoles.map(z=>({x:0,z:-z,plate:z<177}))],
     free:[['-x',-W,0],['+x',W,0],['+z',0,T/2+W],['-z',0,-(T/2+W)]],
-    words:{s1:'Inserire l’anima di allineamento nella fresata laterale del primo pannello',s2:'Accostare il pannello in linea e i due perpendicolari'}
+    words:{s1:t('c_s1_TX'),s2:t('c_s2_X')}
   }
 };
 let J=null,jointType=({I:'linea',L:'L',T:'T',X:'X'})[(Q.get('giunto')||'').toUpperCase()]||'linea';
 function disposeTree(o){o.traverse(m=>{if(m.isMesh&&!SHARED.has(m.geometry))m.geometry.dispose()})}
-const FIN={mdf:'MDF grezzo',nero:'nero',rovere:'rovere',bianco:'bianco'};
+const FIN={mdf:t('f_mdf'),nero:t('f_black'),rovere:t('f_oak'),bianco:t('f_white')};
 function buildJoint(type){
   jointType=type;
   document.querySelectorAll('#joints button').forEach(c=>c.setAttribute('aria-pressed',c.dataset.j===type));
@@ -415,13 +424,13 @@ function buildJoint(type){
   const steps=[];
   if(def.strip)steps.push([J.t.s1,def.words.s1]);
   steps.push([J.t.s2,def.words.s2]);
-  steps.push([J.t.s3,'Inserire le giunzioni EG-I01 nelle fresate di testa, sopra e sotto']);
-  if(hp)steps.push([J.t.s4,'Posare le piastre '+def.plate.name+' sopra e sotto']);
-  steps.push([J.t.s5,'Avvitare le viti nei fori Ø 5, sopra e sotto']);
-  steps.push([J.t.s6,()=>'Applicare i copritesta sui lati a vista, nella finitura dei pannelli ('+FIN[currentFinish]+')']);
-  J.caps=[[0,def.strip?'Pannello posato: la fresata laterale 4 × 17 è libera':'Primo pannello posato']]
+  steps.push([J.t.s3,t('c_tubes')]);
+  if(hp)steps.push([J.t.s4,t('c_plates',{p:def.plate.name})]);
+  steps.push([J.t.s5,t('c_screws')]);
+  steps.push([J.t.s6,()=>t('c_covers',{f:FIN[currentFinish]})]);
+  J.caps=[[0,def.strip?t('c_start_strip'):t('c_start')]]
     .concat(steps.map((s,i)=>[s[0],typeof s[1]==='function'?()=>(i+1)+' · '+s[1]():(i+1)+' · '+s[1]]))
-    .concat([[J.dur-0.8,'Giunzione '+({linea:'a I',L:'a L',T:'a T',X:'a X'})[type]+' completata']]);
+    .concat([[J.dur-0.8,t('c_done',{j:({linea:t('j_I'),L:t('j_L'),T:t('j_T'),X:t('j_X')})[type]})]]);
   applyFinish();
 }
 const clamp=v=>Math.max(0,Math.min(1,v));
@@ -454,7 +463,7 @@ function updateClip(){
 cut.addEventListener('input',updateClip);
 
 let animT=0,playing=false;
-function setPlaying(p){playing=p;playBtn.textContent=p?'❚❚':'▶';playBtn.setAttribute('aria-label',p?'Pausa':'Riproduci')}
+function setPlaying(p){playing=p;playBtn.textContent=p?'❚❚':'▶';playBtn.setAttribute('aria-label',p?t('pause'):t('play'))}
 playBtn.onclick=()=>{if(!playing&&animT>=J.dur)animT=0;setPlaying(!playing)};
 scrub.addEventListener('input',()=>{setPlaying(false);animT=scrub.value/1000*J.dur;setAsm(animT)});
 
@@ -477,12 +486,12 @@ function setMode(m){
   document.querySelectorAll('#modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===m));
   const isAsm=m==='montaggio';
   single.visible=!isAsm;asm.visible=isAsm;asmCtl.hidden=!isAsm;stepBox.hidden=!isAsm;
-  $('camBase').hidden=!isAsm;$('camTesta').textContent=isAsm?'Giunto in alto':'Testata';
+  $('camBase').hidden=!isAsm;$('camTesta').textContent=isAsm?t('cam_jtop'):t('cam_head');
   ground.position.y=isAsm?-0.003:-0.2;
   explodeTarget=m==='esploso'?1:0;
   const sec=m==='xx'||m==='yy';cutWrap.hidden=!sec;setClipping(sec);
-  if(m==='xx'){cut.max=L;cut.value=2600;cutLabel.textContent='Taglio lungo la lunghezza'}
-  if(m==='yy'){cut.max=W;cut.value=500;cutLabel.textContent='Taglio lungo la larghezza'}
+  if(m==='xx'){cut.max=L;cut.value=2600;cutLabel.textContent=t('cut_len')}
+  if(m==='yy'){cut.max=W;cut.value=500;cutLabel.textContent=t('cut_wid')}
   updateClip();
   if(m==='xx'){const z=(+cut.value-L/2)*0.001;fly([0.75,0.42,z+0.75],[0,0.02,z])}
   else if(m==='yy'){const x=(+cut.value-W/2)*0.001;fly([x+0.8,0.4,1.95],[x,0.02,1.35])}

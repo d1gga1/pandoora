@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 </head>
 <body>
 
@@ -153,6 +154,19 @@
     <h2>Cene i isporuka</h2>
 <p>Standardna ploča 2 500 × 500 mm, 40 mm, košta <strong>23,80 € bez PDV-a</strong>, protivpožarna od 33,80 €; cene po dimenzijama u <a href="/listino-pannelli-tamburati/">cenovniku 2026</a>. Od fabrike do Beograda ima oko 900 km: kamion stiže za 2 dana. Srbija, BiH i Crna Gora nisu u EU: mi pripremamo izvozna dokumenta, a carinjenje i PDV pri uvozu obavljaju se preko vašeg špeditera.</p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D model i montaža</h2>
+  <p>Okrenite ploču i podijum, otvorite rastavljeni prikaz i pogledajte korak po korak kako se montiraju.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=sr" data-title="Saćasta ploča 1000 × 3000 × 40">Ploča</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=sr" data-title="Podijum">Podijum</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=sr" title="Saćasta ploča 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/sr/sacaste-ploce-za-standove/montaza-ploca/">Montaža ploča →</a> &nbsp; <a href="/sr/sacaste-ploce-za-standove/montaza-podijuma/">Montaža podijuma →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Česta pitanja</h2>
@@ -250,6 +264,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

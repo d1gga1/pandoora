@@ -101,6 +101,7 @@
 
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <style>
 html[lang^=zh] body,html[lang^=zh] .pg-hero,html[lang^=zh] .pg-sec,html[lang^=zh] .pf,html[lang^=zh] .topbar{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,Arial,sans-serif}
 html[lang^=zh] h1,html[lang^=zh] h2,html[lang^=zh] h3,html[lang^=zh] .pg-stat b{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif!important;font-weight:700}
@@ -168,6 +169,19 @@ html[lang^=zh] em{font-style:normal}
     墙面和地面用方块板（按项目尺寸）；蜂窝、刨花板或带可调脚的找平地台。</p>
 
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D 模型与安装</h2>
+  <p>旋转板材和地台，打开爆炸图，一步步查看它们如何安装。</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=zh" data-title="蜂窝板 1000 × 3000 × 40">板材</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=zh" data-title="地台">地台</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=zh" title="蜂窝板 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/zh/fengwoban/banshi-anzhuang/">板材安装 →</a> &nbsp; <a href="/zh/fengwoban/ditai-anzhuang/">地台安装 →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>常见问题</h2>
@@ -256,6 +270,7 @@ html[lang^=zh] em{font-style:normal}
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

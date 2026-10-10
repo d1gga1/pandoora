@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -145,6 +146,19 @@
     <h2>Sausā montāža ar savienojumiem</h2>
 <p>Paneļus neskrūvē kopā: <strong>I, L, T un X savienojumi</strong> ievietojas rāmja frēzētajās rievās. Siena ir stingra un izjaucama bez bojājumiem — to pašu stendu var uzbūvēt Ķīpsalā un pēc tam nākamajā izstādē.</p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D modelis un montāža</h2>
+  <p>Pagrieziet paneli un podestu, atveriet izjaukto skatu un apskatiet soli pa solim, kā tos montē.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=lv" data-title="Šūnveida panelis 1000 × 3000 × 40">Panelis</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=lv" data-title="Podests">Podests</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=lv" title="Šūnveida panelis 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/lv/sunveida-paneli/panelu-montaza/">Paneļu montāža →</a> &nbsp; <a href="/lv/sunveida-paneli/podestu-montaza/">Podestu montāža →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Biežāk uzdotie jautājumi</h2>
@@ -250,6 +264,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

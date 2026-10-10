@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -145,6 +146,19 @@
     <h2>Sausas montavimas jungtimis</h2>
 <p>Plokštės nesusukamos varžtais: <strong>I, L, T ir X jungtys</strong> įsistato į frezuotus rėmo griovelius. Sienelė standi ir išardoma be pažeidimų — tą patį stendą galima statyti LITEXPO ir vėliau kitoje parodoje.</p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D modelis ir montavimas</h2>
+  <p>Pasukite plokštę ir podiumą, atidarykite išskaidytą vaizdą ir žingsnis po žingsnio pažiūrėkite, kaip jie montuojami.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=lt" data-title="Korinė plokštė 1000 × 3000 × 40">Plokštė</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=lt" data-title="Podiumas">Podiumas</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=lt" title="Korinė plokštė 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/lt/korines-plokstes/ploksciu-montavimas/">Plokščių montavimas →</a> &nbsp; <a href="/lt/korines-plokstes/podiumu-montavimas/">Podiumų montavimas →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Dažniausiai užduodami klausimai</h2>
@@ -250,6 +264,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

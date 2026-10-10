@@ -99,6 +99,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 </head>
 <body>
 
@@ -152,6 +153,19 @@
     <h2>Cijene i dostava</h2>
 <p>Standardna ploča 2 500 × 500 mm, 40 mm, stoji <strong>23,80 € bez PDV-a</strong>, vatrootporna od 33,80 €; cijene po dimenzijama u <a href="/listino-pannelli-tamburati/">cjeniku 2026</a>. Od tvornice do Zagreba ima oko 350 km: dostava u jednom danu, bez carine (EU); tvrtkama s valjanim PDV ID brojem EU fakturiramo bez talijanskog PDV-a (prijenos porezne obveze).</p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D model i montaža</h2>
+  <p>Okrenite ploču i podest, otvorite rastavljeni prikaz i pogledajte korak po korak kako se montiraju.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=hr" data-title="Saćasta ploča 1000 × 3000 × 40">Ploča</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=hr" data-title="Podest">Podest</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=hr" title="Saćasta ploča 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/hr/sacaste-ploce-za-standove/montaza-ploca/">Montaža ploča →</a> &nbsp; <a href="/hr/sacaste-ploce-za-standove/montaza-podesta/">Montaža podesta →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Česta pitanja</h2>
@@ -251,6 +265,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

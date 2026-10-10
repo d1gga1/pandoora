@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -146,6 +147,19 @@
     <h2>Száraz szerelés kötőelemekkel</h2>
 <p>A paneleket nem csavarozzuk egymáshoz: <strong>I, L, T és X kötőelemek</strong> illeszkednek a keret marásaiba. A fal merev marad, és sérülés nélkül szétszedhető: ugyanaz a stand a Hungexpón, majd a következő kiállításon is felépíthető.</p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D modell és szerelés</h2>
+  <p>Forgassa el a panelt és a dobogót, nyissa meg a robbantott nézetet, és nézze meg lépésről lépésre, hogyan szerelik.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=hu" data-title="Méhsejt panel 1000 × 3000 × 40">Panel</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=hu" data-title="Dobogó">Dobogó</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=hu" title="Méhsejt panel 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/hu/mehsejt-panelek/panelek-szerelese/">Panelek szerelése →</a> &nbsp; <a href="/hu/mehsejt-panelek/dobogok-szerelese/">Dobogók szerelése →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Gyakori kérdések</h2>
@@ -251,6 +265,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

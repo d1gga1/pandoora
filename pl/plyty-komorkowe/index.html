@@ -99,6 +99,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -179,6 +180,19 @@ kraju</a>.</p>
     <p>Cała oferta — płyty standardowe i laminowane, murki, płyty gięte i lustrzane, składane kolumny, płyty elektryczne i ekspozycyjne, sufity, donice, drzwi na stoisko i antypaniczne, płytki podłogowe, podesty, szafki i lady recepcyjne — jest w <a href="/pl/katalog-plyt-komorkowych-2026/">katalogu 2026 do przeglądania online</a>, ze zdjęciami, rysunkami technicznymi, połączeniami i masą płyt.</p>
     <p><a class="pg-btn pg-btn-p" href="https://catalogue-pandooragroup-2026.netlify.app/" target="_blank" rel="noopener">Katalog 2026 do przeglądania online ↗</a></p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>Model 3D i montaż</h2>
+  <p>Obróć płytę i podest, otwórz widok rozstrzelony i zobacz krok po kroku, jak się je montuje.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=pl" data-title="Płyta komórkowa 1000 × 3000 × 40">Płyta</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=pl" data-title="Podest">Podest</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=pl" title="Płyta komórkowa 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/pl/plyty-komorkowe/montaz-plyt/">Montaż płyt →</a> &nbsp; <a href="/pl/plyty-komorkowe/montaz-podestow/">Montaż podestów →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Często zadawane pytania</h2>
@@ -287,6 +301,7 @@ kraju</a>.</p>
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

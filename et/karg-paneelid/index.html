@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -145,6 +146,19 @@
     <h2>Kuivpaigaldus ühendustega</h2>
 <p>Paneele ei kruvita kokku: <strong>I-, L-, T- ja X-ühendused</strong> asetuvad raami freesitud soontesse. Sein on jäik ja lahtivõetav ilma kahjustusteta — sama boksi saab ehitada Tallinna messikeskuses ja siis järgmisel messil.</p>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D-mudel ja paigaldus</h2>
+  <p>Pööra paneeli ja poodiumi, ava lahtivõetud vaade ja vaata samm-sammult, kuidas need paigaldatakse.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=et" data-title="Kärgpaneel 1000 × 3000 × 40">Paneel</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=et" data-title="Poodium">Poodium</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=et" title="Kärgpaneel 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/et/karg-paneelid/paneelide-paigaldus/">Paneelide paigaldus →</a> &nbsp; <a href="/et/karg-paneelid/poodiumide-paigaldus/">Poodiumide paigaldus →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Korduma kippuvad küsimused</h2>
@@ -250,6 +264,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

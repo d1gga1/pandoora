@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -159,6 +160,19 @@
       <tr><th>Paloluokka</th><td>Paloluokiteltu MDF, euroluokka B-s1,d0 (EN 13501-1), toimittajan sertifikaatti ja vaatimustenmukaisuusvakuutuksemme</td></tr>
     </tbody></table></div>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D-malli ja asennus</h2>
+  <p>Käännä levyä ja koroketta, avaa räjäytysnäkymä ja katso vaihe vaiheelta, miten ne asennetaan.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=fi" data-title="Kennolevy 1000 × 3000 × 40">Levy</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=fi" data-title="Koroke">Koroke</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=fi" title="Kennolevy 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/fi/puiset-kennolevyt/levyjen-asennus/">Levyjen asennus →</a> &nbsp; <a href="/fi/puiset-kennolevyt/korokkeiden-asennus/">Korokkeiden asennus →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Usein kysyttyä</h2>
@@ -264,6 +278,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

@@ -99,6 +99,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -170,6 +171,19 @@ napačno. <a href="/sl/razred-odziva-na-ogenj-stojnica/">Pregled zahtev država 
 državo</a>.</p>
 
   </section>
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D model in montaža</h2>
+  <p>Zavrtite ploščo in podest, odprite razstavljeni pogled in si korak za korakom oglejte, kako se montirata.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=sl" data-title="Satovna plošča 1000 × 3000 × 40">Plošča</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=sl" data-title="Podest">Podest</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=sl" title="Satovna plošča 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/sl/satovne-plosce/montaza-plosc/">Montaža plošč →</a> &nbsp; <a href="/sl/satovne-plosce/montaza-podestov/">Montaža podestov →</a></span></figcaption>
+  </figure>
+</section>
+
   <section class="pg-sec" id="faq">
     <h2>Pogosta vprašanja</h2>
     <div class="pg-faq"><details><summary>Kaj je satovna plošča?</summary><div class="pg-a"><p>Plošča z obrobnim okvirjem iz lesa, lepljenega na zob, satovnim jedrom, ki drži debelino brez dodane mase, in dvema lepljenima oblogama, najpogosteje melaminskima ali iz lakiranega MDF. To je plošča, iz katere so narejene praktično vse razstavljive sejemske stene.</p></div></details><details><summary>Kakšna je največja višina?</summary><div class="pg-a"><p>Do 6000 mm v enem kosu, kar odpravi vodoravno špranjo na pol višine. Od 3000 mm so potrebne kotne vrnitve.</p></div></details><details><summary>Kakšen razred odziva na ogenj imajo plošče?</summary><div class="pg-a"><p>Standardna plošča je lesni izdelek in se giblje v okolici D-s2, d0 po SIST EN 13501-1 — to zadošča tam, kjer se zahteva razred D, na primer pri francoskih stenah stojnice. Težko vnetljiva različica uporablja obloge iz težko vnetljivega MDF in je namenjena med drugim nemškim sejmom, kjer se zahteva najmanj B1 ali C-s2, d0.</p></div></details><details><summary>Velja najmanjša količina naročila?</summary><div class="pg-a"><p>Ne, kupite lahko tudi en kos, nestandardne mere pa obračunamo po ceni naslednje večje standardne mere. Naš cenik je objavljen.</p></div></details></div>
@@ -276,6 +290,7 @@ državo</a>.</p>
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

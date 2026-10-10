@@ -100,6 +100,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
@@ -159,6 +160,19 @@
       <tr><th>Brandklass</th><td>Brandklassad MDF i Euroklass B-s1,d0 (EN 13501-1), med leverantörens certifikat och vår försäkran om överensstämmelse</td></tr>
     </tbody></table></div>
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>3D-modell och montering</h2>
+  <p>Rotera panelen och podiet, öppna sprängvyn och se steg för steg hur de monteras.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=sv" data-title="Bikakepanel 1000 × 3000 × 40">Panel</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=sv" data-title="Podium">Podium</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=sv" title="Bikakepanel 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/sv/bikakepaneler/montering-av-paneler/">Montering av paneler →</a> &nbsp; <a href="/sv/bikakepaneler/montering-av-podier/">Montering av podier →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>Vanliga frågor</h2>
@@ -264,6 +278,7 @@
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>

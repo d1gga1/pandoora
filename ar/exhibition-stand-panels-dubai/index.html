@@ -36,6 +36,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
+<link rel="stylesheet" href="/assets/3d/pd3d.css">
 <style>
 html[dir=rtl] body,html[dir=rtl] .pg-hero,html[dir=rtl] .pg-sec,html[dir=rtl] .pf,html[dir=rtl] .topbar{font-family:'IBM Plex Sans Arabic','Manrope',system-ui,Arial,sans-serif}
 html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3,html[dir=rtl] .pg-stat b{font-family:'IBM Plex Sans Arabic',system-ui,Arial,sans-serif!important;font-weight:700}
@@ -125,6 +126,19 @@ html[dir=rtl] .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
     المعرض عبر شركة الشحن لديكم.</p>
 
   </section>
+
+  <section class="pg-sec pd3d-in" id="model-3d">
+  <h2>النموذج ثلاثي الأبعاد والتركيب</h2>
+  <p>دوِّر اللوح والمنصة، وافتح العرض المفكك، وشاهد خطوة بخطوة كيف يُركَّبان.</p>
+  <div class="pd3d-tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="pd3dBox" data-src="/assets/3d/pannello-tamburato-3d.html?lang=ar" data-title="لوح خلية النحل 1000 × 3000 × 40">اللوح</button>
+    <button role="tab" aria-selected="false" aria-controls="pd3dBox" data-src="/assets/3d/pedana-tamburata-3d.html?lang=ar" data-title="المنصة">المنصة</button>
+  </div>
+  <figure class="pd3d" id="pd3dBox">
+    <iframe src="/assets/3d/pannello-tamburato-3d.html?lang=ar" title="لوح خلية النحل 1000 × 3000 × 40" loading="lazy" allow="fullscreen"></iframe>
+    <figcaption><span></span><span><a href="/ar/exhibition-stand-panels-dubai/panel-assembly/">تركيب الألواح →</a> &nbsp; <a href="/ar/exhibition-stand-panels-dubai/platform-assembly/">تركيب المنصات →</a></span></figcaption>
+  </figure>
+</section>
 
   <section class="pg-sec" id="faq">
     <h2>الأسئلة الشائعة</h2>
@@ -228,6 +242,7 @@ html[dir=rtl] .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
   }
 })();
 </script>
+<script src="/assets/3d/pd3d.js" defer></script>
 <script src="/lang.js" defer></script>
 <script src="/mobile-nav.js" defer></script>
 </body>
