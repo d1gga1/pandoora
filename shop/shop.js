@@ -162,6 +162,7 @@
     var red='#c0392b';
     o+='<g stroke="'+red+'" stroke-width="1.5" fill="none"><path d="M'+x0+' '+(y0+H+22)+'H'+(x0+W)+'M'+x0+' '+(y0+H+16)+'v12M'+(x0+W)+' '+(y0+H+16)+'v12"/><path d="M'+(x0+W+22)+' '+y0+'V'+(y0+H)+'M'+(x0+W+16)+' '+y0+'h12M'+(x0+W+16)+' '+(y0+H)+'h12"/></g>';
     o+='<g font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="15" fill="'+red+'"><text x="'+(x0+W/2)+'" y="'+(y0+H+40)+'" text-anchor="middle">'+D.w+' cm</text><text x="'+(x0+W+36)+'" y="'+(y0+H/2)+'" text-anchor="middle" transform="rotate(-90 '+(x0+W+36)+' '+(y0+H/2)+')">'+D.h+' cm</text></g>';
+    if(interactive)o+=wmLogo(vw,vh,.62,.07);
     return o+'</svg>';
   }
   function svgURI(svg){return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)}
@@ -218,7 +219,14 @@
     return o;
   }
   var LBL={overall:'ingombro',frame:'telaio',leaf:'anta',opening:'vano'};
-  function doorElevSVG(p,c){var g=doorGeom(c);return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 700" class="s-tech"><style>.tl{font:600 12px Manrope,Arial,sans-serif;fill:#1a2028}</style><rect width="560" height="700" fill="#fbfaf8"/>'+elevation(p,c,g,10,20,540,660,LBL)+'</svg>'}
+  /* ---------- logo Pandoora in filigrana sui disegni ---------- */
+  var WM_URL=(location.origin&&location.origin.indexOf('http')===0?location.origin:'https://pandooragroup.it')+'/pandoora_logo.webp';
+  function wmLogo(W,H,k,op){ // logo centrato, largo k volte il lato minore, opacità op
+    var w=Math.min(W,H)*(k||.6),iw=w*560/388,ih=iw*373/560; // 388×316 = parte visibile del file 560×373
+    var x=W/2-(299/560)*iw,y=H/2-(184/373)*ih;
+    return '<image href="'+WM_URL+'" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+iw.toFixed(1)+'" height="'+ih.toFixed(1)+'" opacity="'+(op||.07)+'" preserveAspectRatio="xMidYMid meet" pointer-events="none"/>';
+  }
+  function doorElevSVG(p,c){var g=doorGeom(c);return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 700" class="s-tech"><style>.tl{font:600 12px Manrope,Arial,sans-serif;fill:#1a2028}</style><rect width="560" height="700" fill="#fbfaf8"/>'+elevation(p,c,g,10,20,540,660,LBL)+wmLogo(560,700,.62,.07)+'</svg>'}
   function doorSheetSVG(p,c){
     var g=doorGeom(c),T=PR.door.tech,right=c.hand!=='sx',fm=c.open==='filo-muro',bat=c.open==='battente';
     var o='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1190" class="s-tech"><style>.tl{font:600 13px Manrope,Arial,sans-serif;fill:#1a2028}.ts{font:500 11px Manrope,Arial,sans-serif;fill:#4a525c}.th{font:800 15px Manrope,Arial,sans-serif;fill:#1a2028}.tt{font:800 30px Manrope,Arial,sans-serif;fill:#0d1524}</style>'
@@ -280,6 +288,7 @@
     o+='<text x="50" y="1004" class="tl" style="font-weight:500">'+esc(sp.slice(0,4).join('  ·  '))+'</text><text x="50" y="1022" class="tl" style="font-weight:500">'+esc(sp.slice(4).join('  ·  '))+(c.ex&&c.ex.stipiti?'  ·  Allargamento stipiti':'')+(c.ex&&c.ex.vetro?'  ·  Con vetro':'')+'</text>';
     o+='<text x="50" y="1056" class="ts">'+(bat?'Porta ridotta rispetto al vano (L −30, H −40): gioco di fissaggio 15 per lato, 40 in testa. Telaio sp. 27, giochi anta 3 per lato/testa, 10 sotto l\'anta, senza soglia.':'Schema indicativo: per '+esc(op.label.toLowerCase())+' le misure dell\'anta si definiscono con il disegno esecutivo dopo il sopralluogo.')+'</text>';
     o+='<text x="50" y="1074" class="ts">Disegno generato dalle misure inserite: le misure definitive si confermano con il rilievo in cantiere prima della produzione.</text>';
+    o+=wmLogo(1680,1190,.62,.06);
     return o+'</svg>';
   }
   function quote(p,c){return p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
@@ -604,7 +613,7 @@
     $('#s-sheet-x',o).onclick=function(){o.classList.remove('show');setTimeout(function(){o.classList.remove('open')},300)};
     $('#s-sheet-print',o).onclick=function(){
       var w=window.open('','_blank');if(!w)return;
-      w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Scheda tecnica '+esc(p.name)+'</title><style>@page{size:A4 landscape;margin:8mm}html,body{margin:0}svg{width:100%;height:auto;display:block}</style></head><body>'+doorSheetSVG(p,c)+'<script>setTimeout(function(){print()},300)<\/script></body></html>');w.document.close();
+      w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Scheda tecnica '+esc(p.name)+'</title><style>@page{size:A4 landscape;margin:8mm}html,body{margin:0}svg{width:100%;height:auto;display:block}</style></head><body>'+doorSheetSVG(p,c)+'<script>addEventListener("load",function(){setTimeout(function(){print()},150)})<\/script></body></html>');w.document.close();
     };
   }
   function showPM(m,id){
