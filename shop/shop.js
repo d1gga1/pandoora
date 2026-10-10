@@ -493,6 +493,7 @@
   /* ---------- home ---------- */
   function heroDoor(){
     var leaf=$('.s-stage-leaf'),room=$('.s-stage-room'),wall=$('.s-stage-wall');if(!leaf)return;
+    function th(){leaf.style.setProperty('--t',(leaf.offsetWidth*4.4/80).toFixed(1)+'px')}th();addEventListener('resize',th);
     if(RM){leaf.style.transform='rotateY(-62deg)';if(wall)wall.style.opacity=0;return}
     var ang=0,target=68,t0=null;
     setTimeout(function(){if(wall)wall.style.opacity=0},500);
