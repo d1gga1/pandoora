@@ -1,0 +1,13 @@
+{
+ "_nota": "Recensioni VERE dei clienti, una lista per id prodotto. Arrivano via email dal modulo 'Scrivi una recensione': copiatele qui dopo averle verificate, poi rilanciate python3 _seo-tools/shop_seo.py. Mai inventarle.",
+ "esempio_formato": {
+  "nome": "Mario R.",
+  "citta": "Treviso",
+  "voto": 5,
+  "data": "2026-10-11",
+  "titolo": "Ottima porta",
+  "testo": "...",
+  "verificato": true
+ },
+ "reviews": {}
+}

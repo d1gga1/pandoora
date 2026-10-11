@@ -175,6 +175,185 @@
    "exp": 0.85,
    "round": 9,
    "ivaNote": "IVA inclusa · trasporto a parte"
+  },
+  "offers": {
+   "_nota": "Sconti e pacchetti. Lo sconto non è cumulabile: su ogni riga del carrello vale il più alto tra pacchetto, quantità porte e codice newsletter. Cambiate qui le percentuali.",
+   "newsletter": {
+    "perc": 10,
+    "code": "BENVENUTO10",
+    "notify": "ordini@pandooragroup.it"
+   },
+   "doorQty": [
+    {
+     "min": 3,
+     "perc": 12,
+     "label": "Pacchetto 3 porte"
+    },
+    {
+     "min": 5,
+     "perc": 15,
+     "label": "Pacchetto casa 5 porte"
+    }
+   ],
+   "bundlePerc": 12,
+   "pairs": {
+    "a-ribalta": [
+     [
+      "Ingresso completo",
+      [
+       "consolle-ingresso"
+      ]
+     ],
+     [
+      "Ingresso con seduta",
+      [
+       "panca-seduta-cuscino"
+      ]
+     ]
+    ],
+    "con-ante": [
+     [
+      "Ingresso completo",
+      [
+       "consolle-ingresso"
+      ]
+     ],
+     [
+      "Ingresso con seduta",
+      [
+       "panca-vani-giorno"
+      ]
+     ]
+    ],
+    "a-giorno": [
+     [
+      "Ingresso completo",
+      [
+       "consolle-ingresso"
+      ]
+     ],
+     [
+      "Ingresso con seduta",
+      [
+       "panca-seduta-cuscino"
+      ]
+     ]
+    ],
+    "con-seduta": [
+     [
+      "Ingresso completo",
+      [
+       "ingresso-specchio"
+      ]
+     ],
+     [
+      "Seduta + scarpiera",
+      [
+       "scarpiera-ribalta-2"
+      ]
+     ]
+    ],
+    "comodini": [
+     [
+      "Coppia di comodini",
+      [
+       "@self"
+      ]
+     ]
+    ],
+    "mobili-tv": [
+     [
+      "Zona giorno",
+      [
+       "libreria-alveare-2x4"
+      ]
+     ],
+     [
+      "Soggiorno completo",
+      [
+       "madia-3-ante"
+      ]
+     ]
+    ],
+    "madie-credenze": [
+     [
+      "Sala da pranzo",
+      [
+       "tavolo-rovere-160"
+      ]
+     ],
+     [
+      "Soggiorno",
+      [
+       "mobile-tv-basso-180"
+      ]
+     ]
+    ],
+    "librerie": [
+     [
+      "Zona giorno",
+      [
+       "mobile-tv-basso-180"
+      ]
+     ],
+     [
+      "Libreria + madia",
+      [
+       "credenza-2-ante"
+      ]
+     ]
+    ],
+    "mobili-ingresso": [
+     [
+      "Ingresso completo",
+      [
+       "scarpiera-ribalta-2"
+      ]
+     ],
+     [
+      "Ingresso con seduta",
+      [
+       "panca-seduta-cuscino"
+      ]
+     ]
+    ],
+    "mobili-bagno": [
+     [
+      "Bagno completo",
+      [
+       "colonna-bagno"
+      ]
+     ],
+     [
+      "Bagno + lavanderia",
+      [
+       "mobile-lavatrice"
+      ]
+     ]
+    ],
+    "tavoli-completi": [
+     [
+      "Sala da pranzo",
+      [
+       "credenza-2-ante"
+      ]
+     ],
+     [
+      "Pranzo e soggiorno",
+      [
+       "madia-3-ante"
+      ]
+     ]
+    ],
+    "top-per-tavoli": [
+     [
+      "Top + credenza",
+      [
+       "credenza-2-ante"
+      ]
+     ]
+    ]
+   }
   }
  },
  "products": [

@@ -337,19 +337,20 @@
     var dims=p.type==='cube'?'<span class="s-dim">'+s.w+' × '+s.d+' × '+s.h+' cm · '+p.preset.cols*p.preset.rows+' vani</span>':s?'<span class="s-dim">'+s.w+' × '+s.d+' × '+s.h+' cm'+(p.std.length>1?' · '+p.std.length+' misure':'')+'</span>':'<span class="s-dim">L 60–90 × H 210 cm · anche fuori misura</span>';
     var sw='<span class="s-swatches">'+(p.finishes||[]).slice(0,5).map(function(f){return '<i title="'+esc(f)+'" style="background:'+swatch(f)+'"></i>'}).join('')+'</span>';
     return '<article class="s-card" data-type="'+p.type+'" data-id="'+esc(p.id)+'">'
-      +'<div class="s-card-img" data-open="'+esc(p.id)+'" role="button" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+(p._thumb?'src="'+p._thumb+'"':imgAttrs(p))+' alt="'+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
+      +'<a class="s-card-img" href="'+pURL(p)+'" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+(p._thumb?'src="'+p._thumb+'"':imgAttrs(p))+' alt="'+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
       +(p.badge?'<span class="s-badge">'+esc(p.badge)+'</span>':'')+(p.custom||p.type==='door'?'<span class="s-badge g r2">Su misura</span>':'')
-      +'<button class="s-card-q" type="button" data-open="'+esc(p.id)+'">'+IC.eye+'Configura</button></div>'
-      +top+'<h3><a href="'+pURL(p)+'" data-open="'+esc(p.id)+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc||'')+'</p>'+dims+sw
+      +'<span class="s-card-q">'+IC.eye+'Scopri e configura</span></a>'
+      +top+'<h3><a href="'+pURL(p)+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc||'')+'</p>'+dims+sw
       +'<div class="s-price">'+(many?'<small>da</small>':'')+eur.format(price)+(p.type==='door'?'<span>IVA escl. · posa inclusa</span>':'')+'</div>'
       +'<div class="s-card-foot"><button class="s-add" type="button" data-add="'+esc(p.id)+'" aria-label="Aggiungi '+esc(p.name)+' al carrello">'+IC.plus+'<span>Aggiungi</span></button>'
       +'<button class="s-fav" type="button" data-fav="'+esc(p.id)+'" aria-pressed="'+fav+'" aria-label="Salva nei preferiti">'+IC.heart+'</button></div>'
       +'</article>';
   }
   function byId(id){return P.find(function(x){return x.id===id})}
+  function go(u){try{sessionStorage.setItem('pdWipe','1')}catch(e){}location.href=u}
   function pURL(p){return '/shop/'+p.cat+'/'+p.id+'/'}
   function bindCards(root,sub){
-    $$('[data-open]',root).forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openProduct(b.dataset.open,sub,b.closest('.s-card'))})});
+    $$('[data-open]',root).forEach(function(b){if(b.tagName==='A')return;b.addEventListener('click',function(e){e.preventDefault();var p=byId(b.dataset.open);if(p)go(pURL(p))})});
     $$('[data-add]',root).forEach(function(b){b.onclick=function(){
       var p=byId(b.dataset.add);if(!p)return;
       var img=b.closest('.s-card').querySelector('.s-card-img img');
@@ -388,11 +389,12 @@
     var b=which==='fav'?$('#s-fav-btn'):which==='cart'?$('#s-cart-btn'):null;
     if(b){b.classList.remove('bump');void b.offsetWidth;b.classList.add('bump')}
   }
-  function addToCart(p,c,qty,fromImg){
-    var q=quote(p,c), key=p.id+'|'+JSON.stringify(c);
+  function addToCart(p,c,qty,fromImg,o){
+    o=o||{};var q=quote(p,c), key=p.id+'|'+JSON.stringify(c)+(o.bundle?'|'+o.bundle:'');
     var ex=cart.find(function(l){return l.key===key});
-    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:p.type==='door'?'escl':'incl',qty:qty});
+    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:p.type==='door'?'escl':'incl',qty:qty,bundle:o.bundle||'',bdisc:o.disc||0,bname:o.bname||''});
     store('pdShopCart2',cart);
+    if(o.silent)return;
     fly(fromImg,function(){counts('cart')});
     toast(p.name+' nel carrello');
   }
@@ -412,10 +414,24 @@
     t.querySelector('button').onclick=function(){t.classList.remove('show');openDrawer('cart')};
     requestAnimationFrame(function(){t.classList.add('show')});clearTimeout(tT);tT=setTimeout(function(){t.classList.remove('show')},3200);
   }
+  function OF(){return (PR&&PR.offers)||{}}
+  function codeApplied(){var N=OF().newsletter||{},c=store('pdCode');return N.code&&c===N.code?c:''}
+  function cartCalc(){
+    var O=OF(),tiers=(O.doorQty||[]).slice().sort(function(a,b){return a.min-b.min}),N=O.newsletter||{},code=codeApplied();
+    var bv=bundleOK(),dq=cart.reduce(function(a,l){return a+(l.type==='door'&&!l.bundle?l.qty:0)},0),tier=null,next=null;
+    tiers.forEach(function(t){if(dq>=t.min)tier=t;else if(!next&&dq>0)next={need:t.min-dq,perc:t.perc}});
+    var sub=0,disc=0,rows=cart.map(function(l){
+      var g=l.unit*l.qty,best=[0,''];
+      [[l.bundle&&bv[l.bundle]?l.bdisc||0:0,l.bname||'Pacchetto'],[l.type==='door'&&!l.bundle&&tier?tier.perc:0,tier?tier.label:''],[code?N.perc:0,'codice '+code]].forEach(function(c){if(c[0]>best[0])best=c});
+      var a=Math.round(g*best[0]/100);sub+=g;disc+=a;return{gross:g,perc:best[0],why:best[1],amount:a};
+    });
+    return{sub:sub,disc:disc,tot:sub-disc,rows:rows,next:next};
+  }
   function orderText(){
-    var tot=0,s='Ordine dal Pandoora Shop:\n\n';
-    cart.forEach(function(l){tot+=l.unit*l.qty;s+='• '+l.qty+' × '+l.name+' — '+l.sum+' — '+eur.format(l.unit*l.qty)+(l.iva==='escl'?' (IVA escl.)':'')+'\n'});
-    return s+'\nTotale indicativo: '+eur.format(tot)+'\n\nNome:\nComune di consegna:\nTelefono:';
+    var K=cartCalc(),s='Ordine dal Pandoora Shop:\n\n';
+    cart.forEach(function(l,i){var r=K.rows[i];s+='• '+l.qty+' × '+l.name+' — '+l.sum+' — '+eur.format(r.gross-r.amount)+(r.perc?' (−'+r.perc+'% '+r.why+')':'')+(l.iva==='escl'?' (IVA escl.)':'')+'\n'});
+    var code=codeApplied();
+    return s+(K.disc?'\nSconti: −'+eur.format(K.disc):'')+'\nTotale indicativo: '+eur.format(K.tot)+(code?'\nCodice sconto: '+code:'')+'\n\nNome:\nComune di consegna:\nTelefono:';
   }
   function openDrawer(mode){
     var b=$('#s-drawer-b'),f=$('#s-drawer-f'),t=$('#s-drawer-t');if(!b)return;
@@ -424,7 +440,7 @@
       var list=P.filter(function(p){return favs.indexOf(p.id)>=0});
       b.innerHTML=list.length?list.map(function(p,i){return '<div class="s-cl'+(p.type==='door'?' door':'')+'" style="--i:'+i+'"><img '+imgAttrs(p)+' alt=""><div><b>'+esc(p.name)+'</b><small>'+esc(p.desc||'')+'</small><div class="s-cl-act"><button type="button" data-o="'+esc(p.id)+'">Configura</button><button type="button" data-uf="'+esc(p.id)+'">Rimuovi</button></div></div><b>'+eur.format(fromPrice(p))+'</b></div>'}).join(''):'<p>Non avete ancora salvato prodotti. Toccate il cuore su una scheda per ritrovarla qui.</p>';
       f.innerHTML='';
-      $$('[data-o]',b).forEach(function(x){x.onclick=function(){closeDrawer();openProduct(x.dataset.o)}});
+      $$('[data-o]',b).forEach(function(x){x.onclick=function(){var p=byId(x.dataset.o);closeDrawer();if(p)go(pURL(p))}});
       $$('[data-uf]',b).forEach(function(x){x.onclick=function(){toggleFav(x.dataset.uf);openDrawer('fav')}});
     } else {
       t.textContent='Carrello';
@@ -432,14 +448,23 @@
         b.innerHTML='<p>Il carrello è vuoto.</p><p>Scegliete un prodotto e configuratelo: misura, finitura e opzioni. Il prezzo si aggiorna mentre scegliete.</p>';
         f.innerHTML='<a class="s-btn s-btn-o" href="/shop/">Vai al negozio</a>';
       } else {
-        var tot=0,ex=0;
-        b.innerHTML=cart.map(function(l,i){tot+=l.unit*l.qty;if(l.iva==='escl')ex=1;return '<div class="s-cl'+(l.type==='door'?' door':'')+'" style="--i:'+i+'"><img src="'+esc(l.img)+'" data-fb="'+esc(l.remote||'')+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+esc(l.sum)+'</small><div class="s-cl-act"><div class="s-qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Meno">−</button><output>'+l.qty+'</output><button type="button" data-q="'+i+'" data-d="1" aria-label="Più">+</button></div><button type="button" data-rm="'+i+'">Rimuovi</button></div></div><b>'+eur.format(l.unit*l.qty)+'</b></div>'}).join('');
-        f.innerHTML='<div class="s-total"><span>Totale indicativo</span><b id="s-tot">'+eur.format(tot)+'</b></div>'
+        var K=cartCalc(),ex=0;
+        b.innerHTML=cart.map(function(l,i){var r=K.rows[i];if(l.iva==='escl')ex=1;return '<div class="s-cl'+(l.type==='door'?' door':'')+'" style="--i:'+i+'"><img src="'+esc(l.img)+'" data-fb="'+esc(l.remote||'')+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+esc(l.sum)+'</small>'+(r.perc?'<span class="s-cl-off">−'+r.perc+'% · '+esc(r.why)+'</span>':'')+'<div class="s-cl-act"><div class="s-qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Meno">−</button><output>'+l.qty+'</output><button type="button" data-q="'+i+'" data-d="1" aria-label="Più">+</button></div><button type="button" data-rm="'+i+'">Rimuovi</button></div></div><b class="s-cl-p">'+(r.amount?'<s>'+eur.format(r.gross)+'</s>':'')+eur.format(r.gross-r.amount)+'</b></div>'}).join('');
+        var O=OF(),N=O.newsletter||{},code=codeApplied();
+        var nudge='';
+        if(K.next)nudge+='<div class="s-nudge"><b>Ancora '+K.next.need+' port'+(K.next.need>1?'e':'a')+'</b> e lo sconto porte sale al '+K.next.perc+'%.</div>';
+        f.innerHTML='<div class="s-sums"><div><span>Subtotale</span><b>'+eur.format(K.sub)+'</b></div>'+(K.disc?'<div class="s-sum-off"><span>Sconti</span><b>−'+eur.format(K.disc)+'</b></div>':'')+'<div class="s-total"><span>Totale indicativo</span><b id="s-tot">'+eur.format(K.tot)+'</b></div></div>'
+          +nudge
+          +(code?'<div class="s-code ok">'+IC.check+'<span>Codice <b>'+esc(code)+'</b> attivo: −'+N.perc+'% su ogni prodotto</span><button type="button" id="s-code-rm" aria-label="Togli codice">'+IC.x+'</button></div>'
+               :'<form class="s-code" id="s-code-f"><input id="s-code-in" placeholder="Codice sconto" aria-label="Codice sconto" autocomplete="off"><button type="submit">Applica</button></form>'+(N.perc?'<button type="button" class="s-nl-mini" data-nl-open>Non avete un codice? <b>Iscrivetevi e risparmiate '+eur.format(Math.round(K.sub*N.perc/100))+'</b></button>':''))
           +'<a class="s-btn s-btn-p" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(orderText())+'">Invia l\'ordine su WhatsApp</a>'
           +'<a class="s-btn s-btn-o" href="mailto:'+MAIL+'?subject='+encodeURIComponent('Ordine Pandoora Shop')+'&body='+encodeURIComponent(orderText())+'">Invia per email</a>'
-          +'<p class="s-note">Il pagamento online arriva a breve: per ora confermiamo l\'ordine con voi'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+'.</p>';
+          +'<p class="s-note">Nessun pagamento adesso: confermiamo l\'ordine con voi prima della produzione'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
         $$('[data-rm]',b).forEach(function(x){x.onclick=function(){cart.splice(+x.dataset.rm,1);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         $$('[data-q]',b).forEach(function(x){x.onclick=function(){var l=cart[+x.dataset.q];l.qty=clamp(l.qty+(+x.dataset.d),1,99);store('pdShopCart2',cart);counts();openDrawer('cart')}});
+        var cf=$('#s-code-f',f);if(cf)cf.onsubmit=function(e){e.preventDefault();var v=$('#s-code-in',f).value.trim().toUpperCase();if(N.code&&v===N.code){store('pdCode',v);openDrawer('cart')}else{var i=$('#s-code-in',f);i.value='';i.placeholder='Codice non valido';i.classList.add('err');setTimeout(function(){i.classList.remove('err')},900)}};
+        var cr=$('#s-code-rm',f);if(cr)cr.onclick=function(){store('pdCode','');openDrawer('cart')};
+        $$('[data-nl-open]',f).forEach(function(x){x.onclick=function(){closeDrawer();nlOpen('carrello')}});
       }
     }
     document.body.classList.add('s-cart-open');window.PDM&&window.PDM.stop();
@@ -448,7 +473,7 @@
   function closeDrawer(){document.body.classList.remove('s-cart-open');window.PDM&&window.PDM.start();var d=$('#s-drawer');if(d)d.setAttribute('aria-hidden','true')}
 
   /* ---------- scheda prodotto / configuratore ---------- */
-  var PM=null,lastFocus=null;
+  var PM=null,lastFocus=null,CUR=null;
   function ensurePM(){
     if(PM)return PM;
     PM=document.createElement('div');PM.className='s-pm';PM.setAttribute('role','dialog');PM.setAttribute('aria-modal','true');PM.setAttribute('aria-labelledby','s-pm-t');
@@ -458,11 +483,11 @@
     PM.addEventListener('keydown',function(e){if(e.key==='Tab'){var f=$$('button,input,select,a[href]',PM).filter(function(n){return !n.disabled&&n.offsetParent}),a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
     return PM;
   }
-  function openProduct(id,sub,fromCard){
+  function openProduct(id,sub,fromCard,inl){
     var p=byId(id);if(!p)return;
     sub=sub||(document.body.dataset.cat?(location.hash||'').slice(1):'');
     lastFocus=document.activeElement;
-    var m=ensurePM(),c=defaultCfg(p,sub),qty=1;
+    var m=inl||ensurePM(),c=defaultCfg(p,sub),qty=1;
     var media=$('.s-pm-media',m),sc=$('.s-pm-scroll',m),ft=$('.s-pm-foot',m);
     if(p.type==='cube'){openCube(p,m,media,sc,ft);return}
     if(p.type==='door'){openDoor(p,m,media,sc,ft,sub);return}
@@ -526,6 +551,7 @@
     $('#q-p',ft).onclick=function(){qty=Math.min(99,qty+1);$('#q-v',ft).textContent=qty;upd()};
     $('#s-pm-add',ft).onclick=function(){var im=$('img',media);addToCart(p,JSON.parse(JSON.stringify(c)),qty,im);setTimeout(closeProduct,250)};
     upd();
+    if(inl){CUR={p:p,get c(){return c},get qty(){return qty}};if(!RM){var im0=$('img',media);im0&&im0.animate&&p.type==='door'&&im0.animate([{transform:'perspective(1200px) rotateY(-55deg)',opacity:.2,transformOrigin:'0 50%'},{transform:'none',opacity:1,transformOrigin:'0 50%'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'})}return}
     m.classList.add('open');document.documentElement.style.overflow='hidden';
     requestAnimationFrame(function(){m.classList.add('show');var x=$('.s-pm-x',m);x&&x.focus({preventScroll:true})});
     if(!RM&&p.type==='door'){var im=$('img',media);im.animate&&im.animate([{transform:'perspective(1200px) rotateY(-55deg)',opacity:.2,transformOrigin:'0 50%'},{transform:'none',opacity:1,transformOrigin:'0 50%'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'})}
@@ -600,7 +626,7 @@
     $('#q-m',ft).onclick=function(){qty=Math.max(1,qty-1);$('#q-v',ft).textContent=qty;upd()};
     $('#q-p',ft).onclick=function(){qty=Math.min(99,qty+1);$('#q-v',ft).textContent=qty;upd()};
     $('#s-pm-add',ft).onclick=function(){var im=view==='foto'?$('img',photo):$('svg',draw);addToCart(p,JSON.parse(JSON.stringify(c)),qty,im);setTimeout(closeProduct,250)};
-    upd();showPM(m,p.id);
+    upd();CUR={p:p,get c(){return c},get qty(){return qty},view:setView};showPM(m,p.id);
     if(!RM){var im=$('img',photo);im.animate&&im.animate([{transform:'perspective(1200px) rotateY(-55deg)',opacity:.2,transformOrigin:'0 50%'},{transform:'none',opacity:1,transformOrigin:'0 50%'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'})}
   }
   /* scheda tecnica a tutto schermo, stampabile */
@@ -617,6 +643,7 @@
     };
   }
   function showPM(m,id){
+    if(m.classList.contains('pdp-cfg'))return;
     window.PDM&&window.PDM.stop();
     m.classList.add('open');document.documentElement.style.overflow='hidden';
     requestAnimationFrame(function(){m.classList.add('show');var x=$('.s-pm-x',m);x&&x.focus({preventScroll:true})});
@@ -676,13 +703,13 @@
     $('#q-m',ft).onclick=function(){qty=Math.max(1,qty-1);$('#q-v',ft).textContent=qty;upd(true)};
     $('#q-p',ft).onclick=function(){qty=Math.min(99,qty+1);$('#q-v',ft).textContent=qty;upd(true)};
     $('#s-pm-add',ft).onclick=function(){var cc=JSON.parse(JSON.stringify(c));delete cc._oc;addToCart(p,cc,qty,$('svg',stage));setTimeout(closeProduct,250)};
-    upd();showPM(m,p.id);
+    upd();CUR={p:p,get c(){return c},get qty(){return qty}};showPM(m,p.id);
   }
   function ralPicker(furn){
     return '<fieldset class="s-opt" id="o-ral"'+(furn?' hidden':'')+'><legend>Colore RAL <small>qualsiasi tinta della cartella</small></legend><div class="s-ral-sw">'+RALS.map(function(r){return '<button type="button" data-r="'+r[0]+'" style="background:'+r[1]+'" title="RAL '+r[0]+' · '+r[2]+'" aria-label="RAL '+r[0]+' '+r[2]+'"></button>'}).join('')+'</div><div class="s-ral"><input class="s-ral-in" id="o-ral-in" placeholder="RAL 9010" aria-label="Codice RAL"><span class="s-note">Scrivete il codice se non è tra questi</span></div></fieldset>';
   }
   function closeProduct(){
-    if(!PM)return;window.PDM&&window.PDM.start();PM.classList.remove('show');document.documentElement.style.overflow='';
+    if(!PM||!PM.classList.contains('open'))return;window.PDM&&window.PDM.start();PM.classList.remove('show');document.documentElement.style.overflow='';
     setTimeout(function(){PM.classList.remove('open')},RM?0:420);
     var u=new URL(location.href);u.searchParams.delete('p');history.replaceState(null,'',u);
     if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
@@ -897,11 +924,278 @@
     render(true);
   }
 
-  /* ---------- pagina prodotto statica (/shop/<categoria>/<id>/) ---------- */
+  /* ---------- pagina prodotto completa (/shop/<categoria>/<id>/) ---------- */
+  var FURN_COL={'Bianco opaco':'#f3f2ee','Rovere naturale':'#d9bb8f','Noce canaletto':'#7a5638','Grigio seta':'#c9c6c0','Laccato RAL':'#ece6da','Nero opaco':'#3a3a3a','Marrone-nero':'#4a3d33','Rovere oliato':'#c79f6c'};
+  function furnKind(p){
+    var s=p.sub,n=(p.name||'').toLowerCase();
+    if(s==='top-per-tavoli')return 'top';
+    if(s==='tavoli-completi')return 'table';
+    if(s==='a-ribalta')return 'flap';
+    if(s==='comodini'||p.id==='bagno-60-cassetti'||p.id==='mobile-tv-cassetti')return 'drawers';
+    if(s==='a-giorno')return 'open';
+    if(s==='con-seduta')return 'bench';
+    if(p.id==='parete-attrezzata')return 'wall';
+    return 'doors';
+  }
+  function furnDrawSVG(p,s,fin){
+    var k=furnKind(p),W=640,H=420,col=FURN_COL[fin]||FURN_COL[p.finishes&&p.finishes[0]]||'#e9e3d8',ln='#1a2028';
+    var tondo=k==='top'&&(/tondo/i.test(p.name)||s.w===s.d);
+    var fw=k==='top'?s.w:s.w,fh=k==='top'?s.d:s.h,sw=k==='top'?s.w:s.d,sh=k==='top'?Math.max(s.h,2):s.h;
+    var sc=Math.min(330/fw,300/fh,(560-330)/Math.max(sw,20)*.9,300/sh);
+    if(k==='top')sc=Math.min(360/fw,280/fh);
+    var fx=60,fy=40+(300-fh*sc),o='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+W+' '+H+'" class="s-tech"><style>.tl{font:600 12px Manrope,Arial,sans-serif;fill:#1a2028}.tc{font:700 11px Manrope,Arial,sans-serif;fill:#6b7380;letter-spacing:.08em}</style><rect width="'+W+'" height="'+H+'" fill="#fbfaf8"/>';
+    var R=function(x,y,w,h,f,r){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(r||1.5)+'" fill="'+(f||col)+'" stroke="'+ln+'" stroke-width="1.2"/>'};
+    var L=function(x1,y1,x2,y2,w){return '<path d="M'+x1+' '+y1+'L'+x2+' '+y2+'" stroke="'+ln+'" stroke-width="'+(w||1)+'"/>'};
+    var X=fw*sc,Y=fh*sc;
+    if(k==='top'){
+      fy=60;o+='<text x="'+fx+'" y="36" class="tc">VISTA DALL\'ALTO</text>';
+      o+=tondo?'<ellipse cx="'+(fx+X/2)+'" cy="'+(fy+Y/2)+'" rx="'+X/2+'" ry="'+Y/2+'" fill="'+col+'" stroke="'+ln+'" stroke-width="1.2"/>':R(fx,fy,X,Y);
+      o+=dimH(fx,fx+X,fy+Y+30,(tondo?'Ø ':'')+s.w+' cm',{bg:1});if(!tondo)o+=dimV(fy,fy+Y,fx-22,s.d+' cm');
+      var tx=fx+X+60,tw=Math.min(150,W-tx-30),th=Math.max(10,s.h*6);
+      o+='<text x="'+tx+'" y="36" class="tc">SEZIONE DEL BORDO</text>'+R(tx,fy+40,tw,th)+dimV(fy+40,fy+40+th,tx+tw+22,s.h+' cm');
+    } else {
+      o+='<text x="'+fx+'" y="30" class="tc">FRONTE</text>';
+      if(k==='table'){
+        var t=Math.max(5,4*sc);o+=R(fx,fy,X,t);o+=R(fx+X*.06,fy+t,Math.max(5,5*sc),Y-t,'#cfc9be')+R(fx+X*.94-Math.max(5,5*sc),fy+t,Math.max(5,5*sc),Y-t,'#cfc9be');
+      } else if(k==='bench'){
+        var seat=Math.min(Y*.28,12*sc);o+=R(fx,fy+seat,X,Y-seat);o+=R(fx+2,fy,X-4,seat,'#e7e2d8',6);
+        var n2=X>90*sc?2:1;for(var i=1;i<n2;i++)o+=L(fx+X*i/n2,fy+seat,fx+X*i/n2,fy+Y);
+      } else {
+        var leg=(k==='doors'&&s.h<=60&&p.sub==='mobili-tv')?0:(s.h>45&&k!=='flap'&&p.sub!=='mobili-bagno'?Math.min(10*sc,Y*.08):0);
+        o+=R(fx,fy,X,Y-leg);
+        if(leg)o+=R(fx+6,fy+Y-leg,6,leg,'#cfc9be',0)+R(fx+X-12,fy+Y-leg,6,leg,'#cfc9be',0);
+        var bh=Y-leg,n,j;
+        if(k==='flap'||k==='drawers'){n=k==='flap'?(+((p.name.match(/(\d)\s*(ribalt|vani)/)||[])[1])||Math.max(1,Math.round(s.h/45))):Math.max(2,Math.round(s.h/25));if(p.id==='scarpiera-pensile-duo')n=1;
+          for(j=1;j<n;j++)o+=L(fx,fy+bh*j/n,fx+X,fy+bh*j/n);for(j=0;j<n;j++)o+=L(fx+X/2-14,fy+bh*(j+.18)/n,fx+X/2+14,fy+bh*(j+.18)/n,2.2);}
+        else if(k==='open'){n=Math.max(2,Math.round(s.h/22));for(j=1;j<n;j++)o+=L(fx+3,fy+bh*j/n,fx+X-3,fy+bh*j/n,2);}
+        else if(k==='wall'){n=4;for(j=1;j<n;j++)o+=L(fx+X*j/n,fy,fx+X*j/n,fy+bh);o+=L(fx,fy+bh*.72,fx+X,fy+bh*.72);o+='<rect x="'+(fx+X*.3)+'" y="'+(fy+bh*.3)+'" width="'+X*.4+'" height="'+bh*.3+'" fill="#2a2f36" opacity=".85"/>';}
+        else {n=s.w>=150?3:s.w>=70?2:1;if(s.h>150&&s.w<60)n=1;for(j=1;j<n;j++)o+=L(fx+X*j/n,fy,fx+X*j/n,fy+bh);for(j=0;j<n;j++){var hx=fx+X*(j+(j%2?.12:.88))/n;o+=L(hx,fy+bh*.42,hx,fy+bh*.58,2.4)}}
+      }
+      o+=dimH(fx,fx+X,fy+Y+30,s.w+' cm',{bg:1})+dimV(fy,fy+Y,fx-22,s.h+' cm');
+      var sx=fx+X+80,SX=s.d*sc;
+      o+='<text x="'+sx+'" y="30" class="tc">FIANCO</text>';
+      if(k==='table'){var t2=Math.max(5,4*sc);o+=R(sx,fy,SX,t2)+R(sx+SX*.08,fy+t2,Math.max(5,5*sc),Y-t2,'#cfc9be')+R(sx+SX*.92-Math.max(5,5*sc),fy+t2,Math.max(5,5*sc),Y-t2,'#cfc9be');}
+      else o+=R(sx,fy,SX,Y);
+      o+=dimH(sx,sx+SX,fy+Y+30,s.d+' cm',{bg:1});
+    }
+    o+='<text x="'+(W-20)+'" y="'+(H-14)+'" text-anchor="end" class="tc">SCHEMA INDICATIVO · MISURE IN CM</text>'+wmLogo(W,H,.5,.05)+'</svg>';
+    return o;
+  }
+  function pdpRecent(id){
+    var r=(store('pdRecent')||[]).filter(function(x){return x!==id});r.unshift(id);store('pdRecent',r.slice(0,12));
+    var box=$('#pdp-recent');if(!box)return;var list=r.slice(1).map(byId).filter(Boolean).slice(0,4);
+    if(!list.length){box.closest('section').hidden=true;return}
+    box.innerHTML=list.map(function(q){return card(q)}).join('');box.closest('section').hidden=false;bindCards(box);
+  }
+  function pdpDraws(p){
+    var box=$('#pdp-draws');if(!box)return;var h='';
+    if(p.type==='door'){
+      var ops=p.onlyOpen?[p.onlyOpen]:['battente'];if(!p.onlyOpen)ops.push('scorrevole-esterno');
+      ops.forEach(function(op){PR.door.widths.forEach(function(w){
+        var c=defaultCfg(p,'');c.open=op;c.size=''+w;c.w=w;stdVano(c);var g=doorGeom(c),o=opening(op);
+        h+='<figure class="pdp-draw"><div>'+doorElevSVG(p,c)+'</div><figcaption><b>'+esc(o.label)+' · anta '+w+' cm</b><span>Vano consigliato '+g.vw+' × '+g.vh+' mm · anta '+g.lw+' × '+g.lh+' mm · passaggio netto '+g.lp+' mm</span></figcaption></figure>';
+      })});
+      box.innerHTML=h;
+      var big=$('#pdp-sheet');if(big){var c8=defaultCfg(p,'');big.innerHTML='<div class="pdp-sheet-svg">'+doorSheetSVG(p,c8)+'</div><div class="pdp-sheet-act"><button type="button" class="s-btn s-btn-p" id="pdp-sheet-full">Apri a tutto schermo e stampa</button><span>Sezione orizzontale, verticale e prospetto · anta 80 × 210 cm, muro 110 mm. Configurate la vostra misura qui sopra e aprite la scheda dal disegno.</span></div>';$('#pdp-sheet-full').onclick=function(){openSheet(p,(CUR&&CUR.p===p)?CUR.c:c8)}}
+    } else if(p.type==='cube'){
+      var cc=cubeDefault(p),d=cubeDims(cc);
+      h='<figure class="pdp-draw wide"><div class="pdp-cube">'+cubeSVG(cc)+'</div><figcaption><b>Composizione di partenza · '+cc.cols+' × '+cc.rows+' vani da '+cc.cube+' cm</b><span>Ingombro '+d.w+' × '+cc.depth+' × '+d.h+' cm. Fianchi 4 cm, divisori 1,5 cm. Componete la vostra nel configuratore in alto.</span></figcaption></figure>';
+      box.innerHTML=h;
+    } else {
+      p.std.forEach(function(s){h+='<figure class="pdp-draw furn"><div>'+furnDrawSVG(p,s)+'</div><figcaption><b>'+s.w+' × '+s.d+' × '+s.h+' cm</b><span>'+eur.format(s.price)+' IVA inclusa</span></figcaption></figure>'});
+      if(p.custom&&p.limits){var L=p.limits;h+='<figure class="pdp-draw furn note"><div class="pdp-lim"><b>Su misura</b><span>Larghezza '+L.w[0]+'–'+L.w[1]+' cm</span><span>Profondità '+L.d[0]+'–'+L.d[1]+' cm</span><span>Altezza '+L.h[0]+'–'+L.h[1]+' cm</span><a class="s-link" href="#pdp-cfg">Inserite le vostre misure ↑</a></div><figcaption><b>Costruita al centimetro</b><span>+'+PR.furniture.customPerc+'% sul prezzo in proporzione</span></figcaption></figure>'}
+      box.innerHTML=h;
+    }
+  }
+  function bundleOK(){ // un pacchetto vale solo se tutti i pezzi sono ancora nel carrello
+    var g={},ok={};cart.forEach(function(l){if(l.bundle){var x=g[l.bundle]=g[l.bundle]||{n:0,q:0,need:l.bsize||1,needQ:l.bqty||0};x.n++;x.q+=l.qty}});
+    Object.keys(g).forEach(function(k){var x=g[k];ok[k]=x.n>=x.need&&x.q>=Math.max(x.needQ,x.need)});return ok;
+  }
+  function pdpBundles(p){
+    var box=$('#pdp-bundles');if(!box)return;var O=OF(),h='';
+    if(p.type==='door'){
+      var t=[{min:1,perc:0,label:'Una porta'}].concat(O.doorQty||[]);
+      var u=CUR&&CUR.p===p?doorQuote(p,CUR.c).unit:fromPrice(p);
+      h='<div class="pdp-tiers">'+t.map(function(x,i){var full=u*x.min,net=Math.round(full*(1-x.perc/100));
+        return '<div class="pdp-tier'+(i===1?' hot':'')+'">'+(i===1?'<span class="pdp-tag">Il più conveniente per un appartamento</span>':'')+'<b class="pdp-tier-n">'+x.min+' '+(x.min>1?'porte':'porta')+'</b><span class="pdp-tier-l">'+esc(x.label)+'</span>'
+          +'<div class="pdp-tier-p">'+(x.perc?'<s>'+eur.format(full)+'</s>':'')+'<b>'+eur.format(net)+'</b><small>+ IVA · posa inclusa VE/FVG</small></div>'
+          +(x.perc?'<span class="pdp-save">−'+x.perc+'% · risparmiate '+eur.format(full-net)+'</span>':'<span class="pdp-save mute">'+eur.format(u)+' a porta</span>')
+          +'<button type="button" class="s-btn '+(i?'s-btn-p':'s-btn-o')+'" data-tier="'+x.min+'">Aggiungi '+x.min+' '+(x.min>1?'porte':'porta')+'</button></div>'}).join('')+'</div>'
+        +'<p class="s-note">Lo sconto si applica da solo nel carrello quando ci sono '+(O.doorQty&&O.doorQty[0]?O.doorQty[0].min:3)+' o più porte, anche di modelli diversi. Ogni porta può avere misura, verso e colore diversi: li definiamo insieme prima della produzione.</p>';
+      box.innerHTML=h;
+      $$('[data-tier]',box).forEach(function(b){b.onclick=function(){var c=CUR&&CUR.p===p?JSON.parse(JSON.stringify(CUR.c)):defaultCfg(p,'');addToCart(p,c,+b.dataset.tier,$('.pdp-stage img'))}});
+      return;
+    }
+    var pairs=(O.pairs||{})[p.sub]||[],perc=O.bundlePerc||0;
+    var items=pairs.map(function(pr){var ids=pr[1].map(function(i){return i==='@self'?p.id:i});if(ids.indexOf(p.id)>=0&&pr[1][0]!=='@self')return null;var parts=[p].concat(ids.map(byId));if(parts.some(function(x){return !x}))return null;return{name:pr[0],parts:parts}}).filter(Boolean);
+    if(!items.length){box.closest('section').hidden=true;return}
+    h='<div class="pdp-bund">'+items.map(function(b,bi){
+      var cfgs=b.parts.map(function(q,i){return i===0&&CUR&&CUR.p===p?CUR.c:defaultCfg(q,'')}),prices=b.parts.map(function(q,i){return quote(q,cfgs[i]).unit}),full=prices.reduce(function(a,x){return a+x},0),net=Math.round(full*(1-perc/100));
+      return '<div class="pdp-b"><span class="pdp-tag">'+esc(b.name)+' · −'+perc+'%</span><div class="pdp-b-items">'+b.parts.map(function(q,i){return (i?'<i class="pdp-plus">+</i>':'')+'<a class="pdp-b-it" href="'+pURL(q)+'"><span><img '+(q.type==='cube'?'src="/shop/img/prodotti/'+esc(q.id)+'.jpg"':imgAttrs(q))+' alt="" loading="lazy"></span><b>'+esc(q.name)+(i===0?' <em>(questo)</em>':'')+'</b><small>'+eur.format(prices[i])+'</small></a>'}).join('')+'</div>'
+        +'<div class="pdp-b-foot"><div><s>'+eur.format(full)+'</s><b>'+eur.format(net)+'</b><span class="pdp-save">Risparmiate '+eur.format(full-net)+'</span></div><button type="button" class="s-btn s-btn-p" data-bund="'+bi+'">'+IC.bag+'Aggiungi il pacchetto</button></div></div>';
+    }).join('')+'</div><p class="s-note">Prezzi IVA inclusa con la misura e la finitura scelte sopra per questo prodotto; gli altri pezzi nella misura base, modificabili con voi prima della produzione.</p>';
+    box.innerHTML=h;
+    $$('[data-bund]',box).forEach(function(btn){btn.onclick=function(){
+      var b=items[+btn.dataset.bund],key='b'+Date.now().toString(36),self=b.parts.length===2&&b.parts[1]===b.parts[0];
+      if(self){var c=CUR&&CUR.p===p?JSON.parse(JSON.stringify(CUR.c)):defaultCfg(p,'');addToCart(p,c,2,null,{bundle:key,disc:perc,bname:b.name,silent:1});cart[cart.length-1].bsize=1;cart[cart.length-1].bqty=2}
+      else b.parts.forEach(function(q,i){var c=i===0&&CUR&&CUR.p===p?JSON.parse(JSON.stringify(CUR.c)):defaultCfg(q,'');addToCart(q,c,1,null,{bundle:key,disc:perc,bname:b.name,silent:1});cart[cart.length-1].bsize=b.parts.length});
+      store('pdShopCart2',cart);fly($('img',btn.closest('.pdp-b')),function(){counts('cart')});toast(b.name+' nel carrello · −'+perc+'%');
+    }});
+  }
+  function pdpThumbs(p,hero){
+    var th=$('#pdp-thumbs',hero),media=$('.s-pm-media',hero);if(!th||!media)return;
+    var img=$('img',media),src=img?(img.currentSrc||img.src):'',v=[];
+    if(p.type==='door')v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato'],['scheda','Scheda tecnica']];
+    else if(p.type==='cube')v=[['config','Configuratore'],['foto','Foto']];
+    else v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato']];
+    var ic={disegno:'<svg viewBox="0 0 40 40"><rect x="11" y="5" width="18" height="30"/><path d="M5 5v30M3 5h4M3 35h4M11 38h18"/></svg>',scheda:'<svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26"/><path d="M5 14h30M14 14v19"/></svg>',config:'<svg viewBox="0 0 40 40"><rect x="6" y="6" width="12" height="12"/><rect x="22" y="6" width="12" height="12"/><rect x="6" y="22" width="12" height="12"/><rect x="22" y="22" width="12" height="12"/></svg>'};
+    th.innerHTML=v.map(function(x,i){var t=x[0]==='foto'&&p.type==='cube'?'<img src="/shop/img/prodotti/'+esc(p.id)+'.jpg" alt="">':ic[x[0]]||'<img src="'+esc(p.type==='cube'?'':src)+'" alt=""'+(x[0]==='dettaglio'?' class="zz"':'')+'>';return '<button type="button" data-v="'+x[0]+'" aria-pressed="'+(i===0)+'"><span>'+t+'</span>'+esc(x[1])+'</button>'}).join('');
+    var fd=null,ph=null;
+    if(p.type==='furniture'){fd=document.createElement('div');fd.className='s-pm-draw';fd.hidden=true;media.appendChild(fd)}
+    if(p.type==='cube'){ph=document.createElement('img');ph.className='pdp-cubephoto';ph.src='/shop/img/prodotti/'+p.id+'.jpg';ph.alt=p.name;ph.hidden=true;media.appendChild(ph)}
+    function set(k){
+      $$('button',th).forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===k)});
+      media.classList.toggle('zoomed',k==='dettaglio');
+      if(p.type==='door'){if(k==='scheda'){openSheet(p,CUR.c);set('disegno');return}CUR.view&&CUR.view(k==='disegno'?'disegno':'foto')}
+      if(fd){fd.hidden=k!=='disegno';media.classList.toggle('drawing',k==='disegno');var im=$(':scope>img',media);if(im)im.hidden=k==='disegno';if(k==='disegno')fd.innerHTML=furnDrawSVG(p,CUR.c,CUR.c.fin)}
+      if(ph){ph.hidden=k!=='foto';var st=$('#s-cube',media);if(st)st.hidden=k==='foto'}
+    }
+    $$('button',th).forEach(function(b){b.onclick=function(){set(b.dataset.v)}});
+    $$('.s-pm-views button',media).forEach(function(b){b.addEventListener('click',function(){$$('button',th).forEach(function(x){x.setAttribute('aria-pressed',x.dataset.v===(b.dataset.view==='disegno'?'disegno':'foto'))});media.classList.remove('zoomed')})});
+    hero._redraw=function(){if(fd&&!fd.hidden)fd.innerHTML=furnDrawSVG(p,CUR.c,CUR.c.fin)};
+    if(FINE&&!RM&&p.type!=='cube'){ // lente al passaggio del mouse
+      media.addEventListener('pointermove',function(e){if(media.classList.contains('drawing'))return;var im=$('.s-pm-photo img',media)||$(':scope>img',media);if(!im)return;media._lim=im;var r=media.getBoundingClientRect();im.style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%';media.classList.add('lens')});
+      media.addEventListener('pointerleave',function(){media.classList.remove('lens');if(media._lim)media._lim.style.transformOrigin=''});
+    }
+  }
+  function pdpBar(p,hero){
+    var foot=$('.s-pm-foot',hero);if(!foot||!('IntersectionObserver' in window))return;
+    var bar=document.createElement('div');bar.className='pdp-bar';bar.setAttribute('aria-hidden','true');
+    bar.innerHTML='<div class="s-wrap pdp-bar-in"><span class="pdp-bar-img"><img '+(p.type==='cube'?'src="/shop/img/prodotti/'+esc(p.id)+'.jpg"':imgAttrs(p))+' alt=""></span><div class="pdp-bar-t"><b>'+esc(p.name)+'</b><small id="pdp-bar-s"></small></div><b class="pdp-bar-p" id="pdp-bar-p"></b><button type="button" class="s-btn s-btn-p" id="pdp-bar-add">'+IC.bag+'<span>Aggiungi al carrello</span></button></div>';
+    document.body.appendChild(bar);
+    $('#pdp-bar-add').onclick=function(){var b=$('#s-pm-add',hero);b&&b.click()};
+    var past=false;new IntersectionObserver(function(es){var e=es[0];past=!e.isIntersecting&&e.boundingClientRect.top<0;bar.classList.toggle('on',past);bar.setAttribute('aria-hidden',String(!past))}).observe(foot);
+    var ftr=$('.pf');if(ftr)new IntersectionObserver(function(es){bar.classList.toggle('off',es[0].isIntersecting)}).observe(ftr);
+  }
+  function pdpRefresh(p,hero){
+    if(!CUR)return;var q=quote(p,CUR.c),N=OF().newsletter||{},code=codeApplied();
+    var bp=$('#pdp-bar-p');if(bp)bp.textContent=eur.format(q.unit*CUR.qty);var bs=$('#pdp-bar-s');if(bs)bs.textContent=cfgSummary(p,CUR.c);
+    var nl=$('#pdp-nl-p');if(nl&&N.perc){nl.textContent=eur.format(Math.round(q.unit*(1-N.perc/100)))}
+    var nb=$('.pdp-nlbox');if(nb)nb.classList.toggle('on',!!code);
+    hero._redraw&&hero._redraw();
+    clearTimeout(hero._bt);hero._bt=setTimeout(function(){pdpBundles(p)},250);
+  }
+  function pdpTabs(){
+    var nav=$('.pdp-tabs');if(!nav||!('IntersectionObserver' in window))return;
+    var links=$$('a',nav),map={};links.forEach(function(a){var s=$(a.getAttribute('href'));if(s)map[s.id]=a});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('cur')});var a=map[e.target.id];if(a){a.classList.add('cur');a.scrollIntoView&&nav.scrollWidth>nav.clientWidth&&nav.scrollTo({left:a.offsetLeft-20,behavior:'smooth'})}}})},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(map).forEach(function(id){io.observe($('#'+id))});
+  }
+  function pdpReviews(p){
+    var f=$('#pdp-rev-form');if(!f)return;var stars=$$('.pdp-stars-in button',f),v=0;
+    stars.forEach(function(b,i){b.onclick=function(){v=i+1;stars.forEach(function(x,j){x.classList.toggle('on',j<v)});$('[name="Voto"]',f).value=v+' / 5'}});
+    var open=$('#pdp-rev-open');if(open)open.onclick=function(){f.hidden=false;open.hidden=true;$('input,textarea',f).focus()};
+    f.onsubmit=function(e){e.preventDefault();var msg=$('.pdp-rev-msg',f);if(!v){msg.textContent='Scegliete un voto da 1 a 5 stelle.';return}
+      var fd=new FormData(f),o={};fd.forEach(function(val,k){o[k]=val});o._subject='Nuova recensione da verificare: '+p.name+' ('+v+'/5)';o._template='table';o._captcha='false';o.Prodotto=p.name+' · '+location.href.split('?')[0];
+      var bt=$('button[type="submit"]',f);bt.disabled=true;msg.textContent='Invio in corso…';
+      fetch('https://formsubmit.co/ajax/'+((OF().newsletter||{}).notify||MAIL),{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(o)}).then(function(r){return r.json()}).then(function(){f.innerHTML='<p class="pdp-rev-ok">'+IC.check+'Grazie! La vostra recensione è arrivata: la pubblichiamo dopo aver verificato l\'ordine.</p>'}).catch(function(){bt.disabled=false;msg.innerHTML='Invio non riuscito. Scriveteci a <a href="mailto:'+MAIL+'">'+MAIL+'</a>.'});
+    };
+  }
   function initProductPage(){
     var root=$('.sp');if(!root)return;
-    bindCards(root,'');
-    staggerIn($$('.s-card',root));
+    bindCards(root,'');staggerIn($$('.sp-rel .s-card',root));
+    var id=document.body.dataset.id,p=byId(id),hero=$('#pdp-cfg');
+    if(!p||!hero)return;
+    var h=(location.hash||'').slice(1),sub=['scorrevoli','filo-muro'].indexOf(h)>=0?h:'';
+    hero.classList.add('live');
+    openProduct(id,sub,null,hero);
+    pdpThumbs(p,hero);pdpBar(p,hero);pdpDraws(p);pdpBundles(p);pdpRecent(id);pdpTabs();pdpReviews(p);
+    var t;function rf(){clearTimeout(t);t=setTimeout(function(){pdpRefresh(p,hero)},30)}
+    hero.addEventListener('click',rf);hero.addEventListener('input',rf);pdpRefresh(p,hero);
+    $$('[data-goto-cfg]').forEach(function(a){a.onclick=function(e){e.preventDefault();hero.scrollIntoView({behavior:RM?'auto':'smooth'})}});
+  }
+
+  /* ---------- newsletter: popup −10%, banda, pagina grazie ---------- */
+  var NLB=null,GEO=null;
+  function nlDone(){return !!store('pdNl')}
+  function nlGeo(){return GEO?Promise.resolve(GEO):fetch('/shop/data/geo.json').then(function(r){return r.json()}).then(function(g){GEO=g.countries;return GEO})}
+  function nlBuild(){
+    if(NLB)return NLB;var N=OF().newsletter||{};
+    NLB=document.createElement('div');NLB.className='s-nl';NLB.setAttribute('role','dialog');NLB.setAttribute('aria-modal','true');NLB.setAttribute('aria-labelledby','s-nl-t');
+    NLB.innerHTML='<div class="s-nl-scrim" data-nlx></div><div class="s-nl-box" data-lenis-prevent><button type="button" class="s-pm-x" data-nlx aria-label="Chiudi">'+IC.x+'</button>'
+      +'<div class="s-nl-vis"><div class="s-nl-big"><small>Benvenuti</small><b>−'+N.perc+'<i>%</i></b><span>su ogni prodotto<br>dello shop</span></div><ul><li>'+IC.check+'Codice subito via email</li><li>'+IC.check+'Valido su ogni ordine</li><li>'+IC.check+'Anteprime di nuovi modelli</li></ul></div>'
+      +'<form class="s-nl-f" novalidate><h2 id="s-nl-t">Il '+N.perc+'% su ogni vostro acquisto</h2><p class="s-nl-sub">Iscrivetevi alla newsletter Pandoora: vi mandiamo subito il codice, valido su porte, scarpiere, mobili e tavoli.</p>'
+      +'<div class="s-nl-g"><label>Nome<input name="Nome" autocomplete="given-name" required></label><label>Cognome<input name="Cognome" autocomplete="family-name" required></label>'
+      +'<label class="w">Email<input name="email" type="email" autocomplete="email" required></label>'
+      +'<label>Stato<select name="Stato" required><option value="">Caricamento…</option></select></label>'
+      +'<label>Città<input name="Città" list="s-nl-cities" autocomplete="address-level2" required placeholder="Scrivete la città"><datalist id="s-nl-cities"></datalist></label>'
+      +'<label class="w">Telefono<span class="s-nl-tel"><b id="s-nl-pre">+39</b><input name="Telefono" type="tel" autocomplete="tel-national" inputmode="tel" required></span></label></div>'
+      +'<label class="s-nl-ok"><input type="checkbox" name="Consenso" value="Sì" required><span>Acconsento a ricevere la newsletter e offerte di Pan.door.a S.r.l. e ho letto l\'<a href="/privacy/" target="_blank">informativa privacy</a>. Potete disiscrivervi quando volete.</span></label>'
+      +'<p class="s-nl-err" role="alert"></p><button type="submit" class="s-btn s-btn-p">Ricevi il mio codice −'+N.perc+'%</button><button type="button" class="s-nl-no" data-nlx>No, grazie</button></form></div>';
+    document.body.appendChild(NLB);
+    $$('[data-nlx]',NLB).forEach(function(x){x.onclick=nlClose});
+    NLB.addEventListener('keydown',function(e){if(e.key==='Escape')nlClose()});
+    var f=$('form',NLB),sel=$('[name="Stato"]',f),dl=$('#s-nl-cities',f),pre=$('#s-nl-pre',f);
+    nlGeo().then(function(G){
+      sel.innerHTML='<option value="">Scegliete…</option>'+G.map(function(c){return '<option value="'+esc(c.c)+'">'+esc(c.n)+'</option>'}).join('');
+      var lang=(navigator.language||'it').slice(-2).toUpperCase();sel.value=G.some(function(c){return c.c===lang})&&lang!=='EN'?lang:'IT';sel.onchange();
+    });
+    sel.onchange=function(){if(!GEO)return;var c=GEO.find(function(x){return x.c===sel.value});dl.innerHTML=c?c.cities.map(function(x){return '<option value="'+esc(x)+'">'}).join(''):'';pre.textContent=c&&c.p?c.p:'+';var ci=$('[name="Città"]',f);ci.placeholder=c&&c.cities.length?'Es. '+(c.c==='IT'?'Treviso':c.cities[0]):'Scrivete la città';ci.value=''};
+    f.onsubmit=function(e){
+      e.preventDefault();var err=$('.s-nl-err',f),bad=null;
+      $$('input,select',f).forEach(function(i){i.classList.remove('err');var ok=i.type==='checkbox'?i.checked:i.value.trim()&&(i.type!=='email'||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value.trim()))&&(i.type!=='tel'||i.value.replace(/\D/g,'').length>=6);if(!ok){i.classList.add('err');bad=bad||i}});
+      if(bad){err.textContent=bad.type==='checkbox'?'Serve il consenso per iscrivervi.':bad.type==='email'?'Controllate l\'indirizzo email.':bad.type==='tel'?'Controllate il numero di telefono.':'Compilate tutti i campi.';bad.focus();return}
+      err.textContent='';nlSend(f);
+    };
+    return NLB;
+  }
+  function nlSend(f){
+    var N=OF().newsletter||{},g=function(n){return $('[name="'+n+'"]',f).value.trim()},st=GEO&&GEO.find(function(c){return c.c===g('Stato')});
+    var nome=g('Nome'),tel=($('#s-nl-pre',f).textContent+' '+g('Telefono')).trim();
+    store('pdNl',{nome:nome,email:g('email'),d:new Date().toISOString().slice(0,10)});store('pdCode',N.code);
+    var data={_subject:'Nuova iscrizione newsletter: '+nome+' '+g('Cognome')+' ('+(st?st.n:g('Stato'))+')',_template:'table',
+      _next:location.origin+'/shop/grazie-iscrizione/?da='+encodeURIComponent(location.pathname),
+      _autoresponse:'Gentile '+nome+', grazie per esservi iscritti alla newsletter di Pandoora: l\'iscrizione è confermata.\n\nEcco il vostro codice sconto: '+N.code+'\n'+N.perc+'% di sconto su ogni prodotto dello shop: https://pandooragroup.it/shop/\nInseritelo nel carrello oppure indicatelo quando ci inviate l\'ordine.\n\nSe non vi siete iscritti voi, rispondete a questa email e vi cancelliamo subito.\n\nPan.door.a S.r.l. · Via I° Maggio 14, 31043 Fontanelle (TV) · ordini@pandooragroup.it · +39 388 470 6887',
+      Nome:nome,Cognome:g('Cognome'),email:g('email'),Telefono:tel,Stato:st?st.n:g('Stato'),'Città':g('Città'),Consenso:'Sì, '+new Date().toLocaleString('it-IT'),Pagina:location.href.split('?')[0],Codice:N.code};
+    var form=document.createElement('form');form.method='POST';form.action='https://formsubmit.co/'+(N.notify||MAIL);form.style.display='none';
+    Object.keys(data).forEach(function(k){var i=document.createElement(k==='_autoresponse'?'textarea':'input');i.name=k;i.value=data[k];form.appendChild(i)});
+    document.body.appendChild(form);
+    var b=$('button[type="submit"]',f);b.disabled=true;b.textContent='Un attimo…';
+    if(window.PD_NL_TEST){window.PD_NL_TEST(data,form);return}
+    form.submit();
+  }
+  function nlOpen(src){
+    if(nlDone()&&src!=='force'){toast('Il vostro codice '+((OF().newsletter||{}).code||'')+' è già attivo');return}
+    var m=nlBuild();store('pdNlSeen',Date.now());try{sessionStorage.setItem('pdNlS','1')}catch(e){}
+    var pre=window._nlPre;if(pre){$('[name="email"]',m).value=pre;window._nlPre=''}
+    m.classList.add('open');document.documentElement.style.overflow='hidden';window.PDM&&window.PDM.stop();
+    requestAnimationFrame(function(){m.classList.add('show');var i=$('[name="Nome"]',m);i&&i.focus({preventScroll:true})});
+    var pill=$('.s-nl-pill');if(pill)pill.classList.remove('on');
+  }
+  function nlClose(){if(!NLB)return;NLB.classList.remove('show');document.documentElement.style.overflow='';window.PDM&&window.PDM.start();setTimeout(function(){NLB.classList.remove('open')},RM?0:400);nlPill()}
+  function nlPill(){
+    if(nlDone()||document.body.dataset.page==='nl-thanks')return;var N=OF().newsletter||{};if(!N.perc)return;
+    var p=$('.s-nl-pill');if(!p){p=document.createElement('button');p.type='button';p.className='s-nl-pill';p.innerHTML='<b>−'+N.perc+'%</b><span>con la newsletter</span>';p.onclick=function(){nlOpen('pill')};document.body.appendChild(p)}
+    function sh(){if(scrollY>500||document.body.dataset.page!=='product'){p.classList.add('on');removeEventListener('scroll',sh)}}setTimeout(sh,400);addEventListener('scroll',sh,{passive:true});
+  }
+  function initNL(){
+    var N=OF().newsletter;if(!N)return;
+    document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-nl-open]');if(a){e.preventDefault();nlOpen('link')}});
+    $$('.nl-band form').forEach(function(f){f.onsubmit=function(e){e.preventDefault();window._nlPre=($('input[type="email"]',f)||{}).value||'';nlOpen('band')}});
+    if(nlDone()){$$('.nl-band').forEach(function(b){b.classList.add('done')});if(!store('pdCode'))store('pdCode',N.code);return}
+    if(document.body.dataset.page==='nl-thanks')return;
+    var seen=+store('pdNlSeen')||0,ss=false;try{ss=!!sessionStorage.getItem('pdNlS')}catch(e){}
+    if(ss||Date.now()-seen<3*864e5){nlPill();return}
+    var fired=false;function fire(){if(fired||nlDone())return;if(document.body.classList.contains('s-cart-open')||document.getElementById('s-sheet')&&document.getElementById('s-sheet').classList.contains('open')){setTimeout(fire,4000);return}fired=true;nlOpen('auto')}
+    setTimeout(fire,7000);
+    addEventListener('scroll',function sc(){if(scrollY>(document.documentElement.scrollHeight-innerHeight)*.45){removeEventListener('scroll',sc);setTimeout(fire,600)}},{passive:true});
+    if(FINE)document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<8)fire()});
+  }
+  function initThanks(){
+    var N=OF().newsletter||{},c=$('#nl-code');if(c)c.textContent=N.code;
+    if(!store('pdNl'))store('pdNl',{d:new Date().toISOString().slice(0,10)});store('pdCode',N.code);
+    var b=$('#nl-copy');if(b)b.onclick=function(){try{navigator.clipboard.writeText(N.code);b.textContent='Copiato'}catch(e){}};
+    var da=new URLSearchParams(location.search).get('da'),bk=$('#nl-back');if(bk&&da&&/^\/shop\//.test(da))bk.href=da;
   }
 
   /* ---------- avvio ---------- */
@@ -918,8 +1212,9 @@
       CAT=r[0];P=r[1].products||[];PR=r[1].pricing;
       initSearch();
       var pg=document.body.dataset.page;
-      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else initHome();
-      var pid=new URLSearchParams(location.search).get('p');if(pid)openProduct(pid);
+      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else if(pg==='nl-thanks')initThanks();else initHome();
+      var pid=new URLSearchParams(location.search).get('p');if(pid&&byId(pid)){location.replace(pURL(byId(pid)));return}
+      initNL();
     }).catch(function(err){console.error(err);var g=$('#s-grid');if(g)g.innerHTML=emptyHTML('')});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
