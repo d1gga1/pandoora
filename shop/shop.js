@@ -1124,26 +1124,30 @@
     NLB=document.createElement('div');NLB.className='s-nl';NLB.setAttribute('role','dialog');NLB.setAttribute('aria-modal','true');NLB.setAttribute('aria-labelledby','s-nl-t');
     NLB.innerHTML='<div class="s-nl-scrim" data-nlx></div><div class="s-nl-box" data-lenis-prevent><button type="button" class="s-pm-x" data-nlx aria-label="Chiudi">'+IC.x+'</button>'
       +'<div class="s-nl-vis"><div class="s-nl-big"><small>Benvenuti</small><b>−'+N.perc+'<i>%</i></b><span>su ogni prodotto<br>dello shop</span></div><ul><li>'+IC.check+'Codice subito via email</li><li>'+IC.check+'Valido su ogni ordine</li><li>'+IC.check+'Anteprime di nuovi modelli</li></ul></div>'
-      +'<form class="s-nl-f" novalidate><h2 id="s-nl-t">Il '+N.perc+'% su ogni vostro acquisto</h2><p class="s-nl-sub">Iscrivetevi alla newsletter Pandoora: vi mandiamo subito il codice, valido su porte, scarpiere, mobili e tavoli.</p>'
+      +'<form class="s-nl-f" novalidate><div class="s-nl-logo"><img src="/shop/img/email/logo-popup.webp" alt="PAN.DOOR.A GROUP" width="180" height="150"></div><h2 id="s-nl-t">Il '+N.perc+'% su ogni vostro acquisto</h2><p class="s-nl-sub">Iscrivetevi alla newsletter Pandoora: vi mandiamo subito il codice, valido su porte, scarpiere, mobili e tavoli.</p>'
       +'<div class="s-nl-g"><label>Nome<input name="Nome" autocomplete="given-name" required></label><label>Cognome<input name="Cognome" autocomplete="family-name" required></label>'
       +'<label class="w">Email<input name="email" type="email" autocomplete="email" required></label>'
       +'<label>Stato<select name="Stato" required><option value="">Caricamento…</option></select></label>'
-      +'<label>Città<input name="Città" list="s-nl-cities" autocomplete="address-level2" required placeholder="Scrivete la città"><datalist id="s-nl-cities"></datalist></label>'
+      +'<label><span id="s-nl-pl">Provincia</span><select name="Provincia" id="s-nl-psel" required><option value="">Scegliete…</option></select><input name="ProvinciaTxt" id="s-nl-ptxt" list="s-nl-provs" autocomplete="address-level1" placeholder="Provincia o regione" hidden><datalist id="s-nl-provs"></datalist></label>'
       +'<label class="w">Telefono<span class="s-nl-tel"><b id="s-nl-pre">+39</b><input name="Telefono" type="tel" autocomplete="tel-national" inputmode="tel" required></span></label></div>'
       +'<label class="s-nl-ok"><input type="checkbox" name="Consenso" value="Sì" required><span>Acconsento a ricevere la newsletter e offerte di Pan.door.a S.r.l. e ho letto l\'<a href="/privacy/" target="_blank">informativa privacy</a>. Potete disiscrivervi quando volete.</span></label>'
-      +'<p class="s-nl-err" role="alert"></p><button type="submit" class="s-btn s-btn-p">Ricevi il mio codice −'+N.perc+'%</button><button type="button" class="s-nl-no" data-nlx>No, grazie</button></form></div>';
+      +'<input name="sito_web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">'+'<p class="s-nl-err" role="alert"></p><button type="submit" class="s-btn s-btn-p">Ricevi il mio codice −'+N.perc+'%</button><button type="button" class="s-nl-no" data-nlx>No, grazie</button></form></div>';
     document.body.appendChild(NLB);
     $$('[data-nlx]',NLB).forEach(function(x){x.onclick=nlClose});
     NLB.addEventListener('keydown',function(e){if(e.key==='Escape')nlClose()});
-    var f=$('form',NLB),sel=$('[name="Stato"]',f),dl=$('#s-nl-cities',f),pre=$('#s-nl-pre',f);
+    var f=$('form',NLB),sel=$('[name="Stato"]',f),dl=$('#s-nl-provs',f),pre=$('#s-nl-pre',f);
     nlGeo().then(function(G){
       sel.innerHTML='<option value="">Scegliete…</option>'+G.map(function(c){return '<option value="'+esc(c.c)+'">'+esc(c.n)+'</option>'}).join('');
       var lang=(navigator.language||'it').slice(-2).toUpperCase();sel.value=G.some(function(c){return c.c===lang})&&lang!=='EN'?lang:'IT';sel.onchange();
     });
-    sel.onchange=function(){if(!GEO)return;var c=GEO.find(function(x){return x.c===sel.value});dl.innerHTML=c?c.cities.map(function(x){return '<option value="'+esc(x)+'">'}).join(''):'';pre.textContent=c&&c.p?c.p:'+';var ci=$('[name="Città"]',f);ci.placeholder=c&&c.cities.length?'Es. '+(c.c==='IT'?'Treviso':c.cities[0]):'Scrivete la città';ci.value=''};
+    sel.onchange=function(){if(!GEO)return;var c=GEO.find(function(x){return x.c===sel.value}),ps=$('#s-nl-psel',f),pt=$('#s-nl-ptxt',f),it=!!(c&&c.sel);
+      pre.textContent=c&&c.p?c.p:'+';ps.hidden=!it;ps.required=it;pt.hidden=it;pt.required=!it;pt.value='';$('#s-nl-pl',f).textContent=it?'Provincia':'Provincia / regione';
+      ps.innerHTML='<option value="">Scegliete…</option>'+(it?c.prov.map(function(x){return '<option>'+esc(x)+'</option>'}).join(''):'');
+      dl.innerHTML=!it&&c?c.prov.map(function(x){return '<option value="'+esc(x)+'">'}).join(''):'';
+    };
     f.onsubmit=function(e){
       e.preventDefault();var err=$('.s-nl-err',f),bad=null;
-      $$('input,select',f).forEach(function(i){i.classList.remove('err');var ok=i.type==='checkbox'?i.checked:i.value.trim()&&(i.type!=='email'||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value.trim()))&&(i.type!=='tel'||i.value.replace(/\D/g,'').length>=6);if(!ok){i.classList.add('err');bad=bad||i}});
+      $$('input,select',f).forEach(function(i){i.classList.remove('err');if(i.hidden||i.name==='sito_web')return;var ok=i.type==='checkbox'?i.checked:i.value.trim()&&(i.type!=='email'||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value.trim()))&&(i.type!=='tel'||i.value.replace(/\D/g,'').length>=6);if(!ok){i.classList.add('err');bad=bad||i}});
       if(bad){err.textContent=bad.type==='checkbox'?'Serve il consenso per iscrivervi.':bad.type==='email'?'Controllate l\'indirizzo email.':bad.type==='tel'?'Controllate il numero di telefono.':'Compilate tutti i campi.';bad.focus();return}
       err.textContent='';nlSend(f);
     };
@@ -1151,18 +1155,34 @@
   }
   function nlSend(f){
     var N=OF().newsletter||{},g=function(n){return $('[name="'+n+'"]',f).value.trim()},st=GEO&&GEO.find(function(c){return c.c===g('Stato')});
-    var nome=g('Nome'),tel=($('#s-nl-pre',f).textContent+' '+g('Telefono')).trim();
+    var nome=g('Nome'),tel=($('#s-nl-pre',f).textContent+' '+g('Telefono')).trim(),prov=$('#s-nl-psel',f).hidden?g('ProvinciaTxt'):g('Provincia');
     store('pdNl',{nome:nome,email:g('email'),d:new Date().toISOString().slice(0,10)});store('pdCode',N.code);
     var data={_subject:'Nuova iscrizione newsletter: '+nome+' '+g('Cognome')+' ('+(st?st.n:g('Stato'))+')',_template:'table',
       _next:location.origin+'/shop/grazie-iscrizione/?da='+encodeURIComponent(location.pathname),
-      _autoresponse:'Gentile '+nome+', grazie per esservi iscritti alla newsletter di Pandoora: l\'iscrizione è confermata.\n\nEcco il vostro codice sconto: '+N.code+'\n'+N.perc+'% di sconto su ogni prodotto dello shop: https://pandooragroup.it/shop/\nInseritelo nel carrello oppure indicatelo quando ci inviate l\'ordine.\n\nSe non vi siete iscritti voi, rispondete a questa email e vi cancelliamo subito.\n\nPan.door.a S.r.l. · Via I° Maggio 14, 31043 Fontanelle (TV) · ordini@pandooragroup.it · +39 388 470 6887',
-      Nome:nome,Cognome:g('Cognome'),email:g('email'),Telefono:tel,Stato:st?st.n:g('Stato'),'Città':g('Città'),Consenso:'Sì, '+new Date().toLocaleString('it-IT'),Pagina:location.href.split('?')[0],Codice:N.code};
+      _autoresponse:'Gentile '+nome+', grazie per esservi iscritti alla newsletter di Pandoora: l\'iscrizione è confermata.\n\nEcco il vostro codice sconto: '+N.code+'\n'+N.perc+'% di sconto su ogni prodotto dello shop: https://pandooragroup.it/shop/\nInseritelo nel carrello oppure indicatelo quando ci inviate l\'ordine.\n\nSe non vi siete iscritti voi, rispondete a questa email e vi cancelliamo subito.\n\nPAN.DOOR.A GROUP · Via I° Maggio 14, 31043 Fontanelle (TV) · shop@pandooragroup.it · +39 388 470 6887',
+      Nome:nome,Cognome:g('Cognome'),email:g('email'),Telefono:tel,Stato:st?st.n:g('Stato'),Provincia:prov,Consenso:'Sì, '+new Date().toLocaleString('it-IT'),Pagina:location.href.split('?')[0],Codice:N.code};
     var form=document.createElement('form');form.method='POST';form.action='https://formsubmit.co/'+(N.notify||MAIL);form.style.display='none';
     Object.keys(data).forEach(function(k){var i=document.createElement(k==='_autoresponse'?'textarea':'input');i.name=k;i.value=data[k];form.appendChild(i)});
     document.body.appendChild(form);
     var b=$('button[type="submit"]',f);b.disabled=true;b.textContent='Un attimo…';
     if(window.PD_NL_TEST){window.PD_NL_TEST(data,form);return}
+    if(N.endpoint){ // il vostro script sull'hosting Aruba: mail grafica da PAN.DOOR.A GROUP + avviso a voi + elenco iscritti
+      fetch(N.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:true,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})})
+        .then(function(r){return r.json()}).then(function(j){if(!j||!j.ok)throw new Error((j&&j.errore)||'errore');nlSuccess(f,nome)})
+        .catch(function(){form.submit()});
+      return;
+    }
     form.submit();
+  }
+  function nlSuccess(f,nome){
+    var N=OF().newsletter||{};
+    f.innerHTML='<div class="s-nl-logo"><img src="/shop/img/email/logo-popup.webp" alt="PAN.DOOR.A GROUP" width="180" height="150"></div><div class="s-nl-done"><span class="nl-k">Iscrizione completata</span><h2 id="s-nl-t">Grazie '+esc(nome)+'! Ecco il vostro '+N.perc+'%</h2>'
+      +'<div class="nl-codebox"><b>'+esc(N.code)+'</b><button type="button" class="s-btn s-btn-o" id="s-nl-copy">Copia</button></div>'
+      +'<p class="s-nl-sub">Il codice è già attivo nel carrello e ve lo abbiamo inviato anche via email (se non la trovate, guardate nello spam).</p><button type="button" class="s-btn s-btn-p" data-nlx>Inizia a risparmiare</button></div>';
+    $('#s-nl-copy',f).onclick=function(){try{navigator.clipboard.writeText(N.code);this.textContent='Copiato'}catch(e){}};
+    $$('[data-nlx]',f).forEach(function(x){x.onclick=nlClose});
+    $$('.nl-band').forEach(function(b){b.classList.add('done')});var nb=$('.pdp-nlbox');if(nb)nb.classList.add('on');
+    var pill=$('.s-nl-pill');if(pill)pill.remove();
   }
   function nlOpen(src){
     if(nlDone()&&src!=='force'){toast('Il vostro codice '+((OF().newsletter||{}).code||'')+' è già attivo');return}

@@ -181,7 +181,9 @@
    "newsletter": {
     "perc": 10,
     "code": "BENVENUTO10",
-    "notify": "ordini@pandooragroup.it"
+    "notify": "shop@pandooragroup.it",
+    "endpoint": "",
+    "_endpoint": "Indirizzo dello script newsletter sul vostro hosting Aruba (es. https://api.pandooragroup.it/newsletter/iscrizione.php). Se vuoto o non raggiungibile si usa FormSubmit."
    },
    "doorQty": [
     {
