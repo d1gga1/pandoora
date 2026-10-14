@@ -1190,3 +1190,20 @@ body:has(.pdp-bar.on:not(.off)) .s-nl-pill{bottom:84px}
 .pdp-tabs{transition:top .5s var(--out)}
 body:has(.s-head.s-hide) .pdp-tabs{top:0}
 body:has(.s-head.s-hide) .pdp-gal{top:14px}
+
+/* componenti porta: cerniere, telaio, anta (11/10/2026) */
+.pdp-xphoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4;background:#fff}
+.pdp-xphoto[hidden]{display:none}
+.pdp-stage .s-pm-media.xview .s-pm-views,.pdp-stage .s-pm-media.xview .s-pm-sheetbtn,.pdp-stage .s-pm-media.xview .s-pm-dims,.pdp-stage .s-pm-media.xview .s-pm-ral{display:none!important}
+.pdp-thumbs img.cov{object-fit:cover}
+.pdp-comp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pdp-comp-c{margin:0;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pdp-comp-i{position:relative;aspect-ratio:4/3;background:#fff;overflow:hidden}
+.pdp-comp-i>img{width:100%;height:100%;object-fit:contain;transition:transform .6s var(--out)}
+.pdp-comp-c:hover .pdp-comp-i>img{transform:scale(1.04)}
+.pdp-comp-alt{position:absolute;right:12px;bottom:12px;width:64px;height:64px;padding:0;border:2px solid #fff;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 8px 20px -8px rgba(13,21,36,.45);cursor:pointer}
+.pdp-comp-alt img{width:100%;height:100%;object-fit:cover}
+.pdp-comp-c figcaption{padding:18px 20px 20px;border-top:1px solid var(--line)}
+.pdp-comp-c b{display:block;font-weight:800;font-size:16px;margin-bottom:6px}
+.pdp-comp-c p{margin:0;color:var(--ink2);font-size:14px;line-height:1.6}
+@media (max-width:900px){.pdp-comp{grid-template-columns:1fr}}

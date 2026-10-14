@@ -9,7 +9,7 @@
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var FINE=window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches;
   var WA='393884706887', MAIL='ordini@pandooragroup.it';
-  function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+  function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));if((k==='pdShopCart2'||k==='pdShopFav')&&window.PDA)window.PDA.cambiato(k)}catch(e){return null}}
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
 
@@ -457,7 +457,8 @@
           +nudge
           +(code?'<div class="s-code ok">'+IC.check+'<span>Codice <b>'+esc(code)+'</b> attivo: −'+N.perc+'% su ogni prodotto</span><button type="button" id="s-code-rm" aria-label="Togli codice">'+IC.x+'</button></div>'
                :'<form class="s-code" id="s-code-f"><input id="s-code-in" placeholder="Codice sconto" aria-label="Codice sconto" autocomplete="off"><button type="submit">Applica</button></form>'+(N.perc?'<button type="button" class="s-nl-mini" data-nl-open>Non avete un codice? <b>Iscrivetevi e risparmiate '+eur.format(Math.round(K.sub*N.perc/100))+'</b></button>':''))
-          +'<a class="s-btn s-btn-p" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(orderText())+'">Invia l\'ordine su WhatsApp</a>'
+          +(window.PDA?'<button type="button" class="s-btn s-btn-p" id="s-checkout">Invia la richiesta d\'ordine</button>':'')
+          +'<a class="s-btn '+(window.PDA?'s-btn-o':'s-btn-p')+'" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(orderText())+'">Invia l\'ordine su WhatsApp</a>'
           +'<a class="s-btn s-btn-o" href="mailto:'+MAIL+'?subject='+encodeURIComponent('Ordine Pandoora Shop')+'&body='+encodeURIComponent(orderText())+'">Invia per email</a>'
           +'<p class="s-note">Nessun pagamento adesso: confermiamo l\'ordine con voi prima della produzione'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
         $$('[data-rm]',b).forEach(function(x){x.onclick=function(){cart.splice(+x.dataset.rm,1);store('pdShopCart2',cart);counts();openDrawer('cart')}});
@@ -465,6 +466,7 @@
         var cf=$('#s-code-f',f);if(cf)cf.onsubmit=function(e){e.preventDefault();var v=$('#s-code-in',f).value.trim().toUpperCase();if(N.code&&v===N.code){store('pdCode',v);openDrawer('cart')}else{var i=$('#s-code-in',f);i.value='';i.placeholder='Codice non valido';i.classList.add('err');setTimeout(function(){i.classList.remove('err')},900)}};
         var cr=$('#s-code-rm',f);if(cr)cr.onclick=function(){store('pdCode','');openDrawer('cart')};
         $$('[data-nl-open]',f).forEach(function(x){x.onclick=function(){closeDrawer();nlOpen('carrello')}});
+        var ck=$('#s-checkout',f);if(ck)ck.onclick=function(){window.PDA.checkout()};
       }
     }
     document.body.classList.add('s-cart-open');window.PDM&&window.PDM.stop();
@@ -1045,17 +1047,20 @@
   function pdpThumbs(p,hero){
     var th=$('#pdp-thumbs',hero),media=$('.s-pm-media',hero);if(!th||!media)return;
     var img=$('img',media),src=img?(img.currentSrc||img.src):'',v=[];
-    if(p.type==='door')v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato'],['scheda','Scheda tecnica']];
+    if(p.type==='door')v=[['foto','Foto'],['dettaglio','Dettaglio'],['cerniera','Cerniere'],['telaio','Telaio'],['disegno','Disegno quotato'],['scheda','Scheda tecnica']];
     else if(p.type==='cube')v=[['config','Configuratore'],['foto','Foto']];
     else v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato']];
     var ic={disegno:'<svg viewBox="0 0 40 40"><rect x="11" y="5" width="18" height="30"/><path d="M5 5v30M3 5h4M3 35h4M11 38h18"/></svg>',scheda:'<svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26"/><path d="M5 14h30M14 14v19"/></svg>',config:'<svg viewBox="0 0 40 40"><rect x="6" y="6" width="12" height="12"/><rect x="22" y="6" width="12" height="12"/><rect x="6" y="22" width="12" height="12"/><rect x="22" y="22" width="12" height="12"/></svg>'};
-    th.innerHTML=v.map(function(x,i){var t=x[0]==='foto'&&p.type==='cube'?'<img src="/shop/img/prodotti/'+esc(p.id)+'.jpg" alt="">':ic[x[0]]||'<img src="'+esc(p.type==='cube'?'':src)+'" alt=""'+(x[0]==='dettaglio'?' class="zz"':'')+'>';return '<button type="button" data-v="'+x[0]+'" aria-pressed="'+(i===0)+'"><span>'+t+'</span>'+esc(x[1])+'</button>'}).join('');
-    var fd=null,ph=null;
+    var XV={cerniera:'cerniera-foto',telaio:'telaio-foto'};
+    th.innerHTML=v.map(function(x,i){var t=XV[x[0]]?'<img src="/shop/img/componenti/'+XV[x[0]]+'_min.webp" alt="" class="cov">':x[0]==='foto'&&p.type==='cube'?'<img src="/shop/img/prodotti/'+esc(p.id)+'.jpg" alt="">':ic[x[0]]||'<img src="'+esc(p.type==='cube'?'':src)+'" alt=""'+(x[0]==='dettaglio'?' class="zz"':'')+'>';return '<button type="button" data-v="'+x[0]+'" aria-pressed="'+(i===0)+'"><span>'+t+'</span>'+esc(x[1])+'</button>'}).join('');
+    var fd=null,ph=null,xp=null;
+    if(p.type==='door'){xp=document.createElement('img');xp.className='pdp-xphoto';xp.alt='';xp.hidden=true;media.appendChild(xp)}
     if(p.type==='furniture'){fd=document.createElement('div');fd.className='s-pm-draw';fd.hidden=true;media.appendChild(fd)}
     if(p.type==='cube'){ph=document.createElement('img');ph.className='pdp-cubephoto';ph.src='/shop/img/prodotti/'+p.id+'.jpg';ph.alt=p.name;ph.hidden=true;media.appendChild(ph)}
     function set(k){
       $$('button',th).forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===k)});
       media.classList.toggle('zoomed',k==='dettaglio');
+      if(xp){var xs=XV[k];xp.hidden=!xs;if(xs){xp.src='/shop/img/componenti/'+xs+'.webp';xp.alt=k==='cerniera'?'Cerniera a scomparsa':'Telaio in legno listellare con coprifilo';if(!RM&&xp.animate)xp.animate([{opacity:0,transform:'scale(1.03)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.16,1,.3,1)'})}media.classList.toggle('xview',!!xs);if(xs){CUR.view&&CUR.view('foto');return}}
       if(p.type==='door'){if(k==='scheda'){openSheet(p,CUR.c);set('disegno');return}CUR.view&&CUR.view(k==='disegno'?'disegno':'foto')}
       if(fd){fd.hidden=k!=='disegno';media.classList.toggle('drawing',k==='disegno');var im=$(':scope>img',media);if(im)im.hidden=k==='disegno';if(k==='disegno')fd.innerHTML=furnDrawSVG(p,CUR.c,CUR.c.fin)}
       if(ph){ph.hidden=k!=='foto';var st=$('#s-cube',media);if(st)st.hidden=k==='foto'}
@@ -1104,6 +1109,7 @@
   function initProductPage(){
     var root=$('.sp');if(!root)return;
     bindCards(root,'');staggerIn($$('.sp-rel .s-card',root));
+    $$('.pdp-comp-alt').forEach(function(b){b.onclick=function(){var big=b.parentNode.querySelector('img'),s=big.src,sm=b.querySelector('img');var o=big.dataset.orig;if(big.getAttribute('src')===o){big.src=b.dataset.swap;sm.src=o.replace('.webp','_min.webp')}else{big.src=o;sm.src=b.dataset.swap.replace('.webp','_min.webp')}}});
     var id=document.body.dataset.id,p=byId(id),hero=$('#pdp-cfg');
     if(!p||!hero)return;
     var h=(location.hash||'').slice(1),sub=['scorrevoli','filo-muro'].indexOf(h)>=0?h:'';
@@ -1167,7 +1173,7 @@
     var b=$('button[type="submit"]',f);b.disabled=true;b.textContent='Un attimo…';
     if(window.PD_NL_TEST){window.PD_NL_TEST(data,form);return}
     if(N.endpoint){ // il vostro script sull'hosting Aruba: mail grafica da PAN.DOOR.A GROUP + avviso a voi + elenco iscritti
-      fetch(N.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:true,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})})
+      Promise.race([new Promise(function(_,ko){setTimeout(function(){ko(new Error('timeout'))},9000)}),fetch(N.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:true,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})})])
         .then(function(r){return r.json()}).then(function(j){if(!j||!j.ok)throw new Error((j&&j.errore)||'errore');nlSuccess(f,nome)})
         .catch(function(){form.submit()});
       return;
@@ -1188,6 +1194,7 @@
     if(nlDone()&&src!=='force'){toast('Il vostro codice '+((OF().newsletter||{}).code||'')+' è già attivo');return}
     var m=nlBuild();store('pdNlSeen',Date.now());try{sessionStorage.setItem('pdNlS','1')}catch(e){}
     var pre=window._nlPre;if(pre){$('[name="email"]',m).value=pre;window._nlPre=''}
+    var U=window.PDA&&window.PDA.utente();if(U){[['Nome',U.nome],['Cognome',U.cognome],['email',U.email]].forEach(function(x){var i=$('[name="'+x[0]+'"]',m);if(i&&!i.value)i.value=x[1]||''})}
     m.classList.add('open');document.documentElement.style.overflow='hidden';window.PDM&&window.PDM.stop();
     requestAnimationFrame(function(){m.classList.add('show');var i=$('[name="Nome"]',m);i&&i.focus({preventScroll:true})});
     var pill=$('.s-nl-pill');if(pill)pill.classList.remove('on');
@@ -1218,6 +1225,16 @@
     var da=new URLSearchParams(location.search).get('da'),bk=$('#nl-back');if(bk&&da&&/^\/shop\//.test(da))bk.href=da;
   }
 
+  /* ---------- collegamento con l'area clienti (account.js) ---------- */
+  window.PDShop={
+    reload:function(){cart=store('pdShopCart2')||[];favs=store('pdShopFav')||[];counts();$$('[data-fav]').forEach(function(x){x.setAttribute('aria-pressed',favs.indexOf(x.dataset.fav)>=0)});if(document.body.classList.contains('s-cart-open')&&$('#s-drawer-t'))openDrawer($('#s-drawer-t').textContent==='Preferiti'?'fav':'cart')},
+    ordine:function(){var K=cartCalc();return{righe:cart.map(function(l,i){var r=K.rows[i];return Object.assign({},l,{gross:r.gross,perc:r.perc,why:r.why,amount:r.amount})}),sub:K.sub,disc:K.disc,tot:K.tot,codice:codeApplied()}},
+    svuotaCarrello:function(){cart=[];store('pdShopCart2',cart);counts()},
+    apriCarrello:function(){openDrawer('cart')},
+    chiudiCarrello:closeDrawer,
+    offerta:function(){return OF().newsletter||null}
+  };
+
   /* ---------- avvio ---------- */
   function init(){
     var pf=$('.pf');if(pf)pf.classList.add('in');
@@ -1232,9 +1249,9 @@
       CAT=r[0];P=r[1].products||[];PR=r[1].pricing;
       initSearch();
       var pg=document.body.dataset.page;
-      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else if(pg==='nl-thanks')initThanks();else initHome();
+      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else if(pg==='nl-thanks')initThanks();else if(pg!=='account')initHome();
       var pid=new URLSearchParams(location.search).get('p');if(pid&&byId(pid)){location.replace(pURL(byId(pid)));return}
-      initNL();
+      if(pg!=='account')initNL();
     }).catch(function(err){console.error(err);var g=$('#s-grid');if(g)g.innerHTML=emptyHTML('')});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
