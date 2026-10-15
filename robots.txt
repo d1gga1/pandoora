@@ -1,33 +1,13 @@
 # robots.txt — PAN.DOOR.A S.r.l. — https://pandooragroup.it
-# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-09-11
+# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-10-15
 
 User-agent: *
 Allow: /
 
-# Pagine di servizio: utili all'utente, inutili in SERP
-Disallow: /grazie/
-Disallow: /en/thank-you/
-Disallow: /fr/merci/
-Disallow: /de/danke/
-Disallow: /es/gracias/
-Disallow: /nl/bedankt/
-Disallow: /pl/dziekujemy/
-Disallow: /cs/dekujeme/
-Disallow: /sk/dakujeme/
-Disallow: /sl/hvala/
-Disallow: /tr/tesekkurler/
-Disallow: /ro/multumim/
-Disallow: /hu/koszonjuk/
-Disallow: /bg/blagodarim/
-Disallow: /sv/tack/
-Disallow: /da/tak/
-Disallow: /no/takk/
-Disallow: /fi/kiitos/
-Disallow: /lt/aciu/
-Disallow: /lv/paldies/
-Disallow: /et/aitah/
-Disallow: /pandoora_hub.html
-Disallow: /404.html
+# Pagine di servizio (grazie/thank-you, hub, 404): NON bloccate qui di proposito.
+# Hanno <meta name="robots" content="noindex,follow">: Google deve poterle
+# scansionare per leggere il noindex e toglierle dall'indice.
+# Bloccarle qui causa l'avviso "Indicizzata, ma bloccata da robots.txt".
 
 # Crawler AI: consentiti (visibilità in ChatGPT, Perplexity, Gemini, Claude)
 User-agent: GPTBot
