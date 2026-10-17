@@ -290,3 +290,10 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 /* link nelle tabelle (07/10/2026) */
 .pg-table td a{color:var(--blue,#2e6be6);text-decoration:none;border-bottom:1px solid rgba(46,107,230,.3)}
 .pg-table td a:hover{color:var(--red);border-color:var(--red)}
+
+/* 17/10/2026 - fascia "compreso nel prezzo" nelle pagine porte locali */
+.pg-usp{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0}
+.pg-usp li{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:100px;background:rgba(139,195,74,.13);border:1px solid rgba(139,195,74,.4);color:#fff;font-size:13.5px;font-weight:600;line-height:1.2}
+.pg-usp li::before{content:"\2713";color:#9ccc65;font-weight:800}
+@media (max-width:600px){.pg-usp li{font-size:12.5px;padding:7px 12px}}
+.pg-usp a{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.55)}.pg-usp a:hover{border-bottom-color:#fff}
