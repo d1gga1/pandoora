@@ -1,5 +1,5 @@
 # robots.txt — PAN.DOOR.A S.r.l. — https://pandooragroup.it
-# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-10-15
+# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-10-17
 
 User-agent: *
 Allow: /
@@ -35,6 +35,51 @@ User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 # Crawler SEO: consentiti per poter monitorare backlink e concorrenza
