@@ -325,16 +325,64 @@
   });
 
   /* ---------- comportamento ---------- */
-  const open  = () => { wrap.classList.add('open');  btn.setAttribute('aria-expanded','true');  };
+  /* ---------- precaricamento: il cambio lingua deve essere istantaneo ----------
+     - all'apertura del menu precarica le home delle lingue principali
+     - al primo tocco su una lingua precarica (e su Chrome/Android prerenderizza)
+       proprio quella pagina, cosi' al rilascio del dito e' gia' pronta. */
+  const pre = {};
+  function prefetch(href){
+    if (!href || pre[href]) return; pre[href] = 1;
+    try{
+      const l = document.createElement('link'); l.rel = 'prefetch'; l.href = href; l.as = 'document';
+      document.head.appendChild(l);
+    }catch(e){}
+  }
+  function prerender(href){
+    if (!href || pre['pr:' + href]) return; pre['pr:' + href] = 1;
+    try{
+      if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')){
+        const s = document.createElement('script'); s.type = 'speculationrules';
+        s.textContent = JSON.stringify({prerender:[{source:'list',urls:[href]}]});
+        document.head.appendChild(s);
+      } else prefetch(href);
+    }catch(e){ prefetch(href); }
+  }
+  const MAIN = ['it','en','fr','de','es'];
+  let warmed = false;
+  function warm(){
+    if (warmed) return; warmed = true;
+    opts.forEach(o => { if (MAIN.indexOf(o.dataset.lang) !== -1 && o.dataset.lang !== cur.lang) prefetch(o.getAttribute('data-href')); });
+  }
+
+  const open  = () => { wrap.classList.add('open');  btn.setAttribute('aria-expanded','true'); warm(); };
   const close = () => { wrap.classList.remove('open'); btn.setAttribute('aria-expanded','false'); };
+  btn.addEventListener('pointerdown', warm, {passive:true});
   btn.addEventListener('click', e => { e.stopPropagation(); wrap.classList.contains('open') ? close() : open(); });
   document.addEventListener('click', e => { if(!wrap.contains(e.target)) close(); });
   document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
-  opts.forEach(o => o.addEventListener('click', () => {
-    const l = o.dataset.lang;
-    if (l === cur.lang) { close(); return; }
-    location.href = o.getAttribute('data-href');
-  }));
+  let going = false;
+  opts.forEach(o => {
+    const l = o.dataset.lang, href = o.getAttribute('data-href');
+    o.addEventListener('pointerdown', () => { if (l !== cur.lang) prerender(href); }, {passive:true});
+    o.addEventListener('click', () => {
+      if (l === cur.lang) { close(); return; }
+      if (going) return; going = true;
+      /* feedback immediato: bandiera e codice cambiano subito, il menu si chiude */
+      opts.forEach(x => x.classList.toggle('on', x === o));
+      curFlag.innerHTML = FL[l] || FL.it;
+      curCode.textContent = CD[l] || l.toUpperCase();
+      close();
+      location.href = href;
+    });
+  });
+  /* tornando indietro dalla bfcache lo switcher deve mostrare di nuovo la lingua della pagina */
+  window.addEventListener('pageshow', e => {
+    if (!e.persisted) return;
+    going = false;
+    curFlag.innerHTML = FL[cur.lang] || FL.it;
+    curCode.textContent = CD[cur.lang] || 'IT';
+    opts.forEach(x => x.classList.toggle('on', x.dataset.lang === cur.lang));
+  });
 
   /* compat: vecchia API, ora naviga invece di tradurre a runtime */
   window.applyLang = function(lang){

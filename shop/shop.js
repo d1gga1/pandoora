@@ -1196,7 +1196,7 @@
     var pre=window._nlPre;if(pre){$('[name="email"]',m).value=pre;window._nlPre=''}
     var U=window.PDA&&window.PDA.utente();if(U){[['Nome',U.nome],['Cognome',U.cognome],['email',U.email]].forEach(function(x){var i=$('[name="'+x[0]+'"]',m);if(i&&!i.value)i.value=x[1]||''})}
     m.classList.add('open');document.documentElement.style.overflow='hidden';window.PDM&&window.PDM.stop();
-    requestAnimationFrame(function(){m.classList.add('show');var i=$('[name="Nome"]',m);i&&i.focus({preventScroll:true})});
+    requestAnimationFrame(function(){m.classList.add('show');if(src!=='auto'&&matchMedia('(hover:hover) and (pointer:fine)').matches){var i=$('[name="Nome"]',m);i&&i.focus({preventScroll:true})}});
     var pill=$('.s-nl-pill');if(pill)pill.classList.remove('on');
   }
   function nlClose(){if(!NLB)return;NLB.classList.remove('show');document.documentElement.style.overflow='';window.PDM&&window.PDM.start();setTimeout(function(){NLB.classList.remove('open')},RM?0:400);nlPill()}

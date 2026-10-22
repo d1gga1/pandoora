@@ -549,6 +549,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementB
 
 /* ── Entrance animation ── */
 const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+tl.timeScale(2.5); /* ingresso rapido: contenuti visibili in ~1s */
 tl.to('nav',{opacity:1,y:0,duration:.7})
   .to('#heye',{opacity:1,y:0,duration:.6},'-=.3')
   .to('.htl span',{opacity:1,y:'0%',duration:.75,stagger:.12},'-=.2')

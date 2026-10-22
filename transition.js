@@ -10,7 +10,8 @@
   'use strict';
 
   var LOGO    = '/pandoora_logo.webp';
-  var DUR     = 1780;                 // ms totali prima del cambio pagina
+  var DUR     = 480;                  // ms prima del cambio pagina: il velo copre lo schermo e si naviga subito,
+                                      // il resto dell'animazione continua mentre la nuova pagina si carica
   var KEY     = 'pdxArrive';
   var DEF_ACC = '#5B8DEF';
   var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -211,11 +212,15 @@ body.pdx-busy #cur,body.pdx-busy #curRing{opacity:0;transition:opacity .25s}
     Array.prototype.forEach.call(links, function (a) {
       var href = a.getAttribute('href');
       if (!href || href.charAt(0) === '#' || /^(https?:|mailto:|tel:)/i.test(href)) return;
-      a.addEventListener('mouseenter', function () {
+      var pre = function () {
         if (a.dataset.pdxPre) return; a.dataset.pdxPre = '1';
         var l = document.createElement('link'); l.rel = 'prefetch'; l.href = href;
         document.head.appendChild(l);
-      }, { passive: true });
+      };
+      /* precarica al passaggio del mouse (desktop) o al primo tocco (telefono) */
+      if (window.matchMedia && matchMedia('(hover:hover)').matches) a.addEventListener('mouseenter', pre, { passive: true });
+      a.addEventListener('pointerdown', pre, { passive: true });
+      a.addEventListener('touchstart', pre, { passive: true });
       a.addEventListener('click', function (e) {
         if (REDUCED || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
         e.preventDefault();

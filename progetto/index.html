@@ -64,7 +64,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"></noscript>
-<style>
+<style>/*pd-fast*/
 :root{
   --red:#c0392b;--red-dark:#a12b1e;--green:#8bc34a;--green-dark:#79ac3f;
   --blue:#2e6be6;--blue-soft:#5b8def;
@@ -101,15 +101,15 @@ img{max-width:100%;display:block}
 @keyframes kb{from{transform:scale(1.06)}to{transform:scale(1.16)}}
 .phero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,13,23,.55) 0%,rgba(8,13,23,.2) 30%,rgba(8,13,23,.75) 78%,rgba(8,13,23,.96) 100%)}
 .phero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%}
-.phero-cat{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:20px;opacity:0;transform:translateY(14px);animation:up .7s var(--ease) .2s forwards}
+.phero-cat{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:20px;opacity:0;transform:translateY(14px);animation:up .39s var(--ease) .08s forwards}
 .phero-cat::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px}
 .phero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(40px,6vw,82px);line-height:1;letter-spacing:-1.6px;margin:0 0 26px;max-width:16ch}
 .phero h1 .l{display:block;overflow:hidden}
 .phero h1 .w{display:inline-block;transform:translateY(110%);animation:wu .9s var(--ease) forwards}
-.phero h1 .l:nth-child(1) .w{animation-delay:.28s}.phero h1 .l:nth-child(2) .w{animation-delay:.4s}
+.phero h1 .l:nth-child(1) .w{animation-delay:.11s}.phero h1 .l:nth-child(2) .w{animation-delay:.16s}
 @keyframes wu{to{transform:translateY(0)}}
 @keyframes up{to{opacity:1;transform:none}}
-.phero-meta{display:flex;flex-wrap:wrap;gap:30px;opacity:0;transform:translateY(14px);animation:up .8s var(--ease) .55s forwards}
+.phero-meta{display:flex;flex-wrap:wrap;gap:30px;opacity:0;transform:translateY(14px);animation:up .44s var(--ease) .22s forwards}
 .pm{display:flex;flex-direction:column;gap:2px}
 .pm .k{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .pm .v{font-size:16px;font-weight:600;color:#fff}
