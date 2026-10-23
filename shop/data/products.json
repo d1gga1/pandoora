@@ -3156,7 +3156,8 @@
     "a-ribalta",
     "scarpiera lido 2 ribalte"
    ],
-   "rank": 0
+   "rank": 0,
+   "imgSet": "/shop/img/prodotti/scarpiera-ribalta-2-480.webp 480w, /shop/img/prodotti/scarpiera-ribalta-2-800.webp 800w"
   },
   {
    "id": "scarpiera-ribalta-3",
@@ -3212,7 +3213,8 @@
     "a-ribalta",
     "scarpiera lido 3 ribalte"
    ],
-   "rank": 11
+   "rank": 11,
+   "imgSet": "/shop/img/prodotti/scarpiera-ribalta-3-480.webp 480w, /shop/img/prodotti/scarpiera-ribalta-3-800.webp 800w"
   },
   {
    "id": "scarpiera-slim-17",
@@ -3261,7 +3263,8 @@
     "a-ribalta",
     "scarpiera filo 17"
    ],
-   "rank": 12
+   "rank": 12,
+   "imgSet": "/shop/img/prodotti/scarpiera-slim-17-480.webp 480w, /shop/img/prodotti/scarpiera-slim-17-800.webp 800w"
   },
   {
    "id": "scarpiera-ante-2",
@@ -3317,7 +3320,8 @@
     "con-ante",
     "scarpiera brenta 2 ante"
    ],
-   "rank": 13
+   "rank": 13,
+   "imgSet": "/shop/img/prodotti/scarpiera-ante-2-480.webp 480w, /shop/img/prodotti/scarpiera-ante-2-800.webp 800w"
   },
   {
    "id": "scarpiera-alta-5",
@@ -3367,7 +3371,8 @@
     "con-ante",
     "scarpiera torre 5 ripiani"
    ],
-   "rank": 14
+   "rank": 14,
+   "imgSet": "/shop/img/prodotti/scarpiera-alta-5-480.webp 480w, /shop/img/prodotti/scarpiera-alta-5-800.webp 800w"
   },
   {
    "id": "comodino-2-cassetti",
@@ -3417,7 +3422,8 @@
     "comodini",
     "comodino nodo 2 cassetti"
    ],
-   "rank": 0
+   "rank": 0,
+   "imgSet": "/shop/img/prodotti/comodino-2-cassetti-480.webp 480w, /shop/img/prodotti/comodino-2-cassetti-800.webp 800w"
   },
   {
    "id": "comodino-sospeso",
@@ -3467,7 +3473,8 @@
     "comodini",
     "comodino aria sospeso"
    ],
-   "rank": 18
+   "rank": 18,
+   "imgSet": "/shop/img/prodotti/comodino-sospeso-480.webp 480w, /shop/img/prodotti/comodino-sospeso-800.webp 800w"
   },
   {
    "id": "comodino-laccato",
@@ -3515,7 +3522,8 @@
     "comodini",
     "comodino riva laccato"
    ],
-   "rank": 20
+   "rank": 20,
+   "imgSet": "/shop/img/prodotti/comodino-laccato-480.webp 480w, /shop/img/prodotti/comodino-laccato-800.webp 800w"
   },
   {
    "id": "mobile-tv-basso-180",
@@ -3571,7 +3579,8 @@
     "mobili-tv",
     "mobile tv orizzonte"
    ],
-   "rank": 0
+   "rank": 0,
+   "imgSet": "/shop/img/prodotti/mobile-tv-basso-180-480.webp 480w, /shop/img/prodotti/mobile-tv-basso-180-800.webp 800w"
   },
   {
    "id": "mobile-tv-sospeso",
@@ -3627,7 +3636,8 @@
     "mobili-tv",
     "mobile tv lago sospeso"
    ],
-   "rank": 22
+   "rank": 22,
+   "imgSet": "/shop/img/prodotti/mobile-tv-sospeso-480.webp 480w, /shop/img/prodotti/mobile-tv-sospeso-800.webp 800w"
   },
   {
    "id": "parete-attrezzata",
@@ -3676,7 +3686,8 @@
     "mobili-tv",
     "parete attrezzata livenza"
    ],
-   "rank": 23
+   "rank": 23,
+   "imgSet": "/shop/img/prodotti/parete-attrezzata-480.webp 480w, /shop/img/prodotti/parete-attrezzata-800.webp 800w"
   },
   {
    "id": "mobile-tv-cassetti",
@@ -3725,7 +3736,8 @@
     "mobili-tv",
     "mobile tv brolo"
    ],
-   "rank": 24
+   "rank": 24,
+   "imgSet": "/shop/img/prodotti/mobile-tv-cassetti-480.webp 480w, /shop/img/prodotti/mobile-tv-cassetti-800.webp 800w"
   },
   {
    "id": "madia-3-ante",
@@ -3781,7 +3793,8 @@
     "madie-credenze",
     "madia corte 3 ante"
    ],
-   "rank": 0
+   "rank": 0,
+   "imgSet": "/shop/img/prodotti/madia-3-ante-480.webp 480w, /shop/img/prodotti/madia-3-ante-800.webp 800w"
   },
   {
    "id": "credenza-2-ante",
@@ -3831,7 +3844,8 @@
     "madie-credenze",
     "credenza borgo 2 ante"
    ],
-   "rank": 26
+   "rank": 26,
+   "imgSet": "/shop/img/prodotti/credenza-2-ante-480.webp 480w, /shop/img/prodotti/credenza-2-ante-800.webp 800w"
   },
   {
    "id": "madia-cannettata",
@@ -3880,7 +3894,8 @@
     "madie-credenze",
     "madia canneto"
    ],
-   "rank": 27
+   "rank": 27,
+   "imgSet": "/shop/img/prodotti/madia-cannettata-480.webp 480w, /shop/img/prodotti/madia-cannettata-800.webp 800w"
   },
   {
    "id": "ingresso-specchio",
@@ -3929,7 +3944,8 @@
     "mobili-ingresso",
     "ingresso soglia con specchio"
    ],
-   "rank": 30
+   "rank": 30,
+   "imgSet": "/shop/img/prodotti/ingresso-specchio-480.webp 480w, /shop/img/prodotti/ingresso-specchio-800.webp 800w"
   },
   {
    "id": "ingresso-2-ante",
@@ -3979,7 +3995,8 @@
     "mobili-ingresso",
     "mobile ingresso atrio"
    ],
-   "rank": 31
+   "rank": 31,
+   "imgSet": "/shop/img/prodotti/ingresso-2-ante-480.webp 480w, /shop/img/prodotti/ingresso-2-ante-800.webp 800w"
   },
   {
    "id": "colonna-bagno",
@@ -4029,7 +4046,8 @@
     "mobili-bagno",
     "colonna bagno fonte"
    ],
-   "rank": 34
+   "rank": 34,
+   "imgSet": "/shop/img/prodotti/colonna-bagno-480.webp 480w, /shop/img/prodotti/colonna-bagno-800.webp 800w"
   },
   {
    "id": "top-laminato-hpl",
@@ -4092,7 +4110,8 @@
     "top-per-tavoli",
     "top hpl 30"
    ],
-   "rank": 41
+   "rank": 41,
+   "imgSet": "/shop/img/prodotti/top-laminato-hpl-480.webp 480w, /shop/img/prodotti/top-laminato-hpl-800.webp 800w"
   },
   {
    "id": "top-laccato-tondo",
@@ -4146,7 +4165,8 @@
     "top-per-tavoli",
     "top tondo laccato"
    ],
-   "rank": 42
+   "rank": 42,
+   "imgSet": "/shop/img/prodotti/top-laccato-tondo-480.webp 480w, /shop/img/prodotti/top-laccato-tondo-800.webp 800w"
   },
   {
    "id": "scarpiera-pensile-duo",
@@ -4196,7 +4216,8 @@
     "a-ribalta",
     "scarpiera pensile duo (2 pezzi)"
    ],
-   "rank": 110
+   "rank": 110,
+   "imgSet": "/shop/img/prodotti/scarpiera-pensile-duo-480.webp 480w, /shop/img/prodotti/scarpiera-pensile-duo-800.webp 800w"
   },
   {
    "id": "scarpiera-snella-2",
@@ -4246,7 +4267,8 @@
     "a-ribalta",
     "scarpiera snella 2 vani"
    ],
-   "rank": 111
+   "rank": 111,
+   "imgSet": "/shop/img/prodotti/scarpiera-snella-2-480.webp 480w, /shop/img/prodotti/scarpiera-snella-2-800.webp 800w"
   },
   {
    "id": "scarpiera-snella-3",
@@ -4296,7 +4318,8 @@
     "a-ribalta",
     "scarpiera snella 3 vani"
    ],
-   "rank": 112
+   "rank": 112,
+   "imgSet": "/shop/img/prodotti/scarpiera-snella-3-480.webp 480w, /shop/img/prodotti/scarpiera-snella-3-800.webp 800w"
   },
   {
    "id": "scarpiera-stella-4",
@@ -4351,7 +4374,8 @@
     "a-ribalta",
     "scarpiera stella 4 ribalte"
    ],
-   "rank": 113
+   "rank": 113,
+   "imgSet": "/shop/img/prodotti/scarpiera-stella-4-480.webp 480w, /shop/img/prodotti/scarpiera-stella-4-800.webp 800w"
   },
   {
    "id": "panca-ante-scorrevoli",
@@ -4400,7 +4424,8 @@
     "con-seduta",
     "panca brina ante scorrevoli"
    ],
-   "rank": 115
+   "rank": 115,
+   "imgSet": "/shop/img/prodotti/panca-ante-scorrevoli-480.webp 480w, /shop/img/prodotti/panca-ante-scorrevoli-800.webp 800w"
   },
   {
    "id": "scarpiera-aperta-ripiani",
@@ -4456,7 +4481,8 @@
     "a-giorno",
     "scarpiera vista a giorno"
    ],
-   "rank": 116
+   "rank": 116,
+   "imgSet": "/shop/img/prodotti/scarpiera-aperta-ripiani-480.webp 480w, /shop/img/prodotti/scarpiera-aperta-ripiani-800.webp 800w"
   },
   {
    "id": "libreria-alveare-2x4",
@@ -4746,7 +4772,8 @@
     "con-ante",
     "scarpiera meduna 2 ante"
    ],
-   "rank": 5
+   "rank": 5,
+   "imgSet": "/shop/img/prodotti/scarpiera-meduna-2-ante-480.jpg 480w, /shop/img/prodotti/scarpiera-meduna-2-ante-800.jpg 800w"
   },
   {
    "id": "panca-cansiglio-contenitore",
@@ -4795,7 +4822,8 @@
     "con-seduta",
     "panca cansiglio contenitore"
    ],
-   "rank": 6
+   "rank": 6,
+   "imgSet": "/shop/img/prodotti/panca-cansiglio-contenitore-480.jpg 480w, /shop/img/prodotti/panca-cansiglio-contenitore-800.jpg 800w"
   },
   {
    "id": "cubo-tagliamento",
@@ -4845,7 +4873,8 @@
     "contenitori",
     "cubo tagliamento a giorno"
    ],
-   "rank": 7
+   "rank": 7,
+   "imgSet": "/shop/img/prodotti/cubo-tagliamento-480.jpg 480w, /shop/img/prodotti/cubo-tagliamento-800.jpg 800w"
   },
   {
    "id": "cassettiera-lemene-6",
@@ -4895,7 +4924,8 @@
     "cassettiere",
     "cassettiera lemene 6 cassetti"
    ],
-   "rank": 8
+   "rank": 8,
+   "imgSet": "/shop/img/prodotti/cassettiera-lemene-6-480.jpg 480w, /shop/img/prodotti/cassettiera-lemene-6-800.jpg 800w"
   },
   {
    "id": "comodino-musone-2-cassetti",
@@ -4945,7 +4975,8 @@
     "comodini",
     "comodino musone 2 cassetti"
    ],
-   "rank": 9
+   "rank": 9,
+   "imgSet": "/shop/img/prodotti/comodino-musone-2-cassetti-480.jpg 480w, /shop/img/prodotti/comodino-musone-2-cassetti-800.jpg 800w"
   },
   {
    "id": "cassettiera-monticano-4",
@@ -4995,7 +5026,8 @@
     "cassettiere",
     "cassettiera monticano 4 cassetti"
    ],
-   "rank": 10
+   "rank": 10,
+   "imgSet": "/shop/img/prodotti/cassettiera-monticano-4-480.jpg 480w, /shop/img/prodotti/cassettiera-monticano-4-800.jpg 800w"
   },
   {
    "id": "credenza-soligo-top-rovere",
@@ -5044,7 +5076,8 @@
     "madie-credenze",
     "credenza soligo top rovere"
    ],
-   "rank": 11
+   "rank": 11,
+   "imgSet": "/shop/img/prodotti/credenza-soligo-top-rovere-480.jpg 480w, /shop/img/prodotti/credenza-soligo-top-rovere-800.jpg 800w"
   },
   {
    "id": "madia-soligo-180-cassetti",
@@ -5094,7 +5127,8 @@
     "madie-credenze",
     "madia soligo 180 cassetti"
    ],
-   "rank": 12
+   "rank": 12,
+   "imgSet": "/shop/img/prodotti/madia-soligo-180-cassetti-480.jpg 480w, /shop/img/prodotti/madia-soligo-180-cassetti-800.jpg 800w"
   },
   {
    "id": "credenza-soligo-120",
@@ -5144,7 +5178,8 @@
     "madie-credenze",
     "credenza soligo 120"
    ],
-   "rank": 13
+   "rank": 13,
+   "imgSet": "/shop/img/prodotti/credenza-soligo-120-480.jpg 480w, /shop/img/prodotti/credenza-soligo-120-800.jpg 800w"
   },
   {
    "id": "pensile-tv-soligo-180",
@@ -5194,7 +5229,8 @@
     "mobili-tv",
     "pensile tv soligo sospeso 180"
    ],
-   "rank": 14
+   "rank": 14,
+   "imgSet": "/shop/img/prodotti/pensile-tv-soligo-180-480.jpg 480w, /shop/img/prodotti/pensile-tv-soligo-180-800.jpg 800w"
   },
   {
    "id": "libreria-quadra-4x2-cassetti",
@@ -5244,7 +5280,8 @@
     "librerie",
     "libreria quadra 4×2 con cassetti"
    ],
-   "rank": 15
+   "rank": 15,
+   "imgSet": "/shop/img/prodotti/libreria-quadra-4x2-cassetti-480.jpg 480w, /shop/img/prodotti/libreria-quadra-4x2-cassetti-800.jpg 800w"
   },
   {
    "id": "madia-vallata-4-ante",
@@ -5294,7 +5331,8 @@
     "madie-credenze",
     "madia vallata 4 ante"
    ],
-   "rank": 16
+   "rank": 16,
+   "imgSet": "/shop/img/prodotti/madia-vallata-4-ante-480.jpg 480w, /shop/img/prodotti/madia-vallata-4-ante-800.jpg 800w"
   },
   {
    "id": "armadio-livenza-1-anta-3-cassetti",
@@ -5344,7 +5382,8 @@
     "salvaspazio",
     "armadio livenza 1 anta 3 cassetti"
    ],
-   "rank": 17
+   "rank": 17,
+   "imgSet": "/shop/img/prodotti/armadio-livenza-1-anta-3-cassetti-480.jpg 480w, /shop/img/prodotti/armadio-livenza-1-anta-3-cassetti-800.jpg 800w"
   },
   {
    "id": "armadio-piave-2-ante-2-cassetti",
@@ -5393,7 +5432,8 @@
     "battenti",
     "armadio piave 2 ante 2 cassetti"
    ],
-   "rank": 18
+   "rank": 18,
+   "imgSet": "/shop/img/prodotti/armadio-piave-2-ante-2-cassetti-480.jpg 480w, /shop/img/prodotti/armadio-piave-2-ante-2-cassetti-800.jpg 800w"
   },
   {
    "id": "armadio-ingresso-lemene-160",
@@ -5442,7 +5482,8 @@
     "componibili",
     "armadio ingresso lemene 160"
    ],
-   "rank": 19
+   "rank": 19,
+   "imgSet": "/shop/img/prodotti/armadio-ingresso-lemene-160-480.jpg 480w, /shop/img/prodotti/armadio-ingresso-lemene-160-800.jpg 800w"
   },
   {
    "id": "armadio-brenta-200",
@@ -5493,7 +5534,8 @@
     "battenti",
     "armadio brenta 4 ante 200"
    ],
-   "rank": 20
+   "rank": 20,
+   "imgSet": "/shop/img/prodotti/armadio-brenta-200-480.jpg 480w, /shop/img/prodotti/armadio-brenta-200-800.jpg 800w"
   },
   {
    "id": "armadio-brenta-250-grafite",
@@ -5543,7 +5585,8 @@
     "componibili",
     "armadio brenta 250 grafite"
    ],
-   "rank": 21
+   "rank": 21,
+   "imgSet": "/shop/img/prodotti/armadio-brenta-250-grafite-480.jpg 480w, /shop/img/prodotti/armadio-brenta-250-grafite-800.jpg 800w"
   },
   {
    "id": "armadio-brenta-150-alto",
@@ -5594,7 +5637,8 @@
     "battenti",
     "armadio brenta 150 alto"
    ],
-   "rank": 22
+   "rank": 22,
+   "imgSet": "/shop/img/prodotti/armadio-brenta-150-alto-480.jpg 480w, /shop/img/prodotti/armadio-brenta-150-alto-800.jpg 800w"
   },
   {
    "id": "armadio-scorrevole-sile-200",
@@ -5645,7 +5689,8 @@
     "scorrevoli",
     "armadio scorrevole sile 200"
    ],
-   "rank": 23
+   "rank": 23,
+   "imgSet": "/shop/img/prodotti/armadio-scorrevole-sile-200-480.jpg 480w, /shop/img/prodotti/armadio-scorrevole-sile-200-800.jpg 800w"
   },
   {
    "id": "armadio-meduna-2-ante",
@@ -5694,7 +5739,8 @@
     "battenti",
     "armadio meduna 2 ante"
    ],
-   "rank": 24
+   "rank": 24,
+   "imgSet": "/shop/img/prodotti/armadio-meduna-2-ante-480.jpg 480w, /shop/img/prodotti/armadio-meduna-2-ante-800.jpg 800w"
   },
   {
    "id": "armadio-brenta-250-attrezzato",
@@ -5745,7 +5791,8 @@
     "componibili",
     "armadio brenta 250 attrezzato"
    ],
-   "rank": 25
+   "rank": 25,
+   "imgSet": "/shop/img/prodotti/armadio-brenta-250-attrezzato-480.jpg 480w, /shop/img/prodotti/armadio-brenta-250-attrezzato-800.jpg 800w"
   },
   {
    "id": "armadio-colonna-lemene-80",
@@ -5795,7 +5842,8 @@
     "salvaspazio",
     "armadio colonna lemene 80"
    ],
-   "rank": 26
+   "rank": 26,
+   "imgSet": "/shop/img/prodotti/armadio-colonna-lemene-80-480.jpg 480w, /shop/img/prodotti/armadio-colonna-lemene-80-800.jpg 800w"
   },
   {
    "id": "armadio-meduna-3-ante",
@@ -5844,7 +5892,8 @@
     "battenti",
     "armadio meduna 3 ante"
    ],
-   "rank": 27
+   "rank": 27,
+   "imgSet": "/shop/img/prodotti/armadio-meduna-3-ante-480.jpg 480w, /shop/img/prodotti/armadio-meduna-3-ante-800.jpg 800w"
   },
   {
    "id": "pensile-soligo-1-anta",
@@ -5894,7 +5943,8 @@
     "contenitori",
     "pensile soligo 1 anta"
    ],
-   "rank": 28
+   "rank": 28,
+   "imgSet": "/shop/img/prodotti/pensile-soligo-1-anta-480.jpg 480w, /shop/img/prodotti/pensile-soligo-1-anta-800.jpg 800w"
   },
   {
    "id": "mobile-alto-raboso-cannettato",
@@ -5943,7 +5993,8 @@
     "contenitori",
     "mobile alto raboso cannettato"
    ],
-   "rank": 29
+   "rank": 29,
+   "imgSet": "/shop/img/prodotti/mobile-alto-raboso-cannettato-480.jpg 480w, /shop/img/prodotti/mobile-alto-raboso-cannettato-800.jpg 800w"
   },
   {
    "id": "libreria-quadra-2x4",
@@ -5993,7 +6044,8 @@
     "librerie",
     "libreria quadra 2×4"
    ],
-   "rank": 30
+   "rank": 30,
+   "imgSet": "/shop/img/prodotti/libreria-quadra-2x4-480.jpg 480w, /shop/img/prodotti/libreria-quadra-2x4-800.jpg 800w"
   }
  ]
 }

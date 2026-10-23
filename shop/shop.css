@@ -1,8 +1,8 @@
 /* Pandoora Shop — negozio online con motion design.
    Palette del marchio: blu notte, rosso Pan.door.a, rovere. Font: Fraunces (titoli) + Manrope (testo). */
 :root{
-  --ink:#0d1524; --ink2:#3d4654; --mute:#6b7380; --line:#e3e1dc; --paper:#ffffff; --soft:#f4f3f0; --stone:#e9e6e0;
-  --red:#c0392b; --red2:#9f2a1e; --oak:#c8a56e; --oak2:#a8834a; --navy2:#16213a; --ok:#4f8a3a;
+  --ink:#0d1524; --ink2:#3d4654; --mute:#5d6470; --line:#e3e1dc; --paper:#ffffff; --soft:#f4f3f0; --stone:#e9e6e0;
+  --red:#c0392b; --red2:#9f2a1e; --oak:#c8a56e; --oak2:#8a6a38; --navy2:#16213a; --ok:#4f8a3a;
   --display:'Fraunces',Georgia,serif; --body:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
   --ease:cubic-bezier(.22,.61,.36,1); --spring:cubic-bezier(.34,1.56,.64,1); --out:cubic-bezier(.16,1,.3,1);
   --r-lg:26px; --r-md:16px; --r-sm:10px;
@@ -1073,7 +1073,7 @@ body:has(.pdp-bar.on:not(.off)) .pf-wa,body:has(.pdp-bar.on:not(.off)) .pf-top-b
 .s-nl.show .s-nl-scrim{opacity:1}
 .s-nl-box{position:absolute;left:50%;top:50%;width:min(940px,calc(100% - 32px));max-height:calc(100% - 32px);overflow:auto;background:#fff;border-radius:var(--r-lg);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);box-shadow:0 60px 120px -40px rgba(0,0,0,.6);opacity:0;transform:translate(-50%,-46%) scale(.96);transition:opacity .45s var(--out),transform .6s var(--out)}
 .s-nl.show .s-nl-box{opacity:1;transform:translate(-50%,-50%)}
-.s-nl-vis{position:relative;background:var(--ink) url(/shop/img/hero.jpg) center/cover;color:#fff;padding:36px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;isolation:isolate}
+.s-nl-vis{position:relative;background:var(--ink) url(/shop/img/hero-900.webp) center/cover;color:#fff;padding:36px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;isolation:isolate}
 .s-nl-vis::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(13,21,36,.55),rgba(13,21,36,.9))}
 .s-nl-big small{display:block;font:800 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--oak)}
 .s-nl-big b{display:block;font:500 clamp(84px,11vw,128px)/.9 var(--display);letter-spacing:-.04em;margin:10px 0 6px}
@@ -1131,7 +1131,7 @@ body:has(.pdp-bar.on:not(.off)) .s-nl-pill{bottom:84px}
   .pdp-made .s-wrap,.pdp-revs{grid-template-columns:1fr}
 }
 @media (max-width:900px){
-  .pdp-hero{grid-template-columns:1fr;padding-bottom:20px}
+  .pdp-hero{grid-template-columns:minmax(0,1fr);padding-bottom:20px}
   .pdp-gal{position:relative;top:0}
   .pdp-stage{aspect-ratio:4/5;max-height:72vh}
   .pdp-spec,.pdp-dls,.pdp-tiers{grid-template-columns:1fr}
@@ -1207,3 +1207,23 @@ body:has(.s-head.s-hide) .pdp-gal{top:14px}
 .pdp-comp-c b{display:block;font-weight:800;font-size:16px;margin-bottom:6px}
 .pdp-comp-c p{margin:0;color:var(--ink2);font-size:14px;line-height:1.6}
 @media (max-width:900px){.pdp-comp{grid-template-columns:1fr}}
+
+/* ---- ottimizzazione mobile/desktop 23/10/2026 ---- */
+body.shop{overflow-x:clip}
+.pdp-hero>*,.s-grid>*{min-width:0}
+.s-crumb a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.pdp-made .pdp-k{color:#e0786d}
+.si-c img,.s-wipe img,.s-logo img,.pf img[src*="pandoora_logo"]{object-fit:contain}
+.dj-leaf img{object-fit:cover}
+.lp-t td small{font-size:13px}
+.sp-vh2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:700px){
+  .s-chip,.s-sub,.s-pill,.s-check{min-height:44px}
+  #o-serv{flex-wrap:wrap}
+  .lp-t th,.lp-t td{padding:9px 8px}
+}
+@media (hover:none){.s-card .s-card-img img{transition:none}}
+/* spazio riservato al configuratore porte prima che si carichi: niente salti di layout */
+@media (min-width:901px){body[data-cat="porte-per-interni"] .pdp-opts .s-pm-scroll:not(:has(fieldset)){min-height:1200px}}
+@media (max-width:900px){body[data-cat="porte-per-interni"] .pdp-opts .s-pm-scroll:not(:has(fieldset)){min-height:900px}}
+.s-check.off{opacity:.62}

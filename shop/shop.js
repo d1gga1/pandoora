@@ -86,16 +86,16 @@
 
   /* ---------- immagini con ricaduta ---------- */
   function imgAttrs(p,lg){
-    var src=lg?(p.imgLg||p.img):p.img, chain=[];
+    var src=lg?(p.imgLg||p.img):p.img, chain=[], set=p.imgSet?' srcset="'+esc(p.imgSet)+'" sizes="'+(lg?'(max-width:900px) 100vw, 55vw':'(max-width:700px) 50vw, (max-width:1080px) 33vw, 320px')+'"':'';
     if(lg&&p.imgLgRemote)chain.push(p.imgLgRemote);
     if(p.imgRemote)chain.push(p.imgRemote);
     if(p.imgFb)chain.push(p.imgFb);
-    return 'src="'+esc(src)+'" data-fb="'+esc(chain.join('|'))+'"';
+    return 'src="'+esc(src)+'"'+set+' data-fb="'+esc(chain.join('|'))+'"';
   }
   document.addEventListener('error',function(e){
     var t=e.target;if(!t||t.tagName!=='IMG'||!t.dataset.fb)return;
     var c=t.dataset.fb.split('|').filter(Boolean);var n=c.shift();t.dataset.fb=c.join('|');
-    if(n)t.src=n;
+    if(n){t.removeAttribute('srcset');t.src=n}
   },true);
 
   /* ---------- prezzi ---------- */
@@ -527,7 +527,7 @@
       if(p.type==='door'){
         sel('o-open',c.open);sel('o-size',c.size);servUpd(sc,c);
         var op=opening(c.open);$('#o-open-n',sc).textContent=op.note+(op.min>PR.door.lines[p.line]?' · da '+eur.format(op.min):'');
-        $$('.s-check',sc).forEach(function(l){var x=PR.door.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);var i=l.querySelector('input');i.checked=!!(c.ex[x.id]&&ok)});
+        $$('.s-check',sc).forEach(function(l){var x=PR.door.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);l.setAttribute('aria-disabled',String(!ok));var i=l.querySelector('input');i.disabled=!ok;i.checked=!!(c.ex[x.id]&&ok)});
         var cu=c.size==='custom';$('#o-cust',sc).hidden=!cu;$('#o-cust-n',sc).hidden=!cu;
         if(!cu){c.w=+c.size;c.h=PR.door.height}
         $('#s-pm-dims').textContent=c.w+' × '+c.h+' cm';
@@ -603,7 +603,7 @@
       if(opening(c.open).onlyLacc&&p.line==='laminata')c.open='battente';
       sel('o-open',c.open);sel('o-size',c.size);sel('o-hand',c.hand);servUpd(sc,c);
       var op=opening(c.open);$('#o-open-n',sc).textContent=op.note+(op.min>D.lines[p.line]?' · da '+eur.format(op.min):'');
-      $$('.s-check',sc).forEach(function(l){var x=D.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);l.querySelector('input').checked=!!(c.ex[x.id]&&ok)});
+      $$('.s-check',sc).forEach(function(l){var x=D.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);l.setAttribute('aria-disabled',String(!ok));var i2=l.querySelector('input');i2.disabled=!ok;i2.checked=!!(c.ex[x.id]&&ok)});
       var cu=c.size==='custom';$('#o-cust',sc).hidden=!cu;$('#o-wall-std',sc).hidden=cu;
       if(!cu){c.w=+c.size;stdVano(c)}
       ['vw','vh','wall'].forEach(function(k){var i=$('#o-'+k,sc);if(i&&document.activeElement!==i)i.value=c[k]});var w2=$('#o-wall2',sc);if(document.activeElement!==w2)w2.value=c.wall;
@@ -860,6 +860,7 @@
       var hw=$('[data-k="w"]',hd),hh=$('[data-k="h"]',hd);
       hw.style.left=(fr.right-r.left)+'px';hw.style.top=(fr.top-r.top+fr.height/2)+'px';
       hh.style.left=(fr.left-r.left+fr.width/2)+'px';hh.style.top=(fr.top-r.top)+'px';
+      [[hw,w],[hh,h]].forEach(function(x){x[0].setAttribute('aria-valuemin',x[1].min);x[0].setAttribute('aria-valuemax',x[1].max);x[0].setAttribute('aria-valuenow',x[1].value);x[0].setAttribute('aria-valuetext',x[1].value+' cm')});
     }
     w.oninput=h.oninput=function(){box.classList.add('used');upd()};
     $$('#fit-fin button').forEach(function(b){b.onclick=function(){fin=b.dataset.f;$$('#fit-fin button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});upd()}});
@@ -1083,11 +1084,11 @@
   }
   function pdpBar(p,hero){
     var foot=$('.s-pm-foot',hero);if(!foot||!('IntersectionObserver' in window))return;
-    var bar=document.createElement('div');bar.className='pdp-bar';bar.setAttribute('aria-hidden','true');
+    var bar=document.createElement('div');bar.className='pdp-bar';bar.inert=true;
     bar.innerHTML='<div class="s-wrap pdp-bar-in"><span class="pdp-bar-img"><img '+(p.type==='cube'?'src="/shop/img/prodotti/'+esc(p.id)+'.jpg"':imgAttrs(p))+' alt=""></span><div class="pdp-bar-t"><b>'+esc(p.name)+'</b><small id="pdp-bar-s"></small></div><b class="pdp-bar-p" id="pdp-bar-p"></b><button type="button" class="s-btn s-btn-p" id="pdp-bar-add">'+IC.bag+'<span>Aggiungi al carrello</span></button></div>';
     document.body.appendChild(bar);
     $('#pdp-bar-add').onclick=function(){var b=$('#s-pm-add',hero);b&&b.click()};
-    var past=false;new IntersectionObserver(function(es){var e=es[0];past=!e.isIntersecting&&e.boundingClientRect.top<0;bar.classList.toggle('on',past);bar.setAttribute('aria-hidden',String(!past))}).observe(foot);
+    var past=false;new IntersectionObserver(function(es){var e=es[0];past=!e.isIntersecting&&e.boundingClientRect.top<0;bar.classList.toggle('on',past);bar.inert=!past}).observe(foot);
     var ftr=$('.pf');if(ftr)new IntersectionObserver(function(es){bar.classList.toggle('off',es[0].isIntersecting)}).observe(ftr);
   }
   function pdpRefresh(p,hero){
