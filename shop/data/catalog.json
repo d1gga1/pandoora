@@ -18,7 +18,10 @@
   "ruler": "<svg viewBox=\"0 0 64 64\"><rect x=\"6\" y=\"22\" width=\"52\" height=\"20\" rx=\"2\" transform=\"rotate(-30 32 32)\"/><path d=\"M18 40l3 5M25 36l2 3M31 33l3 5M38 29l2 3M44 26l3 5\"/></svg>",
   "box": "<svg viewBox=\"0 0 64 64\"><path d=\"M8 20l24-12 24 12v26L32 58 8 46z\"/><path d=\"M8 20l24 12 24-12M32 32v26\"/></svg>",
   "cubes": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"8\" width=\"44\" height=\"48\" rx=\"1.5\"/><path d=\"M32 8v48M10 24h44M10 40h44\"/></svg>",
-  "shoeopen": "<svg viewBox=\"0 0 64 64\"><path d=\"M12 6v52M52 6v52\"/><path d=\"M12 18l40 6M12 32l40 6M12 46l40 6\"/></svg>"
+  "shoeopen": "<svg viewBox=\"0 0 64 64\"><path d=\"M12 6v52M52 6v52\"/><path d=\"M12 18l40 6M12 32l40 6M12 46l40 6\"/></svg>",
+  "wardrobe": "<svg viewBox=\"0 0 64 64\"><rect x=\"10\" y=\"4\" width=\"44\" height=\"54\" rx=\"1.5\"/><path d=\"M32 4v54\"/><path d=\"M28 28v8M36 28v8\"/><path d=\"M14 58v3M50 58v3\"/></svg>",
+  "drawers": "<svg viewBox=\"0 0 64 64\"><rect x=\"12\" y=\"8\" width=\"40\" height=\"46\" rx=\"2\"/><path d=\"M12 23h40M12 38h40\"/><path d=\"M28 15h8M28 30h8M28 46h8\"/><path d=\"M16 54v4M48 54v4\"/></svg>",
+  "slidewr": "<svg viewBox=\"0 0 64 64\"><path d=\"M6 6h52\"/><rect x=\"8\" y=\"8\" width=\"26\" height=\"50\"/><rect x=\"30\" y=\"8\" width=\"26\" height=\"50\"/><path d=\"M28 30v8M36 30v8\"/></svg>"
  },
  "categories": [
   {
@@ -115,6 +118,45 @@
      "mobili-bagno",
      "Mobili bagno",
      "bath"
+    ],
+    [
+     "cassettiere",
+     "Cassettiere",
+     "drawers"
+    ],
+    [
+     "contenitori",
+     "Contenitori e pensili",
+     "cab"
+    ]
+   ]
+  },
+  {
+   "id": "armadi",
+   "name": "Armadi",
+   "short": "A battente, scorrevoli, attrezzati",
+   "icon": "wardrobe",
+   "intro": "Armadi e guardaroba prodotti nel nostro stabilimento di Fontanelle: a battente, con ante scorrevoli, attrezzati con cassetti e ripiani o salvaspazio per ingresso e cameretta. Misure standard o costruiti sulla vostra parete.",
+   "subs": [
+    [
+     "battenti",
+     "Armadi a battente",
+     "wardrobe"
+    ],
+    [
+     "scorrevoli",
+     "Armadi scorrevoli",
+     "slidewr"
+    ],
+    [
+     "componibili",
+     "Armadi attrezzati",
+     "cubes"
+    ],
+    [
+     "salvaspazio",
+     "Salvaspazio",
+     "shoe2"
     ]
    ]
   },

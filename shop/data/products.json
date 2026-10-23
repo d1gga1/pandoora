@@ -100,7 +100,31 @@
     "stdWall": 110,
     "stipitiOver": 140
    },
-   "ivaNote": "IVA esclusa · posa inclusa in VE e FVG"
+   "ivaNote": "IVA esclusa · posa inclusa in VE e FVG",
+   "services": [
+    {
+     "id": "posa",
+     "label": "Consegna e posa",
+     "sub": "solo Veneto e Friuli Venezia Giulia",
+     "add": 0,
+     "note": "Rilievo misure, trasporto e montaggio compresi nel prezzo."
+    },
+    {
+     "id": "trasporto",
+     "label": "Solo consegna",
+     "sub": "montaggio a cura vostra",
+     "add": -150,
+     "note": "In Veneto e FVG la consegna è compresa; nel resto d'Italia e all'estero la spedizione si quota con l'ordine."
+    },
+    {
+     "id": "ritiro",
+     "label": "Ritiro in sede",
+     "sub": "a Fontanelle (TV), montaggio a cura vostra",
+     "add": -200,
+     "note": "Ritirate le porte nel nostro stabilimento di Fontanelle (TV) e le montate voi."
+    }
+   ],
+   "_servizi": "Posa e trasporto sono compresi solo in Veneto e FVG. Solo consegna: -150 € (fuori VE/FVG spedizione a preventivo). Ritiro in sede e montaggio del cliente: -200 €."
   },
   "cube": {
    "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura + add (supplemento fisso 50 € sulla struttura)",
@@ -4671,6 +4695,1303 @@
     "alveare",
     "divisorio",
     "mobiletti"
+   ],
+   "rank": 30
+  },
+  {
+   "id": "scarpiera-meduna-2-ante",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-ante",
+   "subs": [
+    "con-ante"
+   ],
+   "name": "Scarpiera Meduna 2 ante",
+   "desc": "Due ante, quattro ripiani regolabili, fino a 16 paia in 35 cm di profondità",
+   "img": "/shop/img/prodotti/scarpiera-meduna-2-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_53e3b486-20b3-4919-b69b-3784faaf7fd3.png",
+   "imgLg": "/shop/img/prodotti/scarpiera-meduna-2-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_53e3b486-20b3-4919-b69b-3784faaf7fd3.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 35,
+     "h": 117,
+     "price": 139
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     21,
+     49
+    ],
+    "h": [
+     70,
+     164
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "scarpiere",
+    "con-ante",
+    "scarpiera meduna 2 ante"
+   ],
+   "rank": 5
+  },
+  {
+   "id": "panca-cansiglio-contenitore",
+   "type": "furniture",
+   "cat": "scarpiere",
+   "sub": "con-seduta",
+   "subs": [
+    "con-seduta"
+   ],
+   "name": "Panca Cansiglio contenitore",
+   "desc": "Panca da ingresso con vano contenitore sotto il coperchio a ribalta ammortizzato",
+   "img": "/shop/img/prodotti/panca-cansiglio-contenitore.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_e2c130b7-0ddd-4a33-8fd4-a18e30730fef.png",
+   "imgLg": "/shop/img/prodotti/panca-cansiglio-contenitore.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_e2c130b7-0ddd-4a33-8fd4-a18e30730fef.png",
+   "std": [
+    {
+     "w": 90,
+     "d": 52,
+     "h": 48,
+     "price": 129
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     54,
+     135
+    ],
+    "d": [
+     31,
+     73
+    ],
+    "h": [
+     29,
+     67
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "scarpiere",
+    "con-seduta",
+    "panca cansiglio contenitore"
+   ],
+   "rank": 6
+  },
+  {
+   "id": "cubo-tagliamento",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "contenitori",
+   "subs": [
+    "contenitori"
+   ],
+   "name": "Cubo Tagliamento a giorno",
+   "desc": "Modulo a giorno 35×35 cm da appoggio o da parete, componibile",
+   "img": "/shop/img/prodotti/cubo-tagliamento.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_b2851240-624a-4149-b39e-58f7476dfb70.png",
+   "imgLg": "/shop/img/prodotti/cubo-tagliamento.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_b2851240-624a-4149-b39e-58f7476dfb70.png",
+   "std": [
+    {
+     "w": 35,
+     "d": 25,
+     "h": 35,
+     "price": 29
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     21,
+     52
+    ],
+    "d": [
+     15,
+     35
+    ],
+    "h": [
+     21,
+     49
+    ]
+   },
+   "badge": "Componibile",
+   "tags": [
+    "mobiletti",
+    "contenitori",
+    "cubo tagliamento a giorno"
+   ],
+   "rank": 7
+  },
+  {
+   "id": "cassettiera-lemene-6",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "cassettiere",
+   "subs": [
+    "cassettiere"
+   ],
+   "name": "Cassettiera Lemene 6 cassetti",
+   "desc": "Sei cassetti ampi su due colonne, guide ammortizzate e kit anti-ribaltamento",
+   "img": "/shop/img/prodotti/cassettiera-lemene-6.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_dba87efa-ddcd-4c66-a5da-3e8e6f6ff7c7.png",
+   "imgLg": "/shop/img/prodotti/cassettiera-lemene-6.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_dba87efa-ddcd-4c66-a5da-3e8e6f6ff7c7.png",
+   "std": [
+    {
+     "w": 140,
+     "d": 47,
+     "h": 75,
+     "price": 299
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     84,
+     210
+    ],
+    "d": [
+     28,
+     66
+    ],
+    "h": [
+     45,
+     105
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "cassettiere",
+    "cassettiera lemene 6 cassetti"
+   ],
+   "rank": 8
+  },
+  {
+   "id": "comodino-musone-2-cassetti",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "comodini",
+   "subs": [
+    "comodini"
+   ],
+   "name": "Comodino Musone 2 cassetti",
+   "desc": "Comodino compatto con due cassetti, 35 cm di larghezza",
+   "img": "/shop/img/prodotti/comodino-musone-2-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134243_91bee0cd-b3f9-4ef7-b56d-728e3de227aa.png",
+   "imgLg": "/shop/img/prodotti/comodino-musone-2-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134243_91bee0cd-b3f9-4ef7-b56d-728e3de227aa.png",
+   "std": [
+    {
+     "w": 35,
+     "d": 40,
+     "h": 49,
+     "price": 59
+    }
+   ],
+   "finishes": [
+    "Marrone-nero",
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     21,
+     52
+    ],
+    "d": [
+     24,
+     56
+    ],
+    "h": [
+     29,
+     69
+    ]
+   },
+   "badge": "Salvaspazio",
+   "tags": [
+    "mobiletti",
+    "comodini",
+    "comodino musone 2 cassetti"
+   ],
+   "rank": 9
+  },
+  {
+   "id": "cassettiera-monticano-4",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "cassettiere",
+   "subs": [
+    "cassettiere"
+   ],
+   "name": "Cassettiera Monticano 4 cassetti",
+   "desc": "Quattro cassetti profondi, apertura con gola, 80 cm di larghezza",
+   "img": "/shop/img/prodotti/cassettiera-monticano-4.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_54f691e2-67de-4546-8e8b-f07231101d31.png",
+   "imgLg": "/shop/img/prodotti/cassettiera-monticano-4.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_54f691e2-67de-4546-8e8b-f07231101d31.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 42,
+     "h": 100,
+     "price": 149
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     60,
+     140
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "cassettiere",
+    "cassettiera monticano 4 cassetti"
+   ],
+   "rank": 10
+  },
+  {
+   "id": "credenza-soligo-top-rovere",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Credenza Soligo top rovere",
+   "desc": "Due cassetti e due ante, piano in rovere, gambe in legno",
+   "img": "/shop/img/prodotti/credenza-soligo-top-rovere.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134327_578555e0-c0f5-4a45-a4ed-446753640a7c.png",
+   "imgLg": "/shop/img/prodotti/credenza-soligo-top-rovere.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134327_578555e0-c0f5-4a45-a4ed-446753640a7c.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 42,
+     "h": 76,
+     "price": 339
+    }
+   ],
+   "finishes": [
+    "Bianco opaco/Rovere",
+    "Grigio seta/Rovere"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     46,
+     106
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "credenza soligo top rovere"
+   ],
+   "rank": 11
+  },
+  {
+   "id": "madia-soligo-180-cassetti",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Madia Soligo 180 cassetti",
+   "desc": "Madia bassa da 180 cm con cassetti e ante, per soggiorno o sala da pranzo",
+   "img": "/shop/img/prodotti/madia-soligo-180-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_7a139572-c98d-483f-ae82-6c7c5e410d1a.png",
+   "imgLg": "/shop/img/prodotti/madia-soligo-180-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_7a139572-c98d-483f-ae82-6c7c5e410d1a.png",
+   "std": [
+    {
+     "w": 180,
+     "d": 42,
+     "h": 74,
+     "price": 329
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     108,
+     270
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     44,
+     104
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "madia soligo 180 cassetti"
+   ],
+   "rank": 12
+  },
+  {
+   "id": "credenza-soligo-120",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Credenza Soligo 120",
+   "desc": "Due cassetti e due ante su gambe, linea pulita",
+   "img": "/shop/img/prodotti/credenza-soligo-120.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134432_dfdf4f7b-7886-4296-beed-70ef4c97a445.png",
+   "imgLg": "/shop/img/prodotti/credenza-soligo-120.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134432_dfdf4f7b-7886-4296-beed-70ef4c97a445.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 42,
+     "h": 74,
+     "price": 259
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     44,
+     104
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "credenza soligo 120"
+   ],
+   "rank": 13
+  },
+  {
+   "id": "pensile-tv-soligo-180",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "mobili-tv",
+   "subs": [
+    "mobili-tv"
+   ],
+   "name": "Pensile TV Soligo sospeso 180",
+   "desc": "Composizione sospesa a tre ante, con binario di fissaggio a parete",
+   "img": "/shop/img/prodotti/pensile-tv-soligo-180.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134432_8860426d-55be-4145-948e-dddf6b8e9646.png",
+   "imgLg": "/shop/img/prodotti/pensile-tv-soligo-180.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134432_8860426d-55be-4145-948e-dddf6b8e9646.png",
+   "std": [
+    {
+     "w": 180,
+     "d": 42,
+     "h": 64,
+     "price": 279
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     108,
+     270
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     38,
+     90
+    ]
+   },
+   "badge": "Sospeso",
+   "tags": [
+    "mobiletti",
+    "mobili-tv",
+    "pensile tv soligo sospeso 180"
+   ],
+   "rank": 14
+  },
+  {
+   "id": "libreria-quadra-4x2-cassetti",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Quadra 4×2 con cassetti",
+   "desc": "Otto vani in orizzontale con due cassetti e un'anta: libreria o madia",
+   "img": "/shop/img/prodotti/libreria-quadra-4x2-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134433_3d364f9a-417e-48dd-ad85-345e8e698da1.png",
+   "imgLg": "/shop/img/prodotti/libreria-quadra-4x2-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134433_3d364f9a-417e-48dd-ad85-345e8e698da1.png",
+   "std": [
+    {
+     "w": 147,
+     "d": 39,
+     "h": 77,
+     "price": 189
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     88,
+     220
+    ],
+    "d": [
+     23,
+     55
+    ],
+    "h": [
+     46,
+     108
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "librerie",
+    "libreria quadra 4×2 con cassetti"
+   ],
+   "rank": 15
+  },
+  {
+   "id": "madia-vallata-4-ante",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "madie-credenze",
+   "subs": [
+    "madie-credenze"
+   ],
+   "name": "Madia Vallata 4 ante",
+   "desc": "Quattro ante con ripiani interni regolabili, profondità ridotta 37 cm",
+   "img": "/shop/img/prodotti/madia-vallata-4-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134434_b33bd842-966e-4858-b031-4ac829f8745f.png",
+   "imgLg": "/shop/img/prodotti/madia-vallata-4-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134434_b33bd842-966e-4858-b031-4ac829f8745f.png",
+   "std": [
+    {
+     "w": 140,
+     "d": 37,
+     "h": 75,
+     "price": 229
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     84,
+     210
+    ],
+    "d": [
+     22,
+     52
+    ],
+    "h": [
+     45,
+     105
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "madie-credenze",
+    "madia vallata 4 ante"
+   ],
+   "rank": 16
+  },
+  {
+   "id": "armadio-livenza-1-anta-3-cassetti",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "salvaspazio",
+   "subs": [
+    "salvaspazio"
+   ],
+   "name": "Armadio Livenza 1 anta 3 cassetti",
+   "desc": "Colonna da 60 cm: un'anta con asta appendiabiti e tre cassetti",
+   "img": "/shop/img/prodotti/armadio-livenza-1-anta-3-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134505_b319b16f-ec3e-4832-8f4b-56e5039d55dd.png",
+   "imgLg": "/shop/img/prodotti/armadio-livenza-1-anta-3-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134505_b319b16f-ec3e-4832-8f4b-56e5039d55dd.png",
+   "std": [
+    {
+     "w": 60,
+     "d": 57,
+     "h": 181,
+     "price": 339
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     36,
+     90
+    ],
+    "d": [
+     34,
+     80
+    ],
+    "h": [
+     109,
+     253
+    ]
+   },
+   "badge": "Salvaspazio",
+   "tags": [
+    "armadi",
+    "salvaspazio",
+    "armadio livenza 1 anta 3 cassetti"
+   ],
+   "rank": 17
+  },
+  {
+   "id": "armadio-piave-2-ante-2-cassetti",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "battenti",
+   "subs": [
+    "battenti"
+   ],
+   "name": "Armadio Piave 2 ante 2 cassetti",
+   "desc": "Due ante con asta e ripiano, due cassetti in basso, finitura rovere",
+   "img": "/shop/img/prodotti/armadio-piave-2-ante-2-cassetti.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134505_40c3af99-69c1-4272-a0bb-155314209f4f.png",
+   "imgLg": "/shop/img/prodotti/armadio-piave-2-ante-2-cassetti.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134505_40c3af99-69c1-4272-a0bb-155314209f4f.png",
+   "std": [
+    {
+     "w": 98,
+     "d": 57,
+     "h": 190,
+     "price": 299
+    }
+   ],
+   "finishes": [
+    "Rovere naturale",
+    "Bianco opaco"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     59,
+     147
+    ],
+    "d": [
+     34,
+     80
+    ],
+    "h": [
+     114,
+     266
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "armadi",
+    "battenti",
+    "armadio piave 2 ante 2 cassetti"
+   ],
+   "rank": 18
+  },
+  {
+   "id": "armadio-ingresso-lemene-160",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "componibili",
+   "subs": [
+    "componibili"
+   ],
+   "name": "Armadio Ingresso Lemene 160",
+   "desc": "Composizione da ingresso: due colonne ad anta stretta e un vano centrale a giorno con ripiani",
+   "img": "/shop/img/prodotti/armadio-ingresso-lemene-160.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134506_c21fd3f6-6cb2-45fc-a7d8-dcfe5f883b26.png",
+   "imgLg": "/shop/img/prodotti/armadio-ingresso-lemene-160.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134506_c21fd3f6-6cb2-45fc-a7d8-dcfe5f883b26.png",
+   "std": [
+    {
+     "w": 160,
+     "d": 42,
+     "h": 201,
+     "price": 329
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     96,
+     240
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     121,
+     280
+    ]
+   },
+   "badge": "Ingresso",
+   "tags": [
+    "armadi",
+    "componibili",
+    "armadio ingresso lemene 160"
+   ],
+   "rank": 19
+  },
+  {
+   "id": "armadio-brenta-200",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "battenti",
+   "subs": [
+    "battenti"
+   ],
+   "name": "Armadio Brenta 4 ante 200",
+   "desc": "Quattro ante lisce, interno con aste e ripiani, altezza 201 cm",
+   "img": "/shop/img/prodotti/armadio-brenta-200.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134505_528974e5-7f23-4eae-95a3-c92bd05d4517.png",
+   "imgLg": "/shop/img/prodotti/armadio-brenta-200.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134505_528974e5-7f23-4eae-95a3-c92bd05d4517.png",
+   "std": [
+    {
+     "w": 200,
+     "d": 60,
+     "h": 201,
+     "price": 549
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     120,
+     300
+    ],
+    "d": [
+     36,
+     84
+    ],
+    "h": [
+     121,
+     280
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "armadi",
+    "battenti",
+    "armadio brenta 4 ante 200"
+   ],
+   "rank": 20
+  },
+  {
+   "id": "armadio-brenta-250-grafite",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "componibili",
+   "subs": [
+    "componibili"
+   ],
+   "name": "Armadio Brenta 250 Grafite",
+   "desc": "Cinque ante, interno attrezzato con cassetti e ripiani, finitura grafite",
+   "img": "/shop/img/prodotti/armadio-brenta-250-grafite.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_8bce9cb8-977c-415a-860d-7a371360d4b0.png",
+   "imgLg": "/shop/img/prodotti/armadio-brenta-250-grafite.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_8bce9cb8-977c-415a-860d-7a371360d4b0.png",
+   "std": [
+    {
+     "w": 250,
+     "d": 60,
+     "h": 236,
+     "price": 1089
+    }
+   ],
+   "finishes": [
+    "Grigio grafite",
+    "Bianco opaco",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     150,
+     375
+    ],
+    "d": [
+     36,
+     84
+    ],
+    "h": [
+     142,
+     280
+    ]
+   },
+   "badge": "Attrezzato",
+   "tags": [
+    "armadi",
+    "componibili",
+    "armadio brenta 250 grafite"
+   ],
+   "rank": 21
+  },
+  {
+   "id": "armadio-brenta-150-alto",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "battenti",
+   "subs": [
+    "battenti"
+   ],
+   "name": "Armadio Brenta 150 alto",
+   "desc": "Tre ante a tutta altezza 236 cm, asta appendiabiti e ripiani",
+   "img": "/shop/img/prodotti/armadio-brenta-150-alto.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_e70824d2-ef7e-4498-ab77-1787ddde6387.png",
+   "imgLg": "/shop/img/prodotti/armadio-brenta-150-alto.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_e70824d2-ef7e-4498-ab77-1787ddde6387.png",
+   "std": [
+    {
+     "w": 150,
+     "d": 60,
+     "h": 236,
+     "price": 569
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     90,
+     225
+    ],
+    "d": [
+     36,
+     84
+    ],
+    "h": [
+     142,
+     280
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "armadi",
+    "battenti",
+    "armadio brenta 150 alto"
+   ],
+   "rank": 22
+  },
+  {
+   "id": "armadio-scorrevole-sile-200",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "scorrevoli",
+   "subs": [
+    "scorrevoli"
+   ],
+   "name": "Armadio Scorrevole Sile 200",
+   "desc": "Due ante scorrevoli a tutta altezza, ideale dove non c'è spazio per aprire",
+   "img": "/shop/img/prodotti/armadio-scorrevole-sile-200.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_f13766e1-3126-41e8-9bee-89ff0d1cb314.png",
+   "imgLg": "/shop/img/prodotti/armadio-scorrevole-sile-200.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_f13766e1-3126-41e8-9bee-89ff0d1cb314.png",
+   "std": [
+    {
+     "w": 200,
+     "d": 66,
+     "h": 236,
+     "price": 719
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     120,
+     300
+    ],
+    "d": [
+     40,
+     92
+    ],
+    "h": [
+     142,
+     280
+    ]
+   },
+   "badge": "Scorrevole",
+   "tags": [
+    "armadi",
+    "scorrevoli",
+    "armadio scorrevole sile 200"
+   ],
+   "rank": 23
+  },
+  {
+   "id": "armadio-meduna-2-ante",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "battenti",
+   "subs": [
+    "battenti"
+   ],
+   "name": "Armadio Meduna 2 ante",
+   "desc": "Armadio compatto a due ante con asta e ripiano superiore",
+   "img": "/shop/img/prodotti/armadio-meduna-2-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_44216ba9-9c80-436f-a1cd-9dac01dd111d.png",
+   "imgLg": "/shop/img/prodotti/armadio-meduna-2-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134607_44216ba9-9c80-436f-a1cd-9dac01dd111d.png",
+   "std": [
+    {
+     "w": 79,
+     "d": 55,
+     "h": 176,
+     "price": 149
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     47,
+     118
+    ],
+    "d": [
+     33,
+     77
+    ],
+    "h": [
+     106,
+     246
+    ]
+   },
+   "badge": "Prezzo base",
+   "tags": [
+    "armadi",
+    "battenti",
+    "armadio meduna 2 ante"
+   ],
+   "rank": 24
+  },
+  {
+   "id": "armadio-brenta-250-attrezzato",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "componibili",
+   "subs": [
+    "componibili"
+   ],
+   "name": "Armadio Brenta 250 attrezzato",
+   "desc": "Cinque ante, interno con cassetti, ripiani e due aste: guardaroba completo",
+   "img": "/shop/img/prodotti/armadio-brenta-250-attrezzato.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134708_e15f2147-7f27-4615-8cd1-81ed745c2a74.png",
+   "imgLg": "/shop/img/prodotti/armadio-brenta-250-attrezzato.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134708_e15f2147-7f27-4615-8cd1-81ed745c2a74.png",
+   "std": [
+    {
+     "w": 250,
+     "d": 60,
+     "h": 236,
+     "price": 979
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     150,
+     375
+    ],
+    "d": [
+     36,
+     84
+    ],
+    "h": [
+     142,
+     280
+    ]
+   },
+   "badge": "Attrezzato",
+   "tags": [
+    "armadi",
+    "componibili",
+    "armadio brenta 250 attrezzato"
+   ],
+   "rank": 25
+  },
+  {
+   "id": "armadio-colonna-lemene-80",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "salvaspazio",
+   "subs": [
+    "salvaspazio"
+   ],
+   "name": "Armadio Colonna Lemene 80",
+   "desc": "Colonna da 80 cm a un'anta, per ingresso o camera",
+   "img": "/shop/img/prodotti/armadio-colonna-lemene-80.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134709_13c2713b-ac75-4e6a-a0c2-bfa9ef50b46d.png",
+   "imgLg": "/shop/img/prodotti/armadio-colonna-lemene-80.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134709_13c2713b-ac75-4e6a-a0c2-bfa9ef50b46d.png",
+   "std": [
+    {
+     "w": 80,
+     "d": 62,
+     "h": 201,
+     "price": 139
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Laccato RAL"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     48,
+     120
+    ],
+    "d": [
+     37,
+     87
+    ],
+    "h": [
+     121,
+     280
+    ]
+   },
+   "badge": "Prezzo base",
+   "tags": [
+    "armadi",
+    "salvaspazio",
+    "armadio colonna lemene 80"
+   ],
+   "rank": 26
+  },
+  {
+   "id": "armadio-meduna-3-ante",
+   "type": "furniture",
+   "cat": "armadi",
+   "sub": "battenti",
+   "subs": [
+    "battenti"
+   ],
+   "name": "Armadio Meduna 3 ante",
+   "desc": "Tre ante: un vano con ripiani e uno con asta appendiabiti",
+   "img": "/shop/img/prodotti/armadio-meduna-3-ante.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134708_7cac01bd-cf32-459a-a103-948d991eeb02.png",
+   "imgLg": "/shop/img/prodotti/armadio-meduna-3-ante.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134708_7cac01bd-cf32-459a-a103-948d991eeb02.png",
+   "std": [
+    {
+     "w": 117,
+     "d": 55,
+     "h": 176,
+     "price": 209
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     70,
+     176
+    ],
+    "d": [
+     33,
+     77
+    ],
+    "h": [
+     106,
+     246
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "armadi",
+    "battenti",
+    "armadio meduna 3 ante"
+   ],
+   "rank": 27
+  },
+  {
+   "id": "pensile-soligo-1-anta",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "contenitori",
+   "subs": [
+    "contenitori"
+   ],
+   "name": "Pensile Soligo 1 anta",
+   "desc": "Mobile ad anta da 60 cm, a parete o a terra, componibile",
+   "img": "/shop/img/prodotti/pensile-soligo-1-anta.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134708_5d561556-a7f0-4ca6-b50c-3ebbb168caf7.png",
+   "imgLg": "/shop/img/prodotti/pensile-soligo-1-anta.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134708_5d561556-a7f0-4ca6-b50c-3ebbb168caf7.png",
+   "std": [
+    {
+     "w": 60,
+     "d": 42,
+     "h": 64,
+     "price": 89
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Grigio seta"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     36,
+     90
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     38,
+     90
+    ]
+   },
+   "badge": "Componibile",
+   "tags": [
+    "mobiletti",
+    "contenitori",
+    "pensile soligo 1 anta"
+   ],
+   "rank": 28
+  },
+  {
+   "id": "mobile-alto-raboso-cannettato",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "contenitori",
+   "subs": [
+    "contenitori"
+   ],
+   "name": "Mobile alto Raboso cannettato",
+   "desc": "Mobile alto a due ante con frontali cannettati in rovere, scocca bianca",
+   "img": "/shop/img/prodotti/mobile-alto-raboso-cannettato.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134731_cf1412bf-923b-43e2-ae91-2441eadf8c45.png",
+   "imgLg": "/shop/img/prodotti/mobile-alto-raboso-cannettato.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134731_cf1412bf-923b-43e2-ae91-2441eadf8c45.png",
+   "std": [
+    {
+     "w": 120,
+     "d": 42,
+     "h": 193,
+     "price": 759
+    }
+   ],
+   "finishes": [
+    "Rovere naturale/Bianco",
+    "Noce/Bianco"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     72,
+     180
+    ],
+    "d": [
+     25,
+     59
+    ],
+    "h": [
+     116,
+     270
+    ]
+   },
+   "badge": "Design",
+   "tags": [
+    "mobiletti",
+    "contenitori",
+    "mobile alto raboso cannettato"
+   ],
+   "rank": 29
+  },
+  {
+   "id": "libreria-quadra-2x4",
+   "type": "furniture",
+   "cat": "mobiletti",
+   "sub": "librerie",
+   "subs": [
+    "librerie"
+   ],
+   "name": "Libreria Quadra 2×4",
+   "desc": "Otto vani 33×33 cm in verticale, anche come divisorio",
+   "img": "/shop/img/prodotti/libreria-quadra-2x4.jpg",
+   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134731_0e406758-05ab-4472-b3ab-5eaddce2e6b4.png",
+   "imgLg": "/shop/img/prodotti/libreria-quadra-2x4.jpg",
+   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134731_0e406758-05ab-4472-b3ab-5eaddce2e6b4.png",
+   "std": [
+    {
+     "w": 77,
+     "d": 39,
+     "h": 147,
+     "price": 89
+    }
+   ],
+   "finishes": [
+    "Bianco opaco",
+    "Rovere naturale",
+    "Noce canaletto"
+   ],
+   "custom": true,
+   "limits": {
+    "w": [
+     46,
+     116
+    ],
+    "d": [
+     23,
+     55
+    ],
+    "h": [
+     88,
+     206
+    ]
+   },
+   "badge": "Nuova",
+   "tags": [
+    "mobiletti",
+    "librerie",
+    "libreria quadra 2×4"
    ],
    "rank": 30
   }

@@ -28,7 +28,7 @@
     x:'<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     check:'<svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>'
   };
-  var SW={'Bianco opaco':'#f4f3ef','Bianco':'#f6f6f4','Bianco frassino':'#efede7','Rovere naturale':'#c9a273','Rovere oliato':'#b8895a','Noce canaletto':'#6b4a33','Grigio seta':'#b9b6b0','Grigio Baltimora':'#8d8780','Palissandro White':'#e3ddd2','Nero opaco':'#262626','Marrone-nero':'#3d322b','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc','Laccato RAL':'conic-gradient(#c0392b,#e0b24a,#5b8d5a,#3e6fa8,#8e5aa8,#c0392b)','Rovere naturale/Bianco':'linear-gradient(90deg,#c9a273 50%,#f4f3ef 50%)','Noce/Grigio':'linear-gradient(90deg,#6b4a33 50%,#b9b6b0 50%)','Pietra grigia/Rovere':'linear-gradient(90deg,#8f8f8a 50%,#c9a273 50%)','Pietra chiara/Noce':'linear-gradient(90deg,#d9d5cc 50%,#6b4a33 50%)'};
+  var SW={'Grigio grafite':'#4a4a4c','Bianco opaco/Rovere':'linear-gradient(90deg,#f4f3ef 50%,#c9a273 50%)','Grigio seta/Rovere':'linear-gradient(90deg,#b9b6b0 50%,#c9a273 50%)','Noce/Bianco':'linear-gradient(90deg,#6b4a33 50%,#f4f3ef 50%)','Bianco opaco':'#f4f3ef','Bianco':'#f6f6f4','Bianco frassino':'#efede7','Rovere naturale':'#c9a273','Rovere oliato':'#b8895a','Noce canaletto':'#6b4a33','Grigio seta':'#b9b6b0','Grigio Baltimora':'#8d8780','Palissandro White':'#e3ddd2','Nero opaco':'#262626','Marrone-nero':'#3d322b','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc','Laccato RAL':'conic-gradient(#c0392b,#e0b24a,#5b8d5a,#3e6fa8,#8e5aa8,#c0392b)','Rovere naturale/Bianco':'linear-gradient(90deg,#c9a273 50%,#f4f3ef 50%)','Noce/Grigio':'linear-gradient(90deg,#6b4a33 50%,#b9b6b0 50%)','Pietra grigia/Rovere':'linear-gradient(90deg,#8f8f8a 50%,#c9a273 50%)','Pietra chiara/Noce':'linear-gradient(90deg,#d9d5cc 50%,#6b4a33 50%)'};
   var RALS=[['9010','#f1ece1','Bianco puro'],['9016','#f1f0ea','Bianco traffico'],['1013','#e3d9c6','Bianco perla'],['7044','#b8b4a8','Grigio seta'],['7016','#383e42','Antracite'],['6021','#89ac76','Verde pallido'],['5014','#606e8c','Blu colomba'],['3012','#c6846d','Rosso beige'],['9005','#0e0e10','Nero']];
   function swatch(f){return SW[f]||'#ddd'}
   function tintDoor(tn,R,ral){
@@ -107,9 +107,14 @@
     lines.push([p.lineLabel+' · '+op.label,b]);
     D.extras.forEach(function(x){if(c.ex&&c.ex[x.id]&&extraOk(x,c))lines.push([x.label,x.add])});
     if(c.size==='custom'){var fm=D.fuoriMisura,add=(fm.add||0)+Math.round(b*(fm.perc||0)/100);lines.push([fm.label+' '+c.vw+'×'+c.vh+' mm, muro '+c.wall,add])}
+    var sv=service(c.serv);if(sv)lines.push([sv.label+' · '+sv.sub,sv.add]);
     var tot=lines.reduce(function(a,l){return a+l[1]},0);
-    return{unit:tot,lines:lines,note:D.ivaNote};
+    return{unit:tot,lines:lines,note:sv&&sv.id==='trasporto'?'IVA esclusa · montaggio escluso · fuori VE e FVG spedizione a preventivo':sv&&sv.id==='ritiro'?'IVA esclusa · ritiro a Fontanelle (TV), montaggio escluso':D.ivaNote};
   }
+  function service(id){var S=PR.door.services||[];return S.find(function(x){return x.id===id})||S[0]}
+  function servHTML(){var S=PR.door.services||[];if(!S.length)return '';return '<fieldset class="s-opt"><legend>Consegna e montaggio</legend><div class="s-chips" id="o-serv">'+S.map(function(x){return '<button type="button" class="s-chip" data-v="'+x.id+'">'+esc(x.label)+(x.add?' <em>'+eur.format(x.add).replace('-','−')+'</em>':'')+'</button>'}).join('')+'</div><p class="s-note" id="o-serv-n"></p></fieldset>'}
+  function servUpd(sc,c){if(!c.serv)c.serv='posa';var b=sc.querySelectorAll('#o-serv .s-chip');for(var i=0;i<b.length;i++)b[i].setAttribute('aria-pressed',String(b[i].dataset.v===c.serv));var n=sc.querySelector('#o-serv-n'),sv=service(c.serv);if(n&&sv)n.textContent=sv.sub.charAt(0).toUpperCase()+sv.sub.slice(1)+'. '+sv.note}
+  function servBind(sc,c,upd){var b=sc.querySelectorAll('#o-serv .s-chip');for(var i=0;i<b.length;i++)b[i].onclick=function(){c.serv=this.dataset.v;upd()}}
   function extraOk(x,c){return !x.onlyFor||x.onlyFor.indexOf(c.open)>=0}
   function furnQuote(p,c){
     var F=PR.furniture, lines=[], s;
@@ -296,7 +301,7 @@
     if(p.type==='cube')return cubeDefault(p);
     if(p.type==='door'){
       var open=sub==='scorrevoli'?'scorrevole-esterno':sub==='filo-muro'?'filo-muro':'battente';
-      var dc={open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
+      var dc={serv:'posa',open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
     }
     var s=p.std[0];return{size:0,w:s.w,d:s.d,h:s.h,fin:p.finishes[0],ral:p.finishes[0]==='Laccato RAL'?'9010':''};
   }
@@ -312,7 +317,7 @@
       return [c.cols+'×'+c.rows+' vani da '+c.cube+' cm',D.w+'×'+c.depth+'×'+D.h+' cm',c.fin==='Laccato RAL'?'RAL '+(c.ral||''):c.fin].concat(ins).concat(b&&b.id!=='nessuna'?[b.label]:[]).join(' · ')}
     if(p.type==='door'){
       var op=opening(c.open), ex=PR.door.extras.filter(function(x){return c.ex&&c.ex[x.id]&&extraOk(x,c)}).map(function(x){return x.label.split(' (')[0]});
-      var g=doorGeom(c);return [op.label+(c.hand==='sx'?' sinistra':' destra'), c.size==='custom'?'vano '+c.vw+'×'+c.vh+' mm, muro '+c.wall+' mm (anta '+g.lw+'×'+g.lh+')':c.w+'×'+PR.door.height+' cm, muro '+c.wall+' mm', p.line==='laminata'?p.finishes[0]:'RAL '+(c.ral||'da scegliere')].concat(ex).join(' · ');
+      var g=doorGeom(c);return [op.label+(c.hand==='sx'?' sinistra':' destra'), c.size==='custom'?'vano '+c.vw+'×'+c.vh+' mm, muro '+c.wall+' mm (anta '+g.lw+'×'+g.lh+')':c.w+'×'+PR.door.height+' cm, muro '+c.wall+' mm', p.line==='laminata'?p.finishes[0]:'RAL '+(c.ral||'da scegliere')].concat(ex).concat(service(c.serv)?[service(c.serv).label]:[]).join(' · ');
     }
     var s=c.size==='custom'?{w:c.w,d:c.d,h:c.h}:(p.std[c.size|0]||p.std[0]);
     return s.w+'×'+s.d+'×'+s.h+' cm'+(c.size==='custom'?' (su misura)':'')+' · '+(c.fin==='Laccato RAL'?'RAL '+(c.ral||'da scegliere'):c.fin);
@@ -502,6 +507,7 @@
       html+='<fieldset class="s-opt"><legend>Larghezza anta <small>altezza '+PR.door.height+' cm</small></legend><div class="s-chips" id="o-size">'+PR.door.widths.map(function(w){return '<button type="button" class="s-chip" data-v="'+w+'">'+w+' cm</button>'}).join('')+'<button type="button" class="s-chip" data-v="custom">Fuori misura</button></div>'
         +'<div class="s-dims two" id="o-cust" hidden><label>Larghezza (cm)<input type="number" inputmode="numeric" id="o-w" min="'+PR.door.fuoriMisura.wMin+'" max="'+PR.door.fuoriMisura.wMax+'"><small>'+PR.door.fuoriMisura.wMin+'–'+PR.door.fuoriMisura.wMax+'</small></label><label>Altezza (cm)<input type="number" inputmode="numeric" id="o-h" min="'+PR.door.fuoriMisura.hMin+'" max="'+PR.door.fuoriMisura.hMax+'"><small>'+PR.door.fuoriMisura.hMin+'–'+PR.door.fuoriMisura.hMax+'</small></label></div><p class="s-note" id="o-cust-n" hidden>'+esc(PR.door.fuoriMisura.note)+'</p></fieldset>';
       html+='<fieldset class="s-opt"><legend>Opzioni</legend>'+PR.door.extras.map(function(x){return '<label class="s-check" data-x="'+x.id+'"><input type="checkbox" value="'+x.id+'">'+esc(x.label)+'<em>+'+eur.format(x.add)+'</em></label>'}).join('')+'</fieldset>';
+      html+=servHTML();
       if(p.line!=='laminata')html+=ralPicker();
       else html+='<div class="s-opt"><b>Finitura</b><div class="s-chips"><span class="s-chip on"><i style="background:'+swatch(p.finishes[0])+'"></i>'+esc(p.finishes[0])+'</span></div></div>';
       html+='<dl class="s-specs"><dt>Telaio</dt><dd>Legno listellare</dd><dt>Pannello</dt><dd>'+(p.line==='pantografata'?'Copertine HDF idro 8 mm, 44 mm totali':'44 mm, anima alveolare')+'</dd><dt>Cerniere</dt><dd>3 a scomparsa</dd><dt>Serratura</dt><dd>Magnetica, cromo satinato</dd><dt>Coprifilo</dt><dd>Multistrato 7/9</dd><dt>Produzione</dt><dd>Fontanelle (TV) · laccate in 6–8 settimane</dd></dl>';
@@ -519,7 +525,7 @@
     function sel(group,v){$$('#'+group+' .s-chip',sc).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.v)===String(v))})}
     function upd(){
       if(p.type==='door'){
-        sel('o-open',c.open);sel('o-size',c.size);
+        sel('o-open',c.open);sel('o-size',c.size);servUpd(sc,c);
         var op=opening(c.open);$('#o-open-n',sc).textContent=op.note+(op.min>PR.door.lines[p.line]?' · da '+eur.format(op.min):'');
         $$('.s-check',sc).forEach(function(l){var x=PR.door.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);var i=l.querySelector('input');i.checked=!!(c.ex[x.id]&&ok)});
         var cu=c.size==='custom';$('#o-cust',sc).hidden=!cu;$('#o-cust-n',sc).hidden=!cu;
@@ -545,7 +551,7 @@
     $$('#o-open .s-chip',sc).forEach(function(b){b.onclick=function(){c.open=b.dataset.v;upd()}});
     $$('#o-size .s-chip',sc).forEach(function(b){b.onclick=function(){var v=b.dataset.v;c.size=v==='custom'?'custom':(p.type==='door'?v:+v);upd();if(v==='custom'){var i=$('#o-w',sc);i&&i.focus()}}});
     $$('#o-fin .s-chip',sc).forEach(function(b){b.onclick=function(){c.fin=b.dataset.v;if(c.fin==='Laccato RAL'&&!c.ral)c.ral='9010';upd()}});
-    $$('.s-check input',sc).forEach(function(i){i.onchange=function(){c.ex[i.value]=i.checked;upd()}});
+    $$('.s-check input',sc).forEach(function(i){i.onchange=function(){c.ex[i.value]=i.checked;upd()}});servBind(sc,c,upd);
     ['w','d','h'].forEach(function(k){var i=$('#o-'+k,sc);if(!i)return;i.oninput=function(){var v=parseInt(i.value,10);if(!isNaN(v)){c[k]=clamp(v,+i.min,+i.max);upd()}};i.onblur=function(){i.value=c[k]}});
     $$('.s-ral-sw button',sc).forEach(function(b){b.onclick=function(){c.ral=b.dataset.r;upd()}});
     var ri=$('#o-ral-in',sc);if(ri)ri.oninput=function(){var v=ri.value.replace(/\D/g,'').slice(0,4);c.ral=v;upd()};
@@ -580,6 +586,7 @@
       +'<p class="s-note s-warn" id="o-wall-n" hidden></p></fieldset>';
     html+='<div class="s-calc" id="s-calc"></div>';
     html+='<fieldset class="s-opt"><legend>Opzioni</legend>'+D.extras.map(function(x){return '<label class="s-check" data-x="'+x.id+'"><input type="checkbox" value="'+x.id+'">'+esc(x.label)+'<em>+'+eur.format(x.add)+'</em></label>'}).join('')+'</fieldset>';
+    html+=servHTML();
     if(p.line!=='laminata')html+=ralPicker();
     else html+='<div class="s-opt"><b>Finitura</b><div class="s-chips"><span class="s-chip on"><i style="background:'+swatch(p.finishes[0])+'"></i>'+esc(p.finishes[0])+'</span></div></div>';
     html+='<div class="s-opt"><b>Caratteristiche standard <small>dal catalogo 2026</small></b><dl class="s-specs">'+(p.specs||[]).map(function(s){return '<dt>'+esc(s[0])+'</dt><dd>'+esc(s[1])+'</dd>'}).join('')+'<dt>Produzione</dt><dd>Fontanelle (TV) · laccate in 6–8 settimane</dd></dl></div>';
@@ -594,7 +601,7 @@
     function upd(){
       if(p.onlyOpen)c.open=p.onlyOpen;
       if(opening(c.open).onlyLacc&&p.line==='laminata')c.open='battente';
-      sel('o-open',c.open);sel('o-size',c.size);sel('o-hand',c.hand);
+      sel('o-open',c.open);sel('o-size',c.size);sel('o-hand',c.hand);servUpd(sc,c);
       var op=opening(c.open);$('#o-open-n',sc).textContent=op.note+(op.min>D.lines[p.line]?' · da '+eur.format(op.min):'');
       $$('.s-check',sc).forEach(function(l){var x=D.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);l.querySelector('input').checked=!!(c.ex[x.id]&&ok)});
       var cu=c.size==='custom';$('#o-cust',sc).hidden=!cu;$('#o-wall-std',sc).hidden=cu;
@@ -620,7 +627,7 @@
     $$('#o-open .s-chip',sc).forEach(function(b){b.onclick=function(){c.open=b.dataset.v;upd()}});
     $$('#o-hand .s-chip',sc).forEach(function(b){b.onclick=function(){c.hand=b.dataset.v;upd()}});
     $$('#o-size .s-chip',sc).forEach(function(b){b.onclick=function(){var v=b.dataset.v;if(v==='custom'){c.size='custom'}else{c.size=v}upd();if(v==='custom'){setView('disegno');var i=$('#o-vw',sc);i&&i.focus()}}});
-    $$('.s-check input',sc).forEach(function(i){i.onchange=function(){c.ex[i.value]=i.checked;upd()}});
+    $$('.s-check input',sc).forEach(function(i){i.onchange=function(){c.ex[i.value]=i.checked;upd()}});servBind(sc,c,upd);
     function numIn(id,k){var i=$('#'+id,sc);if(!i)return;var t;i.oninput=function(){clearTimeout(t);t=setTimeout(function(){var v=parseInt(i.value,10);if(!isNaN(v)&&v>=+i.min&&v<=+i.max){c[k]=v;upd()}},250)};i.onblur=function(){var v=parseInt(i.value,10);if(!isNaN(v)){c[k]=clamp(v,+i.min,+i.max);upd()}i.value=c[k]}}
     numIn('o-vw','vw');numIn('o-vh','vh');numIn('o-wall','wall');numIn('o-wall2','wall');
     $$('.s-ral-sw button',sc).forEach(function(b){b.onclick=function(){c.ral=b.dataset.r;upd()}});
@@ -927,14 +934,15 @@
   }
 
   /* ---------- pagina prodotto completa (/shop/<categoria>/<id>/) ---------- */
-  var FURN_COL={'Bianco opaco':'#f3f2ee','Rovere naturale':'#d9bb8f','Noce canaletto':'#7a5638','Grigio seta':'#c9c6c0','Laccato RAL':'#ece6da','Nero opaco':'#3a3a3a','Marrone-nero':'#4a3d33','Rovere oliato':'#c79f6c'};
+  var FURN_COL={'Grigio grafite':'#55565a','Bianco opaco/Rovere':'#f3f2ee','Grigio seta/Rovere':'#c9c6c0','Noce/Bianco':'#7a5638','Rovere naturale/Bianco':'#d9bb8f','Bianco opaco':'#f3f2ee','Rovere naturale':'#d9bb8f','Noce canaletto':'#7a5638','Grigio seta':'#c9c6c0','Laccato RAL':'#ece6da','Nero opaco':'#3a3a3a','Marrone-nero':'#4a3d33','Rovere oliato':'#c79f6c'};
   function furnKind(p){
     var s=p.sub,n=(p.name||'').toLowerCase();
     if(s==='top-per-tavoli')return 'top';
     if(s==='tavoli-completi')return 'table';
     if(s==='a-ribalta')return 'flap';
     if(s==='comodini'||p.id==='bagno-60-cassetti'||p.id==='mobile-tv-cassetti')return 'drawers';
-    if(s==='a-giorno')return 'open';
+    if(s==='a-giorno'||p.id==='libreria-quadra-2x4'||p.id==='cubo-tagliamento')return 'open';
+    if(s==='cassettiere')return 'drawers';
     if(s==='con-seduta')return 'bench';
     if(p.id==='parete-attrezzata')return 'wall';
     return 'doors';
