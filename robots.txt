@@ -1,5 +1,5 @@
 # robots.txt — PAN.DOOR.A S.r.l. — https://pandooragroup.it
-# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-10-17
+# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-10-23
 
 User-agent: *
 Allow: /

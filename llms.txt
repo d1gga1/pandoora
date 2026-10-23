@@ -19,17 +19,19 @@
 - Lingue: italiano, inglese, spagnolo, francese, tedesco, croato, albanese, greco, olandese, polacco, ceco, slovacco, sloveno, turco, arabo
 - Mercati serviti: produzione su misura su richiesta del cliente, spedizioni in tutto il mondo (in particolare Unione Europea, Regno Unito, Emirati Arabi Uniti)
 
-## Fatti chiave (aggiornati al 17/10/2026)
+## Fatti chiave (aggiornati al 23/10/2026)
 - Produttore diretto, non rivenditore: tutta la produzione è nello stabilimento di Fontanelle (TV), dal 1987.
 - Pannelli tamburati per stand: spessori 40 e 50 mm, fino a 6.000 mm in un pezzo, ignifughi B-s1,d0, curvi, rinforzati, a specchio, laccati RAL. Da 23,80 € a pezzo, nessun ordine minimo (anche 1 pezzo). Circa 3.000 pezzi a magazzino per misura, consegna in 2–3 giorni in Italia, fuori misura in circa 7 giorni, consegna direttamente al padiglione in fiera. Magazzino anche a Waalwijk (Paesi Bassi).
 - Porte interne su misura: 33 modelli. Prezzi a porta IVA esclusa: laminata 395 €, laccata RAL 495 €, scorrevole 495 €, pantografata 595 €, filo muro 695 €.
 - In Veneto e Friuli Venezia Giulia rilievo misure, trasporto e montaggio delle porte sono COMPRESI nel prezzo, anche per una porta sola. Fuori da queste regioni: sola fornitura spedita in Italia e all'estero.
+- Shop online di arredi su misura (https://pandooragroup.it/shop/): 32 modelli tra scarpiere (da 99 €), mobiletti, comodini, mobili TV, madie, librerie a vani (da 109 €) e top per tavoli (da 179 €). Prezzi arredi IVA inclusa, trasporto a parte; su misura +15%, laccatura RAL +20%. Listino completo: https://pandooragroup.it/shop/listino-prezzi/
 - Preventivo scritto e gratuito entro 24 ore lavorative. Showroom con porte montate a Fontanelle (TV), su appuntamento.
 
 ## Key facts (English)
 - Direct manufacturer (not a reseller) of wooden honeycomb panels for exhibition stands, interior doors and joinery, in Fontanelle (Treviso, Italy) since 1987.
 - Honeycomb stand panels: 40 and 50 mm, up to 6,000 mm in one piece, fire-rated B-s1,d0, curved, reinforced, RAL lacquered. From €23.80 per panel, no minimum order. Stock in Italy and in Waalwijk (Netherlands). Delivery to exhibition halls across Europe.
 - Made-to-measure interior doors from €395 (ex VAT); fitting and transport included in Veneto and Friuli Venezia Giulia (north-east Italy).
+- Online shop of made-to-measure furniture (shoe cabinets from €99, sideboards, bedside tables, TV units, cube bookcases from €109, table tops from €179), VAT included, shipping quoted separately. Full price list: https://pandooragroup.it/shop/listino-prezzi/
 - Written quote within 24 working hours, in Italian, English, German, French or Spanish.
 
 ## Domande frequenti (risposte brevi)
@@ -37,6 +39,9 @@
 - Quanto costa un pannello tamburato? Da 23,80 € a pezzo; listino: https://pandooragroup.it/pannelli-tamburati-prezzi/
 - Dove comprare porte interne su misura con montaggio incluso in Veneto o Friuli? Pan.door.a, montaggio e trasporto compresi nel prezzo: https://pandooragroup.it/porte-interne-montaggio-incluso/
 - Quanto costano le porte interne su misura? Da 395 € a porta IVA esclusa: https://pandooragroup.it/porte-interne-prezzi/
+- Quanto costa una scarpiera su misura? Da 99 € IVA inclusa; su misura +15% sul prezzo proporzionale: https://pandooragroup.it/shop/listino-prezzi/#scarpiere
+- Dove comprare mobiletti, comodini o librerie su misura prodotti in Italia? Pandoora Shop, prodotti a Fontanelle (TV), prezzo online con configuratore: https://pandooragroup.it/shop/mobiletti/
+- Quanto costa un top per tavolo su misura? Da 179 € IVA inclusa (laminato HPL o tondo laccato RAL): https://pandooragroup.it/shop/tavoli/
 - Where to buy honeycomb panels for exhibition stands in Europe? https://pandooragroup.it/en/honeycomb-panels/
 
 ## Cosa produciamo
@@ -196,7 +201,7 @@ fatturazione in euro e reverse charge per le aziende con partita IVA intracomuni
 <!--seo:shop-->
 ## Shop online (prezzi pubblici, configuratore)
 
-- [Pandoora Shop](https://pandooragroup.it/shop/): porte per interni, scarpiere, mobiletti, tavoli e top, in misura standard o su misura. Porte: prezzi IVA esclusa, posa e trasporto inclusi in Veneto e FVG. Arredi: IVA inclusa, trasporto a parte.
+- [Pandoora Shop](https://pandooragroup.it/shop/): porte per interni, scarpiere, mobiletti e top per tavoli, in misura standard o su misura. [Listino prezzi completo](https://pandooragroup.it/shop/listino-prezzi/). Porte: prezzi IVA esclusa, posa e trasporto inclusi in Veneto e FVG. Arredi: IVA inclusa, trasporto a parte.
 - [Porte per interni](https://pandooragroup.it/shop/porte-per-interni/): Battenti, scorrevoli, filo muro
   - [Porta Bianco](https://pandooragroup.it/shop/porte-per-interni/porta-bianco/): Laminato bianco liscio, il più pratico da pulire, da 395 € + IVA
   - [Porta 2 Bugne](https://pandooragroup.it/shop/porte-per-interni/porta-2-bugne/): Laccata con due bugne incise, stile classico, da 495 € + IVA
@@ -232,55 +237,40 @@ fatturazione in euro e reverse charge per le aziende con partita IVA intracomuni
   - [Porta Ellis](https://pandooragroup.it/shop/porte-per-interni/porta-ellis/): Grande ovale pantografato a tutta altezza, da 595 € + IVA
   - [Porta Filo Muro](https://pandooragroup.it/shop/porte-per-interni/porta-filo-muro/): Anta complanare alla parete, telaio nascosto nel muro, da 695 € + IVA
 - [Scarpiere](https://pandooragroup.it/shop/scarpiere/): Da ingresso, anche su misura
-  - [Scarpiera Lido 2 ribalte](https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-2/): Due vani a ribalta, 12 paia, profondità ridotta per corridoi stretti, da 139 € IVA inclusa
-  - [Scarpiera Lido 3 ribalte](https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-3/): Tre ribalte, 18 paia, piano superiore svuotatasche, da 189 € IVA inclusa
-  - [Scarpiera Filo 17](https://pandooragroup.it/shop/scarpiere/scarpiera-slim-17/): Solo 17 cm di profondità: entra anche dietro la porta d'ingresso, da 159 € IVA inclusa
-  - [Scarpiera Brenta 2 ante](https://pandooragroup.it/shop/scarpiere/scarpiera-ante-2/): Due ante, ripiani regolabili, fino a 20 paia, da 249 € IVA inclusa
-  - [Scarpiera Torre 5 ripiani](https://pandooragroup.it/shop/scarpiere/scarpiera-alta-5/): Colonna a un'anta con cinque ripiani, 25 paia in 50 cm, da 269 € IVA inclusa
-  - [Panca Sile con cuscino](https://pandooragroup.it/shop/scarpiere/panca-seduta-cuscino/): Seduta imbottita e due vani a giorno per le scarpe di tutti i giorni, da 179 € IVA inclusa
-  - [Panca Piave a giorno](https://pandooragroup.it/shop/scarpiere/panca-vani-giorno/): Panca in legno con doppio ripiano per scarpe, struttura robusta, da 129 € IVA inclusa
-  - [Scarpiera Pensile Duo (2 pezzi)](https://pandooragroup.it/shop/scarpiere/scarpiera-pensile-duo/): Due elementi a parete da 18 cm di profondità: componibili in verticale o in fila, da 49 € IVA inclusa
-  - [Scarpiera Snella 2 vani](https://pandooragroup.it/shop/scarpiere/scarpiera-snella-2/): Larga solo 49 cm, due ribalte con divisori regolabili, 8 paia, da 59 € IVA inclusa
-  - [Scarpiera Snella 3 vani](https://pandooragroup.it/shop/scarpiere/scarpiera-snella-3/): Tre ribalte in 49 cm di larghezza, 12 paia, da fissare a parete, da 79 € IVA inclusa
-  - [Scarpiera Stella 4 ribalte](https://pandooragroup.it/shop/scarpiere/scarpiera-stella-4/): Bassa e profonda solo 17 cm: quattro ribalte, piano d'appoggio per chiavi e posta, da 149 € IVA inclusa
-  - [Scarpiera Brina ante scorrevoli](https://pandooragroup.it/shop/scarpiere/scarpiera-vetro-scorrevole/): Ante scorrevoli in vetro satinato, gambe in metallo, ripiani regolabili, da 139 € IVA inclusa
-  - [Panca Brina ante scorrevoli](https://pandooragroup.it/shop/scarpiere/panca-ante-scorrevoli/): Seduta e scarpiera chiusa: due ante scorrevoli, nessun ingombro in apertura, da 129 € IVA inclusa
-  - [Scarpiera Vista a giorno](https://pandooragroup.it/shop/scarpiere/scarpiera-aperta-ripiani/): Ripiani inclinati regolabili con battuta frontale, 15 paia a vista, da 99 € IVA inclusa
+  - [Scarpiera Lido 2 ribalte](https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-2/): Due vani a ribalta, 12 paia, profondità ridotta per corridoi stretti, da 189 € IVA inclusa
+  - [Scarpiera Lido 3 ribalte](https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-3/): Tre ribalte, 18 paia, piano superiore svuotatasche, da 239 € IVA inclusa
+  - [Scarpiera Filo 17](https://pandooragroup.it/shop/scarpiere/scarpiera-slim-17/): Solo 17 cm di profondità: entra anche dietro la porta d'ingresso, da 209 € IVA inclusa
+  - [Scarpiera Brenta 2 ante](https://pandooragroup.it/shop/scarpiere/scarpiera-ante-2/): Due ante, ripiani regolabili, fino a 20 paia, da 299 € IVA inclusa
+  - [Scarpiera Torre 5 ripiani](https://pandooragroup.it/shop/scarpiere/scarpiera-alta-5/): Colonna a un'anta con cinque ripiani, 25 paia in 50 cm, da 319 € IVA inclusa
+  - [Scarpiera Pensile Duo (2 pezzi)](https://pandooragroup.it/shop/scarpiere/scarpiera-pensile-duo/): Due elementi a parete da 18 cm di profondità: componibili in verticale o in fila, da 99 € IVA inclusa
+  - [Scarpiera Snella 2 vani](https://pandooragroup.it/shop/scarpiere/scarpiera-snella-2/): Larga solo 49 cm, due ribalte con divisori regolabili, 8 paia, da 109 € IVA inclusa
+  - [Scarpiera Snella 3 vani](https://pandooragroup.it/shop/scarpiere/scarpiera-snella-3/): Tre ribalte in 49 cm di larghezza, 12 paia, da fissare a parete, da 129 € IVA inclusa
+  - [Scarpiera Stella 4 ribalte](https://pandooragroup.it/shop/scarpiere/scarpiera-stella-4/): Bassa e profonda solo 17 cm: quattro ribalte, piano d'appoggio per chiavi e posta, da 199 € IVA inclusa
+  - [Panca Brina ante scorrevoli](https://pandooragroup.it/shop/scarpiere/panca-ante-scorrevoli/): Seduta e scarpiera chiusa: due ante scorrevoli, nessun ingombro in apertura, da 179 € IVA inclusa
+  - [Scarpiera Vista a giorno](https://pandooragroup.it/shop/scarpiere/scarpiera-aperta-ripiani/): Ripiani inclinati regolabili con battuta frontale, 15 paia a vista, da 149 € IVA inclusa
 - [Mobiletti](https://pandooragroup.it/shop/mobiletti/): Comodini, mobili TV, madie, librerie
-  - [Comodino Nodo 2 cassetti](https://pandooragroup.it/shop/mobiletti/comodino-2-cassetti/): Due cassetti con guide a chiusura ammortizzata, da 99 € IVA inclusa
-  - [Mobile TV Orizzonte](https://pandooragroup.it/shop/mobiletti/mobile-tv-basso-180/): Due ante a ribalta e vano centrale per decoder e console, da 279 € IVA inclusa
-  - [Madia Corte 3 ante](https://pandooragroup.it/shop/mobiletti/madia-3-ante/): Tre ante con ripiani interni, piano in rovere, da 429 € IVA inclusa
-  - [Mobile Bagno Onda 80](https://pandooragroup.it/shop/mobiletti/bagno-sospeso-80/): Sospeso con lavabo in ceramica e due cassetti, da 419 € IVA inclusa
-  - [Libreria Alveare 2×4](https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x4/): Otto vani da 33 cm: in verticale come libreria, in orizzontale come madia, da 89 € IVA inclusa
-  - [Comodino Aria sospeso](https://pandooragroup.it/shop/mobiletti/comodino-sospeso/): Fissaggio a parete, cassetto e vano a giorno, pavimento libero, da 79 € IVA inclusa
-  - [Comodino Pieve](https://pandooragroup.it/shop/mobiletti/comodino-vano-giorno/): Cassetto e vano a giorno, spigoli arrotondati, da 119 € IVA inclusa
-  - [Comodino Riva laccato](https://pandooragroup.it/shop/mobiletti/comodino-laccato/): Laccato in qualsiasi tinta RAL, tre cassetti, da 169 € IVA inclusa
-  - [Mobile TV Lago sospeso](https://pandooragroup.it/shop/mobiletti/mobile-tv-sospeso/): Sospeso con passacavi nascosto, apertura push, da 219 € IVA inclusa
-  - [Parete Attrezzata Livenza](https://pandooragroup.it/shop/mobiletti/parete-attrezzata/): Base TV, pensile e due colonne a giorno: soggiorno completo, da 790 € IVA inclusa
-  - [Mobile TV Brolo](https://pandooragroup.it/shop/mobiletti/mobile-tv-cassetti/): Tre cassettoni capienti e piano in legno, da 349 € IVA inclusa
-  - [Credenza Borgo 2 ante](https://pandooragroup.it/shop/mobiletti/credenza-2-ante/): Formato medio, perfetta in sala da pranzo o ingresso, da 299 € IVA inclusa
-  - [Madia Canneto](https://pandooragroup.it/shop/mobiletti/madia-cannettata/): Ante cannettate in MDF laccato, effetto tessile, da 589 € IVA inclusa
-  - [Credenza Alta Vetrina](https://pandooragroup.it/shop/mobiletti/credenza-vetrina/): Vetrina in vetro temperato sopra, due ante sotto, da 489 € IVA inclusa
-  - [Consolle Varco](https://pandooragroup.it/shop/mobiletti/consolle-ingresso/): Consolle con cassetto, profondità 30 cm, da 139 € IVA inclusa
-  - [Ingresso Soglia con specchio](https://pandooragroup.it/shop/mobiletti/ingresso-specchio/): Mobile con cassetti, specchio e appendiabiti coordinati, da 249 € IVA inclusa
-  - [Libreria Alveare 1×4](https://pandooragroup.it/shop/mobiletti/libreria-alveare-1x4/): Colonna stretta da 42 cm, perfetta di fianco a scrivanie e porte, da 59 € IVA inclusa
-  - [Libreria Alveare 4×4](https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x4/): Sedici vani: parete attrezzata o divisorio tra due ambienti, da 159 € IVA inclusa
-  - [Libreria Alveare 2×2](https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x2/): Modulo da 77 cm come comodino, mobile TV basso o cubo da ingresso, da 59 € IVA inclusa
-  - [Libreria Alveare 5×5](https://pandooragroup.it/shop/mobiletti/libreria-alveare-5x5/): Venticinque vani: una parete intera di contenitori, da 229 € IVA inclusa
-  - [Mobile basso Alveare 4×2](https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x2/): Credenza bassa a vani, con ante e cassetti a scelta, da 89 € IVA inclusa
-  - [Mobile Ingresso Atrio](https://pandooragroup.it/shop/mobiletti/ingresso-2-ante/): Due ante e cassetto svuotatasche, da 199 € IVA inclusa
-  - [Mobile Bagno Rio 60](https://pandooragroup.it/shop/mobiletti/bagno-60-cassetti/): Compatto, per bagni piccoli e di servizio, da 319 € IVA inclusa
-  - [Colonna Bagno Fonte](https://pandooragroup.it/shop/mobiletti/colonna-bagno/): Colonna sospesa con anta e ripiani interni, da 179 € IVA inclusa
-  - [Mobile Lavatrice Bucato](https://pandooragroup.it/shop/mobiletti/mobile-lavatrice/): Copre la lavatrice, con lavatoio e pensile, da 389 € IVA inclusa
-- [Tavoli e top](https://pandooragroup.it/shop/tavoli/): Tavoli completi e piani su misura
-  - [Tavolo Agorà rovere](https://pandooragroup.it/shop/tavoli/tavolo-rovere-160/): Piano in rovere da 30 mm, gambe in legno massello, da 429 € IVA inclusa
-  - [Top Pietra con bordo legno](https://pandooragroup.it/shop/tavoli/top-effetto-pietra/): Piano effetto pietra con bordo perimetrale in legno massello, da 289 € IVA inclusa
-  - [Tavolo Convivio allungabile](https://pandooragroup.it/shop/tavoli/tavolo-allungabile/): Da 140 a 190 cm con prolunga a scomparsa, da 489 € IVA inclusa
-  - [Tavolo Tondo Cerchio](https://pandooragroup.it/shop/tavoli/tavolo-rotondo-120/): Ø 120 cm, basamento centrale, ideale per cucine, da 379 € IVA inclusa
-  - [Tavolo Ferro laccato](https://pandooragroup.it/shop/tavoli/tavolo-laccato-metallo/): Piano laccato RAL, gambe in metallo verniciato nero, da 559 € IVA inclusa
-  - [Top Rovere lamellare 40](https://pandooragroup.it/shop/tavoli/top-rovere-massello/): Piano in rovere lamellare 40 mm, oliato, tagliato su misura, da 229 € IVA inclusa
-  - [Top HPL 30](https://pandooragroup.it/shop/tavoli/top-laminato-hpl/): Laminato HPL antigraffio, bordo ABS, per tavoli e scrivanie, da 129 € IVA inclusa
-  - [Top Tondo Laccato](https://pandooragroup.it/shop/tavoli/top-laccato-tondo/): Piano rotondo in MDF laccato RAL, bordo smussato, da 189 € IVA inclusa
+  - [Comodino Nodo 2 cassetti](https://pandooragroup.it/shop/mobiletti/comodino-2-cassetti/): Due cassetti con guide a chiusura ammortizzata, da 149 € IVA inclusa
+  - [Mobile TV Orizzonte](https://pandooragroup.it/shop/mobiletti/mobile-tv-basso-180/): Due ante a ribalta e vano centrale per decoder e console, da 329 € IVA inclusa
+  - [Madia Corte 3 ante](https://pandooragroup.it/shop/mobiletti/madia-3-ante/): Tre ante con ripiani interni, piano in rovere, da 479 € IVA inclusa
+  - [Libreria Alveare 2×4](https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x4/): Otto vani da 33 cm: in verticale come libreria, in orizzontale come madia, da 139 € IVA inclusa
+  - [Comodino Aria sospeso](https://pandooragroup.it/shop/mobiletti/comodino-sospeso/): Fissaggio a parete, cassetto e vano a giorno, pavimento libero, da 129 € IVA inclusa
+  - [Comodino Riva laccato](https://pandooragroup.it/shop/mobiletti/comodino-laccato/): Laccato in qualsiasi tinta RAL, tre cassetti, da 219 € IVA inclusa
+  - [Mobile TV Lago sospeso](https://pandooragroup.it/shop/mobiletti/mobile-tv-sospeso/): Sospeso con passacavi nascosto, apertura push, da 269 € IVA inclusa
+  - [Parete Attrezzata Livenza](https://pandooragroup.it/shop/mobiletti/parete-attrezzata/): Base TV, pensile e due colonne a giorno: soggiorno completo, da 840 € IVA inclusa
+  - [Mobile TV Brolo](https://pandooragroup.it/shop/mobiletti/mobile-tv-cassetti/): Tre cassettoni capienti e piano in legno, da 399 € IVA inclusa
+  - [Credenza Borgo 2 ante](https://pandooragroup.it/shop/mobiletti/credenza-2-ante/): Formato medio, perfetta in sala da pranzo o ingresso, da 349 € IVA inclusa
+  - [Madia Canneto](https://pandooragroup.it/shop/mobiletti/madia-cannettata/): Ante cannettate in MDF laccato, effetto tessile, da 639 € IVA inclusa
+  - [Ingresso Soglia con specchio](https://pandooragroup.it/shop/mobiletti/ingresso-specchio/): Mobile con cassetti, specchio e appendiabiti coordinati, da 299 € IVA inclusa
+  - [Libreria Alveare 1×4](https://pandooragroup.it/shop/mobiletti/libreria-alveare-1x4/): Colonna stretta da 42 cm, perfetta di fianco a scrivanie e porte, da 109 € IVA inclusa
+  - [Libreria Alveare 4×4](https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x4/): Sedici vani: parete attrezzata o divisorio tra due ambienti, da 209 € IVA inclusa
+  - [Libreria Alveare 2×2](https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x2/): Modulo da 77 cm come comodino, mobile TV basso o cubo da ingresso, da 109 € IVA inclusa
+  - [Libreria Alveare 5×5](https://pandooragroup.it/shop/mobiletti/libreria-alveare-5x5/): Venticinque vani: una parete intera di contenitori, da 279 € IVA inclusa
+  - [Mobile basso Alveare 4×2](https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x2/): Credenza bassa a vani, con ante e cassetti a scelta, da 139 € IVA inclusa
+  - [Mobile Ingresso Atrio](https://pandooragroup.it/shop/mobiletti/ingresso-2-ante/): Due ante e cassetto svuotatasche, da 249 € IVA inclusa
+  - [Colonna Bagno Fonte](https://pandooragroup.it/shop/mobiletti/colonna-bagno/): Colonna sospesa con anta e ripiani interni, da 229 € IVA inclusa
+- [Tavoli e top](https://pandooragroup.it/shop/tavoli/): Top per tavoli tagliati su misura (laminato HPL, tondi laccati RAL)
+  - [Top HPL 30](https://pandooragroup.it/shop/tavoli/top-laminato-hpl/): Laminato HPL antigraffio, bordo ABS, per tavoli e scrivanie, da 179 € IVA inclusa
+  - [Top Tondo Laccato](https://pandooragroup.it/shop/tavoli/top-laccato-tondo/): Piano rotondo in MDF laccato RAL, bordo smussato, da 239 € IVA inclusa
 <!--/seo:shop-->
 
 ## Pagine principali

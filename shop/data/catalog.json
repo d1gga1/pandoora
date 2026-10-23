@@ -121,15 +121,10 @@
   {
    "id": "tavoli",
    "name": "Tavoli e top",
-   "short": "Tavoli completi e piani su misura",
+   "short": "Top per tavoli su misura",
    "icon": "table",
    "intro": "Tavoli completi e top per tavoli tagliati sulla vostra misura: scegliete forma, dimensioni, spessore e finitura del piano.",
    "subs": [
-    [
-     "tavoli-completi",
-     "Tavoli completi",
-     "table"
-    ],
     [
      "top-per-tavoli",
      "Top per tavoli",

@@ -103,7 +103,7 @@
    "ivaNote": "IVA esclusa · posa inclusa in VE e FVG"
   },
   "cube": {
-   "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura",
+   "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura + add (supplemento fisso 50 € sulla struttura)",
    "base": 10,
    "perPanel": 3.6,
    "cubes": [
@@ -167,7 +167,8 @@
      "add": 29
     }
    ],
-   "ivaNote": "IVA inclusa · kit di fissaggio a muro incluso"
+   "ivaNote": "IVA inclusa · kit di fissaggio a muro incluso",
+   "add": 50
   },
   "furniture": {
    "customPerc": 15,
@@ -199,48 +200,6 @@
    ],
    "bundlePerc": 12,
    "pairs": {
-    "a-ribalta": [
-     [
-      "Ingresso completo",
-      [
-       "consolle-ingresso"
-      ]
-     ],
-     [
-      "Ingresso con seduta",
-      [
-       "panca-seduta-cuscino"
-      ]
-     ]
-    ],
-    "con-ante": [
-     [
-      "Ingresso completo",
-      [
-       "consolle-ingresso"
-      ]
-     ],
-     [
-      "Ingresso con seduta",
-      [
-       "panca-vani-giorno"
-      ]
-     ]
-    ],
-    "a-giorno": [
-     [
-      "Ingresso completo",
-      [
-       "consolle-ingresso"
-      ]
-     ],
-     [
-      "Ingresso con seduta",
-      [
-       "panca-seduta-cuscino"
-      ]
-     ]
-    ],
     "con-seduta": [
      [
       "Ingresso completo",
@@ -279,12 +238,6 @@
     ],
     "madie-credenze": [
      [
-      "Sala da pranzo",
-      [
-       "tavolo-rovere-160"
-      ]
-     ],
-     [
       "Soggiorno",
       [
        "mobile-tv-basso-180"
@@ -311,12 +264,6 @@
       [
        "scarpiera-ribalta-2"
       ]
-     ],
-     [
-      "Ingresso con seduta",
-      [
-       "panca-seduta-cuscino"
-      ]
      ]
     ],
     "mobili-bagno": [
@@ -324,26 +271,6 @@
       "Bagno completo",
       [
        "colonna-bagno"
-      ]
-     ],
-     [
-      "Bagno + lavanderia",
-      [
-       "mobile-lavatrice"
-      ]
-     ]
-    ],
-    "tavoli-completi": [
-     [
-      "Sala da pranzo",
-      [
-       "credenza-2-ante"
-      ]
-     ],
-     [
-      "Pranzo e soggiorno",
-      [
-       "madia-3-ante"
       ]
      ]
     ],
@@ -3170,13 +3097,13 @@
      "w": 80,
      "d": 24,
      "h": 104,
-     "price": 139
+     "price": 189
     },
     {
      "w": 100,
      "d": 24,
      "h": 104,
-     "price": 169
+     "price": 219
     }
    ],
    "finishes": [
@@ -3226,13 +3153,13 @@
      "w": 80,
      "d": 24,
      "h": 150,
-     "price": 189
+     "price": 239
     },
     {
      "w": 100,
      "d": 24,
      "h": 150,
-     "price": 229
+     "price": 279
     }
    ],
    "finishes": [
@@ -3282,7 +3209,7 @@
      "w": 60,
      "d": 17,
      "h": 120,
-     "price": 159
+     "price": 209
     }
    ],
    "finishes": [
@@ -3331,13 +3258,13 @@
      "w": 90,
      "d": 36,
      "h": 110,
-     "price": 249
+     "price": 299
     },
     {
      "w": 120,
      "d": 36,
      "h": 110,
-     "price": 299
+     "price": 349
     }
    ],
    "finishes": [
@@ -3387,7 +3314,7 @@
      "w": 50,
      "d": 36,
      "h": 180,
-     "price": 269
+     "price": 319
     }
    ],
    "finishes": [
@@ -3419,116 +3346,6 @@
    "rank": 14
   },
   {
-   "id": "panca-seduta-cuscino",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-seduta",
-   "subs": [
-    "con-seduta"
-   ],
-   "name": "Panca Sile con cuscino",
-   "desc": "Seduta imbottita e due vani a giorno per le scarpe di tutti i giorni",
-   "img": "/shop/img/prodotti/panca-seduta-cuscino.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_435ada92-5348-4d96-a848-2f764825788b_min.webp",
-   "imgLg": "/shop/img/prodotti/panca-seduta-cuscino.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_435ada92-5348-4d96-a848-2f764825788b.png",
-   "std": [
-    {
-     "w": 100,
-     "d": 38,
-     "h": 48,
-     "price": 179
-    },
-    {
-     "w": 120,
-     "d": 38,
-     "h": 48,
-     "price": 199
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Bianco opaco"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     60,
-     150
-    ],
-    "d": [
-     23,
-     53
-    ],
-    "h": [
-     29,
-     67
-    ]
-   },
-   "badge": "Novità",
-   "tags": [
-    "scarpiere",
-    "con-seduta",
-    "panca sile con cuscino"
-   ],
-   "rank": 15
-  },
-  {
-   "id": "panca-vani-giorno",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-seduta",
-   "subs": [
-    "con-seduta"
-   ],
-   "name": "Panca Piave a giorno",
-   "desc": "Panca in legno con doppio ripiano per scarpe, struttura robusta",
-   "img": "/shop/img/prodotti/panca-vani-giorno.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_6fe1f332-fd2d-4d5e-b782-4b56591ba311_min.webp",
-   "imgLg": "/shop/img/prodotti/panca-vani-giorno.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_6fe1f332-fd2d-4d5e-b782-4b56591ba311.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 32,
-     "h": 46,
-     "price": 129
-    },
-    {
-     "w": 110,
-     "d": 32,
-     "h": 46,
-     "price": 149
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Noce canaletto"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     19,
-     45
-    ],
-    "h": [
-     28,
-     64
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "con-seduta",
-    "panca piave a giorno"
-   ],
-   "rank": 16
-  },
-  {
    "id": "comodino-2-cassetti",
    "type": "furniture",
    "cat": "mobiletti",
@@ -3547,7 +3364,7 @@
      "w": 45,
      "d": 38,
      "h": 50,
-     "price": 99
+     "price": 149
     }
    ],
    "finishes": [
@@ -3597,7 +3414,7 @@
      "w": 40,
      "d": 30,
      "h": 28,
-     "price": 79
+     "price": 129
     }
    ],
    "finishes": [
@@ -3629,55 +3446,6 @@
    "rank": 18
   },
   {
-   "id": "comodino-vano-giorno",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "comodini",
-   "subs": [
-    "comodini"
-   ],
-   "name": "Comodino Pieve",
-   "desc": "Cassetto e vano a giorno, spigoli arrotondati",
-   "img": "/shop/img/prodotti/comodino-vano-giorno.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_051ee864-30ee-4334-88ee-c112fb13c78d_min.webp",
-   "imgLg": "/shop/img/prodotti/comodino-vano-giorno.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140928_051ee864-30ee-4334-88ee-c112fb13c78d.png",
-   "std": [
-    {
-     "w": 48,
-     "d": 40,
-     "h": 55,
-     "price": 119
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Noce canaletto"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     29,
-     72
-    ],
-    "d": [
-     24,
-     56
-    ],
-    "h": [
-     33,
-     77
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "mobiletti",
-    "comodini",
-    "comodino pieve"
-   ],
-   "rank": 19
-  },
-  {
    "id": "comodino-laccato",
    "type": "furniture",
    "cat": "mobiletti",
@@ -3696,7 +3464,7 @@
      "w": 50,
      "d": 40,
      "h": 60,
-     "price": 169
+     "price": 219
     }
    ],
    "finishes": [
@@ -3744,13 +3512,13 @@
      "w": 180,
      "d": 42,
      "h": 48,
-     "price": 279
+     "price": 329
     },
     {
      "w": 220,
      "d": 42,
      "h": 48,
-     "price": 329
+     "price": 379
     }
    ],
    "finishes": [
@@ -3800,13 +3568,13 @@
      "w": 160,
      "d": 35,
      "h": 30,
-     "price": 219
+     "price": 269
     },
     {
      "w": 200,
      "d": 35,
      "h": 30,
-     "price": 259
+     "price": 309
     }
    ],
    "finishes": [
@@ -3856,7 +3624,7 @@
      "w": 280,
      "d": 42,
      "h": 200,
-     "price": 790
+     "price": 840
     }
    ],
    "finishes": [
@@ -3905,7 +3673,7 @@
      "w": 200,
      "d": 45,
      "h": 50,
-     "price": 349
+     "price": 399
     }
    ],
    "finishes": [
@@ -3954,13 +3722,13 @@
      "w": 180,
      "d": 45,
      "h": 80,
-     "price": 429
+     "price": 479
     },
     {
      "w": 210,
      "d": 45,
      "h": 80,
-     "price": 489
+     "price": 539
     }
    ],
    "finishes": [
@@ -4010,7 +3778,7 @@
      "w": 120,
      "d": 45,
      "h": 80,
-     "price": 299
+     "price": 349
     }
    ],
    "finishes": [
@@ -4060,7 +3828,7 @@
      "w": 160,
      "d": 45,
      "h": 75,
-     "price": 589
+     "price": 639
     }
    ],
    "finishes": [
@@ -4091,105 +3859,6 @@
    "rank": 27
   },
   {
-   "id": "credenza-vetrina",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "madie-credenze",
-   "subs": [
-    "madie-credenze"
-   ],
-   "name": "Credenza Alta Vetrina",
-   "desc": "Vetrina in vetro temperato sopra, due ante sotto",
-   "img": "/shop/img/prodotti/credenza-vetrina.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141023_3476b89f-535e-4ef1-848b-2479cfa39bfb_min.webp",
-   "imgLg": "/shop/img/prodotti/credenza-vetrina.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141023_3476b89f-535e-4ef1-848b-2479cfa39bfb.png",
-   "std": [
-    {
-     "w": 100,
-     "d": 42,
-     "h": 180,
-     "price": 489
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     60,
-     150
-    ],
-    "d": [
-     25,
-     59
-    ],
-    "h": [
-     108,
-     252
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "mobiletti",
-    "madie-credenze",
-    "credenza alta vetrina"
-   ],
-   "rank": 28
-  },
-  {
-   "id": "consolle-ingresso",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "mobili-ingresso",
-   "subs": [
-    "mobili-ingresso"
-   ],
-   "name": "Consolle Varco",
-   "desc": "Consolle con cassetto, profondità 30 cm",
-   "img": "/shop/img/prodotti/consolle-ingresso.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_3c4595ab-202b-4df6-92bf-bbe58900a921_min.webp",
-   "imgLg": "/shop/img/prodotti/consolle-ingresso.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141022_3c4595ab-202b-4df6-92bf-bbe58900a921.png",
-   "std": [
-    {
-     "w": 100,
-     "d": 30,
-     "h": 80,
-     "price": 139
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Noce canaletto",
-    "Bianco opaco"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     60,
-     150
-    ],
-    "d": [
-     18,
-     42
-    ],
-    "h": [
-     48,
-     112
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "mobiletti",
-    "mobili-ingresso",
-    "consolle varco"
-   ],
-   "rank": 29
-  },
-  {
    "id": "ingresso-specchio",
    "type": "furniture",
    "cat": "mobiletti",
@@ -4208,7 +3877,7 @@
      "w": 90,
      "d": 35,
      "h": 190,
-     "price": 249
+     "price": 299
     }
    ],
    "finishes": [
@@ -4257,7 +3926,7 @@
      "w": 80,
      "d": 35,
      "h": 85,
-     "price": 199
+     "price": 249
     }
    ],
    "finishes": [
@@ -4289,111 +3958,6 @@
    "rank": 31
   },
   {
-   "id": "bagno-sospeso-80",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "mobili-bagno",
-   "subs": [
-    "mobili-bagno"
-   ],
-   "name": "Mobile Bagno Onda 80",
-   "desc": "Sospeso con lavabo in ceramica e due cassetti",
-   "img": "/shop/img/prodotti/bagno-sospeso-80.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_231e334d-a752-4aa1-8e21-c4d3fc067e6d_min.webp",
-   "imgLg": "/shop/img/prodotti/bagno-sospeso-80.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_231e334d-a752-4aa1-8e21-c4d3fc067e6d.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 46,
-     "h": 50,
-     "price": 419
-    },
-    {
-     "w": 100,
-     "d": 46,
-     "h": 50,
-     "price": 479
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Bianco opaco",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     28,
-     64
-    ],
-    "h": [
-     30,
-     70
-    ]
-   },
-   "badge": "Più venduto",
-   "tags": [
-    "mobiletti",
-    "mobili-bagno",
-    "mobile bagno onda 80"
-   ],
-   "rank": 0
-  },
-  {
-   "id": "bagno-60-cassetti",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "mobili-bagno",
-   "subs": [
-    "mobili-bagno"
-   ],
-   "name": "Mobile Bagno Rio 60",
-   "desc": "Compatto, per bagni piccoli e di servizio",
-   "img": "/shop/img/prodotti/bagno-60-cassetti.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141045_ab840096-0a58-4b54-9948-cd09aa4cc951_min.webp",
-   "imgLg": "/shop/img/prodotti/bagno-60-cassetti.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141045_ab840096-0a58-4b54-9948-cd09aa4cc951.png",
-   "std": [
-    {
-     "w": 60,
-     "d": 40,
-     "h": 50,
-     "price": 319
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     36,
-     90
-    ],
-    "d": [
-     24,
-     56
-    ],
-    "h": [
-     30,
-     70
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "mobiletti",
-    "mobili-bagno",
-    "mobile bagno rio 60"
-   ],
-   "rank": 33
-  },
-  {
    "id": "colonna-bagno",
    "type": "furniture",
    "cat": "mobiletti",
@@ -4412,7 +3976,7 @@
      "w": 35,
      "d": 30,
      "h": 160,
-     "price": 179
+     "price": 229
     }
    ],
    "finishes": [
@@ -4444,319 +4008,6 @@
    "rank": 34
   },
   {
-   "id": "mobile-lavatrice",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "mobili-bagno",
-   "subs": [
-    "mobili-bagno"
-   ],
-   "name": "Mobile Lavatrice Bucato",
-   "desc": "Copre la lavatrice, con lavatoio e pensile",
-   "img": "/shop/img/prodotti/mobile-lavatrice.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_613ffe14-f7a8-4956-af94-a8f24bea280f_min.webp",
-   "imgLg": "/shop/img/prodotti/mobile-lavatrice.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_613ffe14-f7a8-4956-af94-a8f24bea280f.png",
-   "std": [
-    {
-     "w": 70,
-     "d": 60,
-     "h": 195,
-     "price": 389
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     42,
-     105
-    ],
-    "d": [
-     36,
-     84
-    ],
-    "h": [
-     117,
-     273
-    ]
-   },
-   "badge": "Su misura",
-   "tags": [
-    "mobiletti",
-    "mobili-bagno",
-    "mobile lavatrice bucato"
-   ],
-   "rank": 35
-  },
-  {
-   "id": "tavolo-rovere-160",
-   "type": "furniture",
-   "cat": "tavoli",
-   "sub": "tavoli-completi",
-   "subs": [
-    "tavoli-completi"
-   ],
-   "name": "Tavolo Agorà rovere",
-   "desc": "Piano in rovere da 30 mm, gambe in legno massello",
-   "img": "/shop/img/prodotti/tavolo-rovere-160.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141108_8df23d4f-81c5-44c1-8332-aeedd6d24f25_min.webp",
-   "imgLg": "/shop/img/prodotti/tavolo-rovere-160.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141108_8df23d4f-81c5-44c1-8332-aeedd6d24f25.png",
-   "std": [
-    {
-     "w": 160,
-     "d": 90,
-     "h": 75,
-     "price": 429
-    },
-    {
-     "w": 200,
-     "d": 100,
-     "h": 75,
-     "price": 519
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Noce canaletto"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     96,
-     240
-    ],
-    "d": [
-     54,
-     126
-    ],
-    "h": [
-     45,
-     105
-    ]
-   },
-   "badge": "Più venduto",
-   "tags": [
-    "tavoli",
-    "tavoli-completi",
-    "tavolo agorà rovere"
-   ],
-   "rank": 0
-  },
-  {
-   "id": "tavolo-allungabile",
-   "type": "furniture",
-   "cat": "tavoli",
-   "sub": "tavoli-completi",
-   "subs": [
-    "tavoli-completi"
-   ],
-   "name": "Tavolo Convivio allungabile",
-   "desc": "Da 140 a 190 cm con prolunga a scomparsa",
-   "img": "/shop/img/prodotti/tavolo-allungabile.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_8d66cd34-39d3-4803-94e1-c5a8a4ed2a3e_min.webp",
-   "imgLg": "/shop/img/prodotti/tavolo-allungabile.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141109_8d66cd34-39d3-4803-94e1-c5a8a4ed2a3e.png",
-   "std": [
-    {
-     "w": 140,
-     "d": 90,
-     "h": 76,
-     "price": 489
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     84,
-     210
-    ],
-    "d": [
-     54,
-     126
-    ],
-    "h": [
-     46,
-     106
-    ]
-   },
-   "badge": "Allungabile",
-   "tags": [
-    "tavoli",
-    "tavoli-completi",
-    "tavolo convivio allungabile"
-   ],
-   "rank": 37
-  },
-  {
-   "id": "tavolo-rotondo-120",
-   "type": "furniture",
-   "cat": "tavoli",
-   "sub": "tavoli-completi",
-   "subs": [
-    "tavoli-completi"
-   ],
-   "name": "Tavolo Tondo Cerchio",
-   "desc": "Ø 120 cm, basamento centrale, ideale per cucine",
-   "img": "/shop/img/prodotti/tavolo-rotondo-120.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141130_fc93f84b-8e35-4e57-b539-1c2c74adb160_min.webp",
-   "imgLg": "/shop/img/prodotti/tavolo-rotondo-120.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141130_fc93f84b-8e35-4e57-b539-1c2c74adb160.png",
-   "std": [
-    {
-     "w": 120,
-     "d": 120,
-     "h": 75,
-     "price": 379
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Bianco opaco",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     72,
-     180
-    ],
-    "d": [
-     72,
-     168
-    ],
-    "h": [
-     45,
-     105
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "tavoli",
-    "tavoli-completi",
-    "tavolo tondo cerchio"
-   ],
-   "rank": 38
-  },
-  {
-   "id": "tavolo-laccato-metallo",
-   "type": "furniture",
-   "cat": "tavoli",
-   "sub": "tavoli-completi",
-   "subs": [
-    "tavoli-completi"
-   ],
-   "name": "Tavolo Ferro laccato",
-   "desc": "Piano laccato RAL, gambe in metallo verniciato nero",
-   "img": "/shop/img/prodotti/tavolo-laccato-metallo.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_c3763cad-f0ee-41ec-83e1-30d84909d86b_min.webp",
-   "imgLg": "/shop/img/prodotti/tavolo-laccato-metallo.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_c3763cad-f0ee-41ec-83e1-30d84909d86b.png",
-   "std": [
-    {
-     "w": 180,
-     "d": 90,
-     "h": 75,
-     "price": 559
-    }
-   ],
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     108,
-     270
-    ],
-    "d": [
-     54,
-     126
-    ],
-    "h": [
-     45,
-     105
-    ]
-   },
-   "badge": "Colore a scelta",
-   "tags": [
-    "tavoli",
-    "tavoli-completi",
-    "tavolo ferro laccato"
-   ],
-   "rank": 39
-  },
-  {
-   "id": "top-rovere-massello",
-   "type": "furniture",
-   "cat": "tavoli",
-   "sub": "top-per-tavoli",
-   "subs": [
-    "top-per-tavoli"
-   ],
-   "name": "Top Rovere lamellare 40",
-   "desc": "Piano in rovere lamellare 40 mm, oliato, tagliato su misura",
-   "img": "/shop/img/prodotti/top-rovere-massello.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_fe03ef10-8b70-40cf-80df-c1e633a23606_min.webp",
-   "imgLg": "/shop/img/prodotti/top-rovere-massello.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141129_fe03ef10-8b70-40cf-80df-c1e633a23606.png",
-   "std": [
-    {
-     "w": 120,
-     "d": 80,
-     "h": 4,
-     "price": 229
-    },
-    {
-     "w": 160,
-     "d": 90,
-     "h": 4,
-     "price": 299
-    },
-    {
-     "w": 200,
-     "d": 100,
-     "h": 4,
-     "price": 379
-    }
-   ],
-   "finishes": [
-    "Rovere oliato",
-    "Rovere naturale"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     72,
-     180
-    ],
-    "d": [
-     48,
-     112
-    ],
-    "h": [
-     2,
-     6
-    ]
-   },
-   "badge": "Al centimetro",
-   "tags": [
-    "tavoli",
-    "top-per-tavoli",
-    "top rovere lamellare 40"
-   ],
-   "rank": 40
-  },
-  {
    "id": "top-laminato-hpl",
    "type": "furniture",
    "cat": "tavoli",
@@ -4775,19 +4026,19 @@
      "w": 120,
      "d": 80,
      "h": 3,
-     "price": 129
+     "price": 179
     },
     {
      "w": 160,
      "d": 80,
      "h": 3,
-     "price": 159
+     "price": 209
     },
     {
      "w": 180,
      "d": 90,
      "h": 3,
-     "price": 189
+     "price": 239
     }
    ],
    "finishes": [
@@ -4838,13 +4089,13 @@
      "w": 100,
      "d": 100,
      "h": 3,
-     "price": 189
+     "price": 239
     },
     {
      "w": 120,
      "d": 120,
      "h": 3,
-     "price": 229
+     "price": 279
     }
    ],
    "finishes": [
@@ -4892,7 +4143,7 @@
      "w": 52,
      "d": 18,
      "h": 39,
-     "price": 49
+     "price": 99
     }
    ],
    "finishes": [
@@ -4942,7 +4193,7 @@
      "w": 49,
      "d": 28,
      "h": 93,
-     "price": 59
+     "price": 109
     }
    ],
    "finishes": [
@@ -4992,7 +4243,7 @@
      "w": 49,
      "d": 28,
      "h": 135,
-     "price": 79
+     "price": 129
     }
    ],
    "finishes": [
@@ -5042,13 +4293,13 @@
      "w": 96,
      "d": 17,
      "h": 90,
-     "price": 149
+     "price": 199
     },
     {
      "w": 120,
      "d": 17,
      "h": 90,
-     "price": 179
+     "price": 229
     }
    ],
    "finishes": [
@@ -5079,55 +4330,6 @@
    "rank": 113
   },
   {
-   "id": "scarpiera-vetro-scorrevole",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-ante",
-   "subs": [
-    "con-ante"
-   ],
-   "name": "Scarpiera Brina ante scorrevoli",
-   "desc": "Ante scorrevoli in vetro satinato, gambe in metallo, ripiani regolabili",
-   "img": "/shop/img/prodotti/scarpiera-vetro-scorrevole.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_6cf0c575-037d-4ed9-9d6c-f17507ff672b_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-vetro-scorrevole.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_6cf0c575-037d-4ed9-9d6c-f17507ff672b.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 35,
-     "h": 102,
-     "price": 139
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     21,
-     49
-    ],
-    "h": [
-     61,
-     143
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "con-ante",
-    "scarpiera brina ante scorrevoli"
-   ],
-   "rank": 114
-  },
-  {
    "id": "panca-ante-scorrevoli",
    "type": "furniture",
    "cat": "scarpiere",
@@ -5146,7 +4348,7 @@
      "w": 100,
      "d": 37,
      "h": 52,
-     "price": 129
+     "price": 179
     }
    ],
    "finishes": [
@@ -5195,13 +4397,13 @@
      "w": 61,
      "d": 30,
      "h": 130,
-     "price": 99
+     "price": 149
     },
     {
      "w": 91,
      "d": 30,
      "h": 130,
-     "price": 129
+     "price": 179
     }
    ],
    "finishes": [
@@ -5231,59 +4433,6 @@
     "scarpiera vista a giorno"
    ],
    "rank": 116
-  },
-  {
-   "id": "top-effetto-pietra",
-   "type": "furniture",
-   "cat": "tavoli",
-   "sub": "top-per-tavoli",
-   "subs": [
-    "top-per-tavoli"
-   ],
-   "name": "Top Pietra con bordo legno",
-   "desc": "Piano effetto pietra con bordo perimetrale in legno massello",
-   "img": "/assets/componenti/05.jpg",
-   "imgLg": "/assets/componenti/05.jpg",
-   "std": [
-    {
-     "w": 140,
-     "d": 80,
-     "h": 4,
-     "price": 289
-    },
-    {
-     "w": 180,
-     "d": 90,
-     "h": 4,
-     "price": 359
-    }
-   ],
-   "finishes": [
-    "Pietra grigia/Rovere",
-    "Pietra chiara/Noce"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     60,
-     280
-    ],
-    "d": [
-     50,
-     120
-    ],
-    "h": [
-     2,
-     6
-    ]
-   },
-   "badge": "Prodotto da noi",
-   "tags": [
-    "top",
-    "pietra",
-    "tavoli"
-   ],
-   "rank": 1
   },
   {
    "id": "libreria-alveare-2x4",

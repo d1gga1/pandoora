@@ -131,7 +131,7 @@
   function cubeQuote(p,c){
     var K=PR.cube,lines=[],L=(c.cols+1)*c.rows+(c.rows+1)*c.cols;
     var fp=(K.finishPerc[c.fin]||0);
-    var fr=r9((K.base+K.perPanel*L)*Math.pow(c.cube/33,1.2)*Math.pow(c.depth/39,.5)*(1+fp/100));
+    var fr=r9((K.base+K.perPanel*L)*Math.pow(c.cube/33,1.2)*Math.pow(c.depth/39,.5)*(1+fp/100))+(K.add||0);
     var D=cubeDims(c);
     lines.push(['Struttura '+c.cols+'×'+c.rows+' vani da '+c.cube+' cm · '+c.fin+(c.fin==='Laccato RAL'?' '+(c.ral||''):''),fr]);
     var cnt={};(c.cells||[]).forEach(function(x){if(x&&x!=='vuoto')cnt[x]=(cnt[x]||0)+1});
@@ -1249,7 +1249,7 @@
       CAT=r[0];P=r[1].products||[];PR=r[1].pricing;
       initSearch();
       var pg=document.body.dataset.page;
-      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else if(pg==='nl-thanks')initThanks();else if(pg!=='account')initHome();
+      if(pg==='cat')initCat();else if(pg==='product')initProductPage();else if(pg==='nl-thanks')initThanks();else if(pg!=='account'&&pg!=='info')initHome();
       var pid=new URLSearchParams(location.search).get('p');if(pid&&byId(pid)){location.replace(pURL(byId(pid)));return}
       if(pg!=='account')initNL();
     }).catch(function(err){console.error(err);var g=$('#s-grid');if(g)g.innerHTML=emptyHTML('')});
