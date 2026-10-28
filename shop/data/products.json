@@ -127,9 +127,9 @@
    "_servizi": "Posa e trasporto sono compresi solo in Veneto e FVG. Solo consegna: -150 € (fuori VE/FVG spedizione a preventivo). Ritiro in sede e montaggio del cliente: -200 €."
   },
   "cube": {
-   "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura + add (supplemento fisso 50 € sulla struttura)",
-   "base": 10,
-   "perPanel": 3.6,
+   "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura + add (supplemento fisso 60 € sulla struttura)",
+   "base": 12.5,
+   "perPanel": 4.5,
    "cubes": [
     25,
     33,
@@ -156,22 +156,22 @@
     {
      "id": "anta",
      "label": "Anta",
-     "add": 25
+     "add": 31
     },
     {
      "id": "cassetti",
      "label": "2 cassetti",
-     "add": 39
+     "add": 49
     },
     {
      "id": "ripiano",
      "label": "Ripiano intermedio",
-     "add": 9
+     "add": 11
     },
     {
      "id": "cesto",
      "label": "Cesto in tessuto",
-     "add": 15
+     "add": 19
     }
    ],
    "bases": [
@@ -183,16 +183,16 @@
     {
      "id": "zoccolo",
      "label": "Zoccolo",
-     "perCol": 14
+     "perCol": 18
     },
     {
      "id": "gambe",
      "label": "Gambe in metallo",
-     "add": 29
+     "add": 36
     }
    ],
    "ivaNote": "IVA inclusa · kit di fissaggio a muro incluso",
-   "add": 50
+   "add": 60
   },
   "furniture": {
    "customPerc": 15,
@@ -3121,13 +3121,13 @@
      "w": 80,
      "d": 24,
      "h": 104,
-     "price": 189
+     "price": 239
     },
     {
      "w": 100,
      "d": 24,
      "h": 104,
-     "price": 219
+     "price": 279
     }
    ],
    "finishes": [
@@ -3178,13 +3178,13 @@
      "w": 80,
      "d": 24,
      "h": 150,
-     "price": 239
+     "price": 299
     },
     {
      "w": 100,
      "d": 24,
      "h": 150,
-     "price": 279
+     "price": 349
     }
    ],
    "finishes": [
@@ -3235,7 +3235,7 @@
      "w": 60,
      "d": 17,
      "h": 120,
-     "price": 209
+     "price": 269
     }
    ],
    "finishes": [
@@ -3285,13 +3285,13 @@
      "w": 90,
      "d": 36,
      "h": 110,
-     "price": 299
+     "price": 379
     },
     {
      "w": 120,
      "d": 36,
      "h": 110,
-     "price": 349
+     "price": 439
     }
    ],
    "finishes": [
@@ -3342,7 +3342,7 @@
      "w": 50,
      "d": 36,
      "h": 180,
-     "price": 319
+     "price": 399
     }
    ],
    "finishes": [
@@ -3393,7 +3393,7 @@
      "w": 45,
      "d": 38,
      "h": 50,
-     "price": 149
+     "price": 189
     }
    ],
    "finishes": [
@@ -3444,7 +3444,7 @@
      "w": 40,
      "d": 30,
      "h": 28,
-     "price": 129
+     "price": 169
     }
    ],
    "finishes": [
@@ -3495,7 +3495,7 @@
      "w": 50,
      "d": 40,
      "h": 60,
-     "price": 219
+     "price": 279
     }
    ],
    "finishes": [
@@ -3544,13 +3544,13 @@
      "w": 180,
      "d": 42,
      "h": 48,
-     "price": 329
+     "price": 419
     },
     {
      "w": 220,
      "d": 42,
      "h": 48,
-     "price": 379
+     "price": 479
     }
    ],
    "finishes": [
@@ -3601,13 +3601,13 @@
      "w": 160,
      "d": 35,
      "h": 30,
-     "price": 269
+     "price": 339
     },
     {
      "w": 200,
      "d": 35,
      "h": 30,
-     "price": 309
+     "price": 389
     }
    ],
    "finishes": [
@@ -3658,7 +3658,7 @@
      "w": 280,
      "d": 42,
      "h": 200,
-     "price": 840
+     "price": 1049
     }
    ],
    "finishes": [
@@ -3708,7 +3708,7 @@
      "w": 200,
      "d": 45,
      "h": 50,
-     "price": 399
+     "price": 499
     }
    ],
    "finishes": [
@@ -3758,13 +3758,13 @@
      "w": 180,
      "d": 45,
      "h": 80,
-     "price": 479
+     "price": 599
     },
     {
      "w": 210,
      "d": 45,
      "h": 80,
-     "price": 539
+     "price": 679
     }
    ],
    "finishes": [
@@ -3815,7 +3815,7 @@
      "w": 120,
      "d": 45,
      "h": 80,
-     "price": 349
+     "price": 439
     }
    ],
    "finishes": [
@@ -3866,7 +3866,7 @@
      "w": 160,
      "d": 45,
      "h": 75,
-     "price": 639
+     "price": 799
     }
    ],
    "finishes": [
@@ -3916,7 +3916,7 @@
      "w": 90,
      "d": 35,
      "h": 190,
-     "price": 299
+     "price": 379
     }
    ],
    "finishes": [
@@ -3966,7 +3966,7 @@
      "w": 80,
      "d": 35,
      "h": 85,
-     "price": 249
+     "price": 319
     }
    ],
    "finishes": [
@@ -4017,7 +4017,7 @@
      "w": 35,
      "d": 30,
      "h": 160,
-     "price": 229
+     "price": 289
     }
    ],
    "finishes": [
@@ -4068,19 +4068,19 @@
      "w": 120,
      "d": 80,
      "h": 3,
-     "price": 179
+     "price": 229
     },
     {
      "w": 160,
      "d": 80,
      "h": 3,
-     "price": 209
+     "price": 269
     },
     {
      "w": 180,
      "d": 90,
      "h": 3,
-     "price": 239
+     "price": 299
     }
    ],
    "finishes": [
@@ -4132,13 +4132,13 @@
      "w": 100,
      "d": 100,
      "h": 3,
-     "price": 239
+     "price": 299
     },
     {
      "w": 120,
      "d": 120,
      "h": 3,
-     "price": 279
+     "price": 349
     }
    ],
    "finishes": [
@@ -4187,7 +4187,7 @@
      "w": 52,
      "d": 18,
      "h": 39,
-     "price": 99
+     "price": 129
     }
    ],
    "finishes": [
@@ -4238,7 +4238,7 @@
      "w": 49,
      "d": 28,
      "h": 93,
-     "price": 109
+     "price": 139
     }
    ],
    "finishes": [
@@ -4289,7 +4289,7 @@
      "w": 49,
      "d": 28,
      "h": 135,
-     "price": 129
+     "price": 169
     }
    ],
    "finishes": [
@@ -4340,13 +4340,13 @@
      "w": 96,
      "d": 17,
      "h": 90,
-     "price": 199
+     "price": 249
     },
     {
      "w": 120,
      "d": 17,
      "h": 90,
-     "price": 229
+     "price": 289
     }
    ],
    "finishes": [
@@ -4396,7 +4396,7 @@
      "w": 100,
      "d": 37,
      "h": 52,
-     "price": 179
+     "price": 229
     }
    ],
    "finishes": [
@@ -4446,13 +4446,13 @@
      "w": 61,
      "d": 30,
      "h": 130,
-     "price": 149
+     "price": 189
     },
     {
      "w": 91,
      "d": 30,
      "h": 130,
-     "price": 179
+     "price": 229
     }
    ],
    "finishes": [
@@ -4743,7 +4743,7 @@
      "w": 80,
      "d": 35,
      "h": 117,
-     "price": 139
+     "price": 179
     }
    ],
    "finishes": [
@@ -4794,7 +4794,7 @@
      "w": 90,
      "d": 52,
      "h": 48,
-     "price": 129
+     "price": 169
     }
    ],
    "finishes": [
@@ -4844,7 +4844,7 @@
      "w": 35,
      "d": 25,
      "h": 35,
-     "price": 29
+     "price": 39
     }
    ],
    "finishes": [
@@ -4895,7 +4895,7 @@
      "w": 140,
      "d": 47,
      "h": 75,
-     "price": 299
+     "price": 379
     }
    ],
    "finishes": [
@@ -4946,7 +4946,7 @@
      "w": 35,
      "d": 40,
      "h": 49,
-     "price": 59
+     "price": 79
     }
    ],
    "finishes": [
@@ -4997,7 +4997,7 @@
      "w": 80,
      "d": 42,
      "h": 100,
-     "price": 149
+     "price": 189
     }
    ],
    "finishes": [
@@ -5048,7 +5048,7 @@
      "w": 120,
      "d": 42,
      "h": 76,
-     "price": 339
+     "price": 429
     }
    ],
    "finishes": [
@@ -5098,7 +5098,7 @@
      "w": 180,
      "d": 42,
      "h": 74,
-     "price": 329
+     "price": 419
     }
    ],
    "finishes": [
@@ -5149,7 +5149,7 @@
      "w": 120,
      "d": 42,
      "h": 74,
-     "price": 259
+     "price": 329
     }
    ],
    "finishes": [
@@ -5200,7 +5200,7 @@
      "w": 180,
      "d": 42,
      "h": 64,
-     "price": 279
+     "price": 349
     }
    ],
    "finishes": [
@@ -5251,7 +5251,7 @@
      "w": 147,
      "d": 39,
      "h": 77,
-     "price": 189
+     "price": 239
     }
    ],
    "finishes": [
@@ -5302,7 +5302,7 @@
      "w": 140,
      "d": 37,
      "h": 75,
-     "price": 229
+     "price": 289
     }
    ],
    "finishes": [
@@ -5353,7 +5353,7 @@
      "w": 60,
      "d": 57,
      "h": 181,
-     "price": 339
+     "price": 429
     }
    ],
    "finishes": [
@@ -5404,7 +5404,7 @@
      "w": 98,
      "d": 57,
      "h": 190,
-     "price": 299
+     "price": 379
     }
    ],
    "finishes": [
@@ -5454,7 +5454,7 @@
      "w": 160,
      "d": 42,
      "h": 201,
-     "price": 329
+     "price": 419
     }
    ],
    "finishes": [
@@ -5504,7 +5504,7 @@
      "w": 200,
      "d": 60,
      "h": 201,
-     "price": 549
+     "price": 689
     }
    ],
    "finishes": [
@@ -5556,7 +5556,7 @@
      "w": 250,
      "d": 60,
      "h": 236,
-     "price": 1089
+     "price": 1369
     }
    ],
    "finishes": [
@@ -5607,7 +5607,7 @@
      "w": 150,
      "d": 60,
      "h": 236,
-     "price": 569
+     "price": 719
     }
    ],
    "finishes": [
@@ -5659,7 +5659,7 @@
      "w": 200,
      "d": 66,
      "h": 236,
-     "price": 719
+     "price": 899
     }
    ],
    "finishes": [
@@ -5711,7 +5711,7 @@
      "w": 79,
      "d": 55,
      "h": 176,
-     "price": 149
+     "price": 189
     }
    ],
    "finishes": [
@@ -5761,7 +5761,7 @@
      "w": 250,
      "d": 60,
      "h": 236,
-     "price": 979
+     "price": 1229
     }
    ],
    "finishes": [
@@ -5813,7 +5813,7 @@
      "w": 80,
      "d": 62,
      "h": 201,
-     "price": 139
+     "price": 179
     }
    ],
    "finishes": [
@@ -5864,7 +5864,7 @@
      "w": 117,
      "d": 55,
      "h": 176,
-     "price": 209
+     "price": 269
     }
    ],
    "finishes": [
@@ -5914,7 +5914,7 @@
      "w": 60,
      "d": 42,
      "h": 64,
-     "price": 89
+     "price": 119
     }
    ],
    "finishes": [
@@ -5965,7 +5965,7 @@
      "w": 120,
      "d": 42,
      "h": 193,
-     "price": 759
+     "price": 949
     }
    ],
    "finishes": [
@@ -6015,7 +6015,7 @@
      "w": 77,
      "d": 39,
      "h": 147,
-     "price": 89
+     "price": 119
     }
    ],
    "finishes": [
