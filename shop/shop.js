@@ -823,7 +823,7 @@
   function initFit(){
     var box=$('#s-fit');if(!box)return;
     var w=$('#fit-w'),h=$('#fit-h'),ow=$('#fit-wo'),oh=$('#fit-ho'),pr=$('#fit-p'),pn=$('#fit-pn'),obj=$('#fit-obj'),stage=$('#fit-stage'),badge=$('#fit-badge');
-    var p=byId('madia-3-ante'),D=45,LEG=12,fin='Bianco opaco';
+    var p=byId('madia-3-ante'),D=45,LEG=0,fin='Bianco opaco';
     var FIN={'Bianco opaco':{front:'#f3f2ee',edge:'#ddd6c8',top:'#c9a273',side:'#e6e1d6',grain:'none'},
       'Rovere naturale':{front:'#c49a68',edge:'#a98458',top:'#c9a273',side:'#b58c5c',grain:'repeating-linear-gradient(90deg,rgba(90,55,20,.10) 0 2px,transparent 2px 13px)'},
       'Grigio seta':{front:'#bcb8b1',edge:'#a8a49d',top:'#c9a273',side:'#aeaaa3',grain:'none'},
