@@ -167,7 +167,7 @@ body.introing{overflow:hidden!important;height:100%}
 .hub{
   position:fixed;inset:0;
   display:grid;
-  grid-template-columns:repeat(6,1fr);
+  grid-template-columns:repeat(12,1fr);
   grid-template-rows:56vh 44vh;
   opacity:1
 }
@@ -260,7 +260,7 @@ html:not(.pd-intro) #intro{display:none!important}
 ───────────────────────────────────────── */
 
 /* 1. PANNELLI TAMBURATI — top left */
-#s1{grid-column:1/4;grid-row:1}
+#s1{grid-column:1/7;grid-row:1}
 #s1 .sec-bg{
   background:
     linear-gradient(148deg,rgba(27,17,6,.72) 0%,rgba(46,30,10,.50) 38%,rgba(32,20,8,.60) 68%,rgba(22,14,4,.75) 100%),
@@ -277,7 +277,7 @@ html:not(.pd-intro) #intro{display:none!important}
 .pan-deco i{display:block;height:2px;background:#D4A04A;border-radius:1px}
 
 /* 2. PORTE — top right */
-#s2{grid-column:4/7;grid-row:1}
+#s2{grid-column:7/13;grid-row:1}
 #s2 .sec-bg{
   background:
     linear-gradient(152deg,rgba(13,19,32,.62) 0%,rgba(17,24,32,.46) 50%,rgba(12,17,24,.68) 100%),
@@ -300,7 +300,7 @@ html:not(.pd-intro) #intro{display:none!important}
 @media(hover:hover){#s2:hover .door-deco{border-color:rgba(255,255,255,.3);transform:translateY(-58%) perspective(300px) rotateY(-18deg)}}
 @media(hover:hover){#s2:hover .door-deco::before{background:rgba(255,255,255,.5)}}
 /* 3. PAVIMENTAZIONI — bottom left */
-#s3{grid-column:1/3;grid-row:2}
+#s3{grid-column:1/4;grid-row:2}
 #s3 .sec-bg{
   background:
     linear-gradient(138deg,rgba(19,12,4,.65) 0%,rgba(32,20,8,.48) 55%,rgba(19,12,4,.68) 100%),
@@ -313,7 +313,7 @@ html:not(.pd-intro) #intro{display:none!important}
 }
 
 /* 4. COMPONENTI PER MOBILI — bottom middle */
-#s4{grid-column:3/5;grid-row:2}
+#s4{grid-column:7/10;grid-row:2}
 #s4 .sec-bg{
   background:
     radial-gradient(ellipse at 75% 25%,rgba(27,62,122,.36) 0%,transparent 55%),
@@ -333,7 +333,21 @@ html:not(.pd-intro) #intro{display:none!important}
 }
 @media(hover:hover){#s4:hover .comp-deco{opacity:.3}}
 /* 5. VERNICIATURA / LACCATURA / etc. — bottom right */
-#s5{grid-column:5/7;grid-row:2}
+#s5{grid-column:10/13;grid-row:2}
+/* 6. CERAMICA E LAVABI — bottom, next to flooring */
+#s6{grid-column:4/7;grid-row:2}
+#s6 .sec-bg{
+  background:
+    linear-gradient(135deg,rgba(4,20,22,.62) 0%,rgba(8,32,34,.42) 55%,rgba(4,20,22,.66) 100%),
+    url('/ceramica_bg.webp') center/cover no-repeat;
+}
+#s6::before{background:radial-gradient(ellipse at 30% 85%,rgba(80,200,190,.10) 0%,transparent 55%)}
+#s6 .sec-title{
+  background:linear-gradient(125deg,#7FE0D2 0%,#D8FFF8 50%,#4FB8AA 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+#s3 .sec-title,#s4 .sec-title,#s6 .sec-title{font-size:clamp(18px,2.2vw,34px)}
+
 #s5 .sec-bg{
   background:
     linear-gradient(128deg,rgba(22,9,24,.65) 0%,rgba(9,16,32,.55) 20%,rgba(14,26,20,.58) 38%,rgba(26,18,8,.60) 56%,rgba(24,10,10,.62) 74%,rgba(10,14,26,.60) 100%),
@@ -506,8 +520,8 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
   html,body{overflow-y:auto;height:auto}
   *{cursor:auto!important}
   #cur,#curRing{display:none}
-  .hub{position:relative;grid-template-columns:1fr;grid-template-rows:repeat(5,70vw);height:auto}
-  #s1,#s2,#s3,#s4,#s5{grid-column:1!important;grid-row:auto!important}
+  .hub{position:relative;grid-template-columns:1fr;grid-template-rows:repeat(6,70vw);height:auto}
+  #s1,#s2,#s3,#s4,#s5,#s6{grid-column:1!important;grid-row:auto!important}
   #hubLogo{display:none}
   #s2 .sec-inner{padding-left:46px}
   .cross{display:none}
@@ -591,7 +605,7 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
       <i style="width:34px"></i>
     </div>
     <div class="sec-inner">
-      <div class="sec-num">01 / 05</div>
+      <div class="sec-num">01 / 06</div>
       <div class="sec-title">Panneaux<br>alvéolaires</div>
       <div class="sec-subs">
         <span class="sec-sub">Structure alvéolaire</span>
@@ -611,7 +625,7 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
     <div class="sec-veil"></div>
     <div class="door-deco"></div>
     <div class="sec-inner">
-      <div class="sec-num">02 / 05</div>
+      <div class="sec-num">02 / 06</div>
       <div class="sec-title">Portes</div>
       <div class="sec-subs">
         <span class="sec-sub">33 modèles</span>
@@ -630,7 +644,7 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
     <div class="sec-bg"></div>
     <div class="sec-veil"></div>
     <div class="sec-inner">
-      <div class="sec-num">03 / 05</div>
+      <div class="sec-num">03 / 06</div>
       <div class="sec-title">Sols</div>
       <div class="sec-subs">
         <span class="sec-sub">Parquet chêne</span>
@@ -644,13 +658,32 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
     <div class="sec-cta">Découvrir<div class="sec-cta-bar"></div></div>
   </a>
 
+  <!-- 6 · CERAMICA E LAVABI -->
+  <a class="hub-sec" id="s6" href="/fr/gres-cerame-vasques-sur-mesure/">
+    <div class="sec-bg"></div>
+    <div class="sec-veil"></div>
+    <div class="sec-inner">
+      <div class="sec-num">04 / 06</div>
+      <div class="sec-title">Carrelage &amp;<br>Vasques</div>
+      <div class="sec-subs">
+        <span class="sec-sub">Grès cérame Floor Italia</span>
+        <span class="sec-sub">Effet marbre · onyx</span>
+        <span class="sec-sub">60x120 · 120x120</span>
+        <span class="sec-sub">Vasques sur mesure</span>
+        <span class="sec-sub">Showroom Milan</span>
+        <span class="sec-sub">Livraison mondiale</span>
+      </div>
+    </div>
+    <div class="sec-cta">Découvrir<div class="sec-cta-bar"></div></div>
+  </a>
+
   <!-- 4 · COMPONENTI PER MOBILI -->
   <a class="hub-sec" id="s4" href="/fr/composants-meubles/">
     <div class="sec-bg"></div>
     <div class="sec-veil"></div>
     <div class="comp-deco"></div>
     <div class="sec-inner">
-      <div class="sec-num">04 / 05</div>
+      <div class="sec-num">05 / 06</div>
       <div class="sec-title">Composants<br>pour meubles</div>
       <div class="sec-subs">
         <span class="sec-sub">Portes laquées</span>
@@ -676,7 +709,7 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
       <i style="height:48px"></i>
     </div>
     <div class="sec-inner">
-      <div class="sec-num">05 / 05</div>
+      <div class="sec-num">06 / 06</div>
       <div class="sec-title">Peinture<br>Laquage<br>Polissage</div>
       <div class="sec-subs">
         <span class="sec-sub">RAL personnalisé</span>
@@ -720,35 +753,42 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
 
     <div class="hs-grid">
       <a class="hs-card" href="/fr/panneaux-alveolaires/">
-        <span class="hs-num">01 / 05</span>
+        <span class="hs-num">01 / 06</span>
         <h3>Panneaux alvéolaires</h3>
         <p>Cadre en sapin abouté et âme alvéolaire nid d'abeille : légers à transporter, rigides à monter. Épaisseur standard 40 mm et longueurs jusqu'à 6 mètres en un seul élément. Disponibles bruts, stratifiés, ignifuges, renforcés et en version art.</p>
         <span class="hs-go">Voir les panneaux <span>→</span></span>
       </a>
 
       <a class="hs-card" href="/fr/portes/">
-        <span class="hs-num">02 / 05</span>
+        <span class="hs-num">02 / 06</span>
         <h3>Portes</h3>
         <p>33 modèles sur trois lignes — Stratifiée, Laquée et Usinée Superior — ouvrant à la française ou coulissant, dimensions de 60 à 90 × 210 cm et laquage dans toute teinte RAL. Hors format sur demande.</p>
         <span class="hs-go">Feuilleter le catalogue <span>→</span></span>
       </a>
 
       <a class="hs-card" href="/fr/parquet/">
-        <span class="hs-num">03 / 05</span>
+        <span class="hs-num">03 / 06</span>
         <h3>Sols</h3>
         <p>Parquet contrecollé trois plis en chêne, frêne, frêne olivier, noyer, noyer d'Amérique, érable, orme et mélèze. Pose à bâtons rompus, finition brossée, traitement à l'huile UV et bord vif.</p>
         <span class="hs-go">Voir les essences <span>→</span></span>
       </a>
 
+      <a class="hs-card" href="/fr/gres-cerame-vasques-sur-mesure/">
+        <span class="hs-num">04 / 06</span>
+        <h3>Grès cérame et vasques sur mesure</h3>
+        <p>Grès cérame Floor Italia effet marbre, onyx, pierre et bois pour sols et murs : 27 collections du 60x60 au 120x120, y compris antidérapant pour l’extérieur. Dans la même dalle nous réalisons vasques, plans et receveurs de douche sur mesure. Showroom près de Milan, livraison dans le monde entier.</p>
+        <span class="hs-go">Voir les collections <span>→</span></span>
+      </a>
+
       <a class="hs-card" href="/fr/composants-meubles/">
-        <span class="hs-num">04 / 05</span>
+        <span class="hs-num">05 / 06</span>
         <h3>Composants pour meubles</h3>
         <p>Façades laquées, faces de tiroir, plans de travail, côtés, boiseries, têtes de lit, cadres de lit et étagères sur mesure : plus de 200 références en 24 catégories, pensées pour qui conçoit et assemble du mobilier à la commande.</p>
         <span class="hs-go">Voir les références <span>→</span></span>
       </a>
 
       <a class="hs-card" href="/fr/laquage-bois/">
-        <span class="hs-num">05 / 05</span>
+        <span class="hs-num">06 / 06</span>
         <h3>Peinture et laquage</h3>
         <p>Toute teinte du nuancier RAL, en finition brillante, mate ou UV brillant. Nous réalisons aussi brossages et effets vintage, sur nos ouvrages ou sur des pièces fournies par le client.</p>
         <span class="hs-go">Découvrir le service <span>→</span></span>
@@ -866,6 +906,7 @@ body.introing #curRing{border-color:rgba(10,18,32,.16)}
         <a href="/fr/tarif-panneaux-alveolaires/">Fiches techniques</a>
         <a href="/fr/portes/">Portes</a>
         <a href="/fr/parquet/">Sols</a>
+        <a href="/fr/gres-cerame-vasques-sur-mesure/">Carrelage &amp; vasques</a>
         <a href="/fr/composants-meubles/">Composants</a>
         <a href="/fr/laquage-bois/">Peinture</a>
         <a href="/fr/realisations/">Projets</a>
@@ -979,6 +1020,7 @@ tl.set('#hub',   {opacity:1}, PD_INTRO ? '-=.35' : 0)
   .fromTo('#s1', {clipPath:'inset(0% 100% 100% 0%)'}, {clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.2')
   .fromTo('#s2', {clipPath:'inset(0% 0% 100% 100%)'}, {clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.82')
   .fromTo('#s3', {clipPath:'inset(100% 100% 0% 0%)'}, {clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.82')
+  .fromTo('#s6', {clipPath:'inset(100% 50%  0% 50%)'},{clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.82')
   .fromTo('#s4', {clipPath:'inset(100% 50%  0% 50%)'},{clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.82')
   .fromTo('#s5', {clipPath:'inset(100% 0%   0% 100%)'},{clipPath:'inset(0% 0% 0% 0%)', duration:.95}, '-=.82')
   // Logo
