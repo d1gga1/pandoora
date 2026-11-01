@@ -623,7 +623,8 @@ html.pd-wipe .s-wipe span{opacity:1}
 [data-split] .wd>span{display:inline-block}
 
 /* parola gigante nelle categorie */
-.s-cat-hero{position:relative;isolation:isolate}
+.s-cat-hero{position:relative;isolation:isolate;overflow-x:clip}
+@supports not (overflow:clip){.s-cat-hero{overflow-x:hidden}}
 .s-bgword{position:absolute;z-index:-1;top:-10px;right:-4vw;font:500 clamp(120px,19vw,300px)/1 var(--display);letter-spacing:-.05em;white-space:nowrap;color:transparent;-webkit-text-stroke:1.2px rgba(13,21,36,.08);pointer-events:none;user-select:none}
 
 /* rail fissato in orizzontale */

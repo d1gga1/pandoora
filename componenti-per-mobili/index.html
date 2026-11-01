@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preload" as="image" href="/componenti_bg.webp" fetchpriority="high">
 <!--SEO:START-->
 <title>Componenti per Mobili su Misura: Ante e Frontali | Pan.door.a</title>
 <meta name="description" content="Ante laccate, frontali, piani di lavoro, fianchi, boiserie e mensole su misura per l'arredo. Oltre 200 referenze in 24 categorie, conto terzi dal 1987.">
@@ -579,7 +580,7 @@ P.forEach(p => {
   el.innerHTML = `
     <div class="card-num">${p.n}</div>
     <div class="card-badge">${p.b}</div>
-    <div class="card-media"><img src="/assets/componenti/${p.n}.jpg" alt="${p.nm} su misura – ${p.d}" loading="lazy" decoding="async" width="1344" height="752" onerror="this.parentNode.remove()"></div>
+    <div class="card-media"><img src="/assets/componenti/${p.n}.webp" alt="${p.nm} su misura – ${p.d}" loading="lazy" decoding="async" width="840" height="470" onerror="this.parentNode.remove()"></div>
     <div class="card-icon">
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${p.i}</svg>
     </div>

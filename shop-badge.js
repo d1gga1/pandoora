@@ -11,6 +11,7 @@
   + '.pdshop{position:relative;display:inline-flex;flex-shrink:0;height:46px;border-radius:100px;text-decoration:none!important;color:#fff!important;'
   + 'font-family:"Manrope",system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1;white-space:nowrap;-webkit-tap-highlight-color:transparent;'
   + 'animation:pdsGlow 2.8s ease-in-out infinite;transition:transform .35s cubic-bezier(.22,.61,.36,1)}'
+  + '.topbar>.pdshop{margin-top:-6px;margin-bottom:-6px}'
   + '.topbar>.pdshop--push{margin-left:auto}@media(max-width:1080px){.topbar>.pdshop{margin-left:auto}}'
   + '.pdshop-in{position:relative;display:flex;align-items:center;gap:11px;height:100%;padding:0 18px 0 6px;border-radius:inherit;overflow:hidden;'
   + 'background:radial-gradient(120% 140% at 0% 50%,#3a1714 0%,#141b2b 46%,#0a0f1a 100%);border:1px solid rgba(255,255,255,.14)}'
