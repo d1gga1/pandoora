@@ -313,3 +313,10 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
   .pg-stat{padding:22px 10px}
   .pg-stat b{font-size:clamp(20px,6.6vw,30px);overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 }
+/* Riquadri contatti: email sempre su una riga */
+.pg-contact{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.pg-cbox>span:last-child{min-width:0}
+.pg-cbox[href^="mailto:"] .pg-cv{white-space:nowrap;word-break:normal}
+/* Pulsante secondario (es. "Chiama ora") leggibile sul box scuro finale */
+.pg-cta .pg-btn-s{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}
+.pg-cta .pg-btn-s:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.7)}
