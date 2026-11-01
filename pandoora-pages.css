@@ -297,3 +297,19 @@ body:has(.pdlang.open) .pf-wa,body:has(.pdlang.open) .pf-top-btn{opacity:0;trans
 .pg-usp li::before{content:"\2713";color:#9ccc65;font-weight:800}
 @media (max-width:600px){.pg-usp li{font-size:12.5px;padding:7px 12px}}
 .pg-usp a{color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.55)}.pg-usp a:hover{border-bottom-color:#fff}
+
+/* ── Anti-tagli (01/11/2026) ── */
+/* Menu in alto: con tante voci va a capo invece di uscire dallo schermo */
+.brand,.nav-cta{flex-shrink:0}
+@media(min-width:1081px) and (max-width:1560px){
+  .topbar{gap:14px;padding-left:26px;padding-right:26px}
+  .topnav{flex:1 1 auto;min-width:0;flex-wrap:wrap;justify-content:center;gap:6px 15px}
+  .topnav a{font-size:12px;letter-spacing:.2px}
+}
+/* Riquadri numeri: niente parole tagliate su telefono */
+.pg-stat{min-width:0}
+@media(max-width:600px){
+  .pg-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pg-stat{padding:22px 10px}
+  .pg-stat b{font-size:clamp(20px,6.6vw,30px);overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+}
