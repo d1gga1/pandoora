@@ -55,8 +55,10 @@ html[dir=rtl] .pf-menu a::after{left:auto;right:0;transform-origin:right}
 html[dir=rtl] .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 </style>
 <script src="/pd-live.js" defer></script>
+<style id="pd-a11y">:where(img[width][height]){height:auto}.pd-skip{position:absolute;left:-9999px;top:0;z-index:100000;background:#111;color:#fff;padding:12px 18px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none;border-radius:0 0 8px 0}.pd-skip:focus{left:0}</style>
 </head>
 <body>
+<a class="pd-skip" href="#main">انتقل إلى المحتوى</a>
 
 <header class="topbar scrolled" id="topbar">
   <a class="brand" href="/ar/" aria-label="Pan.door.a — الصفحة الرئيسية"><img src="/pandoora_logo.webp" alt="شعار Pan.door.a" width="140" height="38" decoding="async"></a>
@@ -71,6 +73,7 @@ html[dir=rtl] .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
   <a class="nav-cta" href="/en/request-a-quote/">اطلب عرض سعر</a>
   <button class="burger" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
+<main id="main">
 <section class="pg-hero">
   <div class="pg-hero-grid"></div><div class="pg-hero-glow"></div>
   <div class="pg-hero-inner">
@@ -107,6 +110,8 @@ html[dir=rtl] .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
   </section>
 
 </div>
+
+</main>
 
 <footer class="pf">
   <div class="pf-glow"></div>

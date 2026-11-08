@@ -103,8 +103,10 @@
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
 <script src="/pd-live.js" defer></script>
+<style id="pd-a11y">:where(img[width][height]){height:auto}.pd-skip{position:absolute;left:-9999px;top:0;z-index:100000;background:#111;color:#fff;padding:12px 18px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none;border-radius:0 0 8px 0}.pd-skip:focus{left:0}</style>
 </head>
 <body>
+<a class="pd-skip" href="#main">Ir para o conteúdo</a>
 
 <header class="topbar scrolled" id="topbar">
   <a class="brand" href="/pt/" aria-label="Pan.door.a — início"><img src="/pandoora_logo.webp" alt="Logo Pan.door.a" width="140" height="38" decoding="async"></a>
@@ -119,6 +121,7 @@
   <a class="nav-cta" href="/pt/orcamento/">Pedir orçamento</a>
   <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
+<main id="main">
 <section class="pg-hero">
   <div class="pg-hero-grid"></div><div class="pg-hero-glow"></div>
   <div class="pg-hero-inner">
@@ -139,7 +142,7 @@
 
   <section class="pg-sec" id="foto">
     <h2>As nossas portas antipânico</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px"><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.jpg" alt="Porta antipânico de duas folhas em MDF cru, para pintar" width="900" height="1208" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Porta antipânico de duas folhas em MDF cru, para pintar</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.jpg" alt="Porta antipânico de uma folha, acabamento carvalho, com chave" width="900" height="1206" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Porta antipânico de uma folha, acabamento carvalho, com chave</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.jpg" alt="Porta antipânico de duas folhas lacada a branco, integrada na parede do stand" width="900" height="1211" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Porta antipânico de duas folhas lacada a branco, integrada na parede do stand</figcaption></figure></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px"><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" alt="Porta antipânico de duas folhas em MDF cru, para pintar" width="900" height="1208" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Porta antipânico de duas folhas em MDF cru, para pintar</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" alt="Porta antipânico de uma folha, acabamento carvalho, com chave" width="900" height="1206" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Porta antipânico de uma folha, acabamento carvalho, com chave</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" alt="Porta antipânico de duas folhas lacada a branco, integrada na parede do stand" width="900" height="1211" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Porta antipânico de duas folhas lacada a branco, integrada na parede do stand</figcaption></figure></div>
   </section>
 
   <section class="pg-sec" id="versioni">
@@ -165,6 +168,8 @@
   </section>
 
 </div>
+
+</main>
 
 <footer class="pf">
   <div class="pf-glow"></div>

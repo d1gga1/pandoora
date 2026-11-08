@@ -37,8 +37,10 @@
 <link rel="stylesheet" href="/pandoora-pages.css">
 <link rel="stylesheet" href="/pd-base.css">
 <script src="/pd-live.js" defer></script>
+<style id="pd-a11y">:where(img[width][height]){height:auto}.pd-skip{position:absolute;left:-9999px;top:0;z-index:100000;background:#111;color:#fff;padding:12px 18px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none;border-radius:0 0 8px 0}.pd-skip:focus{left:0}</style>
 </head>
 <body>
+<a class="pd-skip" href="#main">Ir para o conteúdo</a>
 
 <header class="topbar scrolled" id="topbar">
   <a class="brand" href="/pt/" aria-label="Pan.door.a — início"><img src="/pandoora_logo.webp" alt="Logo Pan.door.a" width="140" height="38" decoding="async"></a>
@@ -53,6 +55,7 @@
   <a class="nav-cta" href="/pt/orcamento/">Pedir orçamento</a>
   <button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
+<main id="main">
 <section class="pg-hero">
   <div class="pg-hero-grid"></div><div class="pg-hero-glow"></div>
   <div class="pg-hero-inner">
@@ -62,6 +65,8 @@
     <div class="pg-cta-row" style="margin-top:22px"><a class="pg-btn pg-btn-p" href="/pt/">Voltar ao site</a><a class="pg-btn pg-btn-s" href="https://wa.me/393884706887" target="_blank" rel="noopener">Escreva-nos no WhatsApp</a></div>
   </div>
 </section>
+
+</main>
 
 <footer class="pf">
   <div class="pf-glow"></div>

@@ -109,8 +109,10 @@ html[lang^=zh] .pg-sec p,html[lang^=zh] .pg-sec li{line-height:1.9}
 html[lang^=zh] em{font-style:normal}
 </style>
 <script src="/pd-live.js" defer></script>
+<style id="pd-a11y">:where(img[width][height]){height:auto}.pd-skip{position:absolute;left:-9999px;top:0;z-index:100000;background:#111;color:#fff;padding:12px 18px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none;border-radius:0 0 8px 0}.pd-skip:focus{left:0}</style>
 </head>
 <body>
+<a class="pd-skip" href="#main">跳到内容</a>
 
 <header class="topbar scrolled" id="topbar">
   <a class="brand" href="/zh/" aria-label="Pan.door.a — 中文首页"><img src="/pandoora_logo.webp" alt="Pan.door.a 标志" width="140" height="38" decoding="async"></a>
@@ -125,6 +127,7 @@ html[lang^=zh] em{font-style:normal}
   <a class="nav-cta" href="mailto:ordini@pandooragroup.it?subject=%E8%AF%A2%E4%BB%B7%20-%20%E5%B1%95%E5%8F%B0%E8%9C%82%E7%AA%9D%E6%9D%BF">邮件询价</a>
   <button class="burger" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
+<main id="main">
 <section class="pg-hero">
   <div class="pg-hero-grid"></div><div class="pg-hero-glow"></div>
   <div class="pg-hero-inner">
@@ -145,7 +148,7 @@ html[lang^=zh] em{font-style:normal}
 
   <section class="pg-sec" id="foto">
     <h2>我们的推杠逃生门</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px"><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.jpg" alt="原色MDF双开推杠逃生门，可涂装" width="900" height="1208" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">原色MDF双开推杠逃生门，可涂装</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.jpg" alt="橡木纹单开推杠逃生门，带钥匙" width="900" height="1206" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">橡木纹单开推杠逃生门，带钥匙</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.jpg" alt="白色烤漆双开推杠逃生门，装于展台墙体" width="900" height="1211" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">白色烤漆双开推杠逃生门，装于展台墙体</figcaption></figure></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px"><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" alt="原色MDF双开推杠逃生门，可涂装" width="900" height="1208" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">原色MDF双开推杠逃生门，可涂装</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" alt="橡木纹单开推杠逃生门，带钥匙" width="900" height="1206" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">橡木纹单开推杠逃生门，带钥匙</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" alt="白色烤漆双开推杠逃生门，装于展台墙体" width="900" height="1211" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">白色烤漆双开推杠逃生门，装于展台墙体</figcaption></figure></div>
   </section>
 
   <section class="pg-sec" id="versioni">
@@ -171,6 +174,8 @@ html[lang^=zh] em{font-style:normal}
   </section>
 
 </div>
+
+</main>
 
 <footer class="pf">
   <div class="pf-glow"></div>

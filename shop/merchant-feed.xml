@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Feed prodotti Pandoora per Google Merchant Center, Bing Merchant e assistenti IA di shopping.
+     Generato dal JSON-LD Product delle pagine shop. Rigenerare dopo ogni cambio prezzi. -->
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+  <title>Pandoora Shop — porte e arredi prodotti in Italia</title>
+  <link>https://pandooragroup.it/shop/</link>
+  <description>Catalogo prodotti PAN.DOOR.A S.r.l., Fontanelle (TV): porte per interni, armadi, mobiletti, scarpiere, tavoli. Prezzi IVA inclusa.</description>
+  <lastBuildDate>Sun, 08 Nov 2026 11:56:53 +0000</lastBuildDate>
+  <item>
+    <g:id>armadio-brenta-150-alto</g:id>
+    <title>Armadio Brenta 150 alto</title>
+    <description>Armadio Brenta 150 alto: tre ante a tutta altezza 236 cm, asta appendiabiti e ripiani. Da 1229 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-brenta-150-alto/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-brenta-150-alto.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>1229.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-brenta-150-alto</g:mpn>
+    <g:product_type>Armadi &gt; Armadi a battente</g:product_type>
+    <g:product_width>150 cm</g:product_width>
+    <g:product_height>236 cm</g:product_height>
+    <g:product_length>60 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-brenta-200</g:id>
+    <title>Armadio Brenta 4 ante 200</title>
+    <description>Armadio Brenta 4 ante 200: quattro ante lisce, interno con aste e ripiani, altezza 201 cm. Da 1179 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-brenta-200/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-brenta-200.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>1179.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-brenta-200</g:mpn>
+    <g:product_type>Armadi &gt; Armadi a battente</g:product_type>
+    <g:product_width>200 cm</g:product_width>
+    <g:product_height>201 cm</g:product_height>
+    <g:product_length>60 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-brenta-250-attrezzato</g:id>
+    <title>Armadio Brenta 250 attrezzato</title>
+    <description>Armadio Brenta 250 attrezzato: cinque ante, interno con cassetti, ripiani e due aste: guardaroba completo. Da 2089 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-brenta-250-attrezzato/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-brenta-250-attrezzato.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>2089.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-brenta-250-attrezzato</g:mpn>
+    <g:product_type>Armadi &gt; Armadi attrezzati</g:product_type>
+    <g:product_width>250 cm</g:product_width>
+    <g:product_height>236 cm</g:product_height>
+    <g:product_length>60 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-brenta-250-grafite</g:id>
+    <title>Armadio Brenta 250 Grafite</title>
+    <description>Armadio Brenta 250 Grafite: cinque ante, interno attrezzato con cassetti e ripiani, finitura grafite. Da 2329 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-brenta-250-grafite/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-brenta-250-grafite.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>2329.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-brenta-250-grafite</g:mpn>
+    <g:product_type>Armadi &gt; Armadi attrezzati</g:product_type>
+    <g:product_width>250 cm</g:product_width>
+    <g:product_height>236 cm</g:product_height>
+    <g:product_length>60 cm</g:product_length>
+    <g:color>Grigio grafite</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-colonna-lemene-80</g:id>
+    <title>Armadio Colonna Lemene 80</title>
+    <description>Armadio Colonna Lemene 80: colonna da 80 cm a un'anta, per ingresso o camera. Da 309 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-colonna-lemene-80/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-colonna-lemene-80.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>309.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-colonna-lemene-80</g:mpn>
+    <g:product_type>Armadi &gt; Salvaspazio</g:product_type>
+    <g:product_width>80 cm</g:product_width>
+    <g:product_height>201 cm</g:product_height>
+    <g:product_length>62 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-ingresso-lemene-160</g:id>
+    <title>Armadio Ingresso Lemene 160</title>
+    <description>Armadio Ingresso Lemene 160: composizione da ingresso: due colonne ad anta stretta e un vano centrale a giorno con ripiani. Da 719 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-ingresso-lemene-160/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-ingresso-lemene-160.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>719.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-ingresso-lemene-160</g:mpn>
+    <g:product_type>Armadi &gt; Armadi attrezzati</g:product_type>
+    <g:product_width>160 cm</g:product_width>
+    <g:product_height>201 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-livenza-1-anta-3-cassetti</g:id>
+    <title>Armadio Livenza 1 anta 3 cassetti</title>
+    <description>Armadio Livenza 1 anta 3 cassetti: colonna da 60 cm: un'anta con asta appendiabiti e tre cassetti. Da 729 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-livenza-1-anta-3-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-livenza-1-anta-3-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>729.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-livenza-1-anta-3-cassetti</g:mpn>
+    <g:product_type>Armadi &gt; Salvaspazio</g:product_type>
+    <g:product_width>60 cm</g:product_width>
+    <g:product_height>181 cm</g:product_height>
+    <g:product_length>57 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-meduna-2-ante</g:id>
+    <title>Armadio Meduna 2 ante</title>
+    <description>Armadio Meduna 2 ante: armadio compatto a due ante con asta e ripiano superiore. Da 329 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-meduna-2-ante/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-meduna-2-ante.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>329.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-meduna-2-ante</g:mpn>
+    <g:product_type>Armadi &gt; Armadi a battente</g:product_type>
+    <g:product_width>79 cm</g:product_width>
+    <g:product_height>176 cm</g:product_height>
+    <g:product_length>55 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-meduna-3-ante</g:id>
+    <title>Armadio Meduna 3 ante</title>
+    <description>Armadio Meduna 3 ante: tre ante: un vano con ripiani e uno con asta appendiabiti. Da 459 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-meduna-3-ante/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-meduna-3-ante.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>459.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-meduna-3-ante</g:mpn>
+    <g:product_type>Armadi &gt; Armadi a battente</g:product_type>
+    <g:product_width>117 cm</g:product_width>
+    <g:product_height>176 cm</g:product_height>
+    <g:product_length>55 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-piave-2-ante-2-cassetti</g:id>
+    <title>Armadio Piave 2 ante 2 cassetti</title>
+    <description>Armadio Piave 2 ante 2 cassetti: due ante con asta e ripiano, due cassetti in basso, finitura rovere. Da 649 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-piave-2-ante-2-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-piave-2-ante-2-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>649.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-piave-2-ante-2-cassetti</g:mpn>
+    <g:product_type>Armadi &gt; Armadi a battente</g:product_type>
+    <g:product_width>98 cm</g:product_width>
+    <g:product_height>190 cm</g:product_height>
+    <g:product_length>57 cm</g:product_length>
+    <g:color>Rovere naturale</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>armadio-scorrevole-sile-200</g:id>
+    <title>Armadio Scorrevole Sile 200</title>
+    <description>Armadio Scorrevole Sile 200: due ante scorrevoli a tutta altezza, ideale dove non c'è spazio per aprire. Da 1529 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/armadi/armadio-scorrevole-sile-200/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/armadio-scorrevole-sile-200.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>1529.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>armadio-scorrevole-sile-200</g:mpn>
+    <g:product_type>Armadi &gt; Armadi scorrevoli</g:product_type>
+    <g:product_width>200 cm</g:product_width>
+    <g:product_height>236 cm</g:product_height>
+    <g:product_length>66 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>cassettiera-lemene-6</g:id>
+    <title>Cassettiera Lemene 6 cassetti</title>
+    <description>Cassettiera Lemene 6 cassetti: sei cassetti ampi su due colonne, guide ammortizzate e kit anti-ribaltamento. Da 649 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/cassettiera-lemene-6/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/cassettiera-lemene-6.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>649.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>cassettiera-lemene-6</g:mpn>
+    <g:product_type>Mobiletti &gt; Cassettiere</g:product_type>
+    <g:product_width>140 cm</g:product_width>
+    <g:product_height>75 cm</g:product_height>
+    <g:product_length>47 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>cassettiera-monticano-4</g:id>
+    <title>Cassettiera Monticano 4 cassetti</title>
+    <description>Cassettiera Monticano 4 cassetti: quattro cassetti profondi, apertura con gola, 80 cm di larghezza. Da 329 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/cassettiera-monticano-4/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/cassettiera-monticano-4.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>329.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>cassettiera-monticano-4</g:mpn>
+    <g:product_type>Mobiletti &gt; Cassettiere</g:product_type>
+    <g:product_width>80 cm</g:product_width>
+    <g:product_height>100 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>colonna-bagno</g:id>
+    <title>Colonna Bagno Fonte</title>
+    <description>Colonna Bagno Fonte: colonna sospesa con anta e ripiani interni. Da 499 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/colonna-bagno/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/colonna-bagno.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>499.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>colonna-bagno</g:mpn>
+    <g:product_type>Mobiletti &gt; Mobili bagno</g:product_type>
+    <g:product_width>35 cm</g:product_width>
+    <g:product_height>160 cm</g:product_height>
+    <g:product_length>30 cm</g:product_length>
+    <g:color>Rovere naturale</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>comodino-2-cassetti</g:id>
+    <title>Comodino Nodo 2 cassetti</title>
+    <description>Comodino Nodo 2 cassetti: due cassetti con guide a chiusura ammortizzata. Da 329 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/comodino-2-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/comodino-2-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>329.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>comodino-2-cassetti</g:mpn>
+    <g:product_type>Mobiletti &gt; Comodini</g:product_type>
+    <g:product_width>45 cm</g:product_width>
+    <g:product_height>50 cm</g:product_height>
+    <g:product_length>38 cm</g:product_length>
+    <g:color>Rovere naturale</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>comodino-laccato</g:id>
+    <title>Comodino Riva laccato</title>
+    <description>Comodino Riva laccato: laccato in qualsiasi tinta RAL, tre cassetti. Da 479 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/comodino-laccato/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/comodino-laccato.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>479.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>comodino-laccato</g:mpn>
+    <g:product_type>Mobiletti &gt; Comodini</g:product_type>
+    <g:product_width>50 cm</g:product_width>
+    <g:product_height>60 cm</g:product_height>
+    <g:product_length>40 cm</g:product_length>
+    <g:color>Laccato RAL</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>comodino-musone-2-cassetti</g:id>
+    <title>Comodino Musone 2 cassetti</title>
+    <description>Comodino Musone 2 cassetti: comodino compatto con due cassetti, 35 cm di larghezza. Da 139 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/comodino-musone-2-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/comodino-musone-2-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>139.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>comodino-musone-2-cassetti</g:mpn>
+    <g:product_type>Mobiletti &gt; Comodini</g:product_type>
+    <g:product_width>35 cm</g:product_width>
+    <g:product_height>49 cm</g:product_height>
+    <g:product_length>40 cm</g:product_length>
+    <g:color>Marrone-nero</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>comodino-sospeso</g:id>
+    <title>Comodino Aria sospeso</title>
+    <description>Comodino Aria sospeso: fissaggio a parete, cassetto e vano a giorno, pavimento libero. Da 289 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/comodino-sospeso/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/comodino-sospeso.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>289.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>comodino-sospeso</g:mpn>
+    <g:product_type>Mobiletti &gt; Comodini</g:product_type>
+    <g:product_width>40 cm</g:product_width>
+    <g:product_height>28 cm</g:product_height>
+    <g:product_length>30 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>credenza-2-ante</g:id>
+    <title>Credenza Borgo 2 ante</title>
+    <description>Credenza Borgo 2 ante: formato medio, perfetta in sala da pranzo o ingresso. Da 749 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/credenza-2-ante/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/credenza-2-ante.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>749.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>credenza-2-ante</g:mpn>
+    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
+    <g:product_width>120 cm</g:product_width>
+    <g:product_height>80 cm</g:product_height>
+    <g:product_length>45 cm</g:product_length>
+    <g:color>Rovere naturale</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>credenza-soligo-120</g:id>
+    <title>Credenza Soligo 120</title>
+    <description>Credenza Soligo 120: due cassetti e due ante, linea pulita. Da 559 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/credenza-soligo-120/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/credenza-soligo-120.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>559.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>credenza-soligo-120</g:mpn>
+    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
+    <g:product_width>120 cm</g:product_width>
+    <g:product_height>74 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>credenza-soligo-top-rovere</g:id>
+    <title>Credenza Soligo top rovere</title>
+    <description>Credenza Soligo top rovere: due cassetti e due ante, piano in rovere, base a terra. Da 729 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/credenza-soligo-top-rovere/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/credenza-soligo-top-rovere.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>729.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>credenza-soligo-top-rovere</g:mpn>
+    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
+    <g:product_width>120 cm</g:product_width>
+    <g:product_height>76 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco/Rovere</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>cubo-tagliamento</g:id>
+    <title>Cubo Tagliamento a giorno</title>
+    <description>Cubo Tagliamento a giorno: modulo a giorno 35×35 cm da appoggio o da parete, componibile. Da 69 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/cubo-tagliamento/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/cubo-tagliamento.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>69.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>cubo-tagliamento</g:mpn>
+    <g:product_type>Mobiletti &gt; Contenitori e pensili</g:product_type>
+    <g:product_width>35 cm</g:product_width>
+    <g:product_height>35 cm</g:product_height>
+    <g:product_length>25 cm</g:product_length>
+    <g:color>Rovere naturale</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>ingresso-2-ante</g:id>
+    <title>Mobile Ingresso Atrio</title>
+    <description>Mobile Ingresso Atrio: due ante e cassetto svuotatasche. Da 549 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/ingresso-2-ante/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/ingresso-2-ante.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>549.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>ingresso-2-ante</g:mpn>
+    <g:product_type>Mobiletti &gt; Mobili ingresso</g:product_type>
+    <g:product_width>80 cm</g:product_width>
+    <g:product_height>85 cm</g:product_height>
+    <g:product_length>35 cm</g:product_length>
+    <g:color>Grigio seta</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>ingresso-specchio</g:id>
+    <title>Ingresso Soglia con specchio</title>
+    <description>Ingresso Soglia con specchio: mobile con cassetti, specchio e appendiabiti coordinati. Da 649 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/ingresso-specchio/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/ingresso-specchio.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>649.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>ingresso-specchio</g:mpn>
+    <g:product_type>Mobiletti &gt; Mobili ingresso</g:product_type>
+    <g:product_width>90 cm</g:product_width>
+    <g:product_height>190 cm</g:product_height>
+    <g:product_length>35 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-alveare-1x4</g:id>
+    <title>Libreria Alveare 1×4</title>
+    <description>Libreria Alveare 1×4: colonna stretta da 42 cm, perfetta di fianco a scrivanie e porte. Da 231 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-alveare-1x4/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-1x4.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>231.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-alveare-1x4</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>41.0 cm</g:product_width>
+    <g:product_height>144.5 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-alveare-2x2</g:id>
+    <title>Libreria Alveare 2×2</title>
+    <description>Libreria Alveare 2×2: modulo da 77 cm come comodino, mobile TV basso o cubo da ingresso. Da 221 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x2/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-2x2.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>221.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-alveare-2x2</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>75.5 cm</g:product_width>
+    <g:product_height>75.5 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-alveare-2x4</g:id>
+    <title>Libreria Alveare 2×4</title>
+    <description>Libreria Alveare 2×4: otto vani da 33 cm: in verticale come libreria, in orizzontale come madia. Da 291 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x4/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-2x4.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>291.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-alveare-2x4</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>75.5 cm</g:product_width>
+    <g:product_height>144.5 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-alveare-4x2</g:id>
+    <title>Mobile basso Alveare 4×2</title>
+    <description>Mobile basso Alveare 4×2: credenza bassa a vani, con ante e cassetti a scelta. Da 291 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x2/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-4x2.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>291.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-alveare-4x2</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>144.5 cm</g:product_width>
+    <g:product_height>75.5 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-alveare-4x4</g:id>
+    <title>Libreria Alveare 4×4</title>
+    <description>Libreria Alveare 4×4: sedici vani: parete attrezzata o divisorio tra due ambienti. Da 431 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-alveare-4x4/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-4x4.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>431.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-alveare-4x4</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>144.5 cm</g:product_width>
+    <g:product_height>144.5 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-alveare-5x5</g:id>
+    <title>Libreria Alveare 5×5</title>
+    <description>Libreria Alveare 5×5: venticinque vani: una parete intera di contenitori. Da 591 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-alveare-5x5/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-alveare-5x5.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>591.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-alveare-5x5</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>179.0 cm</g:product_width>
+    <g:product_height>179.0 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-quadra-2x4</g:id>
+    <title>Libreria Quadra 2×4</title>
+    <description>Libreria Quadra 2×4: otto vani 33×33 cm in verticale, anche come divisorio. Da 209 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-quadra-2x4/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-quadra-2x4.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>209.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-quadra-2x4</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>77 cm</g:product_width>
+    <g:product_height>147 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>libreria-quadra-4x2-cassetti</g:id>
+    <title>Libreria Quadra 4×2 con cassetti</title>
+    <description>Libreria Quadra 4×2 con cassetti: otto vani in orizzontale con due cassetti e un'anta: libreria o madia. Da 409 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/libreria-quadra-4x2-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/libreria-quadra-4x2-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>409.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>libreria-quadra-4x2-cassetti</g:mpn>
+    <g:product_type>Mobiletti &gt; Librerie a vani</g:product_type>
+    <g:product_width>147 cm</g:product_width>
+    <g:product_height>77 cm</g:product_height>
+    <g:product_length>39 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>madia-cannettata</g:id>
+    <title>Madia Canneto</title>
+    <description>Madia Canneto: ante cannettate in MDF laccato, effetto tessile. Da 1359 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/madia-cannettata/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/madia-cannettata.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>1359.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>madia-cannettata</g:mpn>
+    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
+    <g:product_width>160 cm</g:product_width>
+    <g:product_height>75 cm</g:product_height>
+    <g:product_length>45 cm</g:product_length>
+    <g:color>Laccato RAL</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>madia-soligo-180-cassetti</g:id>
+    <title>Madia Soligo 180 cassetti</title>
+    <description>Madia Soligo 180 cassetti: madia bassa da 180 cm con cassetti e ante, per soggiorno o sala da pranzo. Da 719 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/madia-soligo-180-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/madia-soligo-180-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>719.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>madia-soligo-180-cassetti</g:mpn>
+    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
+    <g:product_width>180 cm</g:product_width>
+    <g:product_height>74 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>madia-vallata-4-ante</g:id>
+    <title>Madia Vallata 4 ante</title>
+    <description>Madia Vallata 4 ante: quattro ante con ripiani interni regolabili, profondità ridotta 37 cm. Da 499 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/madia-vallata-4-ante/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/madia-vallata-4-ante.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>499.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>madia-vallata-4-ante</g:mpn>
+    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
+    <g:product_width>140 cm</g:product_width>
+    <g:product_height>75 cm</g:product_height>
+    <g:product_length>37 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>mobile-alto-raboso-cannettato</g:id>
+    <title>Mobile alto Raboso cannettato</title>
+    <description>Mobile alto Raboso cannettato: mobile alto a due ante con frontali cannettati in rovere, scocca bianca. Da 1619 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/mobile-alto-raboso-cannettato/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/mobile-alto-raboso-cannettato.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>1619.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>mobile-alto-raboso-cannettato</g:mpn>
+    <g:product_type>Mobiletti &gt; Contenitori e pensili</g:product_type>
+    <g:product_width>120 cm</g:product_width>
+    <g:product_height>193 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Rovere naturale/Bianco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>mobile-tv-cassetti</g:id>
+    <title>Mobile TV Brolo</title>
+    <description>Mobile TV Brolo: tre cassettoni capienti e piano in legno. Da 849 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/mobile-tv-cassetti/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/mobile-tv-cassetti.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>849.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>mobile-tv-cassetti</g:mpn>
+    <g:product_type>Mobiletti &gt; Mobili TV</g:product_type>
+    <g:product_width>200 cm</g:product_width>
+    <g:product_height>50 cm</g:product_height>
+    <g:product_length>45 cm</g:product_length>
+    <g:color>Noce canaletto</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>parete-attrezzata</g:id>
+    <title>Parete Attrezzata Livenza</title>
+    <description>Parete Attrezzata Livenza: base TV, pensile e due colonne a giorno: soggiorno completo. Da 1789 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/parete-attrezzata/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/parete-attrezzata.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>1789.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>parete-attrezzata</g:mpn>
+    <g:product_type>Mobiletti &gt; Mobili TV</g:product_type>
+    <g:product_width>280 cm</g:product_width>
+    <g:product_height>200 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Rovere naturale/Bianco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>pensile-soligo-1-anta</g:id>
+    <title>Pensile Soligo 1 anta</title>
+    <description>Pensile Soligo 1 anta: mobile ad anta da 60 cm, a parete o a terra, componibile. Da 209 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/pensile-soligo-1-anta/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/pensile-soligo-1-anta.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>209.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>pensile-soligo-1-anta</g:mpn>
+    <g:product_type>Mobiletti &gt; Contenitori e pensili</g:product_type>
+    <g:product_width>60 cm</g:product_width>
+    <g:product_height>64 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>pensile-tv-soligo-180</g:id>
+    <title>Pensile TV Soligo sospeso 180</title>
+    <description>Pensile TV Soligo sospeso 180: composizione sospesa a tre ante, con binario di fissaggio a parete. Da 599 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/mobiletti/pensile-tv-soligo-180/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/pensile-tv-soligo-180.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>599.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>pensile-tv-soligo-180</g:mpn>
+    <g:product_type>Mobiletti &gt; Mobili TV</g:product_type>
+    <g:product_width>180 cm</g:product_width>
+    <g:product_height>64 cm</g:product_height>
+    <g:product_length>42 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-2-bugne</g:id>
+    <title>Porta 2 Bugne</title>
+    <description>Porta 2 Bugne: laccata con due bugne incise, stile classico. Da 495 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-2-bugne/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/2-bugne.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>603.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-2-bugne</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-3-bugne-freeze</g:id>
+    <title>Porta 3 Bugne Freeze</title>
+    <description>Porta 3 Bugne Freeze: laccata a tre bugne con fresata sottile. Da 495 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-3-bugne-freeze/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/3-bugne-freeze.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>603.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-3-bugne-freeze</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-alba</g:id>
+    <title>Porta Alba</title>
+    <description>Porta Alba: arco inciso nella parte alta del pannello. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-alba/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/alba.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-alba</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-arche</g:id>
+    <title>Porta Archè</title>
+    <description>Porta Archè: arco a tutto sesto inciso. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-arche/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/arche.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-arche</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-aurea</g:id>
+    <title>Porta Aurea</title>
+    <description>Porta Aurea: proporzioni a sezione aurea. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-aurea/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/aurea.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-aurea</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-autumn</g:id>
+    <title>Porta Autumn</title>
+    <description>Porta Autumn: incisioni diagonali leggere. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-autumn/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/autumn.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-autumn</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-axis</g:id>
+    <title>Porta Axis</title>
+    <description>Porta Axis: asse verticale inciso decentrato. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-axis/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/axis.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-axis</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-bianco-matrix</g:id>
+    <title>Porta Bianco Matrix</title>
+    <description>Porta Bianco Matrix: laminato bianco con venatura frassino in rilievo. Da 395 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-bianco-matrix/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/bianco-matrix.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>481.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-bianco-matrix</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-bianco</g:id>
+    <title>Porta Bianco</title>
+    <description>Porta Bianco: laminato bianco liscio, il più pratico da pulire. Da 395 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-bianco/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/bianco.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>481.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-bianco</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-diagona</g:id>
+    <title>Porta Diagona</title>
+    <description>Porta Diagona: due bugne divise da un taglio diagonale. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-diagona/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/diagona.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-diagona</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-doppia-2-bugne</g:id>
+    <title>Porta Doppia 2 Bugne</title>
+    <description>Porta Doppia 2 Bugne: due bugne con doppia cornice, sapore classico. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-2-bugne/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/doppia-2-bugne.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-doppia-2-bugne</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-doppia-3-bugne-curva</g:id>
+    <title>Porta Doppia 3 Bugne Curva</title>
+    <description>Porta Doppia 3 Bugne Curva: tre bugne a cornice curva, stile tradizionale. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-3-bugne-curva/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/doppia-3-bugne-curva.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-doppia-3-bugne-curva</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-doppia-3-bugne</g:id>
+    <title>Porta Doppia 3 Bugne</title>
+    <description>Porta Doppia 3 Bugne: tre bugne con doppia cornice. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-3-bugne/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/doppia-3-bugne.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-doppia-3-bugne</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-doppia-4-bugne</g:id>
+    <title>Porta Doppia 4 Bugne</title>
+    <description>Porta Doppia 4 Bugne: quattro bugne orizzontali a doppia cornice. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-doppia-4-bugne/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/doppia-4-bugne.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-doppia-4-bugne</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-ellis</g:id>
+    <title>Porta Ellis</title>
+    <description>Porta Ellis: grande ovale pantografato a tutta altezza. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-ellis/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/ellis.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-ellis</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-essential-y</g:id>
+    <title>Porta Essential Y</title>
+    <description>Porta Essential Y: incisione a Y, segno minimo e moderno. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-essential-y/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/essential-y.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-essential-y</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-filo-muro</g:id>
+    <title>Porta Filo Muro</title>
+    <description>Porta Filo Muro: anta complanare alla parete, telaio nascosto nel muro. Da 695 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-filo-muro/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/filo-muro.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>847.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-filo-muro</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-flow</g:id>
+    <title>Porta Flow</title>
+    <description>Porta Flow: linee curve che scorrono sul pannello. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-flow/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/flow.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-flow</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-genesi</g:id>
+    <title>Porta Genesi</title>
+    <description>Porta Genesi: cornice interna con angoli smussati. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-genesi/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/genesi.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-genesi</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-gramma</g:id>
+    <title>Porta Gramma</title>
+    <description>Porta Gramma: composizione geometrica a riquadri. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-gramma/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/gramma.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-gramma</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-grigio-baltimora</g:id>
+    <title>Porta Grigio Baltimora</title>
+    <description>Porta Grigio Baltimora: laminato grigio caldo effetto legno. Da 395 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-grigio-baltimora/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/grigio-baltimora.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>481.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-grigio-baltimora</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-horizon</g:id>
+    <title>Porta Horizon</title>
+    <description>Porta Horizon: linee orizzontali parallele a tutta larghezza. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-horizon/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/horizon.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-horizon</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-morph</g:id>
+    <title>Porta Morph</title>
+    <description>Porta Morph: forme morbide che si trasformano. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-morph/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/morph.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-morph</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-palissandro-white</g:id>
+    <title>Porta Palissandro White</title>
+    <description>Porta Palissandro White: laminato chiaro con venatura palissandro. Da 395 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-palissandro-white/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/palissandro-white.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>481.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-palissandro-white</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-panto-1</g:id>
+    <title>Porta Pantografata 1 Bugna</title>
+    <description>Porta Pantografata 1 Bugna: una bugna pantografata a tutta altezza. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-panto-1/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/panto-1.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-panto-1</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-panto-2</g:id>
+    <title>Porta Pantografata 2 Bugne</title>
+    <description>Porta Pantografata 2 Bugne: due bugne pantografate sovrapposte. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-panto-2/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/panto-2.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-panto-2</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-panto-3</g:id>
+    <title>Porta Pantografata 3 Bugne</title>
+    <description>Porta Pantografata 3 Bugne: tre bugne pantografate, sapore classico. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-panto-3/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/panto-3.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-panto-3</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-resonance</g:id>
+    <title>Porta Resonance</title>
+    <description>Porta Resonance: onde concentriche incise. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-resonance/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/resonance.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-resonance</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-signum</g:id>
+    <title>Porta Signum</title>
+    <description>Porta Signum: segno grafico verticale e orizzontale. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-signum/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/signum.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-signum</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-skyline</g:id>
+    <title>Porta Skyline</title>
+    <description>Porta Skyline: profilo a gradoni ispirato allo skyline. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-skyline/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/skyline.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-skyline</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-tilt</g:id>
+    <title>Porta Tilt</title>
+    <description>Porta Tilt: linee inclinate in movimento. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-tilt/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/tilt.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-tilt</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-trama</g:id>
+    <title>Porta Trama</title>
+    <description>Porta Trama: reticolo inciso a trama fitta. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-trama/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/trama.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-trama</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>porta-zig-zag</g:id>
+    <title>Porta Zig-Zag</title>
+    <description>Porta Zig-Zag: motivo spezzato a zig-zag. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
+    <link>https://pandooragroup.it/shop/porte-per-interni/porta-zig-zag/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/porte/zig-zag.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>725.90 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>porta-zig-zag</g:mpn>
+    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
+    <g:product_height>210 cm</g:product_height>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>panca-ante-scorrevoli</g:id>
+    <title>Panca Brina ante scorrevoli</title>
+    <description>Panca Brina ante scorrevoli: seduta e scarpiera chiusa: due ante scorrevoli, nessun ingombro in apertura. Da 389 € IVA inclusa, anche su misura.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/panca-ante-scorrevoli/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/panca-ante-scorrevoli.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>389.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>panca-ante-scorrevoli</g:mpn>
+    <g:product_type>Scarpiere &gt; Con seduta</g:product_type>
+    <g:product_width>100 cm</g:product_width>
+    <g:product_height>52 cm</g:product_height>
+    <g:product_length>37 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>panca-cansiglio-contenitore</g:id>
+    <title>Panca Cansiglio contenitore</title>
+    <description>Panca Cansiglio contenitore: panca da ingresso con vano contenitore sotto il coperchio a ribalta ammortizzato. Da 289 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/panca-cansiglio-contenitore/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/panca-cansiglio-contenitore.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>289.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>panca-cansiglio-contenitore</g:mpn>
+    <g:product_type>Scarpiere &gt; Con seduta</g:product_type>
+    <g:product_width>90 cm</g:product_width>
+    <g:product_height>48 cm</g:product_height>
+    <g:product_length>52 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>scarpiera-alta-5</g:id>
+    <title>Scarpiera Torre 5 ripiani</title>
+    <description>Scarpiera Torre 5 ripiani: colonna a un'anta con cinque ripiani, 25 paia in 50 cm. Da 679 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-alta-5/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-alta-5.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>679.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>scarpiera-alta-5</g:mpn>
+    <g:product_type>Scarpiere &gt; Con ante</g:product_type>
+    <g:product_width>50 cm</g:product_width>
+    <g:product_height>180 cm</g:product_height>
+    <g:product_length>36 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>scarpiera-meduna-2-ante</g:id>
+    <title>Scarpiera Meduna 2 ante</title>
+    <description>Scarpiera Meduna 2 ante: due ante, quattro ripiani regolabili, fino a 16 paia in 35 cm di profondità. Da 309 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-meduna-2-ante/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-meduna-2-ante.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>309.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>scarpiera-meduna-2-ante</g:mpn>
+    <g:product_type>Scarpiere &gt; Con ante</g:product_type>
+    <g:product_width>80 cm</g:product_width>
+    <g:product_height>117 cm</g:product_height>
+    <g:product_length>35 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>scarpiera-pensile-duo</g:id>
+    <title>Scarpiera Pensile Duo (2 pezzi)</title>
+    <description>Scarpiera Pensile Duo (2 pezzi): due elementi a parete da 18 cm di profondità: componibili in verticale o in fila. Da 219 € IVA inclusa, anche su misura.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-pensile-duo/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-pensile-duo.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>219.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>scarpiera-pensile-duo</g:mpn>
+    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
+    <g:product_width>52 cm</g:product_width>
+    <g:product_height>39 cm</g:product_height>
+    <g:product_length>18 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>scarpiera-slim-17</g:id>
+    <title>Scarpiera Filo 17</title>
+    <description>Scarpiera Filo 17: solo 17 cm di profondità: entra anche dietro la porta d'ingresso. Da 459 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-slim-17/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-slim-17.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>459.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>scarpiera-slim-17</g:mpn>
+    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
+    <g:product_width>60 cm</g:product_width>
+    <g:product_height>120 cm</g:product_height>
+    <g:product_length>17 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>scarpiera-snella-2</g:id>
+    <title>Scarpiera Snella 2 vani</title>
+    <description>Scarpiera Snella 2 vani: larga solo 49 cm, due ribalte con divisori regolabili, 8 paia. Da 239 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-2/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-2.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>239.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>scarpiera-snella-2</g:mpn>
+    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
+    <g:product_width>49 cm</g:product_width>
+    <g:product_height>93 cm</g:product_height>
+    <g:product_length>28 cm</g:product_length>
+    <g:color>Bianco opaco</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+  <item>
+    <g:id>scarpiera-snella-3</g:id>
+    <title>Scarpiera Snella 3 vani</title>
+    <description>Scarpiera Snella 3 vani: tre ribalte in 49 cm di larghezza, 12 paia, da fissare a parete. Da 289 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
+    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-3/</link>
+    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-3.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>289.00 EUR</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>Pandoora</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>scarpiera-snella-3</g:mpn>
+    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
+    <g:product_width>49 cm</g:product_width>
+    <g:product_height>135 cm</g:product_height>
+    <g:product_length>28 cm</g:product_length>
+    <g:color>Marrone-nero</g:color>
+    <g:custom_label_0>Made in Italy</g:custom_label_0>
+  </item>
+</channel>
+</rss>

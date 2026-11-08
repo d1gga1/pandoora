@@ -7,6 +7,12 @@
 ## Versione integrale
 - [Testo completo di tutte le pagine chiave](https://pandooragroup.it/llms-full.txt)
 
+
+## Feed e dati strutturati
+- [Feed prodotti shop (Google Merchant / assistenti di acquisto IA)](https://pandooragroup.it/shop/merchant-feed.xml): porte, armadi, mobiletti, scarpiere e tavoli con prezzo IVA inclusa, misure e disponibilità
+- [Feed RSS guide tecniche](https://pandooragroup.it/feed.xml): guide su pannelli tamburati, porte interne, montaggio e allestimenti
+- [Sitemap XML con hreflang](https://pandooragroup.it/sitemap.xml)
+
 ## Dati aziendali
 - Ragione sociale: PAN.DOOR.A S.r.l.
 - Fondazione: 1987
@@ -16,6 +22,8 @@
 - Telefono: +39 335 632 6505
 - Email: ordini@pandooragroup.it
 - Sito: https://pandooragroup.it
+- Instagram: https://www.instagram.com/pan.door.a/
+- Wikidata: https://www.wikidata.org/wiki/Q142084864
 - Lingue: italiano, inglese, spagnolo, francese, tedesco, croato, albanese, greco, olandese, polacco, ceco, slovacco, sloveno, turco, arabo
 - Mercati serviti: produzione su misura su richiesta del cliente, spedizioni in tutto il mondo (in particolare Unione Europea, Regno Unito, Emirati Arabi Uniti)
 

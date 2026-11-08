@@ -104,8 +104,10 @@
 <link rel="stylesheet" href="/pd-base.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet"></noscript>
 <script src="/pd-live.js" defer></script>
+<style id="pd-a11y">:where(img[width][height]){height:auto}.pd-skip{position:absolute;left:-9999px;top:0;z-index:100000;background:#111;color:#fff;padding:12px 18px;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none;border-radius:0 0 8px 0}.pd-skip:focus{left:0}</style>
 </head>
 <body>
+<a class="pd-skip" href="#main">Přejít na obsah</a>
 
 <header class="topbar scrolled" id="topbar">
   <a class="brand" href="/cs/" aria-label="Pan.door.a — Domovská stránka"><img src="/pandoora_logo.webp" alt="Logo Pan.door.a" width="140" height="38" decoding="async"></a>
@@ -122,6 +124,7 @@
   <a class="nav-cta" href="/cs/nabidka/">Poptat nabídku</a>
   <button class="burger" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
+<main id="main">
 <section class="pg-hero">
   <div class="pg-hero-grid"></div><div class="pg-hero-glow"></div>
   <div class="pg-hero-inner">
@@ -142,7 +145,7 @@
 
   <section class="pg-sec" id="foto">
     <h2>Naše antipanikové dveře</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px"><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.jpg" alt="Dvoukřídlé antipanikové dveře ze surového MDF k natření" width="900" height="1208" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Dvoukřídlé antipanikové dveře ze surového MDF k natření</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.jpg" alt="Jednokřídlé antipanikové dveře v dekoru dub, s klíčem" width="900" height="1206" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Jednokřídlé antipanikové dveře v dekoru dub, s klíčem</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.jpg" alt="Dvoukřídlé antipanikové dveře v bílém laku, osazené ve stěně stánku" width="900" height="1211" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Dvoukřídlé antipanikové dveře v bílém laku, osazené ve stěně stánku</figcaption></figure></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px"><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-mdf.webp" alt="Dvoukřídlé antipanikové dveře ze surového MDF k natření" width="900" height="1208" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Dvoukřídlé antipanikové dveře ze surového MDF k natření</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-anta-singola-rovere.webp" alt="Jednokřídlé antipanikové dveře v dekoru dub, s klíčem" width="900" height="1206" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Jednokřídlé antipanikové dveře v dekoru dub, s klíčem</figcaption></figure><figure style="margin:0"><picture><source srcset="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" type="image/webp"><img src="/assets/porte-antipanico/porta-antipanico-stand-doppia-anta-bianca.webp" alt="Dvoukřídlé antipanikové dveře v bílém laku, osazené ve stěně stánku" width="900" height="1211" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;display:block"></picture><figcaption style="font-size:.9rem;opacity:.75;margin-top:8px">Dvoukřídlé antipanikové dveře v bílém laku, osazené ve stěně stánku</figcaption></figure></div>
   </section>
 
   <section class="pg-sec" id="versioni">
@@ -168,6 +171,8 @@
   </section>
 
 </div>
+
+</main>
 
 <footer class="pf">
   <div class="pf-glow"></div>
