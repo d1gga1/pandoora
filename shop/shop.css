@@ -1243,3 +1243,8 @@ a.s-add{text-decoration:none}
 .s-pm-media.tile{background:#f4f2ee}
 .s-pm-media.tile>img{object-fit:contain}
 #s-f-custom[hidden]{display:none}
+/* ---------- lavabi in gres ---------- */
+.s-price .s-quote{display:inline;font-size:19px;color:var(--ink)}
+.s-pm-media.basin>img{object-fit:cover}
+.s-pm-foot a.s-btn{text-decoration:none}
+.s-pill[hidden]{display:none}

@@ -1,7 +1,7 @@
 {
  "_nota": "Elenco prodotti del negozio. Sarà sostituito dal database Supabase.",
  "pricing": {
-  "_nota": "Regole prezzi. Porte: IVA esclusa, posa e trasporto inclusi in Veneto e FVG (fonte: /porte-interne-prezzi/). Arredi: IVA inclusa, trasporto escluso. Gres: prezzo al m² IVA esclusa, trasporto a parte.",
+  "_nota": "Regole prezzi. Porte: IVA esclusa, posa e trasporto inclusi in Veneto e FVG (fonte: /porte-interne-prezzi/). Arredi: IVA inclusa, trasporto escluso. Gres: prezzo al m² IVA esclusa, trasporto a parte. Lavabi in gres: IVA esclusa.",
   "door": {
    "lines": {
     "laminata": 395,
@@ -347,6 +347,62 @@
     100
    ],
    "ivaNote": "IVA esclusa · trasporto a parte · prezzo e m² confermati con l'ordine"
+  },
+  "basin": {
+   "sizes": [
+    {
+     "w": 60,
+     "price": 800
+    },
+    {
+     "w": 70,
+     "price": 800
+    },
+    {
+     "w": 80,
+     "price": 800
+    },
+    {
+     "w": 100,
+     "price": 1100
+    },
+    {
+     "w": 110,
+     "price": 1100
+    },
+    {
+     "w": 120,
+     "price": 1100
+    }
+   ],
+   "depth": {
+    "min": 35,
+    "max": 60,
+    "def": 46
+   },
+   "big": {
+    "min": 130,
+    "max": 300,
+    "def": 150
+   },
+   "vasche": [
+    [
+     "quadrata",
+     "Vasca quadrata"
+    ],
+    [
+     "scivolo",
+     "Piano inclinato (scivolo)"
+    ]
+   ],
+   "finiture": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice",
+    "Altra finitura"
+   ],
+   "ivaNote": "IVA esclusa · trasporto e installazione da concordare · disegno confermato con voi prima della produzione"
   }
  },
  "products": [
@@ -15912,6 +15968,266 @@
     "cucina"
    ],
    "rank": 422
+  },
+  {
+   "id": "lavabo-gres-60",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "medi",
+   "subs": [
+    "medi"
+   ],
+   "name": "Lavabo in gres 60 cm",
+   "desc": "Lavabo su misura in gres porcellanato, lungo 60 cm, profondità a scelta, vasca quadrata o a scivolo",
+   "img": "/shop/img/prodotti/lavabo-gres-sospeso.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-sospeso.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-sospeso.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-sospeso-480.webp 480w, /shop/img/prodotti/lavabo-gres-sospeso-800.webp 800w",
+   "basin": {
+    "w": 60
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "gres",
+    "su misura",
+    "bagno",
+    "top bagno",
+    "60 cm",
+    "scivolo",
+    "marmo",
+    "travertino"
+   ],
+   "rank": 500
+  },
+  {
+   "id": "lavabo-gres-70",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "medi",
+   "subs": [
+    "medi"
+   ],
+   "name": "Lavabo in gres 70 cm",
+   "desc": "Lavabo su misura in gres porcellanato, lungo 70 cm, profondità a scelta, vasca quadrata o a scivolo",
+   "img": "/shop/img/prodotti/lavabo-gres-sospeso.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-sospeso.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-sospeso.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-sospeso-480.webp 480w, /shop/img/prodotti/lavabo-gres-sospeso-800.webp 800w",
+   "basin": {
+    "w": 70
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "gres",
+    "su misura",
+    "bagno",
+    "top bagno",
+    "70 cm",
+    "scivolo",
+    "marmo",
+    "travertino"
+   ],
+   "rank": 501
+  },
+  {
+   "id": "lavabo-gres-80",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "medi",
+   "subs": [
+    "medi"
+   ],
+   "name": "Lavabo in gres 80 cm",
+   "desc": "Lavabo su misura in gres porcellanato, lungo 80 cm, profondità a scelta, vasca quadrata o a scivolo",
+   "img": "/shop/img/prodotti/lavabo-gres-sospeso.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-sospeso.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-sospeso.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-sospeso-480.webp 480w, /shop/img/prodotti/lavabo-gres-sospeso-800.webp 800w",
+   "basin": {
+    "w": 80
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "badge": "Più richiesto",
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "gres",
+    "su misura",
+    "bagno",
+    "top bagno",
+    "80 cm",
+    "scivolo",
+    "marmo",
+    "travertino"
+   ],
+   "rank": 502
+  },
+  {
+   "id": "lavabo-gres-100",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "grandi",
+   "subs": [
+    "grandi"
+   ],
+   "name": "Lavabo in gres 100 cm",
+   "desc": "Lavabo su misura in gres porcellanato, lungo 100 cm, profondità a scelta, vasca quadrata o a scivolo",
+   "img": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-showroom.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-showroom-480.webp 480w, /shop/img/prodotti/lavabo-gres-showroom-800.webp 800w",
+   "basin": {
+    "w": 100
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "gres",
+    "su misura",
+    "bagno",
+    "top bagno",
+    "100 cm",
+    "scivolo",
+    "marmo",
+    "travertino"
+   ],
+   "rank": 503
+  },
+  {
+   "id": "lavabo-gres-110",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "grandi",
+   "subs": [
+    "grandi"
+   ],
+   "name": "Lavabo in gres 110 cm",
+   "desc": "Lavabo su misura in gres porcellanato, lungo 110 cm, profondità a scelta, vasca quadrata o a scivolo",
+   "img": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-showroom.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-showroom-480.webp 480w, /shop/img/prodotti/lavabo-gres-showroom-800.webp 800w",
+   "basin": {
+    "w": 110
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "gres",
+    "su misura",
+    "bagno",
+    "top bagno",
+    "110 cm",
+    "scivolo",
+    "marmo",
+    "travertino"
+   ],
+   "rank": 504
+  },
+  {
+   "id": "lavabo-gres-120",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "grandi",
+   "subs": [
+    "grandi"
+   ],
+   "name": "Lavabo in gres 120 cm",
+   "desc": "Lavabo su misura in gres porcellanato, lungo 120 cm, profondità a scelta, vasca quadrata o a scivolo",
+   "img": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-showroom.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-showroom-480.webp 480w, /shop/img/prodotti/lavabo-gres-showroom-800.webp 800w",
+   "basin": {
+    "w": 120
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "gres",
+    "su misura",
+    "bagno",
+    "top bagno",
+    "120 cm",
+    "scivolo",
+    "marmo",
+    "travertino"
+   ],
+   "rank": 505
+  },
+  {
+   "id": "lavabo-gres-grandi-formati",
+   "type": "basin",
+   "cat": "lavabi-gres",
+   "sub": "fuori-misura",
+   "subs": [
+    "fuori-misura"
+   ],
+   "name": "Lavabo in gres grandi formati e doppio",
+   "desc": "Lavabo su misura da 130 a 300 cm e oltre, anche doppio, in qualsiasi finitura",
+   "img": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgLg": "/shop/img/prodotti/lavabo-gres-showroom.webp",
+   "imgFb": "/shop/img/prodotti/lavabo-gres-showroom.jpg",
+   "imgSet": "/shop/img/prodotti/lavabo-gres-showroom-480.webp 480w, /shop/img/prodotti/lavabo-gres-showroom-800.webp 800w",
+   "basin": {
+    "quote": true
+   },
+   "finishes": [
+    "Effetto marmo",
+    "Effetto travertino",
+    "Effetto pietra naturale",
+    "Effetto onice"
+   ],
+   "badge": "Su preventivo",
+   "tags": [
+    "lavabo",
+    "lavabi",
+    "doppio lavabo",
+    "gres",
+    "su misura",
+    "150 cm",
+    "180 cm",
+    "250 cm",
+    "preventivo"
+   ],
+   "rank": 510
   }
  ]
 }

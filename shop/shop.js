@@ -175,6 +175,77 @@
     $('#s-pm-add',ft).onclick=function(){var im=$('img',media);addToCart(p,JSON.parse(JSON.stringify(c)),1,im);setTimeout(closeProduct,250)};
     upd();CUR={p:p,get c(){return c},get qty(){return 1}};showPM(m,p.id);
   }
+
+  /* ---------- lavabi in gres su misura ---------- */
+  function bQ(p){return !!(p.basin&&p.basin.quote)}
+  function basinPrice(w){var z=PR.basin.sizes.find(function(x){return x.w===w});return z?z.price:0}
+  function basinVasca(id){var v=PR.basin.vasche.find(function(x){return x[0]===id});return v?v[1]:''}
+  function basinQuote(p,c){
+    if(bQ(p))return{unit:0,lines:[['Lavabo '+(c.dbl?'doppio':'singolo')+' L '+c.w+' cm · prezzo su preventivo',0]],note:'Prezzo personalizzato: vi mandiamo disegno e preventivo'};
+    var u=basinPrice(c.w);return{unit:u,lines:[['Lavabo L '+c.w+' × P '+c.d+' cm · '+basinVasca(c.v),u]],note:PR.basin.ivaNote};
+  }
+  function priceTxt(p){if(p.type==='basin'&&bQ(p))return 'Su preventivo';return eur.format(fromPrice(p))+(p.type==='tile'?'/m²':'')}
+  function basinSum(p,c){return 'L '+c.w+' × P '+c.d+' cm · '+(c.dbl?'doppio · ':'')+basinVasca(c.v)+' · '+c.fin+(c.ton?' ('+c.ton+')':'')}
+  function basinCard(p){
+    var fav=favs.indexOf(p.id)>=0,u=pURL(p),q=bQ(p);
+    return '<article class="s-card" data-type="basin" data-id="'+esc(p.id)+'">'
+      +'<a class="s-card-img" href="'+u+'" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+imgAttrs(p)+' alt="'+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
+      +(p.badge?'<span class="s-badge">'+esc(p.badge)+'</span>':'')+'<span class="s-badge g r2">Su misura</span><span class="s-card-q">'+IC.eye+'Scopri e configura</span></a>'
+      +'<span class="s-card-line"><i></i>'+esc(subName(p))+'</span><h3><a href="'+u+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc)+'</p>'
+      +'<span class="s-dim">'+(q?'Da 130 a 300 cm e oltre · singolo o doppio':'L '+p.basin.w+' cm · profondità su misura')+'</span>'
+      +'<div class="s-price">'+(q?'<span class="s-quote">Su preventivo</span>':eur.format(fromPrice(p))+'<span>IVA escl. · su misura</span>')+'</div>'
+      +'<div class="s-card-foot"><a class="s-add" href="'+u+'" aria-label="Configura '+esc(p.name)+'">'+IC.plus+'<span>Configura</span></a>'
+      +'<button class="s-fav" type="button" data-fav="'+esc(p.id)+'" aria-pressed="'+fav+'" aria-label="Salva nei preferiti">'+IC.heart+'</button></div></article>';
+  }
+  function basinDrawSVG(c){
+    var W=640,H=420,L=c.w,D=c.d,sc=Math.min(520/L,150/D),X=L*sc,Y=D*sc,fx=(W-X)/2,fy=60,o='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+W+' '+H+'" class="s-tech"><style>.tc{font:700 11px Manrope,Arial,sans-serif;fill:#6b7380;letter-spacing:.08em}</style><rect width="'+W+'" height="'+H+'" fill="#fbfaf8"/>';
+    o+='<text x="'+fx+'" y="40" class="tc">VISTA DALL\'ALTO</text><rect x="'+fx+'" y="'+fy+'" width="'+X+'" height="'+Y+'" fill="#ece7de" stroke="#1a2028" stroke-width="1.2"/>';
+    var n=c.dbl?2:1;for(var k=0;k<n;k++){var bw=Math.min(X/n*.62,48*sc),cx=fx+X*(k+.5)/n,bx=cx-bw/2,by=fy+Y*.2,bh=Y*.62;
+      o+='<rect x="'+bx+'" y="'+by+'" width="'+bw+'" height="'+bh+'" fill="'+(c.v==='scivolo'?'#e2dccf':'#d9d2c4')+'" stroke="#1a2028" stroke-width="1"/>';
+      if(c.v==='scivolo')o+='<path d="M'+bx+' '+(by+bh-6)+'h'+bw+'" stroke="#1a2028" stroke-dasharray="4 3"/><circle cx="'+cx+'" cy="'+(by+bh-3)+'" r="1.6"/>';else o+='<circle cx="'+cx+'" cy="'+(by+bh/2)+'" r="'+Math.max(3,bw*.06)+'" fill="none" stroke="#1a2028"/>';
+      o+='<circle cx="'+cx+'" cy="'+(fy+Y*.1)+'" r="3" fill="#1a2028"/>';}
+    o+=dimH(fx,fx+X,fy+Y+30,L+' cm',{bg:1})+dimV(fy,fy+Y,fx-22,D+' cm');
+    var fy2=fy+Y+90,T=Math.max(16,15*sc);o+='<text x="'+fx+'" y="'+(fy2-14)+'" class="tc">FRONTE</text><rect x="'+fx+'" y="'+fy2+'" width="'+X+'" height="'+T+'" fill="#ece7de" stroke="#1a2028" stroke-width="1.2"/>';
+    o+='<text x="'+(W-20)+'" y="'+(H-14)+'" text-anchor="end" class="tc">SCHEMA INDICATIVO · MISURE IN CM</text>'+wmLogo(W,H,.5,.05)+'</svg>';return o;
+  }
+  function openBasin(p,m,media,sc,ft){
+    var K=PR.basin,c=defaultCfg(p),q=bQ(p),view='foto';
+    media.className='s-pm-media basin';
+    media.innerHTML='<img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'"><div class="s-pm-draw" hidden></div><span class="s-pm-dims" id="s-pm-dims"></span>';
+    var h='<span class="s-card-line"><i></i>'+esc(subName(p))+'</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'. Realizzato con le lastre di gres porcellanato, spigoli uniti a 45°.</p>';
+    if(q)h+='<fieldset class="s-opt"><legend>Lunghezza <small>'+K.big.min+'–'+K.big.max+' cm, anche oltre</small></legend><div class="s-chips" id="o-bw">'+[150,180,250].map(function(w){return '<button type="button" class="s-chip" data-v="'+w+'">'+w+' cm</button>'}).join('')+'</div><div class="s-dims one"><label>Lunghezza (cm)<input type="number" inputmode="numeric" id="o-w" min="'+K.big.min+'" max="'+K.big.max+'"></label></div></fieldset>'
+      +'<fieldset class="s-opt"><legend>Lavabo</legend><div class="s-chips" id="o-dbl"><button type="button" class="s-chip" data-v="0">Singolo</button><button type="button" class="s-chip" data-v="1">Doppio</button></div></fieldset>';
+    else h+='<fieldset class="s-opt"><legend>Lunghezza</legend><div class="s-chips" id="o-bw">'+K.sizes.map(function(z){return '<button type="button" class="s-chip" data-v="'+z.w+'">'+z.w+' cm <em>'+eur.format(z.price)+'</em></button>'}).join('')+'</div><p class="s-note">Da 60 a 80 cm 800 €, da 100 a 120 cm 1.100 €. Altre misure e doppio lavabo: <a href="/shop/lavabi-gres/lavabo-gres-grandi-formati/">su preventivo</a>.</p></fieldset>';
+    h+='<fieldset class="s-opt"><legend>Profondità <small>'+K.depth.min+'–'+K.depth.max+' cm</small></legend><div class="s-dims one"><label>Profondità (cm)<input type="number" inputmode="numeric" id="o-d" min="'+K.depth.min+'" max="'+K.depth.max+'"></label></div></fieldset>';
+    h+='<fieldset class="s-opt"><legend>Vasca</legend><div class="s-chips" id="o-v">'+K.vasche.map(function(v){return '<button type="button" class="s-chip" data-v="'+v[0]+'">'+esc(v[1])+'</button>'}).join('')+'</div></fieldset>';
+    h+='<fieldset class="s-opt"><legend>Finitura</legend><div class="s-chips" id="o-fin">'+K.finiture.map(function(f){return '<button type="button" class="s-chip" data-v="'+esc(f)+'">'+esc(f)+'</button>'}).join('')+'</div>'
+      +'<div class="s-dims one"><label>Tonalità preferita <small>facoltativa: dal nostro <a href="/shop/gres-porcellanato/">catalogo gres</a> o descritta da voi</small><input type="text" id="o-ton" maxlength="60" placeholder="Es. Calacatta Gold, travertino chiaro…"></label></div><p class="s-note">Potete anche mandarci una foto della finitura che vi piace.</p></fieldset>';
+    h+='<ul class="s-break" id="s-break"></ul>';
+    sc.innerHTML=h;sc.scrollTop=0;
+    ft.innerHTML=q?'<div class="s-pm-total"><b id="s-pm-tot">Su preventivo</b><small id="s-pm-iva"></small></div><a class="s-btn s-btn-p" id="s-pm-wa" target="_blank" rel="noopener" href="#">Chiedi il preventivo su WhatsApp</a><a class="s-btn s-btn-o" href="/preventivo/">Modulo preventivo</a>'
+      :'<div class="s-pm-total"><b id="s-pm-tot" data-v="0">—</b><small id="s-pm-iva"></small></div><button class="s-btn s-btn-p" type="button" id="s-pm-add">'+IC.bag+'Aggiungi al carrello</button>';
+    function sel(g,v){$$('#'+g+' .s-chip',sc).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.v)===String(v))})}
+    function upd(){
+      sel('o-bw',c.w);sel('o-v',c.v);sel('o-fin',c.fin);sel('o-dbl',c.dbl?1:0);
+      ['w','d'].forEach(function(k){var i=$('#o-'+k,sc);if(i&&document.activeElement!==i)i.value=c[k]});
+      var t=$('#o-ton',sc);if(t&&document.activeElement!==t)t.value=c.ton||'';
+      $('#s-pm-dims').textContent=c.w+' × '+c.d+' cm';
+      var qq=basinQuote(p,c);
+      $('#s-break',sc).innerHTML=qq.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+(q?'preventivo':eur.format(l[1]))+'</b></li>'}).join('');
+      if(q){var wa=$('#s-pm-wa',ft);if(wa)wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Buongiorno, vorrei un preventivo per un lavabo in gres su misura: '+basinSum(p,c)+'.')}
+      else tween($('#s-pm-tot'),qq.unit);
+      $('#s-pm-iva').textContent=qq.note;
+      var dr=$('.s-pm-draw',media);if(dr&&!dr.hidden)dr.innerHTML=basinDrawSVG(c);
+    }
+    $$('#o-bw .s-chip',sc).forEach(function(b){b.onclick=function(){c.w=+b.dataset.v;upd()}});
+    $$('#o-v .s-chip',sc).forEach(function(b){b.onclick=function(){c.v=b.dataset.v;upd()}});
+    $$('#o-fin .s-chip',sc).forEach(function(b){b.onclick=function(){c.fin=b.dataset.v;upd()}});
+    $$('#o-dbl .s-chip',sc).forEach(function(b){b.onclick=function(){c.dbl=b.dataset.v==='1';upd()}});
+    [['w',K.big.min,K.big.max],['d',K.depth.min,K.depth.max]].forEach(function(a){var i=$('#o-'+a[0],sc);if(!i)return;var tm;i.oninput=function(){clearTimeout(tm);tm=setTimeout(function(){var v=parseInt(i.value,10);if(!isNaN(v)&&v>=a[1]&&v<=a[2]){c[a[0]]=v;upd()}},250)};i.onblur=function(){var v=parseInt(i.value,10);if(!isNaN(v))c[a[0]]=clamp(v,a[1],a[2]);i.value=c[a[0]];upd()}});
+    var ti=$('#o-ton',sc);ti.oninput=function(){c.ton=ti.value.trim().slice(0,60);if(q)upd()};
+    var ad=$('#s-pm-add',ft);if(ad)ad.onclick=function(){var im=$('img',media);addToCart(p,JSON.parse(JSON.stringify(c)),1,im);setTimeout(closeProduct,250)};
+    upd();CUR={p:p,get c(){return c},get qty(){return 1}};showPM(m,p.id);
+  }
   /* ---------- libreria a vani (configuratore con disegno dal vivo) ---------- */
   var CUBE_COL={'Bianco opaco':'#f3f2ee','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Marrone-nero':'#3d322b','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc'};
   function cubeColor(c){if(c.fin==='Laccato RAL'){var R=RALS.find(function(r){return r[0]===c.ral});return R?R[1]:'#e8e2d6'}return CUBE_COL[c.fin]||'#eee'}
@@ -343,10 +414,11 @@
     o+=wmLogo(1680,1190,.62,.06);
     return o+'</svg>';
   }
-  function quote(p,c){return p.type==='tile'?tileQuote(p,c):p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
+  function quote(p,c){return p.type==='basin'?basinQuote(p,c):p.type==='tile'?tileQuote(p,c):p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
   function defaultCfg(p,sub){
     if(p.type==='cube')return cubeDefault(p);
     if(p.type==='tile')return{sc:tileSc(p)[0],mq:PR.tile.mqDefault};
+    if(p.type==='basin')return{w:bQ(p)?PR.basin.big.def:p.basin.w,d:PR.basin.depth.def,v:'quadrata',fin:PR.basin.finiture[0],ton:'',dbl:false};
     if(p.type==='door'){
       var open=sub==='scorrevoli'?'scorrevole-esterno':sub==='filo-muro'?'filo-muro':'battente';
       var dc={serv:'posa',open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
@@ -356,10 +428,12 @@
   function fromPrice(p,sub){
     if(p.type==='cube')return cubeQuote(p,cubeDefault(p)).unit;
     if(p.type==='tile')return tileFrom(p);
+    if(p.type==='basin')return bQ(p)?0:basinPrice(p.basin.w);
     if(p.type==='door')return doorQuote(p,defaultCfg(p,sub)).unit;
     return Math.min.apply(null,p.std.map(function(s){return s.price}));
   }
   function cfgSummary(p,c){
+    if(p.type==='basin')return basinSum(p,c);
     if(p.type==='tile')return p.tile.fmt.map(function(x){return x.replace('x','×')}).join(' / ')+' cm · '+(p.tile.fin.join('/')||'Naturale')+' · '+tileS(p,c.sc).label+' · '+c.mq+' m²';
     if(p.type==='cube'){var D=cubeDims(c),cnt={};(c.cells||[]).forEach(function(x){if(x!=='vuoto')cnt[x]=(cnt[x]||0)+1});
       var ins=PR.cube.inserts.filter(function(i){return cnt[i.id]}).map(function(i){return cnt[i.id]+' '+i.label.toLowerCase()});
@@ -386,6 +460,7 @@
   /* ---------- card prodotto ---------- */
   function card(p,sub){
     if(p.type==='tile')return tileCard(p);
+    if(p.type==='basin')return basinCard(p);
     var fav=favs.indexOf(p.id)>=0, s=p.std&&p.std[0];
     var price=fromPrice(p,sub), many=p.type==='door'||(p.std&&p.std.length>1)||p.custom;
     var top=p.type==='door'?'<span class="s-card-line"><i></i>'+esc(p.lineLabel)+'</span>':'';
@@ -448,7 +523,7 @@
   function addToCart(p,c,qty,fromImg,o){
     o=o||{};var q=quote(p,c), key=p.id+'|'+JSON.stringify(c)+(o.bundle?'|'+o.bundle:'');
     var ex=cart.find(function(l){return l.key===key});
-    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:(p.type==='door'||p.type==='tile')?'escl':'incl',mq:p.type==='tile'?c.mq:0,qty:qty,bundle:o.bundle||'',bdisc:o.disc||0,bname:o.bname||''});
+    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.type==='basin'&&!bQ(p)?'Lavabo in gres '+c.w+' cm':p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:(p.type==='door'||p.type==='tile'||p.type==='basin')?'escl':'incl',mq:p.type==='tile'?c.mq:0,qty:qty,bundle:o.bundle||'',bdisc:o.disc||0,bname:o.bname||''});
     store('pdShopCart2',cart);
     if(o.silent)return;
     fly(fromImg,function(){counts('cart')});
@@ -494,7 +569,7 @@
     if(mode==='fav'){
       t.textContent='Preferiti';
       var list=P.filter(function(p){return favs.indexOf(p.id)>=0});
-      b.innerHTML=list.length?list.map(function(p,i){return '<div class="s-cl'+(p.type==='door'?' door':'')+'" style="--i:'+i+'"><img '+imgAttrs(p)+' alt=""><div><b>'+esc(p.name)+'</b><small>'+esc(p.desc||'')+'</small><div class="s-cl-act"><button type="button" data-o="'+esc(p.id)+'">Configura</button><button type="button" data-uf="'+esc(p.id)+'">Rimuovi</button></div></div><b>'+eur.format(fromPrice(p))+(p.type==='tile'?'/m²':'')+'</b></div>'}).join(''):'<p>Non avete ancora salvato prodotti. Toccate il cuore su una scheda per ritrovarla qui.</p>';
+      b.innerHTML=list.length?list.map(function(p,i){return '<div class="s-cl'+(p.type==='door'?' door':'')+'" style="--i:'+i+'"><img '+imgAttrs(p)+' alt=""><div><b>'+esc(p.name)+'</b><small>'+esc(p.desc||'')+'</small><div class="s-cl-act"><button type="button" data-o="'+esc(p.id)+'">Configura</button><button type="button" data-uf="'+esc(p.id)+'">Rimuovi</button></div></div><b>'+priceTxt(p)+'</b></div>'}).join(''):'<p>Non avete ancora salvato prodotti. Toccate il cuore su una scheda per ritrovarla qui.</p>';
       f.innerHTML='';
       $$('[data-o]',b).forEach(function(x){x.onclick=function(){var p=byId(x.dataset.o);closeDrawer();if(p)go(pURL(p))}});
       $$('[data-uf]',b).forEach(function(x){x.onclick=function(){toggleFav(x.dataset.uf);openDrawer('fav')}});
@@ -504,8 +579,8 @@
         b.innerHTML='<p>Il carrello è vuoto.</p><p>Scegliete un prodotto e configuratelo: misura, finitura e opzioni. Il prezzo si aggiorna mentre scegliete.</p>';
         f.innerHTML='<a class="s-btn s-btn-o" href="/shop/">Vai al negozio</a>';
       } else {
-        var K=cartCalc(),ex=0,tx=0;
-        b.innerHTML=cart.map(function(l,i){var r=K.rows[i];if(l.iva==='escl'&&l.type!=='tile')ex=1;if(l.type==='tile')tx=1;return '<div class="s-cl'+(l.type==='door'?' door':'')+'" style="--i:'+i+'"><img src="'+esc(l.img)+'" data-fb="'+esc(l.remote||'')+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+esc(l.sum)+'</small>'+(r.perc?'<span class="s-cl-off">−'+r.perc+'% · '+esc(r.why)+'</span>':'')+'<div class="s-cl-act">'+(l.type==='tile'?'':'<div class="s-qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Meno">−</button><output>'+l.qty+'</output><button type="button" data-q="'+i+'" data-d="1" aria-label="Più">+</button></div>')+'<button type="button" data-rm="'+i+'">Rimuovi</button></div></div><b class="s-cl-p">'+(r.amount?'<s>'+eur.format(r.gross)+'</s>':'')+eur.format(r.gross-r.amount)+'</b></div>'}).join('');
+        var K=cartCalc(),ex=0,tx=0,bx=0;
+        b.innerHTML=cart.map(function(l,i){var r=K.rows[i];if(l.type==='door')ex=1;if(l.type==='tile')tx=1;if(l.type==='basin')bx=1;return '<div class="s-cl'+(l.type==='door'?' door':'')+'" style="--i:'+i+'"><img src="'+esc(l.img)+'" data-fb="'+esc(l.remote||'')+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+esc(l.sum)+'</small>'+(r.perc?'<span class="s-cl-off">−'+r.perc+'% · '+esc(r.why)+'</span>':'')+'<div class="s-cl-act">'+(l.type==='tile'?'':'<div class="s-qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Meno">−</button><output>'+l.qty+'</output><button type="button" data-q="'+i+'" data-d="1" aria-label="Più">+</button></div>')+'<button type="button" data-rm="'+i+'">Rimuovi</button></div></div><b class="s-cl-p">'+(r.amount?'<s>'+eur.format(r.gross)+'</s>':'')+eur.format(r.gross-r.amount)+'</b></div>'}).join('');
         var O=OF(),N=O.newsletter||{},code=codeApplied();
         var nudge='';
         if(K.next)nudge+='<div class="s-nudge"><b>Ancora '+K.next.need+' port'+(K.next.need>1?'e':'a')+'</b> e lo sconto porte sale al '+K.next.perc+'%.</div>';
@@ -516,7 +591,7 @@
           +(window.PDA?'<button type="button" class="s-btn s-btn-p" id="s-checkout">Invia la richiesta d\'ordine</button>':'')
           +'<a class="s-btn '+(window.PDA?'s-btn-o':'s-btn-p')+'" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(orderText())+'">Invia l\'ordine su WhatsApp</a>'
           +'<a class="s-btn s-btn-o" href="mailto:'+MAIL+'?subject='+encodeURIComponent('Ordine Pandoora Shop')+'&body='+encodeURIComponent(orderText())+'">Invia per email</a>'
-          +'<p class="s-note">Nessun pagamento adesso: confermiamo l\'ordine con voi prima della produzione'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+(tx?'. Gres: IVA esclusa, trasporto a parte, prezzo e m² confermati con voi':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
+          +'<p class="s-note">Nessun pagamento adesso: confermiamo l\'ordine con voi prima della produzione'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+(tx?'. Gres: IVA esclusa, trasporto a parte, prezzo e m² confermati con voi':'')+(bx?'. Lavabi: IVA esclusa, disegno confermato con voi prima della produzione':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
         $$('[data-rm]',b).forEach(function(x){x.onclick=function(){cart.splice(+x.dataset.rm,1);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         $$('[data-q]',b).forEach(function(x){x.onclick=function(){var l=cart[+x.dataset.q];l.qty=clamp(l.qty+(+x.dataset.d),1,99);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         var cf=$('#s-code-f',f);if(cf)cf.onsubmit=function(e){e.preventDefault();var v=$('#s-code-in',f).value.trim().toUpperCase();if(N.code&&v===N.code){store('pdCode',v);openDrawer('cart')}else{var i=$('#s-code-in',f);i.value='';i.placeholder='Codice non valido';i.classList.add('err');setTimeout(function(){i.classList.remove('err')},900)}};
@@ -550,6 +625,7 @@
     if(p.type==='cube'){openCube(p,m,media,sc,ft);return}
     if(p.type==='door'){openDoor(p,m,media,sc,ft,sub);return}
     if(p.type==='tile'){openTile(p,m,media,sc,ft);return}
+    if(p.type==='basin'){openBasin(p,m,media,sc,ft);return}
     media.className='s-pm-media'+(p.type==='door'?' door':'');
     media.innerHTML='<img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.type==='door'&&p.line!=='laminata'?'<canvas class="s-pm-tint" data-src="'+esc(p.imgLg)+'" aria-hidden="true"></canvas>':'')+'<span class="s-pm-dims" id="s-pm-dims"></span><span class="s-pm-ral" id="s-pm-ral"></span>';
     var html='';
@@ -787,7 +863,7 @@
       var q=norm(i.value.trim());if(q.length<2){f.classList.remove('open');return}
       var words=q.split(/\s+/);
       var res=P.filter(function(p){var h=norm(p.name+' '+(p.desc||'')+' '+(p.tags||[]).join(' ')+' '+catName(p.cat));return words.every(function(w){return h.indexOf(w)>=0})}).slice(0,7);
-      box.innerHTML=res.length?res.map(function(p){return '<a href="?p='+esc(p.id)+'" data-s="'+esc(p.id)+'"><img '+imgAttrs(p)+' alt=""><span><b>'+esc(p.name)+'</b><small>'+esc(catName(p.cat))+'</small></span><em>'+eur.format(fromPrice(p))+(p.type==='tile'?'/m²':'')+'</em></a>'}).join(''):'<p>Nessun prodotto per «'+esc(i.value)+'». Provate «comodino», «porta laccata» o «top».</p>';
+      box.innerHTML=res.length?res.map(function(p){return '<a href="?p='+esc(p.id)+'" data-s="'+esc(p.id)+'"><img '+imgAttrs(p)+' alt=""><span><b>'+esc(p.name)+'</b><small>'+esc(catName(p.cat))+'</small></span><em>'+priceTxt(p)+'</em></a>'}).join(''):'<p>Nessun prodotto per «'+esc(i.value)+'». Provate «comodino», «porta laccata» o «top».</p>';
       cur=-1;f.classList.add('open');
       $$('[data-s]',box).forEach(function(a){a.onclick=function(e){e.preventDefault();f.classList.remove('open');openProduct(a.dataset.s)}});
     }
@@ -1070,6 +1146,10 @@
       })});
       box.innerHTML=h;
       var big=$('#pdp-sheet');if(big){var c8=defaultCfg(p,'');big.innerHTML='<div class="pdp-sheet-svg">'+doorSheetSVG(p,c8)+'</div><div class="pdp-sheet-act"><button type="button" class="s-btn s-btn-p" id="pdp-sheet-full">Apri a tutto schermo e stampa</button><span>Sezione orizzontale, verticale e prospetto · anta 80 × 210 cm, muro 110 mm. Configurate la vostra misura qui sopra e aprite la scheda dal disegno.</span></div>';$('#pdp-sheet-full').onclick=function(){openSheet(p,(CUR&&CUR.p===p)?CUR.c:c8)}}
+    } else if(p.type==='basin'){
+      var bc=defaultCfg(p),ws=bQ(p)?[150,180,250]:[p.basin.w];
+      ws.forEach(function(w,i){var c2=JSON.parse(JSON.stringify(bc));c2.w=w;if(bQ(p)&&i===2)c2.dbl=true;h+='<figure class="pdp-draw furn"><div>'+basinDrawSVG(c2)+'</div><figcaption><b>L '+w+' × P '+c2.d+' cm'+(c2.dbl?' · doppio':'')+'</b><span>'+(bQ(p)?'Esempio · prezzo su preventivo':eur.format(basinPrice(w))+' IVA esclusa')+'</span></figcaption></figure>'});
+      box.innerHTML=h;
     } else if(p.type==='tile'){
       p.tile.fmt.forEach(function(f){h+='<figure class="pdp-draw furn"><div>'+tileDrawSVG(p,f)+'</div><figcaption><b>Formato '+f.replace('x','×')+' cm · '+esc(p.tile.sp)+'</b><span>'+tileRes(f)+'</span></figcaption></figure>'});
       box.innerHTML=h;
@@ -1124,12 +1204,14 @@
     if(p.type==='door')v=[['foto','Foto'],['dettaglio','Dettaglio'],['cerniera','Cerniere'],['telaio','Telaio'],['disegno','Disegno quotato'],['scheda','Scheda tecnica']];
     else if(p.type==='cube')v=[['config','Configuratore'],['foto','Foto']];
     else if(p.type==='tile')v=[['foto','Foto'],['dettaglio','Dettaglio']];
+    else if(p.type==='basin')v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato']];
     else v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato']];
     var ic={disegno:'<svg viewBox="0 0 40 40"><rect x="11" y="5" width="18" height="30"/><path d="M5 5v30M3 5h4M3 35h4M11 38h18"/></svg>',scheda:'<svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26"/><path d="M5 14h30M14 14v19"/></svg>',config:'<svg viewBox="0 0 40 40"><rect x="6" y="6" width="12" height="12"/><rect x="22" y="6" width="12" height="12"/><rect x="6" y="22" width="12" height="12"/><rect x="22" y="22" width="12" height="12"/></svg>'};
     var XV={cerniera:'cerniera-foto',telaio:'telaio-foto'};
     th.innerHTML=v.map(function(x,i){var t=XV[x[0]]?'<img src="/shop/img/componenti/'+XV[x[0]]+'_min.webp" alt="" class="cov">':x[0]==='foto'&&p.type==='cube'?'<img src="/shop/img/prodotti/'+esc(p.id)+'.jpg" alt="">':ic[x[0]]||'<img src="'+esc(p.type==='cube'?'':src)+'" alt=""'+(x[0]==='dettaglio'?' class="zz"':'')+'>';return '<button type="button" data-v="'+x[0]+'" aria-pressed="'+(i===0)+'"><span>'+t+'</span>'+esc(x[1])+'</button>'}).join('');
     var fd=null,ph=null,xp=null;
     if(p.type==='door'){xp=document.createElement('img');xp.className='pdp-xphoto';xp.alt='';xp.hidden=true;media.appendChild(xp)}
+    if(p.type==='basin'){fd=$('.s-pm-draw',media)}
     if(p.type==='furniture'){fd=document.createElement('div');fd.className='s-pm-draw';fd.hidden=true;media.appendChild(fd)}
     if(p.type==='cube'){ph=document.createElement('img');ph.className='pdp-cubephoto';ph.src='/shop/img/prodotti/'+p.id+'.jpg';ph.alt=p.name;ph.hidden=true;media.appendChild(ph)}
     function set(k){
@@ -1137,12 +1219,12 @@
       media.classList.toggle('zoomed',k==='dettaglio');
       if(xp){var xs=XV[k];xp.hidden=!xs;if(xs){xp.src='/shop/img/componenti/'+xs+'.webp';xp.alt=k==='cerniera'?'Cerniera a scomparsa':'Telaio in legno listellare con coprifilo';if(!RM&&xp.animate)xp.animate([{opacity:0,transform:'scale(1.03)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.16,1,.3,1)'})}media.classList.toggle('xview',!!xs);if(xs){CUR.view&&CUR.view('foto');return}}
       if(p.type==='door'){if(k==='scheda'){openSheet(p,CUR.c);set('disegno');return}CUR.view&&CUR.view(k==='disegno'?'disegno':'foto')}
-      if(fd){fd.hidden=k!=='disegno';media.classList.toggle('drawing',k==='disegno');var im=$(':scope>img',media);if(im)im.hidden=k==='disegno';if(k==='disegno')fd.innerHTML=furnDrawSVG(p,CUR.c,CUR.c.fin)}
+      if(fd){fd.hidden=k!=='disegno';media.classList.toggle('drawing',k==='disegno');var im=$(':scope>img',media);if(im)im.hidden=k==='disegno';if(k==='disegno')fd.innerHTML=p.type==='basin'?basinDrawSVG(CUR.c):furnDrawSVG(p,CUR.c,CUR.c.fin)}
       if(ph){ph.hidden=k!=='foto';var st=$('#s-cube',media);if(st)st.hidden=k==='foto'}
     }
     $$('button',th).forEach(function(b){b.onclick=function(){set(b.dataset.v)}});
     $$('.s-pm-views button',media).forEach(function(b){b.addEventListener('click',function(){$$('button',th).forEach(function(x){x.setAttribute('aria-pressed',x.dataset.v===(b.dataset.view==='disegno'?'disegno':'foto'))});media.classList.remove('zoomed')})});
-    hero._redraw=function(){if(fd&&!fd.hidden)fd.innerHTML=furnDrawSVG(p,CUR.c,CUR.c.fin)};
+    hero._redraw=function(){if(fd&&!fd.hidden)fd.innerHTML=p.type==='basin'?basinDrawSVG(CUR.c):furnDrawSVG(p,CUR.c,CUR.c.fin)};
     if(FINE&&!RM&&p.type!=='cube'){ // lente al passaggio del mouse
       media.addEventListener('pointermove',function(e){if(media.classList.contains('drawing'))return;var im=$('.s-pm-photo img',media)||$(':scope>img',media);if(!im)return;media._lim=im;var r=media.getBoundingClientRect();im.style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%';media.classList.add('lens')});
       media.addEventListener('pointerleave',function(){media.classList.remove('lens');if(media._lim)media._lim.style.transformOrigin=''});
@@ -1151,15 +1233,15 @@
   function pdpBar(p,hero){
     var foot=$('.s-pm-foot',hero);if(!foot||!('IntersectionObserver' in window))return;
     var bar=document.createElement('div');bar.className='pdp-bar';bar.inert=true;
-    bar.innerHTML='<div class="s-wrap pdp-bar-in"><span class="pdp-bar-img"><img '+(p.type==='cube'?'src="/shop/img/prodotti/'+esc(p.id)+'.jpg"':imgAttrs(p))+' alt=""></span><div class="pdp-bar-t"><b>'+esc(p.name)+'</b><small id="pdp-bar-s"></small></div><b class="pdp-bar-p" id="pdp-bar-p"></b><button type="button" class="s-btn s-btn-p" id="pdp-bar-add">'+IC.bag+'<span>Aggiungi al carrello</span></button></div>';
+    bar.innerHTML='<div class="s-wrap pdp-bar-in"><span class="pdp-bar-img"><img '+(p.type==='cube'?'src="/shop/img/prodotti/'+esc(p.id)+'.jpg"':imgAttrs(p))+' alt=""></span><div class="pdp-bar-t"><b>'+esc(p.name)+'</b><small id="pdp-bar-s"></small></div><b class="pdp-bar-p" id="pdp-bar-p"></b><button type="button" class="s-btn s-btn-p" id="pdp-bar-add">'+IC.bag+'<span>'+(p.type==='basin'&&bQ(p)?'Chiedi il preventivo':'Aggiungi al carrello')+'</span></button></div>';
     document.body.appendChild(bar);
-    $('#pdp-bar-add').onclick=function(){var b=$('#s-pm-add',hero);b&&b.click()};
+    $('#pdp-bar-add').onclick=function(){var b=$('#s-pm-add',hero)||$('#s-pm-wa',hero);b&&b.click()};
     var past=false;new IntersectionObserver(function(es){var e=es[0];past=!e.isIntersecting&&e.boundingClientRect.top<0;bar.classList.toggle('on',past);bar.inert=!past}).observe(foot);
     var ftr=$('.pf');if(ftr)new IntersectionObserver(function(es){bar.classList.toggle('off',es[0].isIntersecting)}).observe(ftr);
   }
   function pdpRefresh(p,hero){
     if(!CUR)return;var q=quote(p,CUR.c),N=OF().newsletter||{},code=codeApplied();
-    var bp=$('#pdp-bar-p');if(bp)bp.textContent=eur.format(q.unit*CUR.qty);var bs=$('#pdp-bar-s');if(bs)bs.textContent=cfgSummary(p,CUR.c);
+    var bp=$('#pdp-bar-p');if(bp)bp.textContent=p.type==='basin'&&bQ(p)?'Su preventivo':eur.format(q.unit*CUR.qty);var bs=$('#pdp-bar-s');if(bs)bs.textContent=cfgSummary(p,CUR.c);
     var nl=$('#pdp-nl-p');if(nl&&N.perc){nl.textContent=eur.format(Math.round(q.unit*(1-N.perc/100)))}
     var nb=$('.pdp-nlbox');if(nb)nb.classList.toggle('on',!!code);
     hero._redraw&&hero._redraw();
