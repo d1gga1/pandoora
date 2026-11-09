@@ -86,3 +86,6 @@ assets/componenti/_png/
 # script newsletter per l hosting Aruba (contiene la password della casella): mai su GitHub
 _hosting-aruba/
 _foto-generate/
+
+# originali delle foto lavabi scaricate da Unsplash (sul sito ci sono le versioni ottimizzate)
+_foto_lavabi_unsplash/
