@@ -128,6 +128,53 @@
     var tot=lines.reduce(function(a,l){return a+l[1]},0);
     return{unit:tot,lines:lines,note:F.ivaNote};
   }
+
+  /* ---------- gres porcellanato: prezzo al m² in base alla scelta ---------- */
+  function tileSc(p){var T=PR.tile;return T.order.filter(function(k){return p.tile.scelte.indexOf(k)>=0})}
+  function tileS(p,k){var T=PR.tile;return T.scelte[k]||T.scelte[tileSc(p)[0]]}
+  function tileFrom(p){return Math.min.apply(null,tileSc(p).map(function(k){return PR.tile.scelte[k].price}))}
+  function tileQuote(p,c){var s=tileS(p,c.sc),u=s.price*c.mq;return{unit:u,lines:[[s.label+' · '+c.mq+' m² × '+eur.format(s.price)+'/m²',u]],note:PR.tile.ivaNote}}
+  function subName(p){var c=CAT.categories.find(function(x){return x.id===p.cat}),s=c&&c.subs.find(function(x){return x[0]===p.sub});return s?s[1]:(c?c.name:'')}
+  function tileCard(p){
+    var fav=favs.indexOf(p.id)>=0,t=p.tile,u=pURL(p);
+    return '<article class="s-card" data-type="tile" data-id="'+esc(p.id)+'">'
+      +'<a class="s-card-img" href="'+u+'" tabindex="-1" aria-label="Apri '+esc(p.name)+'"><img '+imgAttrs(p)+' alt="Gres porcellanato '+esc(p.name)+'" loading="lazy" decoding="async"><span class="glare"></span>'
+      +'<span class="s-card-q">'+IC.eye+'Scegli scelta e m²</span></a>'
+      +'<span class="s-card-line"><i></i>'+esc(subName(p))+'</span><h3><a href="'+u+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc)+'</p>'
+      +'<span class="s-dim">Scelta: '+esc(tileSc(p).join(' / '))+'</span>'
+      +'<div class="s-price"><small>da</small>'+eur.format(tileFrom(p))+'<em class="s-mq">/m²</em><span>IVA escl. · trasporto a parte</span></div>'
+      +'<div class="s-card-foot"><a class="s-add" href="'+u+'" aria-label="Scegli i metri quadri di '+esc(p.name)+'">'+IC.plus+'<span>Scegli i m²</span></a>'
+      +'<button class="s-fav" type="button" data-fav="'+esc(p.id)+'" aria-pressed="'+fav+'" aria-label="Salva nei preferiti">'+IC.heart+'</button></div>'
+      +'</article>';
+  }
+  function openTile(p,m,media,sc,ft){
+    var T=PR.tile,c=defaultCfg(p),t=p.tile,ks=tileSc(p);
+    media.className='s-pm-media tile';
+    media.innerHTML='<img '+imgAttrs(p,true)+' alt="Gres porcellanato '+esc(p.name)+'"><span class="s-pm-dims" id="s-pm-dims"></span>';
+    var h='<span class="s-card-line"><i></i>'+esc(subName(p))+'</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'. Lotto di magazzino: vi confermiamo metri quadri disponibili e prezzo prima dell\'ordine.</p>';
+    h+='<fieldset class="s-opt"><legend>Scelta</legend><div class="s-chips" id="o-sc">'+ks.map(function(k){var s=T.scelte[k];return '<button type="button" class="s-chip" data-v="'+esc(k)+'">'+esc(s.label)+' <em>'+s.price+'–'+s.max+' €/m²</em></button>'}).join('')+'</div><p class="s-note" id="o-sc-n"></p></fieldset>';
+    h+='<fieldset class="s-opt"><legend>Metri quadri</legend><div class="s-chips" id="o-mqq">'+T.mqQuick.map(function(v){return '<button type="button" class="s-chip" data-v="'+v+'">'+v+' m²</button>'}).join('')+'</div>'
+      +'<div class="s-dims one"><label>Metri quadri<input type="number" inputmode="numeric" id="o-mq" min="'+T.mqMin+'" max="'+T.mqMax+'" step="1"><small>Aggiungete il 10% per tagli e sfridi</small></label></div></fieldset>';
+    h+='<dl class="s-specs"><dt>Formato</dt><dd>'+esc(t.fmt.map(function(x){return x.replace('x','×')}).join(' · '))+' cm</dd><dt>Spessore</dt><dd>'+esc(t.sp)+'</dd><dt>Finitura</dt><dd>'+esc(t.fin.join(' / ')||'Naturale')+'</dd><dt>Bordo</dt><dd>'+(t.rett?'Rettificato':'Non rettificato')+'</dd><dt>Materiale</dt><dd>'+esc(t.mat)+'</dd>'+(t.extra.length?'<dt>Note</dt><dd>'+esc(t.extra.join(', '))+'</dd>':'')+'</dl>';
+    h+='<ul class="s-break" id="s-break"></ul>';
+    sc.innerHTML=h;sc.scrollTop=0;
+    ft.innerHTML='<div class="s-pm-total"><b id="s-pm-tot" data-v="0">—</b><small id="s-pm-iva"></small></div><button class="s-btn s-btn-p" type="button" id="s-pm-add">'+IC.bag+'Aggiungi al carrello</button>';
+    function sel(g,v){$$('#'+g+' .s-chip',sc).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.v)===String(v))})}
+    function upd(){
+      sel('o-sc',c.sc);sel('o-mqq',c.mq);var s=tileS(p,c.sc);
+      $('#o-sc-n',sc).textContent='Da '+eur.format(s.price)+' a '+eur.format(s.max)+' al m² + IVA in base al lotto: nel carrello calcoliamo '+eur.format(s.price)+'/m², il prezzo finale ve lo confermiamo noi.';
+      var i=$('#o-mq',sc);if(i&&document.activeElement!==i)i.value=c.mq;
+      $('#s-pm-dims').textContent=c.mq+' m²';
+      var q=tileQuote(p,c);
+      $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+eur.format(l[1])+'</b></li>'}).join('');
+      tween($('#s-pm-tot'),q.unit);$('#s-pm-iva').textContent=q.note;
+    }
+    $$('#o-sc .s-chip',sc).forEach(function(b){b.onclick=function(){c.sc=b.dataset.v;upd()}});
+    $$('#o-mqq .s-chip',sc).forEach(function(b){b.onclick=function(){c.mq=+b.dataset.v;upd()}});
+    var mi=$('#o-mq',sc),tm;mi.oninput=function(){clearTimeout(tm);tm=setTimeout(function(){var v=parseInt(mi.value,10);if(!isNaN(v)){c.mq=clamp(v,T.mqMin,T.mqMax);upd()}},200)};mi.onblur=function(){var v=parseInt(mi.value,10);if(!isNaN(v))c.mq=clamp(v,T.mqMin,T.mqMax);mi.value=c.mq;upd()};
+    $('#s-pm-add',ft).onclick=function(){var im=$('img',media);addToCart(p,JSON.parse(JSON.stringify(c)),1,im);setTimeout(closeProduct,250)};
+    upd();CUR={p:p,get c(){return c},get qty(){return 1}};showPM(m,p.id);
+  }
   /* ---------- libreria a vani (configuratore con disegno dal vivo) ---------- */
   var CUBE_COL={'Bianco opaco':'#f3f2ee','Rovere sbiancato':'#e4d6bf','Effetto noce':'#7d553a','Marrone-nero':'#3d322b','Grigio legno':'#a8a299','Bianco lucido':'#fdfdfc'};
   function cubeColor(c){if(c.fin==='Laccato RAL'){var R=RALS.find(function(r){return r[0]===c.ral});return R?R[1]:'#e8e2d6'}return CUBE_COL[c.fin]||'#eee'}
@@ -296,9 +343,10 @@
     o+=wmLogo(1680,1190,.62,.06);
     return o+'</svg>';
   }
-  function quote(p,c){return p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
+  function quote(p,c){return p.type==='tile'?tileQuote(p,c):p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
   function defaultCfg(p,sub){
     if(p.type==='cube')return cubeDefault(p);
+    if(p.type==='tile')return{sc:tileSc(p)[0],mq:PR.tile.mqDefault};
     if(p.type==='door'){
       var open=sub==='scorrevoli'?'scorrevole-esterno':sub==='filo-muro'?'filo-muro':'battente';
       var dc={serv:'posa',open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
@@ -307,10 +355,12 @@
   }
   function fromPrice(p,sub){
     if(p.type==='cube')return cubeQuote(p,cubeDefault(p)).unit;
+    if(p.type==='tile')return tileFrom(p);
     if(p.type==='door')return doorQuote(p,defaultCfg(p,sub)).unit;
     return Math.min.apply(null,p.std.map(function(s){return s.price}));
   }
   function cfgSummary(p,c){
+    if(p.type==='tile')return p.tile.fmt.map(function(x){return x.replace('x','×')}).join(' / ')+' cm · '+(p.tile.fin.join('/')||'Naturale')+' · '+tileS(p,c.sc).label+' · '+c.mq+' m²';
     if(p.type==='cube'){var D=cubeDims(c),cnt={};(c.cells||[]).forEach(function(x){if(x!=='vuoto')cnt[x]=(cnt[x]||0)+1});
       var ins=PR.cube.inserts.filter(function(i){return cnt[i.id]}).map(function(i){return cnt[i.id]+' '+i.label.toLowerCase()});
       var b=PR.cube.bases.find(function(x){return x.id===c.base});
@@ -335,6 +385,7 @@
 
   /* ---------- card prodotto ---------- */
   function card(p,sub){
+    if(p.type==='tile')return tileCard(p);
     var fav=favs.indexOf(p.id)>=0, s=p.std&&p.std[0];
     var price=fromPrice(p,sub), many=p.type==='door'||(p.std&&p.std.length>1)||p.custom;
     var top=p.type==='door'?'<span class="s-card-line"><i></i>'+esc(p.lineLabel)+'</span>':'';
@@ -397,7 +448,7 @@
   function addToCart(p,c,qty,fromImg,o){
     o=o||{};var q=quote(p,c), key=p.id+'|'+JSON.stringify(c)+(o.bundle?'|'+o.bundle:'');
     var ex=cart.find(function(l){return l.key===key});
-    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:p.type==='door'?'escl':'incl',qty:qty,bundle:o.bundle||'',bdisc:o.disc||0,bname:o.bname||''});
+    if(ex)ex.qty+=qty;else cart.push({key:key,id:p.id,type:p.type,name:p.name,img:p.type==='cube'?svgURI(cubeSVG(c)):p.img,remote:p.imgRemote||p.imgFb||'',sum:cfgSummary(p,c),unit:q.unit,iva:(p.type==='door'||p.type==='tile')?'escl':'incl',mq:p.type==='tile'?c.mq:0,qty:qty,bundle:o.bundle||'',bdisc:o.disc||0,bname:o.bname||''});
     store('pdShopCart2',cart);
     if(o.silent)return;
     fly(fromImg,function(){counts('cart')});
@@ -443,7 +494,7 @@
     if(mode==='fav'){
       t.textContent='Preferiti';
       var list=P.filter(function(p){return favs.indexOf(p.id)>=0});
-      b.innerHTML=list.length?list.map(function(p,i){return '<div class="s-cl'+(p.type==='door'?' door':'')+'" style="--i:'+i+'"><img '+imgAttrs(p)+' alt=""><div><b>'+esc(p.name)+'</b><small>'+esc(p.desc||'')+'</small><div class="s-cl-act"><button type="button" data-o="'+esc(p.id)+'">Configura</button><button type="button" data-uf="'+esc(p.id)+'">Rimuovi</button></div></div><b>'+eur.format(fromPrice(p))+'</b></div>'}).join(''):'<p>Non avete ancora salvato prodotti. Toccate il cuore su una scheda per ritrovarla qui.</p>';
+      b.innerHTML=list.length?list.map(function(p,i){return '<div class="s-cl'+(p.type==='door'?' door':'')+'" style="--i:'+i+'"><img '+imgAttrs(p)+' alt=""><div><b>'+esc(p.name)+'</b><small>'+esc(p.desc||'')+'</small><div class="s-cl-act"><button type="button" data-o="'+esc(p.id)+'">Configura</button><button type="button" data-uf="'+esc(p.id)+'">Rimuovi</button></div></div><b>'+eur.format(fromPrice(p))+(p.type==='tile'?'/m²':'')+'</b></div>'}).join(''):'<p>Non avete ancora salvato prodotti. Toccate il cuore su una scheda per ritrovarla qui.</p>';
       f.innerHTML='';
       $$('[data-o]',b).forEach(function(x){x.onclick=function(){var p=byId(x.dataset.o);closeDrawer();if(p)go(pURL(p))}});
       $$('[data-uf]',b).forEach(function(x){x.onclick=function(){toggleFav(x.dataset.uf);openDrawer('fav')}});
@@ -453,8 +504,8 @@
         b.innerHTML='<p>Il carrello è vuoto.</p><p>Scegliete un prodotto e configuratelo: misura, finitura e opzioni. Il prezzo si aggiorna mentre scegliete.</p>';
         f.innerHTML='<a class="s-btn s-btn-o" href="/shop/">Vai al negozio</a>';
       } else {
-        var K=cartCalc(),ex=0;
-        b.innerHTML=cart.map(function(l,i){var r=K.rows[i];if(l.iva==='escl')ex=1;return '<div class="s-cl'+(l.type==='door'?' door':'')+'" style="--i:'+i+'"><img src="'+esc(l.img)+'" data-fb="'+esc(l.remote||'')+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+esc(l.sum)+'</small>'+(r.perc?'<span class="s-cl-off">−'+r.perc+'% · '+esc(r.why)+'</span>':'')+'<div class="s-cl-act"><div class="s-qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Meno">−</button><output>'+l.qty+'</output><button type="button" data-q="'+i+'" data-d="1" aria-label="Più">+</button></div><button type="button" data-rm="'+i+'">Rimuovi</button></div></div><b class="s-cl-p">'+(r.amount?'<s>'+eur.format(r.gross)+'</s>':'')+eur.format(r.gross-r.amount)+'</b></div>'}).join('');
+        var K=cartCalc(),ex=0,tx=0;
+        b.innerHTML=cart.map(function(l,i){var r=K.rows[i];if(l.iva==='escl'&&l.type!=='tile')ex=1;if(l.type==='tile')tx=1;return '<div class="s-cl'+(l.type==='door'?' door':'')+'" style="--i:'+i+'"><img src="'+esc(l.img)+'" data-fb="'+esc(l.remote||'')+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+esc(l.sum)+'</small>'+(r.perc?'<span class="s-cl-off">−'+r.perc+'% · '+esc(r.why)+'</span>':'')+'<div class="s-cl-act">'+(l.type==='tile'?'':'<div class="s-qty"><button type="button" data-q="'+i+'" data-d="-1" aria-label="Meno">−</button><output>'+l.qty+'</output><button type="button" data-q="'+i+'" data-d="1" aria-label="Più">+</button></div>')+'<button type="button" data-rm="'+i+'">Rimuovi</button></div></div><b class="s-cl-p">'+(r.amount?'<s>'+eur.format(r.gross)+'</s>':'')+eur.format(r.gross-r.amount)+'</b></div>'}).join('');
         var O=OF(),N=O.newsletter||{},code=codeApplied();
         var nudge='';
         if(K.next)nudge+='<div class="s-nudge"><b>Ancora '+K.next.need+' port'+(K.next.need>1?'e':'a')+'</b> e lo sconto porte sale al '+K.next.perc+'%.</div>';
@@ -465,7 +516,7 @@
           +(window.PDA?'<button type="button" class="s-btn s-btn-p" id="s-checkout">Invia la richiesta d\'ordine</button>':'')
           +'<a class="s-btn '+(window.PDA?'s-btn-o':'s-btn-p')+'" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(orderText())+'">Invia l\'ordine su WhatsApp</a>'
           +'<a class="s-btn s-btn-o" href="mailto:'+MAIL+'?subject='+encodeURIComponent('Ordine Pandoora Shop')+'&body='+encodeURIComponent(orderText())+'">Invia per email</a>'
-          +'<p class="s-note">Nessun pagamento adesso: confermiamo l\'ordine con voi prima della produzione'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
+          +'<p class="s-note">Nessun pagamento adesso: confermiamo l\'ordine con voi prima della produzione'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+(tx?'. Gres: IVA esclusa, trasporto a parte, prezzo e m² confermati con voi':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
         $$('[data-rm]',b).forEach(function(x){x.onclick=function(){cart.splice(+x.dataset.rm,1);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         $$('[data-q]',b).forEach(function(x){x.onclick=function(){var l=cart[+x.dataset.q];l.qty=clamp(l.qty+(+x.dataset.d),1,99);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         var cf=$('#s-code-f',f);if(cf)cf.onsubmit=function(e){e.preventDefault();var v=$('#s-code-in',f).value.trim().toUpperCase();if(N.code&&v===N.code){store('pdCode',v);openDrawer('cart')}else{var i=$('#s-code-in',f);i.value='';i.placeholder='Codice non valido';i.classList.add('err');setTimeout(function(){i.classList.remove('err')},900)}};
@@ -498,6 +549,7 @@
     var media=$('.s-pm-media',m),sc=$('.s-pm-scroll',m),ft=$('.s-pm-foot',m);
     if(p.type==='cube'){openCube(p,m,media,sc,ft);return}
     if(p.type==='door'){openDoor(p,m,media,sc,ft,sub);return}
+    if(p.type==='tile'){openTile(p,m,media,sc,ft);return}
     media.className='s-pm-media'+(p.type==='door'?' door':'');
     media.innerHTML='<img '+imgAttrs(p,true)+' alt="'+esc(p.name)+'">'+(p.type==='door'&&p.line!=='laminata'?'<canvas class="s-pm-tint" data-src="'+esc(p.imgLg)+'" aria-hidden="true"></canvas>':'')+'<span class="s-pm-dims" id="s-pm-dims"></span><span class="s-pm-ral" id="s-pm-ral"></span>';
     var html='';
@@ -735,7 +787,7 @@
       var q=norm(i.value.trim());if(q.length<2){f.classList.remove('open');return}
       var words=q.split(/\s+/);
       var res=P.filter(function(p){var h=norm(p.name+' '+(p.desc||'')+' '+(p.tags||[]).join(' ')+' '+catName(p.cat));return words.every(function(w){return h.indexOf(w)>=0})}).slice(0,7);
-      box.innerHTML=res.length?res.map(function(p){return '<a href="?p='+esc(p.id)+'" data-s="'+esc(p.id)+'"><img '+imgAttrs(p)+' alt=""><span><b>'+esc(p.name)+'</b><small>'+esc(catName(p.cat))+'</small></span><em>'+eur.format(fromPrice(p))+'</em></a>'}).join(''):'<p>Nessun prodotto per «'+esc(i.value)+'». Provate «comodino», «porta laccata» o «top».</p>';
+      box.innerHTML=res.length?res.map(function(p){return '<a href="?p='+esc(p.id)+'" data-s="'+esc(p.id)+'"><img '+imgAttrs(p)+' alt=""><span><b>'+esc(p.name)+'</b><small>'+esc(catName(p.cat))+'</small></span><em>'+eur.format(fromPrice(p))+(p.type==='tile'?'/m²':'')+'</em></a>'}).join(''):'<p>Nessun prodotto per «'+esc(i.value)+'». Provate «comodino», «porta laccata» o «top».</p>';
       cur=-1;f.classList.add('open');
       $$('[data-s]',box).forEach(function(a){a.onclick=function(e){e.preventDefault();f.classList.remove('open');openProduct(a.dataset.s)}});
     }
@@ -998,6 +1050,16 @@
     if(!list.length){box.closest('section').hidden=true;return}
     box.innerHTML=list.map(function(q){return card(q)}).join('');box.closest('section').hidden=false;bindCards(box);
   }
+
+  function tileDim(f){var a=f.split('x').map(function(x){return parseFloat(x.replace(',','.'))});return{w:Math.min(a[0],a[1]),h:Math.max(a[0],a[1])}}
+  function tileRes(f){var d=tileDim(f),a=d.w*d.h/10000,n=1/a;return '1 pezzo = '+(Math.round(a*1000)/1000).toString().replace('.',',')+' m² · '+(Math.round(n*10)/10).toString().replace('.',',')+' pezzi per m²'}
+  function tileDrawSVG(p,f){
+    var d=tileDim(f),W=640,H=420,sc=Math.min(420/d.h,300/d.w),X=d.h*sc,Y=d.w*sc,fx=(W-X)/2,fy=50+(300-Y)/2;
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+W+' '+H+'" class="s-tech"><style>.tc{font:700 11px Manrope,Arial,sans-serif;fill:#6b7380;letter-spacing:.08em}</style><rect width="'+W+'" height="'+H+'" fill="#fbfaf8"/>'
+      +'<text x="'+fx+'" y="34" class="tc">PEZZO SINGOLO · VISTA DALL\'ALTO</text><rect x="'+fx+'" y="'+fy+'" width="'+X+'" height="'+Y+'" fill="#ece7de" stroke="#1a2028" stroke-width="1.2"/>'
+      +dimH(fx,fx+X,fy+Y+30,d.h+' cm',{bg:1})+dimV(fy,fy+Y,fx-22,d.w+' cm')
+      +'<text x="'+(W-20)+'" y="'+(H-14)+'" text-anchor="end" class="tc">SCHEMA INDICATIVO · MISURE IN CM</text>'+wmLogo(W,H,.5,.05)+'</svg>';
+  }
   function pdpDraws(p){
     var box=$('#pdp-draws');if(!box)return;var h='';
     if(p.type==='door'){
@@ -1008,6 +1070,9 @@
       })});
       box.innerHTML=h;
       var big=$('#pdp-sheet');if(big){var c8=defaultCfg(p,'');big.innerHTML='<div class="pdp-sheet-svg">'+doorSheetSVG(p,c8)+'</div><div class="pdp-sheet-act"><button type="button" class="s-btn s-btn-p" id="pdp-sheet-full">Apri a tutto schermo e stampa</button><span>Sezione orizzontale, verticale e prospetto · anta 80 × 210 cm, muro 110 mm. Configurate la vostra misura qui sopra e aprite la scheda dal disegno.</span></div>';$('#pdp-sheet-full').onclick=function(){openSheet(p,(CUR&&CUR.p===p)?CUR.c:c8)}}
+    } else if(p.type==='tile'){
+      p.tile.fmt.forEach(function(f){h+='<figure class="pdp-draw furn"><div>'+tileDrawSVG(p,f)+'</div><figcaption><b>Formato '+f.replace('x','×')+' cm · '+esc(p.tile.sp)+'</b><span>'+tileRes(f)+'</span></figcaption></figure>'});
+      box.innerHTML=h;
     } else if(p.type==='cube'){
       var cc=cubeDefault(p),d=cubeDims(cc);
       h='<figure class="pdp-draw wide"><div class="pdp-cube">'+cubeSVG(cc)+'</div><figcaption><b>Composizione di partenza · '+cc.cols+' × '+cc.rows+' vani da '+cc.cube+' cm</b><span>Ingombro '+d.w+' × '+cc.depth+' × '+d.h+' cm. Fianchi 4 cm, divisori 1,5 cm. Componete la vostra nel configuratore in alto.</span></figcaption></figure>';
@@ -1058,6 +1123,7 @@
     var img=$('img',media),src=img?(img.currentSrc||img.src):'',v=[];
     if(p.type==='door')v=[['foto','Foto'],['dettaglio','Dettaglio'],['cerniera','Cerniere'],['telaio','Telaio'],['disegno','Disegno quotato'],['scheda','Scheda tecnica']];
     else if(p.type==='cube')v=[['config','Configuratore'],['foto','Foto']];
+    else if(p.type==='tile')v=[['foto','Foto'],['dettaglio','Dettaglio']];
     else v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato']];
     var ic={disegno:'<svg viewBox="0 0 40 40"><rect x="11" y="5" width="18" height="30"/><path d="M5 5v30M3 5h4M3 35h4M11 38h18"/></svg>',scheda:'<svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26"/><path d="M5 14h30M14 14v19"/></svg>',config:'<svg viewBox="0 0 40 40"><rect x="6" y="6" width="12" height="12"/><rect x="22" y="6" width="12" height="12"/><rect x="6" y="22" width="12" height="12"/><rect x="22" y="22" width="12" height="12"/></svg>'};
     var XV={cerniera:'cerniera-foto',telaio:'telaio-foto'};

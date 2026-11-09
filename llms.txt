@@ -338,6 +338,230 @@ fatturazione in euro e reverse charge per le aziende con partita IVA intracomuni
 - [Tavoli e top](https://pandooragroup.it/shop/tavoli/): Top per tavoli tagliati su misura (laminato HPL, tondi laccati RAL)
   - [Top HPL 30](https://pandooragroup.it/shop/tavoli/top-laminato-hpl/): Laminato HPL antigraffio, bordo ABS, per tavoli e scrivanie, 120×80×3 cm, da 389 € IVA inclusa
   - [Top Tondo Laccato](https://pandooragroup.it/shop/tavoli/top-laccato-tondo/): Piano rotondo in MDF laccato RAL, bordo smussato, 100×100×3 cm, da 509 € IVA inclusa
+- [Gres porcellanato](https://pandooragroup.it/shop/gres-porcellanato/): Lastre, effetto legno e rivestimenti a magazzino. Prima scelta e 1°C da 18 a 21 €/m², seconda scelta e scelta S da 12 a 14 €/m², IVA esclusa.
+  - [Ap. Absolute White](https://pandooragroup.it/shop/gres-porcellanato/ap-absolute-white-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MH Calacatta Delicato K](https://pandooragroup.it/shop/gres-porcellanato/mh-calacatta-delicato-k-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Md Bianco](https://pandooragroup.it/shop/gres-porcellanato/md-bianco-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MD Grigio](https://pandooragroup.it/shop/gres-porcellanato/md-grigio-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [ME Brown](https://pandooragroup.it/shop/gres-porcellanato/me-brown-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [MH Calacatta Prestige](https://pandooragroup.it/shop/gres-porcellanato/mh-calacatta-prestige-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MM Calacatta Bernini](https://pandooragroup.it/shop/gres-porcellanato/mm-calacatta-bernini-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [MM Calacatta Meraviglia](https://pandooragroup.it/shop/gres-porcellanato/mm-calacatta-meraviglia-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MM Silver Majestic](https://pandooragroup.it/shop/gres-porcellanato/mm-silver-majestic-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [MO Noir](https://pandooragroup.it/shop/gres-porcellanato/mo-noir-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [MO Pearl](https://pandooragroup.it/shop/gres-porcellanato/mo-pearl-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MV Calacatta LP](https://pandooragroup.it/shop/gres-porcellanato/mv-calacatta-lp-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MX Fior di Bosco](https://pandooragroup.it/shop/gres-porcellanato/mx-fior-di-bosco-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [BD W White](https://pandooragroup.it/shop/gres-porcellanato/bd-w-white-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MS Bianco Dolomia K](https://pandooragroup.it/shop/gres-porcellanato/ms-bianco-dolomia-k-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Brera Board](https://pandooragroup.it/shop/gres-porcellanato/brera-board-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [Brera Frame](https://pandooragroup.it/shop/gres-porcellanato/brera-frame-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [Bronze Lux](https://pandooragroup.it/shop/gres-porcellanato/bronze-lux-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [Fior di Bosco Glossy](https://pandooragroup.it/shop/gres-porcellanato/fior-di-bosco-glossy-lucido/): Lastra 60×120 cm lucida, spessore 10 mm, da 12 €/m² + IVA
+  - [English Grey](https://pandooragroup.it/shop/gres-porcellanato/english-grey-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MS Carrara](https://pandooragroup.it/shop/gres-porcellanato/ms-carrara-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MX Grey LP](https://pandooragroup.it/shop/gres-porcellanato/mx-grey-lp-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Arabescato](https://pandooragroup.it/shop/gres-porcellanato/arabescato-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [Calacatta Gold](https://pandooragroup.it/shop/gres-porcellanato/calacatta-gold-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [MH Calacatta Delicato A](https://pandooragroup.it/shop/gres-porcellanato/mh-calacatta-delicato-a-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Onyx Pearl White](https://pandooragroup.it/shop/gres-porcellanato/onyx-pearl-white-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Brenzo Natural](https://pandooragroup.it/shop/gres-porcellanato/brenzo-natural-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [Helix Grey](https://pandooragroup.it/shop/gres-porcellanato/helix-grey-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 18 €/m² + IVA
+  - [Onyx Blue](https://pandooragroup.it/shop/gres-porcellanato/onyx-blue-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Marquinia Black](https://pandooragroup.it/shop/gres-porcellanato/marquinia-black-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Luce Oro Lusso](https://pandooragroup.it/shop/gres-porcellanato/luce-oro-lusso-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [MS Bianco Dolomia A](https://pandooragroup.it/shop/gres-porcellanato/ms-bianco-dolomia-a-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Infinity Brazil 6](https://pandooragroup.it/shop/gres-porcellanato/infinity-brazil-6-lucido/): Lastra 60×120 cm lappata, spessore 6,5 mm, da 12 €/m² + IVA
+  - [Blue Jeans](https://pandooragroup.it/shop/gres-porcellanato/blue-jeans-lucido/): Lastra 60×120 cm lucida, spessore 6,5 mm, da 12 €/m² + IVA
+  - [Calacatta Picasso](https://pandooragroup.it/shop/gres-porcellanato/calacatta-picasso-lucido/): Lastra 60×120 cm lucida, spessore 6,5 mm, da 12 €/m² + IVA
+  - [Montecarlo Black](https://pandooragroup.it/shop/gres-porcellanato/montecarlo-black-lucido/): Lastra 60×120 cm lucida, spessore 6,5 mm, da 12 €/m² + IVA
+  - [Mv Calacatta](https://pandooragroup.it/shop/gres-porcellanato/mv-calacatta-lucido/): Lastra 60×120 cm lucida, spessore 6 mm, da 18 €/m² + IVA
+  - [Onyx Smoky Grey](https://pandooragroup.it/shop/gres-porcellanato/onyx-smoky-grey-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Marquinia Nero](https://pandooragroup.it/shop/gres-porcellanato/marquinia-nero-lucido/): Lastra 60×120 cm lucida, spessore 6 mm, da 18 €/m² + IVA
+  - [Onice Allure Midnight](https://pandooragroup.it/shop/gres-porcellanato/onice-allure-midnight-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Evoluta Forest Light](https://pandooragroup.it/shop/gres-porcellanato/evoluta-forest-light-lucido/): Lastra 60×120 cm lappata, spessore 9 mm, da 12 €/m² + IVA
+  - [Italian White](https://pandooragroup.it/shop/gres-porcellanato/italian-white-lucido/): Lastra 60×120 cm lappata, spessore 9 mm, da 12 €/m² + IVA
+  - [Onyx Pale Azure](https://pandooragroup.it/shop/gres-porcellanato/onyx-pale-azure-lucido/): Lastra 60×120 cm lucida, spessore 9 mm, da 12 €/m² + IVA
+  - [Portland Hood](https://pandooragroup.it/shop/gres-porcellanato/portland-hood-naturale/): Lastra 60×120 cm naturale, spessore 8,5 mm, da 12 €/m² + IVA
+  - [Portland Jordan](https://pandooragroup.it/shop/gres-porcellanato/portland-jordan-naturale/): Lastra 60×120 cm naturale, spessore 8,5 mm, da 12 €/m² + IVA
+  - [Alpine Silk Cross](https://pandooragroup.it/shop/gres-porcellanato/alpine-silk-cross-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Pietra Grey Fog](https://pandooragroup.it/shop/gres-porcellanato/pietra-grey-fog-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Kalmit Zement](https://pandooragroup.it/shop/gres-porcellanato/kalmit-zement-naturale/): Lastra 60×120 cm naturale, spessore 6 mm, da 12 €/m² + IVA
+  - [Kalmit Sand](https://pandooragroup.it/shop/gres-porcellanato/kalmit-sand-naturale/): Lastra 60×120 cm naturale, spessore 6 mm, da 12 €/m² + IVA
+  - [Basalt Sabbia](https://pandooragroup.it/shop/gres-porcellanato/basalt-sabbia-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Pietra Nordica Nero](https://pandooragroup.it/shop/gres-porcellanato/pietra-nordica-nero-naturale/): Lastra 60×120 cm naturale, spessore 6 mm, da 12 €/m² + IVA
+  - [Stonecement Antracite](https://pandooragroup.it/shop/gres-porcellanato/stonecement-antracite-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Boston Sand](https://pandooragroup.it/shop/gres-porcellanato/boston-sand-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Boston Grey](https://pandooragroup.it/shop/gres-porcellanato/boston-grey-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Slate Avorio](https://pandooragroup.it/shop/gres-porcellanato/slate-avorio-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Pigmenta White](https://pandooragroup.it/shop/gres-porcellanato/pigmenta-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Cnc Sand](https://pandooragroup.it/shop/gres-porcellanato/cnc-sand-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Saint Remy Grigio](https://pandooragroup.it/shop/gres-porcellanato/saint-remy-grigio-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Oxidatio Lithium](https://pandooragroup.it/shop/gres-porcellanato/oxidatio-lithium-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Intarsi Raffaello 3D](https://pandooragroup.it/shop/gres-porcellanato/intarsi-raffaello-3d-naturale/): Lastra 60×120 cm satinata, spessore 9 mm, da 12 €/m² + IVA
+  - [Intarsi Warm Thera 3D](https://pandooragroup.it/shop/gres-porcellanato/intarsi-warm-thera-3d-naturale/): Lastra 60×120 cm satinata, spessore 9 mm, da 12 €/m² + IVA
+  - [Intarsi Warm Agorà 3D](https://pandooragroup.it/shop/gres-porcellanato/intarsi-warm-agora-3d-naturale/): Lastra 60×120 cm satinata, spessore 9 mm, da 12 €/m² + IVA
+  - [Galaxy Pearl 3D](https://pandooragroup.it/shop/gres-porcellanato/galaxy-pearl-3d-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Travertino Tivoli Beige](https://pandooragroup.it/shop/gres-porcellanato/travertino-tivoli-beige-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Loft White](https://pandooragroup.it/shop/gres-porcellanato/loft-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Marquinia White](https://pandooragroup.it/shop/gres-porcellanato/marquinia-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Native Grey](https://pandooragroup.it/shop/gres-porcellanato/native-grey-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Nereidi Cloud](https://pandooragroup.it/shop/gres-porcellanato/nereidi-cloud-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [TLV White](https://pandooragroup.it/shop/gres-porcellanato/tlv-white-naturale/): Lastra 60×120 cm naturale, spessore 11 mm, da 12 €/m² + IVA
+  - [Corsocomo Cookie](https://pandooragroup.it/shop/gres-porcellanato/corsocomo-cookie-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Boost Balance Cream](https://pandooragroup.it/shop/gres-porcellanato/boost-balance-cream-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Agathos Multicolor](https://pandooragroup.it/shop/gres-porcellanato/agathos-multicolor-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Unique Sand](https://pandooragroup.it/shop/gres-porcellanato/unique-sand-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Architecta Pietra Beige](https://pandooragroup.it/shop/gres-porcellanato/architecta-pietra-beige-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Architecta Pietra Bianco](https://pandooragroup.it/shop/gres-porcellanato/architecta-pietra-bianco-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Venus Jade Veined](https://pandooragroup.it/shop/gres-porcellanato/venus-jade-veined-naturale/): Lastra 60×120 cm satinata, spessore 9 mm, da 12 €/m² + IVA
+  - [Venus Azul Veined](https://pandooragroup.it/shop/gres-porcellanato/venus-azul-veined-naturale/): Lastra 60×120 cm satinata, spessore 9 mm, da 12 €/m² + IVA
+  - [Marquinia Nero](https://pandooragroup.it/shop/gres-porcellanato/marquinia-nero-naturale/): Lastra 60×120 cm soft, spessore 6 mm, da 18 €/m² + IVA
+  - [Java Blaugrau](https://pandooragroup.it/shop/gres-porcellanato/java-blaugrau-naturale/): Lastra 60×120 cm naturale, spessore 6 mm, da 18 €/m² + IVA
+  - [Homey Bloom White](https://pandooragroup.it/shop/gres-porcellanato/homey-bloom-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Glitch Gravel](https://pandooragroup.it/shop/gres-porcellanato/glitch-gravel-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Ash](https://pandooragroup.it/shop/gres-porcellanato/glitch-ash-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Carbon](https://pandooragroup.it/shop/gres-porcellanato/glitch-carbon-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Salt](https://pandooragroup.it/shop/gres-porcellanato/glitch-salt-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Fault Clay](https://pandooragroup.it/shop/gres-porcellanato/glitch-fault-clay-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Fault Gravel](https://pandooragroup.it/shop/gres-porcellanato/glitch-fault-gravel-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Fault Sand](https://pandooragroup.it/shop/gres-porcellanato/glitch-fault-sand-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Fault Salt](https://pandooragroup.it/shop/gres-porcellanato/glitch-fault-salt-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Glitch Mix Warm](https://pandooragroup.it/shop/gres-porcellanato/glitch-mix-warm-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Earth Hexagon](https://pandooragroup.it/shop/gres-porcellanato/earth-hexagon-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Italian White](https://pandooragroup.it/shop/gres-porcellanato/italian-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [French Beige](https://pandooragroup.it/shop/gres-porcellanato/french-beige-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Travertino Ivory](https://pandooragroup.it/shop/gres-porcellanato/travertino-ivory-naturale/): Lastra 60×120 cm satinata, spessore 9 mm, da 12 €/m² + IVA
+  - [Bm White Mt](https://pandooragroup.it/shop/gres-porcellanato/bm-white-mt-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Bianco Perlino](https://pandooragroup.it/shop/gres-porcellanato/bianco-perlino-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Flatiron White](https://pandooragroup.it/shop/gres-porcellanato/flatiron-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Sunstone Freya](https://pandooragroup.it/shop/gres-porcellanato/sunstone-freya-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [PR1 Black](https://pandooragroup.it/shop/gres-porcellanato/pr1-black-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Pigmenta Taupe](https://pandooragroup.it/shop/gres-porcellanato/pigmenta-taupe-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Signature Stone Dark](https://pandooragroup.it/shop/gres-porcellanato/signature-stone-dark-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Signature Stone Grey](https://pandooragroup.it/shop/gres-porcellanato/signature-stone-grey-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Stone Valley Sabbia](https://pandooragroup.it/shop/gres-porcellanato/stone-valley-sabbia-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Stone Valley Sale](https://pandooragroup.it/shop/gres-porcellanato/stone-valley-sale-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Cashmere White](https://pandooragroup.it/shop/gres-porcellanato/cashmere-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Dolomite](https://pandooragroup.it/shop/gres-porcellanato/dolomite-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [HTL Rett Hard](https://pandooragroup.it/shop/gres-porcellanato/htl-rett-hard-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Decoro Palma Oro / Gr](https://pandooragroup.it/shop/gres-porcellanato/decoro-palma-oro-gr-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Miro Amber](https://pandooragroup.it/shop/gres-porcellanato/miro-amber-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Kado Lead Flakes](https://pandooragroup.it/shop/gres-porcellanato/kado-lead-flakes-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Pr1 ET. Grey](https://pandooragroup.it/shop/gres-porcellanato/pr1-et-grey-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Signature Stone White](https://pandooragroup.it/shop/gres-porcellanato/signature-stone-white-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Concept Pearl](https://pandooragroup.it/shop/gres-porcellanato/concept-pearl-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Mun Beige](https://pandooragroup.it/shop/gres-porcellanato/mun-beige-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Citylife Sand](https://pandooragroup.it/shop/gres-porcellanato/citylife-sand-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Select Cenere](https://pandooragroup.it/shop/gres-porcellanato/select-cenere-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Gravel](https://pandooragroup.it/shop/gres-porcellanato/gravel-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Slate Sabbia](https://pandooragroup.it/shop/gres-porcellanato/slate-sabbia-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Taj Mahal Amber](https://pandooragroup.it/shop/gres-porcellanato/taj-mahal-amber-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Sublime Dolomiti Nat.](https://pandooragroup.it/shop/gres-porcellanato/sublime-dolomiti-nat-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Rebel Bronze](https://pandooragroup.it/shop/gres-porcellanato/rebel-bronze-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Rebel Emerald](https://pandooragroup.it/shop/gres-porcellanato/rebel-emerald-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Doral Night](https://pandooragroup.it/shop/gres-porcellanato/doral-night-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Cluster Light](https://pandooragroup.it/shop/gres-porcellanato/cluster-light-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Arg Av Rt](https://pandooragroup.it/shop/gres-porcellanato/arg-av-rt-naturale/): Lastra 60×120 cm naturale, spessore 6,5 mm, da 12 €/m² + IVA
+  - [Bic Bone Mt](https://pandooragroup.it/shop/gres-porcellanato/bic-bone-mt-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Charme Nat](https://pandooragroup.it/shop/gres-porcellanato/charme-nat-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Citylife Beige](https://pandooragroup.it/shop/gres-porcellanato/citylife-beige-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Dark Flow](https://pandooragroup.it/shop/gres-porcellanato/dark-flow-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Mt Sr Tr White](https://pandooragroup.it/shop/gres-porcellanato/mt-sr-tr-white-naturale/): Lastra 60×120 cm satinata, spessore 6 mm, da 18 €/m² + IVA
+  - [Epoque Abstract](https://pandooragroup.it/shop/gres-porcellanato/epoque-abstract-naturale/): Lastra 60×120 cm satinata, spessore 6 mm, da 18 €/m² + IVA
+  - [Calacatta Viola](https://pandooragroup.it/shop/gres-porcellanato/calacatta-viola-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Calamina Grigio](https://pandooragroup.it/shop/gres-porcellanato/calamina-grigio-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Deluxe Oyster](https://pandooragroup.it/shop/gres-porcellanato/deluxe-oyster-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Origines Silver](https://pandooragroup.it/shop/gres-porcellanato/origines-silver-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Navona Vein Niveo](https://pandooragroup.it/shop/gres-porcellanato/navona-vein-niveo-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Wallart Glam](https://pandooragroup.it/shop/gres-porcellanato/wallart-glam-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Galaxy Emerald](https://pandooragroup.it/shop/gres-porcellanato/galaxy-emerald-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Beauvistone Gris](https://pandooragroup.it/shop/gres-porcellanato/beauvistone-gris-naturale/): Lastra 60×120 cm naturale, spessore 10 mm, da 18 €/m² + IVA
+  - [Bic Dune](https://pandooragroup.it/shop/gres-porcellanato/bic-dune-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Java Beige](https://pandooragroup.it/shop/gres-porcellanato/java-beige-naturale/): Lastra 60×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Terra Carbon](https://pandooragroup.it/shop/gres-porcellanato/terra-carbon-naturale/): Lastra 60×120 cm naturale, spessore 10 mm, da 18 €/m² + IVA
+  - [Terra Cendre](https://pandooragroup.it/shop/gres-porcellanato/terra-cendre-naturale/): Lastra 60×120 cm naturale, spessore 10 mm, da 18 €/m² + IVA
+  - [Java Braun](https://pandooragroup.it/shop/gres-porcellanato/java-braun-naturale/): Lastra 60×120 cm naturale, spessore 6 mm, da 18 €/m² + IVA
+  - [Java Hellgrau](https://pandooragroup.it/shop/gres-porcellanato/java-hellgrau-naturale/): Lastra 60×120 cm naturale, spessore 6 mm, da 18 €/m² + IVA
+  - [Cute Avorio](https://pandooragroup.it/shop/gres-porcellanato/cute-avorio-effetto-legno/): Listone effetto legno 25×150 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Caldera Coala](https://pandooragroup.it/shop/gres-porcellanato/caldera-coala-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 10 mm, da 12 €/m² + IVA
+  - [Antigua Grigio](https://pandooragroup.it/shop/gres-porcellanato/antigua-grigio-effetto-legno/): Listone effetto legno 15×90 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Treverk Wenge](https://pandooragroup.it/shop/gres-porcellanato/treverk-wenge-effetto-legno/): Listone effetto legno 15×120 o 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Treverk Made Fumé](https://pandooragroup.it/shop/gres-porcellanato/treverk-made-fume-effetto-legno/): Listone effetto legno 15×90 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Treverk Trend Larice Cenere](https://pandooragroup.it/shop/gres-porcellanato/treverk-trend-larice-cenere-effetto-legno/): Listone effetto legno 25×150 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Restore Tobacco Barn](https://pandooragroup.it/shop/gres-porcellanato/restore-tobacco-barn-effetto-legno/): Listone effetto legno 20×100 o 25×150 cm naturale, spessore 5,5 mm, da 18 €/m² + IVA
+  - [Restore Weathered Dock](https://pandooragroup.it/shop/gres-porcellanato/restore-weathered-dock-effetto-legno/): Listone effetto legno 25×150 cm naturale, spessore 5,5 mm, da 18 €/m² + IVA
+  - [Cottage Ulivo](https://pandooragroup.it/shop/gres-porcellanato/cottage-ulivo-effetto-legno/): Listone effetto legno 15×90 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Nodi Maestrale](https://pandooragroup.it/shop/gres-porcellanato/nodi-maestrale-effetto-legno/): Listone effetto legno 20×160 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Nodi Tramontana](https://pandooragroup.it/shop/gres-porcellanato/nodi-tramontana-effetto-legno/): Listone effetto legno 20×160 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ducale Bianco](https://pandooragroup.it/shop/gres-porcellanato/ducale-bianco-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ducale Ivory](https://pandooragroup.it/shop/gres-porcellanato/ducale-ivory-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ducale Miele](https://pandooragroup.it/shop/gres-porcellanato/ducale-miele-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ducale Noce](https://pandooragroup.it/shop/gres-porcellanato/ducale-noce-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Suite Dark Grey](https://pandooragroup.it/shop/gres-porcellanato/suite-dark-grey-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Doghe Olmo](https://pandooragroup.it/shop/gres-porcellanato/doghe-olmo-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Doghe Mogano](https://pandooragroup.it/shop/gres-porcellanato/doghe-mogano-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Doghe Castagno](https://pandooragroup.it/shop/gres-porcellanato/doghe-castagno-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Doghe Rovere](https://pandooragroup.it/shop/gres-porcellanato/doghe-rovere-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Essenze Larice](https://pandooragroup.it/shop/gres-porcellanato/essenze-larice-effetto-legno/): Listone effetto legno 60,5×121,4 o 30×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Essenze Rovere](https://pandooragroup.it/shop/gres-porcellanato/essenze-rovere-effetto-legno/): Listone effetto legno 20×120 o 60,5×121,4 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Essenze Noce](https://pandooragroup.it/shop/gres-porcellanato/essenze-noce-effetto-legno/): Listone effetto legno 60,5×121,4 o 30×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Essenze Abete](https://pandooragroup.it/shop/gres-porcellanato/essenze-abete-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Nordek Antracite](https://pandooragroup.it/shop/gres-porcellanato/nordek-antracite-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Nordek Dec. Antracite](https://pandooragroup.it/shop/gres-porcellanato/nordek-dec-antracite-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Nordek Greige](https://pandooragroup.it/shop/gres-porcellanato/nordek-greige-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Nordek Dec. Bianco](https://pandooragroup.it/shop/gres-porcellanato/nordek-dec-bianco-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Nordek Dec. Greige](https://pandooragroup.it/shop/gres-porcellanato/nordek-dec-greige-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Charme Warm](https://pandooragroup.it/shop/gres-porcellanato/charme-warm-effetto-legno/): Listone effetto legno 30×120 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ligno Avor](https://pandooragroup.it/shop/gres-porcellanato/ligno-avor-effetto-legno/): Listone effetto legno 22,5×180 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ligno Beige](https://pandooragroup.it/shop/gres-porcellanato/ligno-beige-effetto-legno/): Listone effetto legno 22,5×180 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Ligno Rovere](https://pandooragroup.it/shop/gres-porcellanato/ligno-rovere-effetto-legno/): Listone effetto legno 22,5×180 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Robur Cocoa](https://pandooragroup.it/shop/gres-porcellanato/robur-cocoa-effetto-legno/): Listone effetto legno 20×160 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Robur Honey](https://pandooragroup.it/shop/gres-porcellanato/robur-honey-effetto-legno/): Listone effetto legno 20×160 o 30×160 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Robur Oat](https://pandooragroup.it/shop/gres-porcellanato/robur-oat-effetto-legno/): Listone effetto legno 20×160 o 30×160 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Robur Pecan](https://pandooragroup.it/shop/gres-porcellanato/robur-pecan-effetto-legno/): Listone effetto legno 20×160 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Woodbreak Ebony](https://pandooragroup.it/shop/gres-porcellanato/woodbreak-ebony-effetto-legno/): Listone effetto legno 20×160 o 30×160 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Woodbreak Hemlock](https://pandooragroup.it/shop/gres-porcellanato/woodbreak-hemlock-effetto-legno/): Listone effetto legno 20×160 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Woodbreak Larch](https://pandooragroup.it/shop/gres-porcellanato/woodbreak-larch-effetto-legno/): Listone effetto legno 20×160 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Trvkvi Ro Ca Rt](https://pandooragroup.it/shop/gres-porcellanato/trvkvi-ro-ca-rt-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Vivo Castagno](https://pandooragroup.it/shop/gres-porcellanato/vivo-castagno-effetto-legno/): Listone effetto legno 20×150 o 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Vivo Grano](https://pandooragroup.it/shop/gres-porcellanato/vivo-grano-effetto-legno/): Listone effetto legno 20×150 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Trend Nat](https://pandooragroup.it/shop/gres-porcellanato/trend-nat-effetto-legno/): Listone effetto legno 30×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Nordek Bianco](https://pandooragroup.it/shop/gres-porcellanato/nordek-bianco-effetto-legno/): Listone effetto legno 60,50×121,40 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Nordek Dec. Grigio](https://pandooragroup.it/shop/gres-porcellanato/nordek-dec-grigio-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Sarasota White](https://pandooragroup.it/shop/gres-porcellanato/sarasota-white-effetto-legno/): Listone effetto legno 41,5×81 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Wood Land Bianco](https://pandooragroup.it/shop/gres-porcellanato/wood-land-bianco-effetto-legno/): Listone effetto legno 30×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Wood Land Grigio](https://pandooragroup.it/shop/gres-porcellanato/wood-land-grigio-effetto-legno/): Listone effetto legno 30×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Laguna Greige](https://pandooragroup.it/shop/gres-porcellanato/laguna-greige-effetto-legno/): Listone effetto legno 20×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Laguna Light](https://pandooragroup.it/shop/gres-porcellanato/laguna-light-effetto-legno/): Listone effetto legno 30×120 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Noa Ottanio Lux](https://pandooragroup.it/shop/gres-porcellanato/noa-ottanio-lux-rivestimento/): Rivestimento 25×75 cm lucido, spessore 8 mm, monoporosa pasta bianca, da 12 €/m² + IVA
+  - [Ark Red](https://pandooragroup.it/shop/gres-porcellanato/ark-red-rivestimento/): Rivestimento 40×80 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Biocrete Sky](https://pandooragroup.it/shop/gres-porcellanato/biocrete-sky-rivestimento/): Rivestimento 30×90 cm naturale, spessore 10 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Biocrete Powder Flute](https://pandooragroup.it/shop/gres-porcellanato/biocrete-powder-flute-rivestimento/): Rivestimento 30×90 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Biocrete Mineral Flute](https://pandooragroup.it/shop/gres-porcellanato/biocrete-mineral-flute-rivestimento/): Rivestimento 30×90 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Biocrete Clay Flute](https://pandooragroup.it/shop/gres-porcellanato/biocrete-clay-flute-rivestimento/): Rivestimento 30×90 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [3D Line](https://pandooragroup.it/shop/gres-porcellanato/3d-line-rivestimento/): Rivestimento 25×75 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca, da 12 €/m² + IVA
+  - [E Wall Petrolio](https://pandooragroup.it/shop/gres-porcellanato/e-wall-petrolio-rivestimento/): Rivestimento 40×80 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [3D White Chevron](https://pandooragroup.it/shop/gres-porcellanato/3d-white-chevron-rivestimento/): Rivestimento 30,5×56 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Esagona Brown](https://pandooragroup.it/shop/gres-porcellanato/esagona-brown-rivestimento/): Rivestimento 34×40 cm naturale, spessore 8 mm, da 18 €/m² + IVA
+  - [Feel White Matt](https://pandooragroup.it/shop/gres-porcellanato/feel-white-matt-rivestimento/): Rivestimento 30×120 cm naturale, spessore 8 mm, da 12 €/m² + IVA
+  - [Glance Taupe](https://pandooragroup.it/shop/gres-porcellanato/glance-taupe-rivestimento/): Rivestimento 20×60 cm satinato, spessore 8 mm, da 18 €/m² + IVA
+  - [Laque Particuliere](https://pandooragroup.it/shop/gres-porcellanato/laque-particuliere-rivestimento/): Rivestimento 20×50 cm colorato, spessore 7 mm, monoporosa pasta bianca, da 12 €/m² + IVA
+  - [Moon White Riv.](https://pandooragroup.it/shop/gres-porcellanato/moon-white-riv-rivestimento/): Rivestimento 15,60×60,60 cm naturale, spessore 9 mm, da 18 €/m² + IVA
+  - [Pavè Wall Dolmen Fumo](https://pandooragroup.it/shop/gres-porcellanato/pave-wall-dolmen-fumo-rivestimento/): Rivestimento 22,5×45 cm naturale, spessore 9 mm, da 12 €/m² + IVA
+  - [Purestone Muretto Grigio](https://pandooragroup.it/shop/gres-porcellanato/purestone-muretto-grigio-rivestimento/): Rivestimento 30×60 cm naturale, spessore 8 mm, da 18 €/m² + IVA
+  - [Safari Amande](https://pandooragroup.it/shop/gres-porcellanato/safari-amande-rivestimento/): Rivestimento 59,8×87,7 cm lucido, spessore 5,5 mm, da 12 €/m² + IVA
+  - [Weiss Lux](https://pandooragroup.it/shop/gres-porcellanato/weiss-lux-rivestimento/): Rivestimento 25×60 cm lucido, spessore 9 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [White Lux](https://pandooragroup.it/shop/gres-porcellanato/white-lux-rivestimento/): Rivestimento 20×40 cm lucido, spessore 9 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Illusion Materika Grigio](https://pandooragroup.it/shop/gres-porcellanato/illusion-materika-grigio-rivestimento/): Rivestimento 60×120 cm naturale, spessore 10 mm, da 18 €/m² + IVA
+  - [White Smooth](https://pandooragroup.it/shop/gres-porcellanato/white-smooth-rivestimento/): Rivestimento 20×60 cm lucido e naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Greige Smooth](https://pandooragroup.it/shop/gres-porcellanato/greige-smooth-rivestimento/): Rivestimento 20×60 cm lucido e naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Tin Smooth](https://pandooragroup.it/shop/gres-porcellanato/tin-smooth-rivestimento/): Rivestimento 20×60 cm lucido e naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Kaki Smooth](https://pandooragroup.it/shop/gres-porcellanato/kaki-smooth-rivestimento/): Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Lead Smooth](https://pandooragroup.it/shop/gres-porcellanato/lead-smooth-rivestimento/): Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Smoke Smooth](https://pandooragroup.it/shop/gres-porcellanato/smoke-smooth-rivestimento/): Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Ash Smooth](https://pandooragroup.it/shop/gres-porcellanato/ash-smooth-rivestimento/): Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
+  - [Bone Smooth](https://pandooragroup.it/shop/gres-porcellanato/bone-smooth-rivestimento/): Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca, da 18 €/m² + IVA
 
 ## Pagine principali
 - [Home](https://pandooragroup.it/)

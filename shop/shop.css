@@ -1234,3 +1234,12 @@ body.shop{overflow-x:clip}
 @media (min-width:901px){body[data-cat="porte-per-interni"] .pdp-opts .s-pm-scroll:not(:has(fieldset)){min-height:1200px}}
 @media (max-width:900px){body[data-cat="porte-per-interni"] .pdp-opts .s-pm-scroll:not(:has(fieldset)){min-height:900px}}
 .s-check.off{opacity:.62}
+
+/* ---------- gres porcellanato (prezzo al m²) ---------- */
+.s-price .s-mq{display:inline;font-size:14px;font-weight:700;font-style:normal;color:var(--mute);margin-left:2px}
+a.s-add{text-decoration:none}
+.s-dims.one{grid-template-columns:1fr}
+.s-card[data-type="tile"] .s-card-img img{object-fit:cover}
+.s-pm-media.tile{background:#f4f2ee}
+.s-pm-media.tile>img{object-fit:contain}
+#s-f-custom[hidden]{display:none}

@@ -1,7 +1,7 @@
 {
  "_nota": "Elenco prodotti del negozio. Sarà sostituito dal database Supabase.",
  "pricing": {
-  "_nota": "Regole prezzi. Porte: IVA esclusa, posa e trasporto inclusi in Veneto e FVG (fonte: /porte-interne-prezzi/). Arredi: IVA inclusa, trasporto escluso.",
+  "_nota": "Regole prezzi. Porte: IVA esclusa, posa e trasporto inclusi in Veneto e FVG (fonte: /porte-interne-prezzi/). Arredi: IVA inclusa, trasporto escluso. Gres: prezzo al m² IVA esclusa, trasporto a parte.",
   "door": {
    "lines": {
     "laminata": 395,
@@ -307,6 +307,46 @@
      ]
     ]
    }
+  },
+  "tile": {
+   "scelte": {
+    "1°": {
+     "label": "1ª scelta",
+     "price": 18,
+     "max": 21
+    },
+    "1°C": {
+     "label": "1ª commerciale (1°C)",
+     "price": 18,
+     "max": 21
+    },
+    "2°": {
+     "label": "2ª scelta",
+     "price": 12,
+     "max": 14
+    },
+    "S": {
+     "label": "Scelta S",
+     "price": 12,
+     "max": 14
+    }
+   },
+   "order": [
+    "1°",
+    "1°C",
+    "2°",
+    "S"
+   ],
+   "mqDefault": 20,
+   "mqMin": 1,
+   "mqMax": 5000,
+   "mqQuick": [
+    10,
+    20,
+    50,
+    100
+   ],
+   "ivaNote": "IVA esclusa · trasporto a parte · prezzo e m² confermati con l'ordine"
   }
  },
  "products": [
@@ -6046,6 +6086,9832 @@
    ],
    "rank": 30,
    "imgSet": "/shop/img/prodotti/libreria-quadra-2x4-480.jpg 480w, /shop/img/prodotti/libreria-quadra-2x4-800.jpg 800w"
+  },
+  {
+   "id": "ap-absolute-white-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Ap. Absolute White",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ap-absolute-white-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ap-absolute-white-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 200
+  },
+  {
+   "id": "mh-calacatta-delicato-k-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MH Calacatta Delicato K",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mh-calacatta-delicato-k-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mh-calacatta-delicato-k-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 201
+  },
+  {
+   "id": "md-bianco-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Md Bianco",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-md-bianco-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-md-bianco-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 202
+  },
+  {
+   "id": "md-grigio-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MD Grigio",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-md-grigio-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-md-grigio-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 203
+  },
+  {
+   "id": "me-brown-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "ME Brown",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-me-brown-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-me-brown-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 204
+  },
+  {
+   "id": "mh-calacatta-prestige-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MH Calacatta Prestige",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mh-calacatta-prestige-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mh-calacatta-prestige-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 205
+  },
+  {
+   "id": "mm-calacatta-bernini-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MM Calacatta Bernini",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mm-calacatta-bernini-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mm-calacatta-bernini-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 206
+  },
+  {
+   "id": "mm-calacatta-meraviglia-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MM Calacatta Meraviglia",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mm-calacatta-meraviglia-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mm-calacatta-meraviglia-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 207
+  },
+  {
+   "id": "mm-silver-majestic-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MM Silver Majestic",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mm-silver-majestic-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mm-silver-majestic-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 208
+  },
+  {
+   "id": "mo-noir-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MO Noir",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mo-noir-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mo-noir-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 209
+  },
+  {
+   "id": "mo-pearl-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MO Pearl",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mo-pearl-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mo-pearl-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 210
+  },
+  {
+   "id": "mv-calacatta-lp-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MV Calacatta LP",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mv-calacatta-lp-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mv-calacatta-lp-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 211
+  },
+  {
+   "id": "mx-fior-di-bosco-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MX Fior di Bosco",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mx-fior-di-bosco-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mx-fior-di-bosco-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 212
+  },
+  {
+   "id": "bd-w-white-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "BD W White",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-bd-w-white-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bd-w-white-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 213
+  },
+  {
+   "id": "ms-bianco-dolomia-k-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MS Bianco Dolomia K",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ms-bianco-dolomia-k-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ms-bianco-dolomia-k-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 214
+  },
+  {
+   "id": "brera-board-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Brera Board",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-brera-board-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-brera-board-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 215
+  },
+  {
+   "id": "brera-frame-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Brera Frame",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-brera-frame-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-brera-frame-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 216
+  },
+  {
+   "id": "bronze-lux-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Bronze Lux",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-bronze-lux-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bronze-lux-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 217
+  },
+  {
+   "id": "fior-di-bosco-glossy-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Fior di Bosco Glossy",
+   "desc": "Lastra 60×120 cm lucida, spessore 10 mm",
+   "img": "/assets/ceramica/stock/gres-fior-di-bosco-glossy-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-fior-di-bosco-glossy-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 218
+  },
+  {
+   "id": "english-grey-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "English Grey",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-english-grey-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-english-grey-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 219
+  },
+  {
+   "id": "ms-carrara-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MS Carrara",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ms-carrara-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ms-carrara-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "1°C scelta",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 220
+  },
+  {
+   "id": "mx-grey-lp-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MX Grey LP",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mx-grey-lp-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mx-grey-lp-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 221
+  },
+  {
+   "id": "arabescato-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Arabescato",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-arabescato-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-arabescato-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 222
+  },
+  {
+   "id": "calacatta-gold-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Calacatta Gold",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-calacatta-gold-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-calacatta-gold-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 223
+  },
+  {
+   "id": "mh-calacatta-delicato-a-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MH Calacatta Delicato A",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mh-calacatta-delicato-a-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mh-calacatta-delicato-a-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 224
+  },
+  {
+   "id": "onyx-pearl-white-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Onyx Pearl White",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-onyx-pearl-white-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-onyx-pearl-white-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 225
+  },
+  {
+   "id": "brenzo-natural-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Brenzo Natural",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-brenzo-natural-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-brenzo-natural-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": [
+     "Made in India"
+    ]
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 226
+  },
+  {
+   "id": "helix-grey-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Helix Grey",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-helix-grey-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-helix-grey-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": [
+     "Made in India"
+    ]
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 227
+  },
+  {
+   "id": "onyx-blue-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Onyx Blue",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-onyx-blue-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-onyx-blue-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 228
+  },
+  {
+   "id": "marquinia-black-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Marquinia Black",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-marquinia-black-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-marquinia-black-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 229
+  },
+  {
+   "id": "luce-oro-lusso-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Luce Oro Lusso",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-luce-oro-lusso-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-luce-oro-lusso-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 230
+  },
+  {
+   "id": "ms-bianco-dolomia-a-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "MS Bianco Dolomia A",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ms-bianco-dolomia-a-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ms-bianco-dolomia-a-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 231
+  },
+  {
+   "id": "infinity-brazil-6-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Infinity Brazil 6",
+   "desc": "Lastra 60×120 cm lappata, spessore 6,5 mm",
+   "img": "/assets/ceramica/stock/gres-infinity-brazil-6-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-infinity-brazil-6-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6,5 mm",
+    "fin": [
+     "Lappato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lappato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lappato",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 232
+  },
+  {
+   "id": "blue-jeans-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Blue Jeans",
+   "desc": "Lastra 60×120 cm lucida, spessore 6,5 mm",
+   "img": "/assets/ceramica/stock/gres-blue-jeans-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-blue-jeans-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6,5 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 233
+  },
+  {
+   "id": "calacatta-picasso-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Calacatta Picasso",
+   "desc": "Lastra 60×120 cm lucida, spessore 6,5 mm",
+   "img": "/assets/ceramica/stock/gres-calacatta-picasso-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-calacatta-picasso-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6,5 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 234
+  },
+  {
+   "id": "montecarlo-black-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Montecarlo Black",
+   "desc": "Lastra 60×120 cm lucida, spessore 6,5 mm",
+   "img": "/assets/ceramica/stock/gres-montecarlo-black-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-montecarlo-black-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6,5 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 235
+  },
+  {
+   "id": "mv-calacatta-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Mv Calacatta",
+   "desc": "Lastra 60×120 cm lucida, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-mv-calacatta-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mv-calacatta-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 236
+  },
+  {
+   "id": "onyx-smoky-grey-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Onyx Smoky Grey",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-onyx-smoky-grey-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-onyx-smoky-grey-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 237
+  },
+  {
+   "id": "marquinia-nero-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Marquinia Nero",
+   "desc": "Lastra 60×120 cm lucida, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-marquinia-nero-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-marquinia-nero-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "1°C scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 238
+  },
+  {
+   "id": "onice-allure-midnight-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Onice Allure Midnight",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-onice-allure-midnight-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-onice-allure-midnight-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "2° scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 239
+  },
+  {
+   "id": "evoluta-forest-light-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Evoluta Forest Light",
+   "desc": "Lastra 60×120 cm lappata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-evoluta-forest-light-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-evoluta-forest-light-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lappato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lappato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lappato",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 240
+  },
+  {
+   "id": "italian-white-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Italian White",
+   "desc": "Lastra 60×120 cm lappata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-italian-white-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-italian-white-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lappato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lappato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lappato",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 241
+  },
+  {
+   "id": "onyx-pale-azure-lucido",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "lucidi",
+   "subs": [
+    "lucidi"
+   ],
+   "name": "Onyx Pale Azure",
+   "desc": "Lastra 60×120 cm lucida, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-onyx-pale-azure-lucido.webp",
+   "imgLg": "/assets/ceramica/stock/gres-onyx-pale-azure-lucido.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "lucidi",
+    "lucido",
+    "60x120",
+    "S scelta",
+    "marmo",
+    "lucido"
+   ],
+   "rank": 242
+  },
+  {
+   "id": "portland-hood-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Portland Hood",
+   "desc": "Lastra 60×120 cm naturale, spessore 8,5 mm",
+   "img": "/assets/ceramica/stock/gres-portland-hood-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-portland-hood-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "8,5 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 243
+  },
+  {
+   "id": "portland-jordan-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Portland Jordan",
+   "desc": "Lastra 60×120 cm naturale, spessore 8,5 mm",
+   "img": "/assets/ceramica/stock/gres-portland-jordan-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-portland-jordan-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "8,5 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 244
+  },
+  {
+   "id": "alpine-silk-cross-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Alpine Silk Cross",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-alpine-silk-cross-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-alpine-silk-cross-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 245
+  },
+  {
+   "id": "pietra-grey-fog-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Pietra Grey Fog",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-pietra-grey-fog-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pietra-grey-fog-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 246
+  },
+  {
+   "id": "kalmit-zement-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Kalmit Zement",
+   "desc": "Lastra 60×120 cm naturale, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-kalmit-zement-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-kalmit-zement-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 247
+  },
+  {
+   "id": "kalmit-sand-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Kalmit Sand",
+   "desc": "Lastra 60×120 cm naturale, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-kalmit-sand-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-kalmit-sand-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 248
+  },
+  {
+   "id": "basalt-sabbia-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Basalt Sabbia",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-basalt-sabbia-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-basalt-sabbia-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 249
+  },
+  {
+   "id": "pietra-nordica-nero-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Pietra Nordica Nero",
+   "desc": "Lastra 60×120 cm naturale, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-pietra-nordica-nero-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pietra-nordica-nero-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 250
+  },
+  {
+   "id": "stonecement-antracite-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Stonecement Antracite",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-stonecement-antracite-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-stonecement-antracite-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 251
+  },
+  {
+   "id": "boston-sand-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Boston Sand",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-boston-sand-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-boston-sand-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 252
+  },
+  {
+   "id": "boston-grey-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Boston Grey",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-boston-grey-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-boston-grey-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 253
+  },
+  {
+   "id": "slate-avorio-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Slate Avorio",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-slate-avorio-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-slate-avorio-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 254
+  },
+  {
+   "id": "pigmenta-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Pigmenta White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-pigmenta-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pigmenta-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 255
+  },
+  {
+   "id": "cnc-sand-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Cnc Sand",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-cnc-sand-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-cnc-sand-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 256
+  },
+  {
+   "id": "saint-remy-grigio-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Saint Remy Grigio",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-saint-remy-grigio-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-saint-remy-grigio-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 257
+  },
+  {
+   "id": "oxidatio-lithium-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Oxidatio Lithium",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-oxidatio-lithium-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-oxidatio-lithium-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 258
+  },
+  {
+   "id": "intarsi-raffaello-3d-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Intarsi Raffaello 3D",
+   "desc": "Lastra 60×120 cm satinata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-intarsi-raffaello-3d-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-intarsi-raffaello-3d-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 259
+  },
+  {
+   "id": "intarsi-warm-thera-3d-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Intarsi Warm Thera 3D",
+   "desc": "Lastra 60×120 cm satinata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-intarsi-warm-thera-3d-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-intarsi-warm-thera-3d-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 260
+  },
+  {
+   "id": "intarsi-warm-agora-3d-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Intarsi Warm Agorà 3D",
+   "desc": "Lastra 60×120 cm satinata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-intarsi-warm-agora-3d-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-intarsi-warm-agora-3d-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 261
+  },
+  {
+   "id": "galaxy-pearl-3d-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Galaxy Pearl 3D",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-galaxy-pearl-3d-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-galaxy-pearl-3d-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 262
+  },
+  {
+   "id": "travertino-tivoli-beige-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Travertino Tivoli Beige",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-travertino-tivoli-beige-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-travertino-tivoli-beige-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 263
+  },
+  {
+   "id": "loft-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Loft White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-loft-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-loft-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 264
+  },
+  {
+   "id": "marquinia-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Marquinia White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-marquinia-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-marquinia-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 265
+  },
+  {
+   "id": "native-grey-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Native Grey",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-native-grey-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-native-grey-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 266
+  },
+  {
+   "id": "nereidi-cloud-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Nereidi Cloud",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nereidi-cloud-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nereidi-cloud-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 267
+  },
+  {
+   "id": "tlv-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "TLV White",
+   "desc": "Lastra 60×120 cm naturale, spessore 11 mm",
+   "img": "/assets/ceramica/stock/gres-tlv-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-tlv-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "11 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 268
+  },
+  {
+   "id": "corsocomo-cookie-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Corsocomo Cookie",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-corsocomo-cookie-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-corsocomo-cookie-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 269
+  },
+  {
+   "id": "boost-balance-cream-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Boost Balance Cream",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-boost-balance-cream-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-boost-balance-cream-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 270
+  },
+  {
+   "id": "agathos-multicolor-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Agathos Multicolor",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-agathos-multicolor-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-agathos-multicolor-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 271
+  },
+  {
+   "id": "unique-sand-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Unique Sand",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-unique-sand-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-unique-sand-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 272
+  },
+  {
+   "id": "architecta-pietra-beige-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Architecta Pietra Beige",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-architecta-pietra-beige-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-architecta-pietra-beige-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 273
+  },
+  {
+   "id": "architecta-pietra-bianco-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Architecta Pietra Bianco",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-architecta-pietra-bianco-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-architecta-pietra-bianco-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 274
+  },
+  {
+   "id": "venus-jade-veined-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Venus Jade Veined",
+   "desc": "Lastra 60×120 cm satinata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-venus-jade-veined-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-venus-jade-veined-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 275
+  },
+  {
+   "id": "venus-azul-veined-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Venus Azul Veined",
+   "desc": "Lastra 60×120 cm satinata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-venus-azul-veined-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-venus-azul-veined-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 276
+  },
+  {
+   "id": "marquinia-nero-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Marquinia Nero",
+   "desc": "Lastra 60×120 cm soft, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-marquinia-nero-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-marquinia-nero-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Soft"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Soft"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "soft",
+    "60x120",
+    "1°C scelta"
+   ],
+   "rank": 277
+  },
+  {
+   "id": "java-blaugrau-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Java Blaugrau",
+   "desc": "Lastra 60×120 cm naturale, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-java-blaugrau-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-java-blaugrau-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 278
+  },
+  {
+   "id": "homey-bloom-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Homey Bloom White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-homey-bloom-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-homey-bloom-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 279
+  },
+  {
+   "id": "glitch-gravel-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Gravel",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-gravel-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-gravel-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 280
+  },
+  {
+   "id": "glitch-ash-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Ash",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-ash-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-ash-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 281
+  },
+  {
+   "id": "glitch-carbon-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Carbon",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-carbon-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-carbon-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 282
+  },
+  {
+   "id": "glitch-salt-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Salt",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-salt-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-salt-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 283
+  },
+  {
+   "id": "glitch-fault-clay-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Fault Clay",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-fault-clay-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-fault-clay-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 284
+  },
+  {
+   "id": "glitch-fault-gravel-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Fault Gravel",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-fault-gravel-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-fault-gravel-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 285
+  },
+  {
+   "id": "glitch-fault-sand-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Fault Sand",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-fault-sand-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-fault-sand-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 286
+  },
+  {
+   "id": "glitch-fault-salt-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Fault Salt",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-fault-salt-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-fault-salt-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 287
+  },
+  {
+   "id": "glitch-mix-warm-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Glitch Mix Warm",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-glitch-mix-warm-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glitch-mix-warm-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 288
+  },
+  {
+   "id": "earth-hexagon-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Earth Hexagon",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-earth-hexagon-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-earth-hexagon-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 289
+  },
+  {
+   "id": "italian-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Italian White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-italian-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-italian-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 290
+  },
+  {
+   "id": "french-beige-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "French Beige",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-french-beige-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-french-beige-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 291
+  },
+  {
+   "id": "travertino-ivory-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Travertino Ivory",
+   "desc": "Lastra 60×120 cm satinata, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-travertino-ivory-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-travertino-ivory-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 292
+  },
+  {
+   "id": "bm-white-mt-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Bm White Mt",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-bm-white-mt-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bm-white-mt-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1°C scelta",
+    "2° scelta"
+   ],
+   "rank": 293
+  },
+  {
+   "id": "bianco-perlino-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Bianco Perlino",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-bianco-perlino-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bianco-perlino-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1°C scelta",
+    "2° scelta"
+   ],
+   "rank": 294
+  },
+  {
+   "id": "flatiron-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Flatiron White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-flatiron-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-flatiron-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 295
+  },
+  {
+   "id": "sunstone-freya-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Sunstone Freya",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-sunstone-freya-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-sunstone-freya-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 296
+  },
+  {
+   "id": "pr1-black-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "PR1 Black",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-pr1-black-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pr1-black-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta",
+    "S scelta"
+   ],
+   "rank": 297
+  },
+  {
+   "id": "pigmenta-taupe-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Pigmenta Taupe",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-pigmenta-taupe-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pigmenta-taupe-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 298
+  },
+  {
+   "id": "signature-stone-dark-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Signature Stone Dark",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-signature-stone-dark-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-signature-stone-dark-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 299
+  },
+  {
+   "id": "signature-stone-grey-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Signature Stone Grey",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-signature-stone-grey-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-signature-stone-grey-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 300
+  },
+  {
+   "id": "stone-valley-sabbia-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Stone Valley Sabbia",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-stone-valley-sabbia-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-stone-valley-sabbia-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 301
+  },
+  {
+   "id": "stone-valley-sale-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Stone Valley Sale",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-stone-valley-sale-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-stone-valley-sale-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 302
+  },
+  {
+   "id": "cashmere-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Cashmere White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-cashmere-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-cashmere-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta",
+    "2° scelta"
+   ],
+   "rank": 303
+  },
+  {
+   "id": "dolomite-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Dolomite",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-dolomite-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-dolomite-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 304
+  },
+  {
+   "id": "htl-rett-hard-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "HTL Rett Hard",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-htl-rett-hard-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-htl-rett-hard-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 305
+  },
+  {
+   "id": "decoro-palma-oro-gr-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Decoro Palma Oro / Gr",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-decoro-palma-oro-gr-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-decoro-palma-oro-gr-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta",
+    "2° scelta"
+   ],
+   "rank": 306
+  },
+  {
+   "id": "miro-amber-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Miro Amber",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-miro-amber-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-miro-amber-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 307
+  },
+  {
+   "id": "kado-lead-flakes-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Kado Lead Flakes",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-kado-lead-flakes-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-kado-lead-flakes-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 308
+  },
+  {
+   "id": "pr1-et-grey-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Pr1 ET. Grey",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-pr1-et-grey-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pr1-et-grey-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 309
+  },
+  {
+   "id": "signature-stone-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Signature Stone White",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-signature-stone-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-signature-stone-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 310
+  },
+  {
+   "id": "concept-pearl-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Concept Pearl",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-concept-pearl-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-concept-pearl-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 311
+  },
+  {
+   "id": "mun-beige-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Mun Beige",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-mun-beige-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mun-beige-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 312
+  },
+  {
+   "id": "citylife-sand-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Citylife Sand",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-citylife-sand-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-citylife-sand-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 313
+  },
+  {
+   "id": "select-cenere-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Select Cenere",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-select-cenere-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-select-cenere-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 314
+  },
+  {
+   "id": "gravel-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Gravel",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-gravel-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-gravel-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 315
+  },
+  {
+   "id": "slate-sabbia-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Slate Sabbia",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-slate-sabbia-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-slate-sabbia-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 316
+  },
+  {
+   "id": "taj-mahal-amber-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Taj Mahal Amber",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-taj-mahal-amber-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-taj-mahal-amber-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 317
+  },
+  {
+   "id": "sublime-dolomiti-nat-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Sublime Dolomiti Nat.",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-sublime-dolomiti-nat-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-sublime-dolomiti-nat-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta",
+    "S scelta"
+   ],
+   "rank": 318
+  },
+  {
+   "id": "rebel-bronze-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Rebel Bronze",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-rebel-bronze-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-rebel-bronze-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 319
+  },
+  {
+   "id": "rebel-emerald-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Rebel Emerald",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-rebel-emerald-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-rebel-emerald-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 320
+  },
+  {
+   "id": "doral-night-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Doral Night",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-doral-night-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-doral-night-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 321
+  },
+  {
+   "id": "cluster-light-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Cluster Light",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-cluster-light-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-cluster-light-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 322
+  },
+  {
+   "id": "arg-av-rt-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Arg Av Rt",
+   "desc": "Lastra 60×120 cm naturale, spessore 6,5 mm",
+   "img": "/assets/ceramica/stock/gres-arg-av-rt-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-arg-av-rt-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6,5 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 323
+  },
+  {
+   "id": "bic-bone-mt-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Bic Bone Mt",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-bic-bone-mt-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bic-bone-mt-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1°C scelta",
+    "2° scelta"
+   ],
+   "rank": 324
+  },
+  {
+   "id": "charme-nat-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Charme Nat",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-charme-nat-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-charme-nat-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 325
+  },
+  {
+   "id": "citylife-beige-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Citylife Beige",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-citylife-beige-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-citylife-beige-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 326
+  },
+  {
+   "id": "dark-flow-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Dark Flow",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-dark-flow-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-dark-flow-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 327
+  },
+  {
+   "id": "mt-sr-tr-white-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Mt Sr Tr White",
+   "desc": "Lastra 60×120 cm satinata, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-mt-sr-tr-white-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-mt-sr-tr-white-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 328
+  },
+  {
+   "id": "epoque-abstract-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Epoque Abstract",
+   "desc": "Lastra 60×120 cm satinata, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-epoque-abstract-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-epoque-abstract-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "satinato",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 329
+  },
+  {
+   "id": "calacatta-viola-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Calacatta Viola",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-calacatta-viola-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-calacatta-viola-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 330
+  },
+  {
+   "id": "calamina-grigio-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Calamina Grigio",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-calamina-grigio-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-calamina-grigio-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 331
+  },
+  {
+   "id": "deluxe-oyster-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Deluxe Oyster",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-deluxe-oyster-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-deluxe-oyster-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 332
+  },
+  {
+   "id": "origines-silver-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Origines Silver",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-origines-silver-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-origines-silver-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 333
+  },
+  {
+   "id": "navona-vein-niveo-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Navona Vein Niveo",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-navona-vein-niveo-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-navona-vein-niveo-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 334
+  },
+  {
+   "id": "wallart-glam-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Wallart Glam",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-wallart-glam-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-wallart-glam-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "2° scelta"
+   ],
+   "rank": 335
+  },
+  {
+   "id": "galaxy-emerald-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Galaxy Emerald",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-galaxy-emerald-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-galaxy-emerald-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "S scelta"
+   ],
+   "rank": 336
+  },
+  {
+   "id": "beauvistone-gris-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Beauvistone Gris",
+   "desc": "Lastra 60×120 cm naturale, spessore 10 mm",
+   "img": "/assets/ceramica/stock/gres-beauvistone-gris-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-beauvistone-gris-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 337
+  },
+  {
+   "id": "bic-dune-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Bic Dune",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-bic-dune-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bic-dune-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 338
+  },
+  {
+   "id": "java-beige-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Java Beige",
+   "desc": "Lastra 60×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-java-beige-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-java-beige-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 339
+  },
+  {
+   "id": "terra-carbon-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Terra Carbon",
+   "desc": "Lastra 60×120 cm naturale, spessore 10 mm",
+   "img": "/assets/ceramica/stock/gres-terra-carbon-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-terra-carbon-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 340
+  },
+  {
+   "id": "terra-cendre-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Terra Cendre",
+   "desc": "Lastra 60×120 cm naturale, spessore 10 mm",
+   "img": "/assets/ceramica/stock/gres-terra-cendre-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-terra-cendre-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 341
+  },
+  {
+   "id": "java-braun-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Java Braun",
+   "desc": "Lastra 60×120 cm naturale, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-java-braun-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-java-braun-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 342
+  },
+  {
+   "id": "java-hellgrau-naturale",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "naturali",
+   "subs": [
+    "naturali"
+   ],
+   "name": "Java Hellgrau",
+   "desc": "Lastra 60×120 cm naturale, spessore 6 mm",
+   "img": "/assets/ceramica/stock/gres-java-hellgrau-naturale.webp",
+   "imgLg": "/assets/ceramica/stock/gres-java-hellgrau-naturale.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "6 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "naturali",
+    "naturale",
+    "60x120",
+    "1° scelta"
+   ],
+   "rank": 343
+  },
+  {
+   "id": "cute-avorio-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Cute Avorio",
+   "desc": "Listone effetto legno 25×150 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-cute-avorio-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-cute-avorio-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "25x150"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "25x150",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 344
+  },
+  {
+   "id": "caldera-coala-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Caldera Coala",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 10 mm",
+   "img": "/assets/ceramica/stock/gres-caldera-coala-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-caldera-coala-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 345
+  },
+  {
+   "id": "antigua-grigio-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Antigua Grigio",
+   "desc": "Listone effetto legno 15×90 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-antigua-grigio-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-antigua-grigio-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "15x90"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "15x90",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 346
+  },
+  {
+   "id": "treverk-wenge-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Treverk Wenge",
+   "desc": "Listone effetto legno 15×120 o 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-treverk-wenge-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-treverk-wenge-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "15x120",
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "15x120",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 347
+  },
+  {
+   "id": "treverk-made-fume-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Treverk Made Fumé",
+   "desc": "Listone effetto legno 15×90 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-treverk-made-fume-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-treverk-made-fume-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "15x90"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": false,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "15x90",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 348
+  },
+  {
+   "id": "treverk-trend-larice-cenere-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Treverk Trend Larice Cenere",
+   "desc": "Listone effetto legno 25×150 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-treverk-trend-larice-cenere-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-treverk-trend-larice-cenere-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "25x150"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "25x150",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 349
+  },
+  {
+   "id": "restore-tobacco-barn-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Restore Tobacco Barn",
+   "desc": "Listone effetto legno 20×100 o 25×150 cm naturale, spessore 5,5 mm",
+   "img": "/assets/ceramica/stock/gres-restore-tobacco-barn-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-restore-tobacco-barn-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x100",
+     "25x150"
+    ],
+    "sp": "5,5 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x100",
+    "25x150",
+    "1°C scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 350
+  },
+  {
+   "id": "restore-weathered-dock-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Restore Weathered Dock",
+   "desc": "Listone effetto legno 25×150 cm naturale, spessore 5,5 mm",
+   "img": "/assets/ceramica/stock/gres-restore-weathered-dock-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-restore-weathered-dock-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "25x150"
+    ],
+    "sp": "5,5 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "25x150",
+    "1°C scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 351
+  },
+  {
+   "id": "cottage-ulivo-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Cottage Ulivo",
+   "desc": "Listone effetto legno 15×90 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-cottage-ulivo-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-cottage-ulivo-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "15x90"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "15x90",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 352
+  },
+  {
+   "id": "nodi-maestrale-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nodi Maestrale",
+   "desc": "Listone effetto legno 20×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nodi-maestrale-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nodi-maestrale-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 353
+  },
+  {
+   "id": "nodi-tramontana-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nodi Tramontana",
+   "desc": "Listone effetto legno 20×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nodi-tramontana-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nodi-tramontana-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 354
+  },
+  {
+   "id": "ducale-bianco-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ducale Bianco",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ducale-bianco-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ducale-bianco-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 355
+  },
+  {
+   "id": "ducale-ivory-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ducale Ivory",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ducale-ivory-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ducale-ivory-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 356
+  },
+  {
+   "id": "ducale-miele-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ducale Miele",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ducale-miele-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ducale-miele-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 357
+  },
+  {
+   "id": "ducale-noce-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ducale Noce",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ducale-noce-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ducale-noce-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 358
+  },
+  {
+   "id": "suite-dark-grey-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Suite Dark Grey",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-suite-dark-grey-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-suite-dark-grey-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 359
+  },
+  {
+   "id": "doghe-olmo-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Doghe Olmo",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-doghe-olmo-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-doghe-olmo-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 360
+  },
+  {
+   "id": "doghe-mogano-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Doghe Mogano",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-doghe-mogano-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-doghe-mogano-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 361
+  },
+  {
+   "id": "doghe-castagno-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Doghe Castagno",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-doghe-castagno-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-doghe-castagno-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 362
+  },
+  {
+   "id": "doghe-rovere-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Doghe Rovere",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-doghe-rovere-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-doghe-rovere-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 363
+  },
+  {
+   "id": "essenze-larice-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Essenze Larice",
+   "desc": "Listone effetto legno 60,5×121,4 o 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-essenze-larice-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-essenze-larice-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "60,5x121,4",
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C",
+     "2°",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "60,5x121,4",
+    "30x120",
+    "1°C scelta",
+    "2° scelta",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 364
+  },
+  {
+   "id": "essenze-rovere-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Essenze Rovere",
+   "desc": "Listone effetto legno 20×120 o 60,5×121,4 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-essenze-rovere-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-essenze-rovere-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120",
+     "60,5x121,4"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "60,5x121,4",
+    "1° scelta",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 365
+  },
+  {
+   "id": "essenze-noce-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Essenze Noce",
+   "desc": "Listone effetto legno 60,5×121,4 o 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-essenze-noce-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-essenze-noce-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "60,5x121,4",
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "60,5x121,4",
+    "30x120",
+    "1°C scelta",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 366
+  },
+  {
+   "id": "essenze-abete-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Essenze Abete",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-essenze-abete-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-essenze-abete-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 367
+  },
+  {
+   "id": "nordek-antracite-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Antracite",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-antracite-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-antracite-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 368
+  },
+  {
+   "id": "nordek-dec-antracite-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Dec. Antracite",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-dec-antracite-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-dec-antracite-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 369
+  },
+  {
+   "id": "nordek-greige-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Greige",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-greige-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-greige-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 370
+  },
+  {
+   "id": "nordek-dec-bianco-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Dec. Bianco",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-dec-bianco-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-dec-bianco-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 371
+  },
+  {
+   "id": "nordek-dec-greige-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Dec. Greige",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-dec-greige-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-dec-greige-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 372
+  },
+  {
+   "id": "charme-warm-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Charme Warm",
+   "desc": "Listone effetto legno 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-charme-warm-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-charme-warm-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "30x120",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 373
+  },
+  {
+   "id": "ligno-avor-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ligno Avor",
+   "desc": "Listone effetto legno 22,5×180 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ligno-avor-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ligno-avor-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "22,5x180"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "22,5x180",
+    "1°C scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 374
+  },
+  {
+   "id": "ligno-beige-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ligno Beige",
+   "desc": "Listone effetto legno 22,5×180 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ligno-beige-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ligno-beige-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "22,5x180"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "22,5x180",
+    "1°C scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 375
+  },
+  {
+   "id": "ligno-rovere-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Ligno Rovere",
+   "desc": "Listone effetto legno 22,5×180 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-ligno-rovere-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ligno-rovere-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "22,5x180"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "22,5x180",
+    "1°C scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 376
+  },
+  {
+   "id": "robur-cocoa-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Robur Cocoa",
+   "desc": "Listone effetto legno 20×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-robur-cocoa-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-robur-cocoa-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 377
+  },
+  {
+   "id": "robur-honey-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Robur Honey",
+   "desc": "Listone effetto legno 20×160 o 30×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-robur-honey-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-robur-honey-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160",
+     "30x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "30x160",
+    "1° scelta",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 378
+  },
+  {
+   "id": "robur-oat-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Robur Oat",
+   "desc": "Listone effetto legno 20×160 o 30×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-robur-oat-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-robur-oat-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160",
+     "30x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "30x160",
+    "1° scelta",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 379
+  },
+  {
+   "id": "robur-pecan-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Robur Pecan",
+   "desc": "Listone effetto legno 20×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-robur-pecan-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-robur-pecan-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 380
+  },
+  {
+   "id": "woodbreak-ebony-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Woodbreak Ebony",
+   "desc": "Listone effetto legno 20×160 o 30×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-woodbreak-ebony-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-woodbreak-ebony-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160",
+     "30x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "30x160",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 381
+  },
+  {
+   "id": "woodbreak-hemlock-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Woodbreak Hemlock",
+   "desc": "Listone effetto legno 20×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-woodbreak-hemlock-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-woodbreak-hemlock-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "1° scelta",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 382
+  },
+  {
+   "id": "woodbreak-larch-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Woodbreak Larch",
+   "desc": "Listone effetto legno 20×160 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-woodbreak-larch-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-woodbreak-larch-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x160"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x160",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 383
+  },
+  {
+   "id": "trvkvi-ro-ca-rt-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Trvkvi Ro Ca Rt",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-trvkvi-ro-ca-rt-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-trvkvi-ro-ca-rt-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 384
+  },
+  {
+   "id": "vivo-castagno-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Vivo Castagno",
+   "desc": "Listone effetto legno 20×150 o 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-vivo-castagno-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-vivo-castagno-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x150",
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x150",
+    "20x120",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 385
+  },
+  {
+   "id": "vivo-grano-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Vivo Grano",
+   "desc": "Listone effetto legno 20×150 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-vivo-grano-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-vivo-grano-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x150"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x150",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 386
+  },
+  {
+   "id": "trend-nat-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Trend Nat",
+   "desc": "Listone effetto legno 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-trend-nat-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-trend-nat-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "30x120",
+    "S scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 387
+  },
+  {
+   "id": "nordek-bianco-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Bianco",
+   "desc": "Listone effetto legno 60,50×121,40 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-bianco-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-bianco-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "60,50x121,40"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "60,50x121,40",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 388
+  },
+  {
+   "id": "nordek-dec-grigio-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Nordek Dec. Grigio",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-nordek-dec-grigio-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-nordek-dec-grigio-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "1° scelta",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 389
+  },
+  {
+   "id": "sarasota-white-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Sarasota White",
+   "desc": "Listone effetto legno 41,5×81 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-sarasota-white-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-sarasota-white-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "41,5x81"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "41,5x81",
+    "1° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 390
+  },
+  {
+   "id": "wood-land-bianco-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Wood Land Bianco",
+   "desc": "Listone effetto legno 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-wood-land-bianco-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-wood-land-bianco-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "30x120",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 391
+  },
+  {
+   "id": "wood-land-grigio-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Wood Land Grigio",
+   "desc": "Listone effetto legno 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-wood-land-grigio-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-wood-land-grigio-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "30x120",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 392
+  },
+  {
+   "id": "laguna-greige-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Laguna Greige",
+   "desc": "Listone effetto legno 20×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-laguna-greige-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-laguna-greige-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "20x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "20x120",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 393
+  },
+  {
+   "id": "laguna-light-effetto-legno",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "effetto-legno",
+   "subs": [
+    "effetto-legno"
+   ],
+   "name": "Laguna Light",
+   "desc": "Listone effetto legno 30×120 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-laguna-light-effetto-legno.webp",
+   "imgLg": "/assets/ceramica/stock/gres-laguna-light-effetto-legno.webp",
+   "tile": {
+    "fmt": [
+     "30x120"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "effetto legno",
+    "naturale",
+    "30x120",
+    "2° scelta",
+    "legno",
+    "parquet",
+    "listone"
+   ],
+   "rank": 394
+  },
+  {
+   "id": "noa-ottanio-lux-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Noa Ottanio Lux",
+   "desc": "Rivestimento 25×75 cm lucido, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-noa-ottanio-lux-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-noa-ottanio-lux-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "25x75"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "25x75",
+    "S scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 395
+  },
+  {
+   "id": "ark-red-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Ark Red",
+   "desc": "Rivestimento 40×80 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-ark-red-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ark-red-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "40x80"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "40x80",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 396
+  },
+  {
+   "id": "biocrete-sky-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Biocrete Sky",
+   "desc": "Rivestimento 30×90 cm naturale, spessore 10 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-biocrete-sky-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-biocrete-sky-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30x90"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "30x90",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 397
+  },
+  {
+   "id": "biocrete-powder-flute-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Biocrete Powder Flute",
+   "desc": "Rivestimento 30×90 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-biocrete-powder-flute-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-biocrete-powder-flute-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30x90"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Rilievo 3D"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Rilievo 3D"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "rilievo 3d",
+    "30x90",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 398
+  },
+  {
+   "id": "biocrete-mineral-flute-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Biocrete Mineral Flute",
+   "desc": "Rivestimento 30×90 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-biocrete-mineral-flute-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-biocrete-mineral-flute-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30x90"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Rilievo 3D"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Rilievo 3D"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "rilievo 3d",
+    "30x90",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 399
+  },
+  {
+   "id": "biocrete-clay-flute-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Biocrete Clay Flute",
+   "desc": "Rivestimento 30×90 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-biocrete-clay-flute-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-biocrete-clay-flute-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30x90"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Rilievo 3D"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Rilievo 3D"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "rilievo 3d",
+    "30x90",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 400
+  },
+  {
+   "id": "3d-line-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "3D Line",
+   "desc": "Rivestimento 25×75 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-3d-line-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-3d-line-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "25x75"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Rilievo 3D"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Rilievo 3D"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "rilievo 3d",
+    "25x75",
+    "S scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 401
+  },
+  {
+   "id": "e-wall-petrolio-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "E Wall Petrolio",
+   "desc": "Rivestimento 40×80 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-e-wall-petrolio-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-e-wall-petrolio-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "40x80"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "40x80",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 402
+  },
+  {
+   "id": "3d-white-chevron-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "3D White Chevron",
+   "desc": "Rivestimento 30,5×56 cm a rilievo 3D, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-3d-white-chevron-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-3d-white-chevron-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30,5x56"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Rilievo 3D"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Rilievo 3D"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "rilievo 3d",
+    "30,5x56",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 403
+  },
+  {
+   "id": "esagona-brown-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Esagona Brown",
+   "desc": "Rivestimento 34×40 cm naturale, spessore 8 mm",
+   "img": "/assets/ceramica/stock/gres-esagona-brown-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-esagona-brown-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "34x40"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "34x40",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 404
+  },
+  {
+   "id": "feel-white-matt-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Feel White Matt",
+   "desc": "Rivestimento 30×120 cm naturale, spessore 8 mm",
+   "img": "/assets/ceramica/stock/gres-feel-white-matt-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-feel-white-matt-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30x120"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "30x120",
+    "S scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 405
+  },
+  {
+   "id": "glance-taupe-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Glance Taupe",
+   "desc": "Rivestimento 20×60 cm satinato, spessore 8 mm",
+   "img": "/assets/ceramica/stock/gres-glance-taupe-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-glance-taupe-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Satinato"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Satinato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "satinato",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 406
+  },
+  {
+   "id": "laque-particuliere-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Laque Particuliere",
+   "desc": "Rivestimento 20×50 cm colorato, spessore 7 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-laque-particuliere-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-laque-particuliere-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x50"
+    ],
+    "sp": "7 mm",
+    "fin": [
+     "Colorato"
+    ],
+    "rett": false,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Colorato"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "colorato",
+    "20x50",
+    "2° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 407
+  },
+  {
+   "id": "moon-white-riv-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Moon White Riv.",
+   "desc": "Rivestimento 15,60×60,60 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-moon-white-riv-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-moon-white-riv-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "15,60x60,60"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "15,60x60,60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 408
+  },
+  {
+   "id": "pave-wall-dolmen-fumo-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Pavè Wall Dolmen Fumo",
+   "desc": "Rivestimento 22,5×45 cm naturale, spessore 9 mm",
+   "img": "/assets/ceramica/stock/gres-pave-wall-dolmen-fumo-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-pave-wall-dolmen-fumo-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "22,5x45"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": false,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°",
+     "S"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "22,5x45",
+    "1° scelta",
+    "S scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 409
+  },
+  {
+   "id": "purestone-muretto-grigio-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Purestone Muretto Grigio",
+   "desc": "Rivestimento 30×60 cm naturale, spessore 8 mm",
+   "img": "/assets/ceramica/stock/gres-purestone-muretto-grigio-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-purestone-muretto-grigio-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "30x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "30x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 410
+  },
+  {
+   "id": "safari-amande-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Safari Amande",
+   "desc": "Rivestimento 59,8×87,7 cm lucido, spessore 5,5 mm",
+   "img": "/assets/ceramica/stock/gres-safari-amande-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-safari-amande-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "59,8x87,7"
+    ],
+    "sp": "5,5 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "2°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "59,8x87,7",
+    "2° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 411
+  },
+  {
+   "id": "weiss-lux-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Weiss Lux",
+   "desc": "Rivestimento 25×60 cm lucido, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-weiss-lux-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-weiss-lux-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "25x60"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "25x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 412
+  },
+  {
+   "id": "white-lux-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "White Lux",
+   "desc": "Rivestimento 20×40 cm lucido, spessore 9 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-white-lux-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-white-lux-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x40"
+    ],
+    "sp": "9 mm",
+    "fin": [
+     "Lucido"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "20x40",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 413
+  },
+  {
+   "id": "illusion-materika-grigio-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Illusion Materika Grigio",
+   "desc": "Rivestimento 60×120 cm naturale, spessore 10 mm",
+   "img": "/assets/ceramica/stock/gres-illusion-materika-grigio-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-illusion-materika-grigio-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "60x120"
+    ],
+    "sp": "10 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Gres porcellanato",
+    "scelte": [
+     "1°C"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "60x120",
+    "1°C scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 414
+  },
+  {
+   "id": "white-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "White Smooth",
+   "desc": "Rivestimento 20×60 cm lucido e naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-white-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-white-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Lucido",
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido",
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 415
+  },
+  {
+   "id": "greige-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Greige Smooth",
+   "desc": "Rivestimento 20×60 cm lucido e naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-greige-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-greige-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Lucido",
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido",
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 416
+  },
+  {
+   "id": "tin-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Tin Smooth",
+   "desc": "Rivestimento 20×60 cm lucido e naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-tin-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-tin-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Lucido",
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Lucido",
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "lucido",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 417
+  },
+  {
+   "id": "kaki-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Kaki Smooth",
+   "desc": "Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-kaki-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-kaki-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 418
+  },
+  {
+   "id": "lead-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Lead Smooth",
+   "desc": "Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-lead-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-lead-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 419
+  },
+  {
+   "id": "smoke-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Smoke Smooth",
+   "desc": "Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-smoke-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-smoke-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 420
+  },
+  {
+   "id": "ash-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Ash Smooth",
+   "desc": "Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-ash-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-ash-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 421
+  },
+  {
+   "id": "bone-smooth-rivestimento",
+   "type": "tile",
+   "cat": "gres-porcellanato",
+   "sub": "rivestimenti",
+   "subs": [
+    "rivestimenti"
+   ],
+   "name": "Bone Smooth",
+   "desc": "Rivestimento 20×60 cm naturale, spessore 8 mm, monoporosa pasta bianca",
+   "img": "/assets/ceramica/stock/gres-bone-smooth-rivestimento.webp",
+   "imgLg": "/assets/ceramica/stock/gres-bone-smooth-rivestimento.webp",
+   "tile": {
+    "fmt": [
+     "20x60"
+    ],
+    "sp": "8 mm",
+    "fin": [
+     "Naturale"
+    ],
+    "rett": true,
+    "mat": "Monoporosa pasta bianca",
+    "scelte": [
+     "1°"
+    ],
+    "extra": []
+   },
+   "finishes": [
+    "Naturale"
+   ],
+   "tags": [
+    "gres",
+    "gres porcellanato",
+    "piastrelle",
+    "ceramica",
+    "rivestimenti",
+    "naturale",
+    "20x60",
+    "1° scelta",
+    "rivestimento",
+    "parete",
+    "bagno",
+    "cucina"
+   ],
+   "rank": 422
   }
  ]
 }
