@@ -205,7 +205,7 @@
    "_nota": "Sconti e pacchetti. Lo sconto non è cumulabile: su ogni riga del carrello vale il più alto tra pacchetto abbinato e codice newsletter. Sconto quantità porte disattivato (doorQty vuoto). Cambiate qui le percentuali.",
    "newsletter": {
     "perc": 5,
-    "code": "BENVENUTO10",
+    "code": "BENVENUTO5",
     "notify": "shop@pandooragroup.it",
     "endpoint": "",
     "_endpoint": "Indirizzo dello script newsletter sul vostro hosting Aruba (es. https://api.pandooragroup.it/newsletter/iscrizione.php). Se vuoto o non raggiungibile si usa FormSubmit."
