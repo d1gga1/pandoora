@@ -202,26 +202,15 @@
    "ivaNote": "IVA inclusa · trasporto a parte"
   },
   "offers": {
-   "_nota": "Sconti e pacchetti. Lo sconto non è cumulabile: su ogni riga del carrello vale il più alto tra pacchetto, quantità porte e codice newsletter. Cambiate qui le percentuali.",
+   "_nota": "Sconti e pacchetti. Lo sconto non è cumulabile: su ogni riga del carrello vale il più alto tra pacchetto abbinato e codice newsletter. Sconto quantità porte disattivato (doorQty vuoto). Cambiate qui le percentuali.",
    "newsletter": {
-    "perc": 10,
+    "perc": 5,
     "code": "BENVENUTO10",
     "notify": "shop@pandooragroup.it",
     "endpoint": "",
     "_endpoint": "Indirizzo dello script newsletter sul vostro hosting Aruba (es. https://api.pandooragroup.it/newsletter/iscrizione.php). Se vuoto o non raggiungibile si usa FormSubmit."
    },
-   "doorQty": [
-    {
-     "min": 3,
-     "perc": 12,
-     "label": "Pacchetto 3 porte"
-    },
-    {
-     "min": 5,
-     "perc": 15,
-     "label": "Pacchetto casa 5 porte"
-    }
-   ],
+   "doorQty": [],
    "bundlePerc": 12,
    "pairs": {
     "con-seduta": [

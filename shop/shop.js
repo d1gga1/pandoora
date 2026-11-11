@@ -1170,6 +1170,7 @@
   function pdpBundles(p){
     var box=$('#pdp-bundles');if(!box)return;var O=OF(),h='';
     if(p.type==='door'){
+      if(!(O.doorQty||[]).length){var sec=box.closest('section');if(sec)sec.hidden=true;return}
       var t=[{min:1,perc:0,label:'Una porta'}].concat(O.doorQty||[]);
       var u=CUR&&CUR.p===p?doorQuote(p,CUR.c).unit:fromPrice(p);
       h='<div class="pdp-tiers">'+t.map(function(x,i){var full=u*x.min,net=Math.round(full*(1-x.perc/100));
