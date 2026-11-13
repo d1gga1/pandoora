@@ -5,7 +5,7 @@
   "door": {
    "lines": {
     "laminata": 395,
-    "laccata": 495,
+    "laccata": 595,
     "pantografata": 595
    },
    "widths": [
@@ -25,19 +25,28 @@
     {
      "id": "scorrevole-esterno",
      "label": "Scorrevole esterno muro",
-     "min": 495,
+     "min": 0,
+     "add": 200,
      "note": "Binario a vista sopra il vano"
+    },
+    {
+     "id": "scorrevole-magic",
+     "label": "Scorrevole sistema Magic",
+     "min": 0,
+     "add": 200,
+     "note": "Scorrevole esterno muro senza binario a vista"
     },
     {
      "id": "scorrevole-interno",
      "label": "Scorrevole interno muro",
-     "min": 495,
+     "min": 0,
      "note": "Scompare nel controtelaio"
     },
     {
      "id": "filo-muro",
      "label": "Filo muro",
-     "min": 695,
+     "min": 0,
+     "add": 200,
      "onlyLacc": true,
      "note": "Telaio invisibile, a filo parete"
     }
@@ -51,23 +60,23 @@
     {
      "id": "libro",
      "label": "Apertura a libro",
-     "add": 200,
+     "add": 180,
      "onlyFor": [
       "battente"
      ]
     },
     {
-     "id": "magic",
-     "label": "Sistema Magic (scorrevole senza binario a vista)",
-     "add": 200,
-     "onlyFor": [
-      "scorrevole-esterno"
-     ]
-    },
-    {
      "id": "stipiti",
-     "label": "Allargamento stipiti (muri spessi)",
-     "add": 110
+     "label": "Allargamento stipiti (muri oltre 200 mm)",
+     "add": 30,
+     "addLine": {
+      "laminata": 30,
+      "laccata": 50,
+      "pantografata": 50
+     },
+     "addOpen": {
+      "filo-muro": 30
+     }
     }
    ],
    "fuoriMisura": {
@@ -120,11 +129,12 @@
      "id": "ritiro",
      "label": "Ritiro in sede",
      "sub": "a Fontanelle (TV), montaggio a cura vostra",
-     "add": -200,
+     "add": -150,
      "note": "Ritirate le porte nel nostro stabilimento di Fontanelle (TV) e le montate voi."
     }
    ],
-   "_servizi": "Posa e trasporto sono compresi solo in Veneto e FVG. Solo consegna: -150 € (fuori VE/FVG spedizione a preventivo). Ritiro in sede e montaggio del cliente: -200 €."
+   "_servizi": "Posa e trasporto sono compresi solo in Veneto e FVG. Solo consegna: -150 € (fuori VE/FVG spedizione a preventivo). Ritiro in sede e montaggio del cliente: -150 €. Listino porte 10/11/2026: senza montaggio e trasporto laminata 245, laccata/pantografata/filo muro 445.",
+   "_listino": "Listino 10/11/2026: battente e scorrevole interno muro = prezzo linea; scorrevole esterno muro e sistema Magic +200; filo muro grezzo = laminata +200, filo muro laccato = laminata +400 (= laccata +200); a libro +180; vetro +150; allargamento muri >200 mm +30 laminata/filo muro, +50 laccata. Senza montaggio e trasporto: -150. Variante economica battente laminata bianca 95 € senza montaggio e trasporto."
   },
   "cube": {
    "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura + add (supplemento fisso 102 € sulla struttura)",
