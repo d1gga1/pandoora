@@ -89,3 +89,7 @@ _foto-generate/
 
 # originali delle foto lavabi scaricate da Unsplash (sul sito ci sono le versioni ottimizzate)
 _foto_lavabi_unsplash/
+
+# cartella di file da eliminare: non pubblicare
+_to_delete/
+_hosting-aruba/
