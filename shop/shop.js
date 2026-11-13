@@ -101,11 +101,12 @@
   /* ---------- prezzi ---------- */
   function r9(x){return Math.max(9,Math.ceil(x/10)*10-1)}
   function opening(id){return PR.door.openings.find(function(o){return o.id===id})}
+  function xadd(x,line,open){if(x.addOpen&&open&&x.addOpen[open]!=null)return x.addOpen[open];if(x.addLine&&line&&x.addLine[line]!=null)return x.addLine[line];return x.add}
   function doorQuote(p,c){
     var D=PR.door, base=D.lines[p.line], op=opening(c.open)||D.openings[0], lines=[];
-    var b=Math.max(base,op.min||0);
+    var b=Math.max(base,op.min||0)+(op.add||0);
     lines.push([p.lineLabel+' · '+op.label,b]);
-    D.extras.forEach(function(x){if(c.ex&&c.ex[x.id]&&extraOk(x,c))lines.push([x.label,x.add])});
+    D.extras.forEach(function(x){if(c.ex&&c.ex[x.id]&&extraOk(x,c))lines.push([x.label,xadd(x,p.line,c.open)])});
     if(c.size==='custom'){var fm=D.fuoriMisura,add=(fm.add||0)+Math.round(b*(fm.perc||0)/100);lines.push([fm.label+' '+c.vw+'×'+c.vh+' mm, muro '+c.wall,add])}
     var sv=service(c.serv);if(sv)lines.push([sv.label+' · '+sv.sub,sv.add]);
     var tot=lines.reduce(function(a,l){return a+l[1]},0);
@@ -420,7 +421,7 @@
     if(p.type==='tile')return{sc:tileSc(p)[0],mq:PR.tile.mqDefault};
     if(p.type==='basin')return{w:bQ(p)?PR.basin.big.def:p.basin.w,d:PR.basin.depth.def,v:'quadrata',fin:PR.basin.finiture[0],ton:'',dbl:false};
     if(p.type==='door'){
-      var open=sub==='scorrevoli'?'scorrevole-esterno':sub==='filo-muro'?'filo-muro':'battente';
+      var open=sub==='scorrevoli'?'scorrevole-interno':sub==='filo-muro'?'filo-muro':'battente';
       var dc={serv:'posa',open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
     }
     var s=p.std[0];return{size:0,w:s.w,d:s.d,h:s.h,fin:p.finishes[0],ral:p.finishes[0]==='Laccato RAL'?'9010':''};
@@ -634,7 +635,7 @@
       html+='<fieldset class="s-opt"><legend>Apertura</legend><div class="s-chips" id="o-open">'+PR.door.openings.map(function(o){var dis=o.onlyLacc&&p.line==='laminata';return '<button type="button" class="s-chip" data-v="'+o.id+'"'+(dis?' disabled title="Solo per porte laccate"':'')+'>'+esc(o.label)+'</button>'}).join('')+'</div><p class="s-note" id="o-open-n"></p></fieldset>';
       html+='<fieldset class="s-opt"><legend>Larghezza anta <small>altezza '+PR.door.height+' cm</small></legend><div class="s-chips" id="o-size">'+PR.door.widths.map(function(w){return '<button type="button" class="s-chip" data-v="'+w+'">'+w+' cm</button>'}).join('')+'<button type="button" class="s-chip" data-v="custom">Fuori misura</button></div>'
         +'<div class="s-dims two" id="o-cust" hidden><label>Larghezza (cm)<input type="number" inputmode="numeric" id="o-w" min="'+PR.door.fuoriMisura.wMin+'" max="'+PR.door.fuoriMisura.wMax+'"><small>'+PR.door.fuoriMisura.wMin+'–'+PR.door.fuoriMisura.wMax+'</small></label><label>Altezza (cm)<input type="number" inputmode="numeric" id="o-h" min="'+PR.door.fuoriMisura.hMin+'" max="'+PR.door.fuoriMisura.hMax+'"><small>'+PR.door.fuoriMisura.hMin+'–'+PR.door.fuoriMisura.hMax+'</small></label></div><p class="s-note" id="o-cust-n" hidden>'+esc(PR.door.fuoriMisura.note)+'</p></fieldset>';
-      html+='<fieldset class="s-opt"><legend>Opzioni</legend>'+PR.door.extras.map(function(x){return '<label class="s-check" data-x="'+x.id+'"><input type="checkbox" value="'+x.id+'">'+esc(x.label)+'<em>+'+eur.format(x.add)+'</em></label>'}).join('')+'</fieldset>';
+      html+='<fieldset class="s-opt"><legend>Opzioni</legend>'+PR.door.extras.map(function(x){return '<label class="s-check" data-x="'+x.id+'"><input type="checkbox" value="'+x.id+'">'+esc(x.label)+'<em>+'+eur.format(xadd(x,p.line))+'</em></label>'}).join('')+'</fieldset>';
       html+=servHTML();
       if(p.line!=='laminata')html+=ralPicker();
       else html+='<div class="s-opt"><b>Finitura</b><div class="s-chips"><span class="s-chip on"><i style="background:'+swatch(p.finishes[0])+'"></i>'+esc(p.finishes[0])+'</span></div></div>';
@@ -654,7 +655,7 @@
     function upd(){
       if(p.type==='door'){
         sel('o-open',c.open);sel('o-size',c.size);servUpd(sc,c);
-        var op=opening(c.open);$('#o-open-n',sc).textContent=op.note+(op.min>PR.door.lines[p.line]?' · da '+eur.format(op.min):'');
+        var op=opening(c.open);$('#o-open-n',sc).textContent=op.note+(op.add?' · +'+eur.format(op.add)+' sul prezzo della battente':op.min>PR.door.lines[p.line]?' · da '+eur.format(op.min):'');
         $$('.s-check',sc).forEach(function(l){var x=PR.door.extras.find(function(e){return e.id===l.dataset.x}),ok=extraOk(x,c);l.classList.toggle('off',!ok);l.setAttribute('aria-disabled',String(!ok));var i=l.querySelector('input');i.disabled=!ok;i.checked=!!(c.ex[x.id]&&ok)});
         var cu=c.size==='custom';$('#o-cust',sc).hidden=!cu;$('#o-cust-n',sc).hidden=!cu;
         if(!cu){c.w=+c.size;c.h=PR.door.height}
