@@ -113,7 +113,7 @@
   var lx=$('#s-lx');
   if(lx){
     var lxPin=$('.lx-pin',lx),doors=$$('.lx-door',lx),names=$$('.lx-n',lx),descs=$$('.lx-d',lx),bars=$$('.lx-prog li',lx),num=$('.lx-num',lx),chipsL=$$('.lx-chip',lx);
-    var PRICES=[395,495,595],COL=[['rgba(168,138,99,.6)','#e2c793','rgba(200,170,110,.3)'],['rgba(91,141,239,.55)','#b9cdf7','rgba(120,170,255,.3)'],['rgba(200,170,110,.6)','#f0d59a','rgba(240,200,120,.35)']];
+    var PRICES=[245,445,445],COL=[['rgba(168,138,99,.6)','#e2c793','rgba(200,170,110,.3)'],['rgba(91,141,239,.55)','#b9cdf7','rgba(120,170,255,.3)'],['rgba(200,170,110,.6)','#f0d59a','rgba(240,200,120,.35)']];
     var vert=matchMedia('(max-width:1000px)').matches;
     names.forEach(function(n){var t=n.textContent;n.innerHTML=t.split('').map(function(c){return '<span class="ch">'+(c===' '?'&nbsp;':c)+'</span>'}).join('')});
     g.set(doors.slice(1),{rotateY:-100,opacity:0});g.set(names.slice(1),{opacity:0});g.set(descs.slice(1),{opacity:0,y:20});

@@ -111,14 +111,26 @@
     var hs=hSur(c);if(hs)lines.push(['Porta alta: anta H '+hs.h+' mm (+'+hs.perc+'%)',Math.round(b*hs.perc/100)]);
     D.extras.forEach(function(x){if(c.ex&&c.ex[x.id]&&extraOk(x,c))lines.push([x.label,xadd(x,p.line,c.open)])});
     if(c.size==='custom'){var fm=D.fuoriMisura,add=(fm.add||0)+Math.round(b*(fm.perc||0)/100);lines.push([fm.label+' '+c.vw+'×'+c.vh+' mm, muro '+c.wall+(add?'':' · nessun sovrapprezzo'),add])}
-    var sv=service(c.serv);if(sv){var vs=-Math.min.apply(null,(D.services||[]).map(function(x){return x.add||0}));lines.push([sv.label+(sv.add===0&&vs>0?' (valgono '+eur.format(vs)+')':' · '+sv.sub),sv.add])}
+    var sv=service(c.serv);if(sv)lines.push([sv.line||sv.label,sv.add||0,sv.add?'':(sv.tag||'compreso')]);else lines.push(['Trasporto e montaggio',0,'esclusi']);
     var tot=lines.reduce(function(a,l){return a+l[1]},0);
-    return{unit:tot,lines:lines,note:sv&&sv.id==='trasporto'?'IVA esclusa · montaggio escluso · fuori VE e FVG spedizione a preventivo':sv&&sv.id==='ritiro'?'IVA esclusa · ritiro a Fontanelle (TV), montaggio escluso':D.ivaNote};
+    return{unit:tot,lines:lines,note:!sv?D.ivaNote:sv.id==='posa'?'IVA esclusa · trasporto e montaggio inclusi':sv.id==='trasporto'?'IVA esclusa · consegna compresa, montaggio escluso':sv.id==='spedizione'?'IVA esclusa · spedizione a preventivo, montaggio escluso':'IVA esclusa · ritiro a Fontanelle (TV), montaggio escluso'};
   }
-  function service(id){var S=PR.door.services||[];return S.find(function(x){return x.id===id})||S[0]}
-  function servHTML(){var S=PR.door.services||[];if(!S.length)return '';var L=PR.door.lines;return '<fieldset class="s-opt s-serv"><legend>Consegna e montaggio <small>scegliete voi</small></legend><p class="s-serv-promo"><b>Abitate in Veneto o Friuli Venezia Giulia?</b> Laminata da '+eur.format(L.laminata)+' e laccata da '+eur.format(L.laccata)+' con <b>trasporto e montaggio compresi</b>. Non vi servono? Sceglietelo qui sotto e il prezzo scende.</p><div class="s-chips" id="o-serv">'+S.map(function(x){return '<button type="button" class="s-chip s-serv-c" data-v="'+x.id+'"><span class="sv-t">'+esc(x.label)+'</span><span class="sv-s">'+esc(x.sub)+'</span><em>'+(x.add?eur.format(x.add).replace('-','−'):'compreso')+'</em></button>'}).join('')+'</div><p class="s-note" id="o-serv-n"></p></fieldset>'}
-  function servUpd(sc,c){if(!c.serv)c.serv='posa';var b=sc.querySelectorAll('#o-serv .s-chip');for(var i=0;i<b.length;i++)b[i].setAttribute('aria-pressed',String(b[i].dataset.v===c.serv));var n=sc.querySelector('#o-serv-n'),sv=service(c.serv);if(n&&sv)n.textContent=sv.sub.charAt(0).toUpperCase()+sv.sub.slice(1)+'. '+sv.note}
-  function servBind(sc,c,upd){var b=sc.querySelectorAll('#o-serv .s-chip');for(var i=0;i<b.length;i++)b[i].onclick=function(){c.serv=this.dataset.v;upd()}}
+  function service(id){var S=PR.door.services||[];return S.find(function(x){return x.id===id})||null}
+  function servFor(reg){return (PR.door.services||[]).filter(function(x){return !x.regions||(reg&&x.regions.indexOf(reg)>=0)})}
+  function servHTML(){var S=PR.door.services||[],R=PR.door.regions||[];if(!S.length)return '';
+    return '<fieldset class="s-opt s-serv"><legend>Dove va la porta? <small>il prezzo cambia in base alla regione</small></legend><div class="s-chips s-reg" id="o-reg">'+R.map(function(r){return '<button type="button" class="s-chip" data-reg="'+r.id+'">'+esc(r.label)+'</button>'}).join('')+'</div><p class="s-serv-promo" id="o-reg-promo"></p><div class="s-chips" id="o-serv"></div><p class="s-note" id="o-serv-n"></p></fieldset>'}
+  function servUpd(sc,c){var fs=sc.querySelector('.s-serv');if(!fs)return;var L=PR.door.lines,ok=servFor(c.reg);
+    if(c.serv&&!ok.some(function(x){return x.id===c.serv}))c.serv='';
+    if(c.reg&&!c.serv)c.serv=c.reg==='altro'?'spedizione':'trasporto';
+    $$('#o-reg .s-chip',fs).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.reg===c.reg))});
+    var ve=c.reg==='ve'||c.reg==='fvg',pr=$('#o-reg-promo',fs),rl=((PR.door.regions||[]).find(function(r){return r.id===c.reg})||{}).label;
+    pr.className='s-serv-promo'+(c.reg==='altro'?' alt':'')+(!c.reg?' ask':'');
+    pr.innerHTML=!c.reg?'<b>Abitate in Veneto o in Friuli Venezia Giulia?</b> Selezionate la regione: potete avere <b>trasporto e montaggio inclusi</b>, con la laminata a '+eur.format(L.laminata+150)+' e la laccata a '+eur.format(L.laccata+150)+' + IVA.'
+      :ve?'<b>'+esc(rl)+': trasporto e montaggio inclusi a soli +150 €.</b> Laminata '+eur.format(L.laminata+150)+', laccata '+eur.format(L.laccata+150)+' + IVA, rilievo misure e posa della nostra squadra. Oppure solo la consegna, compresa.'
+      :'<b>Fuori da Veneto e FVG</b> spediamo in tutta Italia e all\'estero: il trasporto lo quotiamo nel preventivo, il montaggio è a cura vostra.';
+    var box=$('#o-serv',fs);box.innerHTML=c.reg?ok.map(function(x){return '<button type="button" class="s-chip s-serv-c'+(x.badge?' hot':'')+'" data-v="'+x.id+'" aria-pressed="'+(x.id===c.serv)+'">'+(x.badge?'<span class="sv-b">'+esc(x.badge)+'</span>':'')+'<span class="sv-t">'+esc(x.label)+'</span><span class="sv-s">'+esc(x.sub)+'</span><em>'+(x.add?'+'+eur.format(x.add):esc(x.tag||'compreso'))+'</em></button>'}).join(''):'';
+    var n=$('#o-serv-n',fs),sv=service(c.serv);n.textContent=sv?sv.note:'Prezzo senza trasporto e montaggio. Indicate la regione per vedere le opzioni di consegna.'}
+  function servBind(sc,c,upd){var fs=sc.querySelector('.s-serv');if(!fs)return;fs.onclick=function(e){var b=e.target.closest&&e.target.closest('.s-chip');if(!b)return;if(b.dataset.reg){c.reg=b.dataset.reg;c.serv='';}else if(b.dataset.v)c.serv=b.dataset.v;upd()}}
   function extraOk(x,c){return !x.onlyFor||x.onlyFor.indexOf(c.open)>=0}
   function furnQuote(p,c){
     var F=PR.furniture, lines=[], s;
@@ -425,7 +437,7 @@
     if(p.type==='basin')return{w:bQ(p)?PR.basin.big.def:p.basin.w,d:PR.basin.depth.def,v:'quadrata',fin:PR.basin.finiture[0],ton:'',dbl:false};
     if(p.type==='door'){
       var open=sub==='scorrevoli'?'scorrevole-interno':sub==='filo-muro'?'filo-muro':'battente';
-      var dc={serv:'posa',open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
+      var dc={serv:'',reg:'',open:open,size:'80',w:80,h:210,ex:{},fin:p.finishes[0],ral:p.line==='laminata'?'':'9010',hand:'dx',wall:PR.door.tech.stdWall};if(p.onlyOpen)dc.open=p.onlyOpen;stdVano(dc);return dc;
     }
     var s=p.std[0];return{size:0,w:s.w,d:s.d,h:s.h,fin:p.finishes[0],ral:p.finishes[0]==='Laccato RAL'?'9010':''};
   }
@@ -445,7 +457,7 @@
       return [c.cols+'×'+c.rows+' vani da '+c.cube+' cm',D.w+'×'+c.depth+'×'+D.h+' cm',c.fin==='Laccato RAL'?'RAL '+(c.ral||''):c.fin].concat(ins).concat(b&&b.id!=='nessuna'?[b.label]:[]).join(' · ')}
     if(p.type==='door'){
       var op=opening(c.open), ex=PR.door.extras.filter(function(x){return c.ex&&c.ex[x.id]&&extraOk(x,c)}).map(function(x){return x.label.split(' (')[0]});
-      var g=doorGeom(c);return [op.label+(c.hand==='sx'?' sinistra':' destra'), c.size==='custom'?'vano '+c.vw+'×'+c.vh+' mm, muro '+c.wall+' mm (anta '+g.lw+'×'+g.lh+')':c.w+'×'+PR.door.height+' cm, muro '+c.wall+' mm', p.line==='laminata'?p.finishes[0]:fmGrezza(c)?'grezza da pitturare':'RAL '+(c.ral||'da scegliere')].concat(ex).concat(service(c.serv)?[service(c.serv).label]:[]).join(' · ');
+      var g=doorGeom(c);return [op.label+(c.hand==='sx'?' sinistra':' destra'), c.size==='custom'?'vano '+c.vw+'×'+c.vh+' mm, muro '+c.wall+' mm (anta '+g.lw+'×'+g.lh+')':c.w+'×'+PR.door.height+' cm, muro '+c.wall+' mm', p.line==='laminata'?p.finishes[0]:fmGrezza(c)?'grezza da pitturare':'RAL '+(c.ral||'da scegliere')].concat(ex).concat(service(c.serv)?[service(c.serv).label]:['senza trasporto e montaggio']).join(' · ');
     }
     var s=c.size==='custom'?{w:c.w,d:c.d,h:c.h}:(p.std[c.size|0]||p.std[0]);
     return s.w+'×'+s.d+'×'+s.h+' cm'+(c.size==='custom'?' (su misura)':'')+' · '+(c.fin==='Laccato RAL'?'RAL '+(c.ral||'da scegliere'):c.fin);
@@ -476,7 +488,7 @@
       +(p.badge?'<span class="s-badge">'+esc(p.badge)+'</span>':'')+(p.custom||p.type==='door'?'<span class="s-badge g r2">Su misura</span>':'')
       +'<span class="s-card-q">'+IC.eye+'Scopri e configura</span></a>'
       +top+'<h3><a href="'+pURL(p)+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc||'')+'</p>'+dims+sw
-      +'<div class="s-price">'+(many?'<small>da</small>':'')+eur.format(price)+(p.type==='door'?'<span>IVA escl. · posa inclusa</span>':'')+'</div>'
+      +'<div class="s-price">'+(many?'<small>da</small>':'')+eur.format(price)+(p.type==='door'?'<span>+ IVA · con posa in VE/FVG '+eur.format(price+150)+'</span>':'')+'</div>'
       +'<div class="s-card-foot"><button class="s-add" type="button" data-add="'+esc(p.id)+'" aria-label="Aggiungi '+esc(p.name)+' al carrello">'+IC.plus+'<span>Aggiungi</span></button>'
       +'<button class="s-fav" type="button" data-fav="'+esc(p.id)+'" aria-pressed="'+fav+'" aria-label="Salva nei preferiti">'+IC.heart+'</button></div>'
       +'</article>';
@@ -604,7 +616,7 @@
           +payHTML()+assureHTML(ex)+(window.PDA?'<button type="button" class="s-btn s-btn-p s-btn-cta" id="s-checkout">Invia l\'ordine<small>vi ricontattiamo per confermarlo</small></button>':'')
           +'<a class="s-btn '+(window.PDA?'s-btn-o':'s-btn-p')+'" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(orderText())+'">Invia l\'ordine su WhatsApp</a>'
           +'<a class="s-btn s-btn-o" href="mailto:'+MAIL+'?subject='+encodeURIComponent('Ordine Pandoora Shop')+'&body='+encodeURIComponent(orderText())+'">Invia per email</a>'
-          +'<p class="s-note">Vi ricontattiamo per confermare l\'ordine: alla conferma si versa il 50% di anticipo, poi facciamo il rilievo delle misure; il saldo quando la merce è pronta'+(ex?'. Porte: IVA esclusa, posa inclusa in Veneto e FVG':'')+(tx?'. Gres: IVA esclusa, trasporto a parte, prezzo e m² confermati con voi':'')+(bx?'. Lavabi: IVA esclusa, disegno confermato con voi prima della produzione':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
+          +'<p class="s-note">Vi ricontattiamo per confermare l\'ordine: alla conferma si versa il 50% di anticipo, poi facciamo il rilievo delle misure; il saldo quando la merce è pronta'+(ex?'. Porte: IVA esclusa; trasporto e montaggio inclusi solo se scelti (Veneto e FVG)':'')+(tx?'. Gres: IVA esclusa, trasporto a parte, prezzo e m² confermati con voi':'')+(bx?'. Lavabi: IVA esclusa, disegno confermato con voi prima della produzione':'')+'. Gli sconti non sono cumulabili: su ogni prodotto vale il più alto.</p>';
         $$('[data-rm]',b).forEach(function(x){x.onclick=function(){cart.splice(+x.dataset.rm,1);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         $$('[data-q]',b).forEach(function(x){x.onclick=function(){var l=cart[+x.dataset.q];l.qty=clamp(l.qty+(+x.dataset.d),1,99);store('pdShopCart2',cart);counts();openDrawer('cart')}});
         var cf=$('#s-code-f',f);if(cf)cf.onsubmit=function(e){e.preventDefault();var v=$('#s-code-in',f).value.trim().toUpperCase();if(N.code&&v===N.code){if(!nlT())store('pdCodeT',Date.now());store('pdCode',v);if(codeLeft()<=0){var i0=$('#s-code-in',f);i0.value='';i0.placeholder='Codice scaduto';return}openDrawer('cart')}else{var i=$('#s-code-in',f);i.value='';i.placeholder='Codice non valido';i.classList.add('err');setTimeout(function(){i.classList.remove('err')},900)}};
@@ -686,7 +698,7 @@
       $$('.s-ral-sw button',sc).forEach(function(b){b.classList.toggle('on',b.dataset.r===c.ral)});
       var ri=$('#o-ral-in',sc);if(ri&&document.activeElement!==ri)ri.value=c.ral?'RAL '+c.ral:'';
       var q=quote(p,c);
-      $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+(l[1]?eur.format(l[1]):'incluso')+'</b></li>'}).join('');
+      $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+(l[2]||(l[1]?eur.format(l[1]):'incluso'))+'</b></li>'}).join('');
       tween($('#s-pm-tot'),q.unit*qty);$('#s-pm-iva').textContent=(qty>1?qty+' pezzi · ':'')+q.note;
     }
     $$('#o-open .s-chip',sc).forEach(function(b){b.onclick=function(){c.open=b.dataset.v;upd()}});
@@ -767,7 +779,7 @@
       $$('.s-ral-sw button',sc).forEach(function(b){b.classList.toggle('on',b.dataset.r===c.ral)});
       var ri=$('#o-ral-in',sc);if(ri&&document.activeElement!==ri)ri.value=c.ral?'RAL '+c.ral:'';
       var q=doorQuote(p,c);
-      $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+(l[1]?eur.format(l[1]):'incluso')+'</b></li>'}).join('');
+      $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+(l[2]||(l[1]?eur.format(l[1]):'incluso'))+'</b></li>'}).join('');
       tween($('#s-pm-tot'),q.unit*qty);$('#s-pm-iva').innerHTML=esc((qty>1?qty+' pezzi · ':'')+q.note)+codeNote(q.unit*qty);
     }
     $$('#o-open .s-chip',sc).forEach(function(b){b.onclick=function(){c.open=b.dataset.v;upd()}});
@@ -1196,7 +1208,7 @@
       var u=CUR&&CUR.p===p?doorQuote(p,CUR.c).unit:fromPrice(p);
       h='<div class="pdp-tiers">'+t.map(function(x,i){var full=u*x.min,net=Math.round(full*(1-x.perc/100));
         return '<div class="pdp-tier'+(i===1?' hot':'')+'">'+(i===1?'<span class="pdp-tag">Il più conveniente per un appartamento</span>':'')+'<b class="pdp-tier-n">'+x.min+' '+(x.min>1?'porte':'porta')+'</b><span class="pdp-tier-l">'+esc(x.label)+'</span>'
-          +'<div class="pdp-tier-p">'+(x.perc?'<s>'+eur.format(full)+'</s>':'')+'<b>'+eur.format(net)+'</b><small>+ IVA · posa inclusa VE/FVG</small></div>'
+          +'<div class="pdp-tier-p">'+(x.perc?'<s>'+eur.format(full)+'</s>':'')+'<b>'+eur.format(net)+'</b><small>+ IVA</small></div>'
           +(x.perc?'<span class="pdp-save">−'+x.perc+'% · risparmiate '+eur.format(full-net)+'</span>':'<span class="pdp-save mute">'+eur.format(u)+' a porta</span>')
           +'<button type="button" class="s-btn '+(i?'s-btn-p':'s-btn-o')+'" data-tier="'+x.min+'">Aggiungi '+x.min+' '+(x.min>1?'porte':'porta')+'</button></div>'}).join('')+'</div>'
         +'<p class="s-note">Lo sconto si applica da solo nel carrello quando ci sono '+(O.doorQty&&O.doorQty[0]?O.doorQty[0].min:3)+' o più porte, anche di modelli diversi. Ogni porta può avere misura, verso e colore diversi: li definiamo insieme prima della produzione.</p>';

@@ -1340,3 +1340,15 @@ a.s-add{text-decoration:none}
 .s-drawer-f .s-pay li{flex-direction:column;align-items:flex-start;gap:4px}
 .s-drawer-f .s-pay li span{font-size:11.5px}
 @media(max-width:600px){.s-drawer-f .s-assure{display:none}}
+
+/* 16/11/2026 regione e servizi porte */
+.s-reg{margin-bottom:10px}
+.s-serv-promo.ask{background:#fff8e6;border-color:#f2d58a;color:#5b4204}
+.s-serv-promo.ask b{color:#7a5300}
+.s-serv-promo.alt{background:#f2f4f7;border-color:#d9dee6;color:#3d4654}
+.s-serv-promo.alt b{color:#0d1524}
+.s-serv-c{position:relative}
+.s-serv-c.hot{border:2px solid #15803d!important}
+.s-serv-c .sv-b{position:absolute;top:-9px;left:12px;background:#15803d;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
+.s-serv-c.hot em{color:#15803d}
+.s-serv-c[aria-pressed="true"].hot em{color:#86efac}
