@@ -663,7 +663,7 @@
       html+=servHTML();
       if(p.line!=='laminata')html+=ralPicker();
       else html+='<div class="s-opt"><b>Finitura</b><div class="s-chips"><span class="s-chip on"><i style="background:'+swatch(p.finishes[0])+'"></i>'+esc(p.finishes[0])+'</span></div></div>';
-      html+='<dl class="s-specs"><dt>Telaio</dt><dd>Legno listellare</dd><dt>Pannello</dt><dd>'+(p.line==='pantografata'?'Copertine HDF idro 8 mm, 44 mm totali':'44 mm, anima alveolare')+'</dd><dt>Cerniere</dt><dd>3 a scomparsa</dd><dt>Serratura</dt><dd>Magnetica, cromo satinato</dd><dt>Coprifilo</dt><dd>Multistrato 7/9</dd><dt>Produzione</dt><dd>Fontanelle (TV) · laccate in 6–8 settimane</dd></dl>';
+      html+='<dl class="s-specs"><dt>Telaio</dt><dd>Legno listellare</dd><dt>Pannello</dt><dd>'+(p.line==='pantografata'?'Copertine HDF idro 8 mm, 44 mm totali':'44 mm, anima alveolare')+'</dd><dt>Cerniere</dt><dd>3 a scomparsa</dd><dt>Serratura</dt><dd>Magnetica, cromo satinato</dd><dt>Coprifilo</dt><dd>Multistrato 7/9</dd><dt>Produzione</dt><dd>Fontanelle (TV) · '+(p.line==='laminata'?'3–4':'5–6')+' settimane dalla conferma</dd></dl>';
     } else {
       html+='<span class="s-card-line"><i></i>'+esc(catName(p.cat))+'</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'.</p>';
       html+='<fieldset class="s-opt"><legend>Misura <small>L × P × H</small></legend><div class="s-chips" id="o-size">'+p.std.map(function(s,i){return '<button type="button" class="s-chip" data-v="'+i+'">'+s.w+'×'+s.d+'×'+s.h+'</button>'}).join('')+(p.custom?'<button type="button" class="s-chip" data-v="custom">Su misura</button>':'')+'</div>'
@@ -744,7 +744,7 @@
     html+='<fieldset class="s-opt"><legend>Opzioni</legend>'+D.extras.map(function(x){return '<label class="s-check" data-x="'+x.id+'"><input type="checkbox" value="'+x.id+'">'+esc(x.label)+'<em>+'+eur.format(x.add)+'</em></label>'}).join('')+'</fieldset>';
     if(p.line!=='laminata')html+=ralPicker();
     else html+='<div class="s-opt"><b>Finitura</b><div class="s-chips"><span class="s-chip on"><i style="background:'+swatch(p.finishes[0])+'"></i>'+esc(p.finishes[0])+'</span></div></div>';
-    html+='<div class="s-opt"><b>Caratteristiche standard <small>dal catalogo 2026</small></b><dl class="s-specs">'+(p.specs||[]).map(function(s){return '<dt>'+esc(s[0])+'</dt><dd>'+esc(s[1])+'</dd>'}).join('')+'<dt>Produzione</dt><dd>Fontanelle (TV) · laccate in 6–8 settimane</dd></dl></div>';
+    html+='<div class="s-opt"><b>Caratteristiche standard <small>dal catalogo 2026</small></b><dl class="s-specs">'+(p.specs||[]).map(function(s){return '<dt>'+esc(s[0])+'</dt><dd>'+esc(s[1])+'</dd>'}).join('')+'<dt>Produzione</dt><dd>Fontanelle (TV) · '+(p.line==='laminata'?'3–4':'5–6')+' settimane dalla conferma</dd></dl></div>';
     html+='<ul class="s-break" id="s-break"></ul>'+payHTML()+assureHTML(true);
     sc.innerHTML=html;sc.scrollTop=0;
     ft.innerHTML='<div class="s-qty"><button type="button" id="q-m" aria-label="Meno">−</button><output id="q-v">1</output><button type="button" id="q-p" aria-label="Più">+</button></div><div class="s-pm-total"><b id="s-pm-tot" data-v="0">—</b><small id="s-pm-iva"></small></div><button class="s-btn s-btn-p" type="button" id="s-pm-add">'+IC.bag+'Aggiungi al carrello</button>';
