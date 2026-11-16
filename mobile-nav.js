@@ -20,6 +20,7 @@
     {h:'/componenti-per-mobili/',         t:'Componenti',        s:'Pedane e accessori'},
     {h:'/verniciatura/',       t:'Verniciatura',      s:'Laccatura e lucidatura'}
   ];
+  /* shop-i18n */ (function(){var S={en:['/en/shop/','Online shop · made to measure'],de:['/de/shop/','Onlineshop · nach Maß'],fr:['/fr/boutique/','Boutique en ligne · sur mesure'],es:['/es/tienda/','Tienda online · a medida']},m=location.pathname.match(/^\/([a-z]{2})\//);if(m&&S[m[1]]){LINKS[1].h=S[m[1]][0];LINKS[1].s=S[m[1]][1];}})(); /* /shop-i18n */
 
   var CSS = ''
   + '.pdm-burger{position:fixed;top:14px;right:14px;z-index:9997;width:48px;height:48px;border-radius:50%;'

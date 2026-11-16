@@ -5,6 +5,7 @@
   if(window.__pdShop) return; window.__pdShop = true;
   if(/^\/shop(\/|$)/.test(location.pathname)) return;
   var URL = '/shop/';
+  /* shop-i18n */ var SHOPS={"en": "/en/shop/", "de": "/de/shop/", "fr": "/fr/boutique/", "es": "/es/tienda/"}, LG=(location.pathname.match(/^\/([a-z]{2})\//)||[])[1]; if(LG&&SHOPS[LG]){ if(location.pathname.indexOf(SHOPS[LG])===0) return; URL=SHOPS[LG]; } /* /shop-i18n */
 
   var css = ''
   /* pillola */
