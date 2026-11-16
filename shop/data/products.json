@@ -576,7 +576,35 @@
     "scorrevole",
     "laminato"
    ],
-   "rank": -10
+   "rank": -10,
+   "photos": [
+    {
+     "src": "/shop/img/porte/bianco-ambiente.webp",
+     "thumb": "/shop/img/porte/bianco-ambiente_min.webp",
+     "label": "In ambiente",
+     "alt": "Porta Bianco laminata bianca liscia in un ingresso moderno con parete grigia"
+    },
+    {
+     "src": "/shop/img/porte/bianco-prospettiva.webp",
+     "thumb": "/shop/img/porte/bianco-prospettiva_min.webp",
+     "label": "Prospettiva",
+     "alt": "Porta Bianco laminata vista di tre quarti, con coprifili bianchi e maniglia cromo-satinata"
+    },
+    {
+     "src": "/shop/img/porte/bianco-aperta-cerniere-agb.webp",
+     "thumb": "/shop/img/porte/bianco-aperta-cerniere-agb_min.webp",
+     "label": "Aperta",
+     "alt": "Porta Bianco aperta con le tre cerniere a scomparsa AGB",
+     "pos": "55% 50%"
+    },
+    {
+     "src": "/shop/img/porte/bianco-serratura-magnetica-agb.webp",
+     "thumb": "/shop/img/porte/bianco-serratura-magnetica-agb_min.webp",
+     "label": "Serratura",
+     "alt": "Dettaglio serratura magnetica AGB e maniglia cromo-satinata della Porta Bianco",
+     "pos": "72% 50%"
+    }
+   ]
   },
   {
    "id": "porta-bianco-matrix",
