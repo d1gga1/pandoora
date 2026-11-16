@@ -93,3 +93,6 @@ _foto_lavabi_unsplash/
 # cartella di file da eliminare: non pubblicare
 _to_delete/
 _hosting-aruba/
+
+# codice Supabase (solo in locale)
+_supabase/

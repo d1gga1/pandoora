@@ -1363,6 +1363,9 @@
     Object.keys(data).forEach(function(k){var i=document.createElement(k==='_autoresponse'?'textarea':'input');i.name=k;i.value=data[k];form.appendChild(i)});
     document.body.appendChild(form);
     var b=$('button[type="submit"]',f);b.disabled=true;b.textContent='Un attimo…';
+    /* salva l'iscritto anche nel database Supabase (si vede nella dashboard private_area); la mail col codice resta quella di sempre */
+    var salvaDb=window.PD_NL_TEST?Promise.resolve():Promise.race([new Promise(function(ok){setTimeout(ok,4000)}),fetch('https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/clienti',{method:'POST',headers:{'Content-Type':'application/json','X-PD':'1'},
+      body:JSON.stringify({a:'newsletter',origine:'popup',nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:1,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})}).catch(function(){})]);
     if(window.PD_NL_TEST){window.PD_NL_TEST(data,form);return}
     if(N.endpoint){ // il vostro script sull'hosting Aruba: mail grafica da PAN.DOOR.A GROUP + avviso a voi + elenco iscritti
       Promise.race([new Promise(function(_,ko){setTimeout(function(){ko(new Error('timeout'))},9000)}),fetch(N.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:true,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})})])
@@ -1370,7 +1373,7 @@
         .catch(function(){form.submit()});
       return;
     }
-    form.submit();
+    salvaDb.then(function(){form.submit()});
   }
   function nlSuccess(f,nome){
     var N=OF().newsletter||{};

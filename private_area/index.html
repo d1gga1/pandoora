@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Area riservata · Pan.door.a</title>
+<link rel="stylesheet" href="js/leaflet.css">
+<link rel="stylesheet" href="dashboard.css?v=2">
+</head><body>
+<!-- accesso: la password si imposta in Supabase → Edge Functions → Secrets → ADMIN_PASSWORD -->
+<form class="login-box" id="pd-login" autocomplete="on" style="margin:12vh auto;display:none">
+  <div class="brand"><span class="brand-mark">P</span><div><b>PAN.DOOR.A</b><small>Area riservata</small></div></div>
+  <label for="pd-pw">Password</label>
+  <input id="pd-pw" type="password" name="password" required autocomplete="current-password">
+  <p class="err" id="pd-err" hidden></p>
+  <button type="submit" id="pd-entra">Entra</button>
+</form>
+<div id="pd-app" style="display:none">
+<header class="top">
+  <div class="brand"><span class="brand-mark">P</span><div><b>PAN.DOOR.A</b><small>Visitatori del sito</small></div></div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="live" class="on"><span class="dot"></span>Live</button>
+    <button role="tab" data-tab="storico">Storico</button>
+    <button role="tab" data-tab="ordini">Ordini</button>
+    <button role="tab" data-tab="clienti">Clienti</button>
+    <button role="tab" data-tab="newsletter">Newsletter</button>
+  </nav>
+  <div class="top-r">
+    <span id="agg" class="muted"></span>
+    <button id="btn-impostazioni" class="ghost" title="Impostazioni e database posizioni">Impostazioni</button>
+    <a class="ghost" href="#" id="pd-esci">Esci</a>
+  </div>
+</header>
+
+<main>
+  <!-- ================= LIVE ================= -->
+  <section id="tab-live" class="tab on">
+    <div class="live-grid">
+      <div class="card map-card">
+        <div id="map-live" class="map"></div>
+        <div class="map-legend"><span class="sw s1"></span>Nuovo <span class="sw s2"></span>Di ritorno</div>
+      </div>
+      <aside class="live-side">
+        <div class="card hero">
+          <div class="hero-n"><span class="pulse"></span><b id="live-n">0</b></div>
+          <div class="hero-l">utenti sul sito adesso</div>
+          <div class="split" id="live-split"></div>
+          <div class="spark-wrap"><canvas id="spark" height="70"></canvas></div>
+          <div class="muted small">Presenze negli ultimi 30 minuti</div>
+        </div>
+        <div class="card">
+          <h3>Oggi</h3>
+          <div class="mini-kpi" id="oggi"></div>
+        </div>
+        <div class="card list-card">
+          <h3>Chi c'è adesso</h3>
+          <div id="live-list" class="live-list"></div>
+        </div>
+      </aside>
+    </div>
+    <div class="cols3">
+      <div class="card"><h3>Pagine aperte adesso</h3><div id="live-pagine" class="rank"></div></div>
+      <div class="card"><h3>Da dove arrivano</h3><div id="live-sorgenti" class="rank"></div></div>
+      <div class="card"><h3>Paesi adesso</h3><div id="live-paesi" class="rank"></div></div>
+    </div>
+  </section>
+
+  <!-- ================= STORICO ================= -->
+  <section id="tab-storico" class="tab">
+    <div class="filters card">
+      <div class="seg" id="periodi">
+        <button data-p="oggi">Oggi</button><button data-p="ieri">Ieri</button><button data-p="7">7 giorni</button>
+        <button data-p="30" class="on">30 giorni</button><button data-p="90">90 giorni</button><button data-p="365">12 mesi</button>
+        <button data-p="custom">Date…</button>
+      </div>
+      <div class="custom" id="custom" hidden>
+        <input type="date" id="f-da"> <span class="muted">→</span> <input type="date" id="f-a"> <button id="f-applica">Applica</button>
+      </div>
+      <div class="sel">
+        <select id="f-paese"><option value="">Tutti i paesi</option></select>
+        <select id="f-canale"><option value="">Tutti i canali</option></select>
+        <select id="f-dispositivo"><option value="">Tutti i dispositivi</option><option>Desktop</option><option>Mobile</option><option>Tablet</option></select>
+        <select id="f-tipo"><option value="">Nuovi e di ritorno</option><option value="nuovi">Solo nuovi</option><option value="ritorno">Solo di ritorno</option></select>
+        <a id="csv" class="ghost" href="#">Scarica CSV</a>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="card chart-card">
+      <div class="chart-head">
+        <h3 id="chart-title">Andamento</h3>
+        <div class="seg small" id="metrica">
+          <button data-m="visitatori" class="on">Visitatori</button><button data-m="sessioni">Visite</button><button data-m="pagine">Pagine viste</button><button data-m="nuovi">Nuovi / ritorno</button>
+        </div>
+      </div>
+      <div class="chart-box"><canvas id="chart"></canvas></div>
+      <div class="legend" id="chart-legend"></div>
+    </div>
+
+    <div class="cols2">
+      <div class="card map-card"><h3>Da dove vi visitano</h3><div id="map-storico" class="map map-s"></div></div>
+      <div class="card"><h3>Paesi</h3><div id="t-paesi" class="rank scroll"></div></div>
+    </div>
+
+    <div class="cols3">
+      <div class="card"><h3>Pagine più viste</h3><div id="t-pagine" class="rank scroll"></div></div>
+      <div class="card"><h3>Pagine di ingresso</h3><div id="t-ingressi" class="rank scroll"></div></div>
+      <div class="card"><h3>Città</h3><div id="t-citta" class="rank scroll"></div></div>
+      <div class="card"><h3>Canali</h3><div id="t-canali" class="rank"></div></div>
+      <div class="card"><h3>Sorgenti</h3><div id="t-sorgenti" class="rank scroll"></div></div>
+      <div class="card"><h3>Dispositivi</h3><div id="t-dispositivi" class="rank"></div><h3 class="mt">Sistemi</h3><div id="t-so" class="rank"></div></div>
+      <div class="card"><h3>Browser</h3><div id="t-browser" class="rank"></div></div>
+      <div class="card"><h3>Lingua del browser</h3><div id="t-lingue" class="rank"></div></div>
+      <div class="card"><h3>Giorni e orari</h3><div id="heat" class="heat"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>Ultime visite <span class="muted small">— cliccate una riga per vedere il percorso</span></h3>
+      <div class="table-wrap"><table class="tbl" id="t-ultime"></table></div>
+    </div>
+  </section>
+  <!-- ================= SHOP: ordini, clienti, newsletter (dashboard-clienti.js) ================= -->
+  <section id="tab-ordini" class="tab"></section>
+  <section id="tab-clienti" class="tab"></section>
+  <section id="tab-newsletter" class="tab"></section>
+</main>
+
+<div class="modal" id="modal" hidden><div class="modal-box"><button class="x" id="modal-x" aria-label="Chiudi">×</button><div id="modal-body"></div></div></div>
+
+<footer class="foot muted small">Dati: database Supabase · Visite anonime, nessun indirizzo IP salvato · Mappa © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></footer>
+
+</div>
+<script>
+/* PAN.DOOR.A — accesso alla dashboard (Edge Function "pd" su Supabase) */
+(function () {
+  var BASE = 'https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/admin';
+  var K = 'pdAdmT';
+  var tok = function () { try { return localStorage.getItem(K) || ''; } catch (e) { return ''; } };
+  var valido = function (t) { var m = /^(\d+)\./.exec(t || ''); return !!m && +m[1] > Date.now() / 1000 + 60; };
+  window.PDADM = {
+    url: function (q) { return BASE + '?' + q; },
+    link: function (q) { return BASE + '?' + q + '&t=' + encodeURIComponent(tok()); },
+    headers: function () { return { 'X-Area-Token': tok() }; },
+    esci: function () { try { localStorage.removeItem(K); } catch (e) {} location.reload(); }
+  };
+  var d = document, $ = function (i) { return d.getElementById(i); };
+  $('pd-esci').addEventListener('click', function (e) { e.preventDefault(); PDADM.esci(); });
+  if (!valido(tok())) {
+    d.body.classList.add('login'); $('pd-login').style.display = ''; $('pd-pw').focus();
+    $('pd-login').addEventListener('submit', function (e) {
+      e.preventDefault(); $('pd-entra').disabled = true; $('pd-err').hidden = true;
+      fetch(BASE + '?a=login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: $('pd-pw').value }) })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (!j.ok) throw new Error(j.errore || 'Accesso non riuscito.');
+          try { localStorage.setItem(K, j.token); } catch (x) {}
+          location.reload();
+        })
+        .catch(function (x) { $('pd-err').textContent = x.message === 'Failed to fetch' ? 'Server non raggiungibile.' : x.message; $('pd-err').hidden = false; $('pd-entra').disabled = false; });
+    });
+    return;
+  }
+  $('pd-login').remove(); $('pd-app').style.display = '';
+  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=3', 'dashboard-clienti.js?v=2'].forEach(function (s) {
+    var e = d.createElement('script'); e.src = s; e.async = false; d.body.appendChild(e);
+  });
+})();
+</script>
+</body></html>

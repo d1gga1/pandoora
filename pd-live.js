@@ -4,7 +4,7 @@
 (function () {
   if (window.__pdLive) return; window.__pdLive = 1;
   try { if (window.top !== window.self) return; } catch (e) { return; }   // non contare le pagine dentro un iframe
-  var URL_ = window.PD_LIVE_URL || 'https://api.pandooragroup.it/live/s.php';
+  var URL_ = window.PD_LIVE_URL || 'https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/s';
   var LS = null; try { LS = window.localStorage; LS.setItem('pd_t', '1'); LS.removeItem('pd_t'); } catch (e) { LS = null; }
   var get = function (k) { try { return LS ? LS.getItem(k) : null; } catch (e) { return null; } };
   var set = function (k, v) { try { if (LS) LS.setItem(k, v); } catch (e) {} };

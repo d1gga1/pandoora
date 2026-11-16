@@ -1,10 +1,15 @@
 /* Pandoora Shop — area clienti.
    Account, accesso, indirizzi, preferiti e carrello salvati, richiesta d'ordine dal carrello.
-   I dati stanno sul vostro hosting Aruba: https://api.pandooragroup.it/clienti/ */
+   I dati stanno su Supabase (Edge Function "pd"): https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/clienti */
 (function () {
   'use strict';
   if (window.PDA) return;
-  var API = window.PD_ACC_API || 'https://api.pandooragroup.it/clienti/api.php';
+  var API = window.PD_ACC_API || 'https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/clienti';
+  /* chiave di accesso del cliente: localStorage se "ricordami", altrimenti solo per questa sessione del browser */
+  var TK = 'pdAccT';
+  function tokenLeggi() { try { return localStorage.getItem(TK) || sessionStorage.getItem(TK) || ''; } catch (e) { return ''; } }
+  function tokenSalva(t, ricorda) { try { localStorage.removeItem(TK); sessionStorage.removeItem(TK); if (t) (ricorda === false ? sessionStorage : localStorage).setItem(TK, t); } catch (e) {} }
+  function intestazioni(json) { var h = { 'X-PD': '1' }; if (json) h['Content-Type'] = 'application/json'; var t = tokenLeggi(); if (t) h['X-PD-Token'] = t; return h; }
   var ACC = '/shop/account/';
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -33,11 +38,17 @@
   function api(a, dati) {
     var get = a === 'stato';
     var tempo = new Promise(function (ok) { setTimeout(function () { ok(null); }, 12000); }); // se il server non risponde entro 12 s
-    return Promise.race([tempo, fetch(API + (get ? '?a=stato' : ''), get ? { credentials: 'include', cache: 'no-store' } : {
-      method: 'POST', credentials: 'include', cache: 'no-store',
-      headers: { 'Content-Type': 'application/json', 'X-PD': '1' }, body: JSON.stringify(Object.assign({ a: a }, dati || {}))
+    return Promise.race([tempo, fetch(API + (get ? '?a=stato' : ''), get ? { cache: 'no-store', headers: tokenLeggi() ? { 'X-PD-Token': tokenLeggi() } : {} } : {
+      method: 'POST', cache: 'no-store',
+      headers: intestazioni(true), body: JSON.stringify(Object.assign({ a: a }, dati || {}))
     }).then(function (r) {
-      return r.json().catch(function () { return { ok: false, errore: 'Risposta non valida dal server.' }; }).then(function (j) { if (r.status === 401 && a !== 'accedi') { S.utente = null; aggiornaHeader(); } return j; });
+      return r.json().catch(function () { return { ok: false, errore: 'Risposta non valida dal server.' }; }).then(function (j) {
+        if (j && j.token) tokenSalva(j.token, j.ricorda);
+        if (a === 'esci' || a === 'elimina' && j && j.ok) tokenSalva('');
+        if (a === 'stato' && j && j.ok && !j.utente) tokenSalva('');
+        if (r.status === 401 && a !== 'accedi' && j && j.errore === 'Accesso richiesto') { tokenSalva(''); S.utente = null; aggiornaHeader(); } // password sbagliata: resta collegato
+        return j;
+      });
     })]).then(function (r) { return r || { ok: false, offline: true, errore: 'Il server non risponde. Riprovate tra qualche minuto, oppure inviate l\'ordine su WhatsApp dal carrello.' }; })
       .catch(function () { return { ok: false, offline: true, errore: 'Connessione non riuscita. Controllate la rete e riprovate.' }; });
   }
@@ -76,7 +87,7 @@
     var d = { a: 'sync' };
     if (sporco.carrello) d.carrello = carrelloLocale();
     if (sporco.preferiti) d.preferiti = preferitiLocali();
-    try { fetch(API, { method: 'POST', credentials: 'include', keepalive: true, headers: { 'Content-Type': 'application/json', 'X-PD': '1' }, body: JSON.stringify(d) }); } catch (e) {}
+    try { fetch(API, { method: 'POST', keepalive: true, headers: intestazioni(true), body: JSON.stringify(d) }); } catch (e) {}
   });
 
   function avvio() {
