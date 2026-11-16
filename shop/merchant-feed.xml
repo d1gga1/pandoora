@@ -426,25 +426,6 @@
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
-    <g:id>ingresso-2-ante</g:id>
-    <title>Mobile Ingresso Atrio</title>
-    <description>Mobile Ingresso Atrio: due ante e cassetto svuotatasche. Da 549 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/mobiletti/ingresso-2-ante/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/ingresso-2-ante.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>549.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>ingresso-2-ante</g:mpn>
-    <g:product_type>Mobiletti &gt; Mobili ingresso</g:product_type>
-    <g:product_width>80 cm</g:product_width>
-    <g:product_height>85 cm</g:product_height>
-    <g:product_length>35 cm</g:product_length>
-    <g:color>Grigio seta</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
     <g:id>ingresso-specchio</g:id>
     <title>Ingresso Soglia con specchio</title>
     <description>Ingresso Soglia con specchio: mobile con cassetti, specchio e appendiabiti coordinati. Da 649 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
@@ -848,22 +829,6 @@
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
-    <g:id>porta-autumn</g:id>
-    <title>Porta Autumn</title>
-    <description>Porta Autumn: incisioni diagonali leggere. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-autumn/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/autumn.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-autumn</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
     <g:id>porta-axis</g:id>
     <title>Porta Axis</title>
     <description>Porta Axis: asse verticale inciso decentrato. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
@@ -1040,54 +1005,6 @@
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
-    <g:id>porta-flow</g:id>
-    <title>Porta Flow</title>
-    <description>Porta Flow: linee curve che scorrono sul pannello. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-flow/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/flow.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-flow</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>porta-genesi</g:id>
-    <title>Porta Genesi</title>
-    <description>Porta Genesi: cornice interna con angoli smussati. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-genesi/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/genesi.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-genesi</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>porta-gramma</g:id>
-    <title>Porta Gramma</title>
-    <description>Porta Gramma: composizione geometrica a riquadri. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-gramma/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/gramma.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-gramma</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
     <g:id>porta-grigio-baltimora</g:id>
     <title>Porta Grigio Baltimora</title>
     <description>Porta Grigio Baltimora: laminato grigio caldo effetto legno. Da 395 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
@@ -1200,54 +1117,6 @@
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
-    <g:id>porta-resonance</g:id>
-    <title>Porta Resonance</title>
-    <description>Porta Resonance: onde concentriche incise. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-resonance/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/resonance.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-resonance</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>porta-signum</g:id>
-    <title>Porta Signum</title>
-    <description>Porta Signum: segno grafico verticale e orizzontale. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-signum/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/signum.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-signum</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>porta-skyline</g:id>
-    <title>Porta Skyline</title>
-    <description>Porta Skyline: profilo a gradoni ispirato allo skyline. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
-    <link>https://pandooragroup.it/shop/porte-per-interni/porta-skyline/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/porte/skyline.webp</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>725.90 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>porta-skyline</g:mpn>
-    <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
-    <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
     <g:id>porta-tilt</g:id>
     <title>Porta Tilt</title>
     <description>Porta Tilt: linee inclinate in movimento. Da 595 € + IVA, posa inclusa in Veneto e FVG. Prodotta a Fontanelle (TV).</description>
@@ -1293,158 +1162,6 @@
     <g:mpn>porta-zig-zag</g:mpn>
     <g:product_type>Porte per interni &gt; Porte battenti</g:product_type>
     <g:product_height>210 cm</g:product_height>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>panca-ante-scorrevoli</g:id>
-    <title>Panca Brina ante scorrevoli</title>
-    <description>Panca Brina ante scorrevoli: seduta e scarpiera chiusa: due ante scorrevoli, nessun ingombro in apertura. Da 389 € IVA inclusa, anche su misura.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/panca-ante-scorrevoli/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/panca-ante-scorrevoli.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>389.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>panca-ante-scorrevoli</g:mpn>
-    <g:product_type>Scarpiere &gt; Con seduta</g:product_type>
-    <g:product_width>100 cm</g:product_width>
-    <g:product_height>52 cm</g:product_height>
-    <g:product_length>37 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>panca-cansiglio-contenitore</g:id>
-    <title>Panca Cansiglio contenitore</title>
-    <description>Panca Cansiglio contenitore: panca da ingresso con vano contenitore sotto il coperchio a ribalta ammortizzato. Da 289 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/panca-cansiglio-contenitore/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/panca-cansiglio-contenitore.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>289.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>panca-cansiglio-contenitore</g:mpn>
-    <g:product_type>Scarpiere &gt; Con seduta</g:product_type>
-    <g:product_width>90 cm</g:product_width>
-    <g:product_height>48 cm</g:product_height>
-    <g:product_length>52 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>scarpiera-alta-5</g:id>
-    <title>Scarpiera Torre 5 ripiani</title>
-    <description>Scarpiera Torre 5 ripiani: colonna a un'anta con cinque ripiani, 25 paia in 50 cm. Da 679 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-alta-5/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-alta-5.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>679.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>scarpiera-alta-5</g:mpn>
-    <g:product_type>Scarpiere &gt; Con ante</g:product_type>
-    <g:product_width>50 cm</g:product_width>
-    <g:product_height>180 cm</g:product_height>
-    <g:product_length>36 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>scarpiera-meduna-2-ante</g:id>
-    <title>Scarpiera Meduna 2 ante</title>
-    <description>Scarpiera Meduna 2 ante: due ante, quattro ripiani regolabili, fino a 16 paia in 35 cm di profondità. Da 309 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-meduna-2-ante/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-meduna-2-ante.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>309.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>scarpiera-meduna-2-ante</g:mpn>
-    <g:product_type>Scarpiere &gt; Con ante</g:product_type>
-    <g:product_width>80 cm</g:product_width>
-    <g:product_height>117 cm</g:product_height>
-    <g:product_length>35 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>scarpiera-pensile-duo</g:id>
-    <title>Scarpiera Pensile Duo (2 pezzi)</title>
-    <description>Scarpiera Pensile Duo (2 pezzi): due elementi a parete da 18 cm di profondità: componibili in verticale o in fila. Da 219 € IVA inclusa, anche su misura.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-pensile-duo/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-pensile-duo.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>219.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>scarpiera-pensile-duo</g:mpn>
-    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
-    <g:product_width>52 cm</g:product_width>
-    <g:product_height>39 cm</g:product_height>
-    <g:product_length>18 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>scarpiera-slim-17</g:id>
-    <title>Scarpiera Filo 17</title>
-    <description>Scarpiera Filo 17: solo 17 cm di profondità: entra anche dietro la porta d'ingresso. Da 459 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-slim-17/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-slim-17.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>459.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>scarpiera-slim-17</g:mpn>
-    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
-    <g:product_width>60 cm</g:product_width>
-    <g:product_height>120 cm</g:product_height>
-    <g:product_length>17 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>scarpiera-snella-2</g:id>
-    <title>Scarpiera Snella 2 vani</title>
-    <description>Scarpiera Snella 2 vani: larga solo 49 cm, due ribalte con divisori regolabili, 8 paia. Da 239 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-2/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-2.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>239.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>scarpiera-snella-2</g:mpn>
-    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
-    <g:product_width>49 cm</g:product_width>
-    <g:product_height>93 cm</g:product_height>
-    <g:product_length>28 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>scarpiera-snella-3</g:id>
-    <title>Scarpiera Snella 3 vani</title>
-    <description>Scarpiera Snella 3 vani: tre ribalte in 49 cm di larghezza, 12 paia, da fissare a parete. Da 289 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-3/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-3.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>289.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>scarpiera-snella-3</g:mpn>
-    <g:product_type>Scarpiere &gt; A ribalta</g:product_type>
-    <g:product_width>49 cm</g:product_width>
-    <g:product_height>135 cm</g:product_height>
-    <g:product_length>28 cm</g:product_length>
-    <g:color>Marrone-nero</g:color>
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
 </channel>
