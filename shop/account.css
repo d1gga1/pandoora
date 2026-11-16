@@ -158,4 +158,5 @@
 .pa-steps li:before{content:counter(st);grid-row:span 2;width:28px;height:28px;border-radius:50%;background:#0d1524;color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
 .pa-steps b{font-size:14.5px}
 .pa-steps span{font-size:13px;color:#5d6470}
-.pa-g{margin:12px auto 0;max-width:440px;font-size:13px;color:#14532d;background:#eef6ee;border-radius:10px;padding:8px 12px}
+p.pa-g{display:block;margin:12px auto 0;max-width:440px;font-size:13px;color:#14532d;background:#eef6ee;border-radius:10px;padding:8px 12px}
+.pa-g[hidden]{display:none}

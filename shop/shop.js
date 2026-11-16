@@ -9,7 +9,7 @@
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var FINE=window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches;
   var WA='393884706887', MAIL='ordini@pandooragroup.it';
-  function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));if((k==='pdShopCart2'||k==='pdShopFav')&&window.PDA)window.PDA.cambiato(k)}catch(e){return null}}
+  function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');if(k==='pdShopCart2'&&window.pdEvento&&Array.isArray(v)){var q0=0,q1=0,pr=JSON.parse(localStorage.getItem(k)||'[]')||[];pr.forEach(function(l){q0+=+l.qty||1});v.forEach(function(l){q1+=+l.qty||1});if(q1>q0&&v.length)window.pdEvento('carrello',(v[v.length-1].name||'prodotto')+(q1-q0>1?' ×'+(q1-q0):''))}localStorage.setItem(k,JSON.stringify(v));if((k==='pdShopCart2'||k==='pdShopFav')&&window.PDA)window.PDA.cambiato(k)}catch(e){return null}}
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
 
@@ -1376,6 +1376,7 @@
     salvaDb.then(function(){form.submit()});
   }
   function nlSuccess(f,nome){
+    window.pdEvento&&window.pdEvento('iscrizione','newsletter dal popup');
     var N=OF().newsletter||{};
     f.innerHTML='<div class="s-nl-logo"><img src="/shop/img/email/logo-popup.webp" alt="PAN.DOOR.A GROUP" width="180" height="150"></div><div class="s-nl-done"><span class="nl-k">Iscrizione completata</span><h2 id="s-nl-t">Grazie '+esc(nome)+'! Ecco il vostro '+N.perc+'%</h2>'
       +'<div class="nl-codebox"><b>'+esc(N.code)+'</b><button type="button" class="s-btn s-btn-o" id="s-nl-copy">Copia</button></div>'

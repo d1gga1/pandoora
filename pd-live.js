@@ -55,15 +55,65 @@
   if (par('utm_source')) utm.s = par('utm_source');
   if (par('utm_medium')) utm.m = par('utm_medium');
   if (par('utm_campaign')) utm.c = par('utm_campaign');
+  if (par('utm_term')) utm.t = par('utm_term');
   if (par('gclid') || par('gbraid') || par('wbraid')) utm.g = 1;
   if (par('fbclid')) utm.f = 1;
-  invia('pv', { n: nuovaVisita ? 1 : 0, k: vn, r: nuovaVisita ? ref.slice(0, 400) : '', u: nuovaVisita ? utm : {}, w: screen.width || 0, l: navigator.language || '' });
+  var dati = function () { // dispositivo e browser (nessun dato personale)
+    var d = { w: screen.width || 0, l: navigator.language || '' };
+    try { d.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    d.sch = (screen.width || 0) + 'x' + (screen.height || 0);
+    d.fin = (innerWidth || 0) + 'x' + (innerHeight || 0);
+    d.dpr = Math.round((devicePixelRatio || 1) * 100) / 100;
+    d.tc = (navigator.maxTouchPoints || 0) > 0 ? 1 : 0;
+    var c = navigator.connection; if (c && c.effectiveType) d.cn = c.effectiveType;
+    if (navigator.deviceMemory) d.mem = navigator.deviceMemory;
+    if (navigator.hardwareConcurrency) d.cpu = navigator.hardwareConcurrency;
+    try { d.dk = matchMedia('(prefers-color-scheme: dark)').matches ? 1 : 0; } catch (e) {}
+    d.ls = (navigator.languages || []).slice(0, 4).join(',');
+    return d;
+  };
+  var primo = { n: nuovaVisita ? 1 : 0, k: vn, r: nuovaVisita ? ref.slice(0, 400) : '', u: nuovaVisita ? utm : {} };
+  var dd = dati(); for (var x in dd) primo[x] = dd[x];
+  invia('pv', primo);
+
+  /* quanto della pagina è stato letto (scroll massimo in %) */
+  var scrollMax = 0;
+  var misuraScroll = function () {
+    var h = Math.max(document.documentElement.scrollHeight, document.body ? document.body.scrollHeight : 0) - innerHeight;
+    var p = h > 0 ? Math.round(Math.min(1, (scrollY || pageYOffset || 0) / h) * 100) : 100;
+    if (p > scrollMax) scrollMax = p;
+  };
+  addEventListener('scroll', function () { misuraScroll(); }, { passive: true });
+  setTimeout(misuraScroll, 1500);
+
+  /* azioni: clic su WhatsApp, telefono, email (e altri eventi mandati dal sito con window.pdEvento) */
+  window.pdEvento = function (tipo, dettaglio) { try { tocca(); invia('ev', { k: String(tipo), x: String(dettaglio || '').slice(0, 200) }); } catch (e) {} };
+  var tipoLink = function (href) {
+    if (/^(https?:)?\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com|chat\.whatsapp\.com)\//i.test(href) || /^whatsapp:/i.test(href)) return 'whatsapp';
+    if (/^tel:/i.test(href)) return 'telefono';
+    if (/^mailto:/i.test(href)) return 'email';
+    if (/\.pdf(\?|#|$)/i.test(href)) return 'download';
+    return '';
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '', tipo = tipoLink(href);
+    if (!tipo) return;
+    var testo = (a.getAttribute('aria-label') || a.textContent || '').replace(/\s+/g, ' ').trim();
+    if (!testo && a.className) testo = String(a.className);
+    window.pdEvento(tipo, (testo || href).slice(0, 120) + (tipo === 'download' ? ' · ' + href.split('/').pop() : ''));
+  }, true);
+  if (window.open) { // WhatsApp aperto dal codice (es. "invia l'ordine su WhatsApp")
+    var apri = window.open;
+    window.open = function (u) { try { if (u && tipoLink(String(u)) === 'whatsapp') window.pdEvento('whatsapp', 'apertura da pulsante'); } catch (e) {} return apri.apply(window, arguments); };
+  }
 
   /* prodotti aperti nello shop (cambiano l'indirizzo senza ricaricare la pagina) */
   var ultimo = percorso();
   ['pushState', 'replaceState'].forEach(function (f) {
     var orig = history[f]; if (!orig) return;
-    history[f] = function () { var r = orig.apply(this, arguments); var p = percorso(); if (p !== ultimo) { ultimo = p; tocca(); invia('pv', { k: vn }); } return r; };
+    history[f] = function () { var r = orig.apply(this, arguments); var p = percorso(); if (p !== ultimo) { ultimo = p; scrollMax = 0; tocca(); invia('pv', { k: vn }); setTimeout(misuraScroll, 1500); } return r; };
   });
 
   /* "sono ancora qui": ogni 15 secondi, solo con la pagina in primo piano e se la persona non è inattiva da più di 10 minuti */
@@ -73,14 +123,14 @@
   });
   setInterval(function () {
     if (document.visibilityState !== 'visible' || ora() - attivita > 10 * 60 * 1000) return;
-    tocca(); invia('hb');
+    misuraScroll(); tocca(); invia('hb', { sc: scrollMax });
   }, 15000);
   document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'hidden') invia('bye');
+    if (document.visibilityState === 'hidden') { misuraScroll(); invia('bye', { sc: scrollMax }); }
     else if (ora() - sess.t > MAX_PAUSA) {   // tornati dopo una lunga pausa: è una nuova visita
       sess = { id: rid(), t: ora() }; vn += 1; set('pd_vn', String(vn)); tocca(); attivita = ora();
       invia('pv', { n: 1, k: vn, r: '', u: {}, w: screen.width || 0, l: navigator.language || '' });
     } else { attivita = ora(); tocca(); invia('hb'); }
   });
-  addEventListener('pagehide', function () { invia('bye'); });
+  addEventListener('pagehide', function () { misuraScroll(); invia('bye', { sc: scrollMax }); });
 })();

@@ -2,7 +2,15 @@
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>Area riservata · Pan.door.a</title>
 <link rel="stylesheet" href="js/leaflet.css">
-<link rel="stylesheet" href="dashboard.css?v=2">
+<link rel="stylesheet" href="dashboard.css?v=3">
+<style>
+.mini-kpi.az{grid-template-columns:repeat(3,1fr)}
+.mini-kpi.az div b{font-size:20px}
+.az-ic{display:inline-block;width:20px;text-align:center}
+.det{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px;margin-top:10px}
+.det span{color:var(--muted)}
+.steps small i{font-style:normal;color:var(--s3)}
+</style>
 </head><body>
 <!-- accesso: la password si imposta in Supabase → Edge Functions → Secrets → ADMIN_PASSWORD -->
 <form class="login-box" id="pd-login" autocomplete="on" style="margin:12vh auto;display:none">
@@ -48,6 +56,11 @@
         <div class="card">
           <h3>Oggi</h3>
           <div class="mini-kpi" id="oggi"></div>
+        </div>
+        <div class="card">
+          <h3>Azioni di oggi</h3>
+          <div class="mini-kpi az" id="azioni-oggi"></div>
+          <div id="azioni-live" class="rank scroll" style="max-height:220px;margin-top:10px"></div>
         </div>
         <div class="card list-card">
           <h3>Chi c'è adesso</h3>
@@ -113,6 +126,20 @@
       <div class="card"><h3>Giorni e orari</h3><div id="heat" class="heat"></div></div>
     </div>
 
+    <div class="cols3">
+      <div class="card"><h3>Azioni dei visitatori</h3><div id="t-azioni" class="rank"></div></div>
+      <div class="card"><h3>Da quali pagine scrivono su WhatsApp</h3><div id="t-wa" class="rank scroll"></div></div>
+      <div class="card"><h3>Regioni</h3><div id="t-regioni" class="rank scroll"></div></div>
+      <div class="card"><h3>Provider internet / aziende</h3><div id="t-isp" class="rank scroll"></div></div>
+      <div class="card"><h3>Schermi</h3><div id="t-schermi" class="rank scroll"></div><h3 class="mt">Connessione</h3><div id="t-conn" class="rank"></div></div>
+      <div class="card"><h3>Lettura delle pagine</h3><div id="t-lettura" class="mini-kpi" style="grid-template-columns:1fr 1fr"></div><h3 class="mt">Fusi orari</h3><div id="t-fusi" class="rank"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>Ultime azioni <span class="muted small">— clic su WhatsApp, telefono, email, carrello, ordini</span> <a class="ghost" id="csv-azioni" href="#" style="float:right;font-size:12px;padding:4px 10px">Scarica CSV</a></h3>
+      <div class="table-wrap"><table class="tbl" id="t-azioni-ultime"></table></div>
+    </div>
+
     <div class="card">
       <h3>Ultime visite <span class="muted small">— cliccate una riga per vedere il percorso</span></h3>
       <div class="table-wrap"><table class="tbl" id="t-ultime"></table></div>
@@ -160,7 +187,7 @@
     return;
   }
   $('pd-login').remove(); $('pd-app').style.display = '';
-  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=3', 'dashboard-clienti.js?v=2'].forEach(function (s) {
+  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=4', 'dashboard-clienti.js?v=3'].forEach(function (s) {
     var e = d.createElement('script'); e.src = s; e.async = false; d.body.appendChild(e);
   });
 })();

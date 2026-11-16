@@ -133,7 +133,8 @@
       return '<button type="button" data-v="' + x[0] + '" aria-pressed="' + (tipo === x[0]) + '">' + x[1] + '</button>'; }).join('') + '</div><input type="hidden" name="tipo" value="' + esc(tipo) + '"></div>'
       + '<div class="pa-g">' + campo('nome', 'Nome', { v: u.nome, ac: 'given-name', req: 1, max: 80 }) + campo('cognome', 'Cognome', { v: u.cognome, ac: 'family-name', req: 1, max: 80 })
       + (conEmail ? campo('email', 'Email', { type: 'email', v: u.email, ac: 'email', req: 1 }) : '')
-      + campo('telefono', 'Telefono', { type: 'tel', v: u.telefono, ac: 'tel', im: 'tel', req: 1, max: 40, w: !conEmail ? 0 : 0 }) + '</div>'
+      + campo('telefono', 'Telefono', { type: 'tel', v: u.telefono, ac: 'tel', im: 'tel', req: 1, max: 40, w: !conEmail ? 0 : 0 })
+      + campo('zona', 'Zona <small style="font-weight:400;opacity:.7">(facoltativa: città o provincia)</small>', { v: u.zona, ac: 'address-level2', max: 120, w: 1, ph: 'es. Treviso' }) + '</div>'
       + '<div class="pa-g" data-azienda' + (tipo === 'privato' ? ' hidden' : '') + '>' + campo('azienda', 'Ragione sociale', { v: u.azienda, ac: 'organization', w: 1, max: 160 })
       + campo('piva', 'Partita IVA', { v: u.piva, max: 30 }) + campo('cf', 'Codice fiscale', { v: u.cf, max: 30 })
       + campo('sdi', 'Codice SDI', { v: u.sdi, max: 10, ph: 'per la fattura elettronica' }) + campo('pec', 'PEC', { type: 'email', v: u.pec, max: 160 }) + '</div>';
@@ -253,6 +254,7 @@
   function checkout() {
     var o = window.PDShop && window.PDShop.ordine ? window.PDShop.ordine() : null;
     if (!o || !o.righe.length) return;
+    window.pdEvento && window.pdEvento('checkout', o.righe.length + ' prodotti · ' + Math.round(o.tot || 0) + ' €');
     window.PDShop.chiudiCarrello && window.PDShop.chiudiCarrello();
     var box = apriFinestra('<h2>Richiesta d\'ordine</h2><p class="pa-sub" style="margin:0">Inviando la richiesta non pagate ancora nulla: vi ricontattiamo per confermare ordine, tempi e prezzo. <b>Pagamento: 50% di anticipo alla conferma dell\'ordine, 50% quando la merce è pronta.</b> Il rilievo delle misure si fa dopo la conferma e l\'anticipo.</p>' + riepilogoHTML(o) + '<div data-co></div>');
     var c = $('[data-co]', box);
@@ -310,6 +312,7 @@
       attendi(f, false);
       if (!r.ok) return erroreModulo(f, r);
       if (r.utente) applica(r, false);
+      window.pdEvento && window.pdEvento('ordine', r.numero + ' · ' + Math.round((d.totali && d.totali.tot) || 0) + ' €');
       window.PDShop && window.PDShop.svuotaCarrello && window.PDShop.svuotaCarrello();
       try { localStorage.removeItem('pdAccDirty'); } catch (e) {}
       var box = c.closest('.pa-m-c') || c;
@@ -380,6 +383,7 @@
       api('registra', Object.assign(v, { carrello: carrelloLocale(), preferiti: preferitiLocali() })).then(function (r) {
         attendi(f, false); if (!r.ok) return erroreModulo(f, r);
         applica(r, true);
+        window.pdEvento && window.pdEvento('registrazione', 'nuovo account' + (v.zona ? ' · ' + v.zona : ''));
         if (v.newsletter) { var N = window.PDShop && window.PDShop.offerta ? window.PDShop.offerta() : null; if (N && N.code) ls('pdCode', N.code); }
         location.hash = 'panoramica'; vista('Account creato. Benvenuti, ' + r.utente.nome + '!');
       });

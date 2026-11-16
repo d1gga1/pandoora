@@ -27,6 +27,11 @@
     if (!x.cc && !x.citta) return 'Posizione sconosciuta';
     return (x.citta ? x.citta + ', ' : '') + (x.paese || x.cc);
   }
+  var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'],
+    ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'] };
+  var azNome = function (t) { return (AZ[t] || ['•', t])[1]; };
+  var azIc = function (t) { return '<span class="az-ic">' + (AZ[t] || ['•'])[0] + '</span>'; };
+  var quando = function (ts) { return new Date(ts * 1000).toLocaleString('it-IT', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
   function api(q) {
     return fetch(PDADM.url(q), { cache: 'no-store', headers: PDADM.headers() }).then(function (r) {
       if (r.status === 401) { PDADM.esci(); throw new Error('accesso'); }
@@ -105,6 +110,17 @@
       return '<div><b>' + n(k[1]) + '</b><span>' + k[0] + ' · ieri ' + n(k[2]) + '</span></div>';
     }).join('');
 
+    // azioni di oggi
+    var ao = d.azioni_oggi || {}, ai = d.azioni_ieri || {};
+    $('#azioni-oggi').innerHTML = [['whatsapp', 'Clic WhatsApp'], ['telefono', 'Clic telefono'], ['carrello', 'Nel carrello']].map(function (k) {
+      return '<div><b>' + azIc(k[0]) + n(ao[k[0]] || 0) + '</b><span>' + k[1] + ' · ieri ' + n(ai[k[0]] || 0) + '</span></div>';
+    }).join('');
+    var ua = d.ultime_azioni || [];
+    $('#azioni-live').innerHTML = ua.length ? ua.map(function (e) {
+      return '<div class="rk nolink"><span class="lb">' + azIc(e.tipo) + ' ' + esc(azNome(e.tipo)) + (e.dettaglio ? ' · ' + esc(e.dettaglio) : '') +
+        '<small>' + new Date(e.ts * 1000).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' }) + ' · ' + esc(nomePagina(e.percorso, e.titolo)) + (e.citta ? ' · ' + flag(e.cc) + ' ' + esc(e.citta) : '') + '</small></span></div>';
+    }).join('') : '<p class="muted small">Nessuna azione nelle ultime 24 ore.</p>';
+
     // elenco
     $('#live-list').innerHTML = live.length ? live.map(function (x) {
       var tipo = +x.ritorno ? '<span class="tag r">' + (x.n_visita > 1 ? x.n_visita + 'ª visita' : 'Di ritorno') + '</span>' : '<span class="tag n">Nuovo</span>';
@@ -171,6 +187,9 @@
       '</div><p class="muted small" style="margin-top:10px">Caricamento del percorso…</p>');
     api('a=percorso&id=' + encodeURIComponent(x.id)).then(function (d) {
       if (!d.ok) return;
+      var se = d.sessione || {};
+      ['cc', 'citta', 'paese', 'regione', 'dispositivo', 'browser', 'so', 'sorgente', 'n_visita', 'ritorno'].forEach(function (k) { if ((x[k] == null || x[k] === '') && se[k] != null) x[k] = se[k]; });
+      if (x.durata == null && se.inizio) x.durata = se.ultimo - se.inizio;
       var t0 = d.pagine.length ? d.pagine[0].ts : 0;
       var tipo = +x.ritorno ? (x.n_visita > 1 ? x.n_visita + 'ª visita' : 'Visitatore di ritorno') : 'Prima visita';
       var html = '<h2>' + flag(x.cc) + ' ' + esc(luogo(x)) + '</h2><div class="muted">' + esc([x.regione, x.dispositivo, x.browser, x.so].filter(Boolean).join(' · ')) + '</div>' +
@@ -179,8 +198,23 @@
         '<h3 style="margin-top:16px">Pagine viste in questa visita</h3><ol class="steps">' +
         d.pagine.map(function (p) {
           return '<li>' + esc(nomePagina(p.percorso, p.titolo)) + '<small>' + esc(p.percorso) + ' · ' + new Date(p.ts * 1000).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' }) +
-            (p.ts > t0 ? ' (+' + dur(p.ts - t0) + ')' : '') + '</small></li>';
+            (p.ts > t0 ? ' (+' + dur(p.ts - t0) + ')' : '') + (p.tempo ? ' · <i>' + dur(p.tempo) + ' sulla pagina</i>' : '') + (p.scroll ? ' · <i>letta al ' + p.scroll + '%</i>' : '') + '</small></li>';
         }).join('') + '</ol>';
+      if (d.azioni && d.azioni.length) {
+        html += '<h3 style="margin-top:8px">Azioni</h3><div class="rank">' + d.azioni.map(function (e) {
+          return '<div class="rk nolink"><span class="lb">' + azIc(e.tipo) + ' ' + esc(azNome(e.tipo)) + (e.dettaglio ? ' · ' + esc(e.dettaglio) : '') + '<small>' +
+            new Date(e.ts * 1000).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' }) + ' · ' + esc(nomePagina(e.percorso, e.titolo)) + '</small></span></div>';
+        }).join('') + '</div>';
+      }
+      var s = d.sessione;
+      if (s) {
+        var righe = [['Luogo', [s.citta, s.regione, s.paese].filter(Boolean).join(', ')], ['Provider', s.isp], ['Dispositivo', [s.dispositivo, s.so, s.browser].filter(Boolean).join(' · ')],
+          ['Schermo', s.schermo ? s.schermo.replace('x', ' × ') + (s.dpr ? ' (densità ' + String(s.dpr).replace('.', ',') + ')' : '') : ''], ['Finestra', s.finestra ? s.finestra.replace('x', ' × ') : ''],
+          ['Touch', s.touch == null ? '' : (+s.touch ? 'sì' : 'no')], ['Connessione', s.connessione ? s.connessione.toUpperCase() : ''], ['Memoria / CPU', (s.memoria ? s.memoria + ' GB' : '') + (s.cpu ? (s.memoria ? ' · ' : '') + s.cpu + ' core' : '')],
+          ['Tema', s.tema], ['Fuso orario', s.fuso], ['Lingue', s.lingue], ['Arrivato da', [s.canale, s.sorgente].filter(Boolean).join(' · ')], ['Indirizzo di provenienza', s.riferimento],
+          ['Campagna', [s.utm_sorgente, s.utm_mezzo, s.campagna, s.utm_termine].filter(Boolean).join(' · ')]];
+        html += '<h3 style="margin-top:12px">Dettagli del visitatore</h3><div class="det">' + righe.filter(function (r) { return r[1]; }).map(function (r) { return '<span>' + r[0] + '</span><b style="font-weight:500;word-break:break-all">' + esc(r[1]) + '</b>'; }).join('') + '</div>';
+      }
       if (d.visite_precedenti.length) {
         html += '<h3 style="margin-top:8px">Visite precedenti</h3><div class="rank">' + d.visite_precedenti.map(function (v) {
           return '<div class="rk nolink"><span class="lb">' + new Date(v.inizio * 1000).toLocaleString('it-IT', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) +
@@ -204,7 +238,7 @@
     el.innerHTML = righe.map(function (r, i) {
       return '<div class="rk' + (onClick ? '' : ' nolink') + '" data-i="' + i + '" title="' + esc(r.title || r.k || '') + '">' +
         '<span class="bar" style="width:' + (100 * r.n / max).toFixed(1) + '%"></span>' +
-        '<span class="lb">' + esc(r.lb || '—') + (r.sub ? '<small>' + esc(r.sub) + '</small>' : '') + '</span>' +
+        '<span class="lb">' + (opz.html ? (r.lb || '—') : esc(r.lb || '—')) + (r.sub ? '<small>' + esc(r.sub) + '</small>' : '') + '</span>' +
         (r.u != null && opz.u ? '<span class="u">' + n(r.u) + '</span>' : '') + '<b>' + n(r.n) + '</b></div>';
     }).join('');
     if (onClick) $$('.rk', el).forEach(function (row) { row.addEventListener('click', function () { onClick(righe[+row.dataset.i]); }); });
@@ -287,6 +321,10 @@
       ['Durata media', dur(k.durata), delta(k.durata, p.durata)],
       ['Rimbalzo', String(k.rimbalzo).replace('.', ',') + '%', delta(k.rimbalzo, p.rimbalzo, true)]
     ];
+    var azN = {}, azP = {}; (d.azioni || []).forEach(function (r) { azN[r.k] = +r.n; }); (d.azioni_prec || []).forEach(function (r) { azP[r.k] = +r.n; });
+    [['whatsapp', 'Clic WhatsApp'], ['telefono', 'Clic telefono'], ['carrello', 'Aggiunte al carrello'], ['ordine', 'Ordini inviati']].forEach(function (x) {
+      tiles.push([azIc(x[0]) + x[1], n(azN[x[0]] || 0), delta(azN[x[0]] || 0, azP[x[0]] || 0)]);
+    });
     $('#kpis').innerHTML = tiles.map(function (t) { return '<div class="kpi"><span>' + t[0] + '</span><b>' + t[1] + '</b>' + t[2] + '</div>'; }).join('');
     var f = function (s) { var x = s.split('-'); return x[2] + '/' + x[1] + '/' + x[0]; };
     $('#chart-title').textContent = 'Andamento · ' + (d.da === d.a ? f(d.da) : f(d.da) + ' – ' + f(d.a)) + ' (confronto con ' + f(d.prec_da) + ' – ' + f(d.prec_a) + ')';
@@ -301,6 +339,23 @@
       .map(function (c) { return '<option value="' + esc(c) + '">' + esc(noti[c]) + '</option>'; }).join('');
     sel.value = att;
 
+    classifica($('#t-azioni'), (d.azioni || []).map(function (r) { return { k: r.k, lb: azIc(r.k) + ' ' + esc(azNome(r.k)), sub: n(r.u) + ' visitatori', n: r.n }; }), null, { html: 1 });
+    classifica($('#t-wa'), (d.whatsapp_pagine || []).map(function (r) { return { k: r.k, lb: nomePagina(r.k, r.titolo), sub: r.k, n: r.n }; }), function (r) { setFiltro('pagina', r.k); });
+    classifica($('#t-regioni'), (d.regioni || []).map(function (r) { return { k: r.k, lb: (r.k ? flag(r.cc) + ' ' + r.k : 'Sconosciuta'), n: r.n }; }), null);
+    classifica($('#t-isp'), (d.isp || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', n: r.n }; }), null);
+    classifica($('#t-schermi'), (d.schermi || []).map(function (r) { return { k: r.k, lb: r.k ? r.k.replace('x', ' × ') : 'Sconosciuto', n: r.n }; }), null);
+    classifica($('#t-conn'), (d.connessioni || []).map(function (r) { return { k: r.k, lb: r.k ? r.k.toUpperCase() : 'Non indicata', n: r.n }; }), null);
+    classifica($('#t-fusi'), (d.fusi || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', n: r.n }; }), null);
+    var sc = d.scroll || {};
+    $('#t-lettura').innerHTML = '<div><b>' + (sc.scroll != null ? n(sc.scroll) + '%' : '—') + '</b><span>pagina letta in media</span></div><div><b>' + (sc.tempo != null ? dur(sc.tempo) : '—') + '</b><span>tempo medio per pagina</span></div>';
+    $('#csv-azioni').href = PDADM.link('a=csv_azioni&' + query());
+    var ta = $('#t-azioni-ultime'), au = d.azioni_ultime || [];
+    ta.innerHTML = '<thead><tr><th>Quando</th><th>Azione</th><th>Dettaglio</th><th>Pagina</th><th>Luogo</th><th>Dispositivo</th><th>Arrivato da</th></tr></thead><tbody>' +
+      (au.length ? au.map(function (e) {
+        return '<tr data-sid="' + esc(e.sid) + '"><td>' + quando(e.ts) + '</td><td>' + azIc(e.tipo) + ' ' + esc(azNome(e.tipo)) + '</td><td>' + esc(e.dettaglio) + '</td><td title="' + esc(e.percorso) + '">' + esc(nomePagina(e.percorso, e.titolo)) + '</td>' +
+          '<td>' + (e.citta || e.paese ? flag(e.cc) + ' ' + esc(e.citta || e.paese) : '—') + '</td><td>' + esc(e.dispositivo) + '</td><td>' + esc(e.sorgente) + '</td></tr>';
+      }).join('') : '<tr><td colspan="7" class="empty">Nessuna azione in questo periodo</td></tr>') + '</tbody>';
+    $$('tr[data-sid]', ta).forEach(function (tr) { tr.style.cursor = 'pointer'; tr.addEventListener('click', function () { apriPercorso({ id: tr.dataset.sid, cc: '', citta: '' }); }); });
     classifica($('#t-paesi'), d.paesi.map(function (r) { return { k: r.k, lb: flag(r.k) + ' ' + (r.paese || 'Sconosciuto'), n: r.n, u: r.u }; }), function (r) { if (r.k) setFiltro('paese', r.k); });
     classifica($('#t-pagine'), d.pagine.map(function (r) { return { k: r.k, lb: nomePagina(r.k, r.titolo), sub: r.k, n: r.n }; }), function (r) { setFiltro('pagina', r.k); });
     classifica($('#t-ingressi'), d.ingressi.map(function (r) { return { k: r.k, lb: r.k, n: r.n }; }), function (r) { setFiltro('ingresso', r.k); });

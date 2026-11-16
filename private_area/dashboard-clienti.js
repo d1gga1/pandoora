@@ -113,7 +113,7 @@
   var FC = { q: '', tipo: '', con_ordini: '', carrello: '', newsletter: '' };
   function initClienti() {
     var s = $('#tab-clienti');
-    s.innerHTML = '<div class="kpis k5" id="c-kpi"></div><div class="card filters"><div class="sel" style="margin-left:0"><input type="search" id="c-q" placeholder="Cerca nome, email, azienda, telefono, P.IVA…">'
+    s.innerHTML = '<div class="kpis k5" id="c-kpi"></div><div class="card filters"><div class="sel" style="margin-left:0"><input type="search" id="c-q" placeholder="Cerca nome, email, azienda, telefono, zona, P.IVA…">'
       + '<select id="c-tipo"><option value="">Tutti i tipi</option><option value="privato">Privati</option><option value="azienda">Aziende</option><option value="professionista">Professionisti</option></select>'
       + '<label class="chk"><input type="checkbox" id="c-ord"> Con ordini</label><label class="chk"><input type="checkbox" id="c-car"> Con carrello pieno</label><label class="chk"><input type="checkbox" id="c-nl"> Iscritti newsletter</label>'
       + '<a class="ghost" href="' + PDADM.link('a=c_csv&tipo=clienti') + '">Scarica CSV</a></div></div><div class="card"><div class="table-wrap tall"><table class="tbl" id="c-tab"></table></div></div>';
@@ -130,7 +130,7 @@
         tb.innerHTML = '<thead><tr><th>Cliente</th><th>Contatti</th><th>Tipo</th><th>Registrato</th><th>Ultimo accesso</th><th class="num">Ordini</th><th class="num">Valore</th><th class="num">Carrello</th><th class="num">Preferiti</th><th>News</th></tr></thead><tbody>'
           + (d.clienti.length ? d.clienti.map(function (c, i) {
             return '<tr data-i="' + i + '"><td><b>' + esc(c.nome + ' ' + c.cognome) + '</b>' + (c.azienda ? '<br><small>' + esc(c.azienda) + '</small>' : '') + (c.stato === 'bloccato' ? ' <span class="st st-annullato">Sospeso</span>' : '') + '</td>'
-              + '<td><small>' + esc(c.email) + (+c.verificato ? ' ✓' : '') + '<br>' + esc(c.telefono || '') + '</small></td><td>' + esc(c.tipo || '') + '</td><td>' + dt(c.creato) + '</td><td>' + fa(c.ultimo_accesso) + '</td>'
+              + '<td><small>' + esc(c.email) + (+c.verificato ? ' ✓' : '') + '<br>' + esc(c.telefono || '') + (c.zona ? '<br>📍 ' + esc(c.zona) : '') + '</small></td><td>' + esc(c.tipo || '') + '</td><td>' + dt(c.creato) + '</td><td>' + fa(c.ultimo_accesso) + '</td>'
               + '<td class="num">' + c.n_ordini + '</td><td class="num">' + (+c.valore ? eur(c.valore) : '—') + '</td><td class="num">' + (c.n_carrello ? '<b class="hot-t">' + c.n_carrello + '</b>' : '—') + '</td><td class="num">' + (c.n_preferiti || '—') + '</td><td>' + (+c.newsletter ? '✓' : '') + '</td></tr>';
           }).join('') : '<tr><td colspan="10" class="empty">Nessun cliente' + (FC.q ? ' trovato' : ' registrato per ora') + '.</td></tr>') + '</tbody>';
         $$('tbody tr[data-i]', tb).forEach(function (tr) { tr.onclick = function () { apriCliente(+d.clienti[+tr.dataset.i].id); }; });
@@ -143,7 +143,7 @@
       var r = x[0], P = x[1], c = r.cliente;
       var car = r.carrello || [], totCar = car.reduce(function (a, l) { return a + l.unit * l.qty; }, 0);
       b.innerHTML = '<div class="m-head"><h2>' + esc(c.nome + ' ' + c.cognome) + '</h2>' + (c.stato === 'bloccato' ? '<span class="st st-annullato">Sospeso</span>' : '') + '</div>'
-        + '<div class="muted small">Cliente dal ' + dt(c.creato, true) + ' · ultimo accesso ' + fa(c.ultimo_accesso) + ' · ' + (c.accessi || 0) + ' accessi · email ' + (+c.verificato ? 'confermata' : 'non ancora confermata') + '</div>'
+        + (c.zona ? '<div class="small" style="margin:4px 0">📍 Zona: <b>' + esc(c.zona) + '</b></div>' : '') + '<div class="muted small">Cliente dal ' + dt(c.creato, true) + ' · ultimo accesso ' + fa(c.ultimo_accesso) + ' · ' + (c.accessi || 0) + ' accessi · email ' + (+c.verificato ? 'confermata' : 'non ancora confermata') + '</div>'
         + '<div class="acts" style="margin-top:12px"><a class="ghost" href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a>' + (c.telefono ? '<a class="ghost" href="tel:' + esc(tel(c.telefono)) + '">' + esc(c.telefono) + '</a><a class="ghost" target="_blank" rel="noopener" href="' + wa(c.telefono) + '">WhatsApp</a>' : '') + '</div>'
         + '<div class="m-grid"><div><h3>Dati</h3><dl class="dl">' + [['Tipo', c.tipo], ['Azienda', c.azienda], ['P.IVA', c.piva], ['Codice fiscale', c.cf], ['SDI', c.sdi], ['PEC', c.pec], ['Privacy', c.privacy], ['Newsletter', +c.newsletter ? 'iscritto' + (r.iscritto ? ' dal ' + dt(r.iscritto.creato) : '') : 'no']]
           .filter(function (k) { return k[1]; }).map(function (k) { return '<dt>' + k[0] + '</dt><dd>' + esc(k[1]) + '</dd>'; }).join('') + '</dl></div>'
