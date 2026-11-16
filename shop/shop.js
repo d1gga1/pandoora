@@ -1242,7 +1242,8 @@
     else v=[['foto','Foto'],['dettaglio','Dettaglio'],['disegno','Disegno quotato']];
     var ic={disegno:'<svg viewBox="0 0 40 40"><rect x="11" y="5" width="18" height="30"/><path d="M5 5v30M3 5h4M3 35h4M11 38h18"/></svg>',scheda:'<svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26"/><path d="M5 14h30M14 14v19"/></svg>',config:'<svg viewBox="0 0 40 40"><rect x="6" y="6" width="12" height="12"/><rect x="22" y="6" width="12" height="12"/><rect x="6" y="22" width="12" height="12"/><rect x="22" y="22" width="12" height="12"/></svg>'};
     var XV={cerniera:'cerniera-foto',telaio:'telaio-foto'};
-    th.innerHTML=v.map(function(x,i){var t=XV[x[0]]?'<img src="/shop/img/componenti/'+XV[x[0]]+'_min.webp" alt="" class="cov">':x[0]==='foto'&&p.type==='cube'?'<img src="/shop/img/prodotti/'+esc(p.id)+'.jpg" alt="">':ic[x[0]]||'<img src="'+esc(p.type==='cube'?'':src)+'" alt=""'+(x[0]==='dettaglio'?' class="zz"':'')+'>';return '<button type="button" data-v="'+x[0]+'" aria-pressed="'+(i===0)+'"><span>'+t+'</span>'+esc(x[1])+'</button>'}).join('');
+    var PH={};if(p.type==='door'&&p.photos&&p.photos.length){p.photos.forEach(function(f,i){PH['ph'+i]=f});v=[v[0]].concat(p.photos.map(function(f,i){return['ph'+i,f.label||('Foto '+(i+2))]}),v.slice(1))}
+    th.innerHTML=v.map(function(x,i){var t=PH[x[0]]?'<img src="'+esc(PH[x[0]].thumb||PH[x[0]].src)+'" alt="" class="cov">':XV[x[0]]?'<img src="/shop/img/componenti/'+XV[x[0]]+'_min.webp" alt="" class="cov">':x[0]==='foto'&&p.type==='cube'?'<img src="/shop/img/prodotti/'+esc(p.id)+'.jpg" alt="">':ic[x[0]]||'<img src="'+esc(p.type==='cube'?'':src)+'" alt=""'+(x[0]==='dettaglio'?' class="zz"':'')+'>';return '<button type="button" data-v="'+x[0]+'" aria-pressed="'+(i===0)+'"><span>'+t+'</span>'+esc(x[1])+'</button>'}).join('');
     var fd=null,ph=null,xp=null;
     if(p.type==='door'){xp=document.createElement('img');xp.className='pdp-xphoto';xp.alt='';xp.hidden=true;media.appendChild(xp)}
     if(p.type==='basin'){fd=$('.s-pm-draw',media)}
@@ -1251,7 +1252,7 @@
     function set(k){
       $$('button',th).forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===k)});
       media.classList.toggle('zoomed',k==='dettaglio');
-      if(xp){var xs=XV[k];xp.hidden=!xs;if(xs){xp.src='/shop/img/componenti/'+xs+'.webp';xp.alt=k==='cerniera'?'Cerniera a scomparsa':'Telaio in legno listellare con coprifilo';if(!RM&&xp.animate)xp.animate([{opacity:0,transform:'scale(1.03)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.16,1,.3,1)'})}media.classList.toggle('xview',!!xs);if(xs){CUR.view&&CUR.view('foto');return}}
+      if(xp){var xf=PH[k],xs=xf?xf.src:(XV[k]?'/shop/img/componenti/'+XV[k]+'.webp':'');xp.hidden=!xs;xp.style.objectPosition=(xf&&xf.pos)||'';if(xs){xp.src=xs;xp.alt=xf?(xf.alt||p.name):k==='cerniera'?'Cerniera a scomparsa':'Telaio in legno listellare con coprifilo';if(!RM&&xp.animate)xp.animate([{opacity:0,transform:'scale(1.03)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.16,1,.3,1)'})}media.classList.toggle('xview',!!xs);if(xs){CUR.view&&CUR.view('foto');return}}
       if(p.type==='door'){if(k==='scheda'){openSheet(p,CUR.c);set('disegno');return}CUR.view&&CUR.view(k==='disegno'?'disegno':'foto')}
       if(fd){fd.hidden=k!=='disegno';media.classList.toggle('drawing',k==='disegno');var im=$(':scope>img',media);if(im)im.hidden=k==='disegno';if(k==='disegno')fd.innerHTML=p.type==='basin'?basinDrawSVG(CUR.c):furnDrawSVG(p,CUR.c,CUR.c.fin)}
       if(ph){ph.hidden=k!=='foto';var st=$('#s-cube',media);if(st)st.hidden=k==='foto'}
