@@ -28,7 +28,8 @@
     return (x.citta ? x.citta + ', ' : '') + (x.paese || x.cc);
   }
   var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'],
-    ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'] };
+    ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'],
+    ricerca: ['🔎', 'Ricerca'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'] };
   var azNome = function (t) { return (AZ[t] || ['•', t])[1]; };
   var azIc = function (t) { return '<span class="az-ic">' + (AZ[t] || ['•'])[0] + '</span>'; };
   var quando = function (ts) { return new Date(ts * 1000).toLocaleString('it-IT', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
@@ -126,6 +127,7 @@
       var tipo = +x.ritorno ? '<span class="tag r">' + (x.n_visita > 1 ? x.n_visita + 'ª visita' : 'Di ritorno') + '</span>' : '<span class="tag n">Nuovo</span>';
       return '<div class="vis" data-id="' + esc(x.id) + '">' +
         '<span class="fl">' + flag(x.cc) + '</span><span class="w">' + esc(luogo(x)) + '</span>' + tipo +
+        (x.nome || x.email ? '<span class="who">★ ' + esc(x.nome || x.email) + (x.telefono ? ' · ' + esc(x.telefono) : '') + '</span>' : '') +
         '<span class="p" title="' + esc(x.pagina) + '">' + esc(nomePagina(x.pagina, x.titolo)) + '</span>' +
         '<span class="m">' + esc(x.sorgente || 'Diretto') + ' · ' + esc(x.dispositivo) + ' · da ' + dur(x.durata) + ' · ' + n(x.pagine) + (x.pagine == 1 ? ' pagina' : ' pagine') + '</span></div>';
     }).join('') : '<div class="empty">Nessuno sul sito in questo momento.<br>La pagina si aggiorna da sola ogni 5 secondi.</div>';
@@ -149,11 +151,12 @@
     var punti = [];
     Object.keys(gruppi).forEach(function (k) {
       var g = gruppi[k], rit = g.filter(function (x) { return +x.ritorno; }).length;
-      var col = rit > g.length / 2 ? C.s2 : C.s1;
-      var html = '<div class="pin" style="color:' + col + '"><i style="background:' + col + '"></i>' + (g.length > 1 ? '<b>' + g.length + '</b>' : '') + '</div>';
+      var noto = g.some(function (x) { return x.nome || x.email; });
+      var col = noto ? '#ffd27a' : (rit > g.length / 2 ? C.s2 : C.s1);
+      var html = '<div class="pin' + (noto ? ' noto' : '') + '" style="color:' + col + '"><i style="background:' + col + '"></i>' + (g.length > 1 ? '<b>' + g.length + '</b>' : '') + '</div>';
       var mk = L.marker([g[0].lat, g[0].lon], { icon: L.divIcon({ className: '', html: html, iconSize: [18, 18], iconAnchor: [9, 9] }) });
       mk.bindPopup('<b>' + esc(luogo(g[0])) + '</b>' + (g[0].regione ? '<br><span style="color:' + C.muted + '">' + esc(g[0].regione) + '</span>' : '') + '<br><br>' +
-        g.map(function (x) { return (+x.ritorno ? '↺ ' : '★ ') + esc(nomePagina(x.pagina, x.titolo)) + ' <span style="color:' + C.muted + '">· ' + dur(x.durata) + '</span>'; }).join('<br>'));
+        g.map(function (x) { return (x.nome ? '<b style="color:#ffd27a">' + esc(x.nome) + '</b> · ' : '') + (+x.ritorno ? '↺ ' : '• ') + esc(nomePagina(x.pagina, x.titolo)) + ' <span style="color:' + C.muted + '">· ' + dur(x.durata) + '</span>'; }).join('<br>'));
       mk.addTo(livelloLive);
       punti.push([g[0].lat, g[0].lon]);
     });
@@ -195,6 +198,8 @@
       var html = '<h2>' + flag(x.cc) + ' ' + esc(luogo(x)) + '</h2><div class="muted">' + esc([x.regione, x.dispositivo, x.browser, x.so].filter(Boolean).join(' · ')) + '</div>' +
         '<div class="split" style="margin-top:12px"><span class="chip">' + tipo + '</span><span class="chip">Arrivato da <b>' + esc(x.sorgente || 'Diretto') + '</b></span>' +
         (x.durata != null ? '<span class="chip">Durata <b>' + dur(x.durata != null ? x.durata : (x.ultimo - x.inizio)) + '</b></span>' : '') + '</div>' +
+        (d.persona ? '<div style="margin-top:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">' + (d.persona.nome || d.persona.email ? '<span class="who-b" style="font-size:15px">★ ' + esc(d.persona.nome || d.persona.email) + '</span><span class="muted small">' + esc([d.persona.telefono, d.persona.nome ? d.persona.email : ''].filter(Boolean).join(' · ')) + '</span>' : '<span class="muted small">Visitatore anonimo · ' + n(d.persona.sessioni) + ' visite in tutto</span>') +
+          '<button class="ghost" id="apri-persona" style="margin-left:auto">Profilo completo →</button></div>' : '') +
         '<h3 style="margin-top:16px">Pagine viste in questa visita</h3><ol class="steps">' +
         d.pagine.map(function (p) {
           return '<li>' + esc(nomePagina(p.percorso, p.titolo)) + '<small>' + esc(p.percorso) + ' · ' + new Date(p.ts * 1000).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' }) +
@@ -221,7 +226,10 @@
             '<small>' + esc(v.sorgente || '') + ' · ' + esc(v.ingresso) + '</small></span><b>' + n(v.pagine) + ' pag.</b></div>';
         }).join('') + '</div>';
       }
-      if (modalAperto) $('#modal-body').innerHTML = html;
+      if (modalAperto) {
+        $('#modal-body').innerHTML = html;
+        var bp = $('#apri-persona'); if (bp && window.PDPersona) bp.onclick = function () { chiudiModal(); window.PDPersona.apri(d.persona.pid); };
+      }
     });
   }
   function apriModal(html) { $('#modal-body').innerHTML = html; $('#modal').hidden = false; modalAperto = true; }
@@ -248,7 +256,7 @@
   var S = store.get('storico', { p: '30', da: '', a: '', f: {}, m: 'visitatori' });
   S.f = S.f || {};
   var storicoCaricato = false, grafico = null, datiSto = null;
-  var ETICHETTE = { paese: 'Paese', canale: 'Canale', sorgente: 'Sorgente', dispositivo: 'Dispositivo', tipo: 'Tipo', citta: 'Città', pagina: 'Pagina vista', ingresso: 'Ingresso', browser: 'Browser', so: 'Sistema', lingua: 'Lingua' };
+  var ETICHETTE = { paese: 'Paese', canale: 'Canale', sorgente: 'Sorgente', dispositivo: 'Dispositivo', tipo: 'Tipo', citta: 'Città', pagina: 'Pagina vista', ingresso: 'Ingresso', browser: 'Browser', so: 'Sistema', lingua: 'Lingua', regione: 'Regione', isp: 'Provider', azione: 'Azione', noti: 'Contatti', persona: 'Persona' };
   var CANALI = ['Ricerca', 'AI', 'Social', 'Diretto', 'Altri siti', 'Email', 'Pubblicità', 'Campagne'];
   CANALI.forEach(function (c) { var o = document.createElement('option'); o.value = o.textContent = c; $('#f-canale').appendChild(o); });
 
@@ -277,13 +285,13 @@
     });
   });
   $('#f-applica').addEventListener('click', function () { if ($('#f-da').value && $('#f-a').value) { S.p = 'custom'; S.da = $('#f-da').value; S.a = $('#f-a').value; caricaStorico(); } });
-  ['paese', 'canale', 'dispositivo', 'tipo'].forEach(function (k) { $('#f-' + k).addEventListener('change', function (e) { setFiltro(k, e.target.value); }); });
+  ['paese', 'canale', 'dispositivo', 'tipo', 'noti', 'azione'].forEach(function (k) { $('#f-' + k).addEventListener('change', function (e) { setFiltro(k, e.target.value); }); });
   $$('#metrica button').forEach(function (b) { b.addEventListener('click', function () { S.m = b.dataset.m; store.set('storico', S); disegnaGrafico(); }); });
 
   function caricaStorico() {
     storicoCaricato = true; store.set('storico', S);
     $$('#periodi button').forEach(function (b) { b.classList.toggle('on', b.dataset.p === S.p); });
-    ['paese', 'canale', 'dispositivo', 'tipo'].forEach(function (k) { $('#f-' + k).value = S.f[k] || ''; });
+    ['paese', 'canale', 'dispositivo', 'tipo', 'noti', 'azione'].forEach(function (k) { $('#f-' + k).value = S.f[k] || ''; });
     $('#csv').href = PDADM.link('a=csv&' + query());
     $('#kpis').style.opacity = .5;
     return api('a=storico&' + query()).then(function (d) {
@@ -293,7 +301,7 @@
   }
 
   function chips() {
-    var el = $('#chips'), extra = Object.keys(S.f).filter(function (k) { return ['paese', 'canale', 'dispositivo', 'tipo'].indexOf(k) < 0; });
+    var el = $('#chips'), extra = Object.keys(S.f).filter(function (k) { return ['paese', 'canale', 'dispositivo', 'tipo', 'noti', 'azione'].indexOf(k) < 0; });
     el.innerHTML = extra.map(function (k) { return '<span class="chip">' + ETICHETTE[k] + ': <b>' + esc(S.f[k]) + '</b><button data-k="' + k + '" aria-label="Togli filtro">×</button></span>'; }).join('') +
       (Object.keys(S.f).length ? '<button class="ghost" id="azzera" style="padding:3px 10px;font-size:12px">Togli tutti i filtri</button>' : '');
     $$('button[data-k]', el).forEach(function (b) { b.addEventListener('click', function () { setFiltro(b.dataset.k, ''); }); });
@@ -322,6 +330,7 @@
       ['Rimbalzo', String(k.rimbalzo).replace('.', ',') + '%', delta(k.rimbalzo, p.rimbalzo, true)]
     ];
     var azN = {}, azP = {}; (d.azioni || []).forEach(function (r) { azN[r.k] = +r.n; }); (d.azioni_prec || []).forEach(function (r) { azP[r.k] = +r.n; });
+    var nt = d.noti || {}; tiles.push(['★ Contatti noti', n(nt.noti || 0), '<em>su ' + n(nt.tutti || 0) + ' visitatori</em>']);
     [['whatsapp', 'Clic WhatsApp'], ['telefono', 'Clic telefono'], ['carrello', 'Aggiunte al carrello'], ['ordine', 'Ordini inviati']].forEach(function (x) {
       tiles.push([azIc(x[0]) + x[1], n(azN[x[0]] || 0), delta(azN[x[0]] || 0, azP[x[0]] || 0)]);
     });
@@ -341,8 +350,11 @@
 
     classifica($('#t-azioni'), (d.azioni || []).map(function (r) { return { k: r.k, lb: azIc(r.k) + ' ' + esc(azNome(r.k)), sub: n(r.u) + ' visitatori', n: r.n }; }), null, { html: 1 });
     classifica($('#t-wa'), (d.whatsapp_pagine || []).map(function (r) { return { k: r.k, lb: nomePagina(r.k, r.titolo), sub: r.k, n: r.n }; }), function (r) { setFiltro('pagina', r.k); });
-    classifica($('#t-regioni'), (d.regioni || []).map(function (r) { return { k: r.k, lb: (r.k ? flag(r.cc) + ' ' + r.k : 'Sconosciuta'), n: r.n }; }), null);
-    classifica($('#t-isp'), (d.isp || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', n: r.n }; }), null);
+    classifica($('#t-regioni'), (d.regioni || []).map(function (r) { return { k: r.k, lb: (r.k ? flag(r.cc) + ' ' + r.k : 'Sconosciuta'), n: r.n }; }), function (r) { if (r.k) setFiltro('regione', r.k); });
+    classifica($('#t-isp'), (d.isp || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', n: r.n }; }), function (r) { if (r.k) setFiltro('isp', r.k); });
+    classifica($('#t-prodotti'), (d.prodotti || []).map(function (r) { return { k: r.k, lb: nomePagina(r.k, r.titolo), sub: n(r.u) + ' persone' + (r.tempo ? ' · ' + dur(r.tempo) + ' in media' : ''), n: r.n }; }), function (r) { setFiltro('pagina', r.k); });
+    classifica($('#t-ricerche'), (d.ricerche || []).map(function (r) { return { k: r.k, lb: '“' + r.k + '”', sub: n(r.u) + ' persone', n: r.n }; }), null);
+    classifica($('#t-modelli'), (d.modelli || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', sub: n(r.u) + ' persone', n: r.n }; }), null);
     classifica($('#t-schermi'), (d.schermi || []).map(function (r) { return { k: r.k, lb: r.k ? r.k.replace('x', ' × ') : 'Sconosciuto', n: r.n }; }), null);
     classifica($('#t-conn'), (d.connessioni || []).map(function (r) { return { k: r.k, lb: r.k ? r.k.toUpperCase() : 'Non indicata', n: r.n }; }), null);
     classifica($('#t-fusi'), (d.fusi || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', n: r.n }; }), null);
@@ -352,7 +364,7 @@
     var ta = $('#t-azioni-ultime'), au = d.azioni_ultime || [];
     ta.innerHTML = '<thead><tr><th>Quando</th><th>Azione</th><th>Dettaglio</th><th>Pagina</th><th>Luogo</th><th>Dispositivo</th><th>Arrivato da</th></tr></thead><tbody>' +
       (au.length ? au.map(function (e) {
-        return '<tr data-sid="' + esc(e.sid) + '"><td>' + quando(e.ts) + '</td><td>' + azIc(e.tipo) + ' ' + esc(azNome(e.tipo)) + '</td><td>' + esc(e.dettaglio) + '</td><td title="' + esc(e.percorso) + '">' + esc(nomePagina(e.percorso, e.titolo)) + '</td>' +
+        return '<tr data-sid="' + esc(e.sid) + '"><td>' + quando(e.ts) + (e.nome ? '<br><span class="who-b">★ ' + esc(e.nome) + '</span>' : '') + '</td><td>' + azIc(e.tipo) + ' ' + esc(azNome(e.tipo)) + '</td><td>' + esc(e.dettaglio) + '</td><td title="' + esc(e.percorso) + '">' + esc(nomePagina(e.percorso, e.titolo)) + '</td>' +
           '<td>' + (e.citta || e.paese ? flag(e.cc) + ' ' + esc(e.citta || e.paese) : '—') + '</td><td>' + esc(e.dispositivo) + '</td><td>' + esc(e.sorgente) + '</td></tr>';
       }).join('') : '<tr><td colspan="7" class="empty">Nessuna azione in questo periodo</td></tr>') + '</tbody>';
     $$('tr[data-sid]', ta).forEach(function (tr) { tr.style.cursor = 'pointer'; tr.addEventListener('click', function () { apriPercorso({ id: tr.dataset.sid, cc: '', citta: '' }); }); });
@@ -403,12 +415,13 @@
 
     // ultime visite
     var t = $('#t-ultime');
-    t.innerHTML = '<thead><tr><th>Quando</th><th>Luogo</th><th>Tipo</th><th>Arrivato da</th><th>Ingresso</th><th class="num">Pagine</th><th class="num">Durata</th><th>Dispositivo</th></tr></thead><tbody>' +
+    t.innerHTML = '<thead><tr><th>Quando</th><th>Chi</th><th>Luogo</th><th>Tipo</th><th>Arrivato da</th><th>Ingresso</th><th class="num">Pagine</th><th class="num">Durata</th><th>Dispositivo</th></tr></thead><tbody>' +
       (d.ultime.length ? d.ultime.map(function (x, i) {
         return '<tr data-i="' + i + '"><td>' + new Date(x.inizio * 1000).toLocaleString('it-IT', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) + '</td>' +
+          '<td>' + (x.nome || x.email ? '<span class="who-b">★ ' + esc(x.nome || x.email) + '</span>' : '<span class="muted">#' + esc(String(x.pid || '').slice(0, 6).toUpperCase()) + '</span>') + '</td>' +
           '<td>' + flag(x.cc) + ' ' + esc(luogo(x)) + '</td><td>' + (+x.ritorno ? '<span class="tag r">' + (x.n_visita > 1 ? x.n_visita + 'ª visita' : 'Ritorno') + '</span>' : '<span class="tag n">Nuovo</span>') + '</td>' +
           '<td>' + esc(x.sorgente) + '</td><td title="' + esc(x.ingresso) + '">' + esc(x.ingresso) + '</td><td class="num">' + n(x.pagine) + '</td><td class="num">' + dur(x.ultimo - x.inizio) + '</td><td>' + esc(x.dispositivo) + '</td></tr>';
-      }).join('') : '<tr><td colspan="8" class="empty">Nessuna visita in questo periodo</td></tr>') + '</tbody>';
+      }).join('') : '<tr><td colspan="9" class="empty">Nessuna visita in questo periodo</td></tr>') + '</tbody>';
     $$('tbody tr[data-i]', t).forEach(function (tr) {
       tr.addEventListener('click', function () { var x = d.ultime[+tr.dataset.i]; x.durata = x.ultimo - x.inizio; apriPercorso(x); });
     });

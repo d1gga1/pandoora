@@ -26,6 +26,7 @@
 
   var vid = get('pd_v'); if (!vid || !/^[a-z0-9]{12,40}$/.test(vid)) { vid = rid(); set('pd_v', vid); }
   var vn = parseInt(get('pd_vn') || '0', 10) || 0;
+  window.pdVisitatore = function () { return vid; };
   var sess = null; try { sess = JSON.parse(get('pd_s') || 'null'); } catch (e) {}
   var nuovaVisita = !sess || !sess.id || ora() - (sess.t || 0) > MAX_PAUSA;
   if (nuovaVisita) { sess = { id: rid(), t: ora() }; vn += 1; set('pd_vn', String(vn)); }
@@ -74,7 +75,18 @@
   };
   var primo = { n: nuovaVisita ? 1 : 0, k: vn, r: nuovaVisita ? ref.slice(0, 400) : '', u: nuovaVisita ? utm : {} };
   var dd = dati(); for (var x in dd) primo[x] = dd[x];
-  invia('pv', primo);
+  var partito = false, parti = function () { if (partito) return; partito = true; invia('pv', primo); };
+  try {
+    var uad = navigator.userAgentData;
+    if (uad && uad.getHighEntropyValues) {
+      uad.getHighEntropyValues(['model', 'platformVersion']).then(function (h) { if (h.model) primo.mo = h.model; if (h.platformVersion) primo.ov = h.platformVersion; parti(); }, parti);
+      setTimeout(parti, 400);
+    } else {
+      var mi = /iPhone|iPad|iPod/.exec(navigator.userAgent); if (mi) primo.mo = mi[0];
+      var vi = /OS (\d+)[_.](\d+)/.exec(navigator.userAgent) || /Mac OS X (\d+)[_.](\d+)/.exec(navigator.userAgent); if (vi) primo.ov = vi[1] + '.' + vi[2];
+      parti();
+    }
+  } catch (e) { parti(); }
 
   /* quanto della pagina è stato letto (scroll massimo in %) */
   var scrollMax = 0;
@@ -93,6 +105,8 @@
     if (/^tel:/i.test(href)) return 'telefono';
     if (/^mailto:/i.test(href)) return 'email';
     if (/\.pdf(\?|#|$)/i.test(href)) return 'download';
+    if (/(^|\/)(preventivo|carica-progetto|contattaci|contatti)(\/|\.html|$|\?|#)/i.test(href)) return 'preventivo';
+    try { var u = new URL(href, location.href); if (/^https?:$/.test(u.protocol) && u.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '')) return 'esterno'; } catch (e) {}
     return '';
   };
   document.addEventListener('click', function (e) {
@@ -102,7 +116,27 @@
     if (!tipo) return;
     var testo = (a.getAttribute('aria-label') || a.textContent || '').replace(/\s+/g, ' ').trim();
     if (!testo && a.className) testo = String(a.className);
+    if (tipo === 'esterno') testo = (testo ? testo.slice(0, 60) + ' · ' : '') + href.replace(/^https?:\/\//, '').slice(0, 80);
     window.pdEvento(tipo, (testo || href).slice(0, 120) + (tipo === 'download' ? ' · ' + href.split('/').pop() : ''));
+  }, true);
+
+  /* ricerche fatte nel sito (barra di ricerca dello shop) */
+  var ultimaRicerca = '', tRic = null;
+  var registraRicerca = function (el) {
+    var v = String(el.value || '').trim().replace(/\s+/g, ' ');
+    if (v.length < 2 || v.toLowerCase() === ultimaRicerca) return;
+    ultimaRicerca = v.toLowerCase(); window.pdEvento('ricerca', v.slice(0, 80));
+  };
+  var eRicerca = function (el) { return el && el.tagName === 'INPUT' && (el.type === 'search' || el.name === 'q' || /cerca/i.test(el.placeholder || '')); };
+  document.addEventListener('input', function (e) { if (!eRicerca(e.target)) return; clearTimeout(tRic); var el = e.target; tRic = setTimeout(function () { registraRicerca(el); }, 1800); }, true);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Enter' && eRicerca(e.target)) { clearTimeout(tRic); registraRicerca(e.target); } }, true);
+
+  /* chi copia il vostro numero o la vostra email */
+  document.addEventListener('copy', function () {
+    try {
+      var s = String(getSelection() || '').trim();
+      if (s && s.length < 120 && (/(\+?\d[\d\s.\-]{7,}\d)/.test(s) || /@/.test(s))) window.pdEvento('copia', s.slice(0, 80));
+    } catch (e) {}
   }, true);
   if (window.open) { // WhatsApp aperto dal codice (es. "invia l'ordine su WhatsApp")
     var apri = window.open;

@@ -3,6 +3,7 @@
 <meta name="robots" content="noindex,nofollow"><title>Area riservata · Pan.door.a</title>
 <link rel="stylesheet" href="js/leaflet.css">
 <link rel="stylesheet" href="dashboard.css?v=3">
+<link rel="stylesheet" href="dashboard-pro.css?v=1">
 <style>
 .mini-kpi.az{grid-template-columns:repeat(3,1fr)}
 .mini-kpi.az div b{font-size:20px}
@@ -26,6 +27,7 @@
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="live" class="on"><span class="dot"></span>Live</button>
     <button role="tab" data-tab="storico">Storico</button>
+    <button role="tab" data-tab="persone">Persone</button>
     <button role="tab" data-tab="ordini">Ordini</button>
     <button role="tab" data-tab="clienti">Clienti</button>
     <button role="tab" data-tab="newsletter">Newsletter</button>
@@ -43,7 +45,7 @@
     <div class="live-grid">
       <div class="card map-card">
         <div id="map-live" class="map"></div>
-        <div class="map-legend"><span class="sw s1"></span>Nuovo <span class="sw s2"></span>Di ritorno</div>
+        <div class="map-legend"><span class="sw s1"></span>Nuovo <span class="sw s2"></span>Di ritorno <span class="sw s3"></span>Contatto noto</div>
       </div>
       <aside class="live-side">
         <div class="card hero">
@@ -91,6 +93,8 @@
         <select id="f-canale"><option value="">Tutti i canali</option></select>
         <select id="f-dispositivo"><option value="">Tutti i dispositivi</option><option>Desktop</option><option>Mobile</option><option>Tablet</option></select>
         <select id="f-tipo"><option value="">Nuovi e di ritorno</option><option value="nuovi">Solo nuovi</option><option value="ritorno">Solo di ritorno</option></select>
+        <select id="f-noti"><option value="">Tutti i visitatori</option><option value="1">★ Solo contatti noti</option><option value="0">Solo anonimi</option></select>
+        <select id="f-azione"><option value="">Qualsiasi azione</option><option value="whatsapp">💬 Ha cliccato WhatsApp</option><option value="telefono">📞 Ha cliccato telefono</option><option value="email">✉️ Ha cliccato email</option><option value="carrello">🛒 Ha messo nel carrello</option><option value="preferito">♥ Ha salvato un preferito</option><option value="checkout">🧾 Ha aperto l'ordine</option><option value="ordine">✅ Ha inviato un ordine</option><option value="preventivo">📐 Ha cercato preventivo/contatti</option><option value="ricerca">🔎 Ha fatto una ricerca</option><option value="copia">📋 Ha copiato numero/email</option><option value="iscrizione">📰 Si è iscritto</option></select>
         <a id="csv" class="ghost" href="#">Scarica CSV</a>
       </div>
       <div class="chips" id="chips"></div>
@@ -127,6 +131,9 @@
     </div>
 
     <div class="cols3">
+      <div class="card"><h3>🛋 Prodotti più guardati</h3><div id="t-prodotti" class="rank scroll"></div></div>
+      <div class="card"><h3>🔎 Cosa cercano nel sito</h3><div id="t-ricerche" class="rank scroll"></div></div>
+      <div class="card"><h3>📱 Modelli di telefono e computer</h3><div id="t-modelli" class="rank scroll"></div></div>
       <div class="card"><h3>Azioni dei visitatori</h3><div id="t-azioni" class="rank"></div></div>
       <div class="card"><h3>Da quali pagine scrivono su WhatsApp</h3><div id="t-wa" class="rank scroll"></div></div>
       <div class="card"><h3>Regioni</h3><div id="t-regioni" class="rank scroll"></div></div>
@@ -146,6 +153,7 @@
     </div>
   </section>
   <!-- ================= SHOP: ordini, clienti, newsletter (dashboard-clienti.js) ================= -->
+  <section id="tab-persone" class="tab"></section>
   <section id="tab-ordini" class="tab"></section>
   <section id="tab-clienti" class="tab"></section>
   <section id="tab-newsletter" class="tab"></section>
@@ -187,7 +195,7 @@
     return;
   }
   $('pd-login').remove(); $('pd-app').style.display = '';
-  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=4', 'dashboard-clienti.js?v=3'].forEach(function (s) {
+  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=5', 'dashboard-clienti.js?v=3', 'dashboard-persone.js?v=1', 'dashboard-motion.js?v=1'].forEach(function (s) {
     var e = d.createElement('script'); e.src = s; e.async = false; d.body.appendChild(e);
   });
 })();

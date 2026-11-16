@@ -38,9 +38,9 @@
   function api(a, dati) {
     var get = a === 'stato';
     var tempo = new Promise(function (ok) { setTimeout(function () { ok(null); }, 12000); }); // se il server non risponde entro 12 s
-    return Promise.race([tempo, fetch(API + (get ? '?a=stato' : ''), get ? { cache: 'no-store', headers: tokenLeggi() ? { 'X-PD-Token': tokenLeggi() } : {} } : {
+    return Promise.race([tempo, fetch(API + (get ? '?a=stato' + (window.pdVisitatore ? '&pdv=' + encodeURIComponent(window.pdVisitatore()) : '') : ''), get ? { cache: 'no-store', headers: tokenLeggi() ? { 'X-PD-Token': tokenLeggi() } : {} } : {
       method: 'POST', cache: 'no-store',
-      headers: intestazioni(true), body: JSON.stringify(Object.assign({ a: a }, dati || {}))
+      headers: intestazioni(true), body: JSON.stringify(Object.assign({ a: a, pdv: window.pdVisitatore ? window.pdVisitatore() : '' }, dati || {}))
     }).then(function (r) {
       return r.json().catch(function () { return { ok: false, errore: 'Risposta non valida dal server.' }; }).then(function (j) {
         if (j && j.token) tokenSalva(j.token, j.ricorda);

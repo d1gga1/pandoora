@@ -9,7 +9,7 @@
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var FINE=window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches;
   var WA='393884706887', MAIL='ordini@pandooragroup.it';
-  function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');if(k==='pdShopCart2'&&window.pdEvento&&Array.isArray(v)){var q0=0,q1=0,pr=JSON.parse(localStorage.getItem(k)||'[]')||[];pr.forEach(function(l){q0+=+l.qty||1});v.forEach(function(l){q1+=+l.qty||1});if(q1>q0&&v.length)window.pdEvento('carrello',(v[v.length-1].name||'prodotto')+(q1-q0>1?' ×'+(q1-q0):''))}localStorage.setItem(k,JSON.stringify(v));if((k==='pdShopCart2'||k==='pdShopFav')&&window.PDA)window.PDA.cambiato(k)}catch(e){return null}}
+  function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');if(k==='pdShopCart2'&&window.pdEvento&&Array.isArray(v)){var q0=0,q1=0,pr=JSON.parse(localStorage.getItem(k)||'[]')||[];pr.forEach(function(l){q0+=+l.qty||1});v.forEach(function(l){q1+=+l.qty||1});if(q1>q0&&v.length)window.pdEvento('carrello',(v[v.length-1].name||'prodotto')+(q1-q0>1?' ×'+(q1-q0):''))}if(k==='pdShopFav'&&window.pdEvento&&Array.isArray(v)){var f0=JSON.parse(localStorage.getItem(k)||'[]')||[];if(v.length>f0.length)window.pdEvento('preferito',String(v[v.length-1]))}localStorage.setItem(k,JSON.stringify(v));if((k==='pdShopCart2'||k==='pdShopFav')&&window.PDA)window.PDA.cambiato(k)}catch(e){return null}}
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
 
@@ -1365,7 +1365,7 @@
     var b=$('button[type="submit"]',f);b.disabled=true;b.textContent='Un attimo…';
     /* salva l'iscritto anche nel database Supabase (si vede nella dashboard private_area); la mail col codice resta quella di sempre */
     var salvaDb=window.PD_NL_TEST?Promise.resolve():Promise.race([new Promise(function(ok){setTimeout(ok,4000)}),fetch('https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/clienti',{method:'POST',headers:{'Content-Type':'application/json','X-PD':'1'},
-      body:JSON.stringify({a:'newsletter',origine:'popup',nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:1,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})}).catch(function(){})]);
+      body:JSON.stringify({a:'newsletter',origine:'popup',pdv:window.pdVisitatore?window.pdVisitatore():'',nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:1,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})}).catch(function(){})]);
     if(window.PD_NL_TEST){window.PD_NL_TEST(data,form);return}
     if(N.endpoint){ // il vostro script sull'hosting Aruba: mail grafica da PAN.DOOR.A GROUP + avviso a voi + elenco iscritti
       Promise.race([new Promise(function(_,ko){setTimeout(function(){ko(new Error('timeout'))},9000)}),fetch(N.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome:nome,cognome:g('Cognome'),email:g('email'),telefono:tel,stato:st?st.n:g('Stato'),provincia:prov,pagina:location.href.split('?')[0],consenso:true,sito_web:(($('[name="sito_web"]',f)||{}).value||'')})})])
