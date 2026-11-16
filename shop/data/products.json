@@ -4,9 +4,9 @@
   "_nota": "Regole prezzi. Porte: IVA esclusa, posa e trasporto inclusi in Veneto e FVG (fonte: /porte-interne-prezzi/). Arredi: IVA inclusa, trasporto escluso. Gres: prezzo al m² IVA esclusa, trasporto a parte. Lavabi in gres: IVA esclusa.",
   "door": {
    "lines": {
-    "laminata": 395,
-    "laccata": 595,
-    "pantografata": 595
+    "laminata": 245,
+    "laccata": 445,
+    "pantografata": 445
    },
    "widths": [
     60,
@@ -120,31 +120,57 @@
     "stdWall": 110,
     "stipitiOver": 140
    },
-   "ivaNote": "IVA esclusa · posa inclusa in VE e FVG",
+   "ivaNote": "IVA esclusa · trasporto e montaggio esclusi",
    "services": [
     {
      "id": "posa",
-     "label": "Trasporto e montaggio compresi",
-     "sub": "per chi abita in Veneto e Friuli Venezia Giulia",
-     "add": 0,
-     "note": "Rilievo misure, consegna e posa della nostra squadra: tutto già nel prezzo."
+     "label": "Trasporto e montaggio inclusi",
+     "sub": "rilievo misure, consegna e posa della nostra squadra",
+     "line": "Trasporto e montaggio (Veneto e FVG)",
+     "add": 150,
+     "regions": [
+      "ve",
+      "fvg"
+     ],
+     "badge": "Consigliato",
+     "note": "Con trasporto e montaggio la laminata costa 395 € e la laccata 595 € + IVA: la porta arriva montata e pronta."
     },
     {
      "id": "trasporto",
-     "label": "Solo consegna, il montaggio lo faccio io",
-     "sub": "montaggio a cura vostra",
-     "add": -150,
-     "note": "In Veneto e FVG la consegna è compresa; nel resto d'Italia e all'estero la spedizione si quota con l'ordine."
+     "label": "Solo consegna, montaggio a cura vostra",
+     "sub": "consegna compresa in Veneto e FVG",
+     "line": "Consegna (Veneto e FVG)",
+     "tag": "compresa",
+     "add": 0,
+     "regions": [
+      "ve",
+      "fvg"
+     ],
+     "note": "Vi consegniamo le porte e le montate voi o il vostro posatore."
+    },
+    {
+     "id": "spedizione",
+     "label": "Spedizione, montaggio a cura vostra",
+     "sub": "resto d'Italia ed estero",
+     "line": "Spedizione",
+     "tag": "a preventivo",
+     "add": 0,
+     "regions": [
+      "altro"
+     ],
+     "note": "Il costo del trasporto ve lo indichiamo nel preventivo, entro 24 ore lavorative. Ogni porta viaggia imballata con ferramenta e istruzioni di posa."
     },
     {
      "id": "ritiro",
-     "label": "Ritiro a Fontanelle (TV), senza montaggio",
-     "sub": "ritiro in sede, montaggio a cura vostra",
-     "add": -150,
-     "note": "Ritirate le porte nel nostro stabilimento di Fontanelle (TV) e le montate voi."
+     "label": "Ritiro a Fontanelle (TV)",
+     "sub": "montaggio a cura vostra",
+     "line": "Ritiro in sede a Fontanelle (TV)",
+     "tag": "gratuito",
+     "add": 0,
+     "note": "Ritirate le porte nel nostro stabilimento di Fontanelle (TV)."
     }
    ],
-   "_servizi": "Posa e trasporto sono compresi solo in Veneto e FVG. Solo consegna: -150 € (fuori VE/FVG spedizione a preventivo). Ritiro in sede e montaggio del cliente: -150 €. Listino porte 10/11/2026: senza montaggio e trasporto laminata 245, laccata/pantografata/filo muro 445.",
+   "_servizi": "Listino 16/11/2026: prezzo base senza trasporto e montaggio (laminata 245, laccata/pantografata 445, filo muro grezzo 445, filo muro laccato 645). Solo Veneto e FVG: trasporto e montaggio +150 (395 / 595), oppure solo consegna compresa. Altre regioni ed estero: spedizione a preventivo. Ritiro in sede gratuito.",
    "_listino": "Listino 10/11/2026: battente e scorrevole interno muro = prezzo linea; scorrevole esterno muro e sistema Magic +200; filo muro grezzo = laminata +200, filo muro laccato = laminata +400 (= laccata +200); a libro +180; vetro +150; allargamento muri >200 mm +30 laminata/filo muro, +50 laccata. Senza montaggio e trasporto: -150. Variante economica battente laminata bianca 95 € senza montaggio e trasporto. Aggiornamento 16/11/2026: rototraslante +190; porte alte +35% (anta 2150–2500 mm) e +60% (oltre 2500 mm).",
    "altezze": [
     {
@@ -184,6 +210,20 @@
      "Coprifili in multistrato",
      "Multistrato 7/9, coprono il raccordo con il muro"
     ]
+   ],
+   "regions": [
+    {
+     "id": "ve",
+     "label": "Veneto"
+    },
+    {
+     "id": "fvg",
+     "label": "Friuli Venezia Giulia"
+    },
+    {
+     "id": "altro",
+     "label": "Altra regione o estero"
+    }
    ]
   },
   "cube": {
