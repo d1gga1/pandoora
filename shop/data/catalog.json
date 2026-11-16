@@ -63,35 +63,6 @@
    ]
   },
   {
-   "id": "scarpiere",
-   "name": "Scarpiere",
-   "short": "Da ingresso, anche su misura",
-   "icon": "shoe",
-   "intro": "Scarpiere da ingresso in legno e MDF, a ribalta o con ante, nelle misure standard o costruite sullo spazio che avete, anche per nicchie e sottoscala.",
-   "subs": [
-    [
-     "a-ribalta",
-     "A ribalta",
-     "shoe"
-    ],
-    [
-     "con-ante",
-     "Con ante",
-     "shoe2"
-    ],
-    [
-     "con-seduta",
-     "Con seduta",
-     "bench"
-    ],
-    [
-     "a-giorno",
-     "A giorno",
-     "shoeopen"
-    ]
-   ]
-  },
-  {
    "id": "mobiletti",
    "name": "Mobiletti",
    "short": "Comodini, mobili TV, madie, librerie",

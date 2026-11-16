@@ -38,6 +38,16 @@ RewriteCond %{QUERY_STRING} ^(page_id|p|cat|author)=
 RewriteRule ^$ https://pandooragroup.it/? [R=301,L]
 
 # ── 4. Vecchie URL WordPress → nuove pagine ──
+# Shop 16/11/2026: modelli tolti dal catalogo
+RewriteRule ^shop/scarpiere(/.*)?$ https://pandooragroup.it/shop/mobiletti/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-flow/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-resonance/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-signum/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-gramma/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-autumn/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-skyline/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/porte-per-interni/porta-genesi/?$ https://pandooragroup.it/shop/porte-per-interni/ [R=301,L]
+RewriteRule ^shop/mobiletti/ingresso-2-ante/?$ https://pandooragroup.it/shop/mobiletti/ [R=301,L]
 RewriteRule ^armadi/?$                    https://pandooragroup.it/componenti-per-mobili/ [R=301,L]
 RewriteRule ^carica-progetto/?$           https://pandooragroup.it/preventivo/ [R=301,L]
 RewriteRule ^chi-siamo/?$                 https://pandooragroup.it/azienda/ [R=301,L]

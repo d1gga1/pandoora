@@ -43,12 +43,23 @@
      "note": "Scompare nel controtelaio"
     },
     {
+     "id": "rototraslante",
+     "label": "Rototraslante",
+     "min": 0,
+     "add": 190,
+     "note": "L'anta ruota e scorre insieme: in apertura occupa circa metà dello spazio di una battente"
+    },
+    {
      "id": "filo-muro",
      "label": "Filo muro",
      "min": 0,
      "add": 200,
      "onlyLacc": true,
-     "note": "Telaio invisibile, a filo parete"
+     "note": "Telaio invisibile, a filo parete · grezza da pitturare o laccata RAL",
+     "grezza": {
+      "line": "laminata",
+      "label": "Filo muro grezzo, da pitturare"
+     }
     }
    ],
    "extras": [
@@ -83,7 +94,7 @@
     "add": 0,
     "perc": 0,
     "label": "Su misura del vano",
-    "note": "Costruiamo ogni porta sul vostro vano: oggi la misura non cambia il prezzo."
+    "note": "Siamo produttori: la larghezza al centimetro non costa nulla in più e l'altezza è allo stesso prezzo fino a 2150 mm di anta. Porte alte: +35% da 2150 a 2500 mm, +60% oltre 2500 mm."
    },
    "tech": {
     "_nota": "Regole dai disegni esecutivi (mm): telaio = vano -30 L / -40 H; anta = telaio -60 L / -40 H; battuta = anta +6 L / +13 H; ingombro coprifili = telaio +146 L / +73 H; luce passaggio = anta -14; telaio 107 + estensione = muro",
@@ -113,28 +124,67 @@
    "services": [
     {
      "id": "posa",
-     "label": "Consegna e posa",
-     "sub": "solo Veneto e Friuli Venezia Giulia",
+     "label": "Trasporto e montaggio compresi",
+     "sub": "per chi abita in Veneto e Friuli Venezia Giulia",
      "add": 0,
-     "note": "Rilievo misure, trasporto e montaggio compresi nel prezzo."
+     "note": "Rilievo misure, consegna e posa della nostra squadra: tutto già nel prezzo."
     },
     {
      "id": "trasporto",
-     "label": "Solo consegna",
+     "label": "Solo consegna, il montaggio lo faccio io",
      "sub": "montaggio a cura vostra",
      "add": -150,
      "note": "In Veneto e FVG la consegna è compresa; nel resto d'Italia e all'estero la spedizione si quota con l'ordine."
     },
     {
      "id": "ritiro",
-     "label": "Ritiro in sede",
-     "sub": "a Fontanelle (TV), montaggio a cura vostra",
+     "label": "Ritiro a Fontanelle (TV), senza montaggio",
+     "sub": "ritiro in sede, montaggio a cura vostra",
      "add": -150,
      "note": "Ritirate le porte nel nostro stabilimento di Fontanelle (TV) e le montate voi."
     }
    ],
    "_servizi": "Posa e trasporto sono compresi solo in Veneto e FVG. Solo consegna: -150 € (fuori VE/FVG spedizione a preventivo). Ritiro in sede e montaggio del cliente: -150 €. Listino porte 10/11/2026: senza montaggio e trasporto laminata 245, laccata/pantografata/filo muro 445.",
-   "_listino": "Listino 10/11/2026: battente e scorrevole interno muro = prezzo linea; scorrevole esterno muro e sistema Magic +200; filo muro grezzo = laminata +200, filo muro laccato = laminata +400 (= laccata +200); a libro +180; vetro +150; allargamento muri >200 mm +30 laminata/filo muro, +50 laccata. Senza montaggio e trasporto: -150. Variante economica battente laminata bianca 95 € senza montaggio e trasporto."
+   "_listino": "Listino 10/11/2026: battente e scorrevole interno muro = prezzo linea; scorrevole esterno muro e sistema Magic +200; filo muro grezzo = laminata +200, filo muro laccato = laminata +400 (= laccata +200); a libro +180; vetro +150; allargamento muri >200 mm +30 laminata/filo muro, +50 laccata. Senza montaggio e trasporto: -150. Variante economica battente laminata bianca 95 € senza montaggio e trasporto. Aggiornamento 16/11/2026: rototraslante +190; porte alte +35% (anta 2150–2500 mm) e +60% (oltre 2500 mm).",
+   "altezze": [
+    {
+     "from": 2150,
+     "to": 2500,
+     "perc": 35
+    },
+    {
+     "from": 2501,
+     "perc": 60
+    }
+   ],
+   "_altezze": "Listino 16/11/2026: altezza anta fino a 2149 mm prezzo pieno; da 2150 a 2500 mm +35%; oltre 2500 mm +60% sul prezzo della porta (linea + apertura). Filo muro grezzo = laminata +200, filo muro laccato = laccata +200. Rototraslante +190 su laminata o laccata.",
+   "incluso": [
+    [
+     "hinge",
+     "3 cerniere a scomparsa AGB",
+     "Nessuna cerniera a vista a porta chiusa"
+    ],
+    [
+     "lock",
+     "Serratura magnetica AGB",
+     "Silenziosa, con chiave e incontro cromo satinato"
+    ],
+    [
+     "handle",
+     "Maniglia standard",
+     "Compresa, montata sulla porta"
+    ],
+    [
+     "frame",
+     "Telaio in legno",
+     "Legno listellare con guarnizione in PVC"
+    ],
+    [
+     "trim",
+     "Coprifili in multistrato",
+     "Multistrato 7/9, coprono il raccordo con il muro"
+    ]
+   ]
   },
   "cube": {
    "_nota": "Libreria a vani in pannello tamburato (anima alveolare). Prezzo telaio = (base + perPanel x lunghezza pannelli in moduli) x fattore cubo x fattore profondità x finitura + add (supplemento fisso 102 € sulla struttura)",
@@ -217,26 +267,13 @@
     "perc": 5,
     "code": "BENVENUTO5",
     "notify": "shop@pandooragroup.it",
-    "endpoint": "",
-    "_endpoint": "Indirizzo dello script newsletter sul vostro hosting Aruba (es. https://api.pandooragroup.it/newsletter/iscrizione.php). Se vuoto o non raggiungibile si usa FormSubmit."
+    "endpoint": "https://api.pandooragroup.it/newsletter/iscrizione.php",
+    "_endpoint": "Indirizzo dello script newsletter sul vostro hosting Aruba (es. https://api.pandooragroup.it/newsletter/iscrizione.php). Se vuoto o non raggiungibile si usa FormSubmit.",
+    "validDays": 7
    },
    "doorQty": [],
    "bundlePerc": 12,
    "pairs": {
-    "con-seduta": [
-     [
-      "Ingresso completo",
-      [
-       "ingresso-specchio"
-      ]
-     ],
-     [
-      "Seduta + scarpiera",
-      [
-       "scarpiera-ribalta-2"
-      ]
-     ]
-    ],
     "comodini": [
      [
       "Coppia di comodini",
@@ -285,7 +322,7 @@
      [
       "Ingresso completo",
       [
-       "scarpiera-ribalta-2"
+       "armadio-ingresso-lemene-160"
       ]
      ]
     ],
@@ -402,6 +439,20 @@
     "Altra finitura"
    ],
    "ivaNote": "IVA esclusa · trasporto e installazione da concordare · disegno confermato con voi prima della produzione"
+  },
+  "trust": {
+   "_nota": "Fatti reali usati nei messaggi dello shop (16/11/2026). Cambiateli qui se cambiano.",
+   "garanziaPorte": 2,
+   "garanziaFerramenta": 10,
+   "risposta": "24 ore lavorative",
+   "porteMese": 200,
+   "clienti": "decine di nuovi clienti privati ogni giorno",
+   "pagamento": {
+    "anticipo": 50,
+    "saldo": 50,
+    "telefono": "+39 388 470 6887",
+    "_nota": "50% di anticipo alla conferma dell'ordine, 50% quando la merce è pronta"
+   }
   }
  },
  "products": [
@@ -438,11 +489,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -450,7 +505,7 @@
     ],
     [
      "Apertura",
-     "Battente reversibile / Scorrevole"
+     "Battente reversibile / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -516,11 +571,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -528,7 +587,7 @@
     ],
     [
      "Apertura",
-     "Battente reversibile / Scorrevole"
+     "Battente reversibile / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -594,11 +653,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -606,7 +669,7 @@
     ],
     [
      "Apertura",
-     "Battente reversibile / Scorrevole"
+     "Battente reversibile / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -672,11 +735,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -684,7 +751,7 @@
     ],
     [
      "Apertura",
-     "Battente reversibile / Scorrevole"
+     "Battente reversibile / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -752,11 +819,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -764,7 +835,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -834,11 +905,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -846,7 +921,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -920,11 +995,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -932,7 +1011,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1006,11 +1085,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -1018,7 +1101,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1092,11 +1175,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -1104,7 +1191,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1178,11 +1265,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -1190,7 +1281,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1264,11 +1355,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -1276,7 +1371,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1350,11 +1445,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -1362,7 +1461,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1436,11 +1535,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -1448,7 +1551,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -1482,608 +1585,6 @@
     "ral"
    ],
    "rank": 12
-  },
-  {
-   "id": "porta-flow",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Flow",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Linee curve che scorrono sul pannello",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/flow_min.webp?v=3",
-   "imgLg": "/shop/img/porte/flow.webp?v=3",
-   "imgFb": "/door-photos/flow.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 13
-  },
-  {
-   "id": "porta-resonance",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Resonance",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Onde concentriche incise",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/resonance_min.webp?v=3",
-   "imgLg": "/shop/img/porte/resonance.webp?v=3",
-   "imgFb": "/door-photos/resonance.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 14
-  },
-  {
-   "id": "porta-signum",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Signum",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Segno grafico verticale e orizzontale",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/signum_min.webp?v=3",
-   "imgLg": "/shop/img/porte/signum.webp?v=3",
-   "imgFb": "/door-photos/signum.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 15
-  },
-  {
-   "id": "porta-gramma",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Gramma",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Composizione geometrica a riquadri",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/gramma_min.webp?v=3",
-   "imgLg": "/shop/img/porte/gramma.webp?v=3",
-   "imgFb": "/door-photos/gramma.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 16
-  },
-  {
-   "id": "porta-autumn",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Autumn",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Incisioni diagonali leggere",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/autumn_min.webp?v=3",
-   "imgLg": "/shop/img/porte/autumn.webp?v=3",
-   "imgFb": "/door-photos/autumn.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 17
-  },
-  {
-   "id": "porta-skyline",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Skyline",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Profilo a gradoni ispirato allo skyline",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/skyline_min.webp?v=3",
-   "imgLg": "/shop/img/porte/skyline.webp?v=3",
-   "imgFb": "/door-photos/skyline.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 18
-  },
-  {
-   "id": "porta-genesi",
-   "type": "door",
-   "cat": "porte-per-interni",
-   "sub": "battenti",
-   "subs": [
-    "battenti",
-    "scorrevoli",
-    "filo-muro",
-    "laccate-ral"
-   ],
-   "name": "Porta Genesi",
-   "line": "pantografata",
-   "lineLabel": "Pantografata Superior",
-   "desc": "Cornice interna con angoli smussati",
-   "long": "Linea Superior con copertine in HDF idro da 8 mm e incisioni pantografate di precisione. Laccatura RAL a scelta.",
-   "img": "/shop/img/porte/genesi_min.webp?v=3",
-   "imgLg": "/shop/img/porte/genesi.webp?v=3",
-   "imgFb": "/door-photos/genesi.jpg",
-   "opaque": false,
-   "specs": [
-    [
-     "Pannello porta",
-     "Copertine in HDF IDRO da 8 mm"
-    ],
-    [
-     "Telaio",
-     "In legno listellare"
-    ],
-    [
-     "Coprifilo",
-     "In legno multistrato 7/9"
-    ],
-    [
-     "Rivestimento",
-     "Laccato RAL"
-    ],
-    [
-     "Cerniere",
-     "N° 3 cerniere a scomparsa"
-    ],
-    [
-     "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
-    ],
-    [
-     "Guarnizione",
-     "In PVC"
-    ],
-    [
-     "Apertura",
-     "Battente / Scorrevole"
-    ],
-    [
-     "Larghezza standard",
-     "60 · 70 · 80 · 90 cm (battente e scorrevole)"
-    ],
-    [
-     "Altezza standard",
-     "210 cm"
-    ],
-    [
-     "Spessore anta",
-     "44 mm, anima alveolare"
-    ]
-   ],
-   "pattern": "flat",
-   "onlyOpen": null,
-   "finishes": [
-    "Laccato RAL"
-   ],
-   "badge": null,
-   "tags": [
-    "porta",
-    "porte",
-    "interne",
-    "pantografata",
-    "pantografata superior",
-    "battente",
-    "scorrevole",
-    "filo muro",
-    "laccata",
-    "ral"
-   ],
-   "rank": 19
   },
   {
    "id": "porta-alba",
@@ -2124,11 +1625,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2136,7 +1641,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2210,11 +1715,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2222,7 +1731,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2296,11 +1805,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2308,7 +1821,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2382,11 +1895,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2394,7 +1911,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2468,11 +1985,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2480,7 +2001,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2554,11 +2075,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2566,7 +2091,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2640,11 +2165,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2652,7 +2181,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2726,11 +2255,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2738,7 +2271,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2812,11 +2345,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2824,7 +2361,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2898,11 +2435,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2910,7 +2451,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -2984,11 +2525,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -2996,7 +2541,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -3070,11 +2615,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -3082,7 +2631,7 @@
     ],
     [
      "Apertura",
-     "Battente / Scorrevole"
+     "Battente / Scorrevole / Rototraslante"
     ],
     [
      "Larghezza standard",
@@ -3130,7 +2679,7 @@
    "line": "laccata",
    "lineLabel": "Linea Laccata",
    "desc": "Anta complanare alla parete, telaio nascosto nel muro",
-   "long": "Anta laccata complanare alla parete, con telaio in legno listellare nascosto nella muratura: niente coprifili, resta solo la linea sottile dell'anta. Tinta RAL a scelta.",
+   "long": "Anta complanare alla parete, con telaio in legno listellare nascosto nella muratura: niente coprifili, resta solo la linea sottile dell'anta. Grezza, pronta da pitturare come il muro, oppure laccata in qualsiasi tinta RAL.",
    "img": "/shop/img/porte/filo-muro_min.webp?v=3",
    "imgLg": "/shop/img/porte/filo-muro.webp?v=3",
    "imgFb": "",
@@ -3150,11 +2699,15 @@
     ],
     [
      "Cerniere",
-     "N° 3 cerniere a scomparsa"
+     "N° 3 cerniere a scomparsa AGB"
     ],
     [
      "Serratura",
-     "Magnetica con chiave e incontro, finitura cromo-satinato"
+     "Magnetica AGB con chiave e incontro, finitura cromo-satinato"
+    ],
+    [
+     "Maniglia",
+     "Standard, compresa nel prezzo"
     ],
     [
      "Guarnizione",
@@ -3180,7 +2733,8 @@
    "pattern": "flush",
    "onlyOpen": "filo-muro",
    "finishes": [
-    "Laccato RAL"
+    "Laccato RAL",
+    "Grezza da pitturare"
    ],
    "badge": "Novità",
    "tags": [
@@ -3196,278 +2750,6 @@
     "ral"
    ],
    "rank": 32
-  },
-  {
-   "id": "scarpiera-ribalta-2",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Lido 2 ribalte",
-   "desc": "Due vani a ribalta, 12 paia, profondità ridotta per corridoi stretti",
-   "img": "/shop/img/prodotti/scarpiera-ribalta-2.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140808_ce07fc33-8549-414a-8b76-2965227ba278_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-ribalta-2.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140808_ce07fc33-8549-414a-8b76-2965227ba278.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 24,
-     "h": 104,
-     "price": 409
-    },
-    {
-     "w": 100,
-     "d": 24,
-     "h": 104,
-     "price": 479
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     15,
-     34
-    ],
-    "h": [
-     62,
-     146
-    ]
-   },
-   "badge": "Più venduta",
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera lido 2 ribalte"
-   ],
-   "rank": 0,
-   "imgSet": "/shop/img/prodotti/scarpiera-ribalta-2-480.webp 480w, /shop/img/prodotti/scarpiera-ribalta-2-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-ribalta-3",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Lido 3 ribalte",
-   "desc": "Tre ribalte, 18 paia, piano superiore svuotatasche",
-   "img": "/shop/img/prodotti/scarpiera-ribalta-3.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_7d43b5a2-aded-4e1d-90f1-5f7f33e9f164_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-ribalta-3.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140807_7d43b5a2-aded-4e1d-90f1-5f7f33e9f164.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 24,
-     "h": 150,
-     "price": 509
-    },
-    {
-     "w": 100,
-     "d": 24,
-     "h": 150,
-     "price": 599
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     15,
-     34
-    ],
-    "h": [
-     90,
-     210
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera lido 3 ribalte"
-   ],
-   "rank": 11,
-   "imgSet": "/shop/img/prodotti/scarpiera-ribalta-3-480.webp 480w, /shop/img/prodotti/scarpiera-ribalta-3-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-slim-17",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Filo 17",
-   "desc": "Solo 17 cm di profondità: entra anche dietro la porta d'ingresso",
-   "img": "/shop/img/prodotti/scarpiera-slim-17.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140851_ed32ec7b-5563-43b5-8523-7b48198ad861_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-slim-17.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140851_ed32ec7b-5563-43b5-8523-7b48198ad861.png",
-   "std": [
-    {
-     "w": 60,
-     "d": 17,
-     "h": 120,
-     "price": 459
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     36,
-     90
-    ],
-    "d": [
-     15,
-     24
-    ],
-    "h": [
-     72,
-     168
-    ]
-   },
-   "badge": "Salvaspazio",
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera filo 17"
-   ],
-   "rank": 12,
-   "imgSet": "/shop/img/prodotti/scarpiera-slim-17-480.webp 480w, /shop/img/prodotti/scarpiera-slim-17-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-ante-2",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-ante",
-   "subs": [
-    "con-ante"
-   ],
-   "name": "Scarpiera Brenta 2 ante",
-   "desc": "Due ante, ripiani regolabili, fino a 20 paia",
-   "img": "/shop/img/prodotti/scarpiera-ante-2.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_13f618d5-c2d0-4cf7-843a-0cd22634a0fc_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-ante-2.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_13f618d5-c2d0-4cf7-843a-0cd22634a0fc.png",
-   "std": [
-    {
-     "w": 90,
-     "d": 36,
-     "h": 110,
-     "price": 649
-    },
-    {
-     "w": 120,
-     "d": 36,
-     "h": 110,
-     "price": 749
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Bianco opaco",
-    "Noce canaletto"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     54,
-     135
-    ],
-    "d": [
-     22,
-     50
-    ],
-    "h": [
-     66,
-     154
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "con-ante",
-    "scarpiera brenta 2 ante"
-   ],
-   "rank": 13,
-   "imgSet": "/shop/img/prodotti/scarpiera-ante-2-480.webp 480w, /shop/img/prodotti/scarpiera-ante-2-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-alta-5",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-ante",
-   "subs": [
-    "con-ante"
-   ],
-   "name": "Scarpiera Torre 5 ripiani",
-   "desc": "Colonna a un'anta con cinque ripiani, 25 paia in 50 cm",
-   "img": "/shop/img/prodotti/scarpiera-alta-5.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_fade57d1-3a3b-4b0c-9db2-b96ce3d58ad2_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-alta-5.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_140852_fade57d1-3a3b-4b0c-9db2-b96ce3d58ad2.png",
-   "std": [
-    {
-     "w": 50,
-     "d": 36,
-     "h": 180,
-     "price": 679
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Grigio seta",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     30,
-     75
-    ],
-    "d": [
-     22,
-     50
-    ],
-    "h": [
-     108,
-     252
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "con-ante",
-    "scarpiera torre 5 ripiani"
-   ],
-   "rank": 14,
-   "imgSet": "/shop/img/prodotti/scarpiera-alta-5-480.webp 480w, /shop/img/prodotti/scarpiera-alta-5-800.webp 800w"
   },
   {
    "id": "comodino-2-cassetti",
@@ -4043,57 +3325,6 @@
    "imgSet": "/shop/img/prodotti/ingresso-specchio-480.webp 480w, /shop/img/prodotti/ingresso-specchio-800.webp 800w"
   },
   {
-   "id": "ingresso-2-ante",
-   "type": "furniture",
-   "cat": "mobiletti",
-   "sub": "mobili-ingresso",
-   "subs": [
-    "mobili-ingresso"
-   ],
-   "name": "Mobile Ingresso Atrio",
-   "desc": "Due ante e cassetto svuotatasche",
-   "img": "/shop/img/prodotti/ingresso-2-ante.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_2df6aa79-0262-42f7-a873-467b96d27bdb_min.webp",
-   "imgLg": "/shop/img/prodotti/ingresso-2-ante.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_141046_2df6aa79-0262-42f7-a873-467b96d27bdb.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 35,
-     "h": 85,
-     "price": 549
-    }
-   ],
-   "finishes": [
-    "Grigio seta",
-    "Rovere naturale",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     21,
-     49
-    ],
-    "h": [
-     51,
-     119
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "mobiletti",
-    "mobili-ingresso",
-    "mobile ingresso atrio"
-   ],
-   "rank": 31,
-   "imgSet": "/shop/img/prodotti/ingresso-2-ante-480.webp 480w, /shop/img/prodotti/ingresso-2-ante-800.webp 800w"
-  },
-  {
    "id": "colonna-bagno",
    "type": "furniture",
    "cat": "mobiletti",
@@ -4262,322 +3493,6 @@
    ],
    "rank": 42,
    "imgSet": "/shop/img/prodotti/top-laccato-tondo-480.webp 480w, /shop/img/prodotti/top-laccato-tondo-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-pensile-duo",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Pensile Duo (2 pezzi)",
-   "desc": "Due elementi a parete da 18 cm di profondità: componibili in verticale o in fila",
-   "img": "/shop/img/prodotti/scarpiera-pensile-duo.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_1af7bd93-1c91-4d6c-90c5-f655ead41918_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-pensile-duo.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_1af7bd93-1c91-4d6c-90c5-f655ead41918.png",
-   "std": [
-    {
-     "w": 52,
-     "d": 18,
-     "h": 39,
-     "price": 219
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Grigio seta",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     31,
-     78
-    ],
-    "d": [
-     15,
-     25
-    ],
-    "h": [
-     23,
-     55
-    ]
-   },
-   "badge": "Salvaspazio",
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera pensile duo (2 pezzi)"
-   ],
-   "rank": 110,
-   "imgSet": "/shop/img/prodotti/scarpiera-pensile-duo-480.webp 480w, /shop/img/prodotti/scarpiera-pensile-duo-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-snella-2",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Snella 2 vani",
-   "desc": "Larga solo 49 cm, due ribalte con divisori regolabili, 8 paia",
-   "img": "/shop/img/prodotti/scarpiera-snella-2.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_da52b6d5-6733-40f2-be7b-c35472b0098d_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-snella-2.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_da52b6d5-6733-40f2-be7b-c35472b0098d.png",
-   "std": [
-    {
-     "w": 49,
-     "d": 28,
-     "h": 93,
-     "price": 239
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale",
-    "Marrone-nero"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     29,
-     74
-    ],
-    "d": [
-     17,
-     39
-    ],
-    "h": [
-     56,
-     130
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera snella 2 vani"
-   ],
-   "rank": 111,
-   "imgSet": "/shop/img/prodotti/scarpiera-snella-2-480.webp 480w, /shop/img/prodotti/scarpiera-snella-2-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-snella-3",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Snella 3 vani",
-   "desc": "Tre ribalte in 49 cm di larghezza, 12 paia, da fissare a parete",
-   "img": "/shop/img/prodotti/scarpiera-snella-3.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_17f66ca9-3e53-4ecf-93c1-4a52d38b25d5_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-snella-3.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_17f66ca9-3e53-4ecf-93c1-4a52d38b25d5.png",
-   "std": [
-    {
-     "w": 49,
-     "d": 28,
-     "h": 135,
-     "price": 289
-    }
-   ],
-   "finishes": [
-    "Marrone-nero",
-    "Bianco opaco",
-    "Rovere naturale"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     29,
-     74
-    ],
-    "d": [
-     17,
-     39
-    ],
-    "h": [
-     81,
-     189
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera snella 3 vani"
-   ],
-   "rank": 112,
-   "imgSet": "/shop/img/prodotti/scarpiera-snella-3-480.webp 480w, /shop/img/prodotti/scarpiera-snella-3-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-stella-4",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-ribalta",
-   "subs": [
-    "a-ribalta"
-   ],
-   "name": "Scarpiera Stella 4 ribalte",
-   "desc": "Bassa e profonda solo 17 cm: quattro ribalte, piano d'appoggio per chiavi e posta",
-   "img": "/shop/img/prodotti/scarpiera-stella-4.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_04b64f84-f7e9-4524-9815-eec478b191f7_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-stella-4.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144436_04b64f84-f7e9-4524-9815-eec478b191f7.png",
-   "std": [
-    {
-     "w": 96,
-     "d": 17,
-     "h": 90,
-     "price": 429
-    },
-    {
-     "w": 120,
-     "d": 17,
-     "h": 90,
-     "price": 499
-    }
-   ],
-   "finishes": [
-    "Rovere naturale",
-    "Bianco opaco"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     58,
-     144
-    ],
-    "d": [
-     15,
-     24
-    ],
-    "h": [
-     54,
-     126
-    ]
-   },
-   "badge": "Novità",
-   "tags": [
-    "scarpiere",
-    "a-ribalta",
-    "scarpiera stella 4 ribalte"
-   ],
-   "rank": 113,
-   "imgSet": "/shop/img/prodotti/scarpiera-stella-4-480.webp 480w, /shop/img/prodotti/scarpiera-stella-4-800.webp 800w"
-  },
-  {
-   "id": "panca-ante-scorrevoli",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-seduta",
-   "subs": [
-    "con-seduta"
-   ],
-   "name": "Panca Brina ante scorrevoli",
-   "desc": "Seduta e scarpiera chiusa: due ante scorrevoli, nessun ingombro in apertura",
-   "img": "/shop/img/prodotti/panca-ante-scorrevoli.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_46f3fb77-5ec0-440e-be19-48074f64084b_min.webp",
-   "imgLg": "/shop/img/prodotti/panca-ante-scorrevoli.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_46f3fb77-5ec0-440e-be19-48074f64084b.png",
-   "std": [
-    {
-     "w": 100,
-     "d": 37,
-     "h": 52,
-     "price": 389
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     60,
-     150
-    ],
-    "d": [
-     22,
-     52
-    ],
-    "h": [
-     31,
-     73
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "con-seduta",
-    "panca brina ante scorrevoli"
-   ],
-   "rank": 115,
-   "imgSet": "/shop/img/prodotti/panca-ante-scorrevoli-480.webp 480w, /shop/img/prodotti/panca-ante-scorrevoli-800.webp 800w"
-  },
-  {
-   "id": "scarpiera-aperta-ripiani",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "a-giorno",
-   "subs": [
-    "a-giorno"
-   ],
-   "name": "Scarpiera Vista a giorno",
-   "desc": "Ripiani inclinati regolabili con battuta frontale, 15 paia a vista",
-   "img": "/shop/img/prodotti/scarpiera-aperta-ripiani.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_6662bb49-b967-4ec0-be03-37a6cca609a9_min.webp",
-   "imgLg": "/shop/img/prodotti/scarpiera-aperta-ripiani.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3FTrdgKEniBuTbOXzflvLrpH6cz/hf_20261010_144501_6662bb49-b967-4ec0-be03-37a6cca609a9.png",
-   "std": [
-    {
-     "w": 61,
-     "d": 30,
-     "h": 130,
-     "price": 329
-    },
-    {
-     "w": 91,
-     "d": 30,
-     "h": 130,
-     "price": 389
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale",
-    "Laccato RAL"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     37,
-     92
-    ],
-    "d": [
-     18,
-     42
-    ],
-    "h": [
-     78,
-     182
-    ]
-   },
-   "badge": null,
-   "tags": [
-    "scarpiere",
-    "a-giorno",
-    "scarpiera vista a giorno"
-   ],
-   "rank": 116,
-   "imgSet": "/shop/img/prodotti/scarpiera-aperta-ripiani-480.webp 480w, /shop/img/prodotti/scarpiera-aperta-ripiani-800.webp 800w"
   },
   {
    "id": "libreria-alveare-2x4",
@@ -4818,107 +3733,6 @@
     "mobiletti"
    ],
    "rank": 30
-  },
-  {
-   "id": "scarpiera-meduna-2-ante",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-ante",
-   "subs": [
-    "con-ante"
-   ],
-   "name": "Scarpiera Meduna 2 ante",
-   "desc": "Due ante, quattro ripiani regolabili, fino a 16 paia in 35 cm di profondità",
-   "img": "/shop/img/prodotti/scarpiera-meduna-2-ante.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_53e3b486-20b3-4919-b69b-3784faaf7fd3.png",
-   "imgLg": "/shop/img/prodotti/scarpiera-meduna-2-ante.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134328_53e3b486-20b3-4919-b69b-3784faaf7fd3.png",
-   "std": [
-    {
-     "w": 80,
-     "d": 35,
-     "h": 117,
-     "price": 309
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale",
-    "Grigio seta"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     48,
-     120
-    ],
-    "d": [
-     21,
-     49
-    ],
-    "h": [
-     70,
-     164
-    ]
-   },
-   "badge": "Nuova",
-   "tags": [
-    "scarpiere",
-    "con-ante",
-    "scarpiera meduna 2 ante"
-   ],
-   "rank": 5,
-   "imgSet": "/shop/img/prodotti/scarpiera-meduna-2-ante-480.jpg 480w, /shop/img/prodotti/scarpiera-meduna-2-ante-800.jpg 800w"
-  },
-  {
-   "id": "panca-cansiglio-contenitore",
-   "type": "furniture",
-   "cat": "scarpiere",
-   "sub": "con-seduta",
-   "subs": [
-    "con-seduta"
-   ],
-   "name": "Panca Cansiglio contenitore",
-   "desc": "Panca da ingresso con vano contenitore sotto il coperchio a ribalta ammortizzato",
-   "img": "/shop/img/prodotti/panca-cansiglio-contenitore.jpg",
-   "imgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_e2c130b7-0ddd-4a33-8fd4-a18e30730fef.png",
-   "imgLg": "/shop/img/prodotti/panca-cansiglio-contenitore.jpg",
-   "imgLgRemote": "https://d8j0ntlcm91z4.cloudfront.net/user_3EAcxzQNUFfaF2uXRewNuos01IG/hf_20261023_134244_e2c130b7-0ddd-4a33-8fd4-a18e30730fef.png",
-   "std": [
-    {
-     "w": 90,
-     "d": 52,
-     "h": 48,
-     "price": 289
-    }
-   ],
-   "finishes": [
-    "Bianco opaco",
-    "Rovere naturale"
-   ],
-   "custom": true,
-   "limits": {
-    "w": [
-     54,
-     135
-    ],
-    "d": [
-     31,
-     73
-    ],
-    "h": [
-     29,
-     67
-    ]
-   },
-   "badge": "Nuova",
-   "tags": [
-    "scarpiere",
-    "con-seduta",
-    "panca cansiglio contenitore"
-   ],
-   "rank": 6,
-   "imgSet": "/shop/img/prodotti/panca-cansiglio-contenitore-480.jpg 480w, /shop/img/prodotti/panca-cansiglio-contenitore-800.jpg 800w"
   },
   {
    "id": "cubo-tagliamento",

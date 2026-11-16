@@ -243,7 +243,7 @@
     var o = window.PDShop && window.PDShop.ordine ? window.PDShop.ordine() : null;
     if (!o || !o.righe.length) return;
     window.PDShop.chiudiCarrello && window.PDShop.chiudiCarrello();
-    var box = apriFinestra('<h2>Richiesta d\'ordine</h2><p class="pa-sub" style="margin:0">Nessun pagamento adesso: vi ricontattiamo per confermare misure, tempi e prezzo prima della produzione.</p>' + riepilogoHTML(o) + '<div data-co></div>');
+    var box = apriFinestra('<h2>Richiesta d\'ordine</h2><p class="pa-sub" style="margin:0">Inviando la richiesta non pagate ancora nulla: vi ricontattiamo per confermare ordine, tempi e prezzo. <b>Pagamento: 50% di anticipo alla conferma dell\'ordine, 50% quando la merce è pronta.</b> Il rilievo delle misure si fa dopo la conferma e l\'anticipo.</p>' + riepilogoHTML(o) + '<div data-co></div>');
     var c = $('[data-co]', box);
     quandoPronto(function () { if (S.utente) checkoutCliente(c, o); else checkoutOspite(c, o); });
   }
@@ -302,8 +302,12 @@
       window.PDShop && window.PDShop.svuotaCarrello && window.PDShop.svuotaCarrello();
       try { localStorage.removeItem('pdAccDirty'); } catch (e) {}
       var box = c.closest('.pa-m-c') || c;
-      box.innerHTML = '<div class="pa-done"><div class="ic">' + IC.check + '</div><h2>Richiesta inviata!</h2><div class="num">' + esc(r.numero) + '</div>'
-        + '<p class="pa-sub">Vi abbiamo mandato un riepilogo via email. Vi contattiamo noi a breve per confermare misure, tempi e prezzo finale.' + (r.account_creato ? '<br><b>Il vostro account è pronto:</b> confermate l\'email dal messaggio che vi abbiamo inviato.' : '') + '</p>'
+      var nm = (d.nome || '').split(' ')[0];
+      box.innerHTML = '<div class="pa-done"><div class="ic">' + IC.check + '</div><h2>Ottima scelta' + (nm ? ', ' + esc(nm) : '') + '!</h2><div class="num">Ordine ' + esc(r.numero) + '</div>'
+        + '<p class="pa-sub">Avete comprato direttamente da chi produce: niente ricarichi da rivenditore, misure fatte sul vostro vano e una squadra che vi segue fino alla consegna. Vi abbiamo mandato il riepilogo via email.' + (r.account_creato ? '<br><b>Il vostro account è pronto:</b> confermate l\'email dal messaggio che vi abbiamo inviato.' : '') + '</p>'
+        + '<ol class="pa-steps"><li><b>Entro 24 ore lavorative</b><span>vi contattiamo per rivedere insieme l\'ordine e il prezzo</span></li><li><b>Conferma e anticipo del 50%</b><span>l\'ordine diventa definitivo</span></li><li><b>Rilievo delle misure</b><span>dopo l\'anticipo, per produrre sul vostro vano al millimetro</span></li><li><b>Produzione a Fontanelle (TV)</b><span>nel nostro stabilimento, con i controlli prima della spedizione</span></li><li><b>Saldo del 50% e consegna</b><span>quando la merce è pronta; posa compresa in Veneto e Friuli Venezia Giulia, se l\'avete scelta</span></li></ol>'
+        + '<p class="pa-g">Domande sul prodotto o sul pagamento? <a href="https://wa.me/393884706887" target="_blank" rel="noopener">WhatsApp</a> o <a href="tel:+393884706887">+39 388 470 6887</a>.</p>'
+        + '<p class="pa-g">Porte con garanzia di 2 anni e 10 anni su cerniere e serratura AGB.</p>'
         + '<div class="s-btns">' + (S.utente ? '<a class="s-btn s-btn-p" href="' + ACC + '#ordini">Segui l\'ordine</a>' : '') + '<button type="button" class="s-btn s-btn-o" data-chiudi>Continua sullo shop</button></div></div>';
       $('[data-chiudi]', box).onclick = function () { chiudiFinestra(); };
     });
