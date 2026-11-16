@@ -26310,12 +26310,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://pandooragroup.it/shop/mobiletti/</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -26419,55 +26413,6 @@
     <image:image><image:loc>https://pandooragroup.it/shop/img/porte/trama.webp</image:loc><image:title>Porta Trama</image:title></image:image>
   </url>
   <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-flow/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/flow.webp</image:loc><image:title>Porta Flow</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-resonance/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/resonance.webp</image:loc><image:title>Porta Resonance</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-signum/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/signum.webp</image:loc><image:title>Porta Signum</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-gramma/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/gramma.webp</image:loc><image:title>Porta Gramma</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-autumn/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/autumn.webp</image:loc><image:title>Porta Autumn</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-skyline/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/skyline.webp</image:loc><image:title>Porta Skyline</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/porte-per-interni/porta-genesi/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/porte/genesi.webp</image:loc><image:title>Porta Genesi</image:title></image:image>
-  </url>
-  <url>
     <loc>https://pandooragroup.it/shop/porte-per-interni/porta-alba/</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -26559,41 +26504,6 @@
     <image:image><image:loc>https://pandooragroup.it/shop/img/porte/filo-muro.webp</image:loc><image:title>Porta Filo Muro</image:title></image:image>
   </url>
   <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-2/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-ribalta-2.jpg</image:loc><image:title>Scarpiera Lido 2 ribalte</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-ribalta-3/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-ribalta-3.jpg</image:loc><image:title>Scarpiera Lido 3 ribalte</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-slim-17/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-slim-17.jpg</image:loc><image:title>Scarpiera Filo 17</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-ante-2/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-ante-2.jpg</image:loc><image:title>Scarpiera Brenta 2 ante</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-alta-5/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-alta-5.jpg</image:loc><image:title>Scarpiera Torre 5 ripiani</image:title></image:image>
-  </url>
-  <url>
     <loc>https://pandooragroup.it/shop/mobiletti/comodino-2-cassetti/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -26671,13 +26581,6 @@
     <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/ingresso-specchio.jpg</image:loc><image:title>Ingresso Soglia con specchio</image:title></image:image>
   </url>
   <url>
-    <loc>https://pandooragroup.it/shop/mobiletti/ingresso-2-ante/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/ingresso-2-ante.jpg</image:loc><image:title>Mobile Ingresso Atrio</image:title></image:image>
-  </url>
-  <url>
     <loc>https://pandooragroup.it/shop/mobiletti/colonna-bagno/</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -26697,48 +26600,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/top-laccato-tondo.jpg</image:loc><image:title>Top Tondo Laccato</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-pensile-duo/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-pensile-duo.jpg</image:loc><image:title>Scarpiera Pensile Duo (2 pezzi)</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-2/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-2.jpg</image:loc><image:title>Scarpiera Snella 2 vani</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-snella-3/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-snella-3.jpg</image:loc><image:title>Scarpiera Snella 3 vani</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-stella-4/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-stella-4.jpg</image:loc><image:title>Scarpiera Stella 4 ribalte</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/panca-ante-scorrevoli/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/panca-ante-scorrevoli.jpg</image:loc><image:title>Panca Brina ante scorrevoli</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-aperta-ripiani/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-aperta-ripiani.jpg</image:loc><image:title>Scarpiera Vista a giorno</image:title></image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/shop/mobiletti/libreria-alveare-2x4/</loc>
@@ -28880,20 +28741,6 @@
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/scarpiera-meduna-2-ante/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/scarpiera-meduna-2-ante.jpg</image:loc><image:title>Scarpiera Meduna 2 ante</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://pandooragroup.it/shop/scarpiere/panca-cansiglio-contenitore/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image><image:loc>https://pandooragroup.it/shop/img/prodotti/panca-cansiglio-contenitore.jpg</image:loc><image:title>Panca Cansiglio contenitore</image:title></image:image>
   </url>
   <url>
     <loc>https://pandooragroup.it/shop/mobiletti/cubo-tagliamento/</loc>
