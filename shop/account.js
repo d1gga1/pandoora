@@ -136,8 +136,7 @@
       + campo('telefono', 'Telefono', { type: 'tel', v: u.telefono, ac: 'tel', im: 'tel', req: 1, max: 40, w: !conEmail ? 0 : 0 })
       + campo('zona', 'Zona <small style="font-weight:400;opacity:.7">(facoltativa: città o provincia)</small>', { v: u.zona, ac: 'address-level2', max: 120, w: 1, ph: 'es. Treviso' }) + '</div>'
       + '<div class="pa-g" data-azienda' + (tipo === 'privato' ? ' hidden' : '') + '>' + campo('azienda', 'Ragione sociale', { v: u.azienda, ac: 'organization', w: 1, max: 160 })
-      + campo('piva', 'Partita IVA', { v: u.piva, max: 30 }) + campo('cf', 'Codice fiscale', { v: u.cf, max: 30 })
-      + campo('sdi', 'Codice SDI', { v: u.sdi, max: 10, ph: 'per la fattura elettronica' }) + campo('pec', 'PEC', { type: 'email', v: u.pec, max: 160 }) + '</div>';
+      + campo('piva', 'Partita IVA', { v: u.piva, max: 30 }) + campo('cf', 'Codice fiscale', { v: u.cf, max: 30 }) + '</div>';
   }
   function legaModulo(f) {
     $$('[data-pw]', f).forEach(function (b) { b.onclick = function () { var i = b.previousElementSibling; i.type = i.type === 'password' ? 'text' : 'password'; b.textContent = i.type === 'password' ? 'Mostra' : 'Nascondi'; }; });
