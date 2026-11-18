@@ -24,8 +24,9 @@
     return Math.floor(m / 60) + ' h ' + (m % 60) + ' min';
   }
   function luogo(x) {
-    if (!x.cc && !x.citta) return 'Posizione sconosciuta';
-    return (x.citta ? x.citta + ', ' : '') + (x.paese || x.cc);
+    if (!x.cc && !x.citta && !x.regione) return 'Posizione sconosciuta';
+    var dove = x.citta ? x.citta + (x.cap ? ' ' + x.cap : '') : (x.regione || '');
+    return (dove ? dove + ', ' : '') + (x.paese || x.cc || '');
   }
   var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'],
     ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'],
@@ -213,12 +214,13 @@
       }
       var s = d.sessione;
       if (s) {
-        var righe = [['Luogo', [s.citta, s.regione, s.paese].filter(Boolean).join(', ')], ['Provider', s.isp], ['Dispositivo', [s.dispositivo, s.so, s.browser].filter(Boolean).join(' · ')],
+        var righe = [['Luogo', [s.citta ? s.citta + (s.cap ? ' ' + s.cap : '') : '', s.regione, s.paese].filter(Boolean).join(', ')], ['Coordinate (circa)', s.lat != null && s.lon != null ? s.lat + ', ' + s.lon : ''], ['Fonte posizione', s.geo_fonte], ['Provider', s.isp], ['Dispositivo', [s.dispositivo, s.so, s.browser].filter(Boolean).join(' · ')],
           ['Schermo', s.schermo ? s.schermo.replace('x', ' × ') + (s.dpr ? ' (densità ' + String(s.dpr).replace('.', ',') + ')' : '') : ''], ['Finestra', s.finestra ? s.finestra.replace('x', ' × ') : ''],
           ['Touch', s.touch == null ? '' : (+s.touch ? 'sì' : 'no')], ['Connessione', s.connessione ? s.connessione.toUpperCase() : ''], ['Memoria / CPU', (s.memoria ? s.memoria + ' GB' : '') + (s.cpu ? (s.memoria ? ' · ' : '') + s.cpu + ' core' : '')],
           ['Tema', s.tema], ['Fuso orario', s.fuso], ['Lingue', s.lingue], ['Arrivato da', [s.canale, s.sorgente].filter(Boolean).join(' · ')], ['Indirizzo di provenienza', s.riferimento],
           ['Campagna', [s.utm_sorgente, s.utm_mezzo, s.campagna, s.utm_termine].filter(Boolean).join(' · ')]];
         html += '<h3 style="margin-top:12px">Dettagli del visitatore</h3><div class="det">' + righe.filter(function (r) { return r[1]; }).map(function (r) { return '<span>' + r[0] + '</span><b style="font-weight:500;word-break:break-all">' + esc(r[1]) + '</b>'; }).join('') + '</div>';
+        if (s.lat != null && s.lon != null) html += '<p class="small"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.lat + ',' + s.lon) + '">Apri la zona su Google Maps ↗</a> <span class="muted">(posizione dall\'IP: indica la zona della rete, non l\'indirizzo)</span></p>';
       }
       if (d.visite_precedenti.length) {
         html += '<h3 style="margin-top:8px">Visite precedenti</h3><div class="rank">' + d.visite_precedenti.map(function (v) {
@@ -365,7 +367,7 @@
     ta.innerHTML = '<thead><tr><th>Quando</th><th>Azione</th><th>Dettaglio</th><th>Pagina</th><th>Luogo</th><th>Dispositivo</th><th>Arrivato da</th></tr></thead><tbody>' +
       (au.length ? au.map(function (e) {
         return '<tr data-sid="' + esc(e.sid) + '"><td>' + quando(e.ts) + (e.nome ? '<br><span class="who-b">★ ' + esc(e.nome) + '</span>' : '') + '</td><td>' + azIc(e.tipo) + ' ' + esc(azNome(e.tipo)) + '</td><td>' + esc(e.dettaglio) + '</td><td title="' + esc(e.percorso) + '">' + esc(nomePagina(e.percorso, e.titolo)) + '</td>' +
-          '<td>' + (e.citta || e.paese ? flag(e.cc) + ' ' + esc(e.citta || e.paese) : '—') + '</td><td>' + esc(e.dispositivo) + '</td><td>' + esc(e.sorgente) + '</td></tr>';
+          '<td>' + (e.citta || e.regione || e.paese ? flag(e.cc) + ' ' + esc(e.citta || (e.regione ? e.regione + ', ' + (e.paese || '') : e.paese)) : '—') + '</td><td>' + esc(e.dispositivo) + '</td><td>' + esc(e.sorgente) + '</td></tr>';
       }).join('') : '<tr><td colspan="7" class="empty">Nessuna azione in questo periodo</td></tr>') + '</tbody>';
     $$('tr[data-sid]', ta).forEach(function (tr) { tr.style.cursor = 'pointer'; tr.addEventListener('click', function () { apriPercorso({ id: tr.dataset.sid, cc: '', citta: '' }); }); });
     classifica($('#t-paesi'), d.paesi.map(function (r) { return { k: r.k, lb: flag(r.k) + ' ' + (r.paese || 'Sconosciuto'), n: r.n, u: r.u }; }), function (r) { if (r.k) setFiltro('paese', r.k); });
