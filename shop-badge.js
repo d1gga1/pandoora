@@ -5,7 +5,7 @@
   if(window.__pdShop) return; window.__pdShop = true;
   if(/^\/shop(\/|$)/.test(location.pathname)) return;
   var URL = '/shop/';
-  /* shop-i18n */ var SHOPS={"en": "/en/shop/", "de": "/de/shop/", "fr": "/fr/boutique/", "es": "/es/tienda/"}, LG=(location.pathname.match(/^\/([a-z]{2})\//)||[])[1]; if(LG&&SHOPS[LG]){ if(location.pathname.indexOf(SHOPS[LG])===0) return; URL=SHOPS[LG]; } /* /shop-i18n */
+  /* shop-i18n */ var SHOPS={"en": "/en/shop/", "de": "/de/shop/", "fr": "/fr/boutique/", "es": "/es/tienda/", "pt": "/pt/loja/", "nl": "/nl/winkel/", "pl": "/pl/sklep/", "cs": "/cs/obchod/", "sk": "/sk/obchod/", "sl": "/sl/trgovina/", "hr": "/hr/trgovina/", "sr": "/sr/prodavnica/", "sq": "/sq/dyqan/", "el": "/el/katastima/", "tr": "/tr/magaza/", "ar": "/ar/shop/", "zh": "/zh/shangdian/", "ro": "/ro/magazin/", "hu": "/hu/webaruhaz/", "bg": "/bg/magazin/", "sv": "/sv/butik/", "da": "/da/butik/", "no": "/no/butikk/", "fi": "/fi/kauppa/", "lt": "/lt/parduotuve/", "lv": "/lv/veikals/", "et": "/et/pood/"}, LG=(location.pathname.match(/^\/([a-z]{2})\//)||[])[1]; if(LG&&SHOPS[LG]){ if(location.pathname.indexOf(SHOPS[LG])===0) return; URL=SHOPS[LG]; } /* /shop-i18n */
 
   var css = ''
   /* pillola */
