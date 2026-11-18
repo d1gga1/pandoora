@@ -24,13 +24,14 @@
     return Math.floor(m / 60) + ' h ' + (m % 60) + ' min';
   }
   function luogo(x) {
+    if (x.gps_indirizzo || x.gps_citta) return '📍 ' + (x.gps_indirizzo || x.gps_citta);
     if (!x.cc && !x.citta && !x.regione) return 'Posizione sconosciuta';
     var dove = x.citta ? x.citta + (x.cap ? ' ' + x.cap : '') : (x.regione || '');
     return (dove ? dove + ', ' : '') + (x.paese || x.cc || '');
   }
   var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'],
     ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'],
-    ricerca: ['🔎', 'Ricerca'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'] };
+    ricerca: ['🔎', 'Ricerca'], posizione: ['📍', 'Posizione GPS'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'] };
   var azNome = function (t) { return (AZ[t] || ['•', t])[1]; };
   var azIc = function (t) { return '<span class="az-ic">' + (AZ[t] || ['•'])[0] + '</span>'; };
   var quando = function (ts) { return new Date(ts * 1000).toLocaleString('it-IT', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
@@ -214,13 +215,14 @@
       }
       var s = d.sessione;
       if (s) {
-        var righe = [['Luogo', [s.citta ? s.citta + (s.cap ? ' ' + s.cap : '') : '', s.regione, s.paese].filter(Boolean).join(', ')], ['Coordinate (circa)', s.lat != null && s.lon != null ? s.lat + ', ' + s.lon : ''], ['Fonte posizione', s.geo_fonte], ['Provider', s.isp], ['Dispositivo', [s.dispositivo, s.so, s.browser].filter(Boolean).join(' · ')],
+        var righe = [['Luogo', [s.citta ? s.citta + (s.cap ? ' ' + s.cap : '') : '', s.regione, s.paese].filter(Boolean).join(', ')], ['📍 Posizione GPS', s.gps_lat != null ? (s.gps_indirizzo || '') + ' (± ' + (s.gps_acc != null ? s.gps_acc : '?') + ' m)' : ''], ['Coordinate GPS', s.gps_lat != null ? s.gps_lat + ', ' + s.gps_lon : ''], ['Zona dall\'IP', s.lat != null && s.lon != null ? s.lat + ', ' + s.lon : ''], ['Fonte posizione', s.geo_fonte], ['Provider', s.isp], ['Dispositivo', [s.dispositivo, s.so, s.browser].filter(Boolean).join(' · ')],
           ['Schermo', s.schermo ? s.schermo.replace('x', ' × ') + (s.dpr ? ' (densità ' + String(s.dpr).replace('.', ',') + ')' : '') : ''], ['Finestra', s.finestra ? s.finestra.replace('x', ' × ') : ''],
           ['Touch', s.touch == null ? '' : (+s.touch ? 'sì' : 'no')], ['Connessione', s.connessione ? s.connessione.toUpperCase() : ''], ['Memoria / CPU', (s.memoria ? s.memoria + ' GB' : '') + (s.cpu ? (s.memoria ? ' · ' : '') + s.cpu + ' core' : '')],
           ['Tema', s.tema], ['Fuso orario', s.fuso], ['Lingue', s.lingue], ['Arrivato da', [s.canale, s.sorgente].filter(Boolean).join(' · ')], ['Indirizzo di provenienza', s.riferimento],
           ['Campagna', [s.utm_sorgente, s.utm_mezzo, s.campagna, s.utm_termine].filter(Boolean).join(' · ')]];
         html += '<h3 style="margin-top:12px">Dettagli del visitatore</h3><div class="det">' + righe.filter(function (r) { return r[1]; }).map(function (r) { return '<span>' + r[0] + '</span><b style="font-weight:500;word-break:break-all">' + esc(r[1]) + '</b>'; }).join('') + '</div>';
-        if (s.lat != null && s.lon != null) html += '<p class="small"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.lat + ',' + s.lon) + '">Apri la zona su Google Maps ↗</a> <span class="muted">(posizione dall\'IP: indica la zona della rete, non l\'indirizzo)</span></p>';
+        if (s.gps_lat != null) html += '<p class="small"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.gps_lat + ',' + s.gps_lon) + '">📍 Apri il punto GPS su Google Maps ↗</a> <span class="muted">(concessa dal visitatore, precisione ± ' + (s.gps_acc != null ? s.gps_acc : '?') + ' m)</span></p>';
+        else if (s.lat != null && s.lon != null) html += '<p class="small"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.lat + ',' + s.lon) + '">Apri la zona su Google Maps ↗</a> <span class="muted">(posizione dall\'IP: indica la zona della rete, non l\'indirizzo)</span></p>';
       }
       if (d.visite_precedenti.length) {
         html += '<h3 style="margin-top:8px">Visite precedenti</h3><div class="rank">' + d.visite_precedenti.map(function (v) {

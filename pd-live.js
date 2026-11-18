@@ -1,6 +1,6 @@
 /* Pan.door.a — statistiche visite del sito (anonime, solo per uso interno).
-   Conta pagine viste e visitatori di ritorno con un codice casuale salvato nel browser;
-   nessun dato personale, nessun servizio di terzi. Per escludere il proprio browser: ?pdlive=no */
+   Conta pagine viste e visitatori di ritorno con un codice casuale salvato nel browser.
+   La posizione precisa viene letta solo se il visitatore la concede (avviso + richiesta del browser). Per escludere il proprio browser: ?pdlive=no */
 (function () {
   if (window.__pdLive) return; window.__pdLive = 1;
   try { if (window.top !== window.self) return; } catch (e) { return; }   // non contare le pagine dentro un iframe
@@ -167,4 +167,96 @@
     } else { attivita = ora(); tocca(); invia('hb'); }
   });
   addEventListener('pagehide', function () { misuraScroll(); invia('bye', { sc: scrollMax }); });
+  /* posizione precisa (GPS / Wi-Fi del dispositivo), SOLO con il consenso del visitatore:
+     1) un piccolo avviso chiede se vuole condividerla; se accetta, il browser mostra la sua richiesta ufficiale;
+     2) nei moduli con CAP/Città c'è il pulsante "Usa la mia posizione" che compila i campi. */
+  var GL = navigator.geolocation;
+  var LG = String(document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
+  var TX = {
+    it: ['Ci dite da dove ci visitate?', 'Condividete la vostra posizione: la usiamo solo internamente per capire da quali zone arrivano i clienti e organizzare consegne e agenti. Non la cediamo a nessuno.', 'Condividi posizione', 'No, grazie', 'Usa la mia posizione', 'Cerco la posizione…', 'Posizione non disponibile', 'Informativa'],
+    en: ['Where are you visiting from?', 'Share your location: we only use it internally to see which areas our customers come from and plan deliveries and agents. We never pass it on.', 'Share location', 'No, thanks', 'Use my location', 'Locating…', 'Location unavailable', 'Privacy'],
+    de: ['Woher besuchen Sie uns?', 'Teilen Sie Ihren Standort: Wir nutzen ihn nur intern, um zu sehen, aus welchen Regionen unsere Kunden kommen, und Lieferungen zu planen. Keine Weitergabe an Dritte.', 'Standort teilen', 'Nein, danke', 'Meinen Standort verwenden', 'Standort wird ermittelt…', 'Standort nicht verfügbar', 'Datenschutz'],
+    fr: ['D\'où nous rendez-vous visite ?', 'Partagez votre position : nous l\'utilisons uniquement en interne pour savoir de quelles zones viennent nos clients et organiser les livraisons. Jamais transmise à des tiers.', 'Partager la position', 'Non merci', 'Utiliser ma position', 'Localisation…', 'Position indisponible', 'Confidentialité'],
+    es: ['¿Desde dónde nos visita?', 'Comparta su ubicación: solo la usamos internamente para saber de qué zonas vienen nuestros clientes y organizar entregas. Nunca la cedemos a terceros.', 'Compartir ubicación', 'No, gracias', 'Usar mi ubicación', 'Buscando ubicación…', 'Ubicación no disponible', 'Privacidad']
+  };
+  var T = TX[LG] || TX.en;
+  var GIORNO = 86400000;
+  var mandaPos = function (p, modo) {
+    var c = p.coords; tocca();
+    invia('pos', { la: Math.round(c.latitude * 1e5) / 1e5, lo: Math.round(c.longitude * 1e5) / 1e5, ac: Math.round(c.accuracy || 0), m: modo });
+    set('pd_gps_ok', String(ora())); del('pd_gps_no');
+  };
+  var chiediPos = function (modo, ok, ko) {
+    if (!GL) { if (ko) ko(); return; }
+    GL.getCurrentPosition(function (p) { mandaPos(p, modo); if (ok) ok(p); },
+      function (err) { if (err && err.code === 1) set('pd_gps_no', String(ora())); if (ko) ko(err); },
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 5 * 60000 });
+  };
+  var avviso = function () {
+    if (document.getElementById('pd-gps')) return;
+    var d = document.createElement('div'); d.id = 'pd-gps'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', T[0]);
+    d.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;max-width:380px;z-index:2147483000;background:#fff;color:#1a1a1a;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.25);padding:16px 18px;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif';
+    d.innerHTML = '<div style="font-weight:600;font-size:15px;margin-bottom:4px">📍 ' + T[0] + '</div><div style="color:#555;margin-bottom:12px">' + T[1] + ' <a href="/privacy/" style="color:#555">' + T[7] + '</a></div>'
+      + '<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" data-si style="flex:1;min-width:140px;border:0;border-radius:9px;padding:10px 12px;background:#1a1a1a;color:#fff;font:600 14px system-ui,sans-serif;cursor:pointer">' + T[2] + '</button>'
+      + '<button type="button" data-no style="border:1px solid #ccc;border-radius:9px;padding:10px 12px;background:#fff;color:#333;font:14px system-ui,sans-serif;cursor:pointer">' + T[3] + '</button></div>';
+    var chiudi = function () { if (d.parentNode) d.parentNode.removeChild(d); };
+    d.querySelector('[data-si]').onclick = function () { chiudi(); set('pd_gps_chiesto', String(ora())); chiediPos('avviso'); };
+    d.querySelector('[data-no]').onclick = function () { chiudi(); set('pd_gps_chiesto', String(ora())); };
+    document.body.appendChild(d);
+  };
+  var avvioGps = function () {
+    if (!GL || !window.isSecureContext) return;
+    var no = +get('pd_gps_no') || 0, chiesto = +get('pd_gps_chiesto') || 0;
+    var procedi = function (stato) {
+      if (stato === 'denied') return;
+      if (stato === 'granted') { if (nuovaVisita) chiediPos('auto'); return; }   // già concesso: aggiorna in silenzio, una volta per visita
+      if (ora() - no < 60 * GIORNO || ora() - chiesto < 30 * GIORNO) return;      // non insistere
+      var mostrato = false, mostra = function () { if (mostrato) return; mostrato = true; avviso(); };
+      setTimeout(function () {   // dopo qualche secondo e solo dopo che la persona ha interagito (scroll, tocco, clic)
+        if (ora() - attivita < 6000) mostra();
+        else ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { addEventListener(ev, mostra, { once: true, passive: true }); });
+      }, 5000);
+    };
+    try { navigator.permissions.query({ name: 'geolocation' }).then(function (r) { procedi(r.state); }, function () { procedi(''); }); }
+    catch (e) { procedi(''); }
+  };
+  if (document.body) avvioGps(); else document.addEventListener('DOMContentLoaded', avvioGps);
+
+  /* pulsante "Usa la mia posizione" accanto ai campi CAP / Città dei moduli */
+  var campoDi = function (f, re, ac) {
+    var els = f.querySelectorAll('input'); for (var i = 0; i < els.length; i++) { var e = els[i];
+      if ((ac && (e.getAttribute('autocomplete') || '').indexOf(ac) >= 0) || re.test(e.name || '') || re.test(e.id || '')) return e; }
+    return null;
+  };
+  var riempi = function (el, v) { if (el && v && !String(el.value || '').trim()) { el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); } };
+  var aggiungiPulsanti = function () {
+    if (!GL || !window.isSecureContext) return;
+    var forms = document.querySelectorAll('form'); for (var i = 0; i < forms.length; i++) (function (f) {
+      if (f.getAttribute('data-pd-gps')) return;
+      var citta = campoDi(f, /(^|_)(citt[aà]|city|town)$/i, 'address-level2'), cap = campoDi(f, /(^|_)(cap|zip|postal)/i, 'postal-code');
+      var ancora = cap; if (!ancora || !citta) return;   // solo moduli di indirizzo (CAP + Città)
+      f.setAttribute('data-pd-gps', '1');
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = '📍 ' + T[4];
+      b.style.cssText = 'display:inline-block;margin:6px 0 2px;padding:6px 10px;border:1px solid currentColor;border-radius:8px;background:transparent;color:inherit;font:inherit;font-size:13px;cursor:pointer;opacity:.85';
+      b.onclick = function () {
+        b.disabled = true; b.textContent = T[5];
+        chiediPos('modulo', function (p) {
+          var c = p.coords;
+          fetch('https://nominatim.openstreetmap.org/reverse?format=jsonv2&addressdetails=1&zoom=18&lat=' + c.latitude + '&lon=' + c.longitude + '&accept-language=' + LG)
+            .then(function (r) { return r.json(); }).then(function (j) {
+              var a = (j && j.address) || {};
+              riempi(campoDi(f, /(^|_)(cap|zip|postal)/i, 'postal-code'), a.postcode);
+              riempi(campoDi(f, /(^|_)(citt[aà]|city|town)$/i, 'address-level2'), a.city || a.town || a.village || a.municipality);
+              var pr = campoDi(f, /(^|_)(provincia|province|county)$/i, 'address-level1'); riempi(pr, a['ISO3166-2-lvl6'] ? a['ISO3166-2-lvl6'].split('-').pop() : (a.county || ''));
+              riempi(campoDi(f, /(^|_)(via|indirizzo|street|address)$/i, 'street-address'), [a.road, a.house_number].filter(Boolean).join(' '));
+              b.textContent = '📍 ✓'; b.disabled = false;
+            }).catch(function () { b.textContent = '📍 ' + T[4]; b.disabled = false; });
+        }, function () { b.textContent = T[6]; setTimeout(function () { b.textContent = '📍 ' + T[4]; b.disabled = false; }, 2500); });
+      };
+      ancora.parentNode.insertBefore(b, ancora.nextSibling);
+    })(forms[i]);
+  };
+  var tPuls = null, programma = function () { clearTimeout(tPuls); tPuls = setTimeout(aggiungiPulsanti, 300); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', programma); else programma();
+  try { new MutationObserver(programma).observe(document.documentElement, { childList: true, subtree: true }); } catch (e) {}
 })();
