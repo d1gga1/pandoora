@@ -1,6 +1,6 @@
 /* Pan.door.a — statistiche visite del sito (anonime, solo per uso interno).
    Conta pagine viste e visitatori di ritorno con un codice casuale salvato nel browser.
-   La posizione precisa viene letta solo se il visitatore la concede (avviso + richiesta del browser). Per escludere il proprio browser: ?pdlive=no */
+   La posizione precisa viene letta solo se il visitatore clicca "Usa la mia posizione" in un modulo. Per escludere il proprio browser: ?pdlive=no */
 (function () {
   if (window.__pdLive) return; window.__pdLive = 1;
   try { if (window.top !== window.self) return; } catch (e) { return; }   // non contare le pagine dentro un iframe
@@ -167,9 +167,8 @@
     } else { attivita = ora(); tocca(); invia('hb'); }
   });
   addEventListener('pagehide', function () { misuraScroll(); invia('bye', { sc: scrollMax }); });
-  /* posizione precisa (GPS / Wi-Fi del dispositivo), SOLO con il consenso del visitatore:
-     1) un piccolo avviso chiede se vuole condividerla; se accetta, il browser mostra la sua richiesta ufficiale;
-     2) nei moduli con CAP/Città c'è il pulsante "Usa la mia posizione" che compila i campi. */
+  /* posizione precisa (GPS / Wi-Fi del dispositivo), SOLO se il visitatore clicca
+     "Usa la mia posizione" nei moduli con CAP/Città: compila i campi e la registra nelle statistiche. */
   var GL = navigator.geolocation;
   var LG = String(document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
   var TX = {
@@ -180,7 +179,6 @@
     es: ['¿Desde dónde nos visita?', 'Comparta su ubicación: solo la usamos internamente para saber de qué zonas vienen nuestros clientes y organizar entregas. Nunca la cedemos a terceros.', 'Compartir ubicación', 'No, gracias', 'Usar mi ubicación', 'Buscando ubicación…', 'Ubicación no disponible', 'Privacidad']
   };
   var T = TX[LG] || TX.en;
-  var GIORNO = 86400000;
   var mandaPos = function (p, modo) {
     var c = p.coords; tocca();
     invia('pos', { la: Math.round(c.latitude * 1e5) / 1e5, lo: Math.round(c.longitude * 1e5) / 1e5, ac: Math.round(c.accuracy || 0), m: modo });
@@ -192,36 +190,6 @@
       function (err) { if (err && err.code === 1) set('pd_gps_no', String(ora())); if (ko) ko(err); },
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 5 * 60000 });
   };
-  var avviso = function () {
-    if (document.getElementById('pd-gps')) return;
-    var d = document.createElement('div'); d.id = 'pd-gps'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', T[0]);
-    d.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;max-width:380px;z-index:2147483000;background:#fff;color:#1a1a1a;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.25);padding:16px 18px;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif';
-    d.innerHTML = '<div style="font-weight:600;font-size:15px;margin-bottom:4px">📍 ' + T[0] + '</div><div style="color:#555;margin-bottom:12px">' + T[1] + ' <a href="/privacy/" style="color:#555">' + T[7] + '</a></div>'
-      + '<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" data-si style="flex:1;min-width:140px;border:0;border-radius:9px;padding:10px 12px;background:#1a1a1a;color:#fff;font:600 14px system-ui,sans-serif;cursor:pointer">' + T[2] + '</button>'
-      + '<button type="button" data-no style="border:1px solid #ccc;border-radius:9px;padding:10px 12px;background:#fff;color:#333;font:14px system-ui,sans-serif;cursor:pointer">' + T[3] + '</button></div>';
-    var chiudi = function () { if (d.parentNode) d.parentNode.removeChild(d); };
-    d.querySelector('[data-si]').onclick = function () { chiudi(); set('pd_gps_chiesto', String(ora())); chiediPos('avviso'); };
-    d.querySelector('[data-no]').onclick = function () { chiudi(); set('pd_gps_chiesto', String(ora())); };
-    document.body.appendChild(d);
-  };
-  var avvioGps = function () {
-    if (!GL || !window.isSecureContext) return;
-    var no = +get('pd_gps_no') || 0, chiesto = +get('pd_gps_chiesto') || 0;
-    var procedi = function (stato) {
-      if (stato === 'denied') return;
-      if (stato === 'granted') { if (nuovaVisita) chiediPos('auto'); return; }   // già concesso: aggiorna in silenzio, una volta per visita
-      if (ora() - no < 60 * GIORNO || ora() - chiesto < 30 * GIORNO) return;      // non insistere
-      var mostrato = false, mostra = function () { if (mostrato) return; mostrato = true; avviso(); };
-      setTimeout(function () {   // dopo qualche secondo e solo dopo che la persona ha interagito (scroll, tocco, clic)
-        if (ora() - attivita < 6000) mostra();
-        else ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { addEventListener(ev, mostra, { once: true, passive: true }); });
-      }, 5000);
-    };
-    try { navigator.permissions.query({ name: 'geolocation' }).then(function (r) { procedi(r.state); }, function () { procedi(''); }); }
-    catch (e) { procedi(''); }
-  };
-  if (document.body) avvioGps(); else document.addEventListener('DOMContentLoaded', avvioGps);
-
   /* pulsante "Usa la mia posizione" accanto ai campi CAP / Città dei moduli */
   var campoDi = function (f, re, ac) {
     var els = f.querySelectorAll('input'); for (var i = 0; i < els.length; i++) { var e = els[i];
