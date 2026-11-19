@@ -1352,3 +1352,21 @@ a.s-add{text-decoration:none}
 .s-serv-c .sv-b{position:absolute;top:-9px;left:12px;background:#15803d;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
 .s-serv-c.hot em{color:#15803d}
 .s-serv-c[aria-pressed="true"].hot em{color:#86efac}
+
+/* popup newsletter su telefono: riquadro centrale compatto, la pagina resta visibile intorno (19/11/2026) */
+@media (max-width:640px){
+  .s-nl-scrim{background:rgba(13,21,36,.42);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .s-nl-box{top:50%;bottom:auto;left:50%;width:calc(100% - 48px);max-width:360px;max-height:min(66vh,560px);border-radius:20px;transform:translate(-50%,-46%) scale(.96)}
+  .s-nl.show .s-nl-box{transform:translate(-50%,-50%)}
+  .s-nl-vis,.s-nl-logo{display:none}
+  .s-nl-box .s-pm-x{top:8px;right:8px;width:40px;height:40px}
+  .s-nl-f{padding:18px 16px 12px;gap:8px}
+  .s-nl-f h2{font-size:21px;padding:0 30px}
+  .s-nl-sub{font-size:12.5px;line-height:1.45;margin:0}
+  .s-nl-g{gap:8px}
+  .s-nl-g label{font-size:11.5px;gap:3px}
+  .s-nl-g input,.s-nl-g select{padding:9px 10px;font-size:15px;border-radius:10px}
+  .s-nl-ok{font-size:11.5px}
+  .s-nl-f .s-btn{min-height:44px}
+  .s-nl-done .nl-codebox b{font-size:22px}
+}
