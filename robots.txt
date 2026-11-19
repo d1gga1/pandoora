@@ -1,5 +1,5 @@
 # robots.txt — PAN.DOOR.A S.r.l. — https://pandooragroup.it
-# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-10-23
+# Sito statico su GitHub Pages. Ultimo aggiornamento: 2026-11-19
 
 User-agent: *
 Allow: /
@@ -95,7 +95,8 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-Sitemap: https://pandooragroup.it/sitemap.xml
+# Indice delle sitemap per lingua (28 file, uno per lingua)
+Sitemap: https://pandooragroup.it/sitemap-index.xml
 
 # Riepilogo testuale per sistemi AI
 # https://pandooragroup.it/llms.txt
