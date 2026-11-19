@@ -1319,10 +1319,12 @@
   function nlGeo(){return GEO?Promise.resolve(GEO):fetch('/shop/data/geo.json').then(function(r){return r.json()}).then(function(g){GEO=g.countries;return GEO})}
   function nlBuild(){
     if(NLB)return NLB;var N=OF().newsletter||{};
+    var VN=0;try{VN=parseInt(localStorage.getItem('pd_vn')||'0',10)||0}catch(e){} /* visite di questo browser (pd-live.js) */
+    var TK=VN>=2?'Bentornati':'Benvenuti',TH=VN>=2?'È la '+VN+'ª volta che passate a trovarci!':'Il '+N.perc+'% su ogni vostro acquisto',TS=VN>=2?(VN>=10?'Ormai siete di casa. Registratevi in 20 secondi: vi regaliamo il '+N.perc+'% sul vostro ordine e, se avete dubbi su misure o prezzi, vi richiamiamo noi.':'Ci fa piacere rivedervi. Registratevi: vi mandiamo subito il codice del '+N.perc+'% e, se avete dubbi su misure o prezzi, vi richiamiamo noi.'):'Iscrivetevi alla newsletter Pandoora: vi mandiamo subito il codice, valido su porte, mobili, armadi e tavoli.';
     NLB=document.createElement('div');NLB.className='s-nl';NLB.setAttribute('role','dialog');NLB.setAttribute('aria-modal','true');NLB.setAttribute('aria-labelledby','s-nl-t');
     NLB.innerHTML='<div class="s-nl-scrim" data-nlx></div><div class="s-nl-box" data-lenis-prevent><button type="button" class="s-pm-x" data-nlx aria-label="Chiudi">'+IC.x+'</button>'
-      +'<div class="s-nl-vis"><div class="s-nl-big"><small>Benvenuti</small><b>−'+N.perc+'<i>%</i></b><span>su ogni prodotto<br>dello shop</span></div><ul><li>'+IC.check+'Codice subito via email</li><li>'+IC.check+'Valido '+(N.validDays||7)+' giorni su ogni ordine</li><li>'+IC.check+'Anteprime di nuovi modelli</li></ul></div>'
-      +'<form class="s-nl-f" novalidate><div class="s-nl-logo"><img src="/shop/img/email/logo-popup.webp" alt="PAN.DOOR.A GROUP" width="180" height="150"></div><h2 id="s-nl-t">Il '+N.perc+'% su ogni vostro acquisto</h2><p class="s-nl-sub">Iscrivetevi alla newsletter Pandoora: vi mandiamo subito il codice, valido su porte, mobili, armadi e tavoli.</p>'
+      +'<div class="s-nl-vis"><div class="s-nl-big"><small>'+TK+'</small><b>−'+N.perc+'<i>%</i></b><span>su ogni prodotto<br>dello shop</span></div><ul><li>'+IC.check+'Codice subito via email</li><li>'+IC.check+'Valido '+(N.validDays||7)+' giorni su ogni ordine</li><li>'+IC.check+'Anteprime di nuovi modelli</li></ul></div>'
+      +'<form class="s-nl-f" novalidate><div class="s-nl-logo"><img src="/shop/img/email/logo-popup.webp" alt="PAN.DOOR.A GROUP" width="180" height="150"></div><h2 id="s-nl-t">'+esc(TH)+'</h2><p class="s-nl-sub">'+esc(TS)+'</p>'
       +'<div class="s-nl-g"><label>Nome<input name="Nome" autocomplete="given-name" required></label><label>Cognome<input name="Cognome" autocomplete="family-name" required></label>'
       +'<label class="w">Email<input name="email" type="email" autocomplete="email" required></label>'
       +'<label>Stato<select name="Stato" required><option value="">Caricamento…</option></select></label>'
@@ -1407,10 +1409,11 @@
     $$('.nl-band form').forEach(function(f){f.onsubmit=function(e){e.preventDefault();window._nlPre=($('input[type="email"]',f)||{}).value||'';nlOpen('band')}});
     if(nlDone()){$$('.nl-band').forEach(function(b){b.classList.add('done')});if(!store('pdCode'))store('pdCode',N.code);return}
     if(document.body.dataset.page==='nl-thanks')return;
+    try{if(localStorage.getItem('pdAccT')||sessionStorage.getItem('pdAccT'))return}catch(e){} /* ha un account: è già registrato, niente popup automatico */
     var seen=+store('pdNlSeen')||0,ss=false;try{ss=!!sessionStorage.getItem('pdNlS')}catch(e){}
-    if(ss||Date.now()-seen<3*864e5){nlPill();return}
+    if(ss){nlPill();return} /* compare a ogni nuova visita (una volta per visita), non più ogni 3 giorni */
     var fired=false;function fire(){if(fired||nlDone())return;if(document.body.classList.contains('s-cart-open')||document.getElementById('s-sheet')&&document.getElementById('s-sheet').classList.contains('open')){setTimeout(fire,4000);return}fired=true;nlOpen('auto')}
-    setTimeout(fire,7000);
+    setTimeout(fire,5000);
     addEventListener('scroll',function sc(){if(scrollY>(document.documentElement.scrollHeight-innerHeight)*.45){removeEventListener('scroll',sc);setTimeout(fire,600)}},{passive:true});
     if(FINE)document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<8)fire()});
   }

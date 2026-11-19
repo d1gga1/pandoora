@@ -4,6 +4,8 @@
 (function () {
   if (window.__pdLive) return; window.__pdLive = 1;
   try { if (window.top !== window.self) return; } catch (e) { return; }   // non contare le pagine dentro un iframe
+  // popup −5% newsletter sulle pagine italiane del sito (nello shop c'è già quello di shop.js)
+  try { if (!/^\/(shop|private_area)(\/|$)/.test(location.pathname) && /^it/i.test(document.documentElement.lang || '')) { var pdsc = document.createElement('script'); pdsc.src = '/pd-sconto.js?v=1'; pdsc.defer = true; (document.head || document.documentElement).appendChild(pdsc); } } catch (e) {}
   var URL_ = window.PD_LIVE_URL || 'https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/s';
   var LS = null; try { LS = window.localStorage; LS.setItem('pd_t', '1'); LS.removeItem('pd_t'); } catch (e) { LS = null; }
   var get = function (k) { try { return LS ? LS.getItem(k) : null; } catch (e) { return null; } };
