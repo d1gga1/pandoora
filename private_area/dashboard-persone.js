@@ -16,14 +16,14 @@
   var nomePagina = function (p, t) { var x = (t || '').replace(/\s*[|·—–-]\s*Pan\.?door\.?a.*$/i, '').trim(); return x || p; };
   var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'], ordine: ['✅', 'Ordine inviato'],
     registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download'], esterno: ['↗', 'Link esterno'],
-    ricerca: ['🔎', 'Ricerca'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'] };
+    ricerca: ['🔎', 'Ricerca'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'], aiuto: ['🛟', 'Aiuto proposto'] };
   var azIc = function (t) { return (AZ[t] || ['•'])[0]; }, azNm = function (t) { return (AZ[t] || ['', t])[1]; };
   var PAL = [['#4f8cff', '#b07cff'], ['#ff7a45', '#e5483a'], ['#22c493', '#4f8cff'], ['#ffc53d', '#ff7a45'], ['#b07cff', '#ff5ab4'], ['#2dd4ff', '#4f8cff']];
   var colori = function (s) { var h = 0; s = String(s || ''); for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return PAL[h % PAL.length]; };
   var iniziali = function (p) { var nm = (p.nome || '').trim(); if (nm) return nm.split(/\s+/).slice(0, 2).map(function (x) { return x[0]; }).join('').toUpperCase(); return '#' + String(p.pid || '').slice(0, 2).toUpperCase(); };
   var avatar = function (p, live) { var c = colori(p.email || p.pid); return '<span class="av' + (p.email ? '' : ' anon') + '" style="--c1:' + c[0] + ';--c2:' + c[1] + '">' + esc(iniziali(p)) + (live ? '<i class="on"></i>' : '') + '</span>'; };
   var etichetta = function (p) { return p.nome || p.email || ('Visitatore #' + String(p.pid || '').slice(0, 6).toUpperCase()); };
-  var FONTI = { newsletter: ['Newsletter', ''], account: ['Account', 'b2'], ordine: ['Cliente con ordine', 'b2'], accesso: ['Account', 'b2'] };
+  var FONTI = { checkout: ['Ordine non completato', ''], newsletter: ['Newsletter', ''], account: ['Account', 'b2'], ordine: ['Cliente con ordine', 'b2'], accesso: ['Account', 'b2'] };
 
   function api(q) {
     return fetch(PDADM.url(q), { cache: 'no-store', headers: PDADM.headers() }).then(function (r) { if (r.status === 401) { PDADM.esci(); throw new Error('accesso'); } return r.json(); });
@@ -45,9 +45,9 @@
     sec.innerHTML = '<div class="kpis" id="p-kpi"></div>'
       + '<div class="card"><div class="p-filters">'
       + '<div class="seg" id="p-per">' + [['oggi', 'Oggi'], ['7', '7 giorni'], ['30', '30 giorni'], ['90', '90 giorni'], ['365', '12 mesi'], ['tutto', 'Tutto']].map(function (x) { return '<button data-p="' + x[0] + '">' + x[1] + '</button>'; }).join('') + '</div>'
-      + '<div class="grow"><input type="search" id="p-q" placeholder="Cerca nome, email, telefono, città, provider…"></div>'
+      + '<div class="grow"><input type="search" id="p-q" placeholder="Cerca nome, email, telefono, città, provider o codice Rif. WhatsApp…"></div>'
       + '<select id="p-noti"><option value="">Tutti i visitatori</option><option value="1">★ Solo contatti noti</option><option value="0">Solo anonimi</option></select>'
-      + '<select id="p-az"><option value="">Qualsiasi azione</option>' + ['whatsapp', 'telefono', 'email', 'carrello', 'preferito', 'checkout', 'ordine', 'preventivo', 'ricerca', 'copia', 'iscrizione', 'registrazione', 'download'].map(function (k) { return '<option value="' + k + '">' + azIc(k) + ' Ha fatto: ' + azNm(k) + '</option>'; }).join('') + '</select>'
+      + '<select id="p-az"><option value="">Qualsiasi azione</option>' + ['whatsapp', 'telefono', 'email', 'carrello', 'preferito', 'checkout', 'aiuto', 'ordine', 'preventivo', 'ricerca', 'copia', 'iscrizione', 'registrazione', 'download'].map(function (k) { return '<option value="' + k + '">' + azIc(k) + ' Ha fatto: ' + azNm(k) + '</option>'; }).join('') + '</select>'
       + '<select id="p-min"><option value="">Qualsiasi n. visite</option><option value="2">Tornati almeno 2 volte</option><option value="3">Almeno 3 visite</option><option value="5">Almeno 5 visite</option><option value="10">Almeno 10 visite</option></select>'
       + '<select id="p-ord"><option value="recenti">Ordina: più recenti</option><option value="visite">Ordina: più visite</option><option value="pagine">Ordina: più pagine viste</option><option value="tempo">Ordina: più tempo sul sito</option><option value="azioni">Ordina: più azioni</option></select>'
       + '<button class="ghost" id="p-csv">Scarica CSV</button>'
@@ -122,6 +122,7 @@
       var h = '<div class="pp-head">' + avatar({ nome: nm, email: em, pid: p.pid }) + '<div><h2>' + esc(nm || em || 'Visitatore anonimo #' + p.pid.slice(0, 6).toUpperCase()) + (f ? '<span class="badge-f ' + f[1] + '">' + f[0] + '</span>' : '') + (cl ? '<span class="badge-f b3">Cliente registrato</span>' : '') + '</h2>'
         + '<div class="muted">' + esc([em, tl, cl && cl.zona ? '📍 ' + cl.zona : ''].filter(Boolean).join(' · ') || 'Non ha ancora lasciato i suoi dati: lo riconoscerete appena si iscrive, si registra o ordina.') + '</div>'
         + (p.identificato ? '<div class="muted small" style="margin-top:4px">Contatto noto dal ' + data(p.identificato, 1) + '</div>' : '')
+        + (function () { var m = null; A.some(function (x) { m = /Rif\. ([A-Z0-9]{4,8})/.exec(x.dettaglio || ''); return m; }); return m ? '<div class="muted small" style="margin-top:4px">Codice nei suoi messaggi WhatsApp: <b>Rif. ' + esc(m[1]) + '</b></div>' : ''; })()
         + '<div class="pp-act">' + (tl ? '<a class="wa" target="_blank" rel="noopener" href="' + wa(tl) + '">💬 WhatsApp</a><a href="tel:' + esc(tel(tl)) + '">📞 Chiama</a>' : '') + (em ? '<a class="ml" href="mailto:' + esc(em) + '">✉️ Email</a>' : '') + '</div></div></div>';
       var tiles = [['Visite', n(S.length)], ['Pagine viste', n(totPag)], ['Tempo sul sito', dur(totT)], ['Azioni', n(A.length)], ['Prodotti guardati', n((r.prodotti || []).length)],
         ['Prima visita', data(prima.inizio)], ['Ultima visita', fa(ultima.ultimo)], ['Arrivato la prima volta da', prima.sorgente || 'Diretto']];

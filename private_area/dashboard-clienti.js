@@ -39,13 +39,13 @@
       if (!r.ok) { nonPronto(el, r); return null; }
       if (r.stati_nomi) STATI = r.stati_nomi;
       var da = (r.stati.ricevuto || {}).n || 0;
-      segnaNuovi(da);
+      segnaNuovi(da + (+r.bozze_aperte || 0));
       el.innerHTML = [
         ['Da gestire', NF.format(da), da ? 'richieste nuove' : 'tutto in ordine', da ? 'hot' : ''],
         ['Ordini 30 giorni', NF.format(r.ordini_30), eur(r.valore_30) + ' indicativi'],
         ['Clienti registrati', NF.format(r.clienti), '+' + r.clienti_30 + ' negli ultimi 30 giorni'],
         ['Iscritti newsletter', NF.format(r.iscritti), '+' + r.iscritti_30 + ' negli ultimi 30 giorni'],
-        ['Carrelli aperti', NF.format(r.carrelli_aperti), 'clienti con prodotti nel carrello']
+        ['Ordini non completati', NF.format(r.bozze_aperte || 0), (r.bozze_aperte ? 'da ricontattare · ' : '') + NF.format(r.carrelli_aperti) + ' carrelli aperti', r.bozze_aperte ? 'hot' : '']
       ].map(function (k) { return '<div class="kpi ' + (k[3] || '') + '"><span>' + k[0] + '</span><b>' + k[1] + '</b><em>' + k[2] + '</em></div>'; }).join('');
       return r;
     });
@@ -56,11 +56,75 @@
   function initOrdini() {
     var s = $('#tab-ordini');
     s.innerHTML = '<div class="kpis k5" id="o-kpi"></div><div class="card filters"><div class="seg" id="o-stati"></div><div class="sel"><input type="search" id="o-q" placeholder="Cerca numero, nome, email, prodotto…"><a class="ghost" href="' + PDADM.link('a=c_csv&tipo=ordini') + '">Scarica CSV</a></div></div>'
+      + '<div class="card bz-card"><div class="bz-head"><div><h3>🧾 Ordini non completati</h3><small class="muted">Hanno aperto la richiesta d\'ordine e lasciato i contatti (con consenso), ma non l\'hanno inviata. Chiamateli o scriveteli finché sono interessati.</small></div>'
+      + '<div class="sel"><input type="search" id="rif-q" placeholder="Codice Rif. da WhatsApp, es. 3FA9C1" maxlength="12"><button class="ghost" id="rif-go">Trova chi è</button></div></div>'
+      + '<div id="rif-out"></div><div class="seg" id="b-st" style="margin:10px 0"></div><div class="table-wrap"><table class="tbl" id="b-tab"></table></div></div>'
       + '<div class="card"><div class="table-wrap tall"><table class="tbl" id="o-tab"></table></div></div>';
+    $('#rif-go').onclick = cercaRif; $('#rif-q').addEventListener('keydown', function (e) { if (e.key === 'Enter') cercaRif(); });
     var t; $('#o-q').addEventListener('input', function (e) { clearTimeout(t); t = setTimeout(function () { FO.q = e.target.value.trim(); caricaOrdini(); }, 300); });
     caricaOrdini();
   }
+  /* ---------------- ORDINI NON COMPLETATI (bozze) ---------------- */
+  var FB = { stato: 'attive' };
+  var BST = { aperta: 'Da contattare', contattato: 'Contattato', completata: 'Ordine inviato', chiusa: 'Chiusa' };
+  var BCL = { aperta: 'ricevuto', contattato: 'produzione', completata: 'consegnato', chiusa: 'annullato' };
+  var MSG = {
+    it: function (n, p) { return 'Buongiorno' + (n ? ' ' + n : '') + ', sono di Pan.door.a. Ho visto che stava preparando un ordine sul nostro shop (' + p + '). Posso aiutarla con misure, finitura, consegna o prezzo?'; },
+    de: function (n, p) { return 'Guten Tag' + (n ? ' ' + n : '') + ', hier ist Pan.door.a. Sie hatten in unserem Shop eine Bestellung vorbereitet (' + p + '). Kann ich Ihnen bei Maßen, Ausführung, Lieferung oder Preis helfen?'; },
+    fr: function (n, p) { return 'Bonjour' + (n ? ' ' + n : '') + ', ici Pan.door.a. Vous prépariez une commande sur notre boutique (' + p + '). Puis-je vous aider pour les mesures, la finition, la livraison ou le prix ?'; },
+    es: function (n, p) { return 'Hola' + (n ? ' ' + n : '') + ', le escribo de Pan.door.a. Vi que estaba preparando un pedido en nuestra tienda (' + p + '). ¿Le ayudo con medidas, acabado, entrega o precio?'; },
+    en: function (n, p) { return 'Hello' + (n ? ' ' + n : '') + ', this is Pan.door.a. I saw you were preparing an order on our shop (' + p + '). Can I help you with sizes, finish, delivery or price?'; }
+  };
+  function caricaBozze() {
+    var tb = $('#b-tab'); if (!tb) return;
+    api('c_bozze', qs(FB)).then(function (d) {
+      if (!d.ok) { tb.innerHTML = '<tbody><tr><td class="empty">Non disponibile: aggiornate la funzione pd su Supabase.</td></tr></tbody>'; return; }
+      var c = d.conta || {}, att = (c.aperta || 0) + (c.contattato || 0);
+      $('#b-st').innerHTML = [['attive', 'Da seguire', att], ['aperta', BST.aperta, c.aperta || 0], ['contattato', BST.contattato, c.contattato || 0], ['completata', BST.completata, c.completata || 0], ['chiusa', BST.chiusa, c.chiusa || 0], ['tutte', 'Tutte', '']]
+        .map(function (x) { return '<button data-s="' + x[0] + '"' + (FB.stato === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] !== '' ? ' <i>' + x[2] + '</i>' : '') + '</button>'; }).join('');
+      $$('#b-st button').forEach(function (b) { b.onclick = function () { FB.stato = b.dataset.s; caricaBozze(); }; });
+      tb.innerHTML = '<thead><tr><th>Quando</th><th>Chi</th><th>Prodotti</th><th class="num">Totale</th><th>Contatta</th><th>Stato</th></tr></thead><tbody>'
+        + (d.bozze.length ? d.bozze.map(function (b, i) {
+          var prod = (b.righe || []).map(function (l) { return l.qty + '× ' + l.name; }).join(', ');
+          var nome1 = String(b.nome || '').split(' ')[0];
+          var txt = (MSG[b.lingua] || (b.lingua && b.lingua !== 'it' ? MSG.en : MSG.it))(nome1, (b.righe || []).map(function (l) { return l.name; }).slice(0, 2).join(', ') + ((b.righe || []).length > 2 ? '…' : ''));
+          return '<tr data-i="' + i + '"><td>' + dt(b.aggiornato, true) + '<br><small class="muted">' + fa(b.aggiornato) + '</small></td>'
+            + '<td><b>' + esc(b.nome || '—') + '</b>' + (b.cliente_id ? ' <span class="st st-confermato">cliente</span>' : '') + '<br><small>' + esc(b.email) + '<br>' + esc(b.telefono || '') + '</small>'
+            + '<br><small class="muted">' + [b.lingua ? 'lingua ' + esc(String(b.lingua).toUpperCase()) : '', b.rif ? 'Rif. ' + esc(b.rif) : ''].filter(Boolean).join(' · ') + '</small></td>'
+            + '<td class="wrap" title="' + esc(prod) + '">' + esc(prod) + '</td><td class="num"><b>' + eur(b.totale) + '</b></td>'
+            + '<td><div class="acts">' + (b.telefono ? '<a class="ghost" href="tel:' + esc(tel(b.telefono)) + '">📞 Chiama</a><a class="ghost" target="_blank" rel="noopener" href="' + wa(b.telefono) + '?text=' + encodeURIComponent(txt) + '">💬 WhatsApp</a>' : '')
+            + '<a class="ghost" href="mailto:' + esc(b.email) + '?subject=' + encodeURIComponent('Pan.door.a — il suo ordine') + '&body=' + encodeURIComponent(txt) + '">✉️</a>'
+            + (b.visitatore && window.PDPersona ? '<button class="ghost" data-pp="' + esc(b.visitatore) + '">👤 Cosa ha guardato</button>' : '') + '</div></td>'
+            + '<td>' + (b.stato === 'completata' ? '<span class="st st-consegnato">Ordine ' + esc(b.numero || 'inviato') + '</span>'
+              : '<select data-b="' + b.id + '">' + ['aperta', 'contattato', 'chiusa'].map(function (k) { return '<option value="' + k + '"' + (b.stato === k ? ' selected' : '') + '>' + BST[k] + '</option>'; }).join('') + '</select>')
+            + (b.note_admin ? '<br><small class="muted">' + esc(b.note_admin) + '</small>' : '') + '</td></tr>';
+        }).join('') : '<tr><td colspan="6" class="empty">' + (FB.stato === 'attive' ? 'Nessun ordine lasciato a metà da seguire. Compariranno qui appena qualcuno apre la richiesta d\'ordine e lascia i contatti.' : 'Nessuno.') + '</td></tr>') + '</tbody>';
+      $$('select[data-b]', tb).forEach(function (sel) {
+        sel.onchange = function () {
+          var b = d.bozze[+sel.closest('tr').dataset.i];
+          var nota = sel.value === 'contattato' ? (prompt('Nota (facoltativa): com\'è andata?', b.note_admin || '') || b.note_admin || '') : (b.note_admin || '');
+          api('c_bozza_salva', 'id=' + b.id, { stato: sel.value, note_admin: nota }).then(function () { caricaBozze(); riepilogo($('#o-kpi')); });
+        };
+      });
+      $$('[data-pp]', tb).forEach(function (x) { x.onclick = function () { window.PDPersona.apri(x.dataset.pp); }; });
+    }).catch(function () {});
+  }
+  function cercaRif() {
+    var v = $('#rif-q').value.replace(/^\s*(rif|ref)\.?\s*/i, '').trim(), out = $('#rif-out');
+    if (!v) return;
+    out.innerHTML = '<p class="muted small">Cerco…</p>';
+    api('c_rif', 'rif=' + encodeURIComponent(v)).then(function (r) {
+      if (!r.ok) { out.innerHTML = '<p class="muted small">Codice non valido: sono 6 lettere o numeri, es. 3FA9C1.</p>'; return; }
+      if (!r.pid) { out.innerHTML = '<p class="muted small">Nessun visitatore con il codice Rif. ' + esc(r.rif) + '. I codici compaiono solo nei messaggi partiti dal sito dopo questo aggiornamento.</p>'; return; }
+      var chi = r.chi || {};
+      out.innerHTML = '<div class="rif-hit"><span>Rif. <b>' + esc(r.rif) + '</b> → ' + esc(chi.nome || chi.email || 'visitatore anonimo') + (chi.telefono ? ' · ' + esc(chi.telefono) : '')
+        + (r.evento ? ' · ha aperto WhatsApp ' + fa(r.evento.ts) + ' dalla pagina <i>' + esc(r.evento.titolo || r.evento.percorso || '') + '</i>' : '') + '</span>'
+        + (window.PDPersona ? '<button class="ghost" id="rif-pp">👤 Apri il profilo completo</button>' : '') + '</div>';
+      var bt = $('#rif-pp'); if (bt) bt.onclick = function () { window.PDPersona.apri(r.pid); };
+    });
+  }
   function caricaOrdini() {
+    caricaBozze();
     riepilogo($('#o-kpi')).then(function (r) {
       if (!r) { $('#o-tab').innerHTML = ''; return; }
       var tot = Object.keys(r.stati).reduce(function (a, k) { return a + r.stati[k].n; }, 0);
@@ -204,6 +268,6 @@
     if (!i) { i = document.createElement('i'); i.className = 'cnt'; b.appendChild(i); }
     i.textContent = n; i.hidden = !n;
   }
-  function contatore() { api('c_riepilogo').then(function (r) { if (r.ok) segnaNuovi((r.stati.ricevuto || {}).n || 0); }).catch(function () {}); }
+  function contatore() { api('c_riepilogo').then(function (r) { if (r.ok) segnaNuovi(((r.stati.ricevuto || {}).n || 0) + (+r.bozze_aperte || 0)); }).catch(function () {}); }
   contatore(); setInterval(function () { if (!document.hidden) contatore(); }, 60000);
 })();

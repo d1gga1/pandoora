@@ -233,9 +233,56 @@
   }
   function chiudiFinestra(subito) {
     if (!M) return; var m = M; M = null;
+    if (!subito && m.dataset.co && !m.dataset.fatto) setTimeout(function () { mostraAiuto(CO); }, 350);
     m.classList.remove('show'); setTimeout(function () { m.remove(); }, subito ? 0 : 300);
     document.documentElement.style.overflow = ''; window.PDM && window.PDM.start && window.PDM.start();
     if (mPrima && mPrima.focus) try { mPrima.focus({ preventScroll: true }); } catch (e) {}
+  }
+
+
+  /* ---------------- testi nuovi nelle lingue principali (il resto del modulo è in italiano) ---------------- */
+  var LG = String(document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
+  var TXC = {
+    it: { t1: 'Prima di tutto, come vi contattiamo?', s1: 'Così, se qualcosa non vi convince o vi serve una mano con misure e consegna, possiamo aiutarvi anche se non completate subito la richiesta.', nome: 'Nome e cognome', tel: 'Telefono (anche WhatsApp)', priv: 'Ho letto l\'<a href="/privacy/" target="_blank">informativa privacy</a> e acconsento al trattamento dei dati per gestire la richiesta, anche per essere ricontattato se non la completo.', avanti: 'Continua', ah: 'Possiamo aiutarvi?', as: 'Dubbi su misure, finitura, consegna o prezzo? Scriveteci: vi risponde direttamente chi produce.', wa: 'WhatsApp', call: 'Chiamateci', waTxt: 'Buongiorno, stavo per fare un ordine sul vostro shop e avrei una domanda.', tot: 'Totale indicativo' },
+    en: { t1: 'First of all, how can we reach you?', s1: 'If something is unclear or you need help with sizes and delivery, we can help you even if you don\'t complete the request right away.', nome: 'Full name', tel: 'Phone (WhatsApp too)', priv: 'I have read the <a href="/privacy/" target="_blank">privacy policy</a> and agree to my data being used to handle the request, including being contacted if I don\'t complete it.', avanti: 'Continue', ah: 'Can we help?', as: 'Questions about sizes, finish, delivery or price? Message us: you talk directly to the manufacturer.', wa: 'WhatsApp', call: 'Call us', waTxt: 'Hello, I was about to order from your shop and I have a question.', tot: 'Estimated total' },
+    de: { t1: 'Zuerst: Wie erreichen wir Sie?', s1: 'So können wir Ihnen bei Maßen, Ausführung und Lieferung helfen, auch wenn Sie die Anfrage nicht sofort abschließen.', nome: 'Vor- und Nachname', tel: 'Telefon (auch WhatsApp)', priv: 'Ich habe die <a href="/privacy/" target="_blank">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung der Anfrage einverstanden, auch für eine Kontaktaufnahme, falls ich sie nicht abschließe.', avanti: 'Weiter', ah: 'Können wir helfen?', as: 'Fragen zu Maßen, Ausführung, Lieferung oder Preis? Schreiben Sie uns: Sie sprechen direkt mit dem Hersteller.', wa: 'WhatsApp', call: 'Anrufen', waTxt: 'Guten Tag, ich wollte in Ihrem Shop bestellen und habe eine Frage.', tot: 'Voraussichtliche Summe' },
+    fr: { t1: 'D\'abord, comment vous contacter ?', s1: 'Ainsi, si vous avez un doute sur les mesures ou la livraison, nous pouvons vous aider même si vous ne terminez pas la demande tout de suite.', nome: 'Nom et prénom', tel: 'Téléphone (WhatsApp aussi)', priv: 'J\'ai lu la <a href="/privacy/" target="_blank">politique de confidentialité</a> et j\'accepte le traitement de mes données pour gérer la demande, y compris pour être recontacté si je ne la termine pas.', avanti: 'Continuer', ah: 'Pouvons-nous vous aider ?', as: 'Une question sur les mesures, la finition, la livraison ou le prix ? Écrivez-nous : vous parlez directement au fabricant.', wa: 'WhatsApp', call: 'Appeler', waTxt: 'Bonjour, j\'allais commander sur votre boutique et j\'ai une question.', tot: 'Total indicatif' },
+    es: { t1: 'Primero, ¿cómo le contactamos?', s1: 'Así, si tiene dudas sobre medidas o entrega, podemos ayudarle aunque no complete la solicitud enseguida.', nome: 'Nombre y apellidos', tel: 'Teléfono (también WhatsApp)', priv: 'He leído la <a href="/privacy/" target="_blank">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar la solicitud, también para ser contactado si no la completo.', avanti: 'Continuar', ah: '¿Le ayudamos?', as: '¿Dudas sobre medidas, acabado, entrega o precio? Escríbanos: habla directamente con el fabricante.', wa: 'WhatsApp', call: 'Llamar', waTxt: 'Hola, iba a hacer un pedido en su tienda y tengo una pregunta.', tot: 'Total orientativo' }
+  };
+  var TC = TXC[LG] || TXC.en;
+  var WA_NUM = '393884706887', TEL_NUM = '+393884706887';
+  var CO = null; // ordine aperto nella finestra
+  var rifVis = function () { return window.pdRif ? window.pdRif() : ''; };
+  function datiBozza(o, extra) {
+    return Object.assign({ righe: o.righe, totali: { sub: o.sub, disc: o.disc, tot: o.tot }, pagina: location.pathname, lingua: LG, rif: rifVis() }, extra || {});
+  }
+  function stileExtra() {
+    if (document.getElementById('pa-extra-css')) return;
+    var st = document.createElement('style'); st.id = 'pa-extra-css';
+    st.textContent = '.pa-step1{background:var(--soft,#f4f2ee);border-radius:16px;padding:16px 16px 18px;margin-top:14px}.pa-step1 h3{margin:0 0 4px;font:800 16px var(--body)}.pa-step1 .pa-sub{margin:0 0 12px;font-size:13.5px}'
+      + '.pa-help{position:fixed;right:18px;bottom:18px;z-index:2147483000;width:min(360px,calc(100vw - 36px));background:#fff;color:var(--ink,#0d1524);border-radius:18px;box-shadow:0 18px 50px rgba(13,21,36,.22);padding:18px 18px 16px;font:500 14px/1.45 var(--body,system-ui);transform:translateY(20px);opacity:0;transition:transform .35s,opacity .35s}'
+      + '.pa-help.show{transform:none;opacity:1}.pa-help h4{margin:0 26px 6px 0;font:800 17px var(--body,system-ui)}.pa-help p{margin:0 0 12px;color:var(--ink2,#3a4252)}.pa-help .s-btns{display:flex;gap:8px;flex-wrap:wrap}.pa-help .s-btn{flex:1 1 0;min-width:0;padding-left:12px;padding-right:12px;text-align:center;justify-content:center;white-space:nowrap}'
+      + '.pa-help .pa-hx{position:absolute;top:10px;right:10px;border:0;background:none;width:30px;height:30px;cursor:pointer;color:inherit;opacity:.6}.pa-help .pa-hx svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}'
+      + '@media(max-width:600px){.pa-help{right:12px;left:12px;bottom:12px;width:auto}}';
+    document.head.appendChild(st);
+  }
+  /* chi chiude la richiesta d'ordine senza inviarla: un aiuto discreto, una volta per visita */
+  function mostraAiuto(o) {
+    try { if (sessionStorage.getItem('pdAiuto')) return; sessionStorage.setItem('pdAiuto', '1'); } catch (e) {}
+    if (!o || !o.righe || !o.righe.length) return;
+    stileExtra();
+    var testo = TC.waTxt + '\n\n' + o.righe.map(function (l) { return '• ' + l.qty + ' × ' + l.name; }).join('\n') + '\n' + TC.tot + ': ' + eur(o.tot);
+    var href = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(testo);
+    if (window.pdConRif) href = window.pdConRif(href);
+    var d = document.createElement('div'); d.className = 'pa-help'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', TC.ah);
+    d.innerHTML = '<button type="button" class="pa-hx" aria-label="Chiudi">' + IC.x + '</button><h4>' + esc(TC.ah) + '</h4><p>' + esc(TC.as) + '</p>'
+      + '<div class="s-btns"><a class="s-btn s-btn-p" target="_blank" rel="noopener" href="' + esc(href) + '">' + esc(TC.wa) + '</a><a class="s-btn s-btn-o" href="tel:' + TEL_NUM + '">' + esc(TC.call) + '</a></div>';
+    document.body.appendChild(d);
+    requestAnimationFrame(function () { d.classList.add('show'); });
+    var via = function () { d.classList.remove('show'); setTimeout(function () { d.remove(); }, 400); };
+    $('.pa-hx', d).onclick = via;
+    $$('a', d).forEach(function (a) { a.addEventListener('click', function () { window.pdEvento && window.pdEvento('aiuto', 'clic su ' + (a.href.indexOf('tel:') === 0 ? 'telefono' : 'WhatsApp')); setTimeout(via, 300); }); });
+    window.pdEvento && window.pdEvento('aiuto', 'proposto dopo aver chiuso l\'ordine · ' + Math.round(o.tot || 0) + ' €');
   }
 
   /* ---------------- richiesta d'ordine dal carrello ---------------- */
@@ -257,7 +304,8 @@
     window.PDShop.chiudiCarrello && window.PDShop.chiudiCarrello();
     var box = apriFinestra('<h2>Richiesta d\'ordine</h2><p class="pa-sub" style="margin:0">Inviando la richiesta non pagate ancora nulla: vi ricontattiamo per confermare ordine, tempi e prezzo. <b>Pagamento: 50% di anticipo alla conferma dell\'ordine, 50% quando la merce è pronta.</b> Il rilievo delle misure si fa dopo la conferma e l\'anticipo.</p>' + riepilogoHTML(o) + '<div data-co></div>');
     var c = $('[data-co]', box);
-    quandoPronto(function () { if (S.utente) checkoutCliente(c, o); else checkoutOspite(c, o); });
+    CO = o; if (M) M.dataset.co = '1';
+    quandoPronto(function () { if (S.utente) { checkoutCliente(c, o); api('bozza', datiBozza(o)); } else checkoutOspite(c, o); });
   }
   function checkoutCliente(c, o) {
     var u = S.utente, ind = S.indirizzi;
@@ -282,14 +330,42 @@
     };
   }
   function checkoutOspite(c, o) {
+    var prima = ls('pdCoContatto') || {};
     c.innerHTML = '<div class="pa-who"><span>Avete già un account?</span><button type="button" class="pa-link" data-login>Accedi</button></div><div data-login-box hidden style="margin-top:14px"></div>'
-      + '<form class="pa-f" novalidate style="margin-top:16px">' + anagraficaHTML(null, true)
+      + '<form class="pa-f pa-step1" novalidate><h3>' + esc(TC.t1) + '</h3><p class="pa-sub">' + esc(TC.s1) + '</p>'
+      + campo('nome', esc(TC.nome), { v: prima.nome, ac: 'name', req: 1, max: 160 })
+      + '<div class="pa-g">' + campo('email', 'Email', { type: 'email', v: prima.email, ac: 'email', req: 1 }) + campo('telefono', esc(TC.tel), { type: 'tel', v: prima.telefono, ac: 'tel', im: 'tel', req: 1, max: 40 }) + '</div>'
+      + '<label class="pa-chk"><input type="checkbox" name="privacy" required> ' + TC.priv + '</label>'
+      + '<input name="sito_web" class="pa-trap" tabindex="-1" autocomplete="off" aria-hidden="true">'
+      + '<p class="pa-msg" role="alert"></p><button type="submit" class="s-btn s-btn-p">' + esc(TC.avanti) + '</button></form>';
+    stileExtra();
+    var f1 = $('form', c); legaModulo(f1);
+    var lb = $('[data-login-box]', c);
+    $('[data-login]', c).onclick = function () { lb.hidden = !lb.hidden; f1.hidden = !lb.hidden; if (!lb.hidden) moduloAccesso(lb, function () { checkoutCliente(c, o); api('bozza', datiBozza(o)); }); };
+    f1.onsubmit = function (e) {
+      e.preventDefault(); if (!controllaPrima(f1)) return;
+      var v = valori(f1);
+      if (v.telefono.replace(/\D/g, '').length < 6) return erroreModulo(f1, { errore: 'Controllate il numero di telefono.', campo: 'telefono' });
+      var parti = v.nome.split(/\s+/), nome = parti.shift() || '', cognome = parti.join(' ');
+      ls('pdCoContatto', { nome: v.nome, email: v.email, telefono: v.telefono });
+      attendi(f1, true);
+      api('bozza', datiBozza(o, { nome: nome, cognome: cognome, email: v.email, telefono: v.telefono, privacy: true, sito_web: v.sito_web })).then(function (r) {
+        attendi(f1, false);
+        if (r && !r.ok && !r.offline && r.campo) return erroreModulo(f1, r); // dato sbagliato: lo facciamo correggere
+        window.pdEvento && window.pdEvento('checkout', 'contatti lasciati · ' + Math.round(o.tot || 0) + ' €');
+        checkoutOspiteDati(c, o, { nome: nome, cognome: cognome, email: v.email, telefono: v.telefono });
+      });
+    };
+  }
+  function checkoutOspiteDati(c, o, u) {
+    c.innerHTML = '<div class="pa-who"><span>Avete già un account?</span><button type="button" class="pa-link" data-login>Accedi</button></div><div data-login-box hidden style="margin-top:14px"></div>'
+      + '<form class="pa-f" novalidate style="margin-top:16px">' + anagraficaHTML(u, true)
       + '<p class="pa-sec-t">Consegna</p>' + campiIndirizzo('i_')
       + campo('note', 'Note per noi (facoltative)', { type: 'textarea', max: 2000, ph: 'Misure del vano, piano, orari, richieste…' })
       + '<label class="pa-chk"><input type="checkbox" name="crea_account"> Create il mio account con questi dati: ritrovo ordini, carrello e preferiti</label>'
       + '<div data-pw-box hidden>' + campo('password', 'Scegliete una password (almeno 8 caratteri)', { type: 'password', ac: 'new-password', req: false }) + '</div>'
       + '<label class="pa-chk"><input type="checkbox" name="newsletter"> Voglio ricevere la newsletter con offerte e novità</label>'
-      + '<label class="pa-chk"><input type="checkbox" name="privacy" required> Ho letto l\'<a href="/privacy/" target="_blank">informativa privacy</a> e acconsento al trattamento dei dati per gestire la richiesta.</label>'
+      + '<label class="pa-chk"><input type="checkbox" name="privacy" required checked> Ho letto l\'<a href="/privacy/" target="_blank">informativa privacy</a> e acconsento al trattamento dei dati per gestire la richiesta.</label>'
       + '<input name="sito_web" class="pa-trap" tabindex="-1" autocomplete="off" aria-hidden="true">'
       + '<p class="pa-msg" role="alert"></p><button type="submit" class="s-btn s-btn-p">Invia la richiesta d\'ordine</button></form>';
     var f = $('form', c); legaModulo(f);
@@ -311,6 +387,8 @@
       attendi(f, false);
       if (!r.ok) return erroreModulo(f, r);
       if (r.utente) applica(r, false);
+      var mm = c.closest('.pa-m'); if (mm) mm.dataset.fatto = '1';
+      try { localStorage.removeItem('pdCoContatto'); } catch (e) {}
       window.pdEvento && window.pdEvento('ordine', r.numero + ' · ' + Math.round((d.totali && d.totali.tot) || 0) + ' €');
       window.PDShop && window.PDShop.svuotaCarrello && window.PDShop.svuotaCarrello();
       try { localStorage.removeItem('pdAccDirty'); } catch (e) {}

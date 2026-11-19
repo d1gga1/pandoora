@@ -27,6 +27,24 @@
   var vid = get('pd_v'); if (!vid || !/^[a-z0-9]{12,40}$/.test(vid)) { vid = rid(); set('pd_v', vid); }
   var vn = parseInt(get('pd_vn') || '0', 10) || 0;
   window.pdVisitatore = function () { return vid; };
+  /* codice breve del visitatore ("Rif."): finisce nei messaggi WhatsApp, così in dashboard sapete chi vi sta scrivendo */
+  var rif = function () { return vid.slice(0, 6).toUpperCase(); };
+  window.pdRif = rif;
+  var LG = String(document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
+  var conRif = function (u) {
+    try {
+      u = String(u); var r = rif();
+      if (u.indexOf(r) >= 0 || !/^(https?:\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)\/|whatsapp:)/i.test(u)) return u;
+      var m = /([?&])text=([^&#]*)/.exec(u), tx = '';
+      if (m) { try { tx = decodeURIComponent(m[2].replace(/\+/g, ' ')); } catch (e) { tx = m[2]; } }
+      var ini = { it: 'Buongiorno, vi scrivo dal sito pandooragroup.it.', de: 'Guten Tag, ich schreibe Ihnen über pandooragroup.it.', fr: 'Bonjour, je vous écris depuis pandooragroup.it.', es: 'Hola, les escribo desde pandooragroup.it.' }[LG] || 'Hello, I am writing from pandooragroup.it.';
+      var nuovo = encodeURIComponent((tx || ini) + '\n\n' + (LG === 'it' ? 'Rif. ' : 'Ref. ') + r);
+      if (m) return u.slice(0, m.index) + m[1] + 'text=' + nuovo + u.slice(m.index + m[0].length);
+      var h = u.indexOf('#'), coda = h >= 0 ? u.slice(h) : ''; if (h >= 0) u = u.slice(0, h);
+      return u + (u.indexOf('?') >= 0 ? '&' : '?') + 'text=' + nuovo + coda;
+    } catch (e) { return u; }
+  };
+  window.pdConRif = conRif;
   var sess = null; try { sess = JSON.parse(get('pd_s') || 'null'); } catch (e) {}
   var nuovaVisita = !sess || !sess.id || ora() - (sess.t || 0) > MAX_PAUSA;
   if (nuovaVisita) { sess = { id: rid(), t: ora() }; vn += 1; set('pd_vn', String(vn)); }
@@ -114,10 +132,11 @@
     if (!a) return;
     var href = a.getAttribute('href') || '', tipo = tipoLink(href);
     if (!tipo) return;
+    if (tipo === 'whatsapp') { var hr = conRif(href); if (hr !== href) { a.setAttribute('href', hr); href = hr; } }
     var testo = (a.getAttribute('aria-label') || a.textContent || '').replace(/\s+/g, ' ').trim();
     if (!testo && a.className) testo = String(a.className);
     if (tipo === 'esterno') testo = (testo ? testo.slice(0, 60) + ' · ' : '') + href.replace(/^https?:\/\//, '').slice(0, 80);
-    window.pdEvento(tipo, (testo || href).slice(0, 120) + (tipo === 'download' ? ' · ' + href.split('/').pop() : ''));
+    window.pdEvento(tipo, (testo || href).slice(0, 120) + (tipo === 'download' ? ' · ' + href.split('/').pop() : '') + (tipo === 'whatsapp' ? ' · Rif. ' + rif() : ''));
   }, true);
 
   /* ricerche fatte nel sito (barra di ricerca dello shop) */
@@ -140,7 +159,11 @@
   }, true);
   if (window.open) { // WhatsApp aperto dal codice (es. "invia l'ordine su WhatsApp")
     var apri = window.open;
-    window.open = function (u) { try { if (u && tipoLink(String(u)) === 'whatsapp') window.pdEvento('whatsapp', 'apertura da pulsante'); } catch (e) {} return apri.apply(window, arguments); };
+    window.open = function (u) {
+      var arg = Array.prototype.slice.call(arguments);
+      try { if (u && tipoLink(String(u)) === 'whatsapp') { arg[0] = conRif(u); window.pdEvento('whatsapp', 'apertura da pulsante · Rif. ' + rif()); } } catch (e) {}
+      return apri.apply(window, arg);
+    };
   }
 
   /* prodotti aperti nello shop (cambiano l'indirizzo senza ricaricare la pagina) */
@@ -170,7 +193,6 @@
   /* posizione precisa (GPS / Wi-Fi del dispositivo), SOLO se il visitatore clicca
      "Usa la mia posizione" nei moduli con CAP/Città: compila i campi e la registra nelle statistiche. */
   var GL = navigator.geolocation;
-  var LG = String(document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
   var TX = {
     it: ['Ci dite da dove ci visitate?', 'Condividete la vostra posizione: la usiamo solo internamente per capire da quali zone arrivano i clienti e organizzare consegne e agenti. Non la cediamo a nessuno.', 'Condividi posizione', 'No, grazie', 'Usa la mia posizione', 'Cerco la posizione…', 'Posizione non disponibile', 'Informativa'],
     en: ['Where are you visiting from?', 'Share your location: we only use it internally to see which areas our customers come from and plan deliveries and agents. We never pass it on.', 'Share location', 'No, thanks', 'Use my location', 'Locating…', 'Location unavailable', 'Privacy'],

@@ -200,3 +200,9 @@ h3{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--mute
 .kpi span .az-ic,.kpi .az-ic{display:inline;width:auto;margin-right:4px;font-size:12px}
 .live-grid .map-card{display:flex;flex-direction:column}
 .live-grid .map{flex:1;height:auto;min-height:calc(100vh - 190px)}
+/* ordini non completati */
+.bz-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.bz-head h3{margin:0 0 4px}
+.bz-card .acts{display:flex;gap:6px;flex-wrap:wrap}
+.bz-card select{background:transparent;color:inherit;border:1px solid var(--line-2);border-radius:9px;padding:5px 8px}
+.rif-hit{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;padding:10px 14px;border-radius:12px;background:rgba(79,140,255,.1);border:1px solid rgba(79,140,255,.3)}

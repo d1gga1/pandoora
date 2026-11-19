@@ -29,7 +29,7 @@
     var dove = x.citta ? x.citta + (x.cap ? ' ' + x.cap : '') : (x.regione || '');
     return (dove ? dove + ', ' : '') + (x.paese || x.cc || '');
   }
-  var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'],
+  var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'], aiuto: ['🛟', 'Aiuto proposto'],
     ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'],
     ricerca: ['🔎', 'Ricerca'], posizione: ['📍', 'Posizione GPS'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'] };
   var azNome = function (t) { return (AZ[t] || ['•', t])[1]; };
