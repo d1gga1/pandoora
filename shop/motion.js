@@ -228,11 +228,11 @@
     spots.forEach(function(s){s._in=0});
     // tinte RAL che cambiano sull'anta
     var RL=[['9010','#f1ece1','Bianco puro'],['6021','#9ab889','Verde pallido'],['5014','#6f7f9e','Blu colomba'],['3012','#cf9178','Rosso beige'],['7016','#4a5156','Antracite'],['1013','#e8dcc4','Bianco perla']],ri=0;
-    var ralN=$('.ral-n',dj),ralT=$('.ral-t',dj),spR=$('.sp-ral',dj);
+    var ralN=$('.ral-n',dj),ralT=$('.ral-t',dj),spR=$('.sp-ral',dj),RN=null;try{RN=JSON.parse(spR.getAttribute('data-ral'))}catch(e){}
     setInterval(function(){if(st.p>.05||d.hidden)return;ri=(ri+1)%RL.length;var r=RL[ri];if(tint)tint.style.background=r[0]==='9010'||r[0]==='1013'?'#fff':r[1];if(spR)spR.style.setProperty('--ralc',r[1]);
-      if(ralN){g.fromTo([ralN,ralT],{y:8,opacity:0},{y:0,opacity:1,duration:.5,stagger:.05,ease:'power2.out'});ralN.textContent='RAL '+r[0];ralT.textContent=r[2]}},2600);
+      if(ralN){g.fromTo([ralN,ralT],{y:8,opacity:0},{y:0,opacity:1,duration:.5,stagger:.05,ease:'power2.out'});ralN.textContent='RAL '+r[0];ralT.textContent=(RN&&RN[ri])||r[2]}},2600);
     // parola che cambia nel titolo
-    var rot=$('.dj-rot .rot-w',dj),WORDS=['al centimetro.','su misura.','in tinta RAL.','dal 1987.'],wi=0;
+    var rot=$('.dj-rot .rot-w',dj),WORDS=(function(){try{return JSON.parse(rot.parentNode.getAttribute('data-words'))}catch(e){return null}})()||['fatta da noi.','al centimetro.','in tinta RAL.','dal 1987.'],wi=0;
     function setWord(t){rot.innerHTML=t.split('').map(function(ch){return '<span class="ch">'+(ch===' '?'&nbsp;':ch)+'</span>'}).join('')}
     if(rot){setWord(WORDS[0]);setInterval(function(){if(st.p>.05||d.hidden)return;var old=$$('.ch',rot);
       g.to(old,{yPercent:-110,opacity:0,rotateX:60,duration:.45,stagger:.018,ease:'power3.in',onComplete:function(){wi=(wi+1)%WORDS.length;setWord(WORDS[wi]);g.from($$('.ch',rot),{yPercent:110,opacity:0,rotateX:-60,duration:.6,stagger:.022,ease:'power3.out'})}})},3200)}

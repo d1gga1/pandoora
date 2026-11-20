@@ -107,7 +107,7 @@ var PDI=(function(){
 
   /* ---------- immagini con ricaduta ---------- */
   function imgAttrs(p,lg){
-    var src=lg?(p.imgLg||p.img):p.img, chain=[], set=p.imgSet?' srcset="'+esc(p.imgSet)+'" sizes="'+(lg?'(max-width:900px) 100vw, 55vw':'(max-width:700px) 50vw, (max-width:1080px) 33vw, 320px')+'"':'';
+    var src=(lg?(p.imgLg||p.img):p.img)||(p.type==='cube'?'/shop/img/prodotti/'+p.id+'.jpg':''), chain=[], set=p.imgSet?' srcset="'+esc(p.imgSet)+'" sizes="'+(lg?'(max-width:900px) 100vw, 55vw':'(max-width:700px) 50vw, (max-width:1080px) 33vw, 320px')+'"':'';
     if(lg&&p.imgLgRemote)chain.push(p.imgLgRemote);
     if(p.imgRemote)chain.push(p.imgRemote);
     if(p.imgFb)chain.push(p.imgFb);
@@ -1357,7 +1357,7 @@ var PDI=(function(){
     var f=$('form',NLB),sel=$('[name="Stato"]',f),dl=$('#s-nl-provs',f),pre=$('#s-nl-pre',f);
     nlGeo().then(function(G){
       sel.innerHTML='<option value="">Seçin…</option>'+G.map(function(c){return '<option value="'+esc(c.c)+'">'+esc(c.n)+'</option>'}).join('');
-      var lang=(navigator.language||'it').slice(-2).toUpperCase();sel.value=G.some(function(c){return c.c===lang})&&lang!=='EN'?lang:'IT';sel.onchange();
+      var lang=(navigator.language||'it').slice(-2).toUpperCase(),tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}if(/^Europe\/(Rome|Vatican|San_Marino)$/.test(tz))lang=tz==='Europe/San_Marino'?'SM':'IT';sel.value=G.some(function(c){return c.c===lang})&&lang!=='EN'?lang:'IT';sel.onchange();
     });
     sel.onchange=function(){if(!GEO)return;var c=GEO.find(function(x){return x.c===sel.value}),ps=$('#s-nl-psel',f),pt=$('#s-nl-ptxt',f),it=!!(c&&c.sel);
       pre.textContent=c&&c.p?c.p:'+';ps.hidden=!it;ps.required=it;pt.hidden=it;pt.required=!it;pt.value='';$('#s-nl-pl',f).textContent=it?'İl':'İl / bölge';
@@ -1428,9 +1428,10 @@ var PDI=(function(){
     $$('.nl-band form').forEach(function(f){f.onsubmit=function(e){e.preventDefault();window._nlPre=($('input[type="email"]',f)||{}).value||'';nlOpen('band')}});
     if(nlDone()){$$('.nl-band').forEach(function(b){b.classList.add('done')});if(!store('pdCode'))store('pdCode',N.code);return}
     if(document.body.dataset.page==='nl-thanks')return;
+    try{if(localStorage.getItem('pdAccT')||sessionStorage.getItem('pdAccT')||localStorage.getItem('pdHaAcc'))return}catch(e){} /* ha un account: niente popup automatico */
     var seen=+store('pdNlSeen')||0,ss=false;try{ss=!!sessionStorage.getItem('pdNlS')}catch(e){}
     if(ss||Date.now()-seen<3*864e5){nlPill();return}
-    var fired=false;function fire(){if(fired||nlDone())return;if(document.body.classList.contains('s-cart-open')||document.getElementById('s-sheet')&&document.getElementById('s-sheet').classList.contains('open')){setTimeout(fire,4000);return}fired=true;nlOpen('auto')}
+    var fired=false;function fire(){if(fired||nlDone())return;if(document.querySelector('[aria-label="Cookie"]')||document.body.classList.contains('s-cart-open')||document.getElementById('s-sheet')&&document.getElementById('s-sheet').classList.contains('open')){setTimeout(fire,4000);return}fired=true;nlOpen('auto')}
     setTimeout(fire,7000);
     addEventListener('scroll',function sc(){if(scrollY>(document.documentElement.scrollHeight-innerHeight)*.45){removeEventListener('scroll',sc);setTimeout(fire,600)}},{passive:true});
     if(FINE)document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<8)fire()});

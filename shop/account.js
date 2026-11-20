@@ -8,7 +8,7 @@
   /* chiave di accesso del cliente: localStorage se "ricordami", altrimenti solo per questa sessione del browser */
   var TK = 'pdAccT';
   function tokenLeggi() { try { return localStorage.getItem(TK) || sessionStorage.getItem(TK) || ''; } catch (e) { return ''; } }
-  function tokenSalva(t, ricorda) { try { localStorage.removeItem(TK); sessionStorage.removeItem(TK); if (t) (ricorda === false ? sessionStorage : localStorage).setItem(TK, t); } catch (e) {} }
+  function tokenSalva(t, ricorda) { try { localStorage.removeItem(TK); sessionStorage.removeItem(TK); if (t) { (ricorda === false ? sessionStorage : localStorage).setItem(TK, t); localStorage.setItem('pdHaAcc', '1'); } } catch (e) {} }
   function intestazioni(json) { var h = { 'X-PD': '1' }; if (json) h['Content-Type'] = 'application/json'; var t = tokenLeggi(); if (t) h['X-PD-Token'] = t; return h; }
   var ACC = '/shop/account/';
   var $ = function (s, r) { return (r || document).querySelector(s); };

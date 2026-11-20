@@ -1370,3 +1370,9 @@ a.s-add{text-decoration:none}
   .s-nl-f .s-btn{min-height:44px}
   .s-nl-done .nl-codebox b{font-size:22px}
 }
+
+/* 20/11/2026: su telefoni e tablet i campi a meno di 16px fanno zoomare la pagina su iPhone */
+@media (hover:none) and (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea{font-size:16px!important}}
+/* 20/11/2026: bollino Made in Italy su ogni scheda prodotto (tutte le lingue) */
+.s-card-img::after{content:"Made in Italy";position:absolute;left:10px;bottom:10px;z-index:1;display:flex;align-items:center;padding:4px 9px 4px 24px;border-radius:100px;background:rgba(255,255,255,.92) linear-gradient(90deg,#009246 0 4px,#fff 4px 8px,#ce2b37 8px 12px) 8px 50%/12px 8px no-repeat;color:#0d1524;font:800 10.5px/1.2 var(--body,sans-serif);letter-spacing:.2px;box-shadow:0 2px 10px rgba(0,0,0,.08);pointer-events:none}
+[dir="rtl"] .s-card-img::after{left:auto;right:10px}

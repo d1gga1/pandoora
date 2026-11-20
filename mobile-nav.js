@@ -40,12 +40,12 @@
 
   + '.pdm-panel{position:fixed;top:0;right:0;bottom:0;z-index:100001;width:min(92vw,400px);'
   + 'display:flex;flex-direction:column;background:#0d1524;color:#fff;'
-  + 'border-left:1px solid rgba(255,255,255,.08);box-shadow:-24px 0 60px rgba(0,0,0,.5);'
+  + 'border-left:1px solid rgba(255,255,255,.08);box-shadow:none;'
   + 'transform:translateX(102%);transition:transform .38s cubic-bezier(.22,.61,.36,1);'
   + 'overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;'
   + 'padding:max(14px,env(safe-area-inset-top)) 0 max(18px,env(safe-area-inset-bottom));'
   + 'font-family:"Manrope",system-ui,-apple-system,Segoe UI,Arial,sans-serif}'
-  + 'body.pdm-open .pdm-panel{transform:translateX(0)}'
+  + 'body.pdm-open .pdm-panel{transform:translateX(0);box-shadow:-24px 0 60px rgba(0,0,0,.5)}'
   + '.pdm-panel *{box-sizing:border-box;cursor:auto}'
 
   + '.pdm-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:6px 20px 10px}'

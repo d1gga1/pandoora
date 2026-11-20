@@ -107,6 +107,7 @@
       var b = e.target.closest('button[data-c]');
       if (b) decidi(b.getAttribute('data-c') === '1');
     });
+    if (!document.getElementById('pd-ck-cur')) { var cs = document.createElement('style'); cs.id = 'pd-ck-cur'; cs.textContent = '[aria-label="Cookie"],[aria-label="Cookie"] *{cursor:auto!important}[aria-label="Cookie"] button,[aria-label="Cookie"] a{cursor:pointer!important}'; document.head.appendChild(cs); }
     document.body.appendChild(box);
   }
   window.pdCookie = apri;

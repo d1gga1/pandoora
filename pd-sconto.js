@@ -9,11 +9,11 @@
   var LS = window.localStorage, SS = window.sessionStorage;
   function get(k) { try { return JSON.parse(LS.getItem(k) || 'null'); } catch (e) { return null; } }
   function put(k, v) { try { LS.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  function registrato() { try { return !!(get('pdNl') || LS.getItem('pdAccT') || SS.getItem('pdAccT')); } catch (e) { return !!get('pdNl'); } }
+  function registrato() { try { return !!(get('pdNl') || LS.getItem('pdAccT') || SS.getItem('pdAccT') || LS.getItem('pdHaAcc')); } catch (e) { return !!get('pdNl'); } }
   if (registrato()) return;                                  // gi\u00e0 iscritto o con account: il numero l'abbiamo, basta popup
   try { if (SS.getItem('pdNlSite')) return; } catch (e) {}   // gi\u00e0 mostrato in questa visita
 
-  var N = { perc: 5, code: 'BENVENUTO5', validDays: 7, notify: 'shop@pandooragroup.it', endpoint: 'https://www.pandooragroup.it/api/newsletter/iscrizione.php' };
+  var N = { perc: 5, code: 'BENVENUTO5', validDays: 7, notify: 'shop@pandooragroup.it', endpoint: '' };
   var DB = 'https://nvfbnwioyqifmftrpnbx.supabase.co/functions/v1/pd/clienti';
   var GEO = null, BOX = null, fired = false;
   /* quante volte \u00e8 entrato (lo conta pd-live.js, \u00e8 lo stesso numero "2\u00aa visita", "19\u00aa visita" della dashboard) */
@@ -29,6 +29,7 @@
   var CHECK = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
   var CSS = '.pdsc{position:fixed;inset:0;z-index:2147483000;display:none;font-family:inherit}.pdsc.open{display:block}'
+    + '.pdsc,.pdsc *,.pdsc-pill,.pdsc-pill *{cursor:auto!important}.pdsc button,.pdsc a,.pdsc label,.pdsc select,.pdsc-pill{cursor:pointer!important}.pdsc input:not([type=checkbox]){cursor:text!important}'
     + '.pdsc-scrim{position:absolute;inset:0;background:rgba(13,21,36,.6);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;transition:opacity .4s}.pdsc.show .pdsc-scrim{opacity:1}'
     + '.pdsc-box{position:absolute;left:50%;top:50%;width:min(900px,calc(100% - 28px));max-height:calc(100% - 28px);overflow:auto;background:#fff;color:#0d1524;border-radius:22px;display:grid;grid-template-columns:1fr 1.15fr;box-shadow:0 30px 80px rgba(0,0,0,.35);opacity:0;transform:translate(-50%,-46%);transition:opacity .4s,transform .4s}'
     + '.pdsc.show .pdsc-box{opacity:1;transform:translate(-50%,-50%)}'
@@ -76,7 +77,7 @@
       + '<p class="pdsc-e" role="alert"></p><button type="submit" class="pdsc-b">Ricevi il mio codice \u2212' + N.perc + '%</button><button type="button" class="pdsc-no" data-x>No, grazie</button></form></div>';
     document.body.appendChild(BOX);
     BOX.querySelectorAll('[data-x]').forEach(function (x) { x.onclick = close; });
-    BOX.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && BOX.classList.contains('show')) close(); });
     var f = BOX.querySelector('form'), sel = f.querySelector('[name="Stato"]');
     sel.onchange = function () {
       if (!GEO) return; var c = GEO.find(function (x) { return x.c === sel.value; }), ps = f.querySelector('#pdsc-psel'), pt = f.querySelector('#pdsc-ptxt'), it = !!(c && c.sel);
@@ -137,12 +138,12 @@
   }
 
   function open() {
-    var m = build(); m.classList.add('open'); document.documentElement.style.overflow = 'hidden';
+    var m = build(); m.classList.add('open'); document.documentElement.style.overflow = 'hidden'; document.documentElement.classList.add('pdsc-on');
     requestAnimationFrame(function () { m.classList.add('show'); });
     var p = document.querySelector('.pdsc-pill'); if (p) p.style.display = 'none';
   }
   function close() {
-    if (!BOX) return; BOX.classList.remove('show'); document.documentElement.style.overflow = '';
+    if (!BOX) return; BOX.classList.remove('show'); document.documentElement.style.overflow = ''; document.documentElement.classList.remove('pdsc-on');
     setTimeout(function () { BOX.classList.remove('open'); }, 400); pill();
   }
   function pill() {
@@ -152,10 +153,12 @@
   }
 
   function fire() {
-    if (fired || registrato()) return; fired = true;
+    if (fired || registrato()) return;
+    if (document.querySelector('[aria-label="Cookie"]')) { setTimeout(fire, 4000); return; }   // prima la scelta sui cookie, poi il popup
+    fired = true;
     try { SS.setItem('pdNlSite', '1'); } catch (e) {}
     fetch('/shop/data/products.json').then(function (r) { return r.json(); }).then(function (P) {
-      var c = P && P.offers && P.offers.newsletter; if (c) { for (var k in c) if (c[k] !== '' && c[k] != null) N[k] = c[k]; }
+      var c = P && ((P.pricing && P.pricing.offers) || P.offers || {}).newsletter; if (c) { for (var k in c) if (c[k] !== '' && c[k] != null) N[k] = c[k]; }
     }).catch(function () {}).then(function () { if (N.perc) open(); });
   }
   function start() {
