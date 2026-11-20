@@ -5,7 +5,7 @@
 <channel>
   <title>Pandoora Shop — porte e arredi prodotti in Italia</title>
   <link>https://pandooragroup.it/shop/</link>
-  <description>Catalogo prodotti PAN.DOOR.A S.r.l., Fontanelle (TV): porte per interni, armadi, mobiletti, scarpiere, tavoli. Prezzi IVA inclusa.</description>
+  <description>Catalogo prodotti PAN.DOOR.A S.r.l., Fontanelle (TV): porte per interni, armadi, mobiletti, tavoli. Prezzi IVA inclusa.</description>
   <lastBuildDate>Sun, 08 Nov 2026 11:56:53 +0000</lastBuildDate>
   <item>
     <g:id>armadio-brenta-150-alto</g:id>
@@ -274,25 +274,6 @@
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
-    <g:id>comodino-2-cassetti</g:id>
-    <title>Comodino Nodo 2 cassetti</title>
-    <description>Comodino Nodo 2 cassetti: due cassetti con guide a chiusura ammortizzata. Da 329 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/mobiletti/comodino-2-cassetti/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/comodino-2-cassetti.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>329.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>comodino-2-cassetti</g:mpn>
-    <g:product_type>Mobiletti &gt; Comodini</g:product_type>
-    <g:product_width>45 cm</g:product_width>
-    <g:product_height>50 cm</g:product_height>
-    <g:product_length>38 cm</g:product_length>
-    <g:color>Rovere naturale</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
     <g:id>comodino-laccato</g:id>
     <title>Comodino Riva laccato</title>
     <description>Comodino Riva laccato: laccato in qualsiasi tinta RAL, tre cassetti. Da 479 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
@@ -423,25 +404,6 @@
     <g:product_height>35 cm</g:product_height>
     <g:product_length>25 cm</g:product_length>
     <g:color>Rovere naturale</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>ingresso-specchio</g:id>
-    <title>Ingresso Soglia con specchio</title>
-    <description>Ingresso Soglia con specchio: mobile con cassetti, specchio e appendiabiti coordinati. Da 649 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/mobiletti/ingresso-specchio/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/ingresso-specchio.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>649.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>ingresso-specchio</g:mpn>
-    <g:product_type>Mobiletti &gt; Mobili ingresso</g:product_type>
-    <g:product_width>90 cm</g:product_width>
-    <g:product_height>190 cm</g:product_height>
-    <g:product_length>35 cm</g:product_length>
-    <g:color>Bianco opaco</g:color>
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
@@ -597,25 +559,6 @@
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
-    <g:id>madia-cannettata</g:id>
-    <title>Madia Canneto</title>
-    <description>Madia Canneto: ante cannettate in MDF laccato, effetto tessile. Da 1359 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/mobiletti/madia-cannettata/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/madia-cannettata.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>1359.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>madia-cannettata</g:mpn>
-    <g:product_type>Mobiletti &gt; Madie e credenze</g:product_type>
-    <g:product_width>160 cm</g:product_width>
-    <g:product_height>75 cm</g:product_height>
-    <g:product_length>45 cm</g:product_length>
-    <g:color>Laccato RAL</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
     <g:id>madia-soligo-180-cassetti</g:id>
     <title>Madia Soligo 180 cassetti</title>
     <description>Madia Soligo 180 cassetti: madia bassa da 180 cm con cassetti e ante, per soggiorno o sala da pranzo. Da 719 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
@@ -670,25 +613,6 @@
     <g:product_height>193 cm</g:product_height>
     <g:product_length>42 cm</g:product_length>
     <g:color>Rovere naturale/Bianco</g:color>
-    <g:custom_label_0>Made in Italy</g:custom_label_0>
-  </item>
-  <item>
-    <g:id>mobile-tv-cassetti</g:id>
-    <title>Mobile TV Brolo</title>
-    <description>Mobile TV Brolo: tre cassettoni capienti e piano in legno. Da 849 € IVA inclusa, anche su misura. Prodotto in Italia.</description>
-    <link>https://pandooragroup.it/shop/mobiletti/mobile-tv-cassetti/</link>
-    <g:image_link>https://pandooragroup.it/shop/img/prodotti/mobile-tv-cassetti.jpg</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>849.00 EUR</g:price>
-    <g:condition>new</g:condition>
-    <g:brand>Pandoora</g:brand>
-    <g:identifier_exists>no</g:identifier_exists>
-    <g:mpn>mobile-tv-cassetti</g:mpn>
-    <g:product_type>Mobiletti &gt; Mobili TV</g:product_type>
-    <g:product_width>200 cm</g:product_width>
-    <g:product_height>50 cm</g:product_height>
-    <g:product_length>45 cm</g:product_length>
-    <g:color>Noce canaletto</g:color>
     <g:custom_label_0>Made in Italy</g:custom_label_0>
   </item>
   <item>
