@@ -22,11 +22,11 @@
   var leggi = function () {
     try {
       var v = JSON.parse(localStorage.getItem(KEY) || 'null');
-      if (v && (v.s === 'granted' || v.s === 'denied') && Date.now() - v.t < DURATA) return v.s;
+      if (v && v.v === 2 && (v.s === 'granted' || v.s === 'denied') && Date.now() - v.t < DURATA) return v.s;   // v: 2 = testo del banner con le statistiche dettagliate
     } catch (e) {}
     return null;
   };
-  var salva = function (s) { try { localStorage.setItem(KEY, JSON.stringify({ s: s, t: Date.now() })); } catch (e) {} };
+  var salva = function (s) { try { localStorage.setItem(KEY, JSON.stringify({ s: s, t: Date.now(), v: 2 })); } catch (e) {} };
 
   /* ── Google tag con consenso negato di default ────────── */
   window.dataLayer = window.dataLayer || [];
@@ -69,18 +69,20 @@
   /* ── banner cookie ────────────────────────────────────── */
   var lang = (document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
   var T = {
-    it: ['Usiamo i cookie di Google Ads per misurare l’efficacia dei nostri annunci. Puoi accettarli o rifiutarli: il sito funziona comunque.', 'Accetta', 'Rifiuta', 'Privacy', '/privacy/'],
-    en: ['We use Google Ads cookies to measure how well our ads work. You can accept or decline them: the site works either way.', 'Accept', 'Decline', 'Privacy', '/privacy/'],
-    de: ['Wir verwenden Google-Ads-Cookies, um die Wirkung unserer Anzeigen zu messen. Sie können sie annehmen oder ablehnen: die Website funktioniert in beiden Fällen.', 'Akzeptieren', 'Ablehnen', 'Datenschutz', '/privacy/'],
-    fr: ['Nous utilisons les cookies Google Ads pour mesurer l’efficacité de nos annonces. Vous pouvez les accepter ou les refuser : le site fonctionne dans les deux cas.', 'Accepter', 'Refuser', 'Confidentialité', '/privacy/'],
-    es: ['Usamos cookies de Google Ads para medir la eficacia de nuestros anuncios. Puede aceptarlas o rechazarlas: el sitio funciona igualmente.', 'Aceptar', 'Rechazar', 'Privacidad', '/privacy/']
+    it: ['Usiamo i cookie di Google Ads per misurare i nostri annunci e, se accetti, registriamo come navighi nel sito (clic, prodotti e scelte, moduli iniziati: mai quello che scrivi) per migliorarlo e assisterti meglio. Puoi accettare o rifiutare: il sito funziona comunque.', 'Accetta', 'Rifiuta', 'Privacy', '/privacy/'],
+    en: ['We use Google Ads cookies to measure our ads and, if you accept, we record how you browse the site (clicks, products and options, forms started: never what you type) to improve it and help you better. You can accept or decline: the site works either way.', 'Accept', 'Decline', 'Privacy', '/privacy/'],
+    de: ['Wir verwenden Google-Ads-Cookies, um unsere Anzeigen zu messen, und – wenn Sie zustimmen – erfassen wir, wie Sie die Website nutzen (Klicks, Produkte und Auswahl, begonnene Formulare: nie, was Sie eingeben), um sie zu verbessern und Sie besser zu beraten. Sie können annehmen oder ablehnen: die Website funktioniert in beiden Fällen.', 'Akzeptieren', 'Ablehnen', 'Datenschutz', '/privacy/'],
+    fr: ['Nous utilisons les cookies Google Ads pour mesurer nos annonces et, si vous acceptez, nous enregistrons votre navigation sur le site (clics, produits et options, formulaires commencés : jamais ce que vous écrivez) pour l’améliorer et mieux vous aider. Vous pouvez accepter ou refuser : le site fonctionne dans les deux cas.', 'Accepter', 'Refuser', 'Confidentialité', '/privacy/'],
+    es: ['Usamos cookies de Google Ads para medir nuestros anuncios y, si acepta, registramos cómo navega por el sitio (clics, productos y opciones, formularios empezados: nunca lo que escribe) para mejorarlo y ayudarle mejor. Puede aceptar o rechazar: el sitio funciona igualmente.', 'Aceptar', 'Rechazar', 'Privacidad', '/privacy/']
   };
   var t = T[lang] || T.en;
 
   var box = null;
   var chiudi = function () { if (box && box.parentNode) box.parentNode.removeChild(box); box = null; };
   var decidi = function (ok) {
+    var prima = leggi();
     salva(ok ? 'granted' : 'denied');
+    if (window.pdEvento && prima !== (ok ? 'granted' : 'denied')) window.pdEvento('consenso', ok ? 'ha accettato le statistiche dettagliate' : 'ha rifiutato i cookie');
     gtag('consent', 'update', ok
       ? { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' }
       : { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });

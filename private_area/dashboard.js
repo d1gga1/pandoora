@@ -31,7 +31,8 @@
   }
   var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'], aiuto: ['🛟', 'Aiuto proposto'],
     ordine: ['✅', 'Ordine inviato'], registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download PDF'], esterno: ['↗', 'Link esterno'],
-    ricerca: ['🔎', 'Ricerca'], posizione: ['📍', 'Posizione GPS'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'] };
+    ricerca: ['🔎', 'Ricerca'], posizione: ['📍', 'Posizione GPS'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'],
+    consenso: ['🍪', 'Cookie'], clic: ['👆', 'Clic'], scelta: ['🎛', 'Scelta nel configuratore'], sezione: ['👁', 'Sezione letta'], modulo: ['📝', 'Modulo'], carrello_tolto: ['➖', 'Tolto dal carrello'] };
   var azNome = function (t) { return (AZ[t] || ['•', t])[1]; };
   var azIc = function (t) { return '<span class="az-ic">' + (AZ[t] || ['•'])[0] + '</span>'; };
   var quando = function (ts) { return new Date(ts * 1000).toLocaleString('it-IT', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
@@ -358,6 +359,9 @@
     classifica($('#t-isp'), (d.isp || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', n: r.n }; }), function (r) { if (r.k) setFiltro('isp', r.k); });
     classifica($('#t-prodotti'), (d.prodotti || []).map(function (r) { return { k: r.k, lb: nomePagina(r.k, r.titolo), sub: n(r.u) + ' persone' + (r.tempo ? ' · ' + dur(r.tempo) + ' in media' : ''), n: r.n }; }), function (r) { setFiltro('pagina', r.k); });
     classifica($('#t-ricerche'), (d.ricerche || []).map(function (r) { return { k: r.k, lb: '“' + r.k + '”', sub: n(r.u) + ' persone', n: r.n }; }), null);
+    var dettRighe = function (a) { return (a || []).map(function (r) { return { k: r.k, lb: r.k, sub: n(r.u) + (+r.u === 1 ? ' persona' : ' persone'), n: r.n }; }); };
+    [['#t-clic', 'clic_top'], ['#t-scelte', 'scelte_top'], ['#t-sezioni', 'sezioni_top'], ['#t-tolti', 'tolti']].forEach(function (x) { var el = $(x[0]); if (el) classifica(el, dettRighe(d[x[1]]), null); });
+    var tm = $('#t-moduli'); if (tm) classifica(tm, (d.moduli || []).map(function (r) { var ic = /^Lasciato/.test(r.k) ? '⚠️ ' : /^Errore/.test(r.k) ? '❌ ' : /^Inviato/.test(r.k) ? '✅ ' : '✏️ '; return { k: r.k, lb: ic + r.k, sub: n(r.u) + (+r.u === 1 ? ' persona' : ' persone'), n: r.n }; }), null);
     classifica($('#t-modelli'), (d.modelli || []).map(function (r) { return { k: r.k, lb: r.k || 'Sconosciuto', sub: n(r.u) + ' persone', n: r.n }; }), null);
     classifica($('#t-schermi'), (d.schermi || []).map(function (r) { return { k: r.k, lb: r.k ? r.k.replace('x', ' × ') : 'Sconosciuto', n: r.n }; }), null);
     classifica($('#t-conn'), (d.connessioni || []).map(function (r) { return { k: r.k, lb: r.k ? r.k.toUpperCase() : 'Non indicata', n: r.n }; }), null);

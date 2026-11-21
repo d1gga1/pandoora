@@ -2,7 +2,7 @@
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>Area riservata · Pan.door.a</title>
 <link rel="stylesheet" href="js/leaflet.css">
-<link rel="stylesheet" href="dashboard.css?v=3">
+<link rel="stylesheet" href="dashboard.css?v=4">
 <link rel="stylesheet" href="dashboard-pro.css?v=2">
 <style>
 .mini-kpi.az{grid-template-columns:repeat(3,1fr)}
@@ -141,6 +141,15 @@
       <div class="card"><h3>Schermi</h3><div id="t-schermi" class="rank scroll"></div><h3 class="mt">Connessione</h3><div id="t-conn" class="rank"></div></div>
       <div class="card"><h3>Lettura delle pagine</h3><div id="t-lettura" class="mini-kpi" style="grid-template-columns:1fr 1fr"></div><h3 class="mt">Fusi orari</h3><div id="t-fusi" class="rank"></div></div>
     </div>
+    <h2 class="sec-t" style="margin:26px 0 4px">Comportamento nel sito</h2>
+    <p class="small muted" style="margin:0 0 12px">Solo dei visitatori che hanno accettato i cookie: gli altri restano anonimi e non compaiono qui.</p>
+    <div class="cols3">
+      <div class="card"><h3>👆 Cosa cliccano di più</h3><div id="t-clic" class="rank scroll"></div></div>
+      <div class="card"><h3>📝 Moduli: iniziati, inviati, lasciati a metà</h3><div id="t-moduli" class="rank scroll"></div></div>
+      <div class="card"><h3>🎛 Scelte nei configuratori</h3><div id="t-scelte" class="rank scroll"></div></div>
+      <div class="card"><h3>👁 Sezioni più lette</h3><div id="t-sezioni" class="rank scroll"></div></div>
+      <div class="card"><h3>➖ Tolti dal carrello</h3><div id="t-tolti" class="rank scroll"></div></div>
+    </div>
 
     <div class="card">
       <h3>Ultime azioni <span class="muted small">— clic su WhatsApp, telefono, email, carrello, ordini</span> <a class="ghost" id="csv-azioni" href="#" style="float:right;font-size:12px;padding:4px 10px">Scarica CSV</a></h3>
@@ -195,7 +204,7 @@
     return;
   }
   $('pd-login').remove(); $('pd-app').style.display = '';
-  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=6', 'dashboard-clienti.js?v=4', 'dashboard-persone.js?v=2', 'dashboard-motion.js?v=1'].forEach(function (s) {
+  ['js/leaflet.js', 'js/chart.umd.js', 'dashboard.js?v=7', 'dashboard-clienti.js?v=4', 'dashboard-persone.js?v=3', 'dashboard-motion.js?v=1'].forEach(function (s) {
     var e = d.createElement('script'); e.src = s; e.async = false; d.body.appendChild(e);
   });
 })();

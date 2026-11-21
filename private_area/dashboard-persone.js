@@ -16,7 +16,9 @@
   var nomePagina = function (p, t) { var x = (t || '').replace(/\s*[|·—–-]\s*Pan\.?door\.?a.*$/i, '').trim(); return x || p; };
   var AZ = { whatsapp: ['💬', 'WhatsApp'], telefono: ['📞', 'Telefono'], email: ['✉️', 'Email'], carrello: ['🛒', 'Carrello'], checkout: ['🧾', 'Apre l\'ordine'], ordine: ['✅', 'Ordine inviato'],
     registrazione: ['👤', 'Nuovo account'], iscrizione: ['📰', 'Newsletter'], preventivo: ['📐', 'Preventivo / contatti'], download: ['📄', 'Download'], esterno: ['↗', 'Link esterno'],
-    ricerca: ['🔎', 'Ricerca'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'], aiuto: ['🛟', 'Aiuto proposto'] };
+    ricerca: ['🔎', 'Ricerca'], copia: ['📋', 'Ha copiato'], preferito: ['♥', 'Preferito'], aiuto: ['🛟', 'Aiuto proposto'],
+    consenso: ['🍪', 'Cookie'], clic: ['👆', 'Clic'], scelta: ['🎛', 'Scelta'], sezione: ['👁', 'Ha letto'], modulo: ['📝', 'Modulo'], carrello_tolto: ['➖', 'Tolto dal carrello'], posizione: ['📍', 'Posizione GPS'] };
+  var DETT = { clic: 1, scelta: 1, sezione: 1 }; // dettagli fini: nascondibili nella cronologia
   var azIc = function (t) { return (AZ[t] || ['•'])[0]; }, azNm = function (t) { return (AZ[t] || ['', t])[1]; };
   var PAL = [['#4f8cff', '#b07cff'], ['#ff7a45', '#e5483a'], ['#22c493', '#4f8cff'], ['#ffc53d', '#ff7a45'], ['#b07cff', '#ff5ab4'], ['#2dd4ff', '#4f8cff']];
   var colori = function (s) { var h = 0; s = String(s || ''); for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return PAL[h % PAL.length]; };
@@ -47,7 +49,7 @@
       + '<div class="seg" id="p-per">' + [['oggi', 'Oggi'], ['7', '7 giorni'], ['30', '30 giorni'], ['90', '90 giorni'], ['365', '12 mesi'], ['tutto', 'Tutto']].map(function (x) { return '<button data-p="' + x[0] + '">' + x[1] + '</button>'; }).join('') + '</div>'
       + '<div class="grow"><input type="search" id="p-q" placeholder="Cerca nome, email, telefono, città, provider o codice Rif. WhatsApp…"></div>'
       + '<select id="p-noti"><option value="">Tutti i visitatori</option><option value="1">★ Solo contatti noti</option><option value="0">Solo anonimi</option></select>'
-      + '<select id="p-az"><option value="">Qualsiasi azione</option>' + ['whatsapp', 'telefono', 'email', 'carrello', 'preferito', 'checkout', 'aiuto', 'ordine', 'preventivo', 'ricerca', 'copia', 'iscrizione', 'registrazione', 'download'].map(function (k) { return '<option value="' + k + '">' + azIc(k) + ' Ha fatto: ' + azNm(k) + '</option>'; }).join('') + '</select>'
+      + '<select id="p-az"><option value="">Qualsiasi azione</option>' + ['whatsapp', 'telefono', 'email', 'carrello', 'carrello_tolto', 'preferito', 'checkout', 'modulo', 'scelta', 'aiuto', 'ordine', 'preventivo', 'ricerca', 'copia', 'iscrizione', 'registrazione', 'download'].map(function (k) { return '<option value="' + k + '">' + azIc(k) + ' Ha fatto: ' + azNm(k) + '</option>'; }).join('') + '</select>'
       + '<select id="p-min"><option value="">Qualsiasi n. visite</option><option value="2">Tornati almeno 2 volte</option><option value="3">Almeno 3 visite</option><option value="5">Almeno 5 visite</option><option value="10">Almeno 10 visite</option></select>'
       + '<select id="p-ord"><option value="recenti">Ordina: più recenti</option><option value="visite">Ordina: più visite</option><option value="pagine">Ordina: più pagine viste</option><option value="tempo">Ordina: più tempo sul sito</option><option value="azioni">Ordina: più azioni</option></select>'
       + '<button class="ghost" id="p-csv">Scarica CSV</button>'
@@ -124,13 +126,29 @@
         + (p.identificato ? '<div class="muted small" style="margin-top:4px">Contatto noto dal ' + data(p.identificato, 1) + '</div>' : '')
         + (function () { var m = null; A.some(function (x) { m = /Rif\. ([A-Z0-9]{4,8})/.exec(x.dettaglio || ''); return m; }); return m ? '<div class="muted small" style="margin-top:4px">Codice nei suoi messaggi WhatsApp: <b>Rif. ' + esc(m[1]) + '</b></div>' : ''; })()
         + '<div class="pp-act">' + (tl ? '<a class="wa" target="_blank" rel="noopener" href="' + wa(tl) + '">💬 WhatsApp</a><a href="tel:' + esc(tel(tl)) + '">📞 Chiama</a>' : '') + (em ? '<a class="ml" href="mailto:' + esc(em) + '">✉️ Email</a>' : '') + '</div></div></div>';
-      var tiles = [['Visite', n(S.length)], ['Pagine viste', n(totPag)], ['Tempo sul sito', dur(totT)], ['Azioni', n(A.length)], ['Prodotti guardati', n((r.prodotti || []).length)],
+      var conta = function (tp) { return A.filter(function (x) { return x.tipo === tp; }).length; };
+      var nDett = conta('clic') + conta('scelta') + conta('sezione') + conta('modulo') + conta('carrello_tolto');
+      var tiles = [['Visite', n(S.length)], ['Pagine viste', n(totPag)], ['Tempo sul sito', dur(totT)], ['Azioni', n(A.length - nDett)], ['Clic', n(conta('clic'))], ['Prodotti guardati', n((r.prodotti || []).length)],
         ['Prima visita', data(prima.inizio)], ['Ultima visita', fa(ultima.ultimo)], ['Arrivato la prima volta da', prima.sorgente || 'Diretto']];
       h += '<div class="pp-grid">' + tiles.map(function (t) { return '<div class="kpi"><span>' + t[0] + '</span><b style="font-size:' + (String(t[1]).length > 9 ? '17px' : '24px') + '">' + esc(t[1]) + '</b></div>'; }).join('') + '</div>';
       // interessi
       if ((r.prodotti || []).length) h += '<div class="pp-sec"><h3>🛋 Prodotti che ha guardato</h3><div class="rank">' + r.prodotti.map(function (x, i) {
         return '<div class="rk nolink" style="--k:' + i + '"><span class="bar" style="width:' + (100 * x.n / r.prodotti[0].n).toFixed(0) + '%"></span><span class="lb">' + esc(nomePagina(x.k, x.titolo)) + '<small>' + esc(x.k) + '</small></span><span class="u">' + dur(x.tempo) + '</span><b>' + n(x.n) + '×</b></div>';
       }).join('') + '</div></div>';
+      // dettagli (solo con consenso cookie)
+      var grp = function (tp, filtro) { var m = {}; A.forEach(function (x) { if (x.tipo === tp && (!filtro || filtro(x))) { var k = x.dettaglio || '—'; m[k] = m[k] || { k: k, n: 0, ult: 0 }; m[k].n++; m[k].ult = Math.max(m[k].ult, +x.ts); } }); return Object.keys(m).map(function (k) { return m[k]; }).sort(function (a, b) { return b.n - a.n || b.ult - a.ult; }); };
+      var lista = function (titolo, righe, max) { if (!righe.length) return ''; var top = righe[0].n; return '<div class="pp-sec"><h3>' + titolo + '</h3><div class="rank">' + righe.slice(0, max || 15).map(function (x, i) { return '<div class="rk nolink" style="--k:' + i + '"><span class="bar" style="width:' + (100 * x.n / top).toFixed(0) + '%"></span><span class="lb">' + esc(x.k) + '<small>ultima volta ' + fa(x.ult) + '</small></span><b>' + n(x.n) + '×</b></div>'; }).join('') + '</div></div>'; };
+      if (!nDett) h += '<div class="pp-sec"><p class="muted small" style="margin:0">Clic, scelte e moduli non disponibili: questo visitatore non ha accettato i cookie (o è passato prima dell\'attivazione).</p></div>';
+      else {
+        var carr = A.filter(function (x) { return x.tipo === 'carrello' || x.tipo === 'carrello_tolto' || x.tipo === 'preferito'; });
+        if (carr.length) h += '<div class="pp-sec"><h3>🛒 Carrello e preferiti</h3><div class="split">' + carr.map(function (x) { return '<span class="chip">' + azIc(x.tipo) + ' ' + esc(x.dettaglio) + ' <b style="color:var(--muted);font-weight:400">' + data(x.ts, 1) + '</b></span>'; }).join('') + '</div></div>';
+        h += lista('🎛 Scelte nei configuratori (misure, finiture, quantità)', grp('scelta'), 20);
+        var mod = A.filter(function (x) { return x.tipo === 'modulo'; });
+        if (mod.length) h += '<div class="pp-sec"><h3>📝 Moduli</h3><div class="tl">' + mod.map(function (x) { var d0 = x.dettaglio || '', ic = /^Lasciato/.test(d0) ? '⚠️' : /^Errore/.test(d0) ? '❌' : /^Inviato/.test(d0) ? '✅' : '✏️'; return '<div class="tl-it az"><time>' + data(x.ts, 1) + '</time><span>' + ic + ' ' + esc(d0) + ' <small>' + esc(nomePagina(x.percorso, x.titolo)) + '</small></span></div>'; }).join('') + '</div></div>';
+        h += lista('📷 Foto e video guardati', grp('clic', function (x) { return /^(Foto|Video)/.test(x.dettaglio || ''); }), 15);
+        h += lista('👆 Cosa clicca di più', grp('clic', function (x) { return !/^(Foto|Video)/.test(x.dettaglio || ''); }), 20);
+        h += lista('👁 Sezioni che ha letto', grp('sezione'), 20);
+      }
       var ric = A.filter(function (x) { return x.tipo === 'ricerca'; });
       if (ric.length) h += '<div class="pp-sec"><h3>🔎 Cosa ha cercato</h3><div class="split">' + ric.map(function (x) { return '<span class="chip">' + esc(x.dettaglio) + ' <b style="color:var(--muted);font-weight:400">' + data(x.ts) + '</b></span>'; }).join('') + '</div></div>';
       // cliente e ordini
@@ -154,17 +172,18 @@
       // cronologia: visite con pagine e azioni
       var perS = {}; PG.forEach(function (x) { (perS[x.sid] = perS[x.sid] || []).push({ t: x.ts, k: 'p', x: x }); });
       A.forEach(function (x) { (perS[x.sid] = perS[x.sid] || []).push({ t: x.ts, k: 'a', x: x }); });
-      h += '<div class="pp-sec"><h3>🕒 Tutte le visite</h3><div class="tl">' + S.map(function (s, i) {
+      h += '<div class="pp-sec"><h3>🕒 Tutte le visite, passo per passo' + (nDett ? ' <label class="small muted" style="font-weight:400;margin-left:10px;cursor:pointer"><input type="checkbox" id="pp-fini" checked> mostra clic, scelte e sezioni lette</label>' : '') + '</h3><div class="tl" id="pp-tl">' + S.map(function (s, i) {
         var it = (perS[s.id] || []).sort(function (a, b) { return a.t - b.t; });
         var cam = [s.utm_sorgente, s.utm_mezzo, s.campagna].filter(Boolean).join(' / ');
         return '<details class="tl-s' + (+s.ritorno ? ' r' : '') + '" style="--i:' + Math.min(i, 15) + '"' + (i < 3 ? ' open' : '') + '><summary><b>' + data(s.inizio, 1) + '</b><span class="muted">' + flag(s.cc) + ' ' + esc(s.gps_indirizzo ? '📍 ' + s.gps_indirizzo : s.citta ? s.citta + (s.cap ? ' ' + s.cap : '') : (s.regione ? s.regione + ', ' + (s.paese || '') : (s.paese || '—'))) + ' · ' + esc(s.modello || s.dispositivo || '') + ' · da ' + esc(s.sorgente || 'Diretto') + (cam ? ' (' + esc(cam) + ')' : '') + ' · ' + n(s.pagine) + ' pagine · ' + dur((+s.ultimo) - (+s.inizio)) + '</span></summary>'
           + (s.riferimento ? '<div class="muted small" style="margin:4px 0 2px;word-break:break-all">Arrivato da: ' + esc(s.riferimento) + '</div>' : '')
           + it.map(function (e) {
-            if (e.k === 'a') return '<div class="tl-it az"><time>' + hhmm(e.t) + '</time><span>' + azIc(e.x.tipo) + ' <b>' + esc(azNm(e.x.tipo)) + '</b>' + (e.x.dettaglio ? ' · ' + esc(e.x.dettaglio) : '') + '</span></div>';
+            if (e.k === 'a') return '<div class="tl-it az' + (DETT[e.x.tipo] ? ' fine' : '') + '"><time>' + hhmm(e.t) + '</time><span>' + azIc(e.x.tipo) + ' <b>' + esc(azNm(e.x.tipo)) + '</b>' + (e.x.dettaglio ? ' · ' + esc(e.x.dettaglio) : '') + '</span></div>';
             return '<div class="tl-it"><time>' + hhmm(e.t) + '</time><span>' + esc(nomePagina(e.x.percorso, e.x.titolo)) + ' <small>' + esc(e.x.percorso) + (e.x.tempo ? ' · ' + dur(e.x.tempo) : '') + (e.x.scroll ? ' · letta al ' + e.x.scroll + '%' : '') + '</small></span></div>';
           }).join('') + '</details>';
       }).join('') + '</div></div>';
       b.innerHTML = h;
+      var cf = $('#pp-fini', b); if (cf) cf.onchange = function () { $('#pp-tl', b).classList.toggle('compatta', !cf.checked); };
     });
   }
   window.PDPersona = { apri: apri };

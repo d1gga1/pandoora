@@ -1,4 +1,5 @@
-/* Pan.door.a — statistiche visite del sito (anonime, solo per uso interno).
+/* Pan.door.a — statistiche visite del sito (solo per uso interno).
+   Per tutti: conteggi anonimi. Solo per chi accetta il banner cookie: clic, sezioni lette, scelte, moduli (vedi "statistiche dettagliate").
    Conta pagine viste e visitatori di ritorno con un codice casuale salvato nel browser.
    La posizione precisa viene letta solo se il visitatore clicca "Usa la mia posizione" in un modulo. Per escludere il proprio browser: ?pdlive=no */
 (function () {
@@ -192,6 +193,159 @@
     } else { attivita = ora(); tocca(); invia('hb'); }
   });
   addEventListener('pagehide', function () { misuraScroll(); invia('bye', { sc: scrollMax }); });
+
+  /* ───────── statistiche dettagliate: SOLO per chi ha accettato il banner cookie (gads.js, chiave pd_consent) ─────────
+     ogni clic, sezioni lette, scelte nei configuratori, carrello, moduli iniziati / inviati / abbandonati.
+     Nei moduli NON si registra mai cosa viene scritto nei campi di testo: solo quali campi sono stati compilati. */
+  var consenso = function () {
+    try { var c = JSON.parse(localStorage.getItem('pd_consent') || 'null'); return !!(c && c.v === 2 && c.s === 'granted' && Date.now() - c.t < 180 * 864e5); } catch (e) { return false; }
+  };
+  var dett = function (tipo, x) {
+    if (!consenso()) return;
+    try { tocca(); invia('ev', { k: tipo, x: String(x || '').replace(/\s+/g, ' ').trim().slice(0, 200), c: 1 }); } catch (e) {}
+  };
+  window.pdDettaglio = dett;
+  var pulito = function (s, max) { return String(s || '').replace(/\s+/g, ' ').trim().slice(0, max || 80); };
+  var testoLabel = function (lb) { // testo dell'etichetta senza il contenuto dei campi che contiene
+    try { var c = lb.cloneNode(true); var x = c.querySelectorAll('input,textarea,select,button,svg'); for (var i = 0; i < x.length; i++) x[i].parentNode.removeChild(x[i]); return pulito(c.textContent, 60); } catch (e) { return ''; }
+  };
+  var etichettaCampo = function (el) {
+    var l = '';
+    try { if (el.labels && el.labels[0]) l = testoLabel(el.labels[0]); } catch (e) {}
+    if (!l) { var lb = el.closest && el.closest('label'); if (lb) l = testoLabel(lb); }
+    return pulito(l || el.getAttribute('aria-label') || el.getAttribute('placeholder') || el.name || el.type || 'campo', 60);
+  };
+  var campoPrivato = function (el) { // campi in cui la persona scrive: mai il contenuto
+    if (!el || !el.tagName) return false;
+    if (el.tagName === 'TEXTAREA' || el.isContentEditable) return true;
+    if (el.tagName !== 'INPUT') return false;
+    var ty = (el.type || 'text').toLowerCase();
+    if (/^(text|email|tel|password|search|url|date|datetime-local|month|week|time|file)$/.test(ty)) return true;
+    if (ty === 'number') { var f = el.form || (el.closest && el.closest('form')); return !!(f && f.querySelector('input[type=email],input[type=tel],input[type=password]')); }
+    return false;
+  };
+  var testoDi = function (el) {
+    var s = el.getAttribute('aria-label') || el.getAttribute('title') || (el.tagName === 'IMG' ? el.getAttribute('alt') : '') || '';
+    if (!s && el.tagName === 'INPUT') s = (el.type === 'checkbox' || el.type === 'radio') ? etichettaCampo(el) : el.value;
+    if (!s) s = el.innerText || el.textContent || '';
+    s = pulito(s);
+    if (!s && el.querySelector) { var im = el.querySelector('img[alt]'); if (im) s = 'foto ' + pulito(im.getAttribute('alt')); }
+    return s;
+  };
+  var zona = function (el) {
+    var z = [['header', 'intestazione'], ['nav', 'menu'], ['footer', 'fondo pagina'], ['[role=dialog],[class*="modal"],[class*="-m-c"]', 'finestra'], ['[class*="cart"],[class*="carrell"]', 'carrello'], ['[class*="gallery"],[class*="galler"],[class*="thumb"]', 'galleria'], ['[class*="filt"]', 'filtri']];
+    for (var i = 0; i < z.length; i++) { try { if (el.closest(z[i][0])) return z[i][1]; } catch (e) {} }
+    return '';
+  };
+
+  /* ogni clic */
+  var ultimoClic = '', tClic = 0, nClic = 0;
+  document.addEventListener('click', function (e) {
+    if (nClic > 400 || !consenso()) return;
+    var el = e.target && e.target.closest ? e.target.closest('a[href],button,summary,label,[role=button],[role=tab],[role=link],[role=menuitem],input[type=checkbox],input[type=radio],input[type=submit],input[type=button],img,video,[onclick],[data-p],[data-id]') : null;
+    if (!el || el.closest('[aria-label="Cookie"]')) return;
+    if (el.tagName === 'A' && tipoLink(el.getAttribute('href') || '')) return;   // WhatsApp, telefono, email, PDF…: già registrati sopra
+    if (el.tagName === 'LABEL') { var ci = el.querySelector('input,select,textarea') || (el.htmlFor && document.getElementById(el.htmlFor)); if (!ci || campoPrivato(ci) || ci.tagName === 'SELECT') return; el = ci; }
+    if (campoPrivato(el)) return;
+    var cosa = el.tagName === 'A' ? 'Link' : el.tagName === 'IMG' ? 'Foto' : el.tagName === 'VIDEO' ? 'Video' : el.tagName === 'SUMMARY' ? 'Apre' : (el.type === 'checkbox' || el.type === 'radio') ? 'Opzione' : 'Pulsante';
+    var tx = testoDi(el), dove = '';
+    if (el.tagName === 'A') { var h = el.getAttribute('href') || ''; if (h && h.charAt(0) !== '#' && !/^javascript:/i.test(h)) dove = ' → ' + h.replace(/^https?:\/\/(www\.)?pandooragroup\.it/i, '').slice(0, 90); }
+    if (el.type === 'checkbox') tx += el.checked ? ' (sì)' : ' (no)';
+    var z = zona(el), d = cosa + (tx ? ' «' + tx + '»' : '') + dove + (z ? ' · ' + z : '');
+    var adesso = ora(); if (d === ultimoClic && adesso - tClic < 1500) return;
+    ultimoClic = d; tClic = adesso; nClic++;
+    dett('clic', d);
+  }, true);
+
+  /* scelte nei configuratori e nei menu (misure, finiture, quantità…): mai i campi di testo */
+  document.addEventListener('change', function (e) {
+    var el = e.target; if (!el || !el.tagName || !consenso() || campoPrivato(el)) return;
+    if (el.closest && el.closest('[aria-label="Cookie"]')) return;
+    var nome = etichettaCampo(el), v;
+    if (el.tagName === 'SELECT') v = (el.options[el.selectedIndex] || {}).text || el.value;
+    else if (el.type === 'checkbox') v = el.checked ? 'sì' : 'no';
+    else if (el.type === 'radio') { if (!el.checked) return; var fs = el.closest('fieldset'), lg = fs && fs.querySelector('legend'); v = nome; nome = lg ? pulito(lg.textContent, 60) : (el.name || 'scelta'); }
+    else if (el.tagName === 'INPUT') v = el.value;
+    else return;
+    if (/^(sito_web|privacy)$/.test(el.name || '')) return;
+    dett('scelta', nome + ': ' + pulito(v, 80));
+  }, true);
+
+  /* moduli: iniziati, inviati, errori, lasciati a metà */
+  var moduli = [];
+  var nomeModulo = function (f) {
+    var s = f.getAttribute('aria-label') || f.getAttribute('name') || '';
+    if (!s) { var c = f.closest('[role=dialog],section,article,.pa-m-c,main') || f.parentNode, h = c && c.querySelector('h1,h2,h3'); if (h) s = h.textContent; }
+    if (!s) { var b = f.querySelector('button[type=submit],input[type=submit]'); if (b) s = b.textContent || b.value; }
+    return pulito(s || 'modulo', 60);
+  };
+  var statoModulo = function (f) {
+    for (var i = 0; i < moduli.length; i++) if (moduli[i].f === f) return moduli[i];
+    var m = { f: f, nome: nomeModulo(f), campi: {}, ultimo: '', avviato: false, inviato: false, segnalato: false, pagina: percorso() };
+    moduli.push(m); return m;
+  };
+  var campoModulo = function (el) {
+    if (!el || !/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || /^(hidden|submit|button)$/i.test(el.type || '')) return null;
+    if (eRicerca(el) || /trap/.test(el.className || '') || el.name === 'sito_web') return null;
+    return el.form || (el.closest && el.closest('form'));
+  };
+  document.addEventListener('focusin', function (e) {
+    var f = campoModulo(e.target); if (!f || !consenso()) return;
+    var m = statoModulo(f); m.ultimo = etichettaCampo(e.target);
+    if (!m.avviato) { m.avviato = true; m.segnalato = false; dett('modulo', 'Iniziato: ' + m.nome); }
+  }, true);
+  document.addEventListener('input', function (e) {
+    var f = campoModulo(e.target); if (!f) return;
+    var m = statoModulo(f), k = etichettaCampo(e.target), v = e.target.type === 'checkbox' ? e.target.checked : String(e.target.value || '').trim();
+    if (v) m.campi[k] = 1; else delete m.campi[k];
+  }, true);
+  document.addEventListener('submit', function (e) {
+    var f = e.target; if (!f || f.tagName !== 'FORM' || !consenso()) return;
+    if (f.querySelector('input[type=search]') && !f.querySelector('input[type=email],input[type=tel]')) return;
+    var m = statoModulo(f), nc = Object.keys(m.campi).length;
+    m.inviato = true;
+    dett('modulo', 'Inviato: ' + m.nome + ' · ' + nc + ' campi compilati');
+    setTimeout(function () { // il sito ha segnalato errori? (campi evidenziati o messaggio d'errore)
+      if (!document.contains(f)) return;
+      var err = f.querySelectorAll('.err,[aria-invalid="true"]'), nomi = [];
+      for (var i = 0; i < err.length && nomi.length < 6; i++) if (/^(INPUT|TEXTAREA|SELECT)$/.test(err[i].tagName)) nomi.push(etichettaCampo(err[i]));
+      var msg = f.querySelector('.pa-msg:not(.ok),[role=alert]:not(.ok)'), mt = msg ? pulito(msg.textContent, 100) : '';
+      if (nomi.length || mt) { m.inviato = false; dett('modulo', 'Errore in: ' + m.nome + (nomi.length ? ' · campi: ' + nomi.join(', ') : '') + (mt ? ' · «' + mt + '»' : '')); }
+    }, 2500);
+  }, true);
+  var abbandoni = function (tutti) {
+    if (!consenso()) return;
+    moduli.forEach(function (m) {
+      if (!m.avviato || m.inviato || m.segnalato) return;
+      if (!tutti && document.contains(m.f)) return;   // ancora aperto: aspettiamo
+      m.segnalato = true;
+      var c = Object.keys(m.campi);
+      dett('modulo', 'Lasciato a metà: ' + m.nome + ' · compilati ' + c.length + (c.length ? ' (' + c.slice(0, 8).join(', ') + ')' : '') + (m.ultimo ? ' · ultimo campo: ' + m.ultimo : ''));
+    });
+  };
+
+  /* sezioni lette: titoli (h2) rimasti visibili almeno 2 secondi */
+  var visteSez = {}, nSez = 0, io = null;
+  var osservaSezioni = function () {
+    if (!window.IntersectionObserver || !consenso()) return;
+    io = io || new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        var el = en.target;
+        if (en.isIntersecting) el.__pdT = setTimeout(function () {
+          var tx = pulito(el.textContent, 90), k = percorso() + '|' + tx;
+          if (tx && !visteSez[k] && nSez < 300) { visteSez[k] = 1; nSez++; dett('sezione', tx); }
+        }, 2000);
+        else clearTimeout(el.__pdT);
+      });
+    }, { threshold: 0.6 });
+    var hs = document.querySelectorAll('h2');
+    for (var i = 0; i < hs.length; i++) if (!hs[i].__pdO && !hs[i].closest('[aria-label="Cookie"]')) { hs[i].__pdO = 1; io.observe(hs[i]); }
+  };
+  setTimeout(osservaSezioni, 1200);
+  setInterval(function () { osservaSezioni(); abbandoni(false); }, 10000);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') abbandoni(true); });
+  addEventListener('pagehide', function () { abbandoni(true); });
+
   /* posizione precisa (GPS / Wi-Fi del dispositivo), SOLO se il visitatore clicca
      "Usa la mia posizione" nei moduli con CAP/Città: compila i campi e la registra nelle statistiche. */
   var GL = navigator.geolocation;
