@@ -37,7 +37,8 @@
   var attesa = [];
   function api(a, dati) {
     var get = a === 'stato';
-    var tempo = new Promise(function (ok) { setTimeout(function () { ok(null); }, 12000); }); // se il server non risponde entro 12 s
+    var attesaMs = a === 'ordine' ? 45000 : 12000; // l'ordine salva i dati e invia le email: gli diamo più tempo
+    var tempo = new Promise(function (ok) { setTimeout(function () { ok(null); }, attesaMs); }); // se il server non risponde in tempo
     return Promise.race([tempo, fetch(API + (get ? '?a=stato' + (window.pdVisitatore ? '&pdv=' + encodeURIComponent(window.pdVisitatore()) : '') : ''), get ? { cache: 'no-store', headers: tokenLeggi() ? { 'X-PD-Token': tokenLeggi() } : {} } : {
       method: 'POST', cache: 'no-store',
       headers: intestazioni(true), body: JSON.stringify(Object.assign({ a: a, pdv: window.pdVisitatore ? window.pdVisitatore() : '' }, dati || {}))
@@ -49,7 +50,7 @@
         if (r.status === 401 && a !== 'accedi' && j && j.errore === 'Accesso richiesto') { tokenSalva(''); S.utente = null; aggiornaHeader(); } // password sbagliata: resta collegato
         return j;
       });
-    })]).then(function (r) { return r || { ok: false, offline: true, errore: 'Il server non risponde. Riprovate tra qualche minuto, oppure inviate l\'ordine su WhatsApp dal carrello.' }; })
+    })]).then(function (r) { return r || { ok: false, offline: true, errore: a === 'ordine' ? 'La risposta sta tardando. Prima di reinviare, controllate la vostra email: se entro qualche minuto non arriva il riepilogo dell\'ordine, scriveteci su WhatsApp al +39 388 470 6887.' : 'Il server non risponde. Riprovate tra qualche minuto, oppure inviate l\'ordine su WhatsApp dal carrello.' }; })
       .catch(function () { return { ok: false, offline: true, errore: 'Connessione non riuscita. Controllate la rete e riprovate.' }; });
   }
   function carrelloLocale() { return ls('pdShopCart2') || []; }
@@ -149,6 +150,12 @@
       };
     });
     $$('input,select,textarea', f).forEach(function (i) { i.addEventListener('input', function () { i.classList.remove('err'); }); });
+    /* CAP obbligatorio solo per l'Italia (Paesi come gli Emirati non hanno codice postale) */
+    $$('input[name$="paese"]', f).forEach(function (p) {
+      var cap = $('[name="' + p.name.replace(/paese$/, 'cap') + '"]', f); if (!cap) return;
+      var agg = function () { var it = /^(it|ita|italia|italy|italie|italien)?$/i.test(p.value.trim()); cap.required = it; if (!it) cap.classList.remove('err'); };
+      p.addEventListener('input', agg); agg();
+    });
   }
   function valori(f) {
     var o = {};
@@ -302,7 +309,7 @@
     if (!o || !o.righe.length) return;
     window.pdEvento && window.pdEvento('checkout', o.righe.length + ' prodotti · ' + Math.round(o.tot || 0) + ' €');
     window.PDShop.chiudiCarrello && window.PDShop.chiudiCarrello();
-    var box = apriFinestra('<h2>Richiesta d\'ordine</h2><p class="pa-sub" style="margin:0">Inviando la richiesta non pagate ancora nulla: vi ricontattiamo per confermare ordine, tempi e prezzo. <b>Pagamento: 50% di anticipo alla conferma dell\'ordine, 50% quando la merce è pronta.</b> Il rilievo delle misure si fa dopo la conferma e l\'anticipo.</p>' + riepilogoHTML(o) + '<div data-co></div>');
+    var box = apriFinestra('<h2>Richiesta d\'ordine</h2><p class="pa-sub" style="margin:0">Inviando la richiesta non pagate ancora nulla e non serve nessuna carta. <b>Per il pagamento vi contatta un nostro gestore dopo l\'ordine</b>: insieme confermate ordine, tempi e prezzo (50% di anticipo alla conferma, 50% quando la merce è pronta). Il rilievo delle misure si fa dopo la conferma e l\'anticipo.</p>' + riepilogoHTML(o) + '<div data-co></div>');
     var c = $('[data-co]', box);
     CO = o; if (M) M.dataset.co = '1';
     quandoPronto(function () { if (S.utente) { checkoutCliente(c, o); api('bozza', datiBozza(o)); } else checkoutOspite(c, o); });
@@ -324,7 +331,7 @@
       e.preventDefault(); if (!controllaPrima(f)) return;
       var v = valori(f), d = { righe: o.righe, totali: { sub: o.sub, disc: o.disc, tot: o.tot }, codice: o.codice, note: v.note, pagina: location.pathname };
       if (v.dove === 'nuovo') { d.indirizzo = { nome: u.nome + ' ' + u.cognome, via: v.i_via, cap: v.i_cap, citta: v.i_citta, provincia: v.i_provincia, paese: v.i_paese, telefono: u.telefono }; d.salva_indirizzo = v.salva_indirizzo; }
-      else if (v.dove === 'ritiro') d.note = '[Ritiro in sede / da concordare] ' + (v.note || '');
+      else if (v.dove === 'ritiro') { d.ritiro = true; d.note = '[Ritiro in sede / da concordare] ' + (v.note || ''); }
       else d.indirizzo_id = +v.dove;
       invioOrdine(f, c, d);
     };
@@ -385,6 +392,13 @@
     attendi(f, true, 'Invio in corso…');
     api('ordine', d).then(function (r) {
       attendi(f, false);
+      if (r.ok && !r.numero) r = { ok: false, errore: 'L\'ordine non è stato registrato. Riprovate, oppure inviatelo su WhatsApp dal carrello.' };
+      if (!r.ok && ['email', 'nome', 'cognome', 'telefono', 'privacy'].indexOf(r.campo) >= 0 && !$('[name="' + r.campo + '"]', f) && CO) { // accesso scaduto: il server non riconosce più il cliente
+        S.utente = null; tokenSalva(''); aggiornaHeader();
+        checkoutOspite(c, CO);
+        var m0 = $('.pa-msg', c); if (m0) m0.textContent = 'Il vostro accesso è scaduto: accedete di nuovo (link "Accedi" qui sopra) oppure inserite i vostri dati. Il carrello è salvato.';
+        return;
+      }
       if (!r.ok) return erroreModulo(f, r);
       if (r.utente) applica(r, false);
       var mm = c.closest('.pa-m'); if (mm) mm.dataset.fatto = '1';
@@ -395,8 +409,8 @@
       var box = c.closest('.pa-m-c') || c;
       var nm = (d.nome || '').split(' ')[0];
       box.innerHTML = '<div class="pa-done"><div class="ic">' + IC.check + '</div><h2>Ottima scelta' + (nm ? ', ' + esc(nm) : '') + '!</h2><div class="num">Ordine ' + esc(r.numero) + '</div>'
-        + '<p class="pa-sub">Avete comprato direttamente da chi produce: niente ricarichi da rivenditore, misure fatte sul vostro vano e una squadra che vi segue fino alla consegna. Vi abbiamo mandato il riepilogo via email.' + (r.account_creato ? '<br><b>Il vostro account è pronto:</b> confermate l\'email dal messaggio che vi abbiamo inviato.' : '') + '</p>'
-        + '<ol class="pa-steps"><li><b>Entro 24 ore lavorative</b><span>vi contattiamo per rivedere insieme l\'ordine e il prezzo</span></li><li><b>Conferma e anticipo del 50%</b><span>l\'ordine diventa definitivo</span></li><li><b>Rilievo delle misure</b><span>dopo l\'anticipo, per produrre sul vostro vano al millimetro</span></li><li><b>Produzione a Fontanelle (TV)</b><span>nel nostro stabilimento, con i controlli prima della spedizione</span></li><li><b>Saldo del 50% e consegna</b><span>quando la merce è pronta; posa compresa in Veneto e Friuli Venezia Giulia, se l\'avete scelta</span></li></ol>'
+        + '<p class="pa-sub">Avete comprato direttamente da chi produce: niente ricarichi da rivenditore, misure fatte sul vostro vano e una squadra che vi segue fino alla consegna. Vi abbiamo mandato il riepilogo via email.' + (r.account_creato ? '<br><b>Il vostro account è pronto:</b> confermate l\'email dal messaggio che vi abbiamo inviato.' : '') + (r.account_esistente ? '<br>Con questa email esiste già un account: accedete per ritrovare ordini, carrello e preferiti.' : '') + '</p>'
+        + '<ol class="pa-steps"><li><b>Entro 24 ore lavorative</b><span>vi contatta un nostro gestore per rivedere l\'ordine e il prezzo e per indicarvi come pagare</span></li><li><b>Conferma e anticipo del 50%</b><span>l\'ordine diventa definitivo</span></li><li><b>Rilievo delle misure</b><span>dopo l\'anticipo, per produrre sul vostro vano al millimetro</span></li><li><b>Produzione a Fontanelle (TV)</b><span>nel nostro stabilimento, con i controlli prima della spedizione</span></li><li><b>Saldo del 50% e consegna</b><span>quando la merce è pronta; posa compresa in Veneto e Friuli Venezia Giulia, se l\'avete scelta</span></li></ol>'
         + '<p class="pa-g">Domande sul prodotto o sul pagamento? <a href="https://wa.me/393884706887" target="_blank" rel="noopener">WhatsApp</a> o <a href="tel:+393884706887">+39 388 470 6887</a>.</p>'
         + '<p class="pa-g">Porte con garanzia di 2 anni e 10 anni su cerniere e serratura AGB.</p>'
         + '<div class="s-btns">' + (S.utente ? '<a class="s-btn s-btn-p" href="' + ACC + '#ordini">Segui l\'ordine</a>' : '') + '<button type="button" class="s-btn s-btn-o" data-chiudi>Continua sullo shop</button></div></div>';
