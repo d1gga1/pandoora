@@ -120,7 +120,7 @@ img{-webkit-user-drag:none;user-select:none}
 .vig{position:fixed;inset:0;z-index:1;pointer-events:none;box-shadow:inset 0 0 220px rgba(20,32,54,.10),inset 0 -80px 120px rgba(20,32,54,.05)}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:linear-gradient(180deg,rgba(247,249,251,.92) 0%,rgba(247,249,251,0) 100%);backdrop-filter:blur(6px);opacity:0;transform:translateY(-8px)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:linear-gradient(180deg,rgba(247,249,251,.92) 0%,rgba(247,249,251,0) 100%);backdrop-filter:blur(6px);opacity:0;transform:translateY(-8px)}
 .nav-back{display:flex;align-items:center;gap:13px;font-size:9.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--faint);text-decoration:none;transition:color .3s}
 .nav-back:hover{color:var(--ink)}
 .nav-back svg{flex-shrink:0;transition:transform .3s}
@@ -221,7 +221,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .mcls:hover{border-color:var(--ink);color:var(--ink);transform:rotate(90deg)}
 
 @media(max-width:768px){
-  nav{padding:15px 22px}
+  #nav{padding:15px 22px}
   .nav-logo img{height:34px}
   .fbar{padding:11px 20px;flex-wrap:wrap;gap:8px}
   .fct{display:none}
@@ -242,6 +242,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 <link rel="stylesheet" href="/pd-base.css">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet"></noscript>
 <script src="/pd-live.js" defer></script>
+<style id="pd-porte-plus">
+/* modale sopra menu, badge e selettore lingua: la X resta cliccabile su mobile */
+.mbg{z-index:100005!important}
+.mcls{z-index:30!important;width:42px!important;height:42px!important;font-size:18px!important}
+.mcta{display:flex;flex-direction:column;gap:8px;margin:4px 0 22px}
+.mcta a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 16px;border-radius:12px;font:700 14px/1.2 Manrope,system-ui,sans-serif;text-decoration:none;text-align:center}
+.mcta .q{background:#1b2531;color:#fff}
+.mcta .w{background:#25d366;color:#fff}
+.mcta svg{width:18px;height:18px;flex:none}
+.dgrid-wrap{max-width:1100px;margin:34px auto 10px;padding:0 18px}
+.dgrid-title{text-align:center;font:700 13px/1.3 Manrope,system-ui,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted,#5b6573)}
+.dgrid-hint{text-align:center;font-size:12px;color:var(--faint,#8a94a3);margin:6px 0 16px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.dgi{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 8px 10px;border:1px solid var(--line2,rgba(27,37,49,.12));border-radius:14px;background:rgba(255,255,255,.75);cursor:pointer;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent;transition:transform .2s,border-color .2s,box-shadow .2s}
+.dgi:hover,.dgi:focus-visible{transform:translateY(-2px);border-color:#1b2531;box-shadow:0 8px 22px rgba(27,37,49,.12);outline:none}
+.dgi.on{border-color:#1b2531}
+.dgi img{width:100%;height:150px;object-fit:contain}
+.dgi b{font-size:11px;letter-spacing:1px;text-transform:uppercase;text-align:center;line-height:1.25}
+.dgi small{font-size:10px;color:var(--faint,#8a94a3)}
+/* la barra filtri resta fissa solo finché si guardano i modelli */
+.fbar.pd-off{position:relative!important}
+@media(max-width:600px){.dgrid{grid-template-columns:repeat(3,1fr);gap:8px}.dgi{padding:8px 4px}.dgi img{height:104px}.dgi b{font-size:9.5px;letter-spacing:.4px}.dgi small{display:none}}
+</style>
 </head>
 <body>
 
@@ -311,14 +334,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
   <div class="shint">Deslice o use las flechas · haga clic para ver los detalles</div>
 </div>
 
+
+<div class="dgrid-wrap" id="dgridWrap">
+  <div class="dgrid-title" id="dgridTitle"></div>
+  <div class="dgrid-hint" id="dgridHint"></div>
+  <div class="dgrid" id="dgrid"></div>
+</div>
 <div class="mbg" id="mbg">
-  <button class="mcls" id="mcls">✕</button>
+  <button class="mcls" id="mcls" type="button" aria-label="Cerrar">✕</button>
   <div class="modal">
     <div class="mleft"><div class="mdoorw" id="mdoor"></div></div>
     <div class="mright">
       <div class="mbadge" id="mbadge"></div>
       <div class="mtitle" id="mtitle"></div>
       <p class="mdesc" id="mdesc"></p>
+      <div class="mcta" id="mcta"></div>
       <div class="mspecs-title">Medidas técnicas</div>
       <div class="mspecs" id="mspecs"></div>
     </div>
@@ -417,11 +447,28 @@ const doors=[
   {id:'aurea',name:'AUREA',line:'pantografata',lineLabel:'Pantografata Superior',dot:'#C8AA6E',specs:PAN}
 ];
 
+/* ── Traduzione e contatti (pd-porte-plus) ── */
+const PL={"lines": {"laminata": "Línea Estratificada", "laccata": "Línea Lacada", "pantografata": "Mecanizada Superior"}, "door": "Puerta", "grid": "Todos los modelos de un vistazo", "gridHint": "Toque un modelo para ver detalles y medidas", "cta": "Solicitar presupuesto de este modelo", "wa": "Preguntar por WhatsApp", "msg": "Hola, quisiera un presupuesto para la puerta {N} ({L}).", "quote": "/es/presupuesto/", "desc": {"laminata": "Revestimiento estratificado de alta resistencia, ideal para un uso diario intenso. Fácil de limpiar, estable en el tiempo, en color liso o veta de madera.", "laccata": "Hoja lacada de superficie lisa y uniforme, para una estética sobria y contemporánea. Los paneles mecanizados aportan profundidad y carácter.", "pantografata": "Línea Superior con chapas de HDF hidrófugo de 8 mm y motivos mecanizados con precisión. Lacado RAL a elección para personalizar por completo la hoja."}, "k": {"Telaio": "Premarco", "Coprifilo": "Tapajuntas", "Cerniere": "Bisagras", "Serratura": "Cerradura", "Guarnizione": "Junta", "Apertura": "Apertura", "Larghezza": "Ancho", "Altezza": "Alto", "Rivestimento": "Acabado", "Pannello Porta": "Hoja"}, "v": {"In legno listellare": "Madera laminada", "In legno multistrato 7/9": "Contrachapado 7/9", "N° 3 cerniere a scomparsa": "3 bisagras ocultas", "Magnetica con chiave e incontro, finitura cromo-satinato": "Magnética con llave y cerradero, cromo satinado", "In PVC": "PVC", "Battente reversibile / Scorrevole": "Abatible reversible / Corredera", "Battente e scorrevole · 60 · 70 · 80 · 90 cm": "Abatible y corredera · 60 · 70 · 80 · 90 cm", "Laminato": "Estratificado", "Laminato con venatura frassino": "Estratificado veta fresno", "Laccato": "Lacado", "Laccato RAL": "Lacado RAL", "Copertine in HDF IDRO da 8mm": "Chapas de HDF hidrófugo 8 mm"}};
+(function(){
+  if(PL.desc) Object.assign(lineDesc,PL.desc);
+  const tr=s=>{const o={};Object.entries(s).forEach(([k,v])=>{o[(PL.k&&PL.k[k])||k]=(PL.v&&PL.v[v])||v;});return o;};
+  doors.forEach(d=>{d.lineLabel=PL.lines[d.line]||d.lineLabel;d.specs=tr(d.specs);});
+})();
+const REV_KEY=(PL.k&&PL.k['Rivestimento'])||'Rivestimento';
+const WA_NUM='393884706887';
+function doorMsg(door){return PL.msg.replace('{N}',door.name).replace('{L}',door.lineLabel);}
+function fillCta(door){
+  const box=document.getElementById('mcta');if(!box)return;
+  const m=doorMsg(door);
+  box.innerHTML='<a class="q" href="'+PL.quote+'?m='+encodeURIComponent(m)+'"></a><a class="w" target="_blank" rel="noopener" href="https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(m)+'"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.96.23-3.24-.68-2.73-1.08-4.45-3.87-4.58-4.05-.13-.18-1.09-1.45-1.09-2.76s.69-1.96.93-2.23c.24-.27.53-.34.7-.34l.5.01c.16.01.38-.06.59.45.24.57.8 1.98.87 2.12.07.14.12.31.02.49-.09.18-.14.29-.28.45l-.42.49c-.14.14-.28.29-.12.57.16.27.72 1.18 1.54 1.92 1.06.94 1.95 1.23 2.23 1.37.27.14.43.12.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.22.61-.13.24.09 1.55.73 1.82.86.27.14.45.2.51.32.07.11.07.63-.17 1.31z\"/></svg><span></span></a>';
+  box.querySelector('.q').textContent=PL.cta+' →';box.querySelector('.w span').textContent=PL.wa;
+}
+
 /* ── Slider ── */
 const strack=document.getElementById('strack');
 const sviewport=document.getElementById('sviewport');
 const sticksRow=document.getElementById('sticksRow');
-const lineLabels={laminata:'Linea Laminata',laccata:'Linea Laccata',pantografata:'Pantografata Superior'};
+const lineLabels=PL.lines;
 let activeFilter='all';
 let items=[];
 let cardEls=[];
@@ -437,11 +484,11 @@ function buildSlides(){
     card.className='dcard';
     card.innerHTML=`
       <div class="dstage">
-        <div class="dphotow"><img src="${imgMin(door.id)}" ${FB(door.id)} alt="Porta ${door.name}, ${door.lineLabel}" loading="lazy" decoding="async"></div>
+        <div class="dphotow"><img src="${imgMin(door.id)}" ${FB(door.id)} alt="${PL.door} ${door.name}, ${door.lineLabel}" loading="lazy" decoding="async"></div>
       </div>
       <div class="dinfo">
         <div class="dname">${door.name}</div>
-        <div class="drev">${door.specs['Rivestimento']||''}</div>
+        <div class="drev">${door.specs[REV_KEY]||''}</div>
         <div class="dsizes"><span class="dsz">60</span><span class="dsz">70</span><span class="dsz">80</span><span class="dsz">90</span></div>
       </div>`;
     card.addEventListener('click',()=>{if(dragMoved)return;if(i===active)openModal(door);else goTo(i);});
@@ -451,10 +498,24 @@ function buildSlides(){
     stick.addEventListener('click',()=>goTo(i));
     sticksRow.appendChild(stick);
   });
+  buildGrid();
   document.getElementById('sIdxTot').textContent=items.length;
   document.getElementById('fct').textContent=items.length+' / '+doors.length;
   active=0;layout(false);
   gsap.fromTo(strack,{opacity:0},{opacity:1,duration:.45,ease:'power2.out'});
+}
+
+function buildGrid(){
+  const g=document.getElementById('dgrid');if(!g)return;
+  document.getElementById('dgridTitle').textContent=PL.grid+' · '+items.length;
+  document.getElementById('dgridHint').textContent=PL.gridHint;
+  g.innerHTML='';
+  items.forEach((door,i)=>{
+    const b=document.createElement('button');b.type='button';b.className='dgi';b.setAttribute('aria-label',door.name);
+    b.innerHTML=`<img src="${imgMin(door.id)}" ${FB(door.id)} alt="${PL.door} ${door.name}" loading="lazy" decoding="async" width="150" height="150"><b>${door.name}</b><small>${door.specs[REV_KEY]||''}</small>`;
+    b.addEventListener('click',()=>{userTouched=true;stopAutoplay();goTo(i,false);openModal(door);});
+    g.appendChild(b);
+  });
 }
 
 function layout(animate=true){
@@ -477,6 +538,7 @@ function layout(animate=true){
     gsap.to(card,{x,y:0,z,rotateY:rotY,scale,opacity,zIndex,duration:animate?.7:0,ease:'power3.out'});
   });
   sticksRow.querySelectorAll('.stick').forEach((s,i)=>s.classList.toggle('on',i===active));
+  document.querySelectorAll('#dgrid .dgi').forEach((s,i)=>s.classList.toggle('on',i===active));
   document.getElementById('sIdxNum').textContent=String(active+1).padStart(2,'0');
   const door=items[active];
   if(door){
@@ -487,12 +549,15 @@ function layout(animate=true){
   }
 }
 
-function goTo(i,user=true){const n=items.length;active=((i%n)+n)%n;layout(true);if(user)restartAutoplay();}
+let userTouched=false,sliderVisible=true;
+function goTo(i,user=true){const n=items.length;active=((i%n)+n)%n;layout(true);if(user){userTouched=true;stopAutoplay();}}
 function next(user=true){goTo(active+1,user)}
 function prev(user=true){goTo(active-1,user)}
-function startAutoplay(){stopAutoplay();autoplayTimer=setInterval(()=>next(false),AUTOPLAY_MS);}
+function startAutoplay(){stopAutoplay();if(userTouched||!sliderVisible||document.getElementById('mbg').classList.contains('open'))return;autoplayTimer=setInterval(()=>next(false),AUTOPLAY_MS);}
 function stopAutoplay(){if(autoplayTimer){clearInterval(autoplayTimer);clearTimeout(autoplayTimer);autoplayTimer=null;}}
-function restartAutoplay(){stopAutoplay();autoplayTimer=setTimeout(startAutoplay,9000);}
+function restartAutoplay(){stopAutoplay();if(!userTouched)autoplayTimer=setTimeout(startAutoplay,9000);}
+if('IntersectionObserver' in window){new IntersectionObserver(es=>{sliderVisible=es[0].isIntersecting;sliderVisible?startAutoplay():stopAutoplay();}).observe(sviewport);}
+{const gw=document.getElementById('dgridWrap'),fb=document.getElementById('fbar');let tk=0;const chk=()=>{tk=0;if(gw&&fb)fb.classList.toggle('pd-off',gw.getBoundingClientRect().bottom<0);};window.addEventListener('scroll',()=>{if(!tk)tk=requestAnimationFrame(chk);},{passive:true});}
 
 function bindNav(el,fn){var used=false;
   el.addEventListener('pointerdown',function(e){e.preventDefault();e.stopPropagation();used=true;fn();},{passive:false});
@@ -510,7 +575,7 @@ document.addEventListener('keydown',e=>{
 
 /* drag / swipe */
 let dragStartX=0,dragging=false,dragMoved=false;
-function dragStart(x){dragging=true;dragMoved=false;dragStartX=x;stopAutoplay();sviewport.classList.add('grabbing');}
+function dragStart(x){userTouched=true;dragging=true;dragMoved=false;dragStartX=x;stopAutoplay();sviewport.classList.add('grabbing');}
 function dragMove(x){if(!dragging)return;if(Math.abs(x-dragStartX)>6)dragMoved=true;}
 function dragEnd(x){if(!dragging)return;dragging=false;sviewport.classList.remove('grabbing');const dx=x-dragStartX;if(dx<-40)next();else if(dx>40)prev();else startAutoplay();}
 sviewport.addEventListener('mousedown',e=>dragStart(e.clientX));
@@ -530,7 +595,8 @@ document.querySelectorAll('.ftab').forEach(btn=>{
     document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('on'));
     btn.classList.add('on');
     activeFilter=btn.dataset.f;
-    gsap.to(strack,{opacity:0,duration:.22,onComplete:()=>{buildSlides();startAutoplay();}});
+    userTouched=true;stopAutoplay();
+    gsap.to(strack,{opacity:0,duration:.22,onComplete:()=>{buildSlides();}});
   });
 });
 
@@ -539,9 +605,10 @@ function openModal(door){
   document.getElementById('mbadge').innerHTML=`<span style="width:6px;height:6px;border-radius:50%;background:${door.dot}"></span>${door.lineLabel}`;
   document.getElementById('mtitle').textContent=door.name;
   document.getElementById('mdesc').textContent=lineDesc[door.line]||'';
-  document.getElementById('mdoor').innerHTML=`<img src="${imgFull(door.id)}" ${FB(door.id)} alt="Porta ${door.name}" loading="lazy" decoding="async">`;
+  document.getElementById('mdoor').innerHTML=`<img src="${imgFull(door.id)}" ${FB(door.id)} alt="${PL.door} ${door.name}" loading="lazy" decoding="async">`;
   const specs=document.getElementById('mspecs');specs.innerHTML='';
   Object.entries(door.specs).forEach(([k,v])=>{specs.innerHTML+=`<div class="mrow"><span class="mkey">${k}</span><span class="mval">${v}</span></div>`;});
+  fillCta(door);stopAutoplay();
   document.getElementById('mbg').classList.add('open');
 }
 document.getElementById('mcls').addEventListener('click',()=>document.getElementById('mbg').classList.remove('open'));
@@ -551,7 +618,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementB
 /* ── Entrance animation ── */
 const tl=gsap.timeline({defaults:{ease:'power3.out'}});
 tl.timeScale(2.5); /* ingresso rapido: contenuti visibili in ~1s */
-tl.to('nav',{opacity:1,y:0,duration:.7})
+tl.to('#nav',{opacity:1,y:0,duration:.7})
   .to('#heye',{opacity:1,y:0,duration:.6},'-=.3')
   .to('.htl span',{opacity:1,y:'0%',duration:.75,stagger:.12},'-=.2')
   .to('#hsub',{opacity:1,duration:.55},'-=.2')

@@ -646,5 +646,6 @@ addEventListener('scroll',function(){t.classList.toggle('scrolled',scrollY>40)},
 </script>
 
 <script>/* ripristina il pulsante se si torna indietro dopo l'invio */(function(){var s=[];document.querySelectorAll('form button').forEach(function(b){s.push([b,b.innerHTML]);});addEventListener('pageshow',function(e){if(e.persisted)s.forEach(function(x){x[0].disabled=false;x[0].innerHTML=x[1];});});})();</script>
+<script>/* pd-prefill: messaggio precompilato dal modello porta scelto */(function(){try{var m=new URLSearchParams(location.search).get("m"),t=document.getElementById("messaggio");if(m&&t&&!t.value){t.value=m.slice(0,300);}}catch(e){}})();</script>
 </body>
 </html>
