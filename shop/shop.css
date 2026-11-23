@@ -147,7 +147,7 @@ body.s-scrolled .s-head-row{min-height:62px}
 .js-motion [data-rv].in{opacity:1;transform:none;transition:opacity .9s var(--out),transform .9s var(--out);transition-delay:var(--d,0s)}
 
 /* ---------- categorie grandi ---------- */
-.s-tiles{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:18px}
+.s-tiles{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:260px 260px;gap:18px}
 .s-tile{position:relative;border-radius:var(--r-lg);overflow:hidden;text-decoration:none;color:#fff;background:var(--stone);isolation:isolate}
 .s-tile:first-child{grid-row:span 2}
 .s-tile img{position:absolute;z-index:0;inset:-6% 0;width:100%;height:112%;object-fit:cover;transition:transform 1.1s var(--out);will-change:transform}
@@ -421,7 +421,7 @@ body.s-cart-open .s-cl{animation:sIn .6s var(--out) both;animation-delay:calc(va
 @media(max-width:1080px){
   .s-hero-grid{grid-template-columns:1fr}
   .s-stage{min-height:480px}
-  .s-tiles{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px 220px}
+  .s-tiles{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px}
   .s-tile:first-child{grid-row:auto;grid-column:span 2}
   .s-lines{grid-template-columns:1fr}
   .s-line-c{grid-template-columns:90px 1fr}

@@ -141,20 +141,6 @@
    ]
   },
   {
-   "id": "tavoli",
-   "name": "Tavoli e top",
-   "short": "Top per tavoli su misura",
-   "icon": "table",
-   "intro": "Tavoli completi e top per tavoli tagliati sulla vostra misura: scegliete forma, dimensioni, spessore e finitura del piano.",
-   "subs": [
-    [
-     "top-per-tavoli",
-     "Top per tavoli",
-     "top"
-    ]
-   ]
-  },
-  {
    "id": "gres-porcellanato",
    "name": "Gres porcellanato",
    "short": "Lastre, effetto legno e rivestimenti a magazzino",
