@@ -1376,3 +1376,12 @@ a.s-add{text-decoration:none}
 /* 20/11/2026: bollino Made in Italy su ogni scheda prodotto (tutte le lingue) */
 .s-card-img::after{content:"Made in Italy";position:absolute;left:10px;bottom:10px;z-index:1;display:flex;align-items:center;padding:4px 9px 4px 24px;border-radius:100px;background:rgba(255,255,255,.92) linear-gradient(90deg,#009246 0 4px,#fff 4px 8px,#ce2b37 8px 12px) 8px 50%/12px 8px no-repeat;color:#0d1524;font:800 10.5px/1.2 var(--body,sans-serif);letter-spacing:.2px;box-shadow:0 2px 10px rgba(0,0,0,.08);pointer-events:none}
 [dir="rtl"] .s-card-img::after{left:auto;right:10px}
+
+/* partite gres (23/11/2026) */
+.s-card .s-dim.s-lot{display:block;margin-top:2px;color:var(--ink);font-weight:700}.s-card .s-dim.s-lot.whole{color:#9a5b00}
+.s-lot-n{font-weight:700;color:var(--ink)}.s-lot-n.whole{color:#9a5b00}
+fieldset.s-opt[disabled] .s-chips,fieldset.s-opt[disabled] .s-dims{opacity:.45;pointer-events:none}
+#o-lot .s-chip em{font-style:normal;font-size:11.5px;font-weight:800;color:#9a5b00}
+.sp-lot{margin:8px 0 0;font-size:14px;line-height:1.45}.sp-lot.whole b{color:#9a5b00}
+.sp-lots td b{font-variant-numeric:tabular-nums;white-space:nowrap}
+/* /partite */

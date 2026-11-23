@@ -149,7 +149,17 @@
   function tileSc(p){var T=PR.tile;return T.order.filter(function(k){return p.tile.scelte.indexOf(k)>=0})}
   function tileS(p,k){var T=PR.tile;return T.scelte[k]||T.scelte[tileSc(p)[0]]}
   function tileFrom(p){return Math.min.apply(null,tileSc(p).map(function(k){return PR.tile.scelte[k].price}))}
-  function tileQuote(p,c){var s=tileS(p,c.sc),u=s.price*c.mq;return{unit:u,lines:[[s.label+' · '+c.mq+' m² × '+eur.format(s.price)+'/m²',u]],note:PR.tile.ivaNote}}
+  /* partite (lotti): sotto PR.tile.lotWhole m² la partita si vende solo intera, sopra anche una parte (testi: _seo-tools/partite) */
+  var LOTT={"card": "Solo partita intera · ", "many": "Partite disponibili: ", "one": "Partita disponibile: ", "leg": "Partita", "chip": "partita intera", "sw": " · partita intera", "sp": "da partita di {n} m²", "nw": "Questa partita è da {n} m² e si vende solo intera: sotto i {w} m² non possiamo dividerla, quindi si ordinano tutti i {n} m².", "ns": "Partita da {n} m²: dai {w} m² in su potete ordinare anche solo una parte, fino a {n} m²."};/*lott*/
+  var nfMq=new Intl.NumberFormat('it-IT',{maximumFractionDigits:2});
+  function mqF(v){return nfMq.format(v)}
+  function tl(s,o){return s.replace(/\{(\w)\}/g,function(a,k){return o[k]!=null?o[k]:a})}
+  function tLots(p){return p.lots||[]}
+  function lotW(l){return !!l&&l.mq<(PR.tile.lotWhole||0)}
+  function lotsFor(p,k){return tLots(p).filter(function(l){return !l.sc||l.sc===k})}
+  function curLot(p,c){var L=lotsFor(p,c.sc);return L.length?L[Math.min(Math.max(c.lot|0,0),L.length-1)]:null}
+  function lotLine(p){var L=tLots(p);if(!L.length)return '';var v=L.map(function(l){return mqF(l.mq)}).join(' / ')+' m²';return L.every(lotW)?LOTT.card+v:(L.length>1?LOTT.many:LOTT.one)+v}
+  function tileQuote(p,c){var s=tileS(p,c.sc),u=s.price*c.mq,l=curLot(p,c);return{unit:u,lines:[[s.label+' · '+mqF(c.mq)+' m² × '+eur.format(s.price)+'/m²'+(lotW(l)?LOTT.sw:''),u]],note:PR.tile.ivaNote}}
   function subName(p){var c=CAT.categories.find(function(x){return x.id===p.cat}),s=c&&c.subs.find(function(x){return x[0]===p.sub});return s?s[1]:(c?c.name:'')}
   function tileCard(p){
     var fav=favs.indexOf(p.id)>=0,t=p.tile,u=pURL(p);
@@ -158,6 +168,7 @@
       +'<span class="s-card-q">'+IC.eye+'Scegli scelta e m²</span></a>'
       +'<span class="s-card-line"><i></i>'+esc(subName(p))+'</span><h3><a href="'+u+'">'+esc(p.name)+'</a></h3><p class="s-desc">'+esc(p.desc)+'</p>'
       +'<span class="s-dim">Scelta: '+esc(tileSc(p).join(' / '))+'</span>'
+      +(tLots(p).length?'<span class="s-dim s-lot'+(tLots(p).every(lotW)?' whole':'')+'">'+esc(lotLine(p))+'</span>':'')
       +'<div class="s-price"><small>da</small>'+eur.format(tileFrom(p))+'<em class="s-mq">/m²</em><span>IVA escl. · trasporto a parte</span></div>'
       +'<div class="s-card-foot"><a class="s-add" href="'+u+'" aria-label="Scegli i metri quadri di '+esc(p.name)+'">'+IC.plus+'<span>Scegli i m²</span></a>'
       +'<button class="s-fav" type="button" data-fav="'+esc(p.id)+'" aria-pressed="'+fav+'" aria-label="Salva nei preferiti">'+IC.heart+'</button></div>'
@@ -169,25 +180,41 @@
     media.innerHTML='<img '+imgAttrs(p,true)+' alt="Gres porcellanato '+esc(p.name)+'"><span class="s-pm-dims" id="s-pm-dims"></span>';
     var h='<span class="s-card-line"><i></i>'+esc(subName(p))+'</span><h2 id="s-pm-t">'+esc(p.name)+'</h2><p class="s-pm-desc">'+esc(p.desc)+'. Lotto di magazzino: vi confermiamo metri quadri disponibili e prezzo prima dell\'ordine.</p>';
     h+='<fieldset class="s-opt"><legend>Scelta</legend><div class="s-chips" id="o-sc">'+ks.map(function(k){var s=T.scelte[k];return '<button type="button" class="s-chip" data-v="'+esc(k)+'">'+esc(s.label)+' <em>'+s.price+'–'+s.max+' €/m²</em></button>'}).join('')+'</div><p class="s-note" id="o-sc-n"></p></fieldset>';
-    h+='<fieldset class="s-opt"><legend>Metri quadri</legend><div class="s-chips" id="o-mqq">'+T.mqQuick.map(function(v){return '<button type="button" class="s-chip" data-v="'+v+'">'+v+' m²</button>'}).join('')+'</div>'
+    if(tLots(p).length)h+='<fieldset class="s-opt" id="o-lotf"><legend>'+esc(LOTT.leg)+'</legend><div class="s-chips" id="o-lot"></div><p class="s-note s-lot-n" id="o-lot-n"></p></fieldset>';
+    h+='<fieldset class="s-opt" id="o-mqf"><legend>Metri quadri</legend><div class="s-chips" id="o-mqq">'+T.mqQuick.map(function(v){return '<button type="button" class="s-chip" data-v="'+v+'">'+v+' m²</button>'}).join('')+'</div>'
       +'<div class="s-dims one"><label>Metri quadri<input type="number" inputmode="numeric" id="o-mq" min="'+T.mqMin+'" max="'+T.mqMax+'" step="1"><small>Aggiungete il 10% per tagli e sfridi</small></label></div></fieldset>';
     h+='<dl class="s-specs"><dt>Formato</dt><dd>'+esc(t.fmt.map(function(x){return x.replace('x','×')}).join(' · '))+' cm</dd><dt>Spessore</dt><dd>'+esc(t.sp)+'</dd><dt>Finitura</dt><dd>'+esc(t.fin.join(' / ')||'Naturale')+'</dd><dt>Bordo</dt><dd>'+(t.rett?'Rettificato':'Non rettificato')+'</dd><dt>Materiale</dt><dd>'+esc(t.mat)+'</dd>'+(t.extra.length?'<dt>Note</dt><dd>'+esc(t.extra.join(', '))+'</dd>':'')+'</dl>';
     h+='<ul class="s-break" id="s-break"></ul>';
     sc.innerHTML=h;sc.scrollTop=0;
     ft.innerHTML='<div class="s-pm-total"><b id="s-pm-tot" data-v="0">—</b><small id="s-pm-iva"></small></div><button class="s-btn s-btn-p" type="button" id="s-pm-add">'+IC.bag+'Aggiungi al carrello</button>';
     function sel(g,v){$$('#'+g+' .s-chip',sc).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.v)===String(v))})}
+    function mqMax(){var l=curLot(p,c);return l&&!lotW(l)?Math.max(1,Math.floor(l.mq)):T.mqMax}
+    function lotUpd(){
+      var L=lotsFor(p,c.sc),box=$('#o-lot',sc);if(!box)return;
+      if(c.lot>=L.length||c.lot<0)c.lot=0;
+      box.innerHTML=L.map(function(l,i){return '<button type="button" class="s-chip" data-v="'+i+'">'+(l.fmt?esc(l.fmt.replace('x','×'))+' cm · ':'')+(l.fin?esc(l.fin)+' · ':'')+mqF(l.mq)+' m²'+(lotW(l)?' <em>'+esc(LOTT.chip)+'</em>':'')+'</button>'}).join('');
+      $$('#o-lot .s-chip',sc).forEach(function(b){b.onclick=function(){c.lot=+b.dataset.v;if(!lotW(curLot(p,c)))c.mq=Math.max(T.mqMin,Math.round(c.mq)||T.mqDefault);upd()}});
+      var l=curLot(p,c),fs=$('#o-mqf',sc),mi=$('#o-mq',sc),n=$('#o-lot-n',sc);
+      if(!l){$('#o-lotf',sc).hidden=true;if(fs)fs.disabled=false;return}
+      $('#o-lotf',sc).hidden=false;sel('o-lot',c.lot);
+      if(lotW(l)){c.mq=l.mq;n.textContent=tl(LOTT.nw,{n:mqF(l.mq),w:PR.tile.lotWhole})}
+      else{c.mq=clamp(Math.round(c.mq),T.mqMin,Math.floor(l.mq));n.textContent=tl(LOTT.ns,{n:mqF(l.mq),w:PR.tile.lotWhole})}
+      n.classList.toggle('whole',lotW(l));
+      if(fs)fs.disabled=lotW(l);if(mi)mi.max=mqMax();
+      $$('#o-mqq .s-chip',sc).forEach(function(b){b.hidden=!lotW(l)&&+b.dataset.v>l.mq});
+    }
     function upd(){
-      sel('o-sc',c.sc);sel('o-mqq',c.mq);var s=tileS(p,c.sc);
+      lotUpd();sel('o-sc',c.sc);sel('o-mqq',c.mq);var s=tileS(p,c.sc);
       $('#o-sc-n',sc).textContent='Da '+eur.format(s.price)+' a '+eur.format(s.max)+' al m² + IVA in base al lotto: nel carrello calcoliamo '+eur.format(s.price)+'/m², il prezzo finale ve lo confermiamo noi.';
       var i=$('#o-mq',sc);if(i&&document.activeElement!==i)i.value=c.mq;
-      $('#s-pm-dims').textContent=c.mq+' m²';
+      $('#s-pm-dims').textContent=mqF(c.mq)+' m²';
       var q=tileQuote(p,c);
       $('#s-break',sc).innerHTML=q.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+eur.format(l[1])+'</b></li>'}).join('');
       tween($('#s-pm-tot'),q.unit);$('#s-pm-iva').textContent=q.note;
     }
-    $$('#o-sc .s-chip',sc).forEach(function(b){b.onclick=function(){c.sc=b.dataset.v;upd()}});
-    $$('#o-mqq .s-chip',sc).forEach(function(b){b.onclick=function(){c.mq=+b.dataset.v;upd()}});
-    var mi=$('#o-mq',sc),tm;mi.oninput=function(){clearTimeout(tm);tm=setTimeout(function(){var v=parseInt(mi.value,10);if(!isNaN(v)){c.mq=clamp(v,T.mqMin,T.mqMax);upd()}},200)};mi.onblur=function(){var v=parseInt(mi.value,10);if(!isNaN(v))c.mq=clamp(v,T.mqMin,T.mqMax);mi.value=c.mq;upd()};
+    $$('#o-sc .s-chip',sc).forEach(function(b){b.onclick=function(){if(c.sc!==b.dataset.v){c.sc=b.dataset.v;c.lot=0;if(!lotW(curLot(p,c)))c.mq=Math.min(Math.round(c.mq)||T.mqDefault,T.mqDefault)}upd()}});
+    $$('#o-mqq .s-chip',sc).forEach(function(b){b.onclick=function(){if(lotW(curLot(p,c)))return;c.mq=+b.dataset.v;upd()}});
+    var mi=$('#o-mq',sc),tm;mi.oninput=function(){clearTimeout(tm);tm=setTimeout(function(){var v=parseInt(mi.value,10);if(!isNaN(v)&&!lotW(curLot(p,c))){c.mq=clamp(v,T.mqMin,mqMax());upd()}},200)};mi.onblur=function(){var v=parseInt(mi.value,10);if(!isNaN(v)&&!lotW(curLot(p,c)))c.mq=clamp(v,T.mqMin,mqMax());mi.value=c.mq;upd()};
     $('#s-pm-add',ft).onclick=function(){var im=$('img',media);addToCart(p,JSON.parse(JSON.stringify(c)),1,im);setTimeout(closeProduct,250)};
     upd();CUR={p:p,get c(){return c},get qty(){return 1}};showPM(m,p.id);
   }
@@ -433,7 +460,7 @@
   function quote(p,c){return p.type==='basin'?basinQuote(p,c):p.type==='tile'?tileQuote(p,c):p.type==='door'?doorQuote(p,c):p.type==='cube'?cubeQuote(p,c):furnQuote(p,c)}
   function defaultCfg(p,sub){
     if(p.type==='cube')return cubeDefault(p);
-    if(p.type==='tile')return{sc:tileSc(p)[0],mq:PR.tile.mqDefault};
+    if(p.type==='tile'){var tc={sc:tileSc(p)[0],mq:PR.tile.mqDefault,lot:0},l0=curLot(p,tc);if(l0)tc.mq=lotW(l0)?l0.mq:Math.min(tc.mq,Math.floor(l0.mq));return tc}
     if(p.type==='basin')return{w:bQ(p)?PR.basin.big.def:p.basin.w,d:PR.basin.depth.def,v:'quadrata',fin:PR.basin.finiture[0],ton:'',dbl:false};
     if(p.type==='door'){
       var open=sub==='scorrevoli'?'scorrevole-interno':sub==='filo-muro'?'filo-muro':'battente';
@@ -450,7 +477,7 @@
   }
   function cfgSummary(p,c){
     if(p.type==='basin')return basinSum(p,c);
-    if(p.type==='tile')return p.tile.fmt.map(function(x){return x.replace('x','×')}).join(' / ')+' cm · '+(p.tile.fin.join('/')||'Naturale')+' · '+tileS(p,c.sc).label+' · '+c.mq+' m²';
+    if(p.type==='tile'){var cl=curLot(p,c);return (cl&&cl.fmt?cl.fmt.replace('x','×'):p.tile.fmt.map(function(x){return x.replace('x','×')}).join(' / '))+' cm · '+(cl&&cl.fin?cl.fin:(p.tile.fin.join('/')||'Naturale'))+' · '+tileS(p,c.sc).label+' · '+mqF(c.mq)+' m²'+(cl?(lotW(cl)?LOTT.sw:' · '+tl(LOTT.sp,{n:mqF(cl.mq)})):'')}
     if(p.type==='cube'){var D=cubeDims(c),cnt={};(c.cells||[]).forEach(function(x){if(x!=='vuoto')cnt[x]=(cnt[x]||0)+1});
       var ins=PR.cube.inserts.filter(function(i){return cnt[i.id]}).map(function(i){return cnt[i.id]+' '+i.label.toLowerCase()});
       var b=PR.cube.bases.find(function(x){return x.id===c.base});

@@ -422,7 +422,9 @@
     50,
     100
    ],
-   "ivaNote": "IVA esclusa · trasporto a parte · prezzo e m² confermati con l'ordine"
+   "ivaNote": "IVA esclusa · trasporto a parte · prezzo e m² confermati con l'ordine",
+   "lotWhole": 70,
+   "_lotNota": "Partite (lotti): ogni finitura è prodotta in partite. Partita sotto lotWhole m² = si vende solo intera; da lotWhole m² in su si possono ordinare anche quantità parziali (fino ai m² disponibili)."
   },
   "basin": {
    "sizes": [
@@ -4812,7 +4814,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 200
+   "rank": 200,
+   "lots": [
+    {
+     "mq": 1850.4,
+     "sc": "1°"
+    },
+    {
+     "mq": 181.44,
+     "sc": "1°C"
+    },
+    {
+     "mq": 172.8,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mh-calacatta-delicato-k-lucido",
@@ -4860,7 +4876,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 201
+   "rank": 201,
+   "lots": [
+    {
+     "mq": 207.36,
+     "sc": "1°"
+    },
+    {
+     "mq": 56.16,
+     "sc": "1°C"
+    },
+    {
+     "mq": 122.4,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "md-bianco-lucido",
@@ -4904,7 +4934,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 202
+   "rank": 202,
+   "lots": [
+    {
+     "mq": 7.2,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "md-grigio-lucido",
@@ -4948,7 +4984,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 203
+   "rank": 203,
+   "lots": [
+    {
+     "mq": 46.08,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "me-brown-lucido",
@@ -4994,7 +5036,17 @@
     "marmo",
     "lucido"
    ],
-   "rank": 204
+   "rank": 204,
+   "lots": [
+    {
+     "mq": 188.64,
+     "sc": "1°"
+    },
+    {
+     "mq": 7.2,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "mh-calacatta-prestige-lucido",
@@ -5040,7 +5092,17 @@
     "marmo",
     "lucido"
    ],
-   "rank": 205
+   "rank": 205,
+   "lots": [
+    {
+     "mq": 561.6,
+     "sc": "1°"
+    },
+    {
+     "mq": 69.12,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mm-calacatta-bernini-lucido",
@@ -5084,7 +5146,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 206
+   "rank": 206,
+   "lots": [
+    {
+     "mq": 40.32,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "mm-calacatta-meraviglia-lucido",
@@ -5132,7 +5200,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 207
+   "rank": 207,
+   "lots": [
+    {
+     "mq": 37.44,
+     "sc": "1°"
+    },
+    {
+     "mq": 8.64,
+     "sc": "1°C"
+    },
+    {
+     "mq": 12.96,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mm-silver-majestic-lucido",
@@ -5178,7 +5260,17 @@
     "marmo",
     "lucido"
    ],
-   "rank": 208
+   "rank": 208,
+   "lots": [
+    {
+     "mq": 17.28,
+     "sc": "1°"
+    },
+    {
+     "mq": 1.44,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "mo-noir-lucido",
@@ -5204,7 +5296,8 @@
     "mat": "Gres porcellanato",
     "scelte": [
      "1°",
-     "1°C"
+     "1°C",
+     "2°"
     ],
     "extra": []
    },
@@ -5224,7 +5317,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 209
+   "rank": 209,
+   "lots": [
+    {
+     "mq": 879.84,
+     "sc": "1°"
+    },
+    {
+     "mq": 73.44,
+     "sc": "1°C"
+    },
+    {
+     "mq": 138.24,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mo-pearl-lucido",
@@ -5272,7 +5379,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 210
+   "rank": 210,
+   "lots": [
+    {
+     "mq": 149.76,
+     "sc": "1°"
+    },
+    {
+     "mq": 90.72,
+     "sc": "1°C"
+    },
+    {
+     "mq": 74.88,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mv-calacatta-lp-lucido",
@@ -5320,7 +5441,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 211
+   "rank": 211,
+   "lots": [
+    {
+     "mq": 1056.96,
+     "sc": "1°"
+    },
+    {
+     "mq": 198.72,
+     "sc": "1°C"
+    },
+    {
+     "mq": 109.44,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mx-fior-di-bosco-lucido",
@@ -5368,7 +5503,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 212
+   "rank": 212,
+   "lots": [
+    {
+     "mq": 97.92,
+     "sc": "1°"
+    },
+    {
+     "mq": 15.84,
+     "sc": "1°C"
+    },
+    {
+     "mq": 64.8,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "bd-w-white-lucido",
@@ -5412,7 +5561,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 213
+   "rank": 213,
+   "lots": [
+    {
+     "mq": 61.92,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "ms-bianco-dolomia-k-lucido",
@@ -5439,7 +5594,7 @@
     "scelte": [
      "1°",
      "1°C",
-     "S"
+     "2°"
     ],
     "extra": []
    },
@@ -5460,7 +5615,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 214
+   "rank": 214,
+   "lots": [
+    {
+     "mq": 606.24,
+     "sc": "1°"
+    },
+    {
+     "mq": 84.96,
+     "sc": "1°C"
+    },
+    {
+     "mq": 86.4,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "brera-board-lucido",
@@ -5504,7 +5673,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 215
+   "rank": 215,
+   "lots": [
+    {
+     "mq": 453.6,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "brera-frame-lucido",
@@ -5548,7 +5723,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 216
+   "rank": 216,
+   "lots": [
+    {
+     "mq": 766.08,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "bronze-lux-lucido",
@@ -5592,7 +5773,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 217
+   "rank": 217,
+   "lots": [
+    {
+     "mq": 894.6,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "fior-di-bosco-glossy-lucido",
@@ -5636,7 +5823,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 218
+   "rank": 218,
+   "lots": [
+    {
+     "mq": 4471.2,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "english-grey-lucido",
@@ -5680,7 +5873,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 219
+   "rank": 219,
+   "lots": [
+    {
+     "mq": 40.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "ms-carrara-lucido",
@@ -5728,7 +5927,21 @@
     "marmo",
     "lucido"
    ],
-   "rank": 220
+   "rank": 220,
+   "lots": [
+    {
+     "mq": 495.36,
+     "sc": "1°"
+    },
+    {
+     "mq": 25.92,
+     "sc": "1°C"
+    },
+    {
+     "mq": 17.28,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mx-grey-lp-lucido",
@@ -5772,7 +5985,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 221
+   "rank": 221,
+   "lots": [
+    {
+     "mq": 38.88,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "arabescato-lucido",
@@ -5816,7 +6035,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 222
+   "rank": 222,
+   "lots": [
+    {
+     "mq": 191.52,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "calacatta-gold-lucido",
@@ -5860,7 +6085,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 223
+   "rank": 223,
+   "lots": [
+    {
+     "mq": 1566.72,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "mh-calacatta-delicato-a-lucido",
@@ -5904,7 +6135,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 224
+   "rank": 224,
+   "lots": [
+    {
+     "mq": 115.2,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "onyx-pearl-white-lucido",
@@ -5948,7 +6185,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 225
+   "rank": 225,
+   "lots": [
+    {
+     "mq": 264.96,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "brenzo-natural-lucido",
@@ -5994,7 +6237,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 226
+   "rank": 226,
+   "lots": [
+    {
+     "mq": 178.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "helix-grey-lucido",
@@ -6040,7 +6289,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 227
+   "rank": 227,
+   "lots": [
+    {
+     "mq": 213.12,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "onyx-blue-lucido",
@@ -6084,7 +6339,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 228
+   "rank": 228,
+   "lots": [
+    {
+     "mq": 171.36,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "marquinia-black-lucido",
@@ -6128,7 +6389,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 229
+   "rank": 229,
+   "lots": [
+    {
+     "mq": 83.52,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "luce-oro-lusso-lucido",
@@ -6172,7 +6439,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 230
+   "rank": 230,
+   "lots": [
+    {
+     "mq": 114.0,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "ms-bianco-dolomia-a-lucido",
@@ -6216,7 +6489,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 231
+   "rank": 231,
+   "lots": [
+    {
+     "mq": 40.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "infinity-brazil-6-lucido",
@@ -6260,7 +6539,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 232
+   "rank": 232,
+   "lots": [
+    {
+     "mq": 1488.96,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "blue-jeans-lucido",
@@ -6304,7 +6589,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 233
+   "rank": 233,
+   "lots": [
+    {
+     "mq": 1206.72,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "calacatta-picasso-lucido",
@@ -6348,7 +6639,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 234
+   "rank": 234,
+   "lots": [
+    {
+     "mq": 132.48,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "montecarlo-black-lucido",
@@ -6392,7 +6689,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 235
+   "rank": 235,
+   "lots": [
+    {
+     "mq": 305.28,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mv-calacatta-lucido",
@@ -6436,7 +6739,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 236
+   "rank": 236,
+   "lots": [
+    {
+     "mq": 25.92,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "onyx-smoky-grey-lucido",
@@ -6480,7 +6789,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 237
+   "rank": 237,
+   "lots": [
+    {
+     "mq": 120.96,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "marquinia-nero-lucido",
@@ -6524,7 +6839,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 238
+   "rank": 238,
+   "lots": [
+    {
+     "mq": 533.52,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "onice-allure-midnight-lucido",
@@ -6568,7 +6889,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 239
+   "rank": 239,
+   "lots": [
+    {
+     "mq": 50.4,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "evoluta-forest-light-lucido",
@@ -6612,7 +6939,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 240
+   "rank": 240,
+   "lots": [
+    {
+     "mq": 224.64,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "italian-white-lucido",
@@ -6656,7 +6989,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 241
+   "rank": 241,
+   "lots": [
+    {
+     "mq": 264.96,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "onyx-pale-azure-lucido",
@@ -6700,7 +7039,13 @@
     "marmo",
     "lucido"
    ],
-   "rank": 242
+   "rank": 242,
+   "lots": [
+    {
+     "mq": 103.68,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "portland-hood-naturale",
@@ -6742,7 +7087,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 243
+   "rank": 243,
+   "lots": [
+    {
+     "mq": 70.56,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "portland-jordan-naturale",
@@ -6784,7 +7135,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 244
+   "rank": 244,
+   "lots": [
+    {
+     "mq": 92.16,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "alpine-silk-cross-naturale",
@@ -6826,7 +7183,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 245
+   "rank": 245,
+   "lots": [
+    {
+     "mq": 181.44,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "pietra-grey-fog-naturale",
@@ -6868,7 +7231,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 246
+   "rank": 246,
+   "lots": [
+    {
+     "mq": 25.92,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "kalmit-zement-naturale",
@@ -6910,7 +7279,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 247
+   "rank": 247,
+   "lots": [
+    {
+     "mq": 11.52,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "kalmit-sand-naturale",
@@ -6952,7 +7327,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 248
+   "rank": 248,
+   "lots": [
+    {
+     "mq": 469.44,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "basalt-sabbia-naturale",
@@ -6994,7 +7375,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 249
+   "rank": 249,
+   "lots": [
+    {
+     "mq": 109.44,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "pietra-nordica-nero-naturale",
@@ -7036,7 +7423,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 250
+   "rank": 250,
+   "lots": [
+    {
+     "mq": 397.44,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "stonecement-antracite-naturale",
@@ -7078,7 +7471,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 251
+   "rank": 251,
+   "lots": [
+    {
+     "mq": 259.2,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "boston-sand-naturale",
@@ -7120,7 +7519,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 252
+   "rank": 252,
+   "lots": [
+    {
+     "mq": 240.48,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "boston-grey-naturale",
@@ -7162,7 +7567,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 253
+   "rank": 253,
+   "lots": [
+    {
+     "mq": 777.6,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "slate-avorio-naturale",
@@ -7204,7 +7615,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 254
+   "rank": 254,
+   "lots": [
+    {
+     "mq": 142.56,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "pigmenta-white-naturale",
@@ -7246,7 +7663,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 255
+   "rank": 255,
+   "lots": [
+    {
+     "mq": 371.52,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "cnc-sand-naturale",
@@ -7288,7 +7711,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 256
+   "rank": 256,
+   "lots": [
+    {
+     "mq": 63.36,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "saint-remy-grigio-naturale",
@@ -7330,7 +7759,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 257
+   "rank": 257,
+   "lots": [
+    {
+     "mq": 146.88,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "oxidatio-lithium-naturale",
@@ -7372,7 +7807,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 258
+   "rank": 258,
+   "lots": [
+    {
+     "mq": 149.76,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "intarsi-raffaello-3d-naturale",
@@ -7414,7 +7855,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 259
+   "rank": 259,
+   "lots": [
+    {
+     "mq": 148.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "intarsi-warm-thera-3d-naturale",
@@ -7456,7 +7903,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 260
+   "rank": 260,
+   "lots": [
+    {
+     "mq": 423.36,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "intarsi-warm-agora-3d-naturale",
@@ -7498,7 +7951,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 261
+   "rank": 261,
+   "lots": [
+    {
+     "mq": 224.64,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "galaxy-pearl-3d-naturale",
@@ -7540,7 +7999,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 262
+   "rank": 262,
+   "lots": [
+    {
+     "mq": 491.04,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "travertino-tivoli-beige-naturale",
@@ -7582,7 +8047,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 263
+   "rank": 263,
+   "lots": [
+    {
+     "mq": 34.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "loft-white-naturale",
@@ -7624,7 +8095,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 264
+   "rank": 264,
+   "lots": [
+    {
+     "mq": 30.24,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "marquinia-white-naturale",
@@ -7666,7 +8143,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 265
+   "rank": 265,
+   "lots": [
+    {
+     "mq": 41.76,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "native-grey-naturale",
@@ -7708,7 +8191,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 266
+   "rank": 266,
+   "lots": [
+    {
+     "mq": 66.24,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "nereidi-cloud-naturale",
@@ -7750,7 +8239,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 267
+   "rank": 267,
+   "lots": [
+    {
+     "mq": 190.08,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "tlv-white-naturale",
@@ -7792,7 +8287,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 268
+   "rank": 268,
+   "lots": [
+    {
+     "mq": 2214.72,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "corsocomo-cookie-naturale",
@@ -7834,7 +8335,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 269
+   "rank": 269,
+   "lots": [
+    {
+     "mq": 69.12,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "boost-balance-cream-naturale",
@@ -7876,7 +8383,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 270
+   "rank": 270,
+   "lots": [
+    {
+     "mq": 129.6,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "agathos-multicolor-naturale",
@@ -7918,7 +8431,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 271
+   "rank": 271,
+   "lots": [
+    {
+     "mq": 116.64,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "unique-sand-naturale",
@@ -7960,7 +8479,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 272
+   "rank": 272,
+   "lots": [
+    {
+     "mq": 754.56,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "architecta-pietra-beige-naturale",
@@ -8002,7 +8527,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 273
+   "rank": 273,
+   "lots": [
+    {
+     "mq": 243.36,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "architecta-pietra-bianco-naturale",
@@ -8044,7 +8575,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 274
+   "rank": 274,
+   "lots": [
+    {
+     "mq": 622.08,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "venus-jade-veined-naturale",
@@ -8086,7 +8623,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 275
+   "rank": 275,
+   "lots": [
+    {
+     "mq": 394.56,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "venus-azul-veined-naturale",
@@ -8128,7 +8671,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 276
+   "rank": 276,
+   "lots": [
+    {
+     "mq": 1108.4,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "marquinia-nero-naturale",
@@ -8170,7 +8719,13 @@
     "60x120",
     "1°C scelta"
    ],
-   "rank": 277
+   "rank": 277,
+   "lots": [
+    {
+     "mq": 410.4,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "java-blaugrau-naturale",
@@ -8212,7 +8767,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 278
+   "rank": 278,
+   "lots": [
+    {
+     "mq": 2114.64,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "homey-bloom-white-naturale",
@@ -8254,7 +8815,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 279
+   "rank": 279,
+   "lots": [
+    {
+     "mq": 1013.76,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "glitch-gravel-naturale",
@@ -8296,7 +8863,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 280
+   "rank": 280,
+   "lots": [
+    {
+     "mq": 112.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-ash-naturale",
@@ -8338,7 +8911,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 281
+   "rank": 281,
+   "lots": [
+    {
+     "mq": 138.24,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-carbon-naturale",
@@ -8380,7 +8959,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 282
+   "rank": 282,
+   "lots": [
+    {
+     "mq": 69.12,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-salt-naturale",
@@ -8422,7 +9007,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 283
+   "rank": 283,
+   "lots": [
+    {
+     "mq": 1028.16,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-fault-clay-naturale",
@@ -8464,7 +9055,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 284
+   "rank": 284,
+   "lots": [
+    {
+     "mq": 155.52,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-fault-gravel-naturale",
@@ -8506,7 +9103,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 285
+   "rank": 285,
+   "lots": [
+    {
+     "mq": 167.04,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-fault-sand-naturale",
@@ -8548,7 +9151,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 286
+   "rank": 286,
+   "lots": [
+    {
+     "mq": 155.52,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-fault-salt-naturale",
@@ -8590,7 +9199,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 287
+   "rank": 287,
+   "lots": [
+    {
+     "mq": 69.12,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glitch-mix-warm-naturale",
@@ -8632,7 +9247,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 288
+   "rank": 288,
+   "lots": [
+    {
+     "mq": 596.16,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "earth-hexagon-naturale",
@@ -8674,7 +9295,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 289
+   "rank": 289,
+   "lots": [
+    {
+     "mq": 207.36,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "italian-white-naturale",
@@ -8716,7 +9343,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 290
+   "rank": 290,
+   "lots": [
+    {
+     "mq": 368.64,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "french-beige-naturale",
@@ -8758,7 +9391,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 291
+   "rank": 291,
+   "lots": [
+    {
+     "mq": 443.52,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "travertino-ivory-naturale",
@@ -8800,7 +9439,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 292
+   "rank": 292,
+   "lots": [
+    {
+     "mq": 207.36,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "bm-white-mt-naturale",
@@ -8844,7 +9489,17 @@
     "1°C scelta",
     "2° scelta"
    ],
-   "rank": 293
+   "rank": 293,
+   "lots": [
+    {
+     "mq": 11.52,
+     "sc": "1°C"
+    },
+    {
+     "mq": 15.84,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "bianco-perlino-naturale",
@@ -8888,7 +9543,17 @@
     "1°C scelta",
     "2° scelta"
    ],
-   "rank": 294
+   "rank": 294,
+   "lots": [
+    {
+     "mq": 40.32,
+     "sc": "1°C"
+    },
+    {
+     "mq": 25.92,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "flatiron-white-naturale",
@@ -8930,7 +9595,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 295
+   "rank": 295,
+   "lots": [
+    {
+     "mq": 184.32,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "sunstone-freya-naturale",
@@ -8972,7 +9643,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 296
+   "rank": 296,
+   "lots": [
+    {
+     "mq": 53.28,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "pr1-black-naturale",
@@ -9016,7 +9693,17 @@
     "1° scelta",
     "S scelta"
    ],
-   "rank": 297
+   "rank": 297,
+   "lots": [
+    {
+     "mq": 80.64,
+     "sc": "1°"
+    },
+    {
+     "mq": 188.64,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "pigmenta-taupe-naturale",
@@ -9058,7 +9745,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 298
+   "rank": 298,
+   "lots": [
+    {
+     "mq": 51.84,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "signature-stone-dark-naturale",
@@ -9100,7 +9793,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 299
+   "rank": 299,
+   "lots": [
+    {
+     "mq": 120.96,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "signature-stone-grey-naturale",
@@ -9142,7 +9841,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 300
+   "rank": 300,
+   "lots": [
+    {
+     "mq": 40.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "stone-valley-sabbia-naturale",
@@ -9184,7 +9889,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 301
+   "rank": 301,
+   "lots": [
+    {
+     "mq": 133.92,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "stone-valley-sale-naturale",
@@ -9226,7 +9937,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 302
+   "rank": 302,
+   "lots": [
+    {
+     "mq": 456.48,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "cashmere-white-naturale",
@@ -9270,7 +9987,17 @@
     "1° scelta",
     "2° scelta"
    ],
-   "rank": 303
+   "rank": 303,
+   "lots": [
+    {
+     "mq": 252.0,
+     "sc": "1°"
+    },
+    {
+     "mq": 15.84,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "dolomite-naturale",
@@ -9312,7 +10039,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 304
+   "rank": 304,
+   "lots": [
+    {
+     "mq": 57.6,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "htl-rett-hard-naturale",
@@ -9354,7 +10087,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 305
+   "rank": 305,
+   "lots": [
+    {
+     "mq": 789.12,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "decoro-palma-oro-gr-naturale",
@@ -9398,7 +10137,17 @@
     "1° scelta",
     "2° scelta"
    ],
-   "rank": 306
+   "rank": 306,
+   "lots": [
+    {
+     "mq": 557.28,
+     "sc": "1°"
+    },
+    {
+     "mq": 57.6,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "miro-amber-naturale",
@@ -9440,7 +10189,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 307
+   "rank": 307,
+   "lots": [
+    {
+     "mq": 384.48,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "kado-lead-flakes-naturale",
@@ -9482,7 +10237,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 308
+   "rank": 308,
+   "lots": [
+    {
+     "mq": 259.2,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "pr1-et-grey-naturale",
@@ -9524,7 +10285,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 309
+   "rank": 309,
+   "lots": [
+    {
+     "mq": 86.4,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "signature-stone-white-naturale",
@@ -9566,7 +10333,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 310
+   "rank": 310,
+   "lots": [
+    {
+     "mq": 112.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "concept-pearl-naturale",
@@ -9608,7 +10381,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 311
+   "rank": 311,
+   "lots": [
+    {
+     "mq": 593.28,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "mun-beige-naturale",
@@ -9650,7 +10429,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 312
+   "rank": 312,
+   "lots": [
+    {
+     "mq": 46.08,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "citylife-sand-naturale",
@@ -9692,7 +10477,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 313
+   "rank": 313,
+   "lots": [
+    {
+     "mq": 77.76,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "select-cenere-naturale",
@@ -9734,7 +10525,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 314
+   "rank": 314,
+   "lots": [
+    {
+     "mq": 99.36,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "gravel-naturale",
@@ -9776,7 +10573,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 315
+   "rank": 315,
+   "lots": [
+    {
+     "mq": 200.16,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "slate-sabbia-naturale",
@@ -9818,7 +10621,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 316
+   "rank": 316,
+   "lots": [
+    {
+     "mq": 247.68,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "taj-mahal-amber-naturale",
@@ -9860,7 +10669,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 317
+   "rank": 317,
+   "lots": [
+    {
+     "mq": 87.84,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "sublime-dolomiti-nat-naturale",
@@ -9904,7 +10719,17 @@
     "1° scelta",
     "S scelta"
    ],
-   "rank": 318
+   "rank": 318,
+   "lots": [
+    {
+     "mq": 54.87,
+     "sc": "1°"
+    },
+    {
+     "mq": 87.84,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "rebel-bronze-naturale",
@@ -9946,7 +10771,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 319
+   "rank": 319,
+   "lots": [
+    {
+     "mq": 612.0,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "rebel-emerald-naturale",
@@ -9988,7 +10819,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 320
+   "rank": 320,
+   "lots": [
+    {
+     "mq": 1352.16,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "doral-night-naturale",
@@ -10030,7 +10867,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 321
+   "rank": 321,
+   "lots": [
+    {
+     "mq": 997.92,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "cluster-light-naturale",
@@ -10072,7 +10915,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 322
+   "rank": 322,
+   "lots": [
+    {
+     "mq": 302.4,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "arg-av-rt-naturale",
@@ -10114,7 +10963,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 323
+   "rank": 323,
+   "lots": [
+    {
+     "mq": 246.24,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "bic-bone-mt-naturale",
@@ -10158,7 +11013,17 @@
     "1°C scelta",
     "2° scelta"
    ],
-   "rank": 324
+   "rank": 324,
+   "lots": [
+    {
+     "mq": 12.96,
+     "sc": "1°C"
+    },
+    {
+     "mq": 12.96,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "charme-nat-naturale",
@@ -10200,7 +11065,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 325
+   "rank": 325,
+   "lots": [
+    {
+     "mq": 110.88,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "citylife-beige-naturale",
@@ -10242,7 +11113,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 326
+   "rank": 326,
+   "lots": [
+    {
+     "mq": 541.99,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "dark-flow-naturale",
@@ -10284,7 +11161,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 327
+   "rank": 327,
+   "lots": [
+    {
+     "mq": 434.99,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "mt-sr-tr-white-naturale",
@@ -10326,7 +11209,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 328
+   "rank": 328,
+   "lots": [
+    {
+     "mq": 39.6,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "epoque-abstract-naturale",
@@ -10368,7 +11257,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 329
+   "rank": 329,
+   "lots": [
+    {
+     "mq": 963.36,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "calacatta-viola-naturale",
@@ -10410,7 +11305,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 330
+   "rank": 330,
+   "lots": [
+    {
+     "mq": 14.4,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "calamina-grigio-naturale",
@@ -10452,7 +11353,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 331
+   "rank": 331,
+   "lots": [
+    {
+     "mq": 1058.4,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "deluxe-oyster-naturale",
@@ -10494,7 +11401,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 332
+   "rank": 332,
+   "lots": [
+    {
+     "mq": 243.36,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "origines-silver-naturale",
@@ -10536,7 +11449,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 333
+   "rank": 333,
+   "lots": [
+    {
+     "mq": 5554.92,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "navona-vein-niveo-naturale",
@@ -10578,7 +11497,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 334
+   "rank": 334,
+   "lots": [
+    {
+     "mq": 338.4,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "wallart-glam-naturale",
@@ -10620,7 +11545,13 @@
     "60x120",
     "2° scelta"
    ],
-   "rank": 335
+   "rank": 335,
+   "lots": [
+    {
+     "mq": 180.0,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "galaxy-emerald-naturale",
@@ -10662,7 +11593,13 @@
     "60x120",
     "S scelta"
    ],
-   "rank": 336
+   "rank": 336,
+   "lots": [
+    {
+     "mq": 436.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "beauvistone-gris-naturale",
@@ -10704,7 +11641,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 337
+   "rank": 337,
+   "lots": [
+    {
+     "mq": 302.4,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "bic-dune-naturale",
@@ -10746,7 +11689,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 338
+   "rank": 338,
+   "lots": [
+    {
+     "mq": 60.48,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "java-beige-naturale",
@@ -10788,7 +11737,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 339
+   "rank": 339,
+   "lots": [
+    {
+     "mq": 1021.68,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "terra-carbon-naturale",
@@ -10830,7 +11785,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 340
+   "rank": 340,
+   "lots": [
+    {
+     "mq": 259.2,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "terra-cendre-naturale",
@@ -10872,7 +11833,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 341
+   "rank": 341,
+   "lots": [
+    {
+     "mq": 302.4,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "java-braun-naturale",
@@ -10914,7 +11881,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 342
+   "rank": 342,
+   "lots": [
+    {
+     "mq": 1252.8,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "java-hellgrau-naturale",
@@ -10956,7 +11929,13 @@
     "60x120",
     "1° scelta"
    ],
-   "rank": 343
+   "rank": 343,
+   "lots": [
+    {
+     "mq": 790.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "cute-avorio-effetto-legno",
@@ -11001,7 +11980,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 344
+   "rank": 344,
+   "lots": [
+    {
+     "mq": 13.5,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "caldera-coala-effetto-legno",
@@ -11046,7 +12031,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 345
+   "rank": 345,
+   "lots": [
+    {
+     "mq": 80.64,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "antigua-grigio-effetto-legno",
@@ -11091,7 +12082,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 346
+   "rank": 346,
+   "lots": [
+    {
+     "mq": 61.75,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "treverk-wenge-effetto-legno",
@@ -11138,7 +12135,19 @@
     "parquet",
     "listone"
    ],
-   "rank": 347
+   "rank": 347,
+   "lots": [
+    {
+     "mq": 61.2,
+     "sc": "1°",
+     "fmt": "15x120"
+    },
+    {
+     "mq": 1031.04,
+     "sc": "1°",
+     "fmt": "20x120"
+    }
+   ]
   },
   {
    "id": "treverk-made-fume-effetto-legno",
@@ -11183,7 +12192,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 348
+   "rank": 348,
+   "lots": [
+    {
+     "mq": 575.64,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "treverk-trend-larice-cenere-effetto-legno",
@@ -11228,7 +12243,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 349
+   "rank": 349,
+   "lots": [
+    {
+     "mq": 57.38,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "restore-tobacco-barn-effetto-legno",
@@ -11275,7 +12296,19 @@
     "parquet",
     "listone"
    ],
-   "rank": 350
+   "rank": 350,
+   "lots": [
+    {
+     "mq": 216.6,
+     "sc": "1°C",
+     "fmt": "20x100"
+    },
+    {
+     "mq": 26.1,
+     "sc": "1°C",
+     "fmt": "25x150"
+    }
+   ]
   },
   {
    "id": "restore-weathered-dock-effetto-legno",
@@ -11320,7 +12353,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 351
+   "rank": 351,
+   "lots": [
+    {
+     "mq": 315.9,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "cottage-ulivo-effetto-legno",
@@ -11365,7 +12404,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 352
+   "rank": 352,
+   "lots": [
+    {
+     "mq": 304.96,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "nodi-maestrale-effetto-legno",
@@ -11410,7 +12455,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 353
+   "rank": 353,
+   "lots": [
+    {
+     "mq": 153.6,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "nodi-tramontana-effetto-legno",
@@ -11455,7 +12506,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 354
+   "rank": 354,
+   "lots": [
+    {
+     "mq": 578.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "ducale-bianco-effetto-legno",
@@ -11500,7 +12557,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 355
+   "rank": 355,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "ducale-ivory-effetto-legno",
@@ -11545,7 +12608,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 356
+   "rank": 356,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "ducale-miele-effetto-legno",
@@ -11590,7 +12659,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 357
+   "rank": 357,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "ducale-noce-effetto-legno",
@@ -11637,7 +12712,12 @@
     "parquet",
     "listone"
    ],
-   "rank": 358
+   "rank": 358,
+   "lots": [
+    {
+     "mq": 1000.0
+    }
+   ]
   },
   {
    "id": "suite-dark-grey-effetto-legno",
@@ -11682,7 +12762,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 359
+   "rank": 359,
+   "lots": [
+    {
+     "mq": 260.64,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "doghe-olmo-effetto-legno",
@@ -11727,7 +12813,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 360
+   "rank": 360,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "doghe-mogano-effetto-legno",
@@ -11772,7 +12864,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 361
+   "rank": 361,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "doghe-castagno-effetto-legno",
@@ -11817,7 +12915,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 362
+   "rank": 362,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "doghe-rovere-effetto-legno",
@@ -11862,7 +12966,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 363
+   "rank": 363,
+   "lots": [
+    {
+     "mq": 1000.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "essenze-larice-effetto-legno",
@@ -11879,7 +12989,8 @@
    "tile": {
     "fmt": [
      "60,5x121,4",
-     "30x120"
+     "30x120",
+     "20x120"
     ],
     "sp": "9 mm",
     "fin": [
@@ -11888,8 +12999,7 @@
     "rett": true,
     "mat": "Gres porcellanato",
     "scelte": [
-     "1°C",
-     "2°",
+     "1°",
      "S"
     ],
     "extra": []
@@ -11913,7 +13023,29 @@
     "parquet",
     "listone"
    ],
-   "rank": 364
+   "rank": 364,
+   "lots": [
+    {
+     "mq": 140.93,
+     "sc": "S",
+     "fmt": "60,5x121,4"
+    },
+    {
+     "mq": 218.88,
+     "sc": "1°",
+     "fmt": "30x120"
+    },
+    {
+     "mq": 447.84,
+     "sc": "1°",
+     "fmt": "20x120"
+    },
+    {
+     "mq": 147.84,
+     "sc": "1°",
+     "fmt": "20x120"
+    }
+   ]
   },
   {
    "id": "essenze-rovere-effetto-legno",
@@ -11962,7 +13094,19 @@
     "parquet",
     "listone"
    ],
-   "rank": 365
+   "rank": 365,
+   "lots": [
+    {
+     "mq": 10.08,
+     "sc": "1°",
+     "fmt": "20x120"
+    },
+    {
+     "mq": 99.82,
+     "sc": "S",
+     "fmt": "60,5x121,4"
+    }
+   ]
   },
   {
    "id": "essenze-noce-effetto-legno",
@@ -11979,7 +13123,8 @@
    "tile": {
     "fmt": [
      "60,5x121,4",
-     "30x120"
+     "30x120",
+     "20x120"
     ],
     "sp": "9 mm",
     "fin": [
@@ -11988,7 +13133,7 @@
     "rett": true,
     "mat": "Gres porcellanato",
     "scelte": [
-     "1°C",
+     "1°",
      "S"
     ],
     "extra": []
@@ -12011,7 +13156,24 @@
     "parquet",
     "listone"
    ],
-   "rank": 366
+   "rank": 366,
+   "lots": [
+    {
+     "mq": 51.38,
+     "sc": "S",
+     "fmt": "60,5x121,4"
+    },
+    {
+     "mq": 218.88,
+     "sc": "1°",
+     "fmt": "30x120"
+    },
+    {
+     "mq": 919.68,
+     "sc": "1°",
+     "fmt": "20x120"
+    }
+   ]
   },
   {
    "id": "essenze-abete-effetto-legno",
@@ -12056,7 +13218,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 367
+   "rank": 367,
+   "lots": [
+    {
+     "mq": 21.6,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "nordek-antracite-effetto-legno",
@@ -12101,7 +13269,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 368
+   "rank": 368,
+   "lots": [
+    {
+     "mq": 1672.32,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "nordek-dec-antracite-effetto-legno",
@@ -12148,7 +13322,17 @@
     "parquet",
     "listone"
    ],
-   "rank": 369
+   "rank": 369,
+   "lots": [
+    {
+     "mq": 892.8,
+     "sc": "1°"
+    },
+    {
+     "mq": 22.08,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "nordek-greige-effetto-legno",
@@ -12193,7 +13377,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 370
+   "rank": 370,
+   "lots": [
+    {
+     "mq": 34.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "nordek-dec-bianco-effetto-legno",
@@ -12240,7 +13430,17 @@
     "parquet",
     "listone"
    ],
-   "rank": 371
+   "rank": 371,
+   "lots": [
+    {
+     "mq": 422.4,
+     "sc": "1°"
+    },
+    {
+     "mq": 80.64,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "nordek-dec-greige-effetto-legno",
@@ -12285,7 +13485,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 372
+   "rank": 372,
+   "lots": [
+    {
+     "mq": 69.12,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "charme-warm-effetto-legno",
@@ -12330,7 +13536,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 373
+   "rank": 373,
+   "lots": [
+    {
+     "mq": 1026.72,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "ligno-avor-effetto-legno",
@@ -12375,7 +13587,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 374
+   "rank": 374,
+   "lots": [
+    {
+     "mq": 814.86,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "ligno-beige-effetto-legno",
@@ -12420,7 +13638,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 375
+   "rank": 375,
+   "lots": [
+    {
+     "mq": 1853.28,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "ligno-rovere-effetto-legno",
@@ -12465,7 +13689,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 376
+   "rank": 376,
+   "lots": [
+    {
+     "mq": 808.38,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "robur-cocoa-effetto-legno",
@@ -12510,7 +13740,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 377
+   "rank": 377,
+   "lots": [
+    {
+     "mq": 508.16,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "robur-honey-effetto-legno",
@@ -12559,7 +13795,19 @@
     "parquet",
     "listone"
    ],
-   "rank": 378
+   "rank": 378,
+   "lots": [
+    {
+     "mq": 1246.72,
+     "sc": "1°",
+     "fmt": "20x160"
+    },
+    {
+     "mq": 43.2,
+     "sc": "2°",
+     "fmt": "30x160"
+    }
+   ]
   },
   {
    "id": "robur-oat-effetto-legno",
@@ -12608,7 +13856,24 @@
     "parquet",
     "listone"
    ],
-   "rank": 379
+   "rank": 379,
+   "lots": [
+    {
+     "mq": 1168.64,
+     "sc": "1°",
+     "fmt": "20x160"
+    },
+    {
+     "mq": 743.07,
+     "sc": "1°",
+     "fmt": "30x160"
+    },
+    {
+     "mq": 60.48,
+     "sc": "2°",
+     "fmt": "30x160"
+    }
+   ]
   },
   {
    "id": "robur-pecan-effetto-legno",
@@ -12653,7 +13918,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 380
+   "rank": 380,
+   "lots": [
+    {
+     "mq": 2725.08,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "woodbreak-ebony-effetto-legno",
@@ -12700,7 +13971,19 @@
     "parquet",
     "listone"
    ],
-   "rank": 381
+   "rank": 381,
+   "lots": [
+    {
+     "mq": 597.76,
+     "sc": "1°",
+     "fmt": "20x160"
+    },
+    {
+     "mq": 97.92,
+     "sc": "1°",
+     "fmt": "30x160"
+    }
+   ]
   },
   {
    "id": "woodbreak-hemlock-effetto-legno",
@@ -12747,7 +14030,17 @@
     "parquet",
     "listone"
    ],
-   "rank": 382
+   "rank": 382,
+   "lots": [
+    {
+     "mq": 194.56,
+     "sc": "1°"
+    },
+    {
+     "mq": 46.08,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "woodbreak-larch-effetto-legno",
@@ -12792,7 +14085,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 383
+   "rank": 383,
+   "lots": [
+    {
+     "mq": 1231.36,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "trvkvi-ro-ca-rt-effetto-legno",
@@ -12837,7 +14136,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 384
+   "rank": 384,
+   "lots": [
+    {
+     "mq": 106.56,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "vivo-castagno-effetto-legno",
@@ -12884,7 +14189,19 @@
     "parquet",
     "listone"
    ],
-   "rank": 385
+   "rank": 385,
+   "lots": [
+    {
+     "mq": 412.8,
+     "sc": "S",
+     "fmt": "20x150"
+    },
+    {
+     "mq": 2385.6,
+     "sc": "S",
+     "fmt": "20x120"
+    }
+   ]
   },
   {
    "id": "vivo-grano-effetto-legno",
@@ -12929,7 +14246,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 386
+   "rank": 386,
+   "lots": [
+    {
+     "mq": 229.2,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "trend-nat-effetto-legno",
@@ -12974,7 +14297,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 387
+   "rank": 387,
+   "lots": [
+    {
+     "mq": 193.32,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "nordek-bianco-effetto-legno",
@@ -13019,7 +14348,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 388
+   "rank": 388,
+   "lots": [
+    {
+     "mq": 50.4,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "nordek-dec-grigio-effetto-legno",
@@ -13066,7 +14401,17 @@
     "parquet",
     "listone"
    ],
-   "rank": 389
+   "rank": 389,
+   "lots": [
+    {
+     "mq": 840.96,
+     "sc": "1°"
+    },
+    {
+     "mq": 17.28,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "sarasota-white-effetto-legno",
@@ -13111,7 +14456,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 390
+   "rank": 390,
+   "lots": [
+    {
+     "mq": 54.54,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "wood-land-bianco-effetto-legno",
@@ -13156,7 +14507,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 391
+   "rank": 391,
+   "lots": [
+    {
+     "mq": 21.6,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "wood-land-grigio-effetto-legno",
@@ -13201,7 +14558,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 392
+   "rank": 392,
+   "lots": [
+    {
+     "mq": 47.52,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "laguna-greige-effetto-legno",
@@ -13246,7 +14609,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 393
+   "rank": 393,
+   "lots": [
+    {
+     "mq": 24.0,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "laguna-light-effetto-legno",
@@ -13291,7 +14660,13 @@
     "parquet",
     "listone"
    ],
-   "rank": 394
+   "rank": 394,
+   "lots": [
+    {
+     "mq": 34.56,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "noa-ottanio-lux-rivestimento",
@@ -13337,7 +14712,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 395
+   "rank": 395,
+   "lots": [
+    {
+     "mq": 607.5,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "ark-red-rivestimento",
@@ -13383,7 +14764,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 396
+   "rank": 396,
+   "lots": [
+    {
+     "mq": 276.48,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "biocrete-sky-rivestimento",
@@ -13429,7 +14816,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 397
+   "rank": 397,
+   "lots": [
+    {
+     "mq": 179.28,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "biocrete-powder-flute-rivestimento",
@@ -13475,7 +14868,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 398
+   "rank": 398,
+   "lots": [
+    {
+     "mq": 563.76,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "biocrete-mineral-flute-rivestimento",
@@ -13521,7 +14920,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 399
+   "rank": 399,
+   "lots": [
+    {
+     "mq": 1222.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "biocrete-clay-flute-rivestimento",
@@ -13567,7 +14972,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 400
+   "rank": 400,
+   "lots": [
+    {
+     "mq": 272.16,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "3d-line-rivestimento",
@@ -13613,7 +15024,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 401
+   "rank": 401,
+   "lots": [
+    {
+     "mq": 212.63,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "e-wall-petrolio-rivestimento",
@@ -13659,7 +15076,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 402
+   "rank": 402,
+   "lots": [
+    {
+     "mq": 258.56,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "3d-white-chevron-rivestimento",
@@ -13705,7 +15128,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 403
+   "rank": 403,
+   "lots": [
+    {
+     "mq": 274.64,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "esagona-brown-rivestimento",
@@ -13751,7 +15180,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 404
+   "rank": 404,
+   "lots": [
+    {
+     "mq": 107.35,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "feel-white-matt-rivestimento",
@@ -13797,7 +15232,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 405
+   "rank": 405,
+   "lots": [
+    {
+     "mq": 64.8,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "glance-taupe-rivestimento",
@@ -13843,7 +15284,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 406
+   "rank": 406,
+   "lots": [
+    {
+     "mq": 87.36,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "laque-particuliere-rivestimento",
@@ -13889,7 +15336,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 407
+   "rank": 407,
+   "lots": [
+    {
+     "mq": 33.6,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "moon-white-riv-rivestimento",
@@ -13935,7 +15388,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 408
+   "rank": 408,
+   "lots": [
+    {
+     "mq": 14.63,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "pave-wall-dolmen-fumo-rivestimento",
@@ -13983,7 +15442,17 @@
     "bagno",
     "cucina"
    ],
-   "rank": 409
+   "rank": 409,
+   "lots": [
+    {
+     "mq": 710.78,
+     "sc": "1°"
+    },
+    {
+     "mq": 137.29,
+     "sc": "S"
+    }
+   ]
   },
   {
    "id": "purestone-muretto-grigio-rivestimento",
@@ -14029,7 +15498,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 410
+   "rank": 410,
+   "lots": [
+    {
+     "mq": 16.38,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "safari-amande-rivestimento",
@@ -14075,7 +15550,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 411
+   "rank": 411,
+   "lots": [
+    {
+     "mq": 61.14,
+     "sc": "2°"
+    }
+   ]
   },
   {
    "id": "weiss-lux-rivestimento",
@@ -14121,7 +15602,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 412
+   "rank": 412,
+   "lots": [
+    {
+     "mq": 273.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "white-lux-rivestimento",
@@ -14167,7 +15654,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 413
+   "rank": 413,
+   "lots": [
+    {
+     "mq": 1276.8,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "illusion-materika-grigio-rivestimento",
@@ -14213,7 +15706,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 414
+   "rank": 414,
+   "lots": [
+    {
+     "mq": 123.84,
+     "sc": "1°C"
+    }
+   ]
   },
   {
    "id": "white-smooth-rivestimento",
@@ -14262,7 +15761,19 @@
     "bagno",
     "cucina"
    ],
-   "rank": 415
+   "rank": 415,
+   "lots": [
+    {
+     "mq": 4518.0,
+     "sc": "1°",
+     "fin": "Naturale"
+    },
+    {
+     "mq": 4251.0,
+     "sc": "1°",
+     "fin": "Lucido"
+    }
+   ]
   },
   {
    "id": "greige-smooth-rivestimento",
@@ -14311,7 +15822,19 @@
     "bagno",
     "cucina"
    ],
-   "rank": 416
+   "rank": 416,
+   "lots": [
+    {
+     "mq": 1091.0,
+     "sc": "1°",
+     "fin": "Naturale"
+    },
+    {
+     "mq": 1057.0,
+     "sc": "1°",
+     "fin": "Lucido"
+    }
+   ]
   },
   {
    "id": "tin-smooth-rivestimento",
@@ -14360,7 +15883,19 @@
     "bagno",
     "cucina"
    ],
-   "rank": 417
+   "rank": 417,
+   "lots": [
+    {
+     "mq": 1312.0,
+     "sc": "1°",
+     "fin": "Naturale"
+    },
+    {
+     "mq": 1134.0,
+     "sc": "1°",
+     "fin": "Lucido"
+    }
+   ]
   },
   {
    "id": "kaki-smooth-rivestimento",
@@ -14406,7 +15941,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 418
+   "rank": 418,
+   "lots": [
+    {
+     "mq": 342.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "lead-smooth-rivestimento",
@@ -14452,7 +15993,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 419
+   "rank": 419,
+   "lots": [
+    {
+     "mq": 56.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "smoke-smooth-rivestimento",
@@ -14498,7 +16045,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 420
+   "rank": 420,
+   "lots": [
+    {
+     "mq": 483.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "ash-smooth-rivestimento",
@@ -14544,7 +16097,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 421
+   "rank": 421,
+   "lots": [
+    {
+     "mq": 960.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "bone-smooth-rivestimento",
@@ -14590,7 +16149,13 @@
     "bagno",
     "cucina"
    ],
-   "rank": 422
+   "rank": 422,
+   "lots": [
+    {
+     "mq": 384.0,
+     "sc": "1°"
+    }
+   ]
   },
   {
    "id": "lavabo-gres-60",
