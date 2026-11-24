@@ -446,7 +446,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/glossario/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/glossario/"/>
@@ -13194,7 +13194,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/ceramica-gres-porcellanato/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/ceramica-gres-porcellanato/"/>
@@ -13262,7 +13262,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/lavabi-su-misura-gres/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/lavabi-su-misura-gres/"/>
@@ -13272,7 +13272,7 @@
   </url>
   <url>
     <loc>https://pandooragroup.it/showroom-ceramica-milano/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/showroom-ceramica-milano/"/>
@@ -13311,6 +13311,46 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/verniciatura-porte-interne/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/verniciatura-porte-interne/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/outlet-gres-porcellanato-milano/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/outlet-gres-porcellanato-milano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/outlet-gres-porcellanato-milano/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/gres-porcellanato-effetto-marmo/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/gres-porcellanato-effetto-marmo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/gres-porcellanato-effetto-marmo/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/gres-porcellanato-effetto-legno/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/gres-porcellanato-effetto-legno/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/gres-porcellanato-effetto-legno/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/gres-porcellanato-esterni/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/gres-porcellanato-esterni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/gres-porcellanato-esterni/"/>
+  </url>
+  <url>
+    <loc>https://pandooragroup.it/lavamani-gres-su-misura/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pandooragroup.it/lavamani-gres-su-misura/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pandooragroup.it/lavamani-gres-su-misura/"/>
   </url>
   <url>
     <loc>https://pandooragroup.it/en/</loc>

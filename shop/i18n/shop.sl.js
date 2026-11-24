@@ -1458,7 +1458,7 @@ var PDI=(function(){
     try{if(localStorage.getItem('pdAccT')||sessionStorage.getItem('pdAccT')||localStorage.getItem('pdHaAcc'))return}catch(e){} /* ha un account: niente popup automatico */
     var seen=+store('pdNlSeen')||0,ss=false;try{ss=!!sessionStorage.getItem('pdNlS')}catch(e){}
     if(ss||Date.now()-seen<3*864e5){nlPill();return}
-    var fired=false;function fire(){if(fired||nlDone())return;if(document.querySelector('[aria-label="Cookie"]')||document.body.classList.contains('s-cart-open')||document.getElementById('s-sheet')&&document.getElementById('s-sheet').classList.contains('open')){setTimeout(fire,4000);return}fired=true;nlOpen('auto')}
+    var fired=false;function fire(){if(fired||nlDone())return;if(document.querySelector('[aria-label="Cookie"]')||document.body.classList.contains('s-cart-open')||document.querySelector('.s-pm.open,#s-toast.show')||/^(INPUT|SELECT|TEXTAREA)$/.test((document.activeElement||{}).tagName||'')||document.getElementById('s-sheet')&&document.getElementById('s-sheet').classList.contains('open')){setTimeout(fire,4000);return}fired=true;nlOpen('auto')}
     setTimeout(fire,7000);
     addEventListener('scroll',function sc(){if(scrollY>(document.documentElement.scrollHeight-innerHeight)*.45){removeEventListener('scroll',sc);setTimeout(fire,600)}},{passive:true});
     if(FINE)document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<8)fire()});
@@ -1501,3 +1501,9 @@ var PDI=(function(){
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
+/* QA 23/11/2026: su mobile WhatsApp e pillola newsletter si nascondono quando il bottone "Aggiungi al carrello" e' in basso nello schermo */
+(function(){if(!('IntersectionObserver' in window))return;var mq=matchMedia('(max-width:760px)'),st=new Map();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){st.set(e.target,e.isIntersecting)});var on=false;st.forEach(function(v,k){if(v&&document.contains(k))on=true});document.documentElement.classList.toggle('pd-cta-in',on&&mq.matches)},{rootMargin:'-55% 0px 0px 0px'});
+function scan(){document.querySelectorAll('#s-pm-add').forEach(function(el){if(!st.has(el)){st.set(el,false);io.observe(el)}})}
+scan();[800,2000,4500].forEach(function(t){setTimeout(scan,t)});})();

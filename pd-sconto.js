@@ -28,7 +28,7 @@
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
   var CHECK = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
-  var CSS = '.pdsc{position:fixed;inset:0;z-index:2147483000;display:none;font-family:inherit}.pdsc.open{display:block}'
+  var CSS = '.pdsc{position:fixed;inset:0;z-index:2147483000;display:none;font-family:inherit;color-scheme:light}.pdsc.open{display:block}'
     + '.pdsc,.pdsc *,.pdsc-pill,.pdsc-pill *{cursor:auto!important}.pdsc button,.pdsc a,.pdsc label,.pdsc select,.pdsc-pill{cursor:pointer!important}.pdsc input:not([type=checkbox]){cursor:text!important}'
     + '.pdsc-scrim{position:absolute;inset:0;background:rgba(13,21,36,.6);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;transition:opacity .4s}.pdsc.show .pdsc-scrim{opacity:1}'
     + '.pdsc-box{position:absolute;left:50%;top:50%;width:min(900px,calc(100% - 28px));max-height:calc(100% - 28px);overflow:auto;background:#fff;color:#0d1524;border-radius:22px;display:grid;grid-template-columns:1fr 1.15fr;box-shadow:0 30px 80px rgba(0,0,0,.35);opacity:0;transform:translate(-50%,-46%);transition:opacity .4s,transform .4s}'
@@ -65,7 +65,7 @@
     var st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
     BOX = document.createElement('div'); BOX.className = 'pdsc'; BOX.setAttribute('role', 'dialog'); BOX.setAttribute('aria-modal', 'true'); BOX.setAttribute('aria-labelledby', 'pdsc-t');
     BOX.innerHTML = '<div class="pdsc-scrim" data-x></div><div class="pdsc-box"><button type="button" class="pdsc-x" data-x aria-label="Chiudi">\u00d7</button>'
-      + '<div class="pdsc-vis"><div><small>' + TX.k + '</small><b class="big">\u2212' + N.perc + '<i>%</i></b><span>su porte, mobili,<br>armadi e tavoli</span></div><ul><li>' + CHECK + 'Codice subito via email</li><li>' + CHECK + 'Valido ' + N.validDays + ' giorni su ogni ordine</li><li>' + CHECK + 'Vi richiamiamo noi se avete dubbi</li></ul></div>'
+      + '<div class="pdsc-vis"><div><small>' + TX.k + '</small><b class="big">\u2212' + N.perc + '<i>%</i></b><span>su porte, mobili<br>e armadi</span></div><ul><li>' + CHECK + 'Codice subito via email</li><li>' + CHECK + 'Valido ' + N.validDays + ' giorni su ogni ordine</li><li>' + CHECK + 'Vi richiamiamo noi se avete dubbi</li></ul></div>'
       + '<form class="pdsc-f" novalidate><h2 id="pdsc-t">' + esc(TX.h) + '</h2><p class="pdsc-sub">' + esc(TX.s) + '</p>'
       + '<div class="pdsc-g"><label>Nome<input name="Nome" autocomplete="given-name" required></label><label>Cognome<input name="Cognome" autocomplete="family-name" required></label>'
       + '<label class="w">Telefono<span class="pdsc-tel"><b id="pdsc-pre">+39</b><input name="Telefono" type="tel" autocomplete="tel-national" inputmode="tel" required></span></label>'
