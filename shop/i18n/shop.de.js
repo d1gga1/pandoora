@@ -296,7 +296,7 @@ var PDI=(function(){
       $('#s-pm-dims').textContent=c.w+' × '+c.d+' cm';
       var qq=basinQuote(p,c);
       $('#s-break',sc).innerHTML=qq.lines.map(function(l){return '<li><span>'+esc(l[0])+'</span><b>'+(q?'preventivo':eur.format(l[1]))+'</b></li>'}).join('');
-      if(q){var wa=$('#s-pm-wa',ft);if(wa)wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Guten Tag, ich hätte gern ein Angebot für ein Waschtische nach Maß aus Feinsteinzeug: '+basinSum(p,c)+'.')}
+      if(q){var wa=$('#s-pm-wa',ft);if(wa)wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent('Guten Tag, ich hätte gern ein Angebot für einen Waschtisch nach Maß aus Feinsteinzeug: '+basinSum(p,c)+'.')}
       else tween($('#s-pm-tot'),qq.unit);
       $('#s-pm-iva').textContent=qq.note;
       var dr=$('.s-pm-draw',media);if(dr&&!dr.hidden)dr.innerHTML=basinDrawSVG(c);
